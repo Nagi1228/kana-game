@@ -1,0 +1,149 @@
+[
+  {
+    "kanji": "ハイキング",
+    "kana": "ハイキング",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "郊游，远足"
+  },
+  {
+    "kanji": "お別れ",
+    "kana": "おわかれ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "分别，分手"
+  },
+  {
+    "kanji": "話",
+    "kana": "はなし",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "说话"
+  },
+  {
+    "kanji": "見送り",
+    "kana": "みおくり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "送行，送别"
+  },
+  {
+    "kanji": "間",
+    "kana": "あいだ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "时间，期间"
+  },
+  {
+    "kanji": "法律",
+    "kana": "ほうりつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "法律"
+  },
+  {
+    "kanji": "思う",
+    "kana": "おもう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "想，思考"
+  },
+  {
+    "kanji": "言う",
+    "kana": "いう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "说，讲"
+  },
+  {
+    "kanji": "探す",
+    "kana": "さがす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "找，寻找，寻求"
+  },
+  {
+    "kanji": "笑う",
+    "kana": "わらう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "笑"
+  },
+  {
+    "kanji": "やめる",
+    "kana": "やめる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "戒，停止，放弃"
+  },
+  {
+    "kanji": "決める",
+    "kana": "きめる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "决定"
+  },
+  {
+    "kanji": "寝坊する",
+    "kana": "ねぼうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "睡懒觉"
+  },
+  {
+    "kanji": "外出する",
+    "kana": "がいしゅつする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "外出，出去"
+  },
+  {
+    "kanji": "研究する",
+    "kana": "けんきゅうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "研究"
+  },
+  {
+    "kanji": "おかしい",
+    "kana": "おかしい",
+    "pitch": "",
+    "pos": "形容词",
+    "meaning": "可笑，滑稽"
+  },
+  {
+    "kanji": "いっぱい",
+    "kana": "いっぱい",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "满"
+  },
+  {
+    "kanji": "すごい",
+    "kana": "すごい",
+    "pitch": "②",
+    "pos": "副词",
+    "meaning": "惊人的，了不起"
+  },
+  {
+    "kanji": "とうとう",
+    "kana": "とうとう",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "终于，终究，到底"
+  },
+  {
+    "kanji": "必ず",
+    "kana": "かならず",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "一定，必定"
+  },
+  {
+    "kanji": "絶対に",
+    "kana": "ぜったいに",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "绝对"
+  }
+]

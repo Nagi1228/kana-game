@@ -1,0 +1,380 @@
+[
+  {
+    "kanji": "感謝",
+    "kana": "かんしゃ",
+    "pitch": "①",
+    "pos": "名·动3自他",
+    "meaning": "感谢"
+  },
+  {
+    "kanji": "手作り",
+    "kana": "てづくり",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "手工制作，自己制作"
+  },
+  {
+    "kanji": "励ます",
+    "kana": "はげます",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "鼓励，激励，勉励"
+  },
+  {
+    "kanji": "先学期",
+    "kana": "せんがっき",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "上学期"
+  },
+  {
+    "kanji": "調子",
+    "kana": "ちょうし",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "状况，情况"
+  },
+  {
+    "kanji": "録画",
+    "kana": "ろくが",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "录像"
+  },
+  {
+    "kanji": "",
+    "kana": "もらう",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "收取，得到"
+  },
+  {
+    "kanji": "下手",
+    "kana": "へた",
+    "pitch": "②",
+    "pos": "形2",
+    "meaning": "不擅长，水平不高"
+  },
+  {
+    "kanji": "付き合う",
+    "kana": "つきあう",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "陪伴；交往，交际"
+  },
+  {
+    "kanji": "涼しい",
+    "kana": "すずしい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "凉爽"
+  },
+  {
+    "kanji": "秋",
+    "kana": "あき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "秋，秋天"
+  },
+  {
+    "kanji": "新学期",
+    "kana": "しんがっき",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "新学期"
+  },
+  {
+    "kanji": "",
+    "kana": "いよいよ",
+    "pitch": "②",
+    "pos": "副",
+    "meaning": "到底，终于；越发，更加"
+  },
+  {
+    "kanji": "慣れる",
+    "kana": "なれる",
+    "pitch": "②",
+    "pos": "动2自",
+    "meaning": "适应，习惯"
+  },
+  {
+    "kanji": "",
+    "kana": "チェック",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "检验，核对"
+  },
+  {
+    "kanji": "欠席",
+    "kana": "けっせき",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "缺席"
+  },
+  {
+    "kanji": "個別",
+    "kana": "こべつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "个别"
+  },
+  {
+    "kanji": "行う",
+    "kana": "おこなう",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "做；举行"
+  },
+  {
+    "kanji": "",
+    "kana": "イベント",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "活动，庆典"
+  },
+  {
+    "kanji": "特別",
+    "kana": "とくべつ",
+    "pitch": "⓪",
+    "pos": "形2·副",
+    "meaning": "特别，格外"
+  },
+  {
+    "kanji": "通じる",
+    "kana": "つうじる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "通过"
+  },
+  {
+    "kanji": "祈る",
+    "kana": "いのる",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "祝愿，祈祷"
+  },
+  {
+    "kanji": "笑顔",
+    "kana": "えがお",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "笑脸"
+  },
+  {
+    "kanji": "安心",
+    "kana": "あんしん",
+    "pitch": "⓪",
+    "pos": "名·动3自·形2",
+    "meaning": "放心"
+  },
+  {
+    "kanji": "困難",
+    "kana": "こんなん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "困难"
+  },
+  {
+    "kanji": "立ち向かう",
+    "kana": "たちむかう",
+    "pitch": "④",
+    "pos": "动1自",
+    "meaning": "面对，应对"
+  },
+  {
+    "kanji": "文中",
+    "kana": "ぶんちゅう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "文中，句中"
+  },
+  {
+    "kanji": "出発",
+    "kana": "しゅっぱつ",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "出发"
+  },
+  {
+    "kanji": "図書",
+    "kana": "としょ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "图书，书籍"
+  },
+  {
+    "kanji": "",
+    "kana": "ストーリー",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "故事，情节"
+  },
+  {
+    "kanji": "お祝い",
+    "kana": "おいわい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "祝福，庆祝；祝贺的礼品"
+  },
+  {
+    "kanji": "悩む",
+    "kana": "なやむ",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "烦恼，苦恼"
+  },
+  {
+    "kanji": "困る",
+    "kana": "こまる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "困难，为难"
+  },
+  {
+    "kanji": "教育",
+    "kana": "きょういく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "教育"
+  },
+  {
+    "kanji": "柔道",
+    "kana": "じゅうどう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "柔道"
+  },
+  {
+    "kanji": "夢中",
+    "kana": "むちゅう",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "热衷于；沉迷，入迷；梦中"
+  },
+  {
+    "kanji": "突然",
+    "kana": "とつぜん",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "突然"
+  },
+  {
+    "kanji": "鳴る",
+    "kana": "なる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "响，鸣"
+  },
+  {
+    "kanji": "",
+    "kana": "ベル",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "铃"
+  },
+  {
+    "kanji": "止める",
+    "kana": "やめる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "中止；放弃"
+  },
+  {
+    "kanji": "諦める",
+    "kana": "あきらめる",
+    "pitch": "④",
+    "pos": "动2他",
+    "meaning": "放弃"
+  },
+  {
+    "kanji": "遭う",
+    "kana": "あう",
+    "pitch": "①",
+    "pos": "动1自",
+    "meaning": "遭遇"
+  },
+  {
+    "kanji": "電子辞書",
+    "kana": "でんしじしょ",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "电子词典"
+  },
+  {
+    "kanji": "驚く",
+    "kana": "おどろく",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "吃惊，惊讶"
+  },
+  {
+    "kanji": "述べる",
+    "kana": "のべる",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "陈述，讲述"
+  },
+  {
+    "kanji": "人形",
+    "kana": "にんぎょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "玩具娃娃"
+  },
+  {
+    "kanji": "先輩",
+    "kana": "せんぱい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "先辈，前辈"
+  },
+  {
+    "kanji": "大幅",
+    "kana": "おおはば",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "大幅度"
+  },
+  {
+    "kanji": "怒る",
+    "kana": "おこる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "生气"
+  },
+  {
+    "kanji": "泣く",
+    "kana": "なく",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "哭泣"
+  },
+  {
+    "kanji": "真剣",
+    "kana": "しんけん",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "严肃认真"
+  },
+  {
+    "kanji": "渋滞",
+    "kana": "じゅうたい",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "堵车，堵塞"
+  },
+  {
+    "kanji": "続く",
+    "kana": "つづく",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "连续，持续"
+  },
+  {
+    "kanji": "",
+    "kana": "キロメートル",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "千米"
+  }
+]

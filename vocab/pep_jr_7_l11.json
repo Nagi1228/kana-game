@@ -1,0 +1,373 @@
+[
+  {
+    "kanji": "悩み",
+    "kana": "なやみ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "烦恼, 苦恼"
+  },
+  {
+    "kanji": "",
+    "kana": "スケート",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "滑冰"
+  },
+  {
+    "kanji": "申し込む",
+    "kana": "もうしこむ",
+    "pitch": "④",
+    "pos": "动1他",
+    "meaning": "报名，申请； 提出"
+  },
+  {
+    "kanji": "勇気",
+    "kana": "ゆうき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "勇气"
+  },
+  {
+    "kanji": "",
+    "kana": "クラスメート",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "同班同学"
+  },
+  {
+    "kanji": "大",
+    "kana": "だい",
+    "pitch": "",
+    "pos": "前缀",
+    "meaning": "非常, 很"
+  },
+  {
+    "kanji": "活躍",
+    "kana": "かつやく",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "活跃"
+  },
+  {
+    "kanji": "羨ましい",
+    "kana": "うらやましい",
+    "pitch": "⑤",
+    "pos": "形1",
+    "meaning": "羡慕"
+  },
+  {
+    "kanji": "学期",
+    "kana": "がっき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "学期"
+  },
+  {
+    "kanji": "末",
+    "kana": "まつ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "末; (年, 月)底"
+  },
+  {
+    "kanji": "走",
+    "kana": "そう",
+    "pitch": "",
+    "pos": "后缀",
+    "meaning": "跑"
+  },
+  {
+    "kanji": "",
+    "kana": "ランニング",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "跑步, 赛跑"
+  },
+  {
+    "kanji": "点",
+    "kana": "てん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "分; 点"
+  },
+  {
+    "kanji": "程度",
+    "kana": "ていど",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "程度; 左右"
+  },
+  {
+    "kanji": "不安",
+    "kana": "ふあん",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "不安, 放心不下"
+  },
+  {
+    "kanji": "",
+    "kana": "けんか",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "吵架, 争吵; 打架"
+  },
+  {
+    "kanji": "仲直り",
+    "kana": "なかなおり",
+    "pitch": "③",
+    "pos": "名·动3自",
+    "meaning": "和好，言归于好"
+  },
+  {
+    "kanji": "会話",
+    "kana": "かいわ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "会话"
+  },
+  {
+    "kanji": "",
+    "kana": "あまり",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "(不)太, (不)很"
+  },
+  {
+    "kanji": "気持ち",
+    "kana": "きもち",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "心情, 感觉"
+  },
+  {
+    "kanji": "",
+    "kana": "まだ",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "还, 仍; 还没, 尚未"
+  },
+  {
+    "kanji": "",
+    "kana": "まねる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "模仿, 效仿"
+  },
+  {
+    "kanji": "",
+    "kana": "それとも",
+    "pitch": "③",
+    "pos": "连",
+    "meaning": "或者, 还是"
+  },
+  {
+    "kanji": "重要",
+    "kana": "じゅうよう",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "重要"
+  },
+  {
+    "kanji": "一歩",
+    "kana": "いっぽ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "一步, 一点儿"
+  },
+  {
+    "kanji": "踏み出す",
+    "kana": "ふみだす",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "迈出，走出"
+  },
+  {
+    "kanji": "出す",
+    "kana": "だす",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "拿出，取出；寄(信)"
+  },
+  {
+    "kanji": "心配",
+    "kana": "しんぱい",
+    "pitch": "⓪",
+    "pos": "名·动3自他·形2",
+    "meaning": "担心，挂念； 操心"
+  },
+  {
+    "kanji": "要る",
+    "kana": "いる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "需要"
+  },
+  {
+    "kanji": "方法",
+    "kana": "ほうほう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "方法"
+  },
+  {
+    "kanji": "例えば",
+    "kana": "たとえば",
+    "pitch": "②",
+    "pos": "副",
+    "meaning": "例如"
+  },
+  {
+    "kanji": "足りる",
+    "kana": "たりる",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "够, 足"
+  },
+  {
+    "kanji": "縄跳び",
+    "kana": "なわとび",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "跳绳"
+  },
+  {
+    "kanji": "",
+    "kana": "きっと",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "一定"
+  },
+  {
+    "kanji": "謝る",
+    "kana": "あやまる",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "道歉, 认错"
+  },
+  {
+    "kanji": "手紙",
+    "kana": "てがみ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "信"
+  },
+  {
+    "kanji": "今度",
+    "kana": "こんど",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "这回; 下次"
+  },
+  {
+    "kanji": "計画",
+    "kana": "けいかく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "计划"
+  },
+  {
+    "kanji": "話し合う",
+    "kana": "はなしあう",
+    "pitch": "④",
+    "pos": "动1自他",
+    "meaning": "交谈，谈话"
+  },
+  {
+    "kanji": "結婚",
+    "kana": "けっこん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "结婚"
+  },
+  {
+    "kanji": "交流",
+    "kana": "こうりゅう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "交流"
+  },
+  {
+    "kanji": "大学生",
+    "kana": "だいがくせい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "大学生"
+  },
+  {
+    "kanji": "高校生",
+    "kana": "こうこうせい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "高中生"
+  },
+  {
+    "kanji": "夏",
+    "kana": "なつ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "夏天"
+  },
+  {
+    "kanji": "暑い",
+    "kana": "あつい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "(天气)热"
+  },
+  {
+    "kanji": "甘い",
+    "kana": "あまい",
+    "pitch": "⓪",
+    "pos": "形1",
+    "meaning": "甜"
+  },
+  {
+    "kanji": "酸っぱい",
+    "kana": "すっぱい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "酸"
+  },
+  {
+    "kanji": "見える",
+    "kana": "みえる",
+    "pitch": "②",
+    "pos": "动2自",
+    "meaning": "看得见"
+  },
+  {
+    "kanji": "後",
+    "kana": "あと",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "再, 还; 后边, 后来"
+  },
+  {
+    "kanji": "刺身",
+    "kana": "さしみ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "生鱼片"
+  },
+  {
+    "kanji": "部",
+    "kana": "ぶ",
+    "pitch": "①",
+    "pos": "名·后缀",
+    "meaning": "…部, …社团; 部分"
+  },
+  {
+    "kanji": "安い",
+    "kana": "やすい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "便宜"
+  },
+  {
+    "kanji": "水",
+    "kana": "みず",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "水"
+  }
+]

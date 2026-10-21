@@ -1,0 +1,506 @@
+[
+  {
+    "kanji": "恩師",
+    "kana": "おんし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "恩师，老师"
+  },
+  {
+    "kanji": "広告代理店",
+    "kana": "こうこくだいりてん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "广告公司"
+  },
+  {
+    "kanji": "やりがい",
+    "kana": "やりがい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "值得做，做的价值"
+  },
+  {
+    "kanji": "旅行代理店",
+    "kana": "りょこうだいりてん（",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "旅行社，旅游代理公司"
+  },
+  {
+    "kanji": "勤める",
+    "kana": "つとめる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "工作，做事"
+  },
+  {
+    "kanji": "まあ、まあ",
+    "kana": "まあ、まあ",
+    "pitch": "",
+    "pos": "",
+    "meaning": "行了行了"
+  },
+  {
+    "kanji": "後にする",
+    "kana": "あとにする",
+    "pitch": "",
+    "pos": "",
+    "meaning": "待会儿，放在后面，推后"
+  },
+  {
+    "kanji": "～がい",
+    "kana": "～がい",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～的意义，～的价值"
+  },
+  {
+    "kanji": "チャンス",
+    "kana": "チャンス",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "机会，机遇"
+  },
+  {
+    "kanji": "快晴",
+    "kana": "かいせい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "大晴天，晴朗，好天气"
+  },
+  {
+    "kanji": "奥様",
+    "kana": "おくさま",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "尊夫人，（您）太太"
+  },
+  {
+    "kanji": "好意",
+    "kana": "こうい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "好意，美意"
+  },
+  {
+    "kanji": "幸せ",
+    "kana": "しあわせ",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "幸福，幸运；侥幸"
+  },
+  {
+    "kanji": "就職活動",
+    "kana": "しゅうしょくかつどう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "求职活动"
+  },
+  {
+    "kanji": "志望動機",
+    "kana": "しぼうどうき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "志愿动机，志愿理由"
+  },
+  {
+    "kanji": "自己PR",
+    "kana": "じこピーアール",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "自我宣传"
+  },
+  {
+    "kanji": "履歴書",
+    "kana": "りれきしょ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "简历，履历"
+  },
+  {
+    "kanji": "そのまま",
+    "kana": "そのまま",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "就照原样，就那样"
+  },
+  {
+    "kanji": "採用試験",
+    "kana": "さいようしけん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "录用考试"
+  },
+  {
+    "kanji": "清潔",
+    "kana": "せいけつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "整洁，干净；清洁"
+  },
+  {
+    "kanji": "服装",
+    "kana": "ふくそう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "服装"
+  },
+  {
+    "kanji": "一部",
+    "kana": "いちぶ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "一部分"
+  },
+  {
+    "kanji": "学期",
+    "kana": "がっき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "学期"
+  },
+  {
+    "kanji": "リクルートスーツ",
+    "kana": "リクルートスーツ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "求职服装，求职套装"
+  },
+  {
+    "kanji": "姿",
+    "kana": "すがた",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "打扮，装束；姿态，姿势"
+  },
+  {
+    "kanji": "際",
+    "kana": "さい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "时候，时机"
+  },
+  {
+    "kanji": "男女",
+    "kana": "だんじょ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "男女"
+  },
+  {
+    "kanji": "問う",
+    "kana": "とう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "问，打听"
+  },
+  {
+    "kanji": "黒",
+    "kana": "くろ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "黑色，黑"
+  },
+  {
+    "kanji": "紺",
+    "kana": "こん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "藏青，深蓝"
+  },
+  {
+    "kanji": "灰色",
+    "kana": "はいいろ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "灰色；暗淡"
+  },
+  {
+    "kanji": "氷河期",
+    "kana": "ひょうがき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "冰河期"
+  },
+  {
+    "kanji": "職種",
+    "kana": "しょくしゅ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "职业种类"
+  },
+  {
+    "kanji": "自動車～",
+    "kana": "じどうしゃメーカー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "汽车公司"
+  },
+  {
+    "kanji": "ごく",
+    "kana": "ごく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "极，最，非常"
+  },
+  {
+    "kanji": "選択",
+    "kana": "せんたくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "选择"
+  },
+  {
+    "kanji": "申し込み",
+    "kana": "もうしこみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "报名，申请；提议"
+  },
+  {
+    "kanji": "突破～",
+    "kana": "とっぱする",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "突破，冲破"
+  },
+  {
+    "kanji": "内定",
+    "kana": "ないてい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "内定"
+  },
+  {
+    "kanji": "少しでも",
+    "kana": "すこしでも",
+    "pitch": "",
+    "pos": "",
+    "meaning": "尽可能"
+  },
+  {
+    "kanji": "～次",
+    "kana": "～じ",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～次，～回"
+  },
+  {
+    "kanji": "うがい",
+    "kana": "うがい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "漱（口）"
+  },
+  {
+    "kanji": "手洗い",
+    "kana": "てあらい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "洗手"
+  },
+  {
+    "kanji": "焦る",
+    "kana": "あせる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "焦急，急躁，着急"
+  },
+  {
+    "kanji": "上京",
+    "kana": "じょうきょうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "到东京去，进京"
+  },
+  {
+    "kanji": "お別れ会",
+    "kana": "おわかれかい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "欢送会"
+  },
+  {
+    "kanji": "事前",
+    "kana": "じぜん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "事先，事前"
+  },
+  {
+    "kanji": "昼夜",
+    "kana": "ちゅうや",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "昼夜"
+  },
+  {
+    "kanji": "性別",
+    "kana": "せいべつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "性别"
+  },
+  {
+    "kanji": "納期",
+    "kana": "のうき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "交货时间，缴纳期限"
+  },
+  {
+    "kanji": "茶色い",
+    "kana": "ちゃいろい",
+    "pitch": "",
+    "pos": "形容词",
+    "meaning": "茶色"
+  },
+  {
+    "kanji": "グレー",
+    "kana": "グレー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "灰色，鼠色"
+  },
+  {
+    "kanji": "ブラック",
+    "kana": "ブラック",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "黑色，黑"
+  },
+  {
+    "kanji": "少量",
+    "kana": "しょうりょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "少量"
+  },
+  {
+    "kanji": "微量",
+    "kana": "びりょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "微量"
+  },
+  {
+    "kanji": "多量",
+    "kana": "たりょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "大量"
+  },
+  {
+    "kanji": "価値",
+    "kana": "かち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "价值"
+  },
+  {
+    "kanji": "エルニーニョ",
+    "kana": "エルニーニョ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "厄尔尼诺"
+  },
+  {
+    "kanji": "～沖",
+    "kana": "ペルーおき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "秘鲁海上"
+  },
+  {
+    "kanji": "海面",
+    "kana": "かいめん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "海面"
+  },
+  {
+    "kanji": "異常",
+    "kana": "いじょう",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "异常"
+  },
+  {
+    "kanji": "ノック",
+    "kana": "ノック",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "敲门，敲打"
+  },
+  {
+    "kanji": "隠れる",
+    "kana": "かくれる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "躲藏，隐藏"
+  },
+  {
+    "kanji": "身長",
+    "kana": "しんちょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "身高，身长"
+  },
+  {
+    "kanji": "条件",
+    "kana": "じょうけん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "条件，提前"
+  },
+  {
+    "kanji": "資格",
+    "kana": "しかく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "资格，身份"
+  },
+  {
+    "kanji": "有利",
+    "kana": "ゆうり",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "有利"
+  },
+  {
+    "kanji": "重視",
+    "kana": "じゅうしする",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "重视"
+  },
+  {
+    "kanji": "ただ",
+    "kana": "ただ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "仅，只"
+  },
+  {
+    "kanji": "面接試験",
+    "kana": "めんせつしけん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "面试考试"
+  },
+  {
+    "kanji": "ありがたさ",
+    "kana": "ありがたさ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "宝贵，可贵，价值"
+  },
+  {
+    "kanji": "～未満",
+    "kana": "～みまん",
+    "pitch": "",
+    "pos": "",
+    "meaning": "不满～，不足～"
+  }
+]

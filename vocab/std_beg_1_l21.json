@@ -1,0 +1,170 @@
+[
+  {
+    "kanji": "言葉",
+    "kana": "ことば",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "语言"
+  },
+  {
+    "kanji": "メールアドレス",
+    "kana": "メールアドレス",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "邮件地址"
+  },
+  {
+    "kanji": "連休",
+    "kana": "れんきゅう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "连休"
+  },
+  {
+    "kanji": "ゴールデンウィーク",
+    "kana": "ゴールデンウィーク",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "黄金周"
+  },
+  {
+    "kanji": "終わり",
+    "kana": "おわり",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "结束"
+  },
+  {
+    "kanji": "休憩時間",
+    "kana": "きゅうけいじかん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "休息时间"
+  },
+  {
+    "kanji": "京劇",
+    "kana": "きょうげき",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "京剧"
+  },
+  {
+    "kanji": "切符",
+    "kana": "きっぷ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "票(券）"
+  },
+  {
+    "kanji": "体",
+    "kana": "からだ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "身体"
+  },
+  {
+    "kanji": "地震",
+    "kana": "じしん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "地震"
+  },
+  {
+    "kanji": "泥棒",
+    "kana": "どろぼう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "小偷，盗贼"
+  },
+  {
+    "kanji": "駐車場",
+    "kana": "ちゅうしゃじょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "停车场"
+  },
+  {
+    "kanji": "渡す",
+    "kana": "わたす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "交给"
+  },
+  {
+    "kanji": "遅れる",
+    "kana": "おくれる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "迟到"
+  },
+  {
+    "kanji": "考える",
+    "kana": "かんがえる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "考虑"
+  },
+  {
+    "kanji": "調べる",
+    "kana": "しらべる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "调查"
+  },
+  {
+    "kanji": "着る",
+    "kana": "きる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "穿"
+  },
+  {
+    "kanji": "予約する",
+    "kana": "よやくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "预约"
+  },
+  {
+    "kanji": "感謝する",
+    "kana": "かんしゃする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "感谢"
+  },
+  {
+    "kanji": "運動する",
+    "kana": "うんどうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "运动"
+  },
+  {
+    "kanji": "洗濯する",
+    "kana": "せんたくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "洗涤，洗"
+  },
+  {
+    "kanji": "報告する",
+    "kana": "ほうこくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "报告"
+  },
+  {
+    "kanji": "危ない",
+    "kana": "あぶない",
+    "pitch": "⓪",
+    "pos": "形容词",
+    "meaning": "危险"
+  },
+  {
+    "kanji": "それとも",
+    "kana": "それとも",
+    "pitch": "③",
+    "pos": "接续词",
+    "meaning": "还是，或者"
+  }
+]

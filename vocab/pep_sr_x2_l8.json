@@ -1,0 +1,555 @@
+[
+  {
+    "kanji": "",
+    "kana": "レース",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "花边"
+  },
+  {
+    "kanji": "洋服",
+    "kana": "ようふく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "西服，西装"
+  },
+  {
+    "kanji": "一歩",
+    "kana": "いっぽ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "一步"
+  },
+  {
+    "kanji": "偉大",
+    "kana": "いだい",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "伟大"
+  },
+  {
+    "kanji": "飛躍",
+    "kana": "ひやく",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "飞跃"
+  },
+  {
+    "kanji": "顔合わせ",
+    "kana": "かおあわせ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "碰头，会面"
+  },
+  {
+    "kanji": "飛行",
+    "kana": "ひこう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "飞行"
+  },
+  {
+    "kanji": "打ち上げる",
+    "kana": "うちあげる",
+    "pitch": "④",
+    "pos": "动2他",
+    "meaning": "发射"
+  },
+  {
+    "kanji": "宇宙船",
+    "kana": "うちゅうせん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "宇宙飞船"
+  },
+  {
+    "kanji": "良好",
+    "kana": "りょうこう",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "良好"
+  },
+  {
+    "kanji": "無重力",
+    "kana": "むじゅうりょく",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "失重"
+  },
+  {
+    "kanji": "実験",
+    "kana": "じっけん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "实验"
+  },
+  {
+    "kanji": "国旗",
+    "kana": "こっき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "国旗"
+  },
+  {
+    "kanji": "旗",
+    "kana": "はた",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "旗"
+  },
+  {
+    "kanji": "全～",
+    "kana": "ぜん",
+    "pitch": "",
+    "pos": "前缀",
+    "meaning": "全……"
+  },
+  {
+    "kanji": "向ける",
+    "kana": "むける",
+    "pitch": "⓪",
+    "pos": "动2自他",
+    "meaning": "朝，向"
+  },
+  {
+    "kanji": "呼びかける",
+    "kana": "よびかける",
+    "pitch": "④",
+    "pos": "动2他",
+    "meaning": "呼吁"
+  },
+  {
+    "kanji": "飛び立つ",
+    "kana": "とびたつ",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "起飞；跳起来"
+  },
+  {
+    "kanji": "乗せる",
+    "kana": "のせる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "载，搭乘"
+  },
+  {
+    "kanji": "",
+    "kana": "スペースシャトル",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "航天飞机"
+  },
+  {
+    "kanji": "",
+    "kana": "まるで",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "好像，宛如"
+  },
+  {
+    "kanji": "手品師",
+    "kana": "てじなし",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "魔术师"
+  },
+  {
+    "kanji": "飛ばす",
+    "kana": "とばす",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "放飞；飞溅"
+  },
+  {
+    "kanji": "空中",
+    "kana": "くうちゅう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "空中"
+  },
+  {
+    "kanji": "逆さま",
+    "kana": "さかさま",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "逆，倒，颠倒"
+  },
+  {
+    "kanji": "広大",
+    "kana": "こうだい",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "广大，广"
+  },
+  {
+    "kanji": "実感",
+    "kana": "じっかん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "真实感受"
+  },
+  {
+    "kanji": "広々",
+    "kana": "ひろびろ",
+    "pitch": "③",
+    "pos": "副",
+    "meaning": "宽广"
+  },
+  {
+    "kanji": "",
+    "kana": "ちり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "尘埃"
+  },
+  {
+    "kanji": "引き返す",
+    "kana": "ひきかえす",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "返回，折回"
+  },
+  {
+    "kanji": "喜び",
+    "kana": "よろこび",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "喜悦，愉快"
+  },
+  {
+    "kanji": "悲しみ",
+    "kana": "かなしみ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "悲伤"
+  },
+  {
+    "kanji": "重なる",
+    "kana": "かさなる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "重叠"
+  },
+  {
+    "kanji": "奥深い",
+    "kana": "おくぶかい",
+    "pitch": "④",
+    "pos": "形1",
+    "meaning": "深邃"
+  },
+  {
+    "kanji": "真っ黒",
+    "kana": "まっくろ",
+    "pitch": "③",
+    "pos": "名·形2",
+    "meaning": "漆黑"
+  },
+  {
+    "kanji": "",
+    "kana": "つぶやく",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "嘟囔，小声说"
+  },
+  {
+    "kanji": "",
+    "kana": "ステーション",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "站，所；车站"
+  },
+  {
+    "kanji": "代表団",
+    "kana": "だいひょうだん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "代表团"
+  },
+  {
+    "kanji": "同～",
+    "kana": "どう",
+    "pitch": "",
+    "pos": "前缀",
+    "meaning": "同一个……"
+  },
+  {
+    "kanji": "団長",
+    "kana": "だんちょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "团长"
+  },
+  {
+    "kanji": "探索",
+    "kana": "たんさく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "探索"
+  },
+  {
+    "kanji": "共同",
+    "kana": "きょうどう",
+    "pitch": "⓪",
+    "pos": "动3自·副",
+    "meaning": "共同"
+  },
+  {
+    "kanji": "事業",
+    "kana": "じぎょう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "事业"
+  },
+  {
+    "kanji": "条約",
+    "kana": "じょうやく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "条约"
+  },
+  {
+    "kanji": "人類運命共同体",
+    "kana": "じんるいうんめいきょうどうたい",
+    "pitch": "①⓪",
+    "pos": "名",
+    "meaning": "人类命运共同体"
+  },
+  {
+    "kanji": "理念",
+    "kana": "りねん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "理念"
+  },
+  {
+    "kanji": "互恵",
+    "kana": "ごけい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "互惠"
+  },
+  {
+    "kanji": "",
+    "kana": "モデル",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "模范，模型"
+  },
+  {
+    "kanji": "構築",
+    "kana": "こうちく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "构建"
+  },
+  {
+    "kanji": "促進",
+    "kana": "そくしん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "促进"
+  },
+  {
+    "kanji": "領域",
+    "kana": "りょういき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "领域"
+  },
+  {
+    "kanji": "有人",
+    "kana": "ゆうじん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "有人，载人"
+  },
+  {
+    "kanji": "先進",
+    "kana": "せんしん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "先进"
+  },
+  {
+    "kanji": "利益",
+    "kana": "りえき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "利益"
+  },
+  {
+    "kanji": "応用",
+    "kana": "おうよう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "＇应用"
+  },
+  {
+    "kanji": "",
+    "kana": "とりわけ",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "特别，尤其"
+  },
+  {
+    "kanji": "発展途上国",
+    "kana": "はってんとじょうこく",
+    "pitch": "⑥",
+    "pos": "名",
+    "meaning": "发展中国家"
+  },
+  {
+    "kanji": "平等",
+    "kana": "びょうどう",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "平等，同等"
+  },
+  {
+    "kanji": "",
+    "kana": "チャンス",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "机会"
+  },
+  {
+    "kanji": "加盟国",
+    "kana": "かめいこく",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "成员国"
+  },
+  {
+    "kanji": "国籍",
+    "kana": "こくせき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "国籍"
+  },
+  {
+    "kanji": "進歩",
+    "kana": "しんぽ",
+    "pitch": "①",
+    "pos": "名·动3自",
+    "meaning": "进步，长进"
+  },
+  {
+    "kanji": "",
+    "kana": "むしろ",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "与其……，不如……"
+  },
+  {
+    "kanji": "困難",
+    "kana": "こんなん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "困难"
+  },
+  {
+    "kanji": "莫大",
+    "kana": "ばくだい",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "莫大，巨大"
+  },
+  {
+    "kanji": "資金",
+    "kana": "しきん",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "资金"
+  },
+  {
+    "kanji": "極める",
+    "kana": "きわめる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "达到极限"
+  },
+  {
+    "kanji": "",
+    "kana": "スピーチ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "讲话，致辞"
+  },
+  {
+    "kanji": "原稿",
+    "kana": "げんこう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "原稿，稿子"
+  },
+  {
+    "kanji": "光る",
+    "kana": "ひかる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "发光"
+  },
+  {
+    "kanji": "",
+    "kana": "コスト",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "成本"
+  },
+  {
+    "kanji": "独立",
+    "kana": "どくりつ",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "独立"
+  },
+  {
+    "kanji": "義務",
+    "kana": "ぎむ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "义务"
+  },
+  {
+    "kanji": "果たす",
+    "kana": "はたす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "实行，实现"
+  },
+  {
+    "kanji": "経費",
+    "kana": "けいひ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "经费"
+  },
+  {
+    "kanji": "分担",
+    "kana": "ぶんたん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "分担"
+  },
+  {
+    "kanji": "",
+    "kana": "ずるい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "狡猾"
+  },
+  {
+    "kanji": "権利",
+    "kana": "けんり",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "权利"
+  },
+  {
+    "kanji": "主張",
+    "kana": "しゅちょう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "主张"
+  }
+]

@@ -1,0 +1,961 @@
+[
+  {
+    "kanji": "クレーム",
+    "kana": "クレーム",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "抱怨，不满，投诉，索赔"
+  },
+  {
+    "kanji": "ひび",
+    "kana": "ひび",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "裂痕，皴，皲裂"
+  },
+  {
+    "kanji": "怒り",
+    "kana": "いかり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "生气，怒，愤怒，气愤"
+  },
+  {
+    "kanji": "もっとも",
+    "kana": "もっとも",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "有道理，合理，正当，理所当然"
+  },
+  {
+    "kanji": "かんかん",
+    "kana": "かんかん",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "大发脾气，大怒；（太阳）火辣辣，（火）熊熊"
+  },
+  {
+    "kanji": "お詫び",
+    "kana": "おわび",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "道歉，赔罪，表示歉意"
+  },
+  {
+    "kanji": "わざわざ",
+    "kana": "わざわざ",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "特意，故意"
+  },
+  {
+    "kanji": "～中",
+    "kana": "～ちゅう",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～之中，～当中"
+  },
+  {
+    "kanji": "～次第",
+    "kana": "～しだい",
+    "pitch": "",
+    "pos": "",
+    "meaning": "一……就……"
+  },
+  {
+    "kanji": "代金",
+    "kana": "だいきん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "贷款，价款"
+  },
+  {
+    "kanji": "元通り",
+    "kana": "もとどおり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "照原样"
+  },
+  {
+    "kanji": "知らせ",
+    "kana": "しらせ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "消息，通知"
+  },
+  {
+    "kanji": "紙幣",
+    "kana": "しへい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "纸币"
+  },
+  {
+    "kanji": "高価",
+    "kana": "こうか",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "高价，价高"
+  },
+  {
+    "kanji": "洋酒",
+    "kana": "ようしゅ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "洋酒，西洋酒"
+  },
+  {
+    "kanji": "遠回り",
+    "kana": "とおまわりする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "绕道，绕远"
+  },
+  {
+    "kanji": "骨",
+    "kana": "ほね",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "骨头，骨骼"
+  },
+  {
+    "kanji": "悩む",
+    "kana": "なやむ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "烦恼，苦恼"
+  },
+  {
+    "kanji": "肩",
+    "kana": "かた",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "肩膀，肩"
+  },
+  {
+    "kanji": "ムスク",
+    "kana": "ムスク",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "口罩；面具"
+  },
+  {
+    "kanji": "絶交",
+    "kana": "ぜっこうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "绝交"
+  },
+  {
+    "kanji": "反省",
+    "kana": "はんせいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "反省，反思"
+  },
+  {
+    "kanji": "完了",
+    "kana": "かんりょうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "完成，完毕"
+  },
+  {
+    "kanji": "留年",
+    "kana": "りゅうねんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "留级"
+  },
+  {
+    "kanji": "領事",
+    "kana": "りょうじ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "领事"
+  },
+  {
+    "kanji": "石",
+    "kana": "いし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "石头，石块"
+  },
+  {
+    "kanji": "空き缶",
+    "kana": "あきかん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "あきかん（空き缶）[名]空罐"
+  },
+  {
+    "kanji": "日差し",
+    "kana": "ひざし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "照射的阳光，阳光照射"
+  },
+  {
+    "kanji": "照りつける",
+    "kana": "てりつける",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "暴晒，毒晒"
+  },
+  {
+    "kanji": "わざと",
+    "kana": "わざと",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "故意，特意，有意"
+  },
+  {
+    "kanji": "意地悪",
+    "kana": "いじわる",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "捉弄，使坏，恶作剧"
+  },
+  {
+    "kanji": "やり直す",
+    "kana": "やりなおす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "重做"
+  },
+  {
+    "kanji": "仕上げる",
+    "kana": "しあげる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "完成，做成"
+  },
+  {
+    "kanji": "水道水",
+    "kana": "すいどうすい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "自来水"
+  },
+  {
+    "kanji": "代名詞",
+    "kana": "だいめいし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "代名词，代词"
+  },
+  {
+    "kanji": "かび",
+    "kana": "かび",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "霉，霉菌"
+  },
+  {
+    "kanji": "臭い",
+    "kana": "くさい",
+    "pitch": "",
+    "pos": "形容词",
+    "meaning": "有～气味，有～味道；臭"
+  },
+  {
+    "kanji": "苦情",
+    "kana": "くじょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "不满，怨言，抱怨"
+  },
+  {
+    "kanji": "水道局",
+    "kana": "すいどうきょく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "水利局，自来水公司"
+  },
+  {
+    "kanji": "浄水器",
+    "kana": "じょうすいき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "净化器，净水器"
+  },
+  {
+    "kanji": "ところが",
+    "kana": "ところが",
+    "pitch": "",
+    "pos": "连接词",
+    "meaning": "然而，可是，不过"
+  },
+  {
+    "kanji": "都庁",
+    "kana": "とちょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "都政府"
+  },
+  {
+    "kanji": "大手",
+    "kana": "おおて",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "大，大型"
+  },
+  {
+    "kanji": "飲料～",
+    "kana": "いんりょうメーカー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "饮料公司"
+  },
+  {
+    "kanji": "ミネラルウォーター",
+    "kana": "ミネラルウォーター",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "矿泉水"
+  },
+  {
+    "kanji": "都",
+    "kana": "と",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "都，首都"
+  },
+  {
+    "kanji": "原材料",
+    "kana": "げんざいりょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "原材料，原料"
+  },
+  {
+    "kanji": "都内",
+    "kana": "とない",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "整个东京都内；东京都中心区"
+  },
+  {
+    "kanji": "浄水場",
+    "kana": "じょうすいじょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "净水厂"
+  },
+  {
+    "kanji": "処理",
+    "kana": "しょりする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "处理，解决"
+  },
+  {
+    "kanji": "詰める",
+    "kana": "つめる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "装到，装满，填满；挤紧"
+  },
+  {
+    "kanji": "貯水池",
+    "kana": "ちょすいち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "蓄水池"
+  },
+  {
+    "kanji": "河川",
+    "kana": "かせん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "河流，河川"
+  },
+  {
+    "kanji": "水質",
+    "kana": "すいしつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "水质"
+  },
+  {
+    "kanji": "浄水処理施設",
+    "kana": "じょうすいしょりしせつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "净水处理设施"
+  },
+  {
+    "kanji": "オゾン",
+    "kana": "オゾン",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "臭氧"
+  },
+  {
+    "kanji": "活性炭",
+    "kana": "かっせいたん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "活性炭"
+  },
+  {
+    "kanji": "微生物",
+    "kana": "びせいぶつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "微生物"
+  },
+  {
+    "kanji": "取り除く",
+    "kana": "とりのぞく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "去除，除去"
+  },
+  {
+    "kanji": "貯水槽",
+    "kana": "ちょすいそう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "蓄水罐"
+  },
+  {
+    "kanji": "水道管",
+    "kana": "すいどうかん道",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "自来水管道"
+  },
+  {
+    "kanji": "対策",
+    "kana": "たいさく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "措施，对策"
+  },
+  {
+    "kanji": "伴う",
+    "kana": "ともなう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "随着，伴随；跟随；符合"
+  },
+  {
+    "kanji": "水源",
+    "kana": "すいげん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "水源"
+  },
+  {
+    "kanji": "地面",
+    "kana": "じめん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "地面"
+  },
+  {
+    "kanji": "落ち葉",
+    "kana": "おちば",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "落叶"
+  },
+  {
+    "kanji": "通過",
+    "kana": "つうかする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "通过"
+  },
+  {
+    "kanji": "土",
+    "kana": "つち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "土壤，土，土地"
+  },
+  {
+    "kanji": "染み込む",
+    "kana": "しみこむ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "渗进，渗透，浸入"
+  },
+  {
+    "kanji": "土砂",
+    "kana": "どしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "泥砂，沙土"
+  },
+  {
+    "kanji": "～ずつ",
+    "kana": "～ずつ",
+    "pitch": "",
+    "pos": "",
+    "meaning": "每～，各～"
+  },
+  {
+    "kanji": "視聴者",
+    "kana": "しちょうしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "观众，收视者"
+  },
+  {
+    "kanji": "辞典",
+    "kana": "じてん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "词典，辞典"
+  },
+  {
+    "kanji": "無断",
+    "kana": "むだん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "擅自，私自，自作主张"
+  },
+  {
+    "kanji": "天",
+    "kana": "てん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "天，天空；天国；天命"
+  },
+  {
+    "kanji": "地",
+    "kana": "ち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "地，土地，地球；地面；陆地"
+  },
+  {
+    "kanji": "議会",
+    "kana": "ぎかい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "议会"
+  },
+  {
+    "kanji": "法案",
+    "kana": "ほうあん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "法案"
+  },
+  {
+    "kanji": "予算案",
+    "kana": "よさんあん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "预算案"
+  },
+  {
+    "kanji": "可決",
+    "kana": "かけつする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "通过"
+  },
+  {
+    "kanji": "緑化",
+    "kana": "りょくか",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "绿化"
+  },
+  {
+    "kanji": "冷戦",
+    "kana": "れいせん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "冷战"
+  },
+  {
+    "kanji": "終結",
+    "kana": "しゅうけつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "结束，终结"
+  },
+  {
+    "kanji": "強調",
+    "kana": "きょうちょうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "重视，强调"
+  },
+  {
+    "kanji": "電灯",
+    "kana": "でんとう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "电灯"
+  },
+  {
+    "kanji": "旗",
+    "kana": "はた",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "旗帜，旗"
+  },
+  {
+    "kanji": "責任",
+    "kana": "せきにん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "责任"
+  },
+  {
+    "kanji": "各国",
+    "kana": "かっこく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "各国"
+  },
+  {
+    "kanji": "紛争",
+    "kana": "ふんそう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "争端，纷争，纠纷"
+  },
+  {
+    "kanji": "目指す",
+    "kana": "めざす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "向着，朝着"
+  },
+  {
+    "kanji": "機関",
+    "kana": "きかん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "机构，机关"
+  },
+  {
+    "kanji": "原則",
+    "kana": "げんそく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "原则"
+  },
+  {
+    "kanji": "マイナス",
+    "kana": "マイナス",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "零下；负，负面"
+  },
+  {
+    "kanji": "吹雪",
+    "kana": "ふぶき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "暴风雪"
+  },
+  {
+    "kanji": "観測",
+    "kana": "かんそく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "观测"
+  },
+  {
+    "kanji": "継続",
+    "kana": "けいぞくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "继续"
+  },
+  {
+    "kanji": "原料",
+    "kana": "げんりょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "原材料，原料"
+  },
+  {
+    "kanji": "鉄",
+    "kana": "てつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "铁"
+  },
+  {
+    "kanji": "鉄鉱石",
+    "kana": "てっこうせき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "铁矿石"
+  },
+  {
+    "kanji": "頼る",
+    "kana": "たよる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "依靠，依赖"
+  },
+  {
+    "kanji": "哲学",
+    "kana": "てつがく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "哲学"
+  },
+  {
+    "kanji": "大工",
+    "kana": "だいく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "木匠"
+  },
+  {
+    "kanji": "盗み",
+    "kana": "ぬすみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "偷窃"
+  },
+  {
+    "kanji": "情けない",
+    "kana": "なさけない",
+    "pitch": "",
+    "pos": "形容词",
+    "meaning": "可耻，没出息"
+  },
+  {
+    "kanji": "医師",
+    "kana": "いし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "医生，医师"
+  },
+  {
+    "kanji": "世話をする",
+    "kana": "せわをする",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "照顾，关照，照料"
+  },
+  {
+    "kanji": "火星",
+    "kana": "かせい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "火星"
+  },
+  {
+    "kanji": "明らか",
+    "kana": "あきらか",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "明显"
+  },
+  {
+    "kanji": "陸地",
+    "kana": "りくち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "陆地"
+  },
+  {
+    "kanji": "ようやく",
+    "kana": "ようやく",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "终于"
+  },
+  {
+    "kanji": "認める",
+    "kana": "みとめる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "承认，认可"
+  },
+  {
+    "kanji": "復旧",
+    "kana": "ふっきゅうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "复旧"
+  },
+  {
+    "kanji": "入学金",
+    "kana": "にゅうがくきん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "入学金"
+  },
+  {
+    "kanji": "授業料",
+    "kana": "じゅぎょうりょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "学费"
+  },
+  {
+    "kanji": "申し込み用紙",
+    "kana": "もうしこみようし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "申请书"
+  },
+  {
+    "kanji": "氏名",
+    "kana": "しめい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "姓名，姓和名"
+  },
+  {
+    "kanji": "生年月日",
+    "kana": "せいねんがっぴ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "出生年月日"
+  },
+  {
+    "kanji": "記入",
+    "kana": "きにゅうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "写入，填写"
+  },
+  {
+    "kanji": "資産",
+    "kana": "しさん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "资产，财产"
+  },
+  {
+    "kanji": "トンネル",
+    "kana": "トンネル",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "隧道，隧洞，地道"
+  },
+  {
+    "kanji": "回り道",
+    "kana": "まわりみち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "绕道，绕远"
+  },
+  {
+    "kanji": "通学",
+    "kana": "つうがく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "上学，走读"
+  },
+  {
+    "kanji": "短縮",
+    "kana": "たんしゅくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "缩短"
+  },
+  {
+    "kanji": "食生活",
+    "kana": "しょくせいかつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "饮食生活"
+  },
+  {
+    "kanji": "食糧",
+    "kana": "しょくりょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "粮食，食粮"
+  },
+  {
+    "kanji": "原油",
+    "kana": "げんゆ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "原油"
+  },
+  {
+    "kanji": "価格",
+    "kana": "かかく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "价格"
+  },
+  {
+    "kanji": "サプリメント",
+    "kana": "サプリメント",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "营养品，滋补品"
+  },
+  {
+    "kanji": "ダイレクトメール",
+    "kana": "ダイレクトメール",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "信件广告，邮寄广告"
+  },
+  {
+    "kanji": "NGO",
+    "kana": "エヌジーオー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "民间公益团体"
+  },
+  {
+    "kanji": "松林",
+    "kana": "まつばやし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "松林"
+  },
+  {
+    "kanji": "ボランティア",
+    "kana": "ボランティア",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "志愿者，志愿参加者"
+  },
+  {
+    "kanji": "国際交流",
+    "kana": "こくさいこうりゅう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "国际交流"
+  },
+  {
+    "kanji": "軽自動車",
+    "kana": "けいじどうしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "小型汽车"
+  },
+  {
+    "kanji": "見直し",
+    "kana": "みなおし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "重新认识"
+  },
+  {
+    "kanji": "事業",
+    "kana": "じぎょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "事业"
+  },
+  {
+    "kanji": "市",
+    "kana": "し",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "市；城市，都市"
+  }
+]

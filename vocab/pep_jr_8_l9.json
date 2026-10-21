@@ -1,0 +1,380 @@
+[
+  {
+    "kanji": "建物",
+    "kana": "たてもの",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "房屋, 建筑物"
+  },
+  {
+    "kanji": "並ぶ",
+    "kana": "ならぶ",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "排列"
+  },
+  {
+    "kanji": "",
+    "kana": "ずいぶん",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "非常, 很"
+  },
+  {
+    "kanji": "切符",
+    "kana": "きっぷ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "票"
+  },
+  {
+    "kanji": "無料",
+    "kana": "むりょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "免费"
+  },
+  {
+    "kanji": "",
+    "kana": "けっこう",
+    "pitch": "①",
+    "pos": "名·形2·副",
+    "meaning": "相当, 非常"
+  },
+  {
+    "kanji": "向こう",
+    "kana": "むこう",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "对面, 那边"
+  },
+  {
+    "kanji": "釣り",
+    "kana": "つり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "钓鱼"
+  },
+  {
+    "kanji": "辺り",
+    "kana": "あたり",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "周围, 附近"
+  },
+  {
+    "kanji": "施設",
+    "kana": "しせつ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "设施"
+  },
+  {
+    "kanji": "",
+    "kana": "バリアフリー",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "无障碍(设施)"
+  },
+  {
+    "kanji": "工夫",
+    "kana": "くふう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "设法，动脑筋"
+  },
+  {
+    "kanji": "感じる",
+    "kana": "かんじる",
+    "pitch": "⓪",
+    "pos": "动2自他",
+    "meaning": "感觉，感到"
+  },
+  {
+    "kanji": "描写",
+    "kana": "びょうしゃ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "描写；描绘"
+  },
+  {
+    "kanji": "",
+    "kana": "かなり",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "很, 颇, 相当"
+  },
+  {
+    "kanji": "実感",
+    "kana": "じっかん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "真实感受"
+  },
+  {
+    "kanji": "郊外",
+    "kana": "こうがい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "郊外"
+  },
+  {
+    "kanji": "整然と",
+    "kana": "せいぜんと",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "整整齐齐，井然有序"
+  },
+  {
+    "kanji": "畑",
+    "kana": "はたけ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "田地"
+  },
+  {
+    "kanji": "清らか",
+    "kana": "きよらか",
+    "pitch": "②",
+    "pos": "形2",
+    "meaning": "清澈; 纯洁"
+  },
+  {
+    "kanji": "鮮やか",
+    "kana": "あざやか",
+    "pitch": "②",
+    "pos": "形2",
+    "meaning": "鲜艳，漂亮；鲜明"
+  },
+  {
+    "kanji": "幼稚園",
+    "kana": "ようちえん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "幼儿园"
+  },
+  {
+    "kanji": "感動",
+    "kana": "かんどう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "感动"
+  },
+  {
+    "kanji": "送る",
+    "kana": "おくる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "度过; 送, 寄送"
+  },
+  {
+    "kanji": "外国語",
+    "kana": "がいこくご",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "外语, 外文"
+  },
+  {
+    "kanji": "小型バス",
+    "kana": "こがたバス",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "小型巴士"
+  },
+  {
+    "kanji": "騷音",
+    "kana": "そうおん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "噪声"
+  },
+  {
+    "kanji": "排気",
+    "kana": "はいき",
+    "pitch": "①",
+    "pos": "名·动3自",
+    "meaning": "排气"
+  },
+  {
+    "kanji": "深い",
+    "kana": "ふかい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "深"
+  },
+  {
+    "kanji": "期待",
+    "kana": "きたい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "期待"
+  },
+  {
+    "kanji": "",
+    "kana": "かける",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "寄托"
+  },
+  {
+    "kanji": "森",
+    "kana": "もり",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "森林"
+  },
+  {
+    "kanji": "開く",
+    "kana": "あく",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "开, 打开"
+  },
+  {
+    "kanji": "",
+    "kana": "つく",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "(灯, 火)点着, 燃着"
+  },
+  {
+    "kanji": "",
+    "kana": "プロ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "专业(的)"
+  },
+  {
+    "kanji": "科学",
+    "kana": "かがく",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "科学"
+  },
+  {
+    "kanji": "用事",
+    "kana": "ようじ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "(计划做的)事情"
+  },
+  {
+    "kanji": "直接",
+    "kana": "ちょくせつ",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "直接"
+  },
+  {
+    "kanji": "",
+    "kana": "おじさん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "伯; 叔; 舅; 姑父; 姨父"
+  },
+  {
+    "kanji": "季節",
+    "kana": "きせつ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "季节"
+  },
+  {
+    "kanji": "紅葉",
+    "kana": "こうよう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "红叶"
+  },
+  {
+    "kanji": "白い",
+    "kana": "しろい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "白"
+  },
+  {
+    "kanji": "穿く",
+    "kana": "はく",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "穿(下装)"
+  },
+  {
+    "kanji": "用意",
+    "kana": "ようい",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "准备"
+  },
+  {
+    "kanji": "本棚",
+    "kana": "ほんだな",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "书架"
+  },
+  {
+    "kanji": "",
+    "kana": "あれ",
+    "pitch": "①",
+    "pos": "叹",
+    "meaning": "呀, 哎呀"
+  },
+  {
+    "kanji": "由来",
+    "kana": "ゆらい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "由来, 来历"
+  },
+  {
+    "kanji": "花火",
+    "kana": "はなび",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "烟火, 焰火"
+  },
+  {
+    "kanji": "筆箱",
+    "kana": "ふでばこ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "笔盒"
+  },
+  {
+    "kanji": "",
+    "kana": "みそ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "酱, 黄酱"
+  },
+  {
+    "kanji": "みそ汁",
+    "kana": "みそしる",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "(日式)酱汤"
+  },
+  {
+    "kanji": "原料",
+    "kana": "げんりょう",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "原料"
+  },
+  {
+    "kanji": "",
+    "kana": "まあ",
+    "pitch": "①",
+    "pos": "叹",
+    "meaning": "哎呀"
+  },
+  {
+    "kanji": "動物園",
+    "kana": "どうぶつえん",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "动物园"
+  }
+]

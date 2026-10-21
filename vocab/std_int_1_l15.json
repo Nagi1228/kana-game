@@ -1,0 +1,695 @@
+[
+  {
+    "kanji": "こっち",
+    "kana": "こっち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "这边，这里"
+  },
+  {
+    "kanji": "やあ",
+    "kana": "やあ",
+    "pitch": "",
+    "pos": "感叹词",
+    "meaning": "哎呀，啊，呀"
+  },
+  {
+    "kanji": "ちっとも",
+    "kana": "ちっとも",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "一点儿（也不），毫（无）"
+  },
+  {
+    "kanji": "それはそうと",
+    "kana": "それはそうと",
+    "pitch": "",
+    "pos": "连接词",
+    "meaning": "此外，另外，顺便说一句"
+  },
+  {
+    "kanji": "ねえ",
+    "kana": "ねえ",
+    "pitch": "",
+    "pos": "感叹词",
+    "meaning": "喂"
+  },
+  {
+    "kanji": "水炊き",
+    "kana": "みずたき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "鸡肉时蔬火锅，鸡肉汆锅"
+  },
+  {
+    "kanji": "とり肉",
+    "kana": "とりにく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "鸡肉"
+  },
+  {
+    "kanji": "温まる",
+    "kana": "あたたまる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "暖和，温暖"
+  },
+  {
+    "kanji": "よし",
+    "kana": "よし",
+    "pitch": "",
+    "pos": "感叹词",
+    "meaning": "好，对"
+  },
+  {
+    "kanji": "盛り合わせ",
+    "kana": "もりあわせ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "拼盘（菜）"
+  },
+  {
+    "kanji": "タコ",
+    "kana": "タコ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "章鱼"
+  },
+  {
+    "kanji": "豆腐",
+    "kana": "とうふ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "豆腐"
+  },
+  {
+    "kanji": "大根",
+    "kana": "だいこん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "萝卜"
+  },
+  {
+    "kanji": "カクテル",
+    "kana": "カクテル",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "鸡尾酒，混合酒"
+  },
+  {
+    "kanji": "～料理",
+    "kana": "フランスりょうり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "法国菜"
+  },
+  {
+    "kanji": "そうだなあ",
+    "kana": "そうだなあ",
+    "pitch": "",
+    "pos": "",
+    "meaning": "是啊"
+  },
+  {
+    "kanji": "～人前",
+    "kana": "～にんまえ",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～人份儿，～份儿"
+  },
+  {
+    "kanji": "禁煙席",
+    "kana": "きんえんせき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "无烟席，禁烟席，禁烟区"
+  },
+  {
+    "kanji": "焼きそば",
+    "kana": "やきそば",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "炒面"
+  },
+  {
+    "kanji": "チャーハン",
+    "kana": "チャーハン",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "炒饭"
+  },
+  {
+    "kanji": "会計",
+    "kana": "かいけい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "结帐，付款；会计"
+  },
+  {
+    "kanji": "割り勘",
+    "kana": "わりかん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "AA制，分摊费用，均摊费用"
+  },
+  {
+    "kanji": "おごる",
+    "kana": "おごる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "请客，做东；奢华"
+  },
+  {
+    "kanji": "そっち",
+    "kana": "そっち",
+    "pitch": "",
+    "pos": "代词",
+    "meaning": "那边，那里"
+  },
+  {
+    "kanji": "あっち",
+    "kana": "あっち",
+    "pitch": "",
+    "pos": "代词",
+    "meaning": "那边，那里"
+  },
+  {
+    "kanji": "どっち",
+    "kana": "どっち",
+    "pitch": "",
+    "pos": "代词",
+    "meaning": "哪边，哪里"
+  },
+  {
+    "kanji": "ねえねえ",
+    "kana": "ねえねえ",
+    "pitch": "",
+    "pos": "感叹词",
+    "meaning": "喂喂，哎哎"
+  },
+  {
+    "kanji": "よう",
+    "kana": "よう",
+    "pitch": "",
+    "pos": "感叹词",
+    "meaning": "哟，噢"
+  },
+  {
+    "kanji": "虎",
+    "kana": "とら",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "老虎，虎"
+  },
+  {
+    "kanji": "少しも",
+    "kana": "すこしも",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "一点也（不）"
+  },
+  {
+    "kanji": "商売",
+    "kana": "しょうばい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "生意，买卖"
+  },
+  {
+    "kanji": "口紅",
+    "kana": "くちべに",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "口红"
+  },
+  {
+    "kanji": "鍋物",
+    "kana": "なべもの",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "火锅"
+  },
+  {
+    "kanji": "羊",
+    "kana": "ひつじ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "羊，绵羊"
+  },
+  {
+    "kanji": "しゃぶやぶ",
+    "kana": "しゃぶやぶ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "涮锅，涮（牛羊肉片）火锅"
+  },
+  {
+    "kanji": "当店",
+    "kana": "とうてん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "本店，我店"
+  },
+  {
+    "kanji": "羊肉",
+    "kana": "ひつじにく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "羊肉"
+  },
+  {
+    "kanji": "ホラー",
+    "kana": "ホラー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "恐怖片，惊悚片"
+  },
+  {
+    "kanji": "列",
+    "kana": "れつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "队，列，行列"
+  },
+  {
+    "kanji": "窓口",
+    "kana": "まどぐち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "窗口"
+  },
+  {
+    "kanji": "書き直す",
+    "kana": "かきなおす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "改写，重新写；誊写"
+  },
+  {
+    "kanji": "専門店",
+    "kana": "せんもんてん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "专卖店"
+  },
+  {
+    "kanji": "ハンバーガー",
+    "kana": "ハンバーガー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "汉堡包"
+  },
+  {
+    "kanji": "パスタ",
+    "kana": "パスタ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "意大利面条，意大利面食类"
+  },
+  {
+    "kanji": "多様",
+    "kana": "たよう",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "多种多样，各式各样"
+  },
+  {
+    "kanji": "おしぼり",
+    "kana": "おしぼり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "湿巾"
+  },
+  {
+    "kanji": "無料",
+    "kana": "むりょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "免费"
+  },
+  {
+    "kanji": "メニュー",
+    "kana": "メニュー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "菜单，菜谱"
+  },
+  {
+    "kanji": "調理",
+    "kana": "ちょうりする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "烹饪，调理"
+  },
+  {
+    "kanji": "載せる",
+    "kana": "のせる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "放，搁；载，登载"
+  },
+  {
+    "kanji": "他人丼",
+    "kana": "たにんどん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "他人盖饭，猪（牛）肉鸡蛋盖饭"
+  },
+  {
+    "kanji": "豚肉",
+    "kana": "ぶたにく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "猪肉"
+  },
+  {
+    "kanji": "親子",
+    "kana": "おやこ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "父母和子女"
+  },
+  {
+    "kanji": "他人",
+    "kana": "たにん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "他人，别人"
+  },
+  {
+    "kanji": "キツネうどん",
+    "kana": "キツネうどん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "狐狸乌冬面，油炸豆腐乌冬面"
+  },
+  {
+    "kanji": "決して",
+    "kana": "けっして",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "绝对（不），决（不），断然（不）"
+  },
+  {
+    "kanji": "キツネ",
+    "kana": "キツネ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "狐狸"
+  },
+  {
+    "kanji": "油揚げ",
+    "kana": "あぶらあげ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "油炸豆腐；油炸食品"
+  },
+  {
+    "kanji": "好物",
+    "kana": "こうぶつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "爱吃的东西"
+  },
+  {
+    "kanji": "～店",
+    "kana": "～てん",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～店"
+  },
+  {
+    "kanji": "着席",
+    "kana": "ちゃくせきする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "就座，入座，就席"
+  },
+  {
+    "kanji": "総理大臣",
+    "kana": "そうりだいじん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "总理，首相"
+  },
+  {
+    "kanji": "国会",
+    "kana": "こっかい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "国会"
+  },
+  {
+    "kanji": "ウェットティッシュ",
+    "kana": "ウェットティッシュ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "湿纸巾"
+  },
+  {
+    "kanji": "包丁",
+    "kana": "ほうちょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "菜刀"
+  },
+  {
+    "kanji": "違反",
+    "kana": "いはん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "违反，违背"
+  },
+  {
+    "kanji": "逮捕",
+    "kana": "たいほする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "逮捕"
+  },
+  {
+    "kanji": "使用",
+    "kana": "しようする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "使用"
+  },
+  {
+    "kanji": "答案",
+    "kana": "とうあん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "答案，回答"
+  },
+  {
+    "kanji": "白紙",
+    "kana": "はくし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "白纸；空白纸；原始状态"
+  },
+  {
+    "kanji": "診断",
+    "kana": "しんだんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "诊断；判断"
+  },
+  {
+    "kanji": "親戚",
+    "kana": "しんせき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "亲戚，亲属"
+  },
+  {
+    "kanji": "我が家",
+    "kana": "わがや",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "亲戚，自己家"
+  },
+  {
+    "kanji": "資源～",
+    "kana": "しげんごみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "资源性垃圾，再生性垃圾"
+  },
+  {
+    "kanji": "貧困",
+    "kana": "ひんこん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "贫困，贫穷；贫乏"
+  },
+  {
+    "kanji": "過剰生産",
+    "kana": "かじょうせいさん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "生产过剩"
+  },
+  {
+    "kanji": "赤字",
+    "kana": "あかじ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "赤字，红字"
+  },
+  {
+    "kanji": "うそ",
+    "kana": "うそ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "谎言，假话"
+  },
+  {
+    "kanji": "隠す",
+    "kana": "かくす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "隐藏，隐蔽"
+  },
+  {
+    "kanji": "手術",
+    "kana": "しゅじゅつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "手术"
+  },
+  {
+    "kanji": "～組",
+    "kana": "～くみ",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～组"
+  },
+  {
+    "kanji": "制限",
+    "kana": "せいげん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "限制，限度，界限"
+  },
+  {
+    "kanji": "貸し出し",
+    "kana": "かしだし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "出借，出租"
+  },
+  {
+    "kanji": "期限",
+    "kana": "きげん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "期限"
+  },
+  {
+    "kanji": "生",
+    "kana": "なま",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "生，鲜；未加工过"
+  },
+  {
+    "kanji": "100円～",
+    "kana": "ひゃくえんショップ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "100日元店"
+  },
+  {
+    "kanji": "消費税",
+    "kana": "しょうひぜい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "消费税"
+  },
+  {
+    "kanji": "裸足",
+    "kana": "はだし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "光脚，赤脚"
+  },
+  {
+    "kanji": "夜道",
+    "kana": "よみち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "夜路，黑路"
+  },
+  {
+    "kanji": "絹",
+    "kana": "きぬ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "丝绸，绸子；（蚕）丝"
+  },
+  {
+    "kanji": "都",
+    "kana": "みやこ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "首都，京城；繁华都市"
+  },
+  {
+    "kanji": "琵琶",
+    "kana": "びわ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "琵琶"
+  },
+  {
+    "kanji": "グレープフルーツ",
+    "kana": "グレープフルーツ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "葡萄柚"
+  },
+  {
+    "kanji": "なる",
+    "kana": "なる",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "结（果实）"
+  },
+  {
+    "kanji": "起こる",
+    "kana": "おこる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "发生，引起"
+  },
+  {
+    "kanji": "小麦",
+    "kana": "こむぎ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "小麦"
+  },
+  {
+    "kanji": "収穫",
+    "kana": "しゅうかく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "收获"
+  },
+  {
+    "kanji": "消費",
+    "kana": "しょうひ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "消费"
+  },
+  {
+    "kanji": "無駄",
+    "kana": "むだ",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "徒劳，无用；浪费，白费"
+  }
+]

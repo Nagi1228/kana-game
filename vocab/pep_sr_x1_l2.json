@@ -1,0 +1,499 @@
+[
+  {
+    "kanji": "朗読",
+    "kana": "ろうどく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "朗读"
+  },
+  {
+    "kanji": "詩",
+    "kana": "し",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "诗，诗歌"
+  },
+  {
+    "kanji": "",
+    "kana": "クッキー",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "小甜饼干"
+  },
+  {
+    "kanji": "右上",
+    "kana": "みぎうえ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "右上"
+  },
+  {
+    "kanji": "",
+    "kana": "うふふ",
+    "pitch": "③",
+    "pos": "叹",
+    "meaning": "呵呵（轻笑）"
+  },
+  {
+    "kanji": "",
+    "kana": "ぶつぶつ",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "嘟哝，唠叨，抱怨"
+  },
+  {
+    "kanji": "欲",
+    "kana": "よく",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "欲望"
+  },
+  {
+    "kanji": "怒る",
+    "kana": "いかる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "发怒，生气"
+  },
+  {
+    "kanji": "",
+    "kana": "すごい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "厉害，了不起"
+  },
+  {
+    "kanji": "国語",
+    "kana": "こくご",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "国语（课）；国家公用语"
+  },
+  {
+    "kanji": "暗唱",
+    "kana": "あんしょう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "背，背诵"
+  },
+  {
+    "kanji": "",
+    "kana": "ほんの",
+    "pitch": "⓪",
+    "pos": "连体",
+    "meaning": "不过，仅仅"
+  },
+  {
+    "kanji": "言い回し",
+    "kana": "いいまわし",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "措辞，表达方式"
+  },
+  {
+    "kanji": "",
+    "kana": "リズム",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "节奏"
+  },
+  {
+    "kanji": "確か",
+    "kana": "たしか",
+    "pitch": "①",
+    "pos": "形2·副",
+    "meaning": "大概；确实，可靠"
+  },
+  {
+    "kanji": "CDブック",
+    "kana": "シーディーブック",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "光盘书，带书的光盘"
+  },
+  {
+    "kanji": "全文",
+    "kana": "ぜんぶん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "全文"
+  },
+  {
+    "kanji": "問い",
+    "kana": "とい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "问题"
+  },
+  {
+    "kanji": "玄米",
+    "kana": "げんまい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "糙米"
+  },
+  {
+    "kanji": "合",
+    "kana": "ごう",
+    "pitch": "①",
+    "pos": "量",
+    "meaning": "合"
+  },
+  {
+    "kanji": "",
+    "kana": "あらゆる",
+    "pitch": "③",
+    "pos": "连体",
+    "meaning": "所有，一切"
+  },
+  {
+    "kanji": "勘定",
+    "kana": "かんじょう",
+    "pitch": "③",
+    "pos": "名·动3他",
+    "meaning": "计算，算账"
+  },
+  {
+    "kanji": "見聞き",
+    "kana": "みきき",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "见闻，耳闻目睹"
+  },
+  {
+    "kanji": "野原",
+    "kana": "のはら",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "原野"
+  },
+  {
+    "kanji": "松",
+    "kana": "まつ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "松树"
+  },
+  {
+    "kanji": "林",
+    "kana": "はやし",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "树林"
+  },
+  {
+    "kanji": "蔭",
+    "kana": "かげ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "树荫，阴暗处"
+  },
+  {
+    "kanji": "萱葺き",
+    "kana": "かやぶき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "草顶房屋"
+  },
+  {
+    "kanji": "小屋",
+    "kana": "こや",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "小房子，小房间"
+  },
+  {
+    "kanji": "看病",
+    "kana": "かんびょう",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "护理，看护"
+  },
+  {
+    "kanji": "稲",
+    "kana": "いね",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "稻子"
+  },
+  {
+    "kanji": "束",
+    "kana": "たば",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "束，把"
+  },
+  {
+    "kanji": "負う",
+    "kana": "おう",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "背负"
+  },
+  {
+    "kanji": "死ぬ",
+    "kana": "しぬ",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "死，死亡"
+  },
+  {
+    "kanji": "訴訟",
+    "kana": "そしょう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "诉讼"
+  },
+  {
+    "kanji": "日照り",
+    "kana": "ひでり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "干旱；日照"
+  },
+  {
+    "kanji": "",
+    "kana": "おろおろ",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "坐立不安"
+  },
+  {
+    "kanji": "でくの坊",
+    "kana": "でくのぼう",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "木偶"
+  },
+  {
+    "kanji": "褒める",
+    "kana": "ほめる",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "称赞，表扬"
+  },
+  {
+    "kanji": "苦",
+    "kana": "く",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "苦，痛苦"
+  },
+  {
+    "kanji": "手帳",
+    "kana": "てちょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "笔记本"
+  },
+  {
+    "kanji": "",
+    "kana": "シャドーイング",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "跟读；跟随"
+  },
+  {
+    "kanji": "対句",
+    "kana": "ついく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "对句，对偶"
+  },
+  {
+    "kanji": "対比",
+    "kana": "たいひ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "对比"
+  },
+  {
+    "kanji": "味わう",
+    "kana": "あじわう",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "品尝"
+  },
+  {
+    "kanji": "浮かぶ",
+    "kana": "うかぶ",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "浮现"
+  },
+  {
+    "kanji": "想像",
+    "kana": "そうぞう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "想象"
+  },
+  {
+    "kanji": "鑑賞",
+    "kana": "かんしょう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "欣赏，鉴赏"
+  },
+  {
+    "kanji": "",
+    "kana": "そのまま",
+    "pitch": "④",
+    "pos": "副",
+    "meaning": "照原样"
+  },
+  {
+    "kanji": "引き出す",
+    "kana": "ひきだす",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "拽出，抽出"
+  },
+  {
+    "kanji": "人生",
+    "kana": "じんせい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "人生"
+  },
+  {
+    "kanji": "支える",
+    "kana": "ささえる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "支撑，维持"
+  },
+  {
+    "kanji": "出版",
+    "kana": "しゅっぱん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "出版"
+  },
+  {
+    "kanji": "絵本",
+    "kana": "えほん",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "图画书"
+  },
+  {
+    "kanji": "直後",
+    "kana": "ちょくご",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "刚……之后；正后方"
+  },
+  {
+    "kanji": "希望",
+    "kana": "きぼう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "希望"
+  },
+  {
+    "kanji": "日々",
+    "kana": "ひび",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "天天，每天"
+  },
+  {
+    "kanji": "個人",
+    "kana": "こじん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "个人"
+  },
+  {
+    "kanji": "有り得る",
+    "kana": "ありえる",
+    "pitch": "③",
+    "pos": "动2自",
+    "meaning": "有可能"
+  },
+  {
+    "kanji": "形式",
+    "kana": "けいしき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "形式"
+  },
+  {
+    "kanji": "言語",
+    "kana": "げんご",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "语言，言语"
+  },
+  {
+    "kanji": "手本",
+    "kana": "てほん",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "范本"
+  },
+  {
+    "kanji": "",
+    "kana": "まねる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "模仿，效仿"
+  },
+  {
+    "kanji": "大会",
+    "kana": "たいかい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "大会，大赛"
+  },
+  {
+    "kanji": "胸",
+    "kana": "むね",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "胸部"
+  },
+  {
+    "kanji": "人柄",
+    "kana": "ひとがら",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "人品，品格"
+  },
+  {
+    "kanji": "梅雨",
+    "kana": "つゆ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "梅雨，梅雨期"
+  },
+  {
+    "kanji": "芽",
+    "kana": "め",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "嫩芽"
+  },
+  {
+    "kanji": "望む",
+    "kana": "のぞむ",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "希望、盼望"
+  },
+  {
+    "kanji": "呼吸",
+    "kana": "こきゅう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "呼吸"
+  },
+  {
+    "kanji": "清らか",
+    "kana": "きよらか",
+    "pitch": "②",
+    "pos": "形2",
+    "meaning": "纯洁；清澈"
+  }
+]

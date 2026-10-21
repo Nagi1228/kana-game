@@ -1,0 +1,310 @@
+[
+  {
+    "kanji": "余暇",
+    "kana": "よか",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "余暇, 业余时间"
+  },
+  {
+    "kanji": "活動",
+    "kana": "かつどう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "活动"
+  },
+  {
+    "kanji": "暇",
+    "kana": "ひま",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "空闲"
+  },
+  {
+    "kanji": "青少年",
+    "kana": "せいしょうねん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "青少年"
+  },
+  {
+    "kanji": "",
+    "kana": "センター",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "中心"
+  },
+  {
+    "kanji": "",
+    "kana": "かかる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "花费(钱, 时间等)"
+  },
+  {
+    "kanji": "書道",
+    "kana": "しょどう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "书法"
+  },
+  {
+    "kanji": "週間",
+    "kana": "しゅうかん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "周, 星期"
+  },
+  {
+    "kanji": "回",
+    "kana": "かい",
+    "pitch": "①",
+    "pos": "名·后缀",
+    "meaning": "回, 次;…回, …次"
+  },
+  {
+    "kanji": "",
+    "kana": "バドミントン",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "羽毛球"
+  },
+  {
+    "kanji": "水泳",
+    "kana": "すいえい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "游泳"
+  },
+  {
+    "kanji": "",
+    "kana": "ときどき",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "有时, 时常"
+  },
+  {
+    "kanji": "",
+    "kana": "コンサート",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "音乐会; 演唱会"
+  },
+  {
+    "kanji": "楽しむ",
+    "kana": "たのしむ",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "享受，欣赏； 期待"
+  },
+  {
+    "kanji": "太極拳",
+    "kana": "たいきょくけん",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "太极拳"
+  },
+  {
+    "kanji": "携帯",
+    "kana": "けいたい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "手机； 携带"
+  },
+  {
+    "kanji": "京劇",
+    "kana": "きょうげき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "京剧"
+  },
+  {
+    "kanji": "",
+    "kana": "ダンス",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "跳舞; 交际舞"
+  },
+  {
+    "kanji": "每晚",
+    "kana": "まいばん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "每天晚上"
+  },
+  {
+    "kanji": "踊る",
+    "kana": "おどる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "跳舞, 舞蹈"
+  },
+  {
+    "kanji": "挨拶",
+    "kana": "あいさつ",
+    "pitch": "①",
+    "pos": "名·动3自",
+    "meaning": "打招呼，寒暄；致词"
+  },
+  {
+    "kanji": "自己紹介",
+    "kana": "じこしょうかい",
+    "pitch": "③",
+    "pos": "名·动3自",
+    "meaning": "自我介绍"
+  },
+  {
+    "kanji": "人物",
+    "kana": "じんぶつ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "人物"
+  },
+  {
+    "kanji": "",
+    "kana": "アニメ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "动画片"
+  },
+  {
+    "kanji": "漫画",
+    "kana": "まんが",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "漫画, 连环画"
+  },
+  {
+    "kanji": "",
+    "kana": "ネット",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "网络"
+  },
+  {
+    "kanji": "近所",
+    "kana": "きんじょ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "近处, 附近"
+  },
+  {
+    "kanji": "理由",
+    "kana": "りゆう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "理由"
+  },
+  {
+    "kanji": "",
+    "kana": "そして",
+    "pitch": "⓪",
+    "pos": "连",
+    "meaning": "然后, 而且"
+  },
+  {
+    "kanji": "心",
+    "kana": "こころ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "心, 内心; 心地"
+  },
+  {
+    "kanji": "健康",
+    "kana": "けんこう",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "健康"
+  },
+  {
+    "kanji": "保つ",
+    "kana": "たもつ",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "保持, 维持"
+  },
+  {
+    "kanji": "大事",
+    "kana": "だいじ",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "重要; 珍惜"
+  },
+  {
+    "kanji": "",
+    "kana": "また",
+    "pitch": "②",
+    "pos": "副",
+    "meaning": "再, 又"
+  },
+  {
+    "kanji": "歳",
+    "kana": "さい",
+    "pitch": "",
+    "pos": "后缀",
+    "meaning": "……岁"
+  },
+  {
+    "kanji": "度",
+    "kana": "ど",
+    "pitch": "⓪",
+    "pos": "名·后缀",
+    "meaning": "度, 次;…次, …度"
+  },
+  {
+    "kanji": "週",
+    "kana": "しゅう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "周, 星期"
+  },
+  {
+    "kanji": "間",
+    "kana": "かん",
+    "pitch": "①",
+    "pos": "名·后缀",
+    "meaning": "…间, 之间; 期间"
+  },
+  {
+    "kanji": "",
+    "kana": "ビル",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "大楼, 大厦"
+  },
+  {
+    "kanji": "",
+    "kana": "テレビ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "电视"
+  },
+  {
+    "kanji": "青い",
+    "kana": "あおい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "蓝, 绿"
+  },
+  {
+    "kanji": "上",
+    "kana": "うえ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "上, 上面"
+  },
+  {
+    "kanji": "自転車",
+    "kana": "じてんしゃ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "自行车"
+  },
+  {
+    "kanji": "市",
+    "kana": "し",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "市; 城 七年级"
+  }
+]

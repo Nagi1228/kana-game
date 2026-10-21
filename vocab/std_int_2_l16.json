@@ -1,0 +1,576 @@
+[
+  {
+    "kanji": "退社～",
+    "kana": "たいしゃする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "下班；辞职，退职"
+  },
+  {
+    "kanji": "落ち着く",
+    "kana": "おちつく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "稳定，沉着，安定"
+  },
+  {
+    "kanji": "励ます",
+    "kana": "はげます",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "鼓劲，鼓励，激励"
+  },
+  {
+    "kanji": "祝日",
+    "kana": "しゅくじつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "节日，假日"
+  },
+  {
+    "kanji": "録音～",
+    "kana": "ろくおんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "录音"
+  },
+  {
+    "kanji": "英文",
+    "kana": "えいぶん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "英文，英语"
+  },
+  {
+    "kanji": "揺れ",
+    "kana": "ゆれ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "晃动，摇晃，震动"
+  },
+  {
+    "kanji": "お姉ちゃん",
+    "kana": "おねえちゃん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "姐姐"
+  },
+  {
+    "kanji": "停電～",
+    "kana": "ていでんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "停电"
+  },
+  {
+    "kanji": "嫌う",
+    "kana": "きらう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "讨厌，厌烦"
+  },
+  {
+    "kanji": "美容師",
+    "kana": "びようし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "美容师"
+  },
+  {
+    "kanji": "半人前",
+    "kana": "はんにんまえ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "半个人，半吊子，半份儿"
+  },
+  {
+    "kanji": "夏物",
+    "kana": "なつもの",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "夏服，夏季用品"
+  },
+  {
+    "kanji": "人事異動",
+    "kana": "じんじいどう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "人事变动，人员调动"
+  },
+  {
+    "kanji": "気がかり",
+    "kana": "きがかり",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "担心，惦念，挂念"
+  },
+  {
+    "kanji": "否決～",
+    "kana": "ひけつする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "否决"
+  },
+  {
+    "kanji": "プライド",
+    "kana": "プライド",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "自尊心，自豪感"
+  },
+  {
+    "kanji": "傷つく",
+    "kana": "きずつく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "受伤，负伤；受损，受创"
+  },
+  {
+    "kanji": "トキ",
+    "kana": "トキ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "朱鹮"
+  },
+  {
+    "kanji": "絶滅",
+    "kana": "ぜつめつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "灭绝，绝灭"
+  },
+  {
+    "kanji": "危機",
+    "kana": "きき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "危机"
+  },
+  {
+    "kanji": "直面～",
+    "kana": "ちょくめんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "直面，面临，面对"
+  },
+  {
+    "kanji": "一帯",
+    "kana": "いったい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "地带，一带"
+  },
+  {
+    "kanji": "分布～",
+    "kana": "ぶんぷする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "分布"
+  },
+  {
+    "kanji": "乱獲",
+    "kana": "らんかく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "滥捕，乱捕"
+  },
+  {
+    "kanji": "悪化",
+    "kana": "あっか",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "恶化"
+  },
+  {
+    "kanji": "絶滅危惧種",
+    "kana": "ぜつめつきぐしゅ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "濒危物种，濒临灭绝物种"
+  },
+  {
+    "kanji": "野生",
+    "kana": "やせい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "野生"
+  },
+  {
+    "kanji": "生息～",
+    "kana": "せいそくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "栖息，生息"
+  },
+  {
+    "kanji": "生息地",
+    "kana": "せいそくち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "栖息地"
+  },
+  {
+    "kanji": "一時期",
+    "kana": "いちじき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "一度，一段时期"
+  },
+  {
+    "kanji": "営巣地",
+    "kana": "えいそうち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "筑巢地，筑巢区域，营巢区域"
+  },
+  {
+    "kanji": "監視",
+    "kana": "かんし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "观察，监视"
+  },
+  {
+    "kanji": "保護",
+    "kana": "ほご",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "保护"
+  },
+  {
+    "kanji": "取り組む",
+    "kana": "とりくむ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "致力于，埋头于"
+  },
+  {
+    "kanji": "かたわら",
+    "kana": "かたわら",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "一面，一边；旁边"
+  },
+  {
+    "kanji": "飼育～",
+    "kana": "しいくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "饲养"
+  },
+  {
+    "kanji": "啓発",
+    "kana": "けいはつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "启发，启示"
+  },
+  {
+    "kanji": "こうした",
+    "kana": "こうした",
+    "pitch": "",
+    "pos": "连接词",
+    "meaning": "这样的，如此的"
+  },
+  {
+    "kanji": "支援",
+    "kana": "しえん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "援助，支援"
+  },
+  {
+    "kanji": "募る",
+    "kana": "つのる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "募集，征募，招募"
+  },
+  {
+    "kanji": "派遣～",
+    "kana": "はけんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "派遣"
+  },
+  {
+    "kanji": "観察",
+    "kana": "かんさつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "观察"
+  },
+  {
+    "kanji": "深める",
+    "kana": "ふかめる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "加深，深化"
+  },
+  {
+    "kanji": "時点",
+    "kana": "じてん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "时候，时间"
+  },
+  {
+    "kanji": "試みる",
+    "kana": "こころみる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "尝试，试验"
+  },
+  {
+    "kanji": "懸命",
+    "kana": "けんめい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "拼命，竭尽全力"
+  },
+  {
+    "kanji": "救い",
+    "kana": "すくい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "援助，救援，搭救；挽救"
+  },
+  {
+    "kanji": "差し伸べる",
+    "kana": "さしのべる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "伸出"
+  },
+  {
+    "kanji": "際する",
+    "kana": "さいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "正值，正当"
+  },
+  {
+    "kanji": "贈呈",
+    "kana": "ぞうてい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "赠送"
+  },
+  {
+    "kanji": "雄",
+    "kana": "おす",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "雄，雄性"
+  },
+  {
+    "kanji": "雌",
+    "kana": "めす",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "雌，雌性"
+  },
+  {
+    "kanji": "～のみ",
+    "kana": "～のみ",
+    "pitch": "",
+    "pos": "",
+    "meaning": "只～，仅～"
+  },
+  {
+    "kanji": "翌～",
+    "kana": "よく～",
+    "pitch": "",
+    "pos": "",
+    "meaning": "次～，翌～，第二～"
+  },
+  {
+    "kanji": "断水",
+    "kana": "だんすい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "断水，停水"
+  },
+  {
+    "kanji": "明け方",
+    "kana": "あけがた",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "黎明，拂晓"
+  },
+  {
+    "kanji": "仕方",
+    "kana": "しかた",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "做法，方法，办法"
+  },
+  {
+    "kanji": "衝突",
+    "kana": "しょうとつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "撞上，冲突，矛盾"
+  },
+  {
+    "kanji": "感染～",
+    "kana": "かんせんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "感染，染上"
+  },
+  {
+    "kanji": "休校措置",
+    "kana": "きゅうこうそち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "停课措施"
+  },
+  {
+    "kanji": "コーチ",
+    "kana": "コーチ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "教练，技术指导"
+  },
+  {
+    "kanji": "審判",
+    "kana": "しんぱん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "裁判（员）；审判，判决"
+  },
+  {
+    "kanji": "被災地",
+    "kana": "ひさいち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "灾区，受灾区"
+  },
+  {
+    "kanji": "銀",
+    "kana": "ぎん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "银；银钱；银色"
+  },
+  {
+    "kanji": "アンテナ",
+    "kana": "アンテナ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "天线"
+  },
+  {
+    "kanji": "書面",
+    "kana": "しょめん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "书面；书信，信件"
+  },
+  {
+    "kanji": "本～",
+    "kana": "ほん～",
+    "pitch": "",
+    "pos": "",
+    "meaning": "本～，这～"
+  },
+  {
+    "kanji": "国境",
+    "kana": "こっきょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "国境，边境"
+  },
+  {
+    "kanji": "付近",
+    "kana": "ふきん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "附近"
+  },
+  {
+    "kanji": "開館～",
+    "kana": "かいかんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "开馆"
+  },
+  {
+    "kanji": "歴史小説",
+    "kana": "れきししょうせつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "历史小说"
+  },
+  {
+    "kanji": "議員",
+    "kana": "ぎいん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "议员"
+  },
+  {
+    "kanji": "平和活動",
+    "kana": "へいわかつどう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "和平运动"
+  },
+  {
+    "kanji": "閉鎖～",
+    "kana": "へいさする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "关闭，封闭"
+  },
+  {
+    "kanji": "愛顧",
+    "kana": "あいこ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "光顾，眷顾，惠顾"
+  },
+  {
+    "kanji": "社員割引制度",
+    "kana": "しゃいんわりびきせいど",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "内部员工折扣制度"
+  },
+  {
+    "kanji": "割引",
+    "kana": "わりびき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "打折，折扣，减价"
+  },
+  {
+    "kanji": "建造物",
+    "kana": "けんぞうぶつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "建筑物"
+  },
+  {
+    "kanji": "立ち退き",
+    "kana": "たちのき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "搬迁，搬走；离开，撤退"
+  },
+  {
+    "kanji": "～可",
+    "kana": "～か",
+    "pitch": "",
+    "pos": "",
+    "meaning": "可～，可以～"
+  },
+  {
+    "kanji": "～運動",
+    "kana": "～うんどう",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～活动，～运动"
+  }
+]

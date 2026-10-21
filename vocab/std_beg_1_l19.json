@@ -1,0 +1,275 @@
+[
+  {
+    "kanji": "品物",
+    "kana": "しなもの",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "物品，商品"
+  },
+  {
+    "kanji": "お皿",
+    "kana": "おさら",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "盘子"
+  },
+  {
+    "kanji": "ごみ",
+    "kana": "ごみ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "垃圾"
+  },
+  {
+    "kanji": "初心者",
+    "kana": "しょしんしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "初学者"
+  },
+  {
+    "kanji": "上級者",
+    "kana": "じょうきゅうしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "熟练者"
+  },
+  {
+    "kanji": "高級",
+    "kana": "こうきゅう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "高级"
+  },
+  {
+    "kanji": "上級クラス",
+    "kana": "じょうきゅうクラス",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "高级班"
+  },
+  {
+    "kanji": "英会話",
+    "kana": "えいかいわ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "英语会话"
+  },
+  {
+    "kanji": "コース",
+    "kana": "コース",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "路线，滑道"
+  },
+  {
+    "kanji": "スキー",
+    "kana": "スキー",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "滑雪"
+  },
+  {
+    "kanji": "レポート",
+    "kana": "レポート",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "报告"
+  },
+  {
+    "kanji": "パスポート",
+    "kana": "パスポート",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "护照"
+  },
+  {
+    "kanji": "のど",
+    "kana": "のど",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "喉咙"
+  },
+  {
+    "kanji": "触る",
+    "kana": "さわる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "碰，触"
+  },
+  {
+    "kanji": "脱ぐ",
+    "kana": "ぬぐ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "脱"
+  },
+  {
+    "kanji": "転ぶ",
+    "kana": "ころぶ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "摔，摔倒，跌倒"
+  },
+  {
+    "kanji": "渇く",
+    "kana": "かわく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "渴"
+  },
+  {
+    "kanji": "治る",
+    "kana": "なおる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "痊愈，医好"
+  },
+  {
+    "kanji": "滑る",
+    "kana": "すべる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "滑，滑行"
+  },
+  {
+    "kanji": "呼ぶ",
+    "kana": "よぶ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "呼喊"
+  },
+  {
+    "kanji": "返す",
+    "kana": "かえす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "归还"
+  },
+  {
+    "kanji": "手伝う",
+    "kana": "てつだう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "帮忙"
+  },
+  {
+    "kanji": "運ぶ",
+    "kana": "はこぶ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "搬运"
+  },
+  {
+    "kanji": "なくす",
+    "kana": "なくす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "丢，丢失"
+  },
+  {
+    "kanji": "落とす",
+    "kana": "おとす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "掉，使落下"
+  },
+  {
+    "kanji": "置く",
+    "kana": "おく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "放置"
+  },
+  {
+    "kanji": "払う",
+    "kana": "はらう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "支付"
+  },
+  {
+    "kanji": "立つ",
+    "kana": "たつ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "站，立"
+  },
+  {
+    "kanji": "忘れる",
+    "kana": "わすれる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "忘记"
+  },
+  {
+    "kanji": "慌てる",
+    "kana": "あわてる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "慌张，惊慌，着急"
+  },
+  {
+    "kanji": "捨てる",
+    "kana": "すてる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "扔，扔掉"
+  },
+  {
+    "kanji": "残業する",
+    "kana": "ざんぎょうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "加班"
+  },
+  {
+    "kanji": "心配する",
+    "kana": "しんぱいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "担心"
+  },
+  {
+    "kanji": "本当",
+    "kana": "ほんとう",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "真的，真正"
+  },
+  {
+    "kanji": "早く",
+    "kana": "はやく",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "早点儿"
+  },
+  {
+    "kanji": "やっと",
+    "kana": "やっと",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "好不容易，终于"
+  },
+  {
+    "kanji": "だいぶ",
+    "kana": "だいぶ",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "很，相当地"
+  },
+  {
+    "kanji": "初めて",
+    "kana": "はじめて",
+    "pitch": "②",
+    "pos": "副词",
+    "meaning": "第一次"
+  },
+  {
+    "kanji": "先に",
+    "kana": "さきに",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "先"
+  }
+]

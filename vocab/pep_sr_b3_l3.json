@@ -1,0 +1,478 @@
+[
+  {
+    "kanji": "作品",
+    "kana": "さくひん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "作品"
+  },
+  {
+    "kanji": "優れる",
+    "kana": "すぐれる",
+    "pitch": "③",
+    "pos": "动2自",
+    "meaning": "优秀，出色"
+  },
+  {
+    "kanji": "",
+    "kana": "ストーリー",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "故事，情节"
+  },
+  {
+    "kanji": "～氏",
+    "kana": "し",
+    "pitch": "",
+    "pos": "后缀",
+    "meaning": "……氏（敬称）"
+  },
+  {
+    "kanji": "初",
+    "kana": "はつ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "最初，首个"
+  },
+  {
+    "kanji": "長編",
+    "kana": "ちょうへん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "长篇"
+  },
+  {
+    "kanji": "輸出",
+    "kana": "ゆしゅつ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "出口"
+  },
+  {
+    "kanji": "誕生",
+    "kana": "たんじょう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "诞生"
+  },
+  {
+    "kanji": "制作",
+    "kana": "せいさく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "制作"
+  },
+  {
+    "kanji": "水墨画",
+    "kana": "すいぼくが",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "水墨画"
+  },
+  {
+    "kanji": "親しむ",
+    "kana": "したしむ",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "亲近；爱好"
+  },
+  {
+    "kanji": "改革開放",
+    "kana": "かいかくかいほう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "改革开放"
+  },
+  {
+    "kanji": "輸入",
+    "kana": "ゆにゅう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "进口"
+  },
+  {
+    "kanji": "下請け",
+    "kana": "したうけ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "承包"
+  },
+  {
+    "kanji": "挑戦",
+    "kana": "ちょうせん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "挑战"
+  },
+  {
+    "kanji": "～向け",
+    "kana": "むけ",
+    "pitch": "",
+    "pos": "后缀",
+    "meaning": "面向……"
+  },
+  {
+    "kanji": "視聴者",
+    "kana": "しちょうしゃ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "听众，观众"
+  },
+  {
+    "kanji": "国産",
+    "kana": "こくさん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "国产"
+  },
+  {
+    "kanji": "抱く",
+    "kana": "いだく",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "怀有，抱有"
+  },
+  {
+    "kanji": "応える",
+    "kana": "こたえる",
+    "pitch": "③",
+    "pos": "动2自",
+    "meaning": "响应；答复"
+  },
+  {
+    "kanji": "注目",
+    "kana": "ちゅうもく",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "关注"
+  },
+  {
+    "kanji": "人材",
+    "kana": "じんざい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "人才"
+  },
+  {
+    "kanji": "育成",
+    "kana": "いくせい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "培养"
+  },
+  {
+    "kanji": "画面",
+    "kana": "がめん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "画面"
+  },
+  {
+    "kanji": "上映",
+    "kana": "じょうえい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "上映，放映"
+  },
+  {
+    "kanji": "～家",
+    "kana": "か",
+    "pitch": "",
+    "pos": "后缀",
+    "meaning": "家（有某种特长的人）"
+  },
+  {
+    "kanji": "衝撃",
+    "kana": "しょうげき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "冲击"
+  },
+  {
+    "kanji": "連載",
+    "kana": "れんさい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "连载"
+  },
+  {
+    "kanji": "",
+    "kana": "もと",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "基础"
+  },
+  {
+    "kanji": "縁",
+    "kana": "えん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "缘分"
+  },
+  {
+    "kanji": "両国",
+    "kana": "りょうこく",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "两国，两个国家"
+  },
+  {
+    "kanji": "",
+    "kana": "カラー",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "彩色"
+  },
+  {
+    "kanji": "深まる",
+    "kana": "ふかまる",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "加深"
+  },
+  {
+    "kanji": "題名",
+    "kana": "だいめい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "题名，标题"
+  },
+  {
+    "kanji": "原作",
+    "kana": "げんさく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "原作，原著"
+  },
+  {
+    "kanji": "奪う",
+    "kana": "うばう",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "剥夺，抢夺"
+  },
+  {
+    "kanji": "少年",
+    "kana": "しょうねん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "少年"
+  },
+  {
+    "kanji": "戦う",
+    "kana": "たたかう",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "战斗"
+  },
+  {
+    "kanji": "取り戻す",
+    "kana": "とりもどす",
+    "pitch": "④",
+    "pos": "动1他",
+    "meaning": "取回；挽回；收复"
+  },
+  {
+    "kanji": "妖魔",
+    "kana": "ようま",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "妖怪，妖魔"
+  },
+  {
+    "kanji": "退治",
+    "kana": "たいじ",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "消灭，打退"
+  },
+  {
+    "kanji": "",
+    "kana": "シーン",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "场面，场景"
+  },
+  {
+    "kanji": "",
+    "kana": "シージー（CG）",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "计算机图形"
+  },
+  {
+    "kanji": "",
+    "kana": "あちこち",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "这儿那儿，到处"
+  },
+  {
+    "kanji": "描く",
+    "kana": "えがく",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "描绘；画；想象"
+  },
+  {
+    "kanji": "",
+    "kana": "キャラクター",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "角色"
+  },
+  {
+    "kanji": "化粧",
+    "kana": "けしょう",
+    "pitch": "②",
+    "pos": "名·动3自他",
+    "meaning": "妆容，化妆"
+  },
+  {
+    "kanji": "再現",
+    "kana": "さいげん",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "重现"
+  },
+  {
+    "kanji": "とんぼ返り",
+    "kana": "とんぼがえり",
+    "pitch": "④",
+    "pos": "名·动3自",
+    "meaning": "翻筋斗，翻跟头"
+  },
+  {
+    "kanji": "",
+    "kana": "ヒーロー",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "英雄"
+  },
+  {
+    "kanji": "",
+    "kana": "ファン",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "爱好者，……迷"
+  },
+  {
+    "kanji": "異なる",
+    "kana": "ことなる",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "不一样，不同"
+  },
+  {
+    "kanji": "結びつける",
+    "kana": "むすびつける",
+    "pitch": "⑤",
+    "pos": "动2他",
+    "meaning": "结合，联结"
+  },
+  {
+    "kanji": "引きつける",
+    "kana": "ひきつける",
+    "pitch": "④",
+    "pos": "动2他",
+    "meaning": "吸引"
+  },
+  {
+    "kanji": "国境",
+    "kana": "こっきょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "国界，国境"
+  },
+  {
+    "kanji": "",
+    "kana": "たっぷり",
+    "pitch": "③",
+    "pos": "副",
+    "meaning": "充分，充足"
+  },
+  {
+    "kanji": "見事",
+    "kana": "みごと",
+    "pitch": "①",
+    "pos": "形2",
+    "meaning": "出色，精彩"
+  },
+  {
+    "kanji": "苗字",
+    "kana": "みょうじ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "姓"
+  },
+  {
+    "kanji": "評判",
+    "kana": "ひょうばん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "评价"
+  },
+  {
+    "kanji": "芝居",
+    "kana": "しばい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "剧，戏剧；演技"
+  },
+  {
+    "kanji": "潜る",
+    "kana": "もぐる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "潜水；钻入，躲进"
+  },
+  {
+    "kanji": "喧しい",
+    "kana": "やかましい",
+    "pitch": "④",
+    "pos": "形1",
+    "meaning": "吵闹"
+  },
+  {
+    "kanji": "女性",
+    "kana": "じょせい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "女性，女士"
+  },
+  {
+    "kanji": "",
+    "kana": "ブーム",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "风潮，热潮"
+  },
+  {
+    "kanji": "政治",
+    "kana": "せいじ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "政治"
+  },
+  {
+    "kanji": "七夕",
+    "kana": "たなばた",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "七夕，乞巧节"
+  },
+  {
+    "kanji": "着物",
+    "kana": "きもの",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "和服；衣服"
+  },
+  {
+    "kanji": "姿",
+    "kana": "すがた",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "姿态，形态"
+  }
+]

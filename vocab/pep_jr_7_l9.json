@@ -1,0 +1,415 @@
+[
+  {
+    "kanji": "約束",
+    "kana": "やくそく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "约定"
+  },
+  {
+    "kanji": "",
+    "kana": "さあ",
+    "pitch": "①",
+    "pos": "叹",
+    "meaning": "来吧, 开始吧"
+  },
+  {
+    "kanji": "経験",
+    "kana": "けいけん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "经历，经验"
+  },
+  {
+    "kanji": "無",
+    "kana": "む",
+    "pitch": "⓪",
+    "pos": "名·前缀",
+    "meaning": "无………; 无, 没有"
+  },
+  {
+    "kanji": "監督",
+    "kana": "かんとく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "监考； 监督； 导演； 教练"
+  },
+  {
+    "kanji": "試験",
+    "kana": "しけん",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "考试; 试验"
+  },
+  {
+    "kanji": "",
+    "kana": "カンニング",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "作弊"
+  },
+  {
+    "kanji": "無人",
+    "kana": "むじん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "无人"
+  },
+  {
+    "kanji": "販売",
+    "kana": "はんばい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "销售，出售"
+  },
+  {
+    "kanji": "お客さん",
+    "kana": "おきゃくさん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "客人，顾客"
+  },
+  {
+    "kanji": "野菜",
+    "kana": "やさい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "蔬菜"
+  },
+  {
+    "kanji": "選ぶ",
+    "kana": "えらぶ",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "挑选, 选择"
+  },
+  {
+    "kanji": "払う",
+    "kana": "はらう",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "支付"
+  },
+  {
+    "kanji": "多く",
+    "kana": "おおく",
+    "pitch": "①",
+    "pos": "名·副",
+    "meaning": "多，许多；多半，大都"
+  },
+  {
+    "kanji": "",
+    "kana": "スマホ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "智能手机"
+  },
+  {
+    "kanji": "事例",
+    "kana": "じれい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "事例"
+  },
+  {
+    "kanji": "物語",
+    "kana": "ものがたり",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "故事"
+  },
+  {
+    "kanji": "古代",
+    "kana": "こだい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "古代"
+  },
+  {
+    "kanji": "妻",
+    "kana": "つま",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "妻子"
+  },
+  {
+    "kanji": "市場",
+    "kana": "いちば",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "集市, 市场"
+  },
+  {
+    "kanji": "言う",
+    "kana": "いう",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "说"
+  },
+  {
+    "kanji": "息子",
+    "kana": "むすこ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "儿子"
+  },
+  {
+    "kanji": "",
+    "kana": "おとなしい",
+    "pitch": "④",
+    "pos": "形1",
+    "meaning": "乖, 听话, 老实"
+  },
+  {
+    "kanji": "豚",
+    "kana": "ぶた",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "猪"
+  },
+  {
+    "kanji": "夕方",
+    "kana": "ゆうがた",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "傍晚"
+  },
+  {
+    "kanji": "",
+    "kana": "すると",
+    "pitch": "⓪",
+    "pos": "连",
+    "meaning": "于是, 就"
+  },
+  {
+    "kanji": "",
+    "kana": "さっそく",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "立刻, 马上, 赶紧"
+  },
+  {
+    "kanji": "包丁",
+    "kana": "ほうちょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "菜刀"
+  },
+  {
+    "kanji": "研ぐ",
+    "kana": "とぐ",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "磨(刀等) ; 研磨"
+  },
+  {
+    "kanji": "",
+    "kana": "さっき",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "刚才"
+  },
+  {
+    "kanji": "冗談",
+    "kana": "じょうだん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "玩笑, 笑话"
+  },
+  {
+    "kanji": "",
+    "kana": "しかし",
+    "pitch": "②",
+    "pos": "连",
+    "meaning": "但是, 可是"
+  },
+  {
+    "kanji": "子供",
+    "kana": "こども",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "孩子, 子女; 儿童"
+  },
+  {
+    "kanji": "",
+    "kana": "だます",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "骗, 欺骗, 哄骗"
+  },
+  {
+    "kanji": "",
+    "kana": "ちゃんと",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "好好地"
+  },
+  {
+    "kanji": "",
+    "kana": "すてき",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "好, 出色; 漂亮"
+  },
+  {
+    "kanji": "",
+    "kana": "そろそろ",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "就要, 快要"
+  },
+  {
+    "kanji": "",
+    "kana": "なる",
+    "pitch": "①",
+    "pos": "动1自",
+    "meaning": "变成, 变为"
+  },
+  {
+    "kanji": "終わる",
+    "kana": "おわる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "结束"
+  },
+  {
+    "kanji": "始める",
+    "kana": "はじめる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "开始"
+  },
+  {
+    "kanji": "地震",
+    "kana": "じしん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "地震"
+  },
+  {
+    "kanji": "国",
+    "kana": "くに",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "国家; 国土"
+  },
+  {
+    "kanji": "窓",
+    "kana": "まど",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "窗户; 窗口"
+  },
+  {
+    "kanji": "少ない",
+    "kana": "すくない",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "少, 不多"
+  },
+  {
+    "kanji": "暗い",
+    "kana": "くらい",
+    "pitch": "⓪",
+    "pos": "形1",
+    "meaning": "暗, 昏暗"
+  },
+  {
+    "kanji": "少し",
+    "kana": "すこし",
+    "pitch": "②",
+    "pos": "副",
+    "meaning": "一点儿"
+  },
+  {
+    "kanji": "激しい",
+    "kana": "はげしい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "激烈，猛烈；剧烈"
+  },
+  {
+    "kanji": "空港",
+    "kana": "くうこう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "机场"
+  },
+  {
+    "kanji": "乗る",
+    "kana": "のる",
+    "pitch": "①",
+    "pos": "动1自",
+    "meaning": "乘坐；骑(车、马等)"
+  },
+  {
+    "kanji": "",
+    "kana": "ドア",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "门"
+  },
+  {
+    "kanji": "開ける",
+    "kana": "あける",
+    "pitch": "①",
+    "pos": "动2他",
+    "meaning": "打开, 开启"
+  },
+  {
+    "kanji": "勝つ",
+    "kana": "かつ",
+    "pitch": "①",
+    "pos": "动1自",
+    "meaning": "赢, 获胜"
+  },
+  {
+    "kanji": "買い物",
+    "kana": "かいもの",
+    "pitch": "①",
+    "pos": "名·动3自",
+    "meaning": "买东西，购物"
+  },
+  {
+    "kanji": "便利",
+    "kana": "べんり",
+    "pitch": "①",
+    "pos": "形2",
+    "meaning": "便利, 方便"
+  },
+  {
+    "kanji": "通勤",
+    "kana": "つうきん",
+    "pitch": "①",
+    "pos": "名·动3自",
+    "meaning": "上下班，通勤"
+  },
+  {
+    "kanji": "大会",
+    "kana": "たいかい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "大赛; 大会"
+  },
+  {
+    "kanji": "",
+    "kana": "チャンス",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "机会"
+  },
+  {
+    "kanji": "答える",
+    "kana": "こたえる",
+    "pitch": "③",
+    "pos": "动2自",
+    "meaning": "回答"
+  },
+  {
+    "kanji": "",
+    "kana": "もう",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "已经 七年级"
+  }
+]

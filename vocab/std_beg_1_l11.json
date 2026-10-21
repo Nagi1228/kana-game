@@ -1,0 +1,359 @@
+[
+  {
+    "kanji": "歌",
+    "kana": "うた",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "歌，歌曲"
+  },
+  {
+    "kanji": "カラオケ",
+    "kana": "カラオケ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "卡拉OK"
+  },
+  {
+    "kanji": "ロック",
+    "kana": "ロック",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "摇滚乐"
+  },
+  {
+    "kanji": "ポップス",
+    "kana": "ポップス",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "流行音乐"
+  },
+  {
+    "kanji": "クラシック",
+    "kana": "クラシック",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "西方古典音乐"
+  },
+  {
+    "kanji": "ピアノ",
+    "kana": "ピアノ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "钢琴"
+  },
+  {
+    "kanji": "絵",
+    "kana": "え",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "画儿"
+  },
+  {
+    "kanji": "英語",
+    "kana": "えいご",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "英语"
+  },
+  {
+    "kanji": "スペイン語",
+    "kana": "スペインご",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "西班牙语"
+  },
+  {
+    "kanji": "スポーツ",
+    "kana": "スポーツ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "体育，运动"
+  },
+  {
+    "kanji": "水泳",
+    "kana": "すいえい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "游泳"
+  },
+  {
+    "kanji": "ゴルフ",
+    "kana": "ゴルフ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "高尔夫球"
+  },
+  {
+    "kanji": "運転",
+    "kana": "うんてん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "开车"
+  },
+  {
+    "kanji": "飲み物",
+    "kana": "のみもの",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "饮料"
+  },
+  {
+    "kanji": "お酒",
+    "kana": "おさけ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "酒，酒类"
+  },
+  {
+    "kanji": "肉",
+    "kana": "にく",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "肉"
+  },
+  {
+    "kanji": "野菜",
+    "kana": "やさい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "蔬菜"
+  },
+  {
+    "kanji": "果物",
+    "kana": "くだもの",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "水果"
+  },
+  {
+    "kanji": "ヒマワリ",
+    "kana": "ヒマワリ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "向日葵"
+  },
+  {
+    "kanji": "バラ",
+    "kana": "バラ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "蔷薇，玫瑰"
+  },
+  {
+    "kanji": "コンピュータ",
+    "kana": "コンピュータ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "计算机，电脑"
+  },
+  {
+    "kanji": "窓",
+    "kana": "まど",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "窗，窗户"
+  },
+  {
+    "kanji": "結婚式",
+    "kana": "けっこんしき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "结婚典礼"
+  },
+  {
+    "kanji": "写真展",
+    "kana": "しゃしんてん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "摄影展"
+  },
+  {
+    "kanji": "旅館",
+    "kana": "りょかん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "旅馆，旅店"
+  },
+  {
+    "kanji": "別荘",
+    "kana": "べっそう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "别墅"
+  },
+  {
+    "kanji": "寄木細工",
+    "kana": "よせぎざいく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "木片儿拼花工艺品"
+  },
+  {
+    "kanji": "模様",
+    "kana": "もよう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "花纹，纹案"
+  },
+  {
+    "kanji": "外国",
+    "kana": "がいこく",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "外国"
+  },
+  {
+    "kanji": "会議",
+    "kana": "かいぎ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "会议"
+  },
+  {
+    "kanji": "脚",
+    "kana": "あし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "腿"
+  },
+  {
+    "kanji": "僕",
+    "kana": "ぼく",
+    "pitch": "",
+    "pos": "代词",
+    "meaning": "我（男性自称）"
+  },
+  {
+    "kanji": "分かる",
+    "kana": "わかる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "懂，明白"
+  },
+  {
+    "kanji": "迷う",
+    "kana": "まよう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "犹豫，难以决定"
+  },
+  {
+    "kanji": "できる",
+    "kana": "できる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "会；能；完成"
+  },
+  {
+    "kanji": "閉める",
+    "kana": "しめる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "关闭，关门"
+  },
+  {
+    "kanji": "疲れる",
+    "kana": "つかれる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "疲倦，疲惫"
+  },
+  {
+    "kanji": "散歩する",
+    "kana": "さんぽする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "散步"
+  },
+  {
+    "kanji": "怖い",
+    "kana": "こわい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "害怕，恐怖"
+  },
+  {
+    "kanji": "赤い",
+    "kana": "あかい",
+    "pitch": "⓪",
+    "pos": "形容词",
+    "meaning": "红"
+  },
+  {
+    "kanji": "痛い",
+    "kana": "いたい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "疼，疼痛"
+  },
+  {
+    "kanji": "上手",
+    "kana": "じょうず",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "擅长，高明，水平高"
+  },
+  {
+    "kanji": "下手",
+    "kana": "へた",
+    "pitch": "②",
+    "pos": "形容动词",
+    "meaning": "不高明，水平低"
+  },
+  {
+    "kanji": "苦手",
+    "kana": "にがて",
+    "pitch": "③",
+    "pos": "形容动词",
+    "meaning": "不擅长，不善于"
+  },
+  {
+    "kanji": "時々",
+    "kana": "ときどき",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "有时，时不时"
+  },
+  {
+    "kanji": "よく",
+    "kana": "よく",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "经常，常常"
+  },
+  {
+    "kanji": "たまに",
+    "kana": "たまに",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "偶尔，很少"
+  },
+  {
+    "kanji": "また",
+    "kana": "また",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "还，再，又"
+  },
+  {
+    "kanji": "どうして",
+    "kana": "どうして",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "为什么"
+  },
+  {
+    "kanji": "だから/ですから",
+    "kana": "だから/ですから",
+    "pitch": "",
+    "pos": "接续词",
+    "meaning": "所以，因此"
+  },
+  {
+    "kanji": "うーん",
+    "kana": "うーん",
+    "pitch": "②",
+    "pos": "感叹词",
+    "meaning": "嗯……，这个……"
+  }
+]

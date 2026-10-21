@@ -1,0 +1,261 @@
+[
+  {
+    "kanji": "語る",
+    "kana": "かたる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "谈，讲"
+  },
+  {
+    "kanji": "宇宙",
+    "kana": "うちゅう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "宇宙"
+  },
+  {
+    "kanji": "飛行士",
+    "kana": "ひこうし",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "飞行员，宇航员"
+  },
+  {
+    "kanji": "",
+    "kana": "トレーナー",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "训练员"
+  },
+  {
+    "kanji": "",
+    "kana": "デザイナー",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "设计师"
+  },
+  {
+    "kanji": "選手",
+    "kana": "せんしゅ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "选手"
+  },
+  {
+    "kanji": "成人式",
+    "kana": "せいじんしき",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "成年典礼"
+  },
+  {
+    "kanji": "平凡",
+    "kana": "へいぼん",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "平凡"
+  },
+  {
+    "kanji": "見つかる",
+    "kana": "みつかる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "被看到，被发现"
+  },
+  {
+    "kanji": "没頭",
+    "kana": "ぼっとう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "埋头，专心致志"
+  },
+  {
+    "kanji": "限り",
+    "kana": "かぎり",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "限度，以……为限"
+  },
+  {
+    "kanji": "全国",
+    "kana": "ぜんこく",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "全国"
+  },
+  {
+    "kanji": "大会",
+    "kana": "たいかい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "大会"
+  },
+  {
+    "kanji": "",
+    "kana": "プロ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "专业，职业"
+  },
+  {
+    "kanji": "才能",
+    "kana": "さいのう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "才能，能力"
+  },
+  {
+    "kanji": "悔しい",
+    "kana": "くやしい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "令人懊悔，遗憾"
+  },
+  {
+    "kanji": "単純",
+    "kana": "たんじゅん",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "单纯，简单"
+  },
+  {
+    "kanji": "納得",
+    "kana": "なっとく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "理解，接受"
+  },
+  {
+    "kanji": "",
+    "kana": "かなえる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "达到目的，满足愿望"
+  },
+  {
+    "kanji": "充実",
+    "kana": "じゅうじつ",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "充实，充沛"
+  },
+  {
+    "kanji": "制作",
+    "kana": "せいさく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "制作"
+  },
+  {
+    "kanji": "社員",
+    "kana": "しゃいん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "公司职员"
+  },
+  {
+    "kanji": "独自",
+    "kana": "どくじ",
+    "pitch": "①",
+    "pos": "名·形2",
+    "meaning": "独自，独特"
+  },
+  {
+    "kanji": "",
+    "kana": "わくわく",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "欢欣雀跃"
+  },
+  {
+    "kanji": "親友",
+    "kana": "しんゆう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "亲密朋友"
+  },
+  {
+    "kanji": "穏やか",
+    "kana": "おだやか",
+    "pitch": "②",
+    "pos": "形2",
+    "meaning": "平稳，平静"
+  },
+  {
+    "kanji": "追いかける",
+    "kana": "おいかける",
+    "pitch": "④",
+    "pos": "动2他",
+    "meaning": "追赶"
+  },
+  {
+    "kanji": "群",
+    "kana": "ぐん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "群"
+  },
+  {
+    "kanji": "誇り",
+    "kana": "ほこり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "自豪，荣誉"
+  },
+  {
+    "kanji": "個性",
+    "kana": "こせい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "个性"
+  },
+  {
+    "kanji": "青年",
+    "kana": "せいねん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "青年"
+  },
+  {
+    "kanji": "根性",
+    "kana": "こんじょう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "毅力，斗志"
+  },
+  {
+    "kanji": "自立",
+    "kana": "じりつ",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "自立"
+  },
+  {
+    "kanji": "方向",
+    "kana": "ほうこう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "方向"
+  },
+  {
+    "kanji": "実力",
+    "kana": "じつりょく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "实力"
+  },
+  {
+    "kanji": "",
+    "kana": "アイドル",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "偶像"
+  },
+  {
+    "kanji": "破れる",
+    "kana": "やぶれる",
+    "pitch": "③",
+    "pos": "动2自",
+    "meaning": "破灭；破坏"
+  }
+]

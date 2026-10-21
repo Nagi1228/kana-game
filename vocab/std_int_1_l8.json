@@ -1,0 +1,688 @@
+[
+  {
+    "kanji": "キャンペーン",
+    "kana": "キャンペーン",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "宣传活动"
+  },
+  {
+    "kanji": "ターゲット",
+    "kana": "ターゲット",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "目标"
+  },
+  {
+    "kanji": "絞る",
+    "kana": "しぼる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "集中；榨，挤"
+  },
+  {
+    "kanji": "ほう",
+    "kana": "ほう",
+    "pitch": "",
+    "pos": "感叹词",
+    "meaning": "哦，嗬"
+  },
+  {
+    "kanji": "試飲会",
+    "kana": "しいんかい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "品尝会，试饮会"
+  },
+  {
+    "kanji": "探る",
+    "kana": "さぐる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "探访；探寻；试探"
+  },
+  {
+    "kanji": "コーナー",
+    "kana": "コーナー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "栏目，专栏；角落；专柜"
+  },
+  {
+    "kanji": "ピーアール",
+    "kana": "ピーアール",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "宣传，广告"
+  },
+  {
+    "kanji": "取材",
+    "kana": "しゅざい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "采访；取材"
+  },
+  {
+    "kanji": "そのような",
+    "kana": "そのような",
+    "pitch": "",
+    "pos": "连接词",
+    "meaning": "像这样的"
+  },
+  {
+    "kanji": "～部",
+    "kana": "～ぶ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "～区域，～部位"
+  },
+  {
+    "kanji": "食欲",
+    "kana": "しょくよく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "食欲"
+  },
+  {
+    "kanji": "貯金",
+    "kana": "ちょきん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "存款，存钱，储蓄"
+  },
+  {
+    "kanji": "送金",
+    "kana": "そうきんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "寄钱，汇款"
+  },
+  {
+    "kanji": "オーケストラ",
+    "kana": "オーケストラ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "管弦乐（队）"
+  },
+  {
+    "kanji": "演奏会",
+    "kana": "えんそうかい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "演奏会"
+  },
+  {
+    "kanji": "夕食",
+    "kana": "ゆうしょく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "晚餐，晚饭"
+  },
+  {
+    "kanji": "電池",
+    "kana": "でんち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "电池"
+  },
+  {
+    "kanji": "特徴",
+    "kana": "とくちょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "特征，特点"
+  },
+  {
+    "kanji": "講演",
+    "kana": "こうえん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "演讲，演说"
+  },
+  {
+    "kanji": "絵画",
+    "kana": "かいが",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "绘画"
+  },
+  {
+    "kanji": "交際",
+    "kana": "こうさいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "交往，交际"
+  },
+  {
+    "kanji": "予報",
+    "kana": "よほう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "预报"
+  },
+  {
+    "kanji": "高校生",
+    "kana": "こうこうせい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "高中生"
+  },
+  {
+    "kanji": "対象",
+    "kana": "たいしょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "对象"
+  },
+  {
+    "kanji": "アンケート",
+    "kana": "アンケート",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "问卷调查，征询意见"
+  },
+  {
+    "kanji": "社員食堂",
+    "kana": "しゃいんしょくどう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "职工食堂"
+  },
+  {
+    "kanji": "スポーツジム",
+    "kana": "スポーツジム",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "健身房，体育馆"
+  },
+  {
+    "kanji": "人事",
+    "kana": "じんじ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "人事"
+  },
+  {
+    "kanji": "進路",
+    "kana": "しんろ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "去向，前进道路，升学道路"
+  },
+  {
+    "kanji": "話し合う",
+    "kana": "はなしあう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "谈，谈话；商量，讨论"
+  },
+  {
+    "kanji": "心臓",
+    "kana": "しんぞう",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "心脏"
+  },
+  {
+    "kanji": "張り切る",
+    "kana": "はりきる",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "干劲十足，紧张；绷紧"
+  },
+  {
+    "kanji": "招待",
+    "kana": "しょうたいする",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "招待"
+  },
+  {
+    "kanji": "開催",
+    "kana": "かいさいする",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "开，召开，举办"
+  },
+  {
+    "kanji": "受講生",
+    "kana": "じゅこうせい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "听课的人，听讲的人"
+  },
+  {
+    "kanji": "主婦",
+    "kana": "しゅふ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "家庭主妇，主妇"
+  },
+  {
+    "kanji": "独身",
+    "kana": "どくしん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "单身"
+  },
+  {
+    "kanji": "講座",
+    "kana": "こうざ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "讲座"
+  },
+  {
+    "kanji": "～周年",
+    "kana": "～しゅうねん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "～周年"
+  },
+  {
+    "kanji": "カップラーメン",
+    "kana": "カップラーメン",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "碗装方便面"
+  },
+  {
+    "kanji": "注ぐ",
+    "kana": "そそぐ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "加入，注入"
+  },
+  {
+    "kanji": "創業者",
+    "kana": "そうぎょうしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "开创者，创立者，创建者，创业者"
+  },
+  {
+    "kanji": "インスタントラーメン",
+    "kana": "インスタントラーメン",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "方便面"
+  },
+  {
+    "kanji": "すでに",
+    "kana": "すでに",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "已经，业已"
+  },
+  {
+    "kanji": "試食",
+    "kana": "ししょくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "品尝，试餐"
+  },
+  {
+    "kanji": "すると",
+    "kana": "すると",
+    "pitch": "",
+    "pos": "接续词",
+    "meaning": "于是，接着"
+  },
+  {
+    "kanji": "どんぶり",
+    "kana": "どんぶり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "大碗，海碗"
+  },
+  {
+    "kanji": "代わり",
+    "kana": "かわり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "代替，替代"
+  },
+  {
+    "kanji": "紙～",
+    "kana": "かみコップ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "纸杯"
+  },
+  {
+    "kanji": "砕く",
+    "kana": "くだく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "掰碎，弄碎，打碎"
+  },
+  {
+    "kanji": "代わる",
+    "kana": "かわる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "代替"
+  },
+  {
+    "kanji": "販売",
+    "kana": "はんばいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "销售，出售"
+  },
+  {
+    "kanji": "確信",
+    "kana": "かくしんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "坚信，确信"
+  },
+  {
+    "kanji": "工夫",
+    "kana": "くふう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "下功夫，想办法"
+  },
+  {
+    "kanji": "末",
+    "kana": "すえ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "结果；末尾，末了，结尾"
+  },
+  {
+    "kanji": "採用～",
+    "kana": "さいようする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "采用，采纳"
+  },
+  {
+    "kanji": "滑り落ちる",
+    "kana": "すべりおちる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "滑落，滑下"
+  },
+  {
+    "kanji": "～圏",
+    "kana": "～けん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "～圈，～区域"
+  },
+  {
+    "kanji": "～か国",
+    "kana": "～かこく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "～个国家"
+  },
+  {
+    "kanji": "一生",
+    "kana": "いっしょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "一生"
+  },
+  {
+    "kanji": "儲ける",
+    "kana": "もうける",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "赚钱，发财"
+  },
+  {
+    "kanji": "けが人",
+    "kana": "けがにん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "受伤的人，伤员"
+  },
+  {
+    "kanji": "被害",
+    "kana": "ひがい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "损失，受灾，受害"
+  },
+  {
+    "kanji": "拡大",
+    "kana": "かくだい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "扩大，扩展"
+  },
+  {
+    "kanji": "遭う",
+    "kana": "あう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "遭遇，碰上"
+  },
+  {
+    "kanji": "シートベルト",
+    "kana": "シートベルト",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "安全带"
+  },
+  {
+    "kanji": "骨折",
+    "kana": "こっせつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "骨折"
+  },
+  {
+    "kanji": "段～箱",
+    "kana": "だんボールばこ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "纸箱，纸盒"
+  },
+  {
+    "kanji": "ネズミ",
+    "kana": "ネズミ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "老鼠，耗子"
+  },
+  {
+    "kanji": "飛び出す",
+    "kana": "とびだす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "跳出，跑出；飞起"
+  },
+  {
+    "kanji": "猿",
+    "kana": "さる",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "猴子，猿猴"
+  },
+  {
+    "kanji": "近寄る",
+    "kana": "ちかよる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "挨近，靠近"
+  },
+  {
+    "kanji": "打つ",
+    "kana": "うつ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "敲，打"
+  },
+  {
+    "kanji": "鍋",
+    "kana": "なべ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "锅"
+  },
+  {
+    "kanji": "長男",
+    "kana": "ちょうなん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "长子，长男"
+  },
+  {
+    "kanji": "米",
+    "kana": "こめ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "米"
+  },
+  {
+    "kanji": "粉",
+    "kana": "こな",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "粉，粉末"
+  },
+  {
+    "kanji": "話し合い",
+    "kana": "はなしあい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "协商，商谈"
+  },
+  {
+    "kanji": "まとまる",
+    "kana": "まとまる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "一致；归纳；凑齐"
+  },
+  {
+    "kanji": "結局",
+    "kana": "けっきょく",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "结果，最后"
+  },
+  {
+    "kanji": "目的地",
+    "kana": "もくてきち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "目的地"
+  },
+  {
+    "kanji": "小包",
+    "kana": "こづつみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "包裹"
+  },
+  {
+    "kanji": "様子",
+    "kana": "ようす",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "样子"
+  },
+  {
+    "kanji": "溶かす",
+    "kana": "とかす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "溶解，溶化"
+  },
+  {
+    "kanji": "シャッター",
+    "kana": "シャッター",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "快门"
+  },
+  {
+    "kanji": "写す",
+    "kana": "うつす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "拍照；描写；抄写"
+  },
+  {
+    "kanji": "家庭教師",
+    "kana": "かていきょうし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "家教，家庭教师"
+  },
+  {
+    "kanji": "エネルギー",
+    "kana": "エネルギー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "能量，能源；精力"
+  },
+  {
+    "kanji": "長年",
+    "kana": "ながねん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "多年，长年累月"
+  },
+  {
+    "kanji": "努力",
+    "kana": "どりょく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "努力"
+  },
+  {
+    "kanji": "点検",
+    "kana": "てんけん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "检查"
+  },
+  {
+    "kanji": "ロケット",
+    "kana": "ロケット",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "火箭"
+  },
+  {
+    "kanji": "発射～",
+    "kana": "はっしゃする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "发射"
+  },
+  {
+    "kanji": "沈黙",
+    "kana": "ちんもく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "沉默，安静"
+  },
+  {
+    "kanji": "おやつ",
+    "kana": "おやつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "零食，点心，茶点"
+  },
+  {
+    "kanji": "偏る",
+    "kana": "かたよる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "不平衡；偏颇，偏袒"
+  },
+  {
+    "kanji": "話しかける",
+    "kana": "はなしかける",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "搭话，打招呼"
+  }
+]

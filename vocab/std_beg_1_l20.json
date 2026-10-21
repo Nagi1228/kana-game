@@ -1,0 +1,275 @@
+[
+  {
+    "kanji": "趣味",
+    "kana": "しゅみ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "爱好"
+  },
+  {
+    "kanji": "特技",
+    "kana": "とくぎ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "特长，拿手的技术"
+  },
+  {
+    "kanji": "興味",
+    "kana": "きょうみ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "兴趣"
+  },
+  {
+    "kanji": "夢",
+    "kana": "ゆめ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "梦，理想"
+  },
+  {
+    "kanji": "ギター",
+    "kana": "ギター",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "吉他"
+  },
+  {
+    "kanji": "胡弓",
+    "kana": "こきゅう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "胡琴"
+  },
+  {
+    "kanji": "書道",
+    "kana": "しょどう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "书法"
+  },
+  {
+    "kanji": "釣り",
+    "kana": "つり",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "钓鱼"
+  },
+  {
+    "kanji": "ドライブ",
+    "kana": "ドライブ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "兜风，开汽车远游"
+  },
+  {
+    "kanji": "編み物",
+    "kana": "あみもの",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "编制；编织品"
+  },
+  {
+    "kanji": "手作り",
+    "kana": "てづくり",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "手工做，自己做，手制"
+  },
+  {
+    "kanji": "中華街",
+    "kana": "ちゅうかがい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "中华街"
+  },
+  {
+    "kanji": "中華料理",
+    "kana": "ちゅうかりょうり",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "中国菜"
+  },
+  {
+    "kanji": "餃子",
+    "kana": "ギョーザ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "饺子"
+  },
+  {
+    "kanji": "皮",
+    "kana": "かわ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "皮"
+  },
+  {
+    "kanji": "春節",
+    "kana": "しゅんせつ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "春节"
+  },
+  {
+    "kanji": "獅子舞",
+    "kana": "ししまい",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "狮子舞"
+  },
+  {
+    "kanji": "寮",
+    "kana": "りょう",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "宿舍"
+  },
+  {
+    "kanji": "洗濯機",
+    "kana": "せんたくき",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "洗衣机"
+  },
+  {
+    "kanji": "シャワー",
+    "kana": "シャワー",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "淋浴"
+  },
+  {
+    "kanji": "おなか",
+    "kana": "おなか",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "肚子"
+  },
+  {
+    "kanji": "授業",
+    "kana": "じゅぎょう",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "授课，上课"
+  },
+  {
+    "kanji": "資料",
+    "kana": "しりょう",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "资料"
+  },
+  {
+    "kanji": "フランス語",
+    "kana": "フランスご",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "法语"
+  },
+  {
+    "kanji": "小説",
+    "kana": "しょうせつ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "小说"
+  },
+  {
+    "kanji": "海岸",
+    "kana": "かいがん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "海岸"
+  },
+  {
+    "kanji": "冬休み",
+    "kana": "ふゆやすみ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "寒假"
+  },
+  {
+    "kanji": "キャンプ",
+    "kana": "キャンプ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "野营"
+  },
+  {
+    "kanji": "みんな",
+    "kana": "みんな",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "大家"
+  },
+  {
+    "kanji": "自分",
+    "kana": "じぶん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "自己"
+  },
+  {
+    "kanji": "全員",
+    "kana": "ぜんいん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "全员"
+  },
+  {
+    "kanji": "弾く",
+    "kana": "ひく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "弹"
+  },
+  {
+    "kanji": "すく",
+    "kana": "すく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "（肚子）饿，空"
+  },
+  {
+    "kanji": "登る",
+    "kana": "のぼる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "登，上"
+  },
+  {
+    "kanji": "集める",
+    "kana": "あつめる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "收集"
+  },
+  {
+    "kanji": "浴びる",
+    "kana": "あびる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "淋；浇"
+  },
+  {
+    "kanji": "ごちそうする",
+    "kana": "ごちそうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "请客，摆盛宴"
+  },
+  {
+    "kanji": "帰国する",
+    "kana": "きこくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "回国"
+  },
+  {
+    "kanji": "特に",
+    "kana": "とくに",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "特别"
+  }
+]

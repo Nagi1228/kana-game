@@ -1,0 +1,198 @@
+[
+  {
+    "kanji": "来月",
+    "kana": "らいげつ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "下个月"
+  },
+  {
+    "kanji": "先月",
+    "kana": "せんげつ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "上个月"
+  },
+  {
+    "kanji": "夜中",
+    "kana": "よなか",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "午夜，半夜"
+  },
+  {
+    "kanji": "ゆうべ",
+    "kana": "ゆうべ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "昨天晚上"
+  },
+  {
+    "kanji": "コンサート",
+    "kana": "コンサート",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "音乐会"
+  },
+  {
+    "kanji": "クリスマス",
+    "kana": "クリスマス",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "圣诞节"
+  },
+  {
+    "kanji": "誕生日",
+    "kana": "たんじょうび",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "生日"
+  },
+  {
+    "kanji": "こどもの日",
+    "kana": "こどものひ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "儿童节"
+  },
+  {
+    "kanji": "夏休み",
+    "kana": "なつやすみ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "暑假"
+  },
+  {
+    "kanji": "交通機関",
+    "kana": "こうつうきかん",
+    "pitch": "⑥",
+    "pos": "名词",
+    "meaning": "交通工具"
+  },
+  {
+    "kanji": "新幹線",
+    "kana": "しんかんせん",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "新干线"
+  },
+  {
+    "kanji": "飛行機",
+    "kana": "ひこうき",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "飞机"
+  },
+  {
+    "kanji": "フェリー",
+    "kana": "フェリー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "渡轮"
+  },
+  {
+    "kanji": "電車",
+    "kana": "でんしゃ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "电车"
+  },
+  {
+    "kanji": "バス",
+    "kana": "バス",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "公共汽车"
+  },
+  {
+    "kanji": "タクシー",
+    "kana": "タクシー",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "出租车"
+  },
+  {
+    "kanji": "美術館",
+    "kana": "びじゅつかん",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "美术馆"
+  },
+  {
+    "kanji": "アパート",
+    "kana": "アパート",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "公寓"
+  },
+  {
+    "kanji": "うち",
+    "kana": "うち",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "家"
+  },
+  {
+    "kanji": "プール",
+    "kana": "プール",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "游泳池"
+  },
+  {
+    "kanji": "友達",
+    "kana": "ともだち",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "朋友"
+  },
+  {
+    "kanji": "弟",
+    "kana": "おとうと",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "弟弟"
+  },
+  {
+    "kanji": "行く",
+    "kana": "いく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "去"
+  },
+  {
+    "kanji": "帰る",
+    "kana": "かえる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "回来，回去"
+  },
+  {
+    "kanji": "来る",
+    "kana": "くる",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "来"
+  },
+  {
+    "kanji": "たしか",
+    "kana": "たしか",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "好像是，大概；的确"
+  },
+  {
+    "kanji": "まっすぐ",
+    "kana": "まっすぐ",
+    "pitch": "③",
+    "pos": "副词",
+    "meaning": "径直，笔直"
+  },
+  {
+    "kanji": "いっしょに",
+    "kana": "いっしょに",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "一起"
+  }
+]

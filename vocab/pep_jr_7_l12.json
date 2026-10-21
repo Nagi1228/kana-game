@@ -1,0 +1,317 @@
+[
+  {
+    "kanji": "成長",
+    "kana": "せいちょう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "成长"
+  },
+  {
+    "kanji": "学年",
+    "kana": "がくねん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "学年; 年级"
+  },
+  {
+    "kanji": "",
+    "kana": "ルール",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "规则"
+  },
+  {
+    "kanji": "技術",
+    "kana": "ぎじゅつ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "技术"
+  },
+  {
+    "kanji": "覚える",
+    "kana": "おぼえる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "掌握； 记住； 觉得"
+  },
+  {
+    "kanji": "",
+    "kana": "チームワーク",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "合作, 配合"
+  },
+  {
+    "kanji": "精神",
+    "kana": "せいしん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "精神"
+  },
+  {
+    "kanji": "美術館",
+    "kana": "びじゅつかん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "美术馆"
+  },
+  {
+    "kanji": "見物",
+    "kana": "けんぶつ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "游览，参观"
+  },
+  {
+    "kanji": "記録",
+    "kana": "きろく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "记录"
+  },
+  {
+    "kanji": "表",
+    "kana": "ひょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "表格"
+  },
+  {
+    "kanji": "収穫",
+    "kana": "しゅうかく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "收获；收割"
+  },
+  {
+    "kanji": "項目",
+    "kana": "こうもく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "项目"
+  },
+  {
+    "kanji": "感想",
+    "kana": "かんそう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "感想"
+  },
+  {
+    "kanji": "変化",
+    "kana": "へんか",
+    "pitch": "①",
+    "pos": "名·动3自",
+    "meaning": "变化"
+  },
+  {
+    "kanji": "背",
+    "kana": "せ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "身高; 背, 后背"
+  },
+  {
+    "kanji": "",
+    "kana": "センチ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "厘米"
+  },
+  {
+    "kanji": "伸びる",
+    "kana": "のびる",
+    "pitch": "②",
+    "pos": "动2自",
+    "meaning": "生长, 伸展"
+  },
+  {
+    "kanji": "体重",
+    "kana": "たいじゅう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "体重"
+  },
+  {
+    "kanji": "",
+    "kana": "キロ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "千克; 千米"
+  },
+  {
+    "kanji": "増える",
+    "kana": "ふえる",
+    "pitch": "②",
+    "pos": "动2自",
+    "meaning": "增加, 增多"
+  },
+  {
+    "kanji": "部活動",
+    "kana": "ぶかつどう",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "社团活动"
+  },
+  {
+    "kanji": "",
+    "kana": "やった",
+    "pitch": "⓪",
+    "pos": "叹",
+    "meaning": "太好啦"
+  },
+  {
+    "kanji": "記念",
+    "kana": "きねん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "纪念"
+  },
+  {
+    "kanji": "数学",
+    "kana": "すうがく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "数学"
+  },
+  {
+    "kanji": "",
+    "kana": "なかなか",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "总是(不) ; 很, 非常"
+  },
+  {
+    "kanji": "進む",
+    "kana": "すすむ",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "进步, 前进"
+  },
+  {
+    "kanji": "",
+    "kana": "コメント",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "评论; 说明"
+  },
+  {
+    "kanji": "以外",
+    "kana": "いがい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "以外"
+  },
+  {
+    "kanji": "",
+    "kana": "わあ",
+    "pitch": "①",
+    "pos": "叹",
+    "meaning": "哇, 哎呀"
+  },
+  {
+    "kanji": "餃子",
+    "kana": "ぎょうざ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "饺子"
+  },
+  {
+    "kanji": "",
+    "kana": "ああ",
+    "pitch": "①",
+    "pos": "叹",
+    "meaning": "噢"
+  },
+  {
+    "kanji": "反対",
+    "kana": "はんたい",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "相反；反对"
+  },
+  {
+    "kanji": "去年",
+    "kana": "きょねん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "去年"
+  },
+  {
+    "kanji": "身長",
+    "kana": "しんちょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "身高, 身长"
+  },
+  {
+    "kanji": "比べる",
+    "kana": "くらべる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "比较"
+  },
+  {
+    "kanji": "",
+    "kana": "シャツ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "衬衫"
+  },
+  {
+    "kanji": "每年",
+    "kana": "まいとし",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "每年"
+  },
+  {
+    "kanji": "漢字",
+    "kana": "かんじ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "汉字"
+  },
+  {
+    "kanji": "身",
+    "kana": "み",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "身体; 自身"
+  },
+  {
+    "kanji": "誕生日",
+    "kana": "たんじょうび",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "生日"
+  },
+  {
+    "kanji": "人数",
+    "kana": "にんずう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "人数"
+  },
+  {
+    "kanji": "観光客",
+    "kana": "かんこうきゃく",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "游客"
+  },
+  {
+    "kanji": "女性",
+    "kana": "じょせい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "女性, 女士"
+  },
+  {
+    "kanji": "方",
+    "kana": "かた",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "(尊称)位, 人"
+  }
+]

@@ -1,0 +1,338 @@
+[
+  {
+    "kanji": "プレゼント",
+    "kana": "プレゼント",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "礼物"
+  },
+  {
+    "kanji": "チケット",
+    "kana": "チケット",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "票"
+  },
+  {
+    "kanji": "パンフレット",
+    "kana": "パンフレット",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "小册子"
+  },
+  {
+    "kanji": "記念品",
+    "kana": "きねんひん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "纪念品"
+  },
+  {
+    "kanji": "スケジュール表",
+    "kana": "スケジュールひょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "日程表"
+  },
+  {
+    "kanji": "写真集",
+    "kana": "しゃしんしゅう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "影集"
+  },
+  {
+    "kanji": "花",
+    "kana": "はな",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "花"
+  },
+  {
+    "kanji": "お金",
+    "kana": "おかね",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "钱，金钱"
+  },
+  {
+    "kanji": "ボールペン",
+    "kana": "ボールペン",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "圆珠笔"
+  },
+  {
+    "kanji": "宿題",
+    "kana": "しゅくだい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "作业"
+  },
+  {
+    "kanji": "航空便",
+    "kana": "こうくうびん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "航空邮件"
+  },
+  {
+    "kanji": "速達",
+    "kana": "そくたつ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "速递，快件"
+  },
+  {
+    "kanji": "ファックス",
+    "kana": "ファックス",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "传真"
+  },
+  {
+    "kanji": "メール",
+    "kana": "メール",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "邮件"
+  },
+  {
+    "kanji": "電話番号",
+    "kana": "でんわばんごう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "电话号码"
+  },
+  {
+    "kanji": "住所",
+    "kana": "じゅうしょ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "住址"
+  },
+  {
+    "kanji": "名前",
+    "kana": "なまえ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "姓名"
+  },
+  {
+    "kanji": "件",
+    "kana": "けん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "事件，事情"
+  },
+  {
+    "kanji": "新聞紙",
+    "kana": "しんぶんし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "报纸"
+  },
+  {
+    "kanji": "紙飛行機",
+    "kana": "かみひこうき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "纸折的飞机"
+  },
+  {
+    "kanji": "チョコレート",
+    "kana": "チョコレート",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "巧克力"
+  },
+  {
+    "kanji": "アイスクリーム",
+    "kana": "アイスクリーム",
+    "pitch": "⑤",
+    "pos": "名词",
+    "meaning": "冰激凌"
+  },
+  {
+    "kanji": "小麦粉",
+    "kana": "こむぎこ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "面粉"
+  },
+  {
+    "kanji": "はし",
+    "kana": "はし",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "筷子"
+  },
+  {
+    "kanji": "スプーン",
+    "kana": "スプーン",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "勺子"
+  },
+  {
+    "kanji": "お兄さん",
+    "kana": "おにいさん",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "哥哥"
+  },
+  {
+    "kanji": "韓国語",
+    "kana": "かんこくご",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "韩语"
+  },
+  {
+    "kanji": "夕方",
+    "kana": "ゆうがた",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "傍晚"
+  },
+  {
+    "kanji": "昼休み",
+    "kana": "ひるやすみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "午休"
+  },
+  {
+    "kanji": "もらう",
+    "kana": "もらう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "拿到，得到"
+  },
+  {
+    "kanji": "会う",
+    "kana": "あう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "见"
+  },
+  {
+    "kanji": "送る",
+    "kana": "おくる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "寄"
+  },
+  {
+    "kanji": "作る",
+    "kana": "つくる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "做，制造"
+  },
+  {
+    "kanji": "太る",
+    "kana": "ふとる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "胖"
+  },
+  {
+    "kanji": "出す",
+    "kana": "だす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "寄"
+  },
+  {
+    "kanji": "届く",
+    "kana": "とどく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "收到，送到，寄到"
+  },
+  {
+    "kanji": "かく",
+    "kana": "かく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "画"
+  },
+  {
+    "kanji": "貸す",
+    "kana": "かす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "借出，借给"
+  },
+  {
+    "kanji": "習う",
+    "kana": "ならう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "学习"
+  },
+  {
+    "kanji": "あげる",
+    "kana": "あげる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "给"
+  },
+  {
+    "kanji": "かける",
+    "kana": "かける",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "打（电话）"
+  },
+  {
+    "kanji": "借りる",
+    "kana": "かりる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "向别人）借"
+  },
+  {
+    "kanji": "教える",
+    "kana": "おしえる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "教"
+  },
+  {
+    "kanji": "もう",
+    "kana": "もう",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "已经"
+  },
+  {
+    "kanji": "さっき",
+    "kana": "さっき",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "刚才"
+  },
+  {
+    "kanji": "たった今",
+    "kana": "たったいま",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "刚刚"
+  },
+  {
+    "kanji": "もう一度",
+    "kana": "もういちど",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "再一次"
+  },
+  {
+    "kanji": "前に",
+    "kana": "まえに",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "以前"
+  }
+]

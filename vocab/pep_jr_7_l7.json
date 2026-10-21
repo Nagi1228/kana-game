@@ -1,0 +1,408 @@
+[
+  {
+    "kanji": "得意",
+    "kana": "とくい",
+    "pitch": "②",
+    "pos": "形2",
+    "meaning": "拿手, 擅长"
+  },
+  {
+    "kanji": "料理",
+    "kana": "りょうり",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "菜肴；做菜"
+  },
+  {
+    "kanji": "麻婆豆腐",
+    "kana": "マーボーどうふ",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "麻婆豆腐"
+  },
+  {
+    "kanji": "辛い",
+    "kana": "からい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "辣, 辛辣"
+  },
+  {
+    "kanji": "",
+    "kana": "ちょっと",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "有点儿"
+  },
+  {
+    "kanji": "有名",
+    "kana": "ゆうめい",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "有名"
+  },
+  {
+    "kanji": "初めて",
+    "kana": "はじめて",
+    "pitch": "②",
+    "pos": "副",
+    "meaning": "初次, 第一次"
+  },
+  {
+    "kanji": "方",
+    "kana": "かた",
+    "pitch": "",
+    "pos": "后缀",
+    "meaning": "…法, …方法"
+  },
+  {
+    "kanji": "学ぶ",
+    "kana": "まなぶ",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "学习, 掌握"
+  },
+  {
+    "kanji": "",
+    "kana": "ポスター",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "海报, 宣传画"
+  },
+  {
+    "kanji": "",
+    "kana": "トマト",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "番茄, 西红柿"
+  },
+  {
+    "kanji": "卵",
+    "kana": "たまご",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "鸡蛋; 蛋, 卵"
+  },
+  {
+    "kanji": "炒め物",
+    "kana": "いためもの",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "炒(的)菜"
+  },
+  {
+    "kanji": "栄養",
+    "kana": "えいよう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "营养"
+  },
+  {
+    "kanji": "",
+    "kana": "たっぷり",
+    "pitch": "③",
+    "pos": "副",
+    "meaning": "充分, 充足"
+  },
+  {
+    "kanji": "色",
+    "kana": "いろ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "颜色, 色彩"
+  },
+  {
+    "kanji": "特徴",
+    "kana": "とくちょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "特点, 特征"
+  },
+  {
+    "kanji": "青椒肉絲",
+    "kana": "チンジャオロース",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "青椒肉丝"
+  },
+  {
+    "kanji": "",
+    "kana": "ピーマン",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "青椒"
+  },
+  {
+    "kanji": "豚肉",
+    "kana": "ぶたにく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "猪肉"
+  },
+  {
+    "kanji": "たんぱく質",
+    "kana": "たんぱくしつ",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "蛋白质"
+  },
+  {
+    "kanji": "",
+    "kana": "ビタミン",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "维生素"
+  },
+  {
+    "kanji": "豊富",
+    "kana": "ほうふ",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "丰富"
+  },
+  {
+    "kanji": "労働",
+    "kana": "ろうどう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "劳动"
+  },
+  {
+    "kanji": "最初",
+    "kana": "さいしょ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "最初, 起初"
+  },
+  {
+    "kanji": "硬い",
+    "kana": "かたい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "硬; 坚固"
+  },
+  {
+    "kanji": "目",
+    "kana": "め",
+    "pitch": "",
+    "pos": "后缀",
+    "meaning": "第…"
+  },
+  {
+    "kanji": "塩辛い",
+    "kana": "しおからい",
+    "pitch": "④",
+    "pos": "形1",
+    "meaning": "咸"
+  },
+  {
+    "kanji": "",
+    "kana": "アドバイス",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "建议；劝告，忠告"
+  },
+  {
+    "kanji": "",
+    "kana": "やっと",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "好不容易, 终于"
+  },
+  {
+    "kanji": "成功",
+    "kana": "せいこう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "成功"
+  },
+  {
+    "kanji": "食材",
+    "kana": "しょくざい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "食材"
+  },
+  {
+    "kanji": "歌手",
+    "kana": "かしゅ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "歌手"
+  },
+  {
+    "kanji": "世界",
+    "kana": "せかい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "世界"
+  },
+  {
+    "kanji": "",
+    "kana": "いちばん",
+    "pitch": "⓪",
+    "pos": "名·副",
+    "meaning": "最； 第一(作名词时声调为②)"
+  },
+  {
+    "kanji": "山",
+    "kana": "やま",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "山"
+  },
+  {
+    "kanji": "印象",
+    "kana": "いんしょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "印象"
+  },
+  {
+    "kanji": "残る",
+    "kana": "のこる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "留; 剩下"
+  },
+  {
+    "kanji": "見学",
+    "kana": "けんがく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "参观"
+  },
+  {
+    "kanji": "使う",
+    "kana": "つかう",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "使用"
+  },
+  {
+    "kanji": "考える",
+    "kana": "かんがえる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "思考，考虑"
+  },
+  {
+    "kanji": "教える",
+    "kana": "おしえる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "教; 告诉"
+  },
+  {
+    "kanji": "仕方",
+    "kana": "しかた",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "做法, 办法"
+  },
+  {
+    "kanji": "寿司",
+    "kana": "すし",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "寿司"
+  },
+  {
+    "kanji": "気",
+    "kana": "き",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "意识, 心神"
+  },
+  {
+    "kanji": "円",
+    "kana": "えん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "日元"
+  },
+  {
+    "kanji": "個",
+    "kana": "こ",
+    "pitch": "①",
+    "pos": "名·后缀",
+    "meaning": "个体;…个"
+  },
+  {
+    "kanji": "",
+    "kana": "いくら",
+    "pitch": "①",
+    "pos": "名·副",
+    "meaning": "多少(钱)"
+  },
+  {
+    "kanji": "歌",
+    "kana": "うた",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "歌曲"
+  },
+  {
+    "kanji": "歌う",
+    "kana": "うたう",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "唱"
+  },
+  {
+    "kanji": "着く",
+    "kana": "つく",
+    "pitch": "①",
+    "pos": "动1自",
+    "meaning": "到达"
+  },
+  {
+    "kanji": "",
+    "kana": "スポーツ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "(体育)运动"
+  },
+  {
+    "kanji": "材料",
+    "kana": "ざいりょう",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "原料, 材料"
+  },
+  {
+    "kanji": "今週",
+    "kana": "こんしゅう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "这星期"
+  },
+  {
+    "kanji": "今晚",
+    "kana": "こんばん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "今天晚上"
+  },
+  {
+    "kanji": "説明",
+    "kana": "せつめい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "说明"
+  },
+  {
+    "kanji": "都会",
+    "kana": "とかい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "都市, 大城市"
+  },
+  {
+    "kanji": "最後",
+    "kana": "さいご",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "最后"
+  }
+]

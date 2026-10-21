@@ -1,0 +1,282 @@
+[
+  {
+    "kanji": "",
+    "kana": "アイス",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "冰; 冰淇淋"
+  },
+  {
+    "kanji": "家",
+    "kana": "いえ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "房屋; 家"
+  },
+  {
+    "kanji": "池",
+    "kana": "いけ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "池塘"
+  },
+  {
+    "kanji": "牛",
+    "kana": "うし",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "牛"
+  },
+  {
+    "kanji": "お菓子",
+    "kana": "おかし",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "点心; 糖果"
+  },
+  {
+    "kanji": "草",
+    "kana": "くさ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "草"
+  },
+  {
+    "kanji": "",
+    "kana": "すいか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "西瓜"
+  },
+  {
+    "kanji": "席",
+    "kana": "せき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "座位"
+  },
+  {
+    "kanji": "祖国",
+    "kana": "そこく",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "祖国"
+  },
+  {
+    "kanji": "",
+    "kana": "はい",
+    "pitch": "①",
+    "pos": "叹",
+    "meaning": "是"
+  },
+  {
+    "kanji": "石",
+    "kana": "いし",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "石头"
+  },
+  {
+    "kanji": "",
+    "kana": "いいえ",
+    "pitch": "③",
+    "pos": "叹",
+    "meaning": "不是"
+  },
+  {
+    "kanji": "木",
+    "kana": "き",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "树; 木头"
+  },
+  {
+    "kanji": "絵",
+    "kana": "え",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "图画"
+  },
+  {
+    "kanji": "椅子",
+    "kana": "いす",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "椅子"
+  },
+  {
+    "kanji": "竹",
+    "kana": "たけ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "竹子"
+  },
+  {
+    "kanji": "地下鉄",
+    "kana": "ちかてつ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "地铁"
+  },
+  {
+    "kanji": "",
+    "kana": "テスト",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "测验, 测试"
+  },
+  {
+    "kanji": "肉",
+    "kana": "にく",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "肉"
+  },
+  {
+    "kanji": "犬",
+    "kana": "いぬ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "狗"
+  },
+  {
+    "kanji": "花",
+    "kana": "はな",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "花"
+  },
+  {
+    "kanji": "日",
+    "kana": "ひ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "太阳"
+  },
+  {
+    "kanji": "船",
+    "kana": "ふね",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "船"
+  },
+  {
+    "kanji": "星",
+    "kana": "ほし",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "星星"
+  },
+  {
+    "kanji": "机",
+    "kana": "つくえ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "书桌"
+  },
+  {
+    "kanji": "",
+    "kana": "そう",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "这样, 那样"
+  },
+  {
+    "kanji": "服",
+    "kana": "ふく",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "衣服"
+  },
+  {
+    "kanji": "梨",
+    "kana": "なし",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "梨"
+  },
+  {
+    "kanji": "箱",
+    "kana": "はこ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "盒子, 箱子"
+  },
+  {
+    "kanji": "靴",
+    "kana": "くつ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "鞋"
+  },
+  {
+    "kanji": "お金",
+    "kana": "おかね",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "钱, 金钱"
+  },
+  {
+    "kanji": "財布",
+    "kana": "さいふ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "钱包"
+  },
+  {
+    "kanji": "司会",
+    "kana": "しかい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "主持人"
+  },
+  {
+    "kanji": "",
+    "kana": "あした",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "明天, 明日"
+  },
+  {
+    "kanji": "猫",
+    "kana": "ねこ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "猫"
+  },
+  {
+    "kanji": "田舎",
+    "kana": "いなか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "老家; 乡下"
+  },
+  {
+    "kanji": "",
+    "kana": "いとこ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "堂(表)兄弟; 堂(表)姐妹"
+  },
+  {
+    "kanji": "例",
+    "kana": "れい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "例子"
+  },
+  {
+    "kanji": "甲",
+    "kana": "こう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "甲"
+  },
+  {
+    "kanji": "乙",
+    "kana": "おつ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "乙"
+  }
+]

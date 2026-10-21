@@ -1,0 +1,415 @@
+[
+  {
+    "kanji": "社員旅行",
+    "kana": "しゃいんりょこう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "全社旅行"
+  },
+  {
+    "kanji": "新入社員",
+    "kana": "しんにゅうしゃいん",
+    "pitch": "⑤",
+    "pos": "名词",
+    "meaning": "新来的职员"
+  },
+  {
+    "kanji": "会議場",
+    "kana": "かいぎじょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "会场"
+  },
+  {
+    "kanji": "国際会議",
+    "kana": "こくさいかいぎ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "国际会议"
+  },
+  {
+    "kanji": "ビアガーデン",
+    "kana": "ビアガーデン",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "庭院式的啤酒店"
+  },
+  {
+    "kanji": "大型スーパー",
+    "kana": "おおがたスーパー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "大型超市"
+  },
+  {
+    "kanji": "湖",
+    "kana": "みずうみ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "湖"
+  },
+  {
+    "kanji": "パトカー",
+    "kana": "パトカー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "警车，巡逻车"
+  },
+  {
+    "kanji": "サイレン",
+    "kana": "サイレン",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "警笛，警报器"
+  },
+  {
+    "kanji": "アニメ",
+    "kana": "アニメ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "动画片"
+  },
+  {
+    "kanji": "パワー",
+    "kana": "パワー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "能力，力量"
+  },
+  {
+    "kanji": "心",
+    "kana": "こころ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "心"
+  },
+  {
+    "kanji": "態度",
+    "kana": "たいど",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "态度"
+  },
+  {
+    "kanji": "性格",
+    "kana": "せいかく",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "性格"
+  },
+  {
+    "kanji": "評判",
+    "kana": "ひょうばん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "评价，评论"
+  },
+  {
+    "kanji": "行列",
+    "kana": "ぎょうれつ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "行列，队伍"
+  },
+  {
+    "kanji": "容器",
+    "kana": "ようき",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "容器"
+  },
+  {
+    "kanji": "内容",
+    "kana": "ないよう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "内容"
+  },
+  {
+    "kanji": "売れ行き",
+    "kana": "うれゆき",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "销路，销售（情况）"
+  },
+  {
+    "kanji": "乗り物",
+    "kana": "のりもの",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "乘坐物"
+  },
+  {
+    "kanji": "汗",
+    "kana": "あせ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "汗"
+  },
+  {
+    "kanji": "倍",
+    "kana": "ばい",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "倍，加倍"
+  },
+  {
+    "kanji": "縦",
+    "kana": "たて",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "纵，竖"
+  },
+  {
+    "kanji": "中国全土",
+    "kana": "ちゅうごくぜんど",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "全中国"
+  },
+  {
+    "kanji": "長期予報",
+    "kana": "ちょうきよほう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "长期预报"
+  },
+  {
+    "kanji": "笑い",
+    "kana": "わらい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "笑"
+  },
+  {
+    "kanji": "暑さ",
+    "kana": "あつさ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "暑热，暑气"
+  },
+  {
+    "kanji": "美しさ",
+    "kana": "うつくしさ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "美好，美丽程度"
+  },
+  {
+    "kanji": "おもしろさ",
+    "kana": "おもしろさ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "趣味，有趣程度"
+  },
+  {
+    "kanji": "大きさ",
+    "kana": "おおきさ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "大小"
+  },
+  {
+    "kanji": "高さ",
+    "kana": "たかさ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "高度"
+  },
+  {
+    "kanji": "深さ",
+    "kana": "ふかさ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "深度"
+  },
+  {
+    "kanji": "長さ",
+    "kana": "ながさ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "长度"
+  },
+  {
+    "kanji": "広さ",
+    "kana": "ひろさ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "面积"
+  },
+  {
+    "kanji": "太さ",
+    "kana": "ふとさ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "粗(度)"
+  },
+  {
+    "kanji": "重さ",
+    "kana": "おもさ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "重量"
+  },
+  {
+    "kanji": "厚さ",
+    "kana": "あつさ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "厚度"
+  },
+  {
+    "kanji": "速さ",
+    "kana": "はやさ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "速度"
+  },
+  {
+    "kanji": "便利さ",
+    "kana": "べんりさ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "方便程度"
+  },
+  {
+    "kanji": "複雑さ",
+    "kana": "ふくざつさ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "复杂程度"
+  },
+  {
+    "kanji": "おいしさ",
+    "kana": "おいしさ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "美味，好吃程度"
+  },
+  {
+    "kanji": "重要さ",
+    "kana": "じゅうようさ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "重要性，重要程度"
+  },
+  {
+    "kanji": "甘さ",
+    "kana": "あまさ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "甜度"
+  },
+  {
+    "kanji": "広がる",
+    "kana": "ひろがる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "蔓延，拓宽"
+  },
+  {
+    "kanji": "戻る",
+    "kana": "もどる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "返回，回到"
+  },
+  {
+    "kanji": "驚く",
+    "kana": "おどろく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "惊讶，吃惊"
+  },
+  {
+    "kanji": "しゃれる",
+    "kana": "しゃれる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "别致，风趣；打扮得漂亮"
+  },
+  {
+    "kanji": "実感する",
+    "kana": "じっかんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "切实感受，真切感受"
+  },
+  {
+    "kanji": "深い",
+    "kana": "ふかい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "深"
+  },
+  {
+    "kanji": "おとなしい",
+    "kana": "おとなしい",
+    "pitch": "④",
+    "pos": "形容词",
+    "meaning": "温顺，老实"
+  },
+  {
+    "kanji": "恥ずかしい",
+    "kana": "はずかしい",
+    "pitch": "④",
+    "pos": "形容词",
+    "meaning": "害羞，难为情"
+  },
+  {
+    "kanji": "珍しい",
+    "kana": "めずらしい",
+    "pitch": "④",
+    "pos": "形容词",
+    "meaning": "珍奇，新奇"
+  },
+  {
+    "kanji": "豪華",
+    "kana": "ごうか",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "豪华，奢华"
+  },
+  {
+    "kanji": "好調",
+    "kana": "こうちょう",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "顺利，情况良好"
+  },
+  {
+    "kanji": "控えめ",
+    "kana": "ひかえめ",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "分量少，节制，控制；拘谨"
+  },
+  {
+    "kanji": "好評",
+    "kana": "こうひょう",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "好评，称赞"
+  },
+  {
+    "kanji": "大事",
+    "kana": "だいじ",
+    "pitch": "①",
+    "pos": "形容动词",
+    "meaning": "重要，宝贵"
+  },
+  {
+    "kanji": "かなり",
+    "kana": "かなり",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "颇，相当"
+  },
+  {
+    "kanji": "けっこう",
+    "kana": "けっこう",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "很，相当"
+  }
+]

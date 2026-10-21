@@ -1,0 +1,338 @@
+[
+  {
+    "kanji": "本",
+    "kana": "ほん",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "书"
+  },
+  {
+    "kanji": "かばん",
+    "kana": "かばん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "包，公文包"
+  },
+  {
+    "kanji": "ノート",
+    "kana": "ノート",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "笔记本，本子"
+  },
+  {
+    "kanji": "鉛筆",
+    "kana": "えんぴつ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "铅笔"
+  },
+  {
+    "kanji": "傘",
+    "kana": "かさ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "伞"
+  },
+  {
+    "kanji": "靴",
+    "kana": "くつ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "鞋"
+  },
+  {
+    "kanji": "新聞",
+    "kana": "しんぶん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "报纸"
+  },
+  {
+    "kanji": "雑誌",
+    "kana": "ざっし",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "杂志"
+  },
+  {
+    "kanji": "辞書",
+    "kana": "じしょ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "词典"
+  },
+  {
+    "kanji": "カメラ",
+    "kana": "カメラ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "照相机"
+  },
+  {
+    "kanji": "テレビ",
+    "kana": "テレビ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "电视机"
+  },
+  {
+    "kanji": "パソコン",
+    "kana": "パソコン",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "个人电脑"
+  },
+  {
+    "kanji": "ラジオ",
+    "kana": "ラジオ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "收音机"
+  },
+  {
+    "kanji": "電話",
+    "kana": "でんわ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "电话"
+  },
+  {
+    "kanji": "机",
+    "kana": "つくえ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "桌子，书桌"
+  },
+  {
+    "kanji": "いす",
+    "kana": "いす",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "椅子"
+  },
+  {
+    "kanji": "かぎ",
+    "kana": "かぎ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "钥匙，锁"
+  },
+  {
+    "kanji": "時計",
+    "kana": "とけい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "钟，表"
+  },
+  {
+    "kanji": "手帳",
+    "kana": "てちょう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "记事本"
+  },
+  {
+    "kanji": "写真",
+    "kana": "しゃしん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "照片"
+  },
+  {
+    "kanji": "車",
+    "kana": "くるま",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "车"
+  },
+  {
+    "kanji": "自転車",
+    "kana": "じてんしゃ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "自行车"
+  },
+  {
+    "kanji": "お土産",
+    "kana": "おみやげ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "礼物"
+  },
+  {
+    "kanji": "名産品",
+    "kana": "めいさんひん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "特产，名产"
+  },
+  {
+    "kanji": "シルク",
+    "kana": "シルク",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "丝绸"
+  },
+  {
+    "kanji": "ハンカチ",
+    "kana": "ハンカチ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "手绢"
+  },
+  {
+    "kanji": "会社",
+    "kana": "かいしゃ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "公司"
+  },
+  {
+    "kanji": "方",
+    "kana": "かた",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "（敬称）位，人"
+  },
+  {
+    "kanji": "人",
+    "kana": "ひと",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "人"
+  },
+  {
+    "kanji": "家族",
+    "kana": "かぞく",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "家人，家属"
+  },
+  {
+    "kanji": "母",
+    "kana": "はは",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "（我）母亲"
+  },
+  {
+    "kanji": "お母さん",
+    "kana": "おかあさん",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "母亲"
+  },
+  {
+    "kanji": "日本語",
+    "kana": "にほんご",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "日语"
+  },
+  {
+    "kanji": "中国語",
+    "kana": "ちゅうごくご",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "汉语，中文"
+  },
+  {
+    "kanji": "これ",
+    "kana": "これ",
+    "pitch": "⓪",
+    "pos": "代词",
+    "meaning": "这，这个"
+  },
+  {
+    "kanji": "それ",
+    "kana": "それ",
+    "pitch": "⓪",
+    "pos": "代词",
+    "meaning": "那，那个"
+  },
+  {
+    "kanji": "あれ",
+    "kana": "あれ",
+    "pitch": "⓪",
+    "pos": "代词",
+    "meaning": "那，那个"
+  },
+  {
+    "kanji": "どれ",
+    "kana": "どれ",
+    "pitch": "①",
+    "pos": "代词",
+    "meaning": "哪个"
+  },
+  {
+    "kanji": "何",
+    "kana": "なん",
+    "pitch": "①",
+    "pos": "代词",
+    "meaning": "什么"
+  },
+  {
+    "kanji": "だれ",
+    "kana": "だれ",
+    "pitch": "①",
+    "pos": "代词",
+    "meaning": "谁"
+  },
+  {
+    "kanji": "どなた",
+    "kana": "どなた",
+    "pitch": "①",
+    "pos": "代词",
+    "meaning": "哪位"
+  },
+  {
+    "kanji": "この",
+    "kana": "この",
+    "pitch": "⓪",
+    "pos": "连接词",
+    "meaning": "这，这个"
+  },
+  {
+    "kanji": "その",
+    "kana": "その",
+    "pitch": "⓪",
+    "pos": "连接词",
+    "meaning": "那，那个"
+  },
+  {
+    "kanji": "あの",
+    "kana": "あの",
+    "pitch": "⓪",
+    "pos": "连接词",
+    "meaning": "那，那个"
+  },
+  {
+    "kanji": "どの",
+    "kana": "どの",
+    "pitch": "①",
+    "pos": "连接词",
+    "meaning": "哪个"
+  },
+  {
+    "kanji": "えっ",
+    "kana": "えっ",
+    "pitch": "②",
+    "pos": "感叹词",
+    "meaning": "啊"
+  },
+  {
+    "kanji": "わあ",
+    "kana": "わあ",
+    "pitch": "①",
+    "pos": "感叹词",
+    "meaning": "哇"
+  },
+  {
+    "kanji": "ええ",
+    "kana": "ええ",
+    "pitch": "①",
+    "pos": "感叹词",
+    "meaning": "（应答）嗯，是"
+  }
+]

@@ -1,0 +1,212 @@
+[
+  {
+    "kanji": "宅配便",
+    "kana": "たくはいびん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "送货上门服务"
+  },
+  {
+    "kanji": "報告書",
+    "kana": "ほうこくしょ",
+    "pitch": "⑤",
+    "pos": "名词",
+    "meaning": "报告书"
+  },
+  {
+    "kanji": "梅雨",
+    "kana": "つゆ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "梅雨"
+  },
+  {
+    "kanji": "秋",
+    "kana": "あき",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "秋天，秋季"
+  },
+  {
+    "kanji": "ピクニック",
+    "kana": "ピクニック",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "郊游"
+  },
+  {
+    "kanji": "行楽地",
+    "kana": "こうらくち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "景点，浏览地"
+  },
+  {
+    "kanji": "ピザ",
+    "kana": "ピザ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "比萨饼"
+  },
+  {
+    "kanji": "終電",
+    "kana": "しゅうでん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "末班电车"
+  },
+  {
+    "kanji": "待合室",
+    "kana": "まちあいしつ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "候诊室，等候室"
+  },
+  {
+    "kanji": "患者",
+    "kana": "かんじゃ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "病人，患者"
+  },
+  {
+    "kanji": "灰皿",
+    "kana": "はいざら",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "烟灰缸"
+  },
+  {
+    "kanji": "吸殻",
+    "kana": "すいがら",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "烟头，烟灰，烟蒂"
+  },
+  {
+    "kanji": "歯",
+    "kana": "は",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "牙齿"
+  },
+  {
+    "kanji": "彼",
+    "kana": "かれ",
+    "pitch": "①",
+    "pos": "代词",
+    "meaning": "他"
+  },
+  {
+    "kanji": "そろう",
+    "kana": "そろう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "到齐，齐全"
+  },
+  {
+    "kanji": "寄る",
+    "kana": "よる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "顺便去；靠近"
+  },
+  {
+    "kanji": "開く",
+    "kana": "ひらく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "开，开张"
+  },
+  {
+    "kanji": "迎える",
+    "kana": "むかえる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "迎接"
+  },
+  {
+    "kanji": "引っ越す",
+    "kana": "ひっこす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "搬迁"
+  },
+  {
+    "kanji": "壊れる",
+    "kana": "こわれる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "出故障，坏"
+  },
+  {
+    "kanji": "間違える",
+    "kana": "まちがえる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "搞错"
+  },
+  {
+    "kanji": "出発する",
+    "kana": "しゅっぱつする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "出发"
+  },
+  {
+    "kanji": "転職する",
+    "kana": "てんしょくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "换工作"
+  },
+  {
+    "kanji": "パンクする",
+    "kana": "パンクする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "轮胎爆裂，撑破"
+  },
+  {
+    "kanji": "寂しい",
+    "kana": "さびしい",
+    "pitch": "③",
+    "pos": "形容词",
+    "meaning": "寂寞"
+  },
+  {
+    "kanji": "楽しみ",
+    "kana": "たのしみ",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "愉快，期待"
+  },
+  {
+    "kanji": "特別",
+    "kana": "とくべつ",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "特别"
+  },
+  {
+    "kanji": "それでは／それじゃ",
+    "kana": "それでは/それじゃ",
+    "pitch": "",
+    "pos": "接续词",
+    "meaning": "那么"
+  },
+  {
+    "kanji": "そうか",
+    "kana": "そうか",
+    "pitch": "①",
+    "pos": "感叹词",
+    "meaning": "是吗"
+  },
+  {
+    "kanji": "まあ",
+    "kana": "まあ",
+    "pitch": "①",
+    "pos": "感叹词",
+    "meaning": "嗯，嘿，哎哟"
+  }
+]

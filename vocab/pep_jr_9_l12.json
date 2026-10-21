@@ -1,0 +1,422 @@
+[
+  {
+    "kanji": "新た",
+    "kana": "あらた",
+    "pitch": "①",
+    "pos": "形2",
+    "meaning": "新的"
+  },
+  {
+    "kanji": "北斗七星",
+    "kana": "ほくとしちせい",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "北斗七星"
+  },
+  {
+    "kanji": "北極星",
+    "kana": "ほっきょくせい",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "北极星"
+  },
+  {
+    "kanji": "道標",
+    "kana": "みちしるべ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "路标"
+  },
+  {
+    "kanji": "方向",
+    "kana": "ほうこう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "方向"
+  },
+  {
+    "kanji": "本物",
+    "kana": "ほんもの",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "真东西，真货"
+  },
+  {
+    "kanji": "輝く",
+    "kana": "かがやく",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "闪烁，闪耀；光耀，荣耀"
+  },
+  {
+    "kanji": "照らす",
+    "kana": "てらす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "照耀，照亮；对照，参照"
+  },
+  {
+    "kanji": "向ける",
+    "kana": "むける",
+    "pitch": "⓪",
+    "pos": "动2自他",
+    "meaning": "朝，向"
+  },
+  {
+    "kanji": "提供",
+    "kana": "ていきょう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "提供"
+  },
+  {
+    "kanji": "測位",
+    "kana": "そくい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "定位"
+  },
+  {
+    "kanji": "位置",
+    "kana": "いち",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "位置"
+  },
+  {
+    "kanji": "精度",
+    "kana": "せいど",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "精度"
+  },
+  {
+    "kanji": "時刻",
+    "kana": "じこく",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "时刻，时间"
+  },
+  {
+    "kanji": "配信",
+    "kana": "はいしん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "发送，传送"
+  },
+  {
+    "kanji": "金融",
+    "kana": "きんゆう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "金融"
+  },
+  {
+    "kanji": "業界",
+    "kana": "ぎょうかい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "业界，行业"
+  },
+  {
+    "kanji": "一方",
+    "kana": "いっぽう",
+    "pitch": "③",
+    "pos": "名·连",
+    "meaning": "另一方面；一个方面；单方面"
+  },
+  {
+    "kanji": "特長",
+    "kana": "とくちょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "特长"
+  },
+  {
+    "kanji": "",
+    "kana": "ショートメッセージ",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "短信，短信息"
+  },
+  {
+    "kanji": "通信",
+    "kana": "つうしん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "通信"
+  },
+  {
+    "kanji": "救援",
+    "kana": "きゅうえん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "救援"
+  },
+  {
+    "kanji": "連携",
+    "kana": "れんけい",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "协作，合作，联合"
+  },
+  {
+    "kanji": "進化",
+    "kana": "しんか",
+    "pitch": "①",
+    "pos": "名·动3自",
+    "meaning": "进化"
+  },
+  {
+    "kanji": "精密",
+    "kana": "せいみつ",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "精密，精细"
+  },
+  {
+    "kanji": "信頼性",
+    "kana": "しんらいせい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "可靠性"
+  },
+  {
+    "kanji": "驚かす",
+    "kana": "おどろかす",
+    "pitch": "④",
+    "pos": "动1他",
+    "meaning": "震惊，使惊讶"
+  },
+  {
+    "kanji": "登山",
+    "kana": "とざん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "登山"
+  },
+  {
+    "kanji": "",
+    "kana": "ところが",
+    "pitch": "③",
+    "pos": "连",
+    "meaning": "但是，然而"
+  },
+  {
+    "kanji": "",
+    "kana": "スマートフォン",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "智能手机"
+  },
+  {
+    "kanji": "届く",
+    "kana": "とどく",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "送达；够到"
+  },
+  {
+    "kanji": "",
+    "kana": "つぶやく",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "嘟囔，小声说"
+  },
+  {
+    "kanji": "求める",
+    "kana": "もとめる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "寻求；追求；要求"
+  },
+  {
+    "kanji": "薦める",
+    "kana": "すすめる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "推荐，推举"
+  },
+  {
+    "kanji": "救う",
+    "kana": "すくう",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "挽救，救助"
+  },
+  {
+    "kanji": "自動",
+    "kana": "じどう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "自动"
+  },
+  {
+    "kanji": "作業",
+    "kana": "さぎょう",
+    "pitch": "①",
+    "pos": "名·动3自",
+    "meaning": "工作，操作"
+  },
+  {
+    "kanji": "労働力",
+    "kana": "ろうどうりょく",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "劳动力"
+  },
+  {
+    "kanji": "節約",
+    "kana": "せつやく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "节约"
+  },
+  {
+    "kanji": "小人",
+    "kana": "こびと",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "（童话中的）矮小人物，小矮人"
+  },
+  {
+    "kanji": "",
+    "kana": "ははは",
+    "pitch": "⓪",
+    "pos": "叹",
+    "meaning": "哈哈哈，哈哈大笑声"
+  },
+  {
+    "kanji": "活用",
+    "kana": "かつよう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "活用，有效利用"
+  },
+  {
+    "kanji": "",
+    "kana": "おかげ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "幸亏，多亏"
+  },
+  {
+    "kanji": "助かる",
+    "kana": "たすかる",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "得救，获救；有帮助"
+  },
+  {
+    "kanji": "応用",
+    "kana": "おうよう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "应用"
+  },
+  {
+    "kanji": "",
+    "kana": "メリット",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "优点"
+  },
+  {
+    "kanji": "領域",
+    "kana": "りょういき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "领域"
+  },
+  {
+    "kanji": "海上",
+    "kana": "かいじょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "海上"
+  },
+  {
+    "kanji": "救助",
+    "kana": "きゅうじょ",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "救助，搭救"
+  },
+  {
+    "kanji": "安否",
+    "kana": "あんぴ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "安否，平安与否"
+  },
+  {
+    "kanji": "残業",
+    "kana": "ざんぎょう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "加班"
+  },
+  {
+    "kanji": "専門用語",
+    "kana": "せんもんようご",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "专业术语"
+  },
+  {
+    "kanji": "",
+    "kana": "まるで",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "好像，宛如；完全，全然"
+  },
+  {
+    "kanji": "警察",
+    "kana": "けいさつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "警察；警察机构"
+  },
+  {
+    "kanji": "予想",
+    "kana": "よそう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "预料，预测"
+  },
+  {
+    "kanji": "慎重",
+    "kana": "しんちょう",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "慎重，小心，谨慎"
+  },
+  {
+    "kanji": "延期",
+    "kana": "えんき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "延期"
+  },
+  {
+    "kanji": "眠い",
+    "kana": "ねむい",
+    "pitch": "⓪",
+    "pos": "形1",
+    "meaning": "困倦"
+  },
+  {
+    "kanji": "顔色",
+    "kana": "かおいろ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "脸色"
+  },
+  {
+    "kanji": "",
+    "kana": "ブロッコリー",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "花椰菜；西蓝花"
+  }
+]

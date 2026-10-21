@@ -1,0 +1,240 @@
+[
+  {
+    "kanji": "責任者",
+    "kana": "せきにんしゃ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "负责人"
+  },
+  {
+    "kanji": "同僚",
+    "kana": "どうりょう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "同事"
+  },
+  {
+    "kanji": "観客",
+    "kana": "かんきゃく",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "观众"
+  },
+  {
+    "kanji": "空腹",
+    "kana": "くうふく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "空肚子，空腹，饿"
+  },
+  {
+    "kanji": "換気",
+    "kana": "かんき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "换气"
+  },
+  {
+    "kanji": "留守",
+    "kana": "るす",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "不在家"
+  },
+  {
+    "kanji": "講堂",
+    "kana": "こうどう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "讲堂"
+  },
+  {
+    "kanji": "昼間",
+    "kana": "ひるま",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "白天，白日"
+  },
+  {
+    "kanji": "日程",
+    "kana": "にってい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "日程"
+  },
+  {
+    "kanji": "次回",
+    "kana": "じかい",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "下次，下回"
+  },
+  {
+    "kanji": "目覚まし",
+    "kana": "めざまし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "闹钟；叫醒"
+  },
+  {
+    "kanji": "アラーム",
+    "kana": "アラーム",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "闹钟，闹铃"
+  },
+  {
+    "kanji": "企画案",
+    "kana": "きかくあん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "策划方案"
+  },
+  {
+    "kanji": "お返事",
+    "kana": "おへんじ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "回信"
+  },
+  {
+    "kanji": "行き先",
+    "kana": "いきさき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "去的地方，目的地"
+  },
+  {
+    "kanji": "預かる",
+    "kana": "あずかる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "保管，收存"
+  },
+  {
+    "kanji": "気づく",
+    "kana": "きづく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "发觉，发现"
+  },
+  {
+    "kanji": "冷やす",
+    "kana": "ひやす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "冰镇，冷却"
+  },
+  {
+    "kanji": "思い出す",
+    "kana": "おもいだす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "想起，想出"
+  },
+  {
+    "kanji": "告げる",
+    "kana": "つげる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "说，告诉"
+  },
+  {
+    "kanji": "冷える",
+    "kana": "ひえる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "变冷；感觉凉"
+  },
+  {
+    "kanji": "信じる",
+    "kana": "しんじる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "相信，信任"
+  },
+  {
+    "kanji": "折れる",
+    "kana": "おれる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "折，断；拐弯"
+  },
+  {
+    "kanji": "出勤する",
+    "kana": "しゅっきんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "上班，出勤"
+  },
+  {
+    "kanji": "セットする",
+    "kana": "セットする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "设定，设置"
+  },
+  {
+    "kanji": "検討する",
+    "kana": "けんとうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "讨论"
+  },
+  {
+    "kanji": "正しい",
+    "kana": "ただしい",
+    "pitch": "③",
+    "pos": "形容词",
+    "meaning": "正确的"
+  },
+  {
+    "kanji": "当然",
+    "kana": "とうぜん",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "当然，应当"
+  },
+  {
+    "kanji": "確か",
+    "kana": "たしか",
+    "pitch": "①",
+    "pos": "形容动词",
+    "meaning": "确实，确切；大概"
+  },
+  {
+    "kanji": "丈夫",
+    "kana": "じょうぶ",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "牢固，结实"
+  },
+  {
+    "kanji": "早速",
+    "kana": "さっそく",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "马上，立即"
+  },
+  {
+    "kanji": "直接",
+    "kana": "ちょくせつ",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "直接"
+  },
+  {
+    "kanji": "きっと",
+    "kana": "きっと",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "一定"
+  },
+  {
+    "kanji": "だって",
+    "kana": "だって",
+    "pitch": "①",
+    "pos": "接续词",
+    "meaning": "可是，但是"
+  }
+]

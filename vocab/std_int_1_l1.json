@@ -1,0 +1,793 @@
+[
+  {
+    "kanji": "出会い",
+    "kana": "であい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "相遇"
+  },
+  {
+    "kanji": "助かる",
+    "kana": "たすかる",
+    "pitch": "③",
+    "pos": "动1",
+    "meaning": "获得帮助；得救"
+  },
+  {
+    "kanji": "すっかり",
+    "kana": "すっかり",
+    "pitch": "③",
+    "pos": "副词",
+    "meaning": "完全,彻底"
+  },
+  {
+    "kanji": "街",
+    "kana": "まち",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "街道；城镇"
+  },
+  {
+    "kanji": "変化",
+    "kana": "へんか",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "变化"
+  },
+  {
+    "kanji": "ついていく",
+    "kana": "ついていく",
+    "pitch": "①",
+    "pos": "动1",
+    "meaning": "跟上，跟上去"
+  },
+  {
+    "kanji": "高層",
+    "kana": "こうそう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "高层"
+  },
+  {
+    "kanji": "高層～",
+    "kana": "こうそうピル",
+    "pitch": "⑤",
+    "pos": "名词",
+    "meaning": "高楼，大厦"
+  },
+  {
+    "kanji": "辺",
+    "kana": "へん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "一带，附近"
+  },
+  {
+    "kanji": "ちょっと",
+    "kana": "ちょっと",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "哎，劳驾；有点，稍微；有点儿… ，不太…"
+  },
+  {
+    "kanji": "おじさん",
+    "kana": "おじさん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "大爷，大叔；伯伯，叔叔，舅舅"
+  },
+  {
+    "kanji": "お姉さん",
+    "kana": "おねえさん",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "姐姐"
+  },
+  {
+    "kanji": "自動～",
+    "kana": "じどうドア",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "自动门"
+  },
+  {
+    "kanji": "目覚まし時計",
+    "kana": "めざましどけい",
+    "pitch": "⑤",
+    "pos": "名词",
+    "meaning": "闹钟"
+  },
+  {
+    "kanji": "お父さん",
+    "kana": "おとうさん",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "父亲，爸爸"
+  },
+  {
+    "kanji": "不思議",
+    "kana": "ふしぎ",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "不可思议，奇怪"
+  },
+  {
+    "kanji": "駅弁",
+    "kana": "えきべん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "车站卖的盒饭"
+  },
+  {
+    "kanji": "あめ",
+    "kana": "あめ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "糖"
+  },
+  {
+    "kanji": "なめる",
+    "kana": "なめる",
+    "pitch": "②",
+    "pos": "动2",
+    "meaning": "舔，含"
+  },
+  {
+    "kanji": "中学校",
+    "kana": "ちゅうがっこう",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "初级中学，初中"
+  },
+  {
+    "kanji": "テスト",
+    "kana": "テスト",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "考试，测验，测试"
+  },
+  {
+    "kanji": "涙",
+    "kana": "なみだ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "眼泪，泪"
+  },
+  {
+    "kanji": "首都",
+    "kana": "しゅと",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "首都"
+  },
+  {
+    "kanji": "救急車",
+    "kana": "きゅうきゅうしゃ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "急救车，救护车"
+  },
+  {
+    "kanji": "ふた",
+    "kana": "ふた",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "盖子，盖"
+  },
+  {
+    "kanji": "広げる",
+    "kana": "ひろげる",
+    "pitch": "⓪",
+    "pos": "动2",
+    "meaning": "展开，扩大，扩展"
+  },
+  {
+    "kanji": "沸く",
+    "kana": "わく",
+    "pitch": "⓪",
+    "pos": "动1",
+    "meaning": "沸腾，烧开"
+  },
+  {
+    "kanji": "沸かす",
+    "kana": "わかす",
+    "pitch": "⓪",
+    "pos": "动1",
+    "meaning": "烧热，烧开"
+  },
+  {
+    "kanji": "タオル",
+    "kana": "タオル",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "毛巾"
+  },
+  {
+    "kanji": "乾かす",
+    "kana": "かわかす",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "弄干，晾干"
+  },
+  {
+    "kanji": "牧場",
+    "kana": "ぼくじょう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "牧场"
+  },
+  {
+    "kanji": "辺り",
+    "kana": "あたり",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "周围，附近"
+  },
+  {
+    "kanji": "私鉄",
+    "kana": "してつ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "私营铁路"
+  },
+  {
+    "kanji": "公営",
+    "kana": "こうえい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "公营"
+  },
+  {
+    "kanji": "略",
+    "kana": "りゃく",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "略．简略"
+  },
+  {
+    "kanji": "国営",
+    "kana": "こくえい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "国营"
+  },
+  {
+    "kanji": "民営",
+    "kana": "みんえい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "民营"
+  },
+  {
+    "kanji": "路線",
+    "kana": "ろせん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "线路"
+  },
+  {
+    "kanji": "主要",
+    "kana": "しゅよう",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "主要"
+  },
+  {
+    "kanji": "都市",
+    "kana": "とし",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "城市．都市"
+  },
+  {
+    "kanji": "時速",
+    "kana": "じそく",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "时速"
+  },
+  {
+    "kanji": "延びる",
+    "kana": "のびる",
+    "pitch": "②",
+    "pos": "动2",
+    "meaning": "延伸，延长"
+  },
+  {
+    "kanji": "民間",
+    "kana": "みんかん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "民间"
+  },
+  {
+    "kanji": "経営～",
+    "kana": "けいえいする",
+    "pitch": "⓪",
+    "pos": "动3",
+    "meaning": "经营"
+  },
+  {
+    "kanji": "また",
+    "kana": "また",
+    "pitch": "⓪",
+    "pos": "连接词",
+    "meaning": "另外．又．再．也"
+  },
+  {
+    "kanji": "地方自治体",
+    "kana": "ちほうじちたい",
+    "pitch": "⑤",
+    "pos": "名词",
+    "meaning": "地方自治团体"
+  },
+  {
+    "kanji": "実用",
+    "kana": "じつよう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "实用"
+  },
+  {
+    "kanji": "運行",
+    "kana": "うんこう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "运行"
+  },
+  {
+    "kanji": "方向",
+    "kana": "ほうこう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "方向"
+  },
+  {
+    "kanji": "表す",
+    "kana": "あらわす",
+    "pitch": "③",
+    "pos": "形容动词",
+    "meaning": "表示，表现，表达"
+  },
+  {
+    "kanji": "上り",
+    "kana": "のぼり",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "上，上行"
+  },
+  {
+    "kanji": "下り",
+    "kana": "くだり",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "下．下行"
+  },
+  {
+    "kanji": "地方",
+    "kana": "ちほう",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "地方"
+  },
+  {
+    "kanji": "方面",
+    "kana": "ほうめん",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "方向，方面"
+  },
+  {
+    "kanji": "こんな",
+    "kana": "こんな",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "这样的"
+  },
+  {
+    "kanji": "なぞなぞ",
+    "kana": "なぞなぞ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "谜语"
+  },
+  {
+    "kanji": "答え",
+    "kana": "こたえ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "回答．答案"
+  },
+  {
+    "kanji": "宮保蝦仁",
+    "kana": "ゴンバオシャーレン",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "宫保虾仁"
+  },
+  {
+    "kanji": "エビ",
+    "kana": "エビ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "虾仁，虾"
+  },
+  {
+    "kanji": "ビーナッツ",
+    "kana": "ビーナッツ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "花生米"
+  },
+  {
+    "kanji": "唐辛子",
+    "kana": "とうがらし",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "辣椒"
+  },
+  {
+    "kanji": "炒める",
+    "kana": "いためる",
+    "pitch": "③",
+    "pos": "动2",
+    "meaning": "炒"
+  },
+  {
+    "kanji": "～料理",
+    "kana": "おせちりょうり",
+    "pitch": "⑤",
+    "pos": "名词",
+    "meaning": "新年饭菜"
+  },
+  {
+    "kanji": "正月",
+    "kana": "しょうがつ",
+    "pitch": "⑤",
+    "pos": "名词",
+    "meaning": "正月；新年"
+  },
+  {
+    "kanji": "お祝い",
+    "kana": "おいわい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "庆贺，祝贺"
+  },
+  {
+    "kanji": "幸運",
+    "kana": "こううん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "幸运．好运，侥幸"
+  },
+  {
+    "kanji": "訪れる",
+    "kana": "おとずれる",
+    "pitch": "④",
+    "pos": "动2",
+    "meaning": "到来．来临．访问"
+  },
+  {
+    "kanji": "育てる",
+    "kana": "そだてる",
+    "pitch": "③",
+    "pos": "动2",
+    "meaning": "养育，抚育，培养"
+  },
+  {
+    "kanji": "国際",
+    "kana": "こくさい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "国际"
+  },
+  {
+    "kanji": "消極的",
+    "kana": "しょうきょくてき",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "消极，负面"
+  },
+  {
+    "kanji": "積極的",
+    "kana": "せっきょくてき",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "积极．正面"
+  },
+  {
+    "kanji": "抽象的",
+    "kana": "ちゅうしょうてき",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "抽象"
+  },
+  {
+    "kanji": "ひも",
+    "kana": "ひも",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "带（子），细绳"
+  },
+  {
+    "kanji": "思い出",
+    "kana": "おもいで",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "回忆；往事"
+  },
+  {
+    "kanji": "化石",
+    "kana": "かせき",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "化石"
+  },
+  {
+    "kanji": "現代",
+    "kana": "げんだい",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "现代，现今．当代"
+  },
+  {
+    "kanji": "事件",
+    "kana": "じけん",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "事件．案件"
+  },
+  {
+    "kanji": "金持ち",
+    "kana": "かねもち",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "有钱人．富人"
+  },
+  {
+    "kanji": "進歩",
+    "kana": "しんぽ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "进步"
+  },
+  {
+    "kanji": "感激",
+    "kana": "かんげき",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "感激，感动"
+  },
+  {
+    "kanji": "近代",
+    "kana": "きんだい",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "近代．现代"
+  },
+  {
+    "kanji": "電子",
+    "kana": "でんし",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "电子"
+  },
+  {
+    "kanji": "高齢",
+    "kana": "こうれい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "高龄，老龄"
+  },
+  {
+    "kanji": "デジタル",
+    "kana": "デジタル",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "数码，数字"
+  },
+  {
+    "kanji": "IT",
+    "kana": "アイティー",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "IT ．电子技术"
+  },
+  {
+    "kanji": "建設～",
+    "kana": "けんせつする",
+    "pitch": "⓪",
+    "pos": "动3",
+    "meaning": "修建，建设"
+  },
+  {
+    "kanji": "上る",
+    "kana": "のぼる",
+    "pitch": "⓪",
+    "pos": "动1",
+    "meaning": "上，登；进京"
+  },
+  {
+    "kanji": "下る",
+    "kana": "くだる",
+    "pitch": "⓪",
+    "pos": "动1",
+    "meaning": "下，下去：到地方去"
+  },
+  {
+    "kanji": "通行止め",
+    "kana": "つうこうどめ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "禁止通行"
+  },
+  {
+    "kanji": "このような",
+    "kana": "このような",
+    "pitch": "③",
+    "pos": "连接词",
+    "meaning": "像这样的"
+  },
+  {
+    "kanji": "これら",
+    "kana": "これら",
+    "pitch": "⓪",
+    "pos": "代词",
+    "meaning": "这些"
+  },
+  {
+    "kanji": "秘密",
+    "kana": "ひみつ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "秘密"
+  },
+  {
+    "kanji": "レール",
+    "kana": "レール",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "铁轨．钢轨．轨道"
+  },
+  {
+    "kanji": "溶く",
+    "kana": "とく",
+    "pitch": "①",
+    "pos": "动1",
+    "meaning": "调拌，调开，溶解"
+  },
+  {
+    "kanji": "傑作",
+    "kana": "けっさく",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "杰作"
+  },
+  {
+    "kanji": "優れる",
+    "kana": "すぐれる",
+    "pitch": "③",
+    "pos": "动2",
+    "meaning": "优秀，卓越"
+  },
+  {
+    "kanji": "運河",
+    "kana": "うんが",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "运河"
+  },
+  {
+    "kanji": "流れる",
+    "kana": "ながれる",
+    "pitch": "③",
+    "pos": "动2",
+    "meaning": "流．流动．流淌"
+  },
+  {
+    "kanji": "レジャー",
+    "kana": "レジャー",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "业余时间的娱乐；余暇．空闲"
+  },
+  {
+    "kanji": "伝統",
+    "kana": "でんとう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "传统"
+  },
+  {
+    "kanji": "芸能",
+    "kana": "げいのう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "演艺．文艺，曲艺"
+  },
+  {
+    "kanji": "予算",
+    "kana": "よさん",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "预算"
+  },
+  {
+    "kanji": "効果",
+    "kana": "こうか",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "功效；效果"
+  },
+  {
+    "kanji": "競争",
+    "kana": "きょうそう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "竞争"
+  },
+  {
+    "kanji": "本格",
+    "kana": "ほんかく",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "正式；原则．正规"
+  },
+  {
+    "kanji": "文房具",
+    "kana": "ぶんぼうぐ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "文具"
+  },
+  {
+    "kanji": "コショウ",
+    "kana": "コショウ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "胡椒"
+  },
+  {
+    "kanji": "調味料",
+    "kana": "ちょうみりょう",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "佐料，调味品"
+  },
+  {
+    "kanji": "環境保護",
+    "kana": "かんきょうほご",
+    "pitch": "⑥",
+    "pos": "名词",
+    "meaning": "环境保护．环保"
+  },
+  {
+    "kanji": "注目～",
+    "kana": "ちゅうもくする",
+    "pitch": "⓪",
+    "pos": "动3",
+    "meaning": "注目．注视"
+  },
+  {
+    "kanji": "活動",
+    "kana": "かつどう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "活动"
+  },
+  {
+    "kanji": "通信手段",
+    "kana": "つうしんしゅだん",
+    "pitch": "⑥",
+    "pos": "名词",
+    "meaning": "通讯手段"
+  },
+  {
+    "kanji": "科目",
+    "kana": "かもく",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "科目"
+  }
+]

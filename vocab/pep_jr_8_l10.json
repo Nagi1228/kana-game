@@ -1,0 +1,359 @@
+[
+  {
+    "kanji": "",
+    "kana": "ウイルス",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "病毒"
+  },
+  {
+    "kanji": "感染",
+    "kana": "かんせん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "感染"
+  },
+  {
+    "kanji": "予防",
+    "kana": "よぼう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "预防"
+  },
+  {
+    "kanji": "基本",
+    "kana": "きほん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "基本"
+  },
+  {
+    "kanji": "",
+    "kana": "しっかり",
+    "pitch": "③",
+    "pos": "副",
+    "meaning": "切实地, 牢牢地"
+  },
+  {
+    "kanji": "",
+    "kana": "せっけん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "肥皂, 香皂"
+  },
+  {
+    "kanji": "指",
+    "kana": "ゆび",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "指头"
+  },
+  {
+    "kanji": "清潔",
+    "kana": "せいけつ",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "干净, 清洁"
+  },
+  {
+    "kanji": "拭く",
+    "kana": "ふく",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "擦"
+  },
+  {
+    "kanji": "",
+    "kana": "マスク",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "口罩; 面具"
+  },
+  {
+    "kanji": "着用",
+    "kana": "ちゃくよう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "戴(口罩)，穿(衣服)，系(安全带)"
+  },
+  {
+    "kanji": "防ぐ",
+    "kana": "ふせぐ",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "防止"
+  },
+  {
+    "kanji": "",
+    "kana": "インフルエンザ",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "流行性感冒"
+  },
+  {
+    "kanji": "",
+    "kana": "はやる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "蔓延; 流行"
+  },
+  {
+    "kanji": "時期",
+    "kana": "じき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "时期"
+  },
+  {
+    "kanji": "着ける",
+    "kana": "つける",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "佩戴; 穿上"
+  },
+  {
+    "kanji": "外す",
+    "kana": "はずす",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "摘下; 解除"
+  },
+  {
+    "kanji": "",
+    "kana": "アルコール",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "酒精"
+  },
+  {
+    "kanji": "消毒",
+    "kana": "しょうどく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "消毒，杀菌"
+  },
+  {
+    "kanji": "効果的",
+    "kana": "こうかてき",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "有效的"
+  },
+  {
+    "kanji": "",
+    "kana": "ボタン",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "按钮; 纽扣"
+  },
+  {
+    "kanji": "",
+    "kana": "タイトル",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "题目, 标题"
+  },
+  {
+    "kanji": "怖い",
+    "kana": "こわい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "可怕"
+  },
+  {
+    "kanji": "鼻",
+    "kana": "はな",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "鼻子"
+  },
+  {
+    "kanji": "備える",
+    "kana": "そなえる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "配备, 装备"
+  },
+  {
+    "kanji": "治療",
+    "kana": "ちりょう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "治疗，医疗"
+  },
+  {
+    "kanji": "",
+    "kana": "ワクチン",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "疫苗"
+  },
+  {
+    "kanji": "接種",
+    "kana": "せっしゅ",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "接种，注射"
+  },
+  {
+    "kanji": "番号",
+    "kana": "ばんごう",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "序号, 号码"
+  },
+  {
+    "kanji": "風",
+    "kana": "かぜ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "风"
+  },
+  {
+    "kanji": "吹く",
+    "kana": "ふく",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "吹, 刮"
+  },
+  {
+    "kanji": "沈む",
+    "kana": "しずむ",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "沉没; 消沉"
+  },
+  {
+    "kanji": "月",
+    "kana": "つき",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "月亮"
+  },
+  {
+    "kanji": "昇る",
+    "kana": "のぼる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "上升, 升起"
+  },
+  {
+    "kanji": "湯",
+    "kana": "ゆ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "热水, 开水"
+  },
+  {
+    "kanji": "沸かす",
+    "kana": "わかす",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "烧开；使……沸腾"
+  },
+  {
+    "kanji": "煮る",
+    "kana": "にる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "煮"
+  },
+  {
+    "kanji": "",
+    "kana": "びっくり",
+    "pitch": "③",
+    "pos": "副",
+    "meaning": "吃惊"
+  },
+  {
+    "kanji": "込む",
+    "kana": "こむ",
+    "pitch": "①",
+    "pos": "动1自",
+    "meaning": "拥挤; 混杂"
+  },
+  {
+    "kanji": "将来",
+    "kana": "しょうらい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "将来, 未来"
+  },
+  {
+    "kanji": "機能",
+    "kana": "きのう",
+    "pitch": "①",
+    "pos": "名·动3自",
+    "meaning": "功能"
+  },
+  {
+    "kanji": "",
+    "kana": "やはり",
+    "pitch": "②",
+    "pos": "副",
+    "meaning": "果然; 仍然"
+  },
+  {
+    "kanji": "今夜",
+    "kana": "こんや",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "今晚"
+  },
+  {
+    "kanji": "耳",
+    "kana": "みみ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "耳朵"
+  },
+  {
+    "kanji": "必要",
+    "kana": "ひつよう",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "必要"
+  },
+  {
+    "kanji": "省",
+    "kana": "しょう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "(行政区划单位)省"
+  },
+  {
+    "kanji": "米",
+    "kana": "こめ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "米, 大米"
+  },
+  {
+    "kanji": "洋室",
+    "kana": "ようしつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "西式房间"
+  },
+  {
+    "kanji": "和室",
+    "kana": "わしつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "日式房间"
+  },
+  {
+    "kanji": "",
+    "kana": "カード",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "卡片"
+  },
+  {
+    "kanji": "",
+    "kana": "メッセージ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "信息"
+  }
+]

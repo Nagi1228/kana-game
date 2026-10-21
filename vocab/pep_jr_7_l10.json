@@ -1,0 +1,324 @@
+[
+  {
+    "kanji": "目",
+    "kana": "め",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "眼睛"
+  },
+  {
+    "kanji": "検査",
+    "kana": "けんさ",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "检查"
+  },
+  {
+    "kanji": "結果",
+    "kana": "けっか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "结果"
+  },
+  {
+    "kanji": "大丈夫",
+    "kana": "だいじょうぶ",
+    "pitch": "③",
+    "pos": "形2",
+    "meaning": "不要紧"
+  },
+  {
+    "kanji": "",
+    "kana": "こんな",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "这样"
+  },
+  {
+    "kanji": "姿勢",
+    "kana": "しせい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "姿势; 态度"
+  },
+  {
+    "kanji": "正しい",
+    "kana": "ただしい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "正确, 正当"
+  },
+  {
+    "kanji": "視力",
+    "kana": "しりょく",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "视力"
+  },
+  {
+    "kanji": "落ちる",
+    "kana": "おちる",
+    "pitch": "②",
+    "pos": "动2自",
+    "meaning": "下降; 掉, 落"
+  },
+  {
+    "kanji": "",
+    "kana": "どうして",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "为什么"
+  },
+  {
+    "kanji": "疲れる",
+    "kana": "つかれる",
+    "pitch": "③",
+    "pos": "动2自",
+    "meaning": "疲劳"
+  },
+  {
+    "kanji": "",
+    "kana": "そんな",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "那样"
+  },
+  {
+    "kanji": "習慣",
+    "kana": "しゅうかん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "习惯"
+  },
+  {
+    "kanji": "",
+    "kana": "ほか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "别的, 以外"
+  },
+  {
+    "kanji": "変える",
+    "kana": "かえる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "改变, 变换"
+  },
+  {
+    "kanji": "",
+    "kana": "チェックリスト",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "检查单"
+  },
+  {
+    "kanji": "光",
+    "kana": "ひかり",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "光, 光线"
+  },
+  {
+    "kanji": "",
+    "kana": "あるいは",
+    "pitch": "②",
+    "pos": "连",
+    "meaning": "或, 或者"
+  },
+  {
+    "kanji": "弱い",
+    "kana": "よわい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "弱; 不擅长"
+  },
+  {
+    "kanji": "",
+    "kana": "マッサージ",
+    "pitch": "③",
+    "pos": "名·动3他",
+    "meaning": "按摩, 推拿"
+  },
+  {
+    "kanji": "太陽",
+    "kana": "たいよう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "太阳"
+  },
+  {
+    "kanji": "浴びる",
+    "kana": "あびる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "照，晒；沐浴； 蒙受"
+  },
+  {
+    "kanji": "汚い",
+    "kana": "きたない",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "脏"
+  },
+  {
+    "kanji": "手",
+    "kana": "て",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "手, 臂"
+  },
+  {
+    "kanji": "擦る",
+    "kana": "こする",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "揉, 擦"
+  },
+  {
+    "kanji": "十分",
+    "kana": "じゅうぶん",
+    "pitch": "③",
+    "pos": "形2",
+    "meaning": "充分, 足够"
+  },
+  {
+    "kanji": "睡眠",
+    "kana": "すいみん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "睡眠"
+  },
+  {
+    "kanji": "",
+    "kana": "パソコン",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "个人电脑"
+  },
+  {
+    "kanji": "使用",
+    "kana": "しよう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "使用"
+  },
+  {
+    "kanji": "減らす",
+    "kana": "へらす",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "减少"
+  },
+  {
+    "kanji": "外",
+    "kana": "そと",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "外面"
+  },
+  {
+    "kanji": "長時間",
+    "kana": "ちょうじかん",
+    "pitch": "③",
+    "pos": "名·副",
+    "meaning": "长时间"
+  },
+  {
+    "kanji": "明るい",
+    "kana": "あかるい",
+    "pitch": "⓪",
+    "pos": "形1",
+    "meaning": "明亮"
+  },
+  {
+    "kanji": "風邪",
+    "kana": "かぜ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "感冒"
+  },
+  {
+    "kanji": "休む",
+    "kana": "やすむ",
+    "pitch": "②",
+    "pos": "动1自他",
+    "meaning": "请假; 休息"
+  },
+  {
+    "kanji": "眠る",
+    "kana": "ねむる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "睡觉"
+  },
+  {
+    "kanji": "",
+    "kana": "あんな",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "那样"
+  },
+  {
+    "kanji": "緑",
+    "kana": "みどり",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "绿, 绿色"
+  },
+  {
+    "kanji": "悪い",
+    "kana": "わるい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "坏, 不好"
+  },
+  {
+    "kanji": "台風",
+    "kana": "たいふう",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "台风"
+  },
+  {
+    "kanji": "倒れる",
+    "kana": "たおれる",
+    "pitch": "③",
+    "pos": "动2自",
+    "meaning": "倒塌，倒下"
+  },
+  {
+    "kanji": "",
+    "kana": "グループ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "群, 组, 集团"
+  },
+  {
+    "kanji": "",
+    "kana": "ガス",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "燃气; 气体"
+  },
+  {
+    "kanji": "電気",
+    "kana": "でんき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "电, 电力; 电灯"
+  },
+  {
+    "kanji": "練習帳",
+    "kana": "れんしゅうちょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "练习册"
+  },
+  {
+    "kanji": "中止",
+    "kana": "ちゅうし",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "中止，停止"
+  }
+]

@@ -1,0 +1,527 @@
+[
+  {
+    "kanji": "賢い",
+    "kana": "かしこい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "聪明；高明"
+  },
+  {
+    "kanji": "知恵",
+    "kana": "ちえ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "智慧，智能"
+  },
+  {
+    "kanji": "お小遣い",
+    "kana": "おこづかい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "小费，零花钱"
+  },
+  {
+    "kanji": "衝動買い",
+    "kana": "しょうどうがい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "冲动消费"
+  },
+  {
+    "kanji": "",
+    "kana": "フリーマーケット",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "跳蚤市场"
+  },
+  {
+    "kanji": "見えっ張り",
+    "kana": "みえっぱり",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "装门面，虚荣"
+  },
+  {
+    "kanji": "中古",
+    "kana": "ちゅうこ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "半旧，半新"
+  },
+  {
+    "kanji": "古本",
+    "kana": "ふるほん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "旧书，二手书"
+  },
+  {
+    "kanji": "",
+    "kana": "ずいぶん",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "相当，非常，很"
+  },
+  {
+    "kanji": "持ち主",
+    "kana": "もちぬし",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "持有者，"
+  },
+  {
+    "kanji": "",
+    "kana": "アレルギー",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "过敏，变态反应"
+  },
+  {
+    "kanji": "症状",
+    "kana": "しょうじょう",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "症状"
+  },
+  {
+    "kanji": "中古品",
+    "kana": "ちゅうこひん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "半新品，二手商品"
+  },
+  {
+    "kanji": "新品",
+    "kana": "しんぴん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "新货，新品"
+  },
+  {
+    "kanji": "ネット通販",
+    "kana": "ネットつうはん",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "网络销售"
+  },
+  {
+    "kanji": "",
+    "kana": "クーポン",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "礼券；联票，通票"
+  },
+  {
+    "kanji": "配る",
+    "kana": "くばる",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "分发"
+  },
+  {
+    "kanji": "割引",
+    "kana": "わりびき",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "打折扣，减价"
+  },
+  {
+    "kanji": "",
+    "kana": "セール",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "贱卖，大减价"
+  },
+  {
+    "kanji": "",
+    "kana": "すなわち",
+    "pitch": "②",
+    "pos": "连",
+    "meaning": "即，就是"
+  },
+  {
+    "kanji": "売上",
+    "kana": "うりあげ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "销售额"
+  },
+  {
+    "kanji": "総額",
+    "kana": "そうがく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "总额"
+  },
+  {
+    "kanji": "年末年始",
+    "kana": "ねんまつねんし",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "年末年初"
+  },
+  {
+    "kanji": "後悔",
+    "kana": "こうかい",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "后悔"
+  },
+  {
+    "kanji": "",
+    "kana": "やれやれ",
+    "pitch": "①",
+    "pos": "叹",
+    "meaning": "哎呀呀"
+  },
+  {
+    "kanji": "",
+    "kana": "かえって",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "反而，却"
+  },
+  {
+    "kanji": "安物",
+    "kana": "やすもの",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "便宜货"
+  },
+  {
+    "kanji": "銭",
+    "kana": "ぜに",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "钱"
+  },
+  {
+    "kanji": "失う",
+    "kana": "うしなう",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "丢失；错过"
+  },
+  {
+    "kanji": "意外",
+    "kana": "いがい",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "意外，想不到"
+  },
+  {
+    "kanji": "見た目",
+    "kana": "みため",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "外观，外表"
+  },
+  {
+    "kanji": "その他",
+    "kana": "そのた",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "其他"
+  },
+  {
+    "kanji": "節度",
+    "kana": "せつど",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "适度，节制"
+  },
+  {
+    "kanji": "収入",
+    "kana": "しゅうにゅう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "收入"
+  },
+  {
+    "kanji": "稼ぐ",
+    "kana": "かせぐ",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "赚钱；争取"
+  },
+  {
+    "kanji": "構う",
+    "kana": "かまう",
+    "pitch": "②",
+    "pos": "动1自他",
+    "meaning": "介意，顾虑"
+  },
+  {
+    "kanji": "",
+    "kana": "とりあえず",
+    "pitch": "③",
+    "pos": "副",
+    "meaning": "总之，姑且"
+  },
+  {
+    "kanji": "赤字",
+    "kana": "あかじ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "赤字"
+  },
+  {
+    "kanji": "収支",
+    "kana": "しゅうし",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "收支"
+  },
+  {
+    "kanji": "理性",
+    "kana": "りせい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "理性"
+  },
+  {
+    "kanji": "張り合う",
+    "kana": "はりあう",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "竞争，争夺"
+  },
+  {
+    "kanji": "",
+    "kana": "メンツ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "面子"
+  },
+  {
+    "kanji": "虚栄心",
+    "kana": "きょえいしん",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "虚荣心"
+  },
+  {
+    "kanji": "駆る",
+    "kana": "かる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "驱使，驱赶"
+  },
+  {
+    "kanji": "万引き",
+    "kana": "まんびき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "盗窃商店物品"
+  },
+  {
+    "kanji": "強盗",
+    "kana": "ごうとう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "强盗，抢劫"
+  },
+  {
+    "kanji": "台無し",
+    "kana": "だいなし",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "断送，糟蹋"
+  },
+  {
+    "kanji": "",
+    "kana": "ショップ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "商店"
+  },
+  {
+    "kanji": "宅配便",
+    "kana": "たくはいびん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "（把商品等）送上门"
+  },
+  {
+    "kanji": "出前",
+    "kana": "でまえ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "送外卖"
+  },
+  {
+    "kanji": "包装紙",
+    "kana": "ほうそうし",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "包装纸"
+  },
+  {
+    "kanji": "受け取る",
+    "kana": "うけとる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "领取，收到"
+  },
+  {
+    "kanji": "",
+    "kana": "ネットショッピング",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "网上购物"
+  },
+  {
+    "kanji": "貧乏",
+    "kana": "びんぼう",
+    "pitch": "①",
+    "pos": "名·动3自·形2",
+    "meaning": "贫穷，贫困"
+  },
+  {
+    "kanji": "嫌う",
+    "kana": "きらう",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "厌恶，憎恶"
+  },
+  {
+    "kanji": "模様",
+    "kana": "もよう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "花样，花纹"
+  },
+  {
+    "kanji": "",
+    "kana": "こだわる",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "拘泥"
+  },
+  {
+    "kanji": "予算",
+    "kana": "よさん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "预算"
+  },
+  {
+    "kanji": "削る",
+    "kana": "けずる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "削，铲；削减"
+  },
+  {
+    "kanji": "自由",
+    "kana": "じゆう",
+    "pitch": "②",
+    "pos": "名·形2",
+    "meaning": "自由"
+  },
+  {
+    "kanji": "両替",
+    "kana": "りょうがえ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "兑换，换钱"
+  },
+  {
+    "kanji": "配達",
+    "kana": "はいたつ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "送，投递"
+  },
+  {
+    "kanji": "料金",
+    "kana": "りょうきん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "费用，使用费"
+  },
+  {
+    "kanji": "",
+    "kana": "ただ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "免费"
+  },
+  {
+    "kanji": "商品",
+    "kana": "しょうひん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "商品，货品"
+  },
+  {
+    "kanji": "質",
+    "kana": "しつ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "质量"
+  },
+  {
+    "kanji": "劣る",
+    "kana": "おとる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "劣，次，不如"
+  },
+  {
+    "kanji": "",
+    "kana": "ぜいたく",
+    "pitch": "③",
+    "pos": "名·形2",
+    "meaning": "奢侈"
+  },
+  {
+    "kanji": "住所",
+    "kana": "じゅうしょ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "住所，住址"
+  },
+  {
+    "kanji": "変",
+    "kana": "へん",
+    "pitch": "①",
+    "pos": "名·形2",
+    "meaning": "奇怪，异常"
+  },
+  {
+    "kanji": "",
+    "kana": "カード",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "卡片"
+  },
+  {
+    "kanji": "落とす",
+    "kana": "おとす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "遗失；使落下"
+  },
+  {
+    "kanji": "銀行",
+    "kana": "ぎんこう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "银行"
+  },
+  {
+    "kanji": "下ろす",
+    "kana": "おろす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "提取；取下"
+  },
+  {
+    "kanji": "地味",
+    "kana": "じみ",
+    "pitch": "②",
+    "pos": "名·形2",
+    "meaning": "朴素；朴实"
+  }
+]

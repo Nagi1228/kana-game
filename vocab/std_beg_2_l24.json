@@ -1,0 +1,240 @@
+[
+  {
+    "kanji": "明日",
+    "kana": "みょうにち",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "明天"
+  },
+  {
+    "kanji": "明日",
+    "kana": "あす",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "明天"
+  },
+  {
+    "kanji": "昨日",
+    "kana": "さくじつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "昨天"
+  },
+  {
+    "kanji": "この度",
+    "kana": "このたび",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "这次，这回"
+  },
+  {
+    "kanji": "私",
+    "kana": "わたくし",
+    "pitch": "⓪",
+    "pos": "代词",
+    "meaning": "我"
+  },
+  {
+    "kanji": "私ども",
+    "kana": "わたくしども",
+    "pitch": "",
+    "pos": "代词",
+    "meaning": "我们"
+  },
+  {
+    "kanji": "社",
+    "kana": "しゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "公司"
+  },
+  {
+    "kanji": "者",
+    "kana": "もの",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "人，～的人"
+  },
+  {
+    "kanji": "弊社",
+    "kana": "へいしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "敝公司"
+  },
+  {
+    "kanji": "新車",
+    "kana": "しんしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "新车"
+  },
+  {
+    "kanji": "傷",
+    "kana": "きず",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "瑕疵；创伤"
+  },
+  {
+    "kanji": "指導",
+    "kana": "しどう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "指教，指导"
+  },
+  {
+    "kanji": "おつり",
+    "kana": "おつり",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "找的零钱"
+  },
+  {
+    "kanji": "応接室",
+    "kana": "おうせつしつ",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "会客室"
+  },
+  {
+    "kanji": "案内状",
+    "kana": "あんないじょう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "通知，请帖"
+  },
+  {
+    "kanji": "入学案内",
+    "kana": "にゅうがくあんない",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "入学指南"
+  },
+  {
+    "kanji": "伺う",
+    "kana": "うかがう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "（自谦）去；来；问；拜访；请教"
+  },
+  {
+    "kanji": "いたす",
+    "kana": "いたす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "（自谦）做，干"
+  },
+  {
+    "kanji": "参る",
+    "kana": "まいる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "（自谦）来，去"
+  },
+  {
+    "kanji": "いただく",
+    "kana": "いただく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "（自谦）吃，喝；得到"
+  },
+  {
+    "kanji": "おる",
+    "kana": "おる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "在"
+  },
+  {
+    "kanji": "ござる",
+    "kana": "ござる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "在，有，是"
+  },
+  {
+    "kanji": "差し上げる",
+    "kana": "さしあげる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "（自谦）给"
+  },
+  {
+    "kanji": "存じている",
+    "kana": "ぞんじている",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "（自谦）知道"
+  },
+  {
+    "kanji": "進める",
+    "kana": "すすめる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "推进，使前进"
+  },
+  {
+    "kanji": "拝見する",
+    "kana": "はいけんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "（自谦）看"
+  },
+  {
+    "kanji": "承知する",
+    "kana": "しょうちする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "知道"
+  },
+  {
+    "kanji": "期待する",
+    "kana": "きたいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "希望，期待"
+  },
+  {
+    "kanji": "世話する",
+    "kana": "せわする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "帮助；照顾"
+  },
+  {
+    "kanji": "貴重",
+    "kana": "きちょう",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "贵重"
+  },
+  {
+    "kanji": "少々",
+    "kana": "しょうしょう",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "稍稍，一点儿"
+  },
+  {
+    "kanji": "ただ今",
+    "kana": "ただいま",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "这会儿，方才；马上，立刻"
+  },
+  {
+    "kanji": "突然",
+    "kana": "とつぜん",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "突然"
+  },
+  {
+    "kanji": "実は",
+    "kana": "じつは",
+    "pitch": "②",
+    "pos": "副词",
+    "meaning": "其实，实际上"
+  }
+]

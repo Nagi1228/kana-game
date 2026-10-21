@@ -1,0 +1,429 @@
+[
+  {
+    "kanji": "奇跡",
+    "kana": "きせき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "奇迹"
+  },
+  {
+    "kanji": "匠",
+    "kana": "たくみ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "工匠"
+  },
+  {
+    "kanji": "事例",
+    "kana": "じれい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "事例"
+  },
+  {
+    "kanji": "大橋",
+    "kana": "おおはし",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "大桥"
+  },
+  {
+    "kanji": "都市",
+    "kana": "とし",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "都市"
+  },
+  {
+    "kanji": "結ぶ",
+    "kana": "むすぶ",
+    "pitch": "⓪",
+    "pos": "动1自他",
+    "meaning": "连接"
+  },
+  {
+    "kanji": "",
+    "kana": "トンネル",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "隧道"
+  },
+  {
+    "kanji": "建設",
+    "kana": "けんせつ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "建设"
+  },
+  {
+    "kanji": "",
+    "kana": "プロジェクト",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "工程"
+  },
+  {
+    "kanji": "工程",
+    "kana": "こうてい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "工程；工序"
+  },
+  {
+    "kanji": "現場",
+    "kana": "げんば",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "车间，工地；现场"
+  },
+  {
+    "kanji": "組立工",
+    "kana": "くみたてこう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "钳工，组装工人"
+  },
+  {
+    "kanji": "巨大",
+    "kana": "きょだい",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "巨大"
+  },
+  {
+    "kanji": "",
+    "kana": "コンクリート",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "水泥"
+  },
+  {
+    "kanji": "空洞",
+    "kana": "くうどう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "空洞"
+  },
+  {
+    "kanji": "繋げる",
+    "kana": "つなげる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "连接"
+  },
+  {
+    "kanji": "沈める",
+    "kana": "しずめる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "使沉入，使下沉"
+  },
+  {
+    "kanji": "漏れる",
+    "kana": "もれる",
+    "pitch": "②",
+    "pos": "动2自",
+    "meaning": "泄漏，泄露"
+  },
+  {
+    "kanji": "許す",
+    "kana": "ゆるす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "允许，容许"
+  },
+  {
+    "kanji": "誤差",
+    "kana": "ごさ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "误差"
+  },
+  {
+    "kanji": "",
+    "kana": "ベテラン",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "老手，经验丰富的人"
+  },
+  {
+    "kanji": "積む",
+    "kana": "つむ",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "存储，积累；装载"
+  },
+  {
+    "kanji": "感覚",
+    "kana": "かんかく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "感觉"
+  },
+  {
+    "kanji": "頼る",
+    "kana": "たよる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "依靠，借助"
+  },
+  {
+    "kanji": "指導",
+    "kana": "しどう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "指导"
+  },
+  {
+    "kanji": "傾ける",
+    "kana": "かたむける",
+    "pitch": "④",
+    "pos": "动2他",
+    "meaning": "倾注；使倾斜"
+  },
+  {
+    "kanji": "",
+    "kana": "こつこつ",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "孜孜不倦，不懈努力"
+  },
+  {
+    "kanji": "抜く",
+    "kana": "ぬく",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "抽出，拔出；除掉"
+  },
+  {
+    "kanji": "集中",
+    "kana": "しゅうちゅう",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "集中"
+  },
+  {
+    "kanji": "",
+    "kana": "ミス",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "失误"
+  },
+  {
+    "kanji": "事故",
+    "kana": "じこ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "事故"
+  },
+  {
+    "kanji": "精密",
+    "kana": "せいみつ",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "精密"
+  },
+  {
+    "kanji": "",
+    "kana": "レベル",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "等级，水平"
+  },
+  {
+    "kanji": "箇条書き",
+    "kana": "かじょうがき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "分条写出；列举"
+  },
+  {
+    "kanji": "誇る",
+    "kana": "ほこる",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "夸耀；自诩"
+  },
+  {
+    "kanji": "向上心",
+    "kana": "こうじょうしん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "向上心态，积极向上"
+  },
+  {
+    "kanji": "創造",
+    "kana": "そうぞう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "创造"
+  },
+  {
+    "kanji": "日誌",
+    "kana": "にっし",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "日志，每天的记录"
+  },
+  {
+    "kanji": "正確",
+    "kana": "せいかく",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "正确"
+  },
+  {
+    "kanji": "取り付ける",
+    "kana": "とりつける",
+    "pitch": "④",
+    "pos": "动2他",
+    "meaning": "安装"
+  },
+  {
+    "kanji": "怠る",
+    "kana": "おこたる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "怠惰，偷懒"
+  },
+  {
+    "kanji": "取り組む",
+    "kana": "とりくむ",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "致力；扭住"
+  },
+  {
+    "kanji": "メモ欄",
+    "kana": "メモらん",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "笔记栏"
+  },
+  {
+    "kanji": "行",
+    "kana": "ぎょう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "行"
+  },
+  {
+    "kanji": "幅",
+    "kana": "はば",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "幅度；余地"
+  },
+  {
+    "kanji": "同僚",
+    "kana": "どうりょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "同事，同僚"
+  },
+  {
+    "kanji": "改良",
+    "kana": "かいりょう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "改良"
+  },
+  {
+    "kanji": "重ねる",
+    "kana": "かさねる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "重复；垒起来；加上"
+  },
+  {
+    "kanji": "",
+    "kana": "コメント",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "评价"
+  },
+  {
+    "kanji": "腕",
+    "kana": "うで",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "本领；手腕"
+  },
+  {
+    "kanji": "観察",
+    "kana": "かんさつ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "观察"
+  },
+  {
+    "kanji": "鋭い",
+    "kana": "するどい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "尖锐"
+  },
+  {
+    "kanji": "達する",
+    "kana": "たっする",
+    "pitch": "⓪",
+    "pos": "动3自他",
+    "meaning": "达到"
+  },
+  {
+    "kanji": "",
+    "kana": "さっぱり",
+    "pitch": "③",
+    "pos": "副",
+    "meaning": "利落，痛快"
+  },
+  {
+    "kanji": "欠点",
+    "kana": "けってん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "缺点"
+  },
+  {
+    "kanji": "叱る",
+    "kana": "しかる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "责备、训斥"
+  },
+  {
+    "kanji": "破る",
+    "kana": "やぶる",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "弄破，打破"
+  },
+  {
+    "kanji": "",
+    "kana": "がっかり",
+    "pitch": "③",
+    "pos": "副",
+    "meaning": "失望，颓丧"
+  },
+  {
+    "kanji": "恐れる",
+    "kana": "おそれる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "害怕，担心"
+  },
+  {
+    "kanji": "",
+    "kana": "いっそう",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "更加"
+  },
+  {
+    "kanji": "我慢",
+    "kana": "がまん",
+    "pitch": "①",
+    "pos": "名·动3自",
+    "meaning": "忍耐，抑制"
+  }
+]

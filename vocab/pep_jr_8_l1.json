@@ -1,0 +1,499 @@
+[
+  {
+    "kanji": "第",
+    "kana": "だい",
+    "pitch": "①",
+    "pos": "前缀",
+    "meaning": "第……"
+  },
+  {
+    "kanji": "課",
+    "kana": "か",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "课"
+  },
+  {
+    "kanji": "思い出",
+    "kana": "おもいで",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "回忆, 回想"
+  },
+  {
+    "kanji": "事",
+    "kana": "こと",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "事"
+  },
+  {
+    "kanji": "登る",
+    "kana": "のぼる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "攀登"
+  },
+  {
+    "kanji": "大勢",
+    "kana": "おおぜい",
+    "pitch": "③",
+    "pos": "名·副",
+    "meaning": "众多(人)(作副词时声调为①)"
+  },
+  {
+    "kanji": "総理",
+    "kana": "そうり",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "总理"
+  },
+  {
+    "kanji": "詩碑",
+    "kana": "しひ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "诗碑"
+  },
+  {
+    "kanji": "作者",
+    "kana": "さくしゃ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "作者"
+  },
+  {
+    "kanji": "",
+    "kana": "プール",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "游泳池"
+  },
+  {
+    "kanji": "過ごす",
+    "kana": "すごす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "度, 度过"
+  },
+  {
+    "kanji": "祖父母",
+    "kana": "そふぼ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "(外)祖父母"
+  },
+  {
+    "kanji": "手伝い",
+    "kana": "てつだい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "帮忙; 帮手"
+  },
+  {
+    "kanji": "手伝う",
+    "kana": "てつだう",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "帮助, 帮忙"
+  },
+  {
+    "kanji": "草取り",
+    "kana": "くさとり",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "除草"
+  },
+  {
+    "kanji": "水やり",
+    "kana": "みずやり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "浇水"
+  },
+  {
+    "kanji": "線",
+    "kana": "せん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "线; 路线"
+  },
+  {
+    "kanji": "結ぶ",
+    "kana": "むすぶ",
+    "pitch": "⓪",
+    "pos": "动1自他",
+    "meaning": "联结; 打结"
+  },
+  {
+    "kanji": "具体的",
+    "kana": "ぐたいてき",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "具体的"
+  },
+  {
+    "kanji": "探し出す",
+    "kana": "さがしだす",
+    "pitch": "④",
+    "pos": "动1他",
+    "meaning": "找出"
+  },
+  {
+    "kanji": "役",
+    "kana": "やく",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "角色"
+  },
+  {
+    "kanji": "決める",
+    "kana": "きめる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "决定"
+  },
+  {
+    "kanji": "世話",
+    "kana": "せわ",
+    "pitch": "②",
+    "pos": "名·动3他",
+    "meaning": "照料"
+  },
+  {
+    "kanji": "育てる",
+    "kana": "そだてる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "抚育, 培养"
+  },
+  {
+    "kanji": "",
+    "kana": "やる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "浇(水),喂(食),给; 做, 干"
+  },
+  {
+    "kanji": "",
+    "kana": "きゅうり",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "黄瓜"
+  },
+  {
+    "kanji": "知識",
+    "kana": "ちしき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "知识"
+  },
+  {
+    "kanji": "苦労",
+    "kana": "くろう",
+    "pitch": "①",
+    "pos": "名·动3自",
+    "meaning": "辛苦, 吃苦"
+  },
+  {
+    "kanji": "貴重",
+    "kana": "きちょう",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "贵重"
+  },
+  {
+    "kanji": "意見",
+    "kana": "いけん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "意见, 见解"
+  },
+  {
+    "kanji": "通じる",
+    "kana": "つうじる",
+    "pitch": "⓪",
+    "pos": "动2自他",
+    "meaning": "通过；相通"
+  },
+  {
+    "kanji": "文化",
+    "kana": "ぶんか",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "文化"
+  },
+  {
+    "kanji": "理解",
+    "kana": "りかい",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "理解"
+  },
+  {
+    "kanji": "深める",
+    "kana": "ふかめる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "加深"
+  },
+  {
+    "kanji": "腕",
+    "kana": "うで",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "本领; 手腕, 胳膊"
+  },
+  {
+    "kanji": "",
+    "kana": "まとめる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "整理, 总结; 汇总"
+  },
+  {
+    "kanji": "共通点",
+    "kana": "きょうつうてん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "相通之处"
+  },
+  {
+    "kanji": "言葉",
+    "kana": "ことば",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "话语; 词语; 语言"
+  },
+  {
+    "kanji": "復習",
+    "kana": "ふくしゅう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "复习"
+  },
+  {
+    "kanji": "",
+    "kana": "シャワー",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "淋浴"
+  },
+  {
+    "kanji": "",
+    "kana": "すぐ",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "马上, 立刻"
+  },
+  {
+    "kanji": "",
+    "kana": "ページ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "页"
+  },
+  {
+    "kanji": "座る",
+    "kana": "すわる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "坐"
+  },
+  {
+    "kanji": "",
+    "kana": "かわいい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "可爱"
+  },
+  {
+    "kanji": "階段",
+    "kana": "かいだん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "台阶, 楼梯"
+  },
+  {
+    "kanji": "下りる",
+    "kana": "おりる",
+    "pitch": "②",
+    "pos": "动2自",
+    "meaning": "下, 降"
+  },
+  {
+    "kanji": "列車",
+    "kana": "れっしゃ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "列车; 火车"
+  },
+  {
+    "kanji": "通る",
+    "kana": "とおる",
+    "pitch": "①",
+    "pos": "动1自",
+    "meaning": "通过"
+  },
+  {
+    "kanji": "信号",
+    "kana": "しんごう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "信号灯, 红绿灯"
+  },
+  {
+    "kanji": "青",
+    "kana": "あお",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "青, 蓝色"
+  },
+  {
+    "kanji": "渡る",
+    "kana": "わたる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "过(马路)，渡(江河)"
+  },
+  {
+    "kanji": "",
+    "kana": "ふるさと",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "故乡"
+  },
+  {
+    "kanji": "離れる",
+    "kana": "はなれる",
+    "pitch": "③",
+    "pos": "动2自",
+    "meaning": "离开, 分离"
+  },
+  {
+    "kanji": "留学生",
+    "kana": "りゅうがくせい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "留学生"
+  },
+  {
+    "kanji": "方言",
+    "kana": "ほうげん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "方言"
+  },
+  {
+    "kanji": "知る",
+    "kana": "しる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "知道"
+  },
+  {
+    "kanji": "",
+    "kana": "ポイント",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "要点; 点"
+  },
+  {
+    "kanji": "",
+    "kana": "インターネット",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "互联网"
+  },
+  {
+    "kanji": "ボランティア活動",
+    "kana": "ボランティアかつどう",
+    "pitch": "⑥",
+    "pos": "名",
+    "meaning": "志愿活动"
+  },
+  {
+    "kanji": "入れる",
+    "kana": "いれる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "放入"
+  },
+  {
+    "kanji": "映画館",
+    "kana": "えいがかん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "电影院"
+  },
+  {
+    "kanji": "着る",
+    "kana": "きる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "穿(衣)"
+  },
+  {
+    "kanji": "",
+    "kana": "もう",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "再"
+  },
+  {
+    "kanji": "寒い",
+    "kana": "さむい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "寒冷"
+  },
+  {
+    "kanji": "",
+    "kana": "コート",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "外套"
+  },
+  {
+    "kanji": "",
+    "kana": "スタッフ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "工作人员"
+  },
+  {
+    "kanji": "飛ぶ",
+    "kana": "とぶ",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "飞"
+  },
+  {
+    "kanji": "空",
+    "kana": "そら",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "天空"
+  },
+  {
+    "kanji": "散歩",
+    "kana": "さんぽ",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "散步"
+  },
+  {
+    "kanji": "借りる",
+    "kana": "かりる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "借入, 借来"
+  },
+  {
+    "kanji": "国家",
+    "kana": "こっか",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "国家"
+  }
+]

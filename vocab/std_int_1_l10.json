@@ -1,0 +1,653 @@
+[
+  {
+    "kanji": "スケジュール",
+    "kana": "スケジュール",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "日程，日程表"
+  },
+  {
+    "kanji": "ハード",
+    "kana": "ハード",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "(日程）紧张，紧密；困难；硬，坚固"
+  },
+  {
+    "kanji": "とんでもない",
+    "kana": "とんでもない",
+    "pitch": "",
+    "pos": "形容词",
+    "meaning": "没有的事儿，哪里的话"
+  },
+  {
+    "kanji": "ファッション",
+    "kana": "ファッション",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "时装，时尚，流行"
+  },
+  {
+    "kanji": "観光地",
+    "kana": "かんこうち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "观光胜地，旅游胜地"
+  },
+  {
+    "kanji": "のんびり",
+    "kana": "のんびり",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "放松，轻松；悠闲自在，悠然自得"
+  },
+  {
+    "kanji": "女将",
+    "kana": "おかみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "老板娘，女主人，女掌柜"
+  },
+  {
+    "kanji": "～名様",
+    "kana": "～めいさま",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～位，～名"
+  },
+  {
+    "kanji": "～食",
+    "kana": "～しょく",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～餐"
+  },
+  {
+    "kanji": "～付き",
+    "kana": "～つき",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～带～，付送～"
+  },
+  {
+    "kanji": "満室",
+    "kana": "まんしつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "房间已满，无空房间，满员"
+  },
+  {
+    "kanji": "安静",
+    "kana": "あんせい",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "静养，安静"
+  },
+  {
+    "kanji": "エプロン",
+    "kana": "エプロン",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "围裙"
+  },
+  {
+    "kanji": "清掃",
+    "kana": "せいそうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "清扫，扫除"
+  },
+  {
+    "kanji": "組む",
+    "kana": "くむ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "计划，安排，编制，编排"
+  },
+  {
+    "kanji": "たまたま",
+    "kana": "たまたま",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "偶然，碰巧"
+  },
+  {
+    "kanji": "一度",
+    "kana": "いちど",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "一次，一遍，一度"
+  },
+  {
+    "kanji": "来社",
+    "kana": "らいしゃする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "来（我）公司"
+  },
+  {
+    "kanji": "協力",
+    "kana": "きょうりょくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "合作，协作，配合"
+  },
+  {
+    "kanji": "つぼ",
+    "kana": "つぼ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "つぼ[名]瓶，坛，罐，缸"
+  },
+  {
+    "kanji": "試着",
+    "kana": "しちゃくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "试穿"
+  },
+  {
+    "kanji": "お／ご~申し上げる",
+    "kana": "お／ご～もうしあげる",
+    "pitch": "",
+    "pos": "",
+    "meaning": "恭～，敬～（自谦）"
+  },
+  {
+    "kanji": "片道",
+    "kana": "かたみち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "单程"
+  },
+  {
+    "kanji": "光",
+    "kana": "ひかり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "光，光亮，光线"
+  },
+  {
+    "kanji": "合図",
+    "kana": "あいずする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "发信号，递暗号"
+  },
+  {
+    "kanji": "算数",
+    "kana": "さんすう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "算数"
+  },
+  {
+    "kanji": "解く",
+    "kana": "とく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "解，解答，解明"
+  },
+  {
+    "kanji": "表示",
+    "kana": "ひょうじ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "表示，指示；表明"
+  },
+  {
+    "kanji": "～字",
+    "kana": "ローマじ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "罗马字"
+  },
+  {
+    "kanji": "満足",
+    "kana": "まんぞく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "满足，满意"
+  },
+  {
+    "kanji": "大国",
+    "kana": "たいこく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "大国，强国"
+  },
+  {
+    "kanji": "全国",
+    "kana": "ぜんこく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "全国"
+  },
+  {
+    "kanji": "温泉地",
+    "kana": "おんせんち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "温泉胜地"
+  },
+  {
+    "kanji": "延べ",
+    "kana": "のべ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "总计，共计"
+  },
+  {
+    "kanji": "地中",
+    "kana": "ちちゅう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "地下，地里"
+  },
+  {
+    "kanji": "湧き出る",
+    "kana": "わきでる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "喷涌，喷出，涌出"
+  },
+  {
+    "kanji": "規定",
+    "kana": "きてい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "特定，规定"
+  },
+  {
+    "kanji": "含む",
+    "kana": "ふくむ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "包含，含有"
+  },
+  {
+    "kanji": "透明",
+    "kana": "とうめい",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "透明"
+  },
+  {
+    "kanji": "濁る",
+    "kana": "にごる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "混浊，污浊"
+  },
+  {
+    "kanji": "神経痛",
+    "kana": "しんけいつう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "神经痛"
+  },
+  {
+    "kanji": "皮膚病",
+    "kana": "ひふびょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "皮肤病"
+  },
+  {
+    "kanji": "高血圧",
+    "kana": "こうけつあつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "高血压"
+  },
+  {
+    "kanji": "治療",
+    "kana": "ちりょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "治疗"
+  },
+  {
+    "kanji": "変える",
+    "kana": "かえる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "换，改变"
+  },
+  {
+    "kanji": "露天風呂",
+    "kana": "ろてんぶろ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "露天温泉，露天浴池"
+  },
+  {
+    "kanji": "たっぷり",
+    "kana": "たっぷり",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "满……，充分，足够"
+  },
+  {
+    "kanji": "つかる",
+    "kana": "つかる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "浸泡，泡澡"
+  },
+  {
+    "kanji": "リラックスする",
+    "kana": "リラックスする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "放松，松弛；轻松"
+  },
+  {
+    "kanji": "宿泊",
+    "kana": "しゅくはくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "住宿，投宿"
+  },
+  {
+    "kanji": "入浴施設",
+    "kana": "にゅうよくしせつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "洗浴设施"
+  },
+  {
+    "kanji": "日帰り",
+    "kana": "ひがえり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "当天往返"
+  },
+  {
+    "kanji": "入浴",
+    "kana": "にゅうよく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "洗浴，入浴"
+  },
+  {
+    "kanji": "施設",
+    "kana": "しせつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "设施，设备"
+  },
+  {
+    "kanji": "銭湯",
+    "kana": "せんとう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "公共澡堂，洗浴中心"
+  },
+  {
+    "kanji": "ころ",
+    "kana": "ころ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "时候，时期"
+  },
+  {
+    "kanji": "～銭湯",
+    "kana": "スーパーせんとう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "超级洗浴中心"
+  },
+  {
+    "kanji": "マッサージ",
+    "kana": "マッサージ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "按摩"
+  },
+  {
+    "kanji": "エステ",
+    "kana": "エステ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "美容，全身美容"
+  },
+  {
+    "kanji": "楽しむ",
+    "kana": "たのしむ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "享受，欣赏"
+  },
+  {
+    "kanji": "ちょっとした",
+    "kana": "ちょっとした",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "一点点，有点，稍微"
+  },
+  {
+    "kanji": "いやし",
+    "kana": "いやし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "安慰，享受；医治，治疗"
+  },
+  {
+    "kanji": "～千万",
+    "kana": "～せんまん",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～千万"
+  },
+  {
+    "kanji": "停留所",
+    "kana": "ていりゅうじょ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "公交车站，车站，公共汽车站"
+  },
+  {
+    "kanji": "ぴったり",
+    "kana": "ぴったり",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "正合适，恰好"
+  },
+  {
+    "kanji": "つるつる",
+    "kana": "つるつる",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "溜滑，滑溜，光滑"
+  },
+  {
+    "kanji": "実験",
+    "kana": "じっけん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "试验，实验"
+  },
+  {
+    "kanji": "洪水",
+    "kana": "こうずい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "洪水"
+  },
+  {
+    "kanji": "流す",
+    "kana": "ながす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "冲走，冲刷"
+  },
+  {
+    "kanji": "ステーキ",
+    "kana": "ステーキ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "牛排"
+  },
+  {
+    "kanji": "おかず",
+    "kana": "おかず",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "菜，菜肴"
+  },
+  {
+    "kanji": "全く",
+    "kana": "まったく",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "完全，全然"
+  },
+  {
+    "kanji": "範囲",
+    "kana": "はんい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "范围"
+  },
+  {
+    "kanji": "食材",
+    "kana": "しょくざい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "食品原材料"
+  },
+  {
+    "kanji": "松茸",
+    "kana": "まつたけ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "松蘑，松茸"
+  },
+  {
+    "kanji": "原因",
+    "kana": "げんいん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "原因"
+  },
+  {
+    "kanji": "いやす",
+    "kana": "いやす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "医治，治疗"
+  },
+  {
+    "kanji": "香り",
+    "kana": "かおり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "香味，芳香"
+  },
+  {
+    "kanji": "～所",
+    "kana": "～じょ",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～所，～站"
+  },
+  {
+    "kanji": "～年制",
+    "kana": "～ねんせい",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～年制"
+  },
+  {
+    "kanji": "ビタミン",
+    "kana": "ビタミン",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "维生素，维他命"
+  },
+  {
+    "kanji": "予防",
+    "kana": "よぼうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "预防"
+  },
+  {
+    "kanji": "立て直す",
+    "kana": "たてなおす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "重整，重建"
+  },
+  {
+    "kanji": "維持",
+    "kana": "いじする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "维持，保持"
+  },
+  {
+    "kanji": "体重",
+    "kana": "たいじゅう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "体重"
+  },
+  {
+    "kanji": "ファイル",
+    "kana": "ファイル",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "文件，档案，卷宗"
+  },
+  {
+    "kanji": "日付",
+    "kana": "ひづけ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "日期，年月日"
+  },
+  {
+    "kanji": "肌",
+    "kana": "はだ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "肌肤"
+  },
+  {
+    "kanji": "地区",
+    "kana": "ちく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "地区"
+  },
+  {
+    "kanji": "相当",
+    "kana": "そうとう",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "相当，很，颇"
+  },
+  {
+    "kanji": "社内",
+    "kana": "しゃない",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "公司内"
+  },
+  {
+    "kanji": "天才",
+    "kana": "てんさい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "天才"
+  },
+  {
+    "kanji": "～氏",
+    "kana": "～し",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～先生，～女士，～夫人"
+  }
+]

@@ -1,0 +1,660 @@
+[
+  {
+    "kanji": "支社",
+    "kana": "ししゃ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "分公司，分社"
+  },
+  {
+    "kanji": "含める",
+    "kana": "ふくめる",
+    "pitch": "③",
+    "pos": "动2",
+    "meaning": "包括，含有，包含"
+  },
+  {
+    "kanji": "主",
+    "kana": "おも",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "主要，重要"
+  },
+  {
+    "kanji": "王様",
+    "kana": "おうさま",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "国王，大王"
+  },
+  {
+    "kanji": "ホームページ",
+    "kana": "ホームページ",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "网页，主页"
+  },
+  {
+    "kanji": "加わる",
+    "kana": "くわわる",
+    "pitch": "⓪",
+    "pos": "动1",
+    "meaning": "参加，加，添加，增添"
+  },
+  {
+    "kanji": "今でも",
+    "kana": "いまでも",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "至今，现在还…"
+  },
+  {
+    "kanji": "スモモ",
+    "kana": "スモモ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "李，李子"
+  },
+  {
+    "kanji": "主任",
+    "kana": "しゅにん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "主任"
+  },
+  {
+    "kanji": "ヨット",
+    "kana": "ヨット",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "游艇，帆船"
+  },
+  {
+    "kanji": "定員",
+    "kana": "ていいん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "定员，规定人数"
+  },
+  {
+    "kanji": "バター",
+    "kana": "バター",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "黄油"
+  },
+  {
+    "kanji": "初級",
+    "kana": "しょきゅう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "初级"
+  },
+  {
+    "kanji": "人生",
+    "kana": "じんせい",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "人生"
+  },
+  {
+    "kanji": "役割",
+    "kana": "やくわり",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "任务，职资；角色；作用"
+  },
+  {
+    "kanji": "個性",
+    "kana": "こせい",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "个性"
+  },
+  {
+    "kanji": "尊重する",
+    "kana": "そんちょうする",
+    "pitch": "⓪",
+    "pos": "动3",
+    "meaning": "尊重"
+  },
+  {
+    "kanji": "赴任する",
+    "kana": "ふにんする",
+    "pitch": "⓪",
+    "pos": "动3",
+    "meaning": "赴任，上任"
+  },
+  {
+    "kanji": "辛い",
+    "kana": "つらい",
+    "pitch": "⓪",
+    "pos": "形容词",
+    "meaning": "难受，痛苦，难过；艰苦；为难"
+  },
+  {
+    "kanji": "決定",
+    "kana": "けってい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "决定"
+  },
+  {
+    "kanji": "不満",
+    "kana": "ふまん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "不满"
+  },
+  {
+    "kanji": "博物館",
+    "kana": "はくぶつかん",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "博物馆"
+  },
+  {
+    "kanji": "現在",
+    "kana": "げんざい",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "现在"
+  },
+  {
+    "kanji": "今まで",
+    "kana": "いままで",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "现在为止，以前，此前"
+  },
+  {
+    "kanji": "技術開発",
+    "kana": "ぎじゅつかいはつ",
+    "pitch": "⑤",
+    "pos": "名词",
+    "meaning": "技术开发"
+  },
+  {
+    "kanji": "品質管理",
+    "kana": "ひんしつかんり",
+    "pitch": "⑤",
+    "pos": "名词",
+    "meaning": "品质管理"
+  },
+  {
+    "kanji": "ツバメ",
+    "kana": "ツバメ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "燕子"
+  },
+  {
+    "kanji": "南北",
+    "kana": "なんぼく",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "南北"
+  },
+  {
+    "kanji": "雲",
+    "kana": "くも",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "云"
+  },
+  {
+    "kanji": "数字",
+    "kana": "すうじ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "数字"
+  },
+  {
+    "kanji": "力",
+    "kana": "ちから",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "力，力气，力量"
+  },
+  {
+    "kanji": "看護師",
+    "kana": "かんごし",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "护士"
+  },
+  {
+    "kanji": "記者",
+    "kana": "きしゃ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "记者"
+  },
+  {
+    "kanji": "通訳",
+    "kana": "つうやく",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "翻译，口译"
+  },
+  {
+    "kanji": "所長",
+    "kana": "しょちょう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "所长"
+  },
+  {
+    "kanji": "馬",
+    "kana": "うま",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "马"
+  },
+  {
+    "kanji": "現代美術",
+    "kana": "げんだいびじゅつ",
+    "pitch": "⑤",
+    "pos": "名词",
+    "meaning": "现代美术"
+  },
+  {
+    "kanji": "ざっと",
+    "kana": "ざっと",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "粗略地；一下子，很快；（流水声）哗啦"
+  },
+  {
+    "kanji": "名字",
+    "kana": "みょうじ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "姓，姓氏"
+  },
+  {
+    "kanji": "姓",
+    "kana": "せい",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "姓"
+  },
+  {
+    "kanji": "名",
+    "kana": "な",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "名"
+  },
+  {
+    "kanji": "両方",
+    "kana": "りょうほう",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "两者，双方；两边"
+  },
+  {
+    "kanji": "指す",
+    "kana": "さす",
+    "pitch": "①",
+    "pos": "动1",
+    "meaning": "指，指示"
+  },
+  {
+    "kanji": "当時",
+    "kana": "とうじ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "当时"
+  },
+  {
+    "kanji": "政府",
+    "kana": "せいふ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "政府"
+  },
+  {
+    "kanji": "国民",
+    "kana": "こくみん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "国民"
+  },
+  {
+    "kanji": "武士",
+    "kana": "ぶし",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "武士"
+  },
+  {
+    "kanji": "貴族",
+    "kana": "きぞく",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "贵族"
+  },
+  {
+    "kanji": "人々",
+    "kana": "ひとびと",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "人们；每个人"
+  },
+  {
+    "kanji": "地名",
+    "kana": "ちめい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "地名"
+  },
+  {
+    "kanji": "地形",
+    "kana": "ちけい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "地形"
+  },
+  {
+    "kanji": "林",
+    "kana": "はやし",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "林，树林"
+  },
+  {
+    "kanji": "関係する",
+    "kana": "かんけいする",
+    "pitch": "⓪",
+    "pos": "动3",
+    "meaning": "有关系，关系，关联"
+  },
+  {
+    "kanji": "谷",
+    "kana": "たに",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "山谷，山沟"
+  },
+  {
+    "kanji": "杉",
+    "kana": "すぎ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "杉树"
+  },
+  {
+    "kanji": "それでも",
+    "kana": "それでも",
+    "pitch": "③",
+    "pos": "连接词",
+    "meaning": "即使那样，尽管如此，可是"
+  },
+  {
+    "kanji": "多民族国家",
+    "kana": "たみんぞくこっか",
+    "pitch": "⑥",
+    "pos": "名词",
+    "meaning": "多民族国家"
+  },
+  {
+    "kanji": "数",
+    "kana": "かず",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "数量，数目"
+  },
+  {
+    "kanji": "一方",
+    "kana": "いっぽう",
+    "pitch": "③",
+    "pos": "连接词",
+    "meaning": "另一方面；一方面"
+  },
+  {
+    "kanji": "人数",
+    "kana": "にんずう",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "人数"
+  },
+  {
+    "kanji": "寺",
+    "kana": "てら",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "寺庙，寺院"
+  },
+  {
+    "kanji": "駅員",
+    "kana": "えきいん",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "车站工作人员，站务员"
+  },
+  {
+    "kanji": "閉店する",
+    "kana": "へいてんする",
+    "pitch": "⓪",
+    "pos": "动3",
+    "meaning": "(商店)关门"
+  },
+  {
+    "kanji": "年号",
+    "kana": "ねんごう",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "年号"
+  },
+  {
+    "kanji": "あきらめる",
+    "kana": "あきらめる",
+    "pitch": "④",
+    "pos": "动2",
+    "meaning": "放弃，断念，死心"
+  },
+  {
+    "kanji": "受験",
+    "kana": "じゅけん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "考试，应试"
+  },
+  {
+    "kanji": "無視する",
+    "kana": "むしする",
+    "pitch": "①",
+    "pos": "动3",
+    "meaning": "忽视，无视"
+  },
+  {
+    "kanji": "夜間学校",
+    "kana": "やかんがっこう",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "夜校"
+  },
+  {
+    "kanji": "敬語",
+    "kana": "けいご",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "敬语"
+  },
+  {
+    "kanji": "上回る",
+    "kana": "うわまわる",
+    "pitch": "④",
+    "pos": "动1",
+    "meaning": "超过，超出"
+  },
+  {
+    "kanji": "下回る",
+    "kana": "したまわる",
+    "pitch": "④",
+    "pos": "动1",
+    "meaning": "不够……水平，在……一下"
+  },
+  {
+    "kanji": "父親",
+    "kana": "ちちおや",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "父亲"
+  },
+  {
+    "kanji": "亡くなる",
+    "kana": "なくなる",
+    "pitch": "⓪",
+    "pos": "动1",
+    "meaning": "去世，死亡"
+  },
+  {
+    "kanji": "業績",
+    "kana": "ぎょうせき",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "业绩；成绩"
+  },
+  {
+    "kanji": "入場者",
+    "kana": "にゅうじょうしゃ",
+    "pitch": "⑤",
+    "pos": "名词",
+    "meaning": "入场者，进入~的人"
+  },
+  {
+    "kanji": "零下",
+    "kana": "れいか",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "零下"
+  },
+  {
+    "kanji": "外国語",
+    "kana": "がいこくご",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "外语"
+  },
+  {
+    "kanji": "石油",
+    "kana": "せきゆ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "石油"
+  },
+  {
+    "kanji": "発展する",
+    "kana": "はってんする",
+    "pitch": "⓪",
+    "pos": "动3",
+    "meaning": "发展；扩展"
+  },
+  {
+    "kanji": "環境破壊",
+    "kana": "かんきょうはかい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "环境破坏"
+  },
+  {
+    "kanji": "深刻",
+    "kana": "しんこく",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "严肃，严重；深刻"
+  },
+  {
+    "kanji": "試す",
+    "kana": "ためす",
+    "pitch": "⓪",
+    "pos": "动1",
+    "meaning": "试；尝试；试验"
+  },
+  {
+    "kanji": "祖父",
+    "kana": "そふ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "祖父，外祖父"
+  },
+  {
+    "kanji": "見舞い",
+    "kana": "みまい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "探望，慰问，问候"
+  },
+  {
+    "kanji": "仲良く",
+    "kana": "なかよく",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "亲密，友好"
+  },
+  {
+    "kanji": "ガソリン",
+    "kana": "ガソリン",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "汽油"
+  },
+  {
+    "kanji": "警察",
+    "kana": "けいさつ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "公安局；警察"
+  },
+  {
+    "kanji": "交通規則",
+    "kana": "こうつうきそく",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "交通规则，交通规章"
+  },
+  {
+    "kanji": "サラリーマン",
+    "kana": "サラリーマン",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "工薪族，工薪职员"
+  },
+  {
+    "kanji": "氷",
+    "kana": "こおり",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "冰"
+  },
+  {
+    "kanji": "溶ける",
+    "kana": "とける",
+    "pitch": "②",
+    "pos": "动2",
+    "meaning": "融化；消融；溶化；熔化"
+  },
+  {
+    "kanji": "喫煙",
+    "kana": "きつえん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "吸烟"
+  },
+  {
+    "kanji": "中学生",
+    "kana": "ちゅうがくせい",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "中学生"
+  },
+  {
+    "kanji": "学習する",
+    "kana": "がくしゅうする",
+    "pitch": "⓪",
+    "pos": "动3",
+    "meaning": "学习"
+  }
+]

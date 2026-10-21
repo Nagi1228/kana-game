@@ -1,0 +1,450 @@
+[
+  {
+    "kanji": "時代",
+    "kana": "じだい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "时代"
+  },
+  {
+    "kanji": "詩人",
+    "kana": "しじん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "诗人"
+  },
+  {
+    "kanji": "詩",
+    "kana": "し",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "诗, 诗歌"
+  },
+  {
+    "kanji": "教科書",
+    "kana": "きょうかしょ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "教科书"
+  },
+  {
+    "kanji": "種",
+    "kana": "たね",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "种子"
+  },
+  {
+    "kanji": "持ち帰る",
+    "kana": "もちかえる",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "拿回，带回"
+  },
+  {
+    "kanji": "栽培",
+    "kana": "さいばい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "栽培，种植"
+  },
+  {
+    "kanji": "広める",
+    "kana": "ひろめる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "推广，传播；扩大，增长"
+  },
+  {
+    "kanji": "遣唐使",
+    "kana": "けんとうし",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "遣唐使"
+  },
+  {
+    "kanji": "友人",
+    "kana": "ゆうじん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "朋友, 友人"
+  },
+  {
+    "kanji": "思い",
+    "kana": "おもい",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "思念; 思想; 愿望"
+  },
+  {
+    "kanji": "楽しみ",
+    "kana": "たのしみ",
+    "pitch": "③",
+    "pos": "名·形2",
+    "meaning": "期待，期望；乐趣"
+  },
+  {
+    "kanji": "医学者",
+    "kana": "いがくしゃ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "医学家"
+  },
+  {
+    "kanji": "功績",
+    "kana": "こうせき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "功绩, 功劳"
+  },
+  {
+    "kanji": "医薬書",
+    "kana": "いやくしょ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "医药书"
+  },
+  {
+    "kanji": "誤り",
+    "kana": "あやまり",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "错误"
+  },
+  {
+    "kanji": "不十分",
+    "kana": "ふじゅうぶん",
+    "pitch": "②",
+    "pos": "名·形2",
+    "meaning": "不足，不充分"
+  },
+  {
+    "kanji": "編集",
+    "kana": "へんしゅう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "编辑"
+  },
+  {
+    "kanji": "決心",
+    "kana": "けっしん",
+    "pitch": "①",
+    "pos": "名·动3自他",
+    "meaning": "决心，决意"
+  },
+  {
+    "kanji": "研究",
+    "kana": "けんきゅう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "研究"
+  },
+  {
+    "kanji": "回る",
+    "kana": "まわる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "周游; 转"
+  },
+  {
+    "kanji": "薬品",
+    "kana": "やくひん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "药物"
+  },
+  {
+    "kanji": "治療法",
+    "kana": "ちりょうほう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "治疗方法"
+  },
+  {
+    "kanji": "集める",
+    "kana": "あつめる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "收集, 汇集"
+  },
+  {
+    "kanji": "後",
+    "kana": "ご",
+    "pitch": "",
+    "pos": "后缀",
+    "meaning": "……以后, ……后"
+  },
+  {
+    "kanji": "",
+    "kana": "ついに",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "终于, 最后"
+  },
+  {
+    "kanji": "完成",
+    "kana": "かんせい",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "完成"
+  },
+  {
+    "kanji": "種",
+    "kana": "しゅ",
+    "pitch": "①",
+    "pos": "名·后缀",
+    "meaning": "种, 种类"
+  },
+  {
+    "kanji": "科学的",
+    "kana": "かがくてき",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "科学的"
+  },
+  {
+    "kanji": "分類",
+    "kana": "ぶんるい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "分类"
+  },
+  {
+    "kanji": "直す",
+    "kana": "なおす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "改正; 修理"
+  },
+  {
+    "kanji": "漢方薬",
+    "kana": "かんぽうやく",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "中药"
+  },
+  {
+    "kanji": "可能性",
+    "kana": "かのうせい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "可能性"
+  },
+  {
+    "kanji": "広げる",
+    "kana": "ひろげる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "扩大; 展开"
+  },
+  {
+    "kanji": "発展",
+    "kana": "はってん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "发展"
+  },
+  {
+    "kanji": "大いに",
+    "kana": "おおいに",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "大; 多; 很"
+  },
+  {
+    "kanji": "促す",
+    "kana": "うながす",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "促进；促使；催促"
+  },
+  {
+    "kanji": "人々",
+    "kana": "ひとびと",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "人们, 人人"
+  },
+  {
+    "kanji": "幸せ",
+    "kana": "しあわせ",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "幸福"
+  },
+  {
+    "kanji": "貢献",
+    "kana": "こうけん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "贡献"
+  },
+  {
+    "kanji": "各",
+    "kana": "かく",
+    "pitch": "①",
+    "pos": "前缀",
+    "meaning": "每个，各个"
+  },
+  {
+    "kanji": "段落",
+    "kana": "だんらく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "段落"
+  },
+  {
+    "kanji": "経緯",
+    "kana": "けいい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "(事情的)原委, 经过"
+  },
+  {
+    "kanji": "著作",
+    "kana": "ちょさく",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "著作"
+  },
+  {
+    "kanji": "書きあげる",
+    "kana": "かきあげる",
+    "pitch": "④",
+    "pos": "动2他",
+    "meaning": "写完；写出"
+  },
+  {
+    "kanji": "",
+    "kana": "おばさん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "阿姨；姑姑；伯母；叔母；舅母"
+  },
+  {
+    "kanji": "褒める",
+    "kana": "ほめる",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "夸奖, 表扬"
+  },
+  {
+    "kanji": "彼女",
+    "kana": "かのじょ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "她; 女朋友"
+  },
+  {
+    "kanji": "文法",
+    "kana": "ぶんぽう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "语法, 句法"
+  },
+  {
+    "kanji": "交通",
+    "kana": "こうつう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "交通"
+  },
+  {
+    "kanji": "住む",
+    "kana": "すむ",
+    "pitch": "①",
+    "pos": "动1自",
+    "meaning": "住"
+  },
+  {
+    "kanji": "削る",
+    "kana": "けずる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "削, 铲; 削减"
+  },
+  {
+    "kanji": "",
+    "kana": "おしゃべり",
+    "pitch": "②",
+    "pos": "名·形2·动3自他",
+    "meaning": "聊天；健谈(的人)"
+  },
+  {
+    "kanji": "包む",
+    "kana": "つつむ",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "包, 卷, 裹"
+  },
+  {
+    "kanji": "運ぶ",
+    "kana": "はこぶ",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "运送"
+  },
+  {
+    "kanji": "閉まる",
+    "kana": "しまる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "关闭"
+  },
+  {
+    "kanji": "聞き取る",
+    "kana": "ききとる",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "听懂；听见；听取"
+  },
+  {
+    "kanji": "失敗",
+    "kana": "しっぱい",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "失败"
+  },
+  {
+    "kanji": "雑巾",
+    "kana": "ぞうきん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "抹布"
+  },
+  {
+    "kanji": "",
+    "kana": "うるさい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "吵闹"
+  },
+  {
+    "kanji": "桜",
+    "kana": "さくら",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "樱花"
+  },
+  {
+    "kanji": "",
+    "kana": "ニュース",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "消息, 新闻"
+  },
+  {
+    "kanji": "温かい",
+    "kana": "あたたかい",
+    "pitch": "④",
+    "pos": "形1",
+    "meaning": "温，暖；(心情)温暖；温和"
+  },
+  {
+    "kanji": "水族館",
+    "kana": "すいぞくかん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "水族馆"
+  }
+]

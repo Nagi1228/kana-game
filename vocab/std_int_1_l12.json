@@ -1,0 +1,513 @@
+[
+  {
+    "kanji": "いよいよ",
+    "kana": "いよいよ",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "到底，终于"
+  },
+  {
+    "kanji": "方言",
+    "kana": "ほうげん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "方言，地方话"
+  },
+  {
+    "kanji": "繁華街",
+    "kana": "はんかがい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "繁华区，繁华街，商业区"
+  },
+  {
+    "kanji": "同行",
+    "kana": "どうこうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "同行，一起去"
+  },
+  {
+    "kanji": "披露宴",
+    "kana": "ひろうえん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "婚宴，喜宴"
+  },
+  {
+    "kanji": "喜んで",
+    "kana": "よろこんで",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "高兴地，非常愿意地"
+  },
+  {
+    "kanji": "～弁",
+    "kana": "～べん",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～方言，～口音"
+  },
+  {
+    "kanji": "公衆電話",
+    "kana": "こうしゅうでんわ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "公用电话"
+  },
+  {
+    "kanji": "雷",
+    "kana": "かみなり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "雷"
+  },
+  {
+    "kanji": "好き嫌い",
+    "kana": "すききらい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "挑剔；好恶"
+  },
+  {
+    "kanji": "山登り",
+    "kana": "やまのぼり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "登山，爬山"
+  },
+  {
+    "kanji": "作成",
+    "kana": "さくせいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "写，作，制作"
+  },
+  {
+    "kanji": "披露",
+    "kana": "ひろうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "宣布，公布，公开"
+  },
+  {
+    "kanji": "変更",
+    "kana": "へんこうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "改变，变更，更改"
+  },
+  {
+    "kanji": "改めて",
+    "kana": "あらためて",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "再，重新"
+  },
+  {
+    "kanji": "体調",
+    "kana": "たいちょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "身体状况，健康状态"
+  },
+  {
+    "kanji": "目にする",
+    "kana": "めにする",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "看到，看见"
+  },
+  {
+    "kanji": "競馬",
+    "kana": "けいば",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "赛马"
+  },
+  {
+    "kanji": "名作",
+    "kana": "めいさく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "名作，杰作"
+  },
+  {
+    "kanji": "DVD",
+    "kana": "ディーブイディー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "DVD机；数字光盘"
+  },
+  {
+    "kanji": "冷房",
+    "kana": "れいぼう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "冷气设备，冷气空调"
+  },
+  {
+    "kanji": "入場",
+    "kana": "にゅうじょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "入场，进场"
+  },
+  {
+    "kanji": "断る",
+    "kana": "ことわる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "拒绝，谢绝；预先通知"
+  },
+  {
+    "kanji": "猛暑",
+    "kana": "もうしょ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "酷暑，炎热"
+  },
+  {
+    "kanji": "不足～",
+    "kana": "ふそくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "不足，不够，短缺"
+  },
+  {
+    "kanji": "～気味",
+    "kana": "～ぎみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "有点～，觉得～"
+  },
+  {
+    "kanji": "共通語",
+    "kana": "きょうつうご",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "通用语，普通话"
+  },
+  {
+    "kanji": "民族",
+    "kana": "みんぞく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "民族；种族"
+  },
+  {
+    "kanji": "異なる",
+    "kana": "ことなる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "不一样，不同"
+  },
+  {
+    "kanji": "文法",
+    "kana": "ぶんぽう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "语法"
+  },
+  {
+    "kanji": "アクセント",
+    "kana": "アクセント",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "声调，重音"
+  },
+  {
+    "kanji": "誤解",
+    "kana": "ごかい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "误解，误会"
+  },
+  {
+    "kanji": "投げる",
+    "kana": "なげる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "投，扔，掷"
+  },
+  {
+    "kanji": "解釈",
+    "kana": "かいしゃくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "解释，说明"
+  },
+  {
+    "kanji": "投げ返す",
+    "kana": "なげかえす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "扔回去，投回去"
+  },
+  {
+    "kanji": "保管",
+    "kana": "ほかんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "保管，管理"
+  },
+  {
+    "kanji": "聞き間違える",
+    "kana": "ききまちがえる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "听错，误听"
+  },
+  {
+    "kanji": "浸透",
+    "kana": "しんとうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "渗透，渗入透，渗入"
+  },
+  {
+    "kanji": "～方言",
+    "kana": "～ほうげん",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～方言"
+  },
+  {
+    "kanji": "～地方",
+    "kana": "～ちほう",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～地区"
+  },
+  {
+    "kanji": "独立",
+    "kana": "どくりつする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "独立"
+  },
+  {
+    "kanji": "述べる",
+    "kana": "のべる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "陈述，叙述，说明"
+  },
+  {
+    "kanji": "当日",
+    "kana": "とうじつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "当天，当日"
+  },
+  {
+    "kanji": "応対",
+    "kana": "おうたい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "应酬，接待"
+  },
+  {
+    "kanji": "飛行場",
+    "kana": "ひこうじょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "机场"
+  },
+  {
+    "kanji": "～活動",
+    "kana": "ボランティアかつどう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "志愿者活动"
+  },
+  {
+    "kanji": "貝殻",
+    "kana": "かいがら",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "贝壳"
+  },
+  {
+    "kanji": "後悔",
+    "kana": "こうかいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "后悔"
+  },
+  {
+    "kanji": "書き間違える",
+    "kana": "かきまちがえる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "写错"
+  },
+  {
+    "kanji": "言い間違える",
+    "kana": "いいまちがえる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "说错"
+  },
+  {
+    "kanji": "言い返す",
+    "kana": "いいかえす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "顶嘴；反复说"
+  },
+  {
+    "kanji": "聞き返す",
+    "kana": "ききかえす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "反问；反复问"
+  },
+  {
+    "kanji": "思い返す",
+    "kana": "おもいかえす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "回想，反省；再考虑一番，重新考虑"
+  },
+  {
+    "kanji": "寮長",
+    "kana": "りょうちょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "宿舍长"
+  },
+  {
+    "kanji": "門限",
+    "kana": "もんげん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "关门时间"
+  },
+  {
+    "kanji": "～問目",
+    "kana": "～もんめ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "第～题，第～个问题"
+  },
+  {
+    "kanji": "あちらこちら",
+    "kana": "あちらこちら",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "各处，到处"
+  },
+  {
+    "kanji": "国籍",
+    "kana": "こくせき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "国籍"
+  },
+  {
+    "kanji": "教育",
+    "kana": "きょういく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "教育"
+  },
+  {
+    "kanji": "教材",
+    "kana": "きょうざい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "教材"
+  },
+  {
+    "kanji": "高等学校",
+    "kana": "こうとうがっこう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "高中"
+  },
+  {
+    "kanji": "進出",
+    "kana": "しんしゅつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "进入，打入，挤进"
+  },
+  {
+    "kanji": "強化",
+    "kana": "きょうか",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "加强，强化"
+  },
+  {
+    "kanji": "課題",
+    "kana": "かだい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "题目，课题"
+  },
+  {
+    "kanji": "我が国",
+    "kana": "わがくに",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "我国"
+  },
+  {
+    "kanji": "ページ",
+    "kana": "ページ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "页，页码"
+  },
+  {
+    "kanji": "登録",
+    "kana": "とうろくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "登记，注册"
+  },
+  {
+    "kanji": "汚染",
+    "kana": "おせん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "污染"
+  },
+  {
+    "kanji": "漁業",
+    "kana": "ぎょぎょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "渔业，水产业"
+  },
+  {
+    "kanji": "支払う",
+    "kana": "しはらう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "支付，付款"
+  },
+  {
+    "kanji": "取り消す",
+    "kana": "とりけす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "取消，作废，撤消"
+  },
+  {
+    "kanji": "待ち合わせる",
+    "kana": "まちあわせる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "约会，碰头"
+  },
+  {
+    "kanji": "～以内",
+    "kana": "～いない",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～以内"
+  }
+]

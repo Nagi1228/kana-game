@@ -1,0 +1,520 @@
+[
+  {
+    "kanji": "違い",
+    "kana": "ちがい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "差别，差异；差错"
+  },
+  {
+    "kanji": "焼く",
+    "kana": "やく",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "烧，烤"
+  },
+  {
+    "kanji": "気に入る",
+    "kana": "きにいる",
+    "pitch": "⓪",
+    "pos": "词组",
+    "meaning": "喜欢，喜好"
+  },
+  {
+    "kanji": "ひっくり返す",
+    "kana": "ひっくりかえす",
+    "pitch": "⑤",
+    "pos": "动1他",
+    "meaning": "翻过来"
+  },
+  {
+    "kanji": "載せる",
+    "kana": "のせる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "放；载"
+  },
+  {
+    "kanji": "水餃子",
+    "kana": "すいぎょうざ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "水饺"
+  },
+  {
+    "kanji": "",
+    "kana": "なるほど",
+    "pitch": "⓪",
+    "pos": "副·叹",
+    "meaning": "的确，诚然，怪不得"
+  },
+  {
+    "kanji": "",
+    "kana": "レシピ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "烹饪法，食谱"
+  },
+  {
+    "kanji": "材料",
+    "kana": "ざいりょう",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "材料"
+  },
+  {
+    "kanji": "具",
+    "kana": "ぐ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "馅料"
+  },
+  {
+    "kanji": "",
+    "kana": "ボウル",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "碗，盆"
+  },
+  {
+    "kanji": "調味料",
+    "kana": "ちょうみりょう",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "调料"
+  },
+  {
+    "kanji": "混ぜる",
+    "kana": "まぜる",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "搅拌；掺和"
+  },
+  {
+    "kanji": "細かい",
+    "kana": "こまかい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "细；零碎"
+  },
+  {
+    "kanji": "切る",
+    "kana": "きる",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "切，割，截，砍"
+  },
+  {
+    "kanji": "白菜",
+    "kana": "はくさい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "白菜"
+  },
+  {
+    "kanji": "粘り",
+    "kana": "ねばり",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "黏，黏性"
+  },
+  {
+    "kanji": "仕上げる",
+    "kana": "しあげる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "完成，做完"
+  },
+  {
+    "kanji": "包む",
+    "kana": "つつむ",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "包，卷，裹"
+  },
+  {
+    "kanji": "",
+    "kana": "ゆでる",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "煮，烫；焯"
+  },
+  {
+    "kanji": "皮",
+    "kana": "かわ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "皮"
+  },
+  {
+    "kanji": "注ぐ",
+    "kana": "そそぐ",
+    "pitch": "⓪",
+    "pos": "动1自他",
+    "meaning": "注入，流入"
+  },
+  {
+    "kanji": "膨らむ",
+    "kana": "ふくらむ",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "鼓起，膨胀"
+  },
+  {
+    "kanji": "出来上がる",
+    "kana": "できあがる",
+    "pitch": "④",
+    "pos": "动1自",
+    "meaning": "做完，做好"
+  },
+  {
+    "kanji": "",
+    "kana": "キャベツ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "圆白菜，卷心菜"
+  },
+  {
+    "kanji": "",
+    "kana": "ニラ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "韭菜"
+  },
+  {
+    "kanji": "",
+    "kana": "インゲンマメ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "扁豆"
+  },
+  {
+    "kanji": "",
+    "kana": "ニンニク",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "大蒜"
+  },
+  {
+    "kanji": "臭み",
+    "kana": "くさみ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "臭味，膻味"
+  },
+  {
+    "kanji": "加える",
+    "kana": "くわえる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "加，添加"
+  },
+  {
+    "kanji": "酒",
+    "kana": "さけ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "酒"
+  },
+  {
+    "kanji": "焼き餃子",
+    "kana": "やきぎょうざ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "煎饺，锅贴"
+  },
+  {
+    "kanji": "主流",
+    "kana": "しゅりゅう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "主流"
+  },
+  {
+    "kanji": "酢",
+    "kana": "す",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "醋"
+  },
+  {
+    "kanji": "",
+    "kana": "つける",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "蘸，抹，涂，擦"
+  },
+  {
+    "kanji": "醤油",
+    "kana": "しょうゆ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "酱油"
+  },
+  {
+    "kanji": "同意",
+    "kana": "どうい",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "同意"
+  },
+  {
+    "kanji": "",
+    "kana": "およそ",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "大约，大概"
+  },
+  {
+    "kanji": "尖る",
+    "kana": "とがる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "尖"
+  },
+  {
+    "kanji": "子の刻",
+    "kana": "ねのこく",
+    "pitch": "⓪-①",
+    "pos": "词组",
+    "meaning": "子时"
+  },
+  {
+    "kanji": "交わる",
+    "kana": "まじわる",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "交叉，交错"
+  },
+  {
+    "kanji": "",
+    "kana": "さらに",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "更加，越发"
+  },
+  {
+    "kanji": "説",
+    "kana": "せつ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "说法，学说"
+  },
+  {
+    "kanji": "冬至",
+    "kana": "とうじ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "冬至"
+  },
+  {
+    "kanji": "",
+    "kana": "そろう",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "（人）到齐；齐全"
+  },
+  {
+    "kanji": "",
+    "kana": "コイン",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "硬币"
+  },
+  {
+    "kanji": "運",
+    "kana": "うん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "运气，命运"
+  },
+  {
+    "kanji": "訪れる",
+    "kana": "おとずれる",
+    "pitch": "④",
+    "pos": "动2自他",
+    "meaning": "访问，拜访；到来"
+  },
+  {
+    "kanji": "",
+    "kana": "もてなす",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "款待，接待"
+  },
+  {
+    "kanji": "風習",
+    "kana": "ふうしゅう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "风俗，习俗"
+  },
+  {
+    "kanji": "軽食",
+    "kana": "けいしょく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "便饭；小吃"
+  },
+  {
+    "kanji": "蒸し餃子",
+    "kana": "むしぎょうざ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "蒸饺"
+  },
+  {
+    "kanji": "中でも",
+    "kana": "なかでも",
+    "pitch": "①",
+    "pos": "连",
+    "meaning": "尤其"
+  },
+  {
+    "kanji": "北部",
+    "kana": "ほくぶ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "北部，北方"
+  },
+  {
+    "kanji": "専門",
+    "kana": "せんもん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "专门"
+  },
+  {
+    "kanji": "食品",
+    "kana": "しょくひん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "食品"
+  },
+  {
+    "kanji": "煮る",
+    "kana": "にる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "煮"
+  },
+  {
+    "kanji": "油",
+    "kana": "あぶら",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "油"
+  },
+  {
+    "kanji": "食習慣",
+    "kana": "しょくしゅうかん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "饮食习惯"
+  },
+  {
+    "kanji": "改める",
+    "kana": "あらためる",
+    "pitch": "④",
+    "pos": "动2他",
+    "meaning": "革新，改变"
+  },
+  {
+    "kanji": "漬け物",
+    "kana": "つけもの",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "咸菜，酱菜"
+  },
+  {
+    "kanji": "",
+    "kana": "セット",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "（一）套，（一）组"
+  },
+  {
+    "kanji": "定食",
+    "kana": "ていしょく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "套餐"
+  },
+  {
+    "kanji": "支度",
+    "kana": "したく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "准备，预备"
+  },
+  {
+    "kanji": "伸ばす",
+    "kana": "のばす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "延长，拉长"
+  },
+  {
+    "kanji": "骨",
+    "kana": "こつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "秘诀，要领，诀窍"
+  },
+  {
+    "kanji": "苦い",
+    "kana": "にがい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "痛苦；味苦"
+  },
+  {
+    "kanji": "割る",
+    "kana": "わる",
+    "pitch": "⓪",
+    "pos": "动1自他",
+    "meaning": "打破；切，割"
+  },
+  {
+    "kanji": "舌",
+    "kana": "した",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "舌头"
+  },
+  {
+    "kanji": "嗅ぐ",
+    "kana": "かぐ",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "闻，嗅"
+  },
+  {
+    "kanji": "",
+    "kana": "ビール",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "啤酒"
+  },
+  {
+    "kanji": "冷やす",
+    "kana": "ひやす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "冷却，冰镇"
+  },
+  {
+    "kanji": "",
+    "kana": "テーブル",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "饭桌，桌子"
+  },
+  {
+    "kanji": "囲む",
+    "kana": "かこむ",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "包围，围绕"
+  }
+]

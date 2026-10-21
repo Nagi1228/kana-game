@@ -1,0 +1,457 @@
+[
+  {
+    "kanji": "知り合い",
+    "kana": "しりあい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "相识，认识； 熟人"
+  },
+  {
+    "kanji": "一",
+    "kana": "いち",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "一"
+  },
+  {
+    "kanji": "年",
+    "kana": "ねん",
+    "pitch": "①",
+    "pos": "名·后缀",
+    "meaning": "年级; 年;…年"
+  },
+  {
+    "kanji": "二",
+    "kana": "に",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "二"
+  },
+  {
+    "kanji": "組",
+    "kana": "くみ",
+    "pitch": "②",
+    "pos": "名·后缀",
+    "meaning": "班; 组;…班;…组"
+  },
+  {
+    "kanji": "発音",
+    "kana": "はつおん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "发音"
+  },
+  {
+    "kanji": "",
+    "kana": "きれい",
+    "pitch": "①",
+    "pos": "形2",
+    "meaning": "优美; 漂亮; 整洁"
+  },
+  {
+    "kanji": "本当",
+    "kana": "ほんとう",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "真的"
+  },
+  {
+    "kanji": "",
+    "kana": "うれしい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "高兴"
+  },
+  {
+    "kanji": "難しい",
+    "kana": "むずかしい",
+    "pitch": "⓪",
+    "pos": "形1",
+    "meaning": "困难"
+  },
+  {
+    "kanji": "",
+    "kana": "おもしろい",
+    "pitch": "④",
+    "pos": "形1",
+    "meaning": "有趣"
+  },
+  {
+    "kanji": "",
+    "kana": "これ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "这, 这个"
+  },
+  {
+    "kanji": "時間割",
+    "kana": "じかんわり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "课程表；时间表"
+  },
+  {
+    "kanji": "今日",
+    "kana": "きょう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "今天"
+  },
+  {
+    "kanji": "一日",
+    "kana": "いちにち",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "一天"
+  },
+  {
+    "kanji": "何",
+    "kana": "なん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "多少; 什么"
+  },
+  {
+    "kanji": "時間",
+    "kana": "じかん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "课时; 时间; 小时"
+  },
+  {
+    "kanji": "七",
+    "kana": "しち/なな",
+    "pitch": "②/①",
+    "pos": "名",
+    "meaning": "七"
+  },
+  {
+    "kanji": "午前",
+    "kana": "ごぜん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "上午"
+  },
+  {
+    "kanji": "四",
+    "kana": "よ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "四"
+  },
+  {
+    "kanji": "三",
+    "kana": "さん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "三"
+  },
+  {
+    "kanji": "",
+    "kana": "あれ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "那, 那个"
+  },
+  {
+    "kanji": "",
+    "kana": "コーナー",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "角, 角落"
+  },
+  {
+    "kanji": "",
+    "kana": "みんな",
+    "pitch": "③",
+    "pos": "名·副",
+    "meaning": "大家, 全体"
+  },
+  {
+    "kanji": "五十音",
+    "kana": "ごじゅうおん",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "五十音"
+  },
+  {
+    "kanji": "",
+    "kana": "いい",
+    "pitch": "①",
+    "pos": "形1",
+    "meaning": "好, 不错"
+  },
+  {
+    "kanji": "作品",
+    "kana": "さくひん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "作品"
+  },
+  {
+    "kanji": "",
+    "kana": "どれ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "哪个"
+  },
+  {
+    "kanji": "",
+    "kana": "それ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "那, 那个"
+  },
+  {
+    "kanji": "",
+    "kana": "すごい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "厉害, 了不起"
+  },
+  {
+    "kanji": "字",
+    "kana": "じ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "字, 文字"
+  },
+  {
+    "kanji": "名前",
+    "kana": "なまえ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "名字, 姓名"
+  },
+  {
+    "kanji": "学校",
+    "kana": "がっこう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "学校"
+  },
+  {
+    "kanji": "外国",
+    "kana": "がいこく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "外国"
+  },
+  {
+    "kanji": "現代",
+    "kana": "げんだい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "现代"
+  },
+  {
+    "kanji": "動物",
+    "kana": "どうぶつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "动物"
+  },
+  {
+    "kanji": "鳥",
+    "kana": "とり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "鸟"
+  },
+  {
+    "kanji": "",
+    "kana": "ゼロ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "零"
+  },
+  {
+    "kanji": "四",
+    "kana": "し/よん",
+    "pitch": "①/①",
+    "pos": "名",
+    "meaning": "四"
+  },
+  {
+    "kanji": "五",
+    "kana": "ご",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "五"
+  },
+  {
+    "kanji": "六",
+    "kana": "ろく",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "六"
+  },
+  {
+    "kanji": "八",
+    "kana": "はち",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "八"
+  },
+  {
+    "kanji": "九",
+    "kana": "きゅう/く",
+    "pitch": "①/①",
+    "pos": "名",
+    "meaning": "九"
+  },
+  {
+    "kanji": "十",
+    "kana": "じゅう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "十"
+  },
+  {
+    "kanji": "百",
+    "kana": "ひゃく",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "百,一百"
+  },
+  {
+    "kanji": "零",
+    "kana": "れい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "零"
+  },
+  {
+    "kanji": "新しい",
+    "kana": "あたらしい",
+    "pitch": "④",
+    "pos": "形1",
+    "meaning": "新"
+  },
+  {
+    "kanji": "忙しい",
+    "kana": "いそがしい",
+    "pitch": "④",
+    "pos": "形1",
+    "meaning": "忙, 忙碌"
+  },
+  {
+    "kanji": "多い",
+    "kana": "おおい",
+    "pitch": "①",
+    "pos": "形1",
+    "meaning": "多, 许多"
+  },
+  {
+    "kanji": "大きい",
+    "kana": "おおきい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "大"
+  },
+  {
+    "kanji": "小さい",
+    "kana": "ちいさい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "小"
+  },
+  {
+    "kanji": "近い",
+    "kana": "ちかい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "近; 近似"
+  },
+  {
+    "kanji": "遠い",
+    "kana": "とおい",
+    "pitch": "⓪",
+    "pos": "形1",
+    "meaning": "远"
+  },
+  {
+    "kanji": "静か",
+    "kana": "しずか",
+    "pitch": "①",
+    "pos": "形2",
+    "meaning": "安静"
+  },
+  {
+    "kanji": "大切",
+    "kana": "たいせつ",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "重要; 爱护"
+  },
+  {
+    "kanji": "丈夫",
+    "kana": "じょうぶ",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "结实, 健康"
+  },
+  {
+    "kanji": "良い",
+    "kana": "よい",
+    "pitch": "①",
+    "pos": "形1",
+    "meaning": "好, 出色的"
+  },
+  {
+    "kanji": "易しい",
+    "kana": "やさしい",
+    "pitch": "⓪",
+    "pos": "形1",
+    "meaning": "容易"
+  },
+  {
+    "kanji": "広い",
+    "kana": "ひろい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "宽敞, 宽广"
+  },
+  {
+    "kanji": "成績",
+    "kana": "せいせき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "成绩"
+  },
+  {
+    "kanji": "魚",
+    "kana": "さかな",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "鱼; 鱼类"
+  },
+  {
+    "kanji": "携帯電話",
+    "kana": "けいたいでんわ",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "手机"
+  },
+  {
+    "kanji": "古い",
+    "kana": "ふるい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "旧; 古老"
+  },
+  {
+    "kanji": "美味しい",
+    "kana": "おいしい",
+    "pitch": "⓪",
+    "pos": "形1",
+    "meaning": "好吃, 好喝"
+  },
+  {
+    "kanji": "賑やか",
+    "kana": "にぎやか",
+    "pitch": "②",
+    "pos": "形2",
+    "meaning": "热闹"
+  }
+]

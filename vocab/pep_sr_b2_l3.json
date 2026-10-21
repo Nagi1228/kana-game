@@ -1,0 +1,548 @@
+[
+  {
+    "kanji": "節約",
+    "kana": "せつやく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "节约"
+  },
+  {
+    "kanji": "～性",
+    "kana": "せい",
+    "pitch": "",
+    "pos": "后缀",
+    "meaning": "性质，……倾向"
+  },
+  {
+    "kanji": "再～",
+    "kana": "さい",
+    "pitch": "",
+    "pos": "前缀",
+    "meaning": "再，重新……"
+  },
+  {
+    "kanji": "認識",
+    "kana": "にんしき",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "认识；评价"
+  },
+  {
+    "kanji": "方法",
+    "kana": "ほうほう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "方法"
+  },
+  {
+    "kanji": "食べ残し",
+    "kana": "たべのこし",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "吃剩的东西"
+  },
+  {
+    "kanji": "滴",
+    "kana": "てき",
+    "pitch": "",
+    "pos": "量",
+    "meaning": "滴"
+  },
+  {
+    "kanji": "無駄",
+    "kana": "むだ",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "徒劳，白费，浪费"
+  },
+  {
+    "kanji": "無くす",
+    "kana": "なくす",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "消灭，去掉；丢失"
+  },
+  {
+    "kanji": "未来",
+    "kana": "みらい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "未来"
+  },
+  {
+    "kanji": "",
+    "kana": "もったいない",
+    "pitch": "⑤",
+    "pos": "形1",
+    "meaning": "可惜，浪费"
+  },
+  {
+    "kanji": "浪費",
+    "kana": "ろうひ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "浪费"
+  },
+  {
+    "kanji": "次回",
+    "kana": "じかい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "下次，下回"
+  },
+  {
+    "kanji": "食糧",
+    "kana": "しょくりょう",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "粮食，食粮"
+  },
+  {
+    "kanji": "農業",
+    "kana": "のうぎょう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "农业"
+  },
+  {
+    "kanji": "報告書",
+    "kana": "ほうこくしょ",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "报告书，报告"
+  },
+  {
+    "kanji": "保存",
+    "kana": "ほぞん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "保存"
+  },
+  {
+    "kanji": "加工",
+    "kana": "かこう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "加工"
+  },
+  {
+    "kanji": "調理",
+    "kana": "ちょうり",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "烹饪，做（菜）"
+  },
+  {
+    "kanji": "教育",
+    "kana": "きょういく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "教育"
+  },
+  {
+    "kanji": "人口",
+    "kana": "じんこう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "人口"
+  },
+  {
+    "kanji": "水不足",
+    "kana": "みずぶそく",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "水资源不足"
+  },
+  {
+    "kanji": "田んぼ",
+    "kana": "たんぼ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "水田；田地"
+  },
+  {
+    "kanji": "石油",
+    "kana": "せきゆ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "石油"
+  },
+  {
+    "kanji": "石炭",
+    "kana": "せきたん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "煤，煤炭"
+  },
+  {
+    "kanji": "資源",
+    "kana": "しげん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "资源"
+  },
+  {
+    "kanji": "将来",
+    "kana": "しょうらい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "将来"
+  },
+  {
+    "kanji": "二酸化炭素",
+    "kana": "にさんかたんそ",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "二氧化碳"
+  },
+  {
+    "kanji": "地球",
+    "kana": "ちきゅう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "地球"
+  },
+  {
+    "kanji": "地球温暖化",
+    "kana": "ちきゅうおんだんか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "地球变暖"
+  },
+  {
+    "kanji": "原因",
+    "kana": "げんいん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "原因"
+  },
+  {
+    "kanji": "驚く",
+    "kana": "おどろく",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "吃惊，惊讶"
+  },
+  {
+    "kanji": "食糧不足",
+    "kana": "しょくりょうぷそく",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "粮食不足"
+  },
+  {
+    "kanji": "苦しむ",
+    "kana": "くるしむ",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "感到痛苦，受折磨；烦恼"
+  },
+  {
+    "kanji": "援助",
+    "kana": "えんじょ",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "援助，支援"
+  },
+  {
+    "kanji": "倍",
+    "kana": "ばい",
+    "pitch": "⓪",
+    "pos": "名·后缀",
+    "meaning": "倍，……倍"
+  },
+  {
+    "kanji": "平均",
+    "kana": "へいきん",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "平均"
+  },
+  {
+    "kanji": "流す",
+    "kana": "ながす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "流走；冲走"
+  },
+  {
+    "kanji": "節電",
+    "kana": "せつでん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "节电"
+  },
+  {
+    "kanji": "電気製品",
+    "kana": "でんきせいひん",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "电器"
+  },
+  {
+    "kanji": "普及",
+    "kana": "ふきゅう",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "普及"
+  },
+  {
+    "kanji": "沸かす",
+    "kana": "わかす",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "烧开；使……沸腾"
+  },
+  {
+    "kanji": "無駄遣い",
+    "kana": "むだづかい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "浪费，乱用"
+  },
+  {
+    "kanji": "電灯",
+    "kana": "でんとう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "电灯"
+  },
+  {
+    "kanji": "現象",
+    "kana": "げんしょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "现象"
+  },
+  {
+    "kanji": "大勢",
+    "kana": "おおぜい",
+    "pitch": "⓪",
+    "pos": "名·副",
+    "meaning": "许多人，人数众多"
+  },
+  {
+    "kanji": "見かける",
+    "kana": "みかける",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "看到"
+  },
+  {
+    "kanji": "節水",
+    "kana": "せっすい",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "节水"
+  },
+  {
+    "kanji": "減らす",
+    "kana": "へらす",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "减少"
+  },
+  {
+    "kanji": "注文",
+    "kana": "ちゅうもん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "点餐；订货"
+  },
+  {
+    "kanji": "腐る",
+    "kana": "くさる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "腐烂，腐败，坏"
+  },
+  {
+    "kanji": "寮",
+    "kana": "りょう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "宿舍"
+  },
+  {
+    "kanji": "電源",
+    "kana": "でんげん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "电源"
+  },
+  {
+    "kanji": "壁新聞",
+    "kana": "かべしんぶん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "墙报"
+  },
+  {
+    "kanji": "一人ひとり",
+    "kana": "ひとりひとり",
+    "pitch": "⑤",
+    "pos": "名·副",
+    "meaning": "各人，每人，各自"
+  },
+  {
+    "kanji": "解決",
+    "kana": "かいけつ",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "解决"
+  },
+  {
+    "kanji": "環境",
+    "kana": "かんきょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "环境"
+  },
+  {
+    "kanji": "合わせる",
+    "kana": "あわせる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "适应，结合；对上，合起"
+  },
+  {
+    "kanji": "役立つ",
+    "kana": "やくだつ",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "起作用"
+  },
+  {
+    "kanji": "行動",
+    "kana": "こうどう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "行动，行为"
+  },
+  {
+    "kanji": "散歩",
+    "kana": "さんぽ",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "散步"
+  },
+  {
+    "kanji": "蛇口",
+    "kana": "じゃぐち",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "水龙头"
+  },
+  {
+    "kanji": "無料",
+    "kana": "むりょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "免费，不要钱"
+  },
+  {
+    "kanji": "面",
+    "kana": "めん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "方面"
+  },
+  {
+    "kanji": "制度",
+    "kana": "せいど",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "制度"
+  },
+  {
+    "kanji": "法律",
+    "kana": "ほうりつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "法律"
+  },
+  {
+    "kanji": "食文化",
+    "kana": "しょくぶんか",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "饮食文化"
+  },
+  {
+    "kanji": "家庭",
+    "kana": "かてい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "家庭"
+  },
+  {
+    "kanji": "広告",
+    "kana": "こうこく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "广告"
+  },
+  {
+    "kanji": "分析",
+    "kana": "ぶんせき",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "分析"
+  },
+  {
+    "kanji": "燃料",
+    "kana": "ねんりょう",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "燃料"
+  },
+  {
+    "kanji": "丁寧",
+    "kana": "ていねい",
+    "pitch": "①",
+    "pos": "形2",
+    "meaning": "仔细，认真；客气"
+  },
+  {
+    "kanji": "",
+    "kana": "しつけ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "教养，家教"
+  },
+  {
+    "kanji": "",
+    "kana": "コマーシャル",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "（商业）广告"
+  },
+  {
+    "kanji": "",
+    "kana": "スイッチ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "开关"
+  },
+  {
+    "kanji": "結構",
+    "kana": "けっこう",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "相当；还可以"
+  },
+  {
+    "kanji": "生存",
+    "kana": "せいぞん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "生存、存活"
+  },
+  {
+    "kanji": "持ち帰る",
+    "kana": "もちかえる",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "拿回，带回"
+  }
+]

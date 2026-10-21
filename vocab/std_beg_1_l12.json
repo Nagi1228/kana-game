@@ -1,0 +1,219 @@
+[
+  {
+    "kanji": "季節",
+    "kana": "きせつ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "季节"
+  },
+  {
+    "kanji": "冬",
+    "kana": "ふゆ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "冬天，冬季"
+  },
+  {
+    "kanji": "春",
+    "kana": "はる",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "春天，春季"
+  },
+  {
+    "kanji": "日本料理",
+    "kana": "にほんりょうり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "日式饭菜"
+  },
+  {
+    "kanji": "寿司",
+    "kana": "すし",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "寿司"
+  },
+  {
+    "kanji": "ナシ",
+    "kana": "ナシ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "梨"
+  },
+  {
+    "kanji": "バナナ",
+    "kana": "バナナ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "香蕉"
+  },
+  {
+    "kanji": "ミカン",
+    "kana": "ミカン",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "橘子"
+  },
+  {
+    "kanji": "焼酎",
+    "kana": "しょうちゅう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "烧酒"
+  },
+  {
+    "kanji": "日本酒",
+    "kana": "にほんしゅ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "日本酒"
+  },
+  {
+    "kanji": "紅茶",
+    "kana": "こうちゃ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "红茶"
+  },
+  {
+    "kanji": "ウーロン茶",
+    "kana": "ウーロンちゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "乌龙茶"
+  },
+  {
+    "kanji": "ジャスミン茶",
+    "kana": "ジャスミンちゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "茉莉花茶"
+  },
+  {
+    "kanji": "緑茶",
+    "kana": "りょくちゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "绿茶"
+  },
+  {
+    "kanji": "ジュース",
+    "kana": "ジュース",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "果汁"
+  },
+  {
+    "kanji": "人気",
+    "kana": "にんき",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "声望，受欢迎"
+  },
+  {
+    "kanji": "席",
+    "kana": "せき",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "座位，席位"
+  },
+  {
+    "kanji": "クラス",
+    "kana": "クラス",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "班级"
+  },
+  {
+    "kanji": "種類",
+    "kana": "しゅるい",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "种类"
+  },
+  {
+    "kanji": "背",
+    "kana": "せ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "个子"
+  },
+  {
+    "kanji": "兄",
+    "kana": "あに",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "哥哥，兄长"
+  },
+  {
+    "kanji": "最近",
+    "kana": "さいきん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "最近，近来"
+  },
+  {
+    "kanji": "降る",
+    "kana": "ふる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "下（雨，雪），降（雨，雪）"
+  },
+  {
+    "kanji": "若い",
+    "kana": "わかい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "年轻"
+  },
+  {
+    "kanji": "暖かい",
+    "kana": "あたたかい",
+    "pitch": "④",
+    "pos": "形容词",
+    "meaning": "暖和，温暖"
+  },
+  {
+    "kanji": "涼しい",
+    "kana": "すずしい",
+    "pitch": "③",
+    "pos": "形容词",
+    "meaning": "凉爽"
+  },
+  {
+    "kanji": "速い",
+    "kana": "はやい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "快"
+  },
+  {
+    "kanji": "大好き",
+    "kana": "だいすき",
+    "pitch": "①",
+    "pos": "形容动词",
+    "meaning": "非常喜欢"
+  },
+  {
+    "kanji": "いちばん",
+    "kana": "いちばん",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "最，第一"
+  },
+  {
+    "kanji": "ずっと",
+    "kana": "ずっと",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "～得多"
+  },
+  {
+    "kanji": "やはり/やっぱり",
+    "kana": "やはり/やっぱり",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "仍然，还是"
+  }
+]

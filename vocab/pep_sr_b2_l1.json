@@ -1,0 +1,590 @@
+[
+  {
+    "kanji": "",
+    "kana": "ガイドブック",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "旅游指南"
+  },
+  {
+    "kanji": "頂上",
+    "kana": "ちょうじょう",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "山顶"
+  },
+  {
+    "kanji": "花畑",
+    "kana": "はなばたけ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "花海，花园"
+  },
+  {
+    "kanji": "時代",
+    "kana": "じだい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "时代"
+  },
+  {
+    "kanji": "遺跡",
+    "kana": "いせき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "遗迹"
+  },
+  {
+    "kanji": "屋台",
+    "kana": "やたい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "货摊，小摊"
+  },
+  {
+    "kanji": "",
+    "kana": "テーマ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "主题；题目"
+  },
+  {
+    "kanji": "分かれる",
+    "kana": "わかれる",
+    "pitch": "③",
+    "pos": "动2自",
+    "meaning": "分开；分歧"
+  },
+  {
+    "kanji": "自然",
+    "kana": "しぜん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "自然，自然界"
+  },
+  {
+    "kanji": "",
+    "kana": "レジャー",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "余暇"
+  },
+  {
+    "kanji": "見どころ",
+    "kana": "みどころ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "看点，值得看的地方"
+  },
+  {
+    "kanji": "相談",
+    "kana": "そうだん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "商量，咨询"
+  },
+  {
+    "kanji": "京劇",
+    "kana": "きょうげき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "京剧"
+  },
+  {
+    "kanji": "用事",
+    "kana": "ようじ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "（必要的）事情"
+  },
+  {
+    "kanji": "美食",
+    "kana": "びしょく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "美食"
+  },
+  {
+    "kanji": "好む",
+    "kana": "このむ",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "爱好，喜欢"
+  },
+  {
+    "kanji": "適当",
+    "kana": "てきとう",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "适当，恰好"
+  },
+  {
+    "kanji": "",
+    "kana": "キロメートル（km）",
+    "pitch": "③",
+    "pos": "量",
+    "meaning": "公里，千米"
+  },
+  {
+    "kanji": "離れる",
+    "kana": "はなれる",
+    "pitch": "③",
+    "pos": "动2自",
+    "meaning": "分离，离开"
+  },
+  {
+    "kanji": "寺",
+    "kana": "てら",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "庙，寺院"
+  },
+  {
+    "kanji": "役所",
+    "kana": "やくしょ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "政府机关，官署"
+  },
+  {
+    "kanji": "現在",
+    "kana": "げんざい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "现在；目前"
+  },
+  {
+    "kanji": "様子",
+    "kana": "ようす",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "情况，动向，迹象"
+  },
+  {
+    "kanji": "関する",
+    "kana": "かんする",
+    "pitch": "③",
+    "pos": "动3自",
+    "meaning": "有关，关于"
+  },
+  {
+    "kanji": "展示",
+    "kana": "てんじ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "展示，展出"
+  },
+  {
+    "kanji": "主な",
+    "kana": "おもな",
+    "pitch": "①",
+    "pos": "连体",
+    "meaning": "主要的，重要的"
+  },
+  {
+    "kanji": "郊外",
+    "kana": "こうがい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "郊外"
+  },
+  {
+    "kanji": "全体",
+    "kana": "ぜんたい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "全部，整体"
+  },
+  {
+    "kanji": "眺める",
+    "kana": "ながめる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "眺望"
+  },
+  {
+    "kanji": "向かう",
+    "kana": "むかう",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "对着，向着"
+  },
+  {
+    "kanji": "非常",
+    "kana": "ひじょう",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "非常"
+  },
+  {
+    "kanji": "連れる",
+    "kana": "つれる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "带领"
+  },
+  {
+    "kanji": "市内",
+    "kana": "しない",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "市内"
+  },
+  {
+    "kanji": "坂",
+    "kana": "さか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "坡，坡道"
+  },
+  {
+    "kanji": "特徴",
+    "kana": "とくちょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "特征，特色"
+  },
+  {
+    "kanji": "花祭り",
+    "kana": "はなまつり",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "花节"
+  },
+  {
+    "kanji": "氷祭り",
+    "kana": "こおりまつり",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "冰雪节"
+  },
+  {
+    "kanji": "",
+    "kana": "はやる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "流行"
+  },
+  {
+    "kanji": "民族",
+    "kana": "みんぞく",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "民族"
+  },
+  {
+    "kanji": "曲",
+    "kana": "きょく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "曲，曲子"
+  },
+  {
+    "kanji": "劇場",
+    "kana": "げきじょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "剧院"
+  },
+  {
+    "kanji": "公演",
+    "kana": "こうえん",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "公演，演出"
+  },
+  {
+    "kanji": "毎月",
+    "kana": "まいげつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "每月"
+  },
+  {
+    "kanji": "特産",
+    "kana": "とくさん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "特产"
+  },
+  {
+    "kanji": "野生",
+    "kana": "やせい",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "野生"
+  },
+  {
+    "kanji": "",
+    "kana": "キノコ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "蘑菇"
+  },
+  {
+    "kanji": "餃子",
+    "kana": "ぎょうざ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "饺子"
+  },
+  {
+    "kanji": "鍋",
+    "kana": "なべ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "锅"
+  },
+  {
+    "kanji": "鍋料理",
+    "kana": "なべりょうり",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "火锅"
+  },
+  {
+    "kanji": "特に",
+    "kana": "とくに",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "特；特別"
+  },
+  {
+    "kanji": "量",
+    "kana": "りょう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "量，数量"
+  },
+  {
+    "kanji": "実際",
+    "kana": "じっさい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "实际"
+  },
+  {
+    "kanji": "満足",
+    "kana": "まんぞく",
+    "pitch": "①",
+    "pos": "名·形2·动3自",
+    "meaning": "满足"
+  },
+  {
+    "kanji": "報告",
+    "kana": "ほうこく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "报告，汇报"
+  },
+  {
+    "kanji": "",
+    "kana": "キーワード",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "关键词"
+  },
+  {
+    "kanji": "読み取る",
+    "kana": "よみとる",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "读取"
+  },
+  {
+    "kanji": "構成",
+    "kana": "こうせい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "构成"
+  },
+  {
+    "kanji": "",
+    "kana": "タイトル",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "题目，标题"
+  },
+  {
+    "kanji": "",
+    "kana": "キャッチコピー",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "宣传短句"
+  },
+  {
+    "kanji": "図表",
+    "kana": "ずひょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "图表"
+  },
+  {
+    "kanji": "位置",
+    "kana": "いち",
+    "pitch": "①",
+    "pos": "名·动3自",
+    "meaning": "位置；位于"
+  },
+  {
+    "kanji": "完成",
+    "kana": "かんせい",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "完成，落成"
+  },
+  {
+    "kanji": "工夫",
+    "kana": "くふう",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "设法，动脑筋"
+  },
+  {
+    "kanji": "計画",
+    "kana": "けいかく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "计划"
+  },
+  {
+    "kanji": "立てる",
+    "kana": "たてる",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "订立，竖起"
+  },
+  {
+    "kanji": "流れ",
+    "kana": "ながれ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "流程"
+  },
+  {
+    "kanji": "目的",
+    "kana": "もくてき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "目的"
+  },
+  {
+    "kanji": "分類",
+    "kana": "ぶんるい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "分类"
+  },
+  {
+    "kanji": "従う",
+    "kana": "したがう",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "遵从，按照，随着"
+  },
+  {
+    "kanji": "間違い",
+    "kana": "まちがい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "错误"
+  },
+  {
+    "kanji": "確認",
+    "kana": "かくにん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "确认；证实"
+  },
+  {
+    "kanji": "順序",
+    "kana": "じゅんじょ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "顺序"
+  },
+  {
+    "kanji": "気候",
+    "kana": "きこう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "气候"
+  },
+  {
+    "kanji": "沈む",
+    "kana": "しずむ",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "沉没；消沉"
+  },
+  {
+    "kanji": "乾く",
+    "kana": "かわく",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "干燥"
+  },
+  {
+    "kanji": "和室",
+    "kana": "わしつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "日本式房间"
+  },
+  {
+    "kanji": "回す",
+    "kana": "まわす",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "旋转；传递"
+  },
+  {
+    "kanji": "役",
+    "kana": "やく",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "职务，角色"
+  },
+  {
+    "kanji": "",
+    "kana": "コース",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "路线；跑道"
+  },
+  {
+    "kanji": "止む",
+    "kana": "やむ",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "停止"
+  },
+  {
+    "kanji": "合計",
+    "kana": "ごうけい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "合计，总计"
+  },
+  {
+    "kanji": "求める",
+    "kana": "もとめる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "想要，寻求，要求"
+  },
+  {
+    "kanji": "太陽",
+    "kana": "たいよう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "太阳"
+  },
+  {
+    "kanji": "浴びる",
+    "kana": "あびる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "沐浴；浇；蒙受"
+  }
+]

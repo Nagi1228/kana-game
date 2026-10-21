@@ -1,0 +1,548 @@
+[
+  {
+    "kanji": "",
+    "kana": "リサイクル",
+    "pitch": "②",
+    "pos": "名·动3他",
+    "meaning": "再利用，回收"
+  },
+  {
+    "kanji": "深刻",
+    "kana": "しんこく",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "严重；深刻"
+  },
+  {
+    "kanji": "捉える",
+    "kana": "とらえる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "领会，理解，抓住"
+  },
+  {
+    "kanji": "解決策",
+    "kana": "かいけつさく",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "解决方案"
+  },
+  {
+    "kanji": "提案",
+    "kana": "ていあん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "提案"
+  },
+  {
+    "kanji": "実態",
+    "kana": "じったい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "实际状态，真实情况"
+  },
+  {
+    "kanji": "ごみ捨て場",
+    "kana": "ごみすてば",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "垃圾场"
+  },
+  {
+    "kanji": "臭い",
+    "kana": "におい",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "气味，臭味"
+  },
+  {
+    "kanji": "覆う",
+    "kana": "おおう",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "蒙上，盖上"
+  },
+  {
+    "kanji": "",
+    "kana": "ますます",
+    "pitch": "②",
+    "pos": "副",
+    "meaning": "越来越"
+  },
+  {
+    "kanji": "",
+    "kana": "どんどん",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "接连不断地"
+  },
+  {
+    "kanji": "協力",
+    "kana": "きょうりょく",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "协助，合作"
+  },
+  {
+    "kanji": "繋がる",
+    "kana": "つながる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "连接"
+  },
+  {
+    "kanji": "手順",
+    "kana": "てじゅん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "（工作的）次序，程序"
+  },
+  {
+    "kanji": "計る",
+    "kana": "はかる",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "称量，计量"
+  },
+  {
+    "kanji": "",
+    "kana": "キログラム（kg）",
+    "pitch": "③",
+    "pos": "量",
+    "meaning": "千克，公斤"
+  },
+  {
+    "kanji": "平均値",
+    "kana": "へいきんち",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "平均值"
+  },
+  {
+    "kanji": "計算",
+    "kana": "けいさん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "计算，运算"
+  },
+  {
+    "kanji": "越える",
+    "kana": "こえる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "超过"
+  },
+  {
+    "kanji": "予想",
+    "kana": "よそう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "预料，预测"
+  },
+  {
+    "kanji": "主に",
+    "kana": "おもに",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "主要，多半"
+  },
+  {
+    "kanji": "紙類",
+    "kana": "かみるい",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "纸类"
+  },
+  {
+    "kanji": "",
+    "kana": "プラスチック",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "塑料"
+  },
+  {
+    "kanji": "野菜くず",
+    "kana": "やさいくず",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "蔬菜残渣"
+  },
+  {
+    "kanji": "電池",
+    "kana": "でんち",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "电池"
+  },
+  {
+    "kanji": "使い捨て",
+    "kana": "つかいすて",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "使用一次就扔掉"
+  },
+  {
+    "kanji": "弁当箱",
+    "kana": "べんとうばこ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "便当盒"
+  },
+  {
+    "kanji": "有害",
+    "kana": "ゆうがい",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "有害"
+  },
+  {
+    "kanji": "分ける",
+    "kana": "わける",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "分开，划分"
+  },
+  {
+    "kanji": "割合",
+    "kana": "わりあい",
+    "pitch": "⓪",
+    "pos": "名·副",
+    "meaning": "比例；比较起来"
+  },
+  {
+    "kanji": "骨",
+    "kana": "ほね",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "骨，骨头"
+  },
+  {
+    "kanji": "生ごみ",
+    "kana": "なまごみ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "（厨房扔掉的）含有水分的垃圾"
+  },
+  {
+    "kanji": "枝",
+    "kana": "えだ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "树枝，枝条"
+  },
+  {
+    "kanji": "～目",
+    "kana": "め",
+    "pitch": "",
+    "pos": "后缀",
+    "meaning": "第……个（表示顺序）"
+  },
+  {
+    "kanji": "瓶",
+    "kana": "びん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "瓶子"
+  },
+  {
+    "kanji": "含む",
+    "kana": "ふくむ",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "含有，包含"
+  },
+  {
+    "kanji": "薬品",
+    "kana": "やくひん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "药，药物"
+  },
+  {
+    "kanji": "温度計",
+    "kana": "おんどけい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "温度计"
+  },
+  {
+    "kanji": "割",
+    "kana": "わり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "十分之一；比率"
+  },
+  {
+    "kanji": "占める",
+    "kana": "しめる",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "占据，占领"
+  },
+  {
+    "kanji": "",
+    "kana": "レポート",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "报告"
+  },
+  {
+    "kanji": "対象",
+    "kana": "たいしょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "对象"
+  },
+  {
+    "kanji": "期間",
+    "kana": "きかん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "期间"
+  },
+  {
+    "kanji": "恵まれる",
+    "kana": "めぐまれる",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "受惠，富有"
+  },
+  {
+    "kanji": "臭い",
+    "kana": "くさい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "臭，难闻"
+  },
+  {
+    "kanji": "",
+    "kana": "このまま",
+    "pitch": "④",
+    "pos": "名·副",
+    "meaning": "就这样，原封不动"
+  },
+  {
+    "kanji": "",
+    "kana": "とにかく",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "不管怎样，无论如何"
+  },
+  {
+    "kanji": "受け取り",
+    "kana": "うけとり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "接受，接收"
+  },
+  {
+    "kanji": "断る",
+    "kana": "ことわる",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "谢绝，拒绝"
+  },
+  {
+    "kanji": "分別",
+    "kana": "ぶんべつ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "分类，区分"
+  },
+  {
+    "kanji": "利用",
+    "kana": "りよう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "利用"
+  },
+  {
+    "kanji": "実行",
+    "kana": "じっこう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "实行，实践"
+  },
+  {
+    "kanji": "",
+    "kana": "リフューズ",
+    "pitch": "②",
+    "pos": "名·动3他",
+    "meaning": "拒绝"
+  },
+  {
+    "kanji": "",
+    "kana": "リデュース",
+    "pitch": "②",
+    "pos": "名·动3他",
+    "meaning": "减少"
+  },
+  {
+    "kanji": "",
+    "kana": "リユース",
+    "pitch": "②",
+    "pos": "名·动3他",
+    "meaning": "再使用，重复使用"
+  },
+  {
+    "kanji": "思考",
+    "kana": "しこう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "思考"
+  },
+  {
+    "kanji": "",
+    "kana": "マップ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "图形，地图"
+  },
+  {
+    "kanji": "基づく",
+    "kana": "もとづく",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "基于，根据"
+  },
+  {
+    "kanji": "教科書",
+    "kana": "きょうかしょ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "教科书"
+  },
+  {
+    "kanji": "後輩",
+    "kana": "こうはい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "后辈，晚辈"
+  },
+  {
+    "kanji": "",
+    "kana": "～ごとに",
+    "pitch": "",
+    "pos": "后缀",
+    "meaning": "每，每个"
+  },
+  {
+    "kanji": "蓋",
+    "kana": "ふた",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "盖子"
+  },
+  {
+    "kanji": "",
+    "kana": "たばこ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "烟草，卷烟"
+  },
+  {
+    "kanji": "吸い殻",
+    "kana": "すいがら",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "烟蒂"
+  },
+  {
+    "kanji": "",
+    "kana": "ゴム",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "橡胶，橡皮"
+  },
+  {
+    "kanji": "",
+    "kana": "ビニール",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "塑料，树脂"
+  },
+  {
+    "kanji": "燃える",
+    "kana": "もえる",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "燃烧，着火"
+  },
+  {
+    "kanji": "煙",
+    "kana": "けむり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "烟，烟雾"
+  },
+  {
+    "kanji": "",
+    "kana": "ひも",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "带子，细绳"
+  },
+  {
+    "kanji": "縛る",
+    "kana": "しばる",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "绑，捆"
+  },
+  {
+    "kanji": "機械",
+    "kana": "きかい",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "机械"
+  },
+  {
+    "kanji": "修理",
+    "kana": "しゅうり",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "修理"
+  },
+  {
+    "kanji": "",
+    "kana": "スモッグ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "霾，雾霾"
+  },
+  {
+    "kanji": "防ぐ",
+    "kana": "ふせぐ",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "防止"
+  },
+  {
+    "kanji": "乾かす",
+    "kana": "かわかす",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "弄干，晒干"
+  },
+  {
+    "kanji": "当番",
+    "kana": "とうばん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "值日，值勤"
+  },
+  {
+    "kanji": "事実",
+    "kana": "じじつ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "事实"
+  },
+  {
+    "kanji": "証明",
+    "kana": "しょうめい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "证明"
+  }
+]

@@ -1,0 +1,513 @@
+[
+  {
+    "kanji": "俳句",
+    "kana": "はいく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "俳句，俳诗"
+  },
+  {
+    "kanji": "漢詩",
+    "kana": "かんし",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "中国古诗，汉诗"
+  },
+  {
+    "kanji": "古池",
+    "kana": "ふるいけ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "古池（塘）"
+  },
+  {
+    "kanji": "蛙",
+    "kana": "かわず",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "青蛙"
+  },
+  {
+    "kanji": "飛び込む",
+    "kana": "とびこむ",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "跳入；飞入"
+  },
+  {
+    "kanji": "俳人",
+    "kana": "はいじん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "俳句诗人"
+  },
+  {
+    "kanji": "詠む",
+    "kana": "よむ",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "作（诗），咏，吟"
+  },
+  {
+    "kanji": "音",
+    "kana": "おん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "音"
+  },
+  {
+    "kanji": "数える",
+    "kana": "かぞえる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "数"
+  },
+  {
+    "kanji": "句",
+    "kana": "く",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "（俳句中五个音节或七个音节的）一组单词；句子"
+  },
+  {
+    "kanji": "",
+    "kana": "リズム",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "节奏"
+  },
+  {
+    "kanji": "季語",
+    "kana": "きご",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "表示季节的词"
+  },
+  {
+    "kanji": "季節感",
+    "kana": "きせつかん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "季节感"
+  },
+  {
+    "kanji": "蛙",
+    "kana": "かえる",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "青蛙"
+  },
+  {
+    "kanji": "風景",
+    "kana": "ふうけい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "风景，景色；情景"
+  },
+  {
+    "kanji": "想像",
+    "kana": "そうぞう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "想象"
+  },
+  {
+    "kanji": "菜の花",
+    "kana": "なのはな",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "油菜花"
+  },
+  {
+    "kanji": "東",
+    "kana": "ひがし",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "东"
+  },
+  {
+    "kanji": "西",
+    "kana": "にし",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "西"
+  },
+  {
+    "kanji": "一面",
+    "kana": "いちめん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "全体，满，一片；一面"
+  },
+  {
+    "kanji": "黄色い",
+    "kana": "きいろい",
+    "pitch": "⓪",
+    "pos": "形1",
+    "meaning": "黄"
+  },
+  {
+    "kanji": "広がる",
+    "kana": "ひろがる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "展现，扩展；扩大"
+  },
+  {
+    "kanji": "晴れる",
+    "kana": "はれる",
+    "pitch": "②",
+    "pos": "动2自",
+    "meaning": "天晴"
+  },
+  {
+    "kanji": "夕焼け",
+    "kana": "ゆうやけ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "晚霞；火烧云"
+  },
+  {
+    "kanji": "彩り",
+    "kana": "いろどり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "彩色"
+  },
+  {
+    "kanji": "宇宙",
+    "kana": "うちゅう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "宇宙"
+  },
+  {
+    "kanji": "閑か",
+    "kana": "しずか",
+    "pitch": "①",
+    "pos": "形2",
+    "meaning": "安静；平静"
+  },
+  {
+    "kanji": "岩",
+    "kana": "いわ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "岩石，大石头"
+  },
+  {
+    "kanji": "染み入る",
+    "kana": "しみいる",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "渗入"
+  },
+  {
+    "kanji": "蝉",
+    "kana": "せみ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "蝉，知了"
+  },
+  {
+    "kanji": "聞こえる",
+    "kana": "きこえる",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "听，听到"
+  },
+  {
+    "kanji": "思い浮かべる",
+    "kana": "おもいうかべる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "忆起，想起"
+  },
+  {
+    "kanji": "古典",
+    "kana": "こてん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "古典，古典作品"
+  },
+  {
+    "kanji": "文学",
+    "kana": "ぶんがく",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "文学"
+  },
+  {
+    "kanji": "",
+    "kana": "つながり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "联系，关系；连接"
+  },
+  {
+    "kanji": "影響力",
+    "kana": "えいきょうりょく",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "影响力"
+  },
+  {
+    "kanji": "越える",
+    "kana": "こえる",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "超越，超过"
+  },
+  {
+    "kanji": "共感",
+    "kana": "きょうかん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "同感，共鸣"
+  },
+  {
+    "kanji": "相互",
+    "kana": "そうご",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "相互"
+  },
+  {
+    "kanji": "生み出す",
+    "kana": "うみだす",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "生（出），产（出）"
+  },
+  {
+    "kanji": "書き写す",
+    "kana": "かきうつす",
+    "pitch": "④",
+    "pos": "动1他",
+    "meaning": "写出"
+  },
+  {
+    "kanji": "見つける",
+    "kana": "みつける",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "找到，发现"
+  },
+  {
+    "kanji": "何色",
+    "kana": "なにいろ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "什么颜色"
+  },
+  {
+    "kanji": "連想",
+    "kana": "れんそう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "联想"
+  },
+  {
+    "kanji": "構成",
+    "kana": "こうせい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "构成"
+  },
+  {
+    "kanji": "推測",
+    "kana": "すいそく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "推测"
+  },
+  {
+    "kanji": "両者",
+    "kana": "りょうしゃ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "二者，二人"
+  },
+  {
+    "kanji": "以下",
+    "kana": "いか",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "以下"
+  },
+  {
+    "kanji": "想像力",
+    "kana": "そうぞうりょく",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "想象力"
+  },
+  {
+    "kanji": "険しい",
+    "kana": "けわしい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "陡峭；艰险"
+  },
+  {
+    "kanji": "大晦日",
+    "kana": "おおみそか",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "除夕"
+  },
+  {
+    "kanji": "売る",
+    "kana": "うる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "卖，出售"
+  },
+  {
+    "kanji": "",
+    "kana": "ノートパソコン",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "笔记本电脑"
+  },
+  {
+    "kanji": "退院",
+    "kana": "たいいん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "出院"
+  },
+  {
+    "kanji": "予定",
+    "kana": "よてい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "预定"
+  },
+  {
+    "kanji": "決まる",
+    "kana": "きまる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "决定"
+  },
+  {
+    "kanji": "",
+    "kana": "メール",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "电子邮件"
+  },
+  {
+    "kanji": "連絡",
+    "kana": "れんらく",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "联络，联系"
+  },
+  {
+    "kanji": "人生",
+    "kana": "じんせい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "人生"
+  },
+  {
+    "kanji": "緊張",
+    "kana": "きんちょう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "紧张"
+  },
+  {
+    "kanji": "空く",
+    "kana": "すく",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "饿"
+  },
+  {
+    "kanji": "玄関",
+    "kana": "げんかん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "门厅"
+  },
+  {
+    "kanji": "売り場",
+    "kana": "うりば",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "出售处；销售柜台"
+  },
+  {
+    "kanji": "診察",
+    "kana": "しんさつ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "看病，检查，诊察，诊断"
+  },
+  {
+    "kanji": "正面",
+    "kana": "しょうめん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "正面"
+  },
+  {
+    "kanji": "現金",
+    "kana": "げんきん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "现金"
+  },
+  {
+    "kanji": "支払い",
+    "kana": "しはらい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "支付"
+  },
+  {
+    "kanji": "",
+    "kana": "のんびり",
+    "pitch": "③",
+    "pos": "副",
+    "meaning": "悠闲自在，无拘无束"
+  },
+  {
+    "kanji": "",
+    "kana": "ハイキング",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "郊游，徒步旅行"
+  },
+  {
+    "kanji": "全国",
+    "kana": "ぜんこく",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "全国"
+  },
+  {
+    "kanji": "",
+    "kana": "スピーチ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "讲话，致词；演讲"
+  },
+  {
+    "kanji": "",
+    "kana": "コンクール",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "竞赛"
+  },
+  {
+    "kanji": "",
+    "kana": "もと",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "基础，根据；原来"
+  }
+]

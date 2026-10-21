@@ -1,0 +1,191 @@
+[
+  {
+    "kanji": "モノレール",
+    "kana": "モノレール",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "单轨铁路，单轨电车"
+  },
+  {
+    "kanji": "オイル",
+    "kana": "オイル",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "油，润滑油"
+  },
+  {
+    "kanji": "ダンス",
+    "kana": "ダンス",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "跳舞，舞"
+  },
+  {
+    "kanji": "時代",
+    "kana": "じだい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "时代"
+  },
+  {
+    "kanji": "役者",
+    "kana": "やくしゃ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "演员"
+  },
+  {
+    "kanji": "娘",
+    "kana": "むすめ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "女儿"
+  },
+  {
+    "kanji": "子犬",
+    "kana": "こいぬ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "小狗"
+  },
+  {
+    "kanji": "劇場",
+    "kana": "げきじょう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "剧场，剧院"
+  },
+  {
+    "kanji": "試写会",
+    "kana": "ししゃかい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "试映会，预映会"
+  },
+  {
+    "kanji": "耳",
+    "kana": "みみ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "耳朵"
+  },
+  {
+    "kanji": "奥",
+    "kana": "おく",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "里头，内部；深处"
+  },
+  {
+    "kanji": "機嫌",
+    "kana": "きげん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "情绪，心情"
+  },
+  {
+    "kanji": "先日",
+    "kana": "せんじつ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "前几天，前些天"
+  },
+  {
+    "kanji": "コピー機",
+    "kana": "コピーき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "复印机"
+  },
+  {
+    "kanji": "券",
+    "kana": "けん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "券，票"
+  },
+  {
+    "kanji": "最終便",
+    "kana": "さいしゅうびん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "最晚航班"
+  },
+  {
+    "kanji": "入場券",
+    "kana": "にゅうじょうけん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "入场卷，门票"
+  },
+  {
+    "kanji": "招待券",
+    "kana": "しょうたいけん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "招待券，请帖"
+  },
+  {
+    "kanji": "回数券",
+    "kana": "かいすうけん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "回数券"
+  },
+  {
+    "kanji": "向かう",
+    "kana": "むかう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "往～去"
+  },
+  {
+    "kanji": "そろえる",
+    "kana": "そろえる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "备齐，凑齐；使一致"
+  },
+  {
+    "kanji": "漏れる",
+    "kana": "もれる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "漏，泄漏"
+  },
+  {
+    "kanji": "まとめる",
+    "kana": "まとめる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "汇集；总结，整理"
+  },
+  {
+    "kanji": "開通する",
+    "kana": "かいつうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "开通"
+  },
+  {
+    "kanji": "改築する",
+    "kana": "かいちくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "改建"
+  },
+  {
+    "kanji": "完成する",
+    "kana": "かんせいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "完成"
+  },
+  {
+    "kanji": "入社する",
+    "kana": "にゅうしゃする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "入社"
+  }
+]

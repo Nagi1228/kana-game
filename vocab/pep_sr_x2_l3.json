@@ -1,0 +1,443 @@
+[
+  {
+    "kanji": "行為",
+    "kana": "こうい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "行为，行动"
+  },
+  {
+    "kanji": "信号",
+    "kana": "しんごう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "信号灯，红绿灯"
+  },
+  {
+    "kanji": "歩行者",
+    "kana": "ほこうしゃ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "行人"
+  },
+  {
+    "kanji": "",
+    "kana": "スマホ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "智能手机"
+  },
+  {
+    "kanji": "地下鉄",
+    "kana": "ちかてつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "地铁"
+  },
+  {
+    "kanji": "駆け込み乗車",
+    "kana": "かけこみじょうしゃ",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "赶在车门关闭前冲上车"
+  },
+  {
+    "kanji": "挟まる",
+    "kana": "はさまる",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "夹住，夹在……当中"
+  },
+  {
+    "kanji": "",
+    "kana": "そのまま",
+    "pitch": "⓪",
+    "pos": "名·副",
+    "meaning": "照那样，就那样"
+  },
+  {
+    "kanji": "発車",
+    "kana": "はっしゃ",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "开车，发车"
+  },
+  {
+    "kanji": "交通機関",
+    "kana": "こうつうきかん",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "交通工具"
+  },
+  {
+    "kanji": "",
+    "kana": "めくる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "翻（书页）"
+  },
+  {
+    "kanji": "手すり",
+    "kana": "てすり",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "扶手，栏杆"
+  },
+  {
+    "kanji": "幸い",
+    "kana": "さいわい",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "幸亏，幸运"
+  },
+  {
+    "kanji": "",
+    "kana": "シートベルト",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "安全带"
+  },
+  {
+    "kanji": "運転手",
+    "kana": "うんてんしゅ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "司机"
+  },
+  {
+    "kanji": "急ブレーキ",
+    "kana": "きゅうブレーキ",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "急刹车"
+  },
+  {
+    "kanji": "座席",
+    "kana": "ざせき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "座位，席位"
+  },
+  {
+    "kanji": "",
+    "kana": "ぶつける",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "使……撞上"
+  },
+  {
+    "kanji": "逆走",
+    "kana": "ぎゃくそう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "逆行"
+  },
+  {
+    "kanji": "",
+    "kana": "ぶつかる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "撞上"
+  },
+  {
+    "kanji": "",
+    "kana": "インタビュー",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "采访"
+  },
+  {
+    "kanji": "閉まる",
+    "kana": "しまる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "关闭"
+  },
+  {
+    "kanji": "通行",
+    "kana": "つうこう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "通行，往来"
+  },
+  {
+    "kanji": "歩道",
+    "kana": "ほどう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "人行道"
+  },
+  {
+    "kanji": "正解",
+    "kana": "せいかい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "正确答案；答对"
+  },
+  {
+    "kanji": "片手",
+    "kana": "かたて",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "一只手，单手"
+  },
+  {
+    "kanji": "運転",
+    "kana": "うんてん",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "驾驶"
+  },
+  {
+    "kanji": "操作",
+    "kana": "そうさ",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "操纵，操作"
+  },
+  {
+    "kanji": "横断歩道",
+    "kana": "おうだんほどう",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "人行横道"
+  },
+  {
+    "kanji": "",
+    "kana": "レーン",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "车道"
+  },
+  {
+    "kanji": "乗り物",
+    "kana": "のりもの",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "交通工具"
+  },
+  {
+    "kanji": "心がけ",
+    "kana": "こころがけ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "留心，注意"
+  },
+  {
+    "kanji": "対応",
+    "kana": "たいおう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "应对"
+  },
+  {
+    "kanji": "欠かす",
+    "kana": "かかす",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "缺少"
+  },
+  {
+    "kanji": "",
+    "kana": "なにより",
+    "pitch": "①",
+    "pos": "名·副",
+    "meaning": "比什么都……"
+  },
+  {
+    "kanji": "原則",
+    "kana": "げんそく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "原则"
+  },
+  {
+    "kanji": "油断",
+    "kana": "ゆだん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "疏忽大意"
+  },
+  {
+    "kanji": "確保",
+    "kana": "かくほ",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "确保"
+  },
+  {
+    "kanji": "寄る",
+    "kana": "よる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "靠近"
+  },
+  {
+    "kanji": "",
+    "kana": "おしゃベり",
+    "pitch": "②",
+    "pos": "名·动3自他",
+    "meaning": "聊天"
+  },
+  {
+    "kanji": "工事",
+    "kana": "こうじ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "施工"
+  },
+  {
+    "kanji": "素早い",
+    "kana": "すばやい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "迅速，飞快"
+  },
+  {
+    "kanji": "通り過ぎる",
+    "kana": "とおりすぎる",
+    "pitch": "⑤",
+    "pos": "动2自",
+    "meaning": "通过"
+  },
+  {
+    "kanji": "高まる",
+    "kana": "たかまる",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "提高，增长"
+  },
+  {
+    "kanji": "対応策",
+    "kana": "たいおうさく",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "对策"
+  },
+  {
+    "kanji": "",
+    "kana": "オッケー",
+    "pitch": "①",
+    "pos": "叹",
+    "meaning": "好，好的"
+  },
+  {
+    "kanji": "点検",
+    "kana": "てんけん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "检查"
+  },
+  {
+    "kanji": "救急車",
+    "kana": "きゅうきゅうしゃ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "救护车"
+  },
+  {
+    "kanji": "人身",
+    "kana": "じんしん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "人的身体"
+  },
+  {
+    "kanji": "携帯",
+    "kana": "けいたい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "手机"
+  },
+  {
+    "kanji": "散る",
+    "kana": "ちる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "分散；四散"
+  },
+  {
+    "kanji": "",
+    "kana": "ブレーキ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "刹车，制动"
+  },
+  {
+    "kanji": "踏む",
+    "kana": "ふむ",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "踩、踏"
+  },
+  {
+    "kanji": "往復",
+    "kana": "おうふく",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "往返，往复"
+  },
+  {
+    "kanji": "隠れる",
+    "kana": "かくれる",
+    "pitch": "③",
+    "pos": "动2自",
+    "meaning": "被遮蔽；隐藏"
+  },
+  {
+    "kanji": "撒く",
+    "kana": "まく",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "撒播"
+  },
+  {
+    "kanji": "角",
+    "kana": "かど",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "拐角；角"
+  },
+  {
+    "kanji": "衝突",
+    "kana": "しょうとつ",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "相撞；（想法）冲突"
+  },
+  {
+    "kanji": "倒れる",
+    "kana": "たおれる",
+    "pitch": "③",
+    "pos": "动2自",
+    "meaning": "倒下"
+  },
+  {
+    "kanji": "滑る",
+    "kana": "すべる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "滑"
+  },
+  {
+    "kanji": "泥棒",
+    "kana": "どろぼう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "小偷"
+  },
+  {
+    "kanji": "乗り換える",
+    "kana": "のりかえる",
+    "pitch": "④",
+    "pos": "动2自他",
+    "meaning": "换乘"
+  },
+  {
+    "kanji": "支配",
+    "kana": "しはい",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "支配，统治"
+  }
+]

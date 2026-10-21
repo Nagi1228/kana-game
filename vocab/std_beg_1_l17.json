@@ -1,0 +1,170 @@
+[
+  {
+    "kanji": "洋服",
+    "kana": "ようふく",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "西服"
+  },
+  {
+    "kanji": "セーター",
+    "kana": "セーター",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "毛衣"
+  },
+  {
+    "kanji": "ノートパソコン",
+    "kana": "ノートパソコン",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "笔记本电脑"
+  },
+  {
+    "kanji": "バイク",
+    "kana": "バイク",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "摩托车"
+  },
+  {
+    "kanji": "お汁粉",
+    "kana": "おしるこ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "年糕小豆汤"
+  },
+  {
+    "kanji": "天ぷら",
+    "kana": "てんぷら",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "天麸罗"
+  },
+  {
+    "kanji": "初詣",
+    "kana": "はつもうで",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "新年后首次参拜"
+  },
+  {
+    "kanji": "健康",
+    "kana": "けんこう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "健康"
+  },
+  {
+    "kanji": "恋愛",
+    "kana": "れんあい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "恋爱"
+  },
+  {
+    "kanji": "ドラマ",
+    "kana": "ドラマ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "连续剧"
+  },
+  {
+    "kanji": "相手",
+    "kana": "あいて",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "对象，对方"
+  },
+  {
+    "kanji": "恋人",
+    "kana": "こいびと",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "恋人"
+  },
+  {
+    "kanji": "先輩",
+    "kana": "せんぱい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "前辈"
+  },
+  {
+    "kanji": "男性",
+    "kana": "だんせい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "男性"
+  },
+  {
+    "kanji": "外国人",
+    "kana": "がいこくじん",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "外国人"
+  },
+  {
+    "kanji": "夏",
+    "kana": "なつ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "夏天"
+  },
+  {
+    "kanji": "始める",
+    "kana": "はじめる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "开始"
+  },
+  {
+    "kanji": "連絡する",
+    "kana": "れんらくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "联系"
+  },
+  {
+    "kanji": "欲しい",
+    "kana": "ほしい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "想要"
+  },
+  {
+    "kanji": "立派",
+    "kana": "りっぱ",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "美观，杰出"
+  },
+  {
+    "kanji": "今度",
+    "kana": "こんど",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "下次；这回"
+  },
+  {
+    "kanji": "ぜひ",
+    "kana": "ぜひ",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "一定"
+  },
+  {
+    "kanji": "そろそろ",
+    "kana": "そろそろ",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "快要"
+  },
+  {
+    "kanji": "まず",
+    "kana": "まず",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "先，首先"
+  }
+]

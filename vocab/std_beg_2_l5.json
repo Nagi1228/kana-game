@@ -1,0 +1,303 @@
+[
+  {
+    "kanji": "質問",
+    "kana": "しつもん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "提问，问题"
+  },
+  {
+    "kanji": "場合",
+    "kana": "ばあい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "场合，情况"
+  },
+  {
+    "kanji": "迷惑",
+    "kana": "めいわく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "麻烦"
+  },
+  {
+    "kanji": "フジ",
+    "kana": "フジ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "紫藤"
+  },
+  {
+    "kanji": "カササギ",
+    "kana": "カササギ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "喜鹊"
+  },
+  {
+    "kanji": "鳥",
+    "kana": "とり",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "鸟"
+  },
+  {
+    "kanji": "マーク",
+    "kana": "マーク",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "符号"
+  },
+  {
+    "kanji": "標識",
+    "kana": "ひょうしき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "标记"
+  },
+  {
+    "kanji": "横断禁止",
+    "kana": "おうだんきんし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "禁止横穿"
+  },
+  {
+    "kanji": "スピード",
+    "kana": "スピード",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "速度"
+  },
+  {
+    "kanji": "免許証",
+    "kana": "めんきょしょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "许可证，执照"
+  },
+  {
+    "kanji": "企画書",
+    "kana": "きかくしょ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "计划书"
+  },
+  {
+    "kanji": "野球場",
+    "kana": "やきゅうじょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "棒球场"
+  },
+  {
+    "kanji": "テレビ講座",
+    "kana": "テレビこうざ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "电视讲座"
+  },
+  {
+    "kanji": "漢字",
+    "kana": "かんじ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "汉字"
+  },
+  {
+    "kanji": "戦争",
+    "kana": "せんそう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "战争"
+  },
+  {
+    "kanji": "警官",
+    "kana": "けいかん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "警察"
+  },
+  {
+    "kanji": "年上",
+    "kana": "としうえ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "年长者"
+  },
+  {
+    "kanji": "止まる",
+    "kana": "とまる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "停，停住"
+  },
+  {
+    "kanji": "変わる",
+    "kana": "かわる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "变，转变"
+  },
+  {
+    "kanji": "頑張る",
+    "kana": "がんばる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "拼命努力"
+  },
+  {
+    "kanji": "謝る",
+    "kana": "あやまる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "道歉"
+  },
+  {
+    "kanji": "サボる",
+    "kana": "サボる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "逃学，怠工"
+  },
+  {
+    "kanji": "破る",
+    "kana": "やぶる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "爽约，打破"
+  },
+  {
+    "kanji": "引く",
+    "kana": "ひく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "拉，抽"
+  },
+  {
+    "kanji": "守る",
+    "kana": "まもる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "遵守，保护"
+  },
+  {
+    "kanji": "答える",
+    "kana": "こたえる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "回答"
+  },
+  {
+    "kanji": "逃げる",
+    "kana": "にげる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "逃跑"
+  },
+  {
+    "kanji": "助ける",
+    "kana": "たすける",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "救助，帮助"
+  },
+  {
+    "kanji": "付ける",
+    "kana": "つける",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "添加，附加"
+  },
+  {
+    "kanji": "覚える",
+    "kana": "おぼえる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "记住，掌握"
+  },
+  {
+    "kanji": "提出する",
+    "kana": "ていしゅつする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "提交，提出"
+  },
+  {
+    "kanji": "遠慮する",
+    "kana": "えんりょする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "客气"
+  },
+  {
+    "kanji": "注意する",
+    "kana": "ちゅういする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "注意"
+  },
+  {
+    "kanji": "シュートする",
+    "kana": "シュートする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "（足球）射门，投篮"
+  },
+  {
+    "kanji": "親しい",
+    "kana": "したしい",
+    "pitch": "③",
+    "pos": "形容词",
+    "meaning": "熟悉，亲切，亲密"
+  },
+  {
+    "kanji": "乱暴",
+    "kana": "らんぼう",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "粗暴"
+  },
+  {
+    "kanji": "失礼",
+    "kana": "しつれい",
+    "pitch": "②",
+    "pos": "形容动词",
+    "meaning": "不礼貌"
+  },
+  {
+    "kanji": "同じ",
+    "kana": "おなじ",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "一样，相同"
+  },
+  {
+    "kanji": "危険",
+    "kana": "きけん",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "危险"
+  },
+  {
+    "kanji": "そんな",
+    "kana": "そんな",
+    "pitch": "③",
+    "pos": "连接词",
+    "meaning": "那样的"
+  },
+  {
+    "kanji": "丁寧に",
+    "kana": "ていねいに",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "恭敬地；细心地"
+  },
+  {
+    "kanji": "おい",
+    "kana": "おい",
+    "pitch": "①",
+    "pos": "感叹词",
+    "meaning": "哎，喂"
+  }
+]

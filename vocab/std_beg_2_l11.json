@@ -1,0 +1,303 @@
+[
+  {
+    "kanji": "マラソン大会",
+    "kana": "マラソンたいかい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "马拉松大会"
+  },
+  {
+    "kanji": "ホームパーティー",
+    "kana": "ホームパーティー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "家庭聚会"
+  },
+  {
+    "kanji": "ゴーカート",
+    "kana": "ゴーカート",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "游戏汽车，玩具汽车"
+  },
+  {
+    "kanji": "テレビゲーム",
+    "kana": "テレビゲーム",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "电子游戏"
+  },
+  {
+    "kanji": "中止",
+    "kana": "ちゅうし",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "中止，中顿"
+  },
+  {
+    "kanji": "表現",
+    "kana": "ひょうげん",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "表达，表现"
+  },
+  {
+    "kanji": "反対",
+    "kana": "はんたい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "反对"
+  },
+  {
+    "kanji": "営業",
+    "kana": "えいぎょう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "营业"
+  },
+  {
+    "kanji": "在庫",
+    "kana": "ざいこ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "库存，存货"
+  },
+  {
+    "kanji": "大人",
+    "kana": "おとな",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "大人，成人"
+  },
+  {
+    "kanji": "おじ",
+    "kana": "おじ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "叔叔，伯伯，舅舅"
+  },
+  {
+    "kanji": "小学生",
+    "kana": "しょうがくせい",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "小学生"
+  },
+  {
+    "kanji": "宇宙飛行士",
+    "kana": "うちゅうひこうし",
+    "pitch": "⑤",
+    "pos": "名词",
+    "meaning": "宇航员"
+  },
+  {
+    "kanji": "カタログ",
+    "kana": "カタログ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "目录"
+  },
+  {
+    "kanji": "宝くじ",
+    "kana": "たからくじ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "彩票"
+  },
+  {
+    "kanji": "成績",
+    "kana": "せいせき",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "成绩"
+  },
+  {
+    "kanji": "計算",
+    "kana": "けいさん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "计算"
+  },
+  {
+    "kanji": "消しゴム",
+    "kana": "けしゴム",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "橡皮"
+  },
+  {
+    "kanji": "歯",
+    "kana": "は",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "牙齿"
+  },
+  {
+    "kanji": "ビタミン剤",
+    "kana": "ビタミンざい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "维生素片剂"
+  },
+  {
+    "kanji": "中古",
+    "kana": "ちゅうこ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "二手货，旧货"
+  },
+  {
+    "kanji": "機会",
+    "kana": "きかい",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "机会"
+  },
+  {
+    "kanji": "休日",
+    "kana": "きゅうじつ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "休息日，假日"
+  },
+  {
+    "kanji": "今回",
+    "kana": "こんかい",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "这次，这回"
+  },
+  {
+    "kanji": "今月",
+    "kana": "こんげつ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "这个月"
+  },
+  {
+    "kanji": "最終点検",
+    "kana": "さいしゅうてんけん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "最终检查"
+  },
+  {
+    "kanji": "効く",
+    "kana": "きく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "有效，起作用"
+  },
+  {
+    "kanji": "祝う",
+    "kana": "いわう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "祝贺"
+  },
+  {
+    "kanji": "当たる",
+    "kana": "あたる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "中（彩），抽中"
+  },
+  {
+    "kanji": "空く",
+    "kana": "あく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "空，有空"
+  },
+  {
+    "kanji": "腐る",
+    "kana": "くさる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "腐烂，腐败"
+  },
+  {
+    "kanji": "見つける",
+    "kana": "みつける",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "找到，发现，看见"
+  },
+  {
+    "kanji": "晴れる",
+    "kana": "はれる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "晴朗，天晴"
+  },
+  {
+    "kanji": "訪ねる",
+    "kana": "たずねる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "访问，拜访"
+  },
+  {
+    "kanji": "滞在する",
+    "kana": "たいざいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "停留，滞留"
+  },
+  {
+    "kanji": "休憩する",
+    "kana": "きゅうけいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "休息"
+  },
+  {
+    "kanji": "参加する",
+    "kana": "さんかする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "参加"
+  },
+  {
+    "kanji": "乾杯する",
+    "kana": "かんぱいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "干杯"
+  },
+  {
+    "kanji": "へん",
+    "kana": "へん",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "不恰当，奇怪，反常"
+  },
+  {
+    "kanji": "完全",
+    "kana": "かんぜん",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "充分，完全"
+  },
+  {
+    "kanji": "必要",
+    "kana": "ひつよう",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "必要，必须"
+  },
+  {
+    "kanji": "だんだん",
+    "kana": "だんだん",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "渐渐地，逐渐地"
+  },
+  {
+    "kanji": "もし",
+    "kana": "もし",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "如果，假如"
+  }
+]

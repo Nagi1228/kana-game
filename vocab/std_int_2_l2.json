@@ -1,0 +1,751 @@
+[
+  {
+    "kanji": "売り込み",
+    "kana": "うりこみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "销售，推销"
+  },
+  {
+    "kanji": "正直",
+    "kana": "しょうじき",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "老实，诚实"
+  },
+  {
+    "kanji": "白酒",
+    "kana": "はくしゅ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "白酒"
+  },
+  {
+    "kanji": "ベース",
+    "kana": "ベース",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "基础，基准；基地"
+  },
+  {
+    "kanji": "物足りない",
+    "kana": "ものたりない",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "不过瘾，不够，不足"
+  },
+  {
+    "kanji": "当～",
+    "kana": "とう～",
+    "pitch": "",
+    "pos": "",
+    "meaning": "本～，这～"
+  },
+  {
+    "kanji": "幣～",
+    "kana": "へい～",
+    "pitch": "",
+    "pos": "",
+    "meaning": "蔽～，鄙～"
+  },
+  {
+    "kanji": "率直",
+    "kana": "そっちょく",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "坦率，直率，直爽"
+  },
+  {
+    "kanji": "データ",
+    "kana": "データ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "数据，资料，材料，论据"
+  },
+  {
+    "kanji": "興味深い",
+    "kana": "きょうみぶかい",
+    "pitch": "",
+    "pos": "形容词",
+    "meaning": "很感兴趣，颇有意思"
+  },
+  {
+    "kanji": "売り切れ",
+    "kana": "うりきれ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "卖完，售完，售罄"
+  },
+  {
+    "kanji": "もっとも",
+    "kana": "もっとも",
+    "pitch": "",
+    "pos": "连接词",
+    "meaning": "话虽如此，可是，不过"
+  },
+  {
+    "kanji": "限り",
+    "kana": "かぎり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "限度，极限，止境"
+  },
+  {
+    "kanji": "旧暦",
+    "kana": "きゅうれき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "农历，阴历"
+  },
+  {
+    "kanji": "新暦",
+    "kana": "しんれき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "公历，阳历"
+  },
+  {
+    "kanji": "畑",
+    "kana": "はたけ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "旱田，旱地"
+  },
+  {
+    "kanji": "失業者",
+    "kana": "しつぎょうしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "失业者"
+  },
+  {
+    "kanji": "作業",
+    "kana": "さぎょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "操作，工作，作业"
+  },
+  {
+    "kanji": "ミス",
+    "kana": "ミス",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "失误，错误"
+  },
+  {
+    "kanji": "故障",
+    "kana": "こしょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "故障"
+  },
+  {
+    "kanji": "小社",
+    "kana": "しょうしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "敝公司；小公司"
+  },
+  {
+    "kanji": "情報",
+    "kana": "じょうほう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "信息，消息，情报"
+  },
+  {
+    "kanji": "エコロジー",
+    "kana": "エコロジー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "环保；生态学"
+  },
+  {
+    "kanji": "コンセプト",
+    "kana": "コンセプト",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "宗旨，概念"
+  },
+  {
+    "kanji": "素材",
+    "kana": "そざい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "]材料，素材"
+  },
+  {
+    "kanji": "筆",
+    "kana": "ふで",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "笔，毛笔"
+  },
+  {
+    "kanji": "はっきり",
+    "kana": "はっきり",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "清楚，明确"
+  },
+  {
+    "kanji": "再選",
+    "kana": "さいせんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "再选，重选"
+  },
+  {
+    "kanji": "果実酒",
+    "kana": "かじつしゅ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "果酒"
+  },
+  {
+    "kanji": "健康飲料",
+    "kana": "けんこういんりょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "健康饮料"
+  },
+  {
+    "kanji": "カボチャ",
+    "kana": "カボチャ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "南瓜"
+  },
+  {
+    "kanji": "ヨーグルト",
+    "kana": "ヨーグルト",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "酸奶，乳酸饮料"
+  },
+  {
+    "kanji": "ランチ",
+    "kana": "ランチ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "午餐，便餐"
+  },
+  {
+    "kanji": "集まり",
+    "kana": "あつまり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "集合，汇合，汇集"
+  },
+  {
+    "kanji": "記録",
+    "kana": "きろく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "记载，记录；（成绩）记录"
+  },
+  {
+    "kanji": "掲載",
+    "kana": "けいさいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "登载，刊登"
+  },
+  {
+    "kanji": "説",
+    "kana": "せつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "学说；说法，论点；主张，意见"
+  },
+  {
+    "kanji": "システム",
+    "kana": "システム",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "系统，体系；组织；机构"
+  },
+  {
+    "kanji": "自動運転",
+    "kana": "じどううんてん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "无人驾驶，自动驾驶"
+  },
+  {
+    "kanji": "前～",
+    "kana": "ぜん～",
+    "pitch": "",
+    "pos": "",
+    "meaning": "ぜん～（前～）前～"
+  },
+  {
+    "kanji": "拝啓",
+    "kana": "はいけい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "敬启者"
+  },
+  {
+    "kanji": "皆様",
+    "kana": "みなさま",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "诸位，各位，大家"
+  },
+  {
+    "kanji": "存",
+    "kana": "ぞんずる",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "打算，想；知道，认识"
+  },
+  {
+    "kanji": "失礼",
+    "kana": "しつれい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "失礼，失敬；告辞"
+  },
+  {
+    "kanji": "許す",
+    "kana": "ゆるす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "原谅，宽恕；允许，容许"
+  },
+  {
+    "kanji": "御社",
+    "kana": "おんしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "贵公司，贵社"
+  },
+  {
+    "kanji": "酒類",
+    "kana": "しゅるい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "酒类"
+  },
+  {
+    "kanji": "販売～",
+    "kana": "はんばいルート",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "营销渠道，销售渠道"
+  },
+  {
+    "kanji": "MTS社",
+    "kana": "エムティーエスしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "MTS公司"
+  },
+  {
+    "kanji": "後日",
+    "kana": "ごじつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "改日，将来，日后；事后"
+  },
+  {
+    "kanji": "折",
+    "kana": "おり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "时，时候"
+  },
+  {
+    "kanji": "勝手",
+    "kana": "かって",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "任意，随便"
+  },
+  {
+    "kanji": "敬具",
+    "kana": "けいぐ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "敬上，谨启"
+  },
+  {
+    "kanji": "請求",
+    "kana": "せいきゅうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "索要，请求，要求，索取"
+  },
+  {
+    "kanji": "まことに",
+    "kana": "まことに",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "由衷，实在，诚然，的确，非常"
+  },
+  {
+    "kanji": "送付",
+    "kana": "そうふする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "寄送，发送，寄出"
+  },
+  {
+    "kanji": "なお",
+    "kana": "なお",
+    "pitch": "",
+    "pos": "连接词",
+    "meaning": "另外，再者，而且"
+  },
+  {
+    "kanji": "不明",
+    "kana": "ふめい",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "不清楚，不明确，不明白"
+  },
+  {
+    "kanji": "気軽",
+    "kana": "きがる",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "轻松愉快，爽快，舒畅"
+  },
+  {
+    "kanji": "問い合わせる",
+    "kana": "といあわせる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "询问，问，打听"
+  },
+  {
+    "kanji": "～のこう（～の候）～的问候",
+    "kana": "～のこう",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～的问候"
+  },
+  {
+    "kanji": "おん～（御～）贵～",
+    "kana": "おん～",
+    "pitch": "",
+    "pos": "",
+    "meaning": "贵～"
+  },
+  {
+    "kanji": "吉日",
+    "kana": "きちじつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "吉日，好日子"
+  },
+  {
+    "kanji": "元旦",
+    "kana": "がんたん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "元旦"
+  },
+  {
+    "kanji": "御中",
+    "kana": "おんちゅう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "（公函）启，公启"
+  },
+  {
+    "kanji": "若葉",
+    "kana": "わかば",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "嫩叶，新叶"
+  },
+  {
+    "kanji": "春暖",
+    "kana": "しゅんだん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "春暖"
+  },
+  {
+    "kanji": "青葉",
+    "kana": "あおば",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "绿叶"
+  },
+  {
+    "kanji": "涼風",
+    "kana": "りょうふう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "凉风，清风"
+  },
+  {
+    "kanji": "ご自愛",
+    "kana": "ごじあい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "保重，自己珍重"
+  },
+  {
+    "kanji": "一層",
+    "kana": "いっそう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "更加，越发，更；一层"
+  },
+  {
+    "kanji": "〆",
+    "kana": "しめ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "封，缄"
+  },
+  {
+    "kanji": "委員",
+    "kana": "いいん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "委员"
+  },
+  {
+    "kanji": "目撃者",
+    "kana": "もくげきしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "目击者"
+  },
+  {
+    "kanji": "研究所",
+    "kana": "けんきゅうじょ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "研究所"
+  },
+  {
+    "kanji": "進化",
+    "kana": "しんか",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "进化"
+  },
+  {
+    "kanji": "貴社",
+    "kana": "きしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "贵公司，贵社"
+  },
+  {
+    "kanji": "御行",
+    "kana": "おんこう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "贵行"
+  },
+  {
+    "kanji": "貴行",
+    "kana": "きこう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "贵行"
+  },
+  {
+    "kanji": "貴校",
+    "kana": "きこう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "贵校"
+  },
+  {
+    "kanji": "当社",
+    "kana": "とうしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "本公司，本社，该公司"
+  },
+  {
+    "kanji": "請求書",
+    "kana": "せいきゅうしょ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "帐单，付款通知单"
+  },
+  {
+    "kanji": "明後日",
+    "kana": "みょうごにち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "后天"
+  },
+  {
+    "kanji": "ぴかぴか",
+    "kana": "ぴかぴか",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "闪闪发光"
+  },
+  {
+    "kanji": "展示品",
+    "kana": "てんじひん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "展品"
+  },
+  {
+    "kanji": "節",
+    "kana": "せつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "时节，时候，时期"
+  },
+  {
+    "kanji": "恐縮",
+    "kana": "きょうしゅく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "抱歉，对不起，过意不去"
+  },
+  {
+    "kanji": "昼食",
+    "kana": "ちゅうしょく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "午餐，午饭"
+  },
+  {
+    "kanji": "合併",
+    "kana": "がっぺいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "合并"
+  },
+  {
+    "kanji": "ゲームセンター",
+    "kana": "ゲームセンター",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "游戏厅，游戏中心"
+  },
+  {
+    "kanji": "カウンター",
+    "kana": "カウンター",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "柜台，服务台"
+  },
+  {
+    "kanji": "殿",
+    "kana": "～どの",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～先生，～台启"
+  },
+  {
+    "kanji": "～宛て",
+    "kana": "～あて",
+    "pitch": "",
+    "pos": "",
+    "meaning": "寄给～，送给～"
+  },
+  {
+    "kanji": "越える",
+    "kana": "こえる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "越过，翻过"
+  },
+  {
+    "kanji": "メモする",
+    "kana": "メモする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "做记录，做笔记"
+  },
+  {
+    "kanji": "工事",
+    "kana": "こうじ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "工程，工事"
+  },
+  {
+    "kanji": "運転免許",
+    "kana": "うんてんめんきょ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "驾驶证，驾驶执照"
+  },
+  {
+    "kanji": "花火",
+    "kana": "はなび",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "焰火，烟花"
+  },
+  {
+    "kanji": "一瞬",
+    "kana": "いっしゅん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "一瞬，一刹那"
+  },
+  {
+    "kanji": "下記",
+    "kana": "かき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "记在下面，下列"
+  },
+  {
+    "kanji": "詩集",
+    "kana": "ししゅう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "诗集"
+  },
+  {
+    "kanji": "感想",
+    "kana": "かんそう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "感想"
+  },
+  {
+    "kanji": "購買傾向",
+    "kana": "こうばいけいこう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "购买意向"
+  },
+  {
+    "kanji": "再度",
+    "kana": "さいど",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "再次，再一次"
+  },
+  {
+    "kanji": "係員",
+    "kana": "かかりいん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "工作人员，主管人员"
+  },
+  {
+    "kanji": "了承",
+    "kana": "りょうしょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "知晓，谅解"
+  },
+  {
+    "kanji": "願う",
+    "kana": "ねがう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "请求，要求，拜托"
+  }
+]

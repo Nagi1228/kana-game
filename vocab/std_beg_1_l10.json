@@ -1,0 +1,352 @@
+[
+  {
+    "kanji": "紅葉",
+    "kana": "もみじ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "红叶"
+  },
+  {
+    "kanji": "故郷",
+    "kana": "こきょう",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "故乡"
+  },
+  {
+    "kanji": "通り",
+    "kana": "とおり",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "大街"
+  },
+  {
+    "kanji": "町",
+    "kana": "まち",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "城市，街道"
+  },
+  {
+    "kanji": "所",
+    "kana": "ところ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "场所"
+  },
+  {
+    "kanji": "お店",
+    "kana": "おみせ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "餐馆；商店"
+  },
+  {
+    "kanji": "人形",
+    "kana": "にんぎょう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "玩偶"
+  },
+  {
+    "kanji": "作品",
+    "kana": "さくひん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "作品"
+  },
+  {
+    "kanji": "彫刻",
+    "kana": "ちょうこく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "雕刻"
+  },
+  {
+    "kanji": "自動車",
+    "kana": "じどうしゃ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "汽车"
+  },
+  {
+    "kanji": "道具",
+    "kana": "どうぐ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "工具"
+  },
+  {
+    "kanji": "魚",
+    "kana": "さかな",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "鱼"
+  },
+  {
+    "kanji": "お菓子",
+    "kana": "おかし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "点心"
+  },
+  {
+    "kanji": "物",
+    "kana": "もの",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "物品，东西"
+  },
+  {
+    "kanji": "シーズン",
+    "kana": "シーズン",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "季节"
+  },
+  {
+    "kanji": "修学旅行",
+    "kana": "しゅうがくりょこう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "修学旅行"
+  },
+  {
+    "kanji": "観光客",
+    "kana": "かんこうきゃく",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "游客"
+  },
+  {
+    "kanji": "作家",
+    "kana": "さっか",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "作家"
+  },
+  {
+    "kanji": "部長",
+    "kana": "ぶちょう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "部长"
+  },
+  {
+    "kanji": "平日",
+    "kana": "へいじつ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "平日，非休息日"
+  },
+  {
+    "kanji": "日",
+    "kana": "ひ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "日子"
+  },
+  {
+    "kanji": "生活",
+    "kana": "せいかつ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "生活"
+  },
+  {
+    "kanji": "世界",
+    "kana": "せかい",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "世界"
+  },
+  {
+    "kanji": "晴れ",
+    "kana": "はれ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "晴天"
+  },
+  {
+    "kanji": "雨",
+    "kana": "あめ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "雨，下雨"
+  },
+  {
+    "kanji": "曇り",
+    "kana": "くもり",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "阴天"
+  },
+  {
+    "kanji": "雪",
+    "kana": "ゆき",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "雪"
+  },
+  {
+    "kanji": "汚い",
+    "kana": "きたない",
+    "pitch": "③",
+    "pos": "形容词",
+    "meaning": "脏"
+  },
+  {
+    "kanji": "きれい",
+    "kana": "きれい",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "漂亮，干净"
+  },
+  {
+    "kanji": "有名",
+    "kana": "ゆうめい",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "有名"
+  },
+  {
+    "kanji": "にぎやか",
+    "kana": "にぎやか",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "热闹，繁华"
+  },
+  {
+    "kanji": "静か",
+    "kana": "しずか",
+    "pitch": "①",
+    "pos": "形容动词",
+    "meaning": "安静"
+  },
+  {
+    "kanji": "暇",
+    "kana": "ひま",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "空闲"
+  },
+  {
+    "kanji": "親切",
+    "kana": "しんせつ",
+    "pitch": "①",
+    "pos": "形容动词",
+    "meaning": "热情"
+  },
+  {
+    "kanji": "好き",
+    "kana": "すき",
+    "pitch": "②",
+    "pos": "形容动词",
+    "meaning": "喜欢"
+  },
+  {
+    "kanji": "嫌い",
+    "kana": "きらい",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "讨厌"
+  },
+  {
+    "kanji": "便利",
+    "kana": "べんり",
+    "pitch": "①",
+    "pos": "形容动词",
+    "meaning": "方便"
+  },
+  {
+    "kanji": "不便",
+    "kana": "ふべん",
+    "pitch": "①",
+    "pos": "形容动词",
+    "meaning": "不方便"
+  },
+  {
+    "kanji": "元気",
+    "kana": "げんき",
+    "pitch": "①",
+    "pos": "形容动词",
+    "meaning": "健康，有精神"
+  },
+  {
+    "kanji": "簡単",
+    "kana": "かんたん",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "简单"
+  },
+  {
+    "kanji": "ハンサム",
+    "kana": "ハンサム",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "英俊，帅气"
+  },
+  {
+    "kanji": "どんな",
+    "kana": "どんな",
+    "pitch": "①",
+    "pos": "代词",
+    "meaning": "什么样的，怎样的"
+  },
+  {
+    "kanji": "どう",
+    "kana": "どう",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "怎样，如何"
+  },
+  {
+    "kanji": "いかが",
+    "kana": "いかが",
+    "pitch": "②",
+    "pos": "副词",
+    "meaning": "如何"
+  },
+  {
+    "kanji": "いろいろ",
+    "kana": "いろいろ",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "各种各样"
+  },
+  {
+    "kanji": "でも",
+    "kana": "でも",
+    "pitch": "①",
+    "pos": "接续词",
+    "meaning": "可是，不过"
+  },
+  {
+    "kanji": "そして",
+    "kana": "そして",
+    "pitch": "⓪",
+    "pos": "接续词",
+    "meaning": "而且，于是"
+  },
+  {
+    "kanji": "ところで",
+    "kana": "ところで",
+    "pitch": "③",
+    "pos": "接续词",
+    "meaning": "（转换话题）哎"
+  },
+  {
+    "kanji": "あれえ",
+    "kana": "あれえ",
+    "pitch": "",
+    "pos": "感叹词",
+    "meaning": "咦"
+  },
+  {
+    "kanji": "日文",
+    "kana": "假名",
+    "pitch": "发音",
+    "pos": "类型",
+    "meaning": "中文"
+  }
+]

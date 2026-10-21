@@ -1,0 +1,555 @@
+[
+  {
+    "kanji": "プロジェクト",
+    "kana": "プロジェクト",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "项目，计划，企划"
+  },
+  {
+    "kanji": "その節",
+    "kana": "そのせつ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "那时，那次"
+  },
+  {
+    "kanji": "この間",
+    "kana": "このあいだ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "前些天，最近"
+  },
+  {
+    "kanji": "結構",
+    "kana": "けっこう",
+    "pitch": "①",
+    "pos": "形容动词",
+    "meaning": "很好，优秀；足够；不必"
+  },
+  {
+    "kanji": "寒さ",
+    "kana": "さむさ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "寒冷"
+  },
+  {
+    "kanji": "凍る",
+    "kana": "こおる",
+    "pitch": "⓪",
+    "pos": "动1",
+    "meaning": "结冰，结冻"
+  },
+  {
+    "kanji": "よく",
+    "kana": "よく",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "竟能，居然；好好地；常常"
+  },
+  {
+    "kanji": "平和",
+    "kana": "へいわ",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "和平"
+  },
+  {
+    "kanji": "休暇",
+    "kana": "きゅうか",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "休假，放假"
+  },
+  {
+    "kanji": "サイン",
+    "kana": "サイン",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "签名，签字，署名；暗号，信号"
+  },
+  {
+    "kanji": "指輪",
+    "kana": "ゆびわ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "戒指，指环"
+  },
+  {
+    "kanji": "若者",
+    "kana": "わかもの",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "年轻人"
+  },
+  {
+    "kanji": "順調",
+    "kana": "じゅんちょう",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "顺利，良好"
+  },
+  {
+    "kanji": "若さ",
+    "kana": "わかさ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "年轻"
+  },
+  {
+    "kanji": "懐かしい",
+    "kana": "なつかしい",
+    "pitch": "④",
+    "pos": "形容词",
+    "meaning": "怀念，留恋"
+  },
+  {
+    "kanji": "嫌",
+    "kana": "いや",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "讨厌，厌烦"
+  },
+  {
+    "kanji": "愛",
+    "kana": "あい",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "爱"
+  },
+  {
+    "kanji": "ありがたい",
+    "kana": "ありがたい",
+    "pitch": "④",
+    "pos": "形容词",
+    "meaning": "珍贵，难得；值得感谢"
+  },
+  {
+    "kanji": "礼儀",
+    "kana": "れいぎ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "礼仪，礼节，礼貌"
+  },
+  {
+    "kanji": "腰",
+    "kana": "こし",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "腰"
+  },
+  {
+    "kanji": "傾ける",
+    "kana": "かたむける",
+    "pitch": "④",
+    "pos": "动2",
+    "meaning": "倾，倾斜；倾注"
+  },
+  {
+    "kanji": "角度",
+    "kana": "かくど",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "角度"
+  },
+  {
+    "kanji": "首",
+    "kana": "くび",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "头，脑袋：脖子"
+  },
+  {
+    "kanji": "曲げる",
+    "kana": "まげる",
+    "pitch": "⓪",
+    "pos": "动2",
+    "meaning": "弄弯，歪曲"
+  },
+  {
+    "kanji": "初対面",
+    "kana": "しょたいめん",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "初次见面"
+  },
+  {
+    "kanji": "名刺",
+    "kana": "めいし",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "名片"
+  },
+  {
+    "kanji": "受け取る",
+    "kana": "うけとる",
+    "pitch": "⓪",
+    "pos": "动1",
+    "meaning": "接，接收，接受"
+  },
+  {
+    "kanji": "決まり",
+    "kana": "きまり",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "规定，规矩；决定"
+  },
+  {
+    "kanji": "目上",
+    "kana": "めうえ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "尊长，上司，长"
+  },
+  {
+    "kanji": "次に",
+    "kana": "つぎに",
+    "pitch": "②",
+    "pos": "接续词",
+    "meaning": "其次，接着"
+  },
+  {
+    "kanji": "両手",
+    "kana": "りょうて",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "双手，两手"
+  },
+  {
+    "kanji": "個人",
+    "kana": "こじん",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "私人，个人"
+  },
+  {
+    "kanji": "場",
+    "kana": "ば",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "场合；场面；场所"
+  },
+  {
+    "kanji": "年",
+    "kana": "とし",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "年龄，岁数"
+  },
+  {
+    "kanji": "不快",
+    "kana": "ふかい",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "不快，不高兴"
+  },
+  {
+    "kanji": "印象",
+    "kana": "いんしょう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "印象"
+  },
+  {
+    "kanji": "与える",
+    "kana": "あたえる",
+    "pitch": "⓪",
+    "pos": "动2",
+    "meaning": "给，给予，给与"
+  },
+  {
+    "kanji": "こもる",
+    "kana": "こもる",
+    "pitch": "②",
+    "pos": "动1",
+    "meaning": "充满，包含"
+  },
+  {
+    "kanji": "予想",
+    "kana": "よそう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "预料，预计，预想"
+  },
+  {
+    "kanji": "伝わる",
+    "kana": "つたわる",
+    "pitch": "⓪",
+    "pos": "动1",
+    "meaning": "传，传达；传摇，流传"
+  },
+  {
+    "kanji": "ゴム",
+    "kana": "ゴム",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "橡胶"
+  },
+  {
+    "kanji": "製造",
+    "kana": "せいぞう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "制造，生产"
+  },
+  {
+    "kanji": "加工",
+    "kana": "かこう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "加工"
+  },
+  {
+    "kanji": "片手",
+    "kana": "かたて",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "单手，一只手"
+  },
+  {
+    "kanji": "栄養",
+    "kana": "えいよう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "营养"
+  },
+  {
+    "kanji": "確認する",
+    "kana": "かくにんする",
+    "pitch": "⓪",
+    "pos": "动3",
+    "meaning": "确认，核实"
+  },
+  {
+    "kanji": "年齢",
+    "kana": "ねんれい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "年龄"
+  },
+  {
+    "kanji": "離れる",
+    "kana": "はなれる",
+    "pitch": "③",
+    "pos": "动2",
+    "meaning": "相隔，距离；分离，离开"
+  },
+  {
+    "kanji": "年寄り",
+    "kana": "としより",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "老年人，老人"
+  },
+  {
+    "kanji": "譲る",
+    "kana": "ゆずる",
+    "pitch": "⓪",
+    "pos": "动1",
+    "meaning": "让，让给；转让"
+  },
+  {
+    "kanji": "及ぶ",
+    "kana": "およぶ",
+    "pitch": "⓪",
+    "pos": "动1",
+    "meaning": "达，及"
+  },
+  {
+    "kanji": "案",
+    "kana": "あん",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "办法，方案；预想，意料"
+  },
+  {
+    "kanji": "あきれる",
+    "kana": "あきれる",
+    "pitch": "⓪",
+    "pos": "动2",
+    "meaning": "惊愕，愕然，目瞪口呆"
+  },
+  {
+    "kanji": "あんな",
+    "kana": "あんな",
+    "pitch": "⓪",
+    "pos": "连接词",
+    "meaning": "那样，那种"
+  },
+  {
+    "kanji": "かわいそう",
+    "kana": "かわいそう",
+    "pitch": "④",
+    "pos": "形容动词",
+    "meaning": "可怜"
+  },
+  {
+    "kanji": "近所迷惑",
+    "kana": "きんじょめいわく",
+    "pitch": "⑤",
+    "pos": "名词",
+    "meaning": "打扰邻里"
+  },
+  {
+    "kanji": "メンバー",
+    "kana": "メンバー",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "成员，队员"
+  },
+  {
+    "kanji": "思い",
+    "kana": "おもい",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "情感，感情；想法"
+  },
+  {
+    "kanji": "真心",
+    "kana": "まごころ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "诚心，真心，诚意"
+  },
+  {
+    "kanji": "こめる",
+    "kana": "こめる",
+    "pitch": "②",
+    "pos": "动2",
+    "meaning": "饱含，包括，包含；集中"
+  },
+  {
+    "kanji": "経つ",
+    "kana": "たつ",
+    "pitch": "①",
+    "pos": "动1",
+    "meaning": "(时间)过，流逝，消逝"
+  },
+  {
+    "kanji": "赤ん坊",
+    "kana": "あかんぼう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "婴儿"
+  },
+  {
+    "kanji": "どんなに",
+    "kana": "どんなに",
+    "pitch": "①",
+    "pos": "",
+    "meaning": "怎样，怎么"
+  },
+  {
+    "kanji": "どれだけ",
+    "kana": "どれだけ",
+    "pitch": "⓪",
+    "pos": "",
+    "meaning": "怎么，多么"
+  },
+  {
+    "kanji": "いかに",
+    "kana": "いかに",
+    "pitch": "⓪",
+    "pos": "",
+    "meaning": "怎样，怎么"
+  },
+  {
+    "kanji": "ファン",
+    "kana": "ファン",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "～迷，崇拜者"
+  },
+  {
+    "kanji": "市民",
+    "kana": "しみん",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "市民"
+  },
+  {
+    "kanji": "気分転換",
+    "kana": "きぶんてんかん",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "转换心情"
+  },
+  {
+    "kanji": "あらゆる",
+    "kana": "あらゆる",
+    "pitch": "②",
+    "pos": "连接词",
+    "meaning": "所有，一切"
+  },
+  {
+    "kanji": "示す",
+    "kana": "しめす",
+    "pitch": "①",
+    "pos": "动1",
+    "meaning": "表现出，表示；出示"
+  },
+  {
+    "kanji": "笑顔",
+    "kana": "えがお",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "笑脸"
+  },
+  {
+    "kanji": "事実",
+    "kana": "じじつ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "事实"
+  },
+  {
+    "kanji": "無駄使い",
+    "kana": "むだづかい",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "浪费，滥用"
+  },
+  {
+    "kanji": "食塩",
+    "kana": "しょくえん",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "食盐"
+  },
+  {
+    "kanji": "紫外線",
+    "kana": "しがいせん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "紫外线"
+  },
+  {
+    "kanji": "わずか",
+    "kana": "わずか",
+    "pitch": "①",
+    "pos": "形容动词",
+    "meaning": "很少，一点点，仅仅"
+  },
+  {
+    "kanji": "わがまま",
+    "kana": "わがまま",
+    "pitch": "③",
+    "pos": "形容动词",
+    "meaning": "任性，恣意"
+  },
+  {
+    "kanji": "付き合う",
+    "kana": "つきあう",
+    "pitch": "③",
+    "pos": "动1",
+    "meaning": "交往，来往"
+  },
+  {
+    "kanji": "怠ける",
+    "kana": "なまける",
+    "pitch": "③",
+    "pos": "动2",
+    "meaning": "懒悄，懈怠"
+  }
+]

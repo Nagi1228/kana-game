@@ -1,0 +1,366 @@
+[
+  {
+    "kanji": "船便",
+    "kana": "ふなびん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "海运"
+  },
+  {
+    "kanji": "書類",
+    "kana": "しょるい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "文件，文稿"
+  },
+  {
+    "kanji": "原稿",
+    "kana": "げんこう",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "稿子，原稿"
+  },
+  {
+    "kanji": "記事",
+    "kana": "きじ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "报道"
+  },
+  {
+    "kanji": "メモ",
+    "kana": "メモ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "记录"
+  },
+  {
+    "kanji": "駅前",
+    "kana": "えきまえ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "车站一带"
+  },
+  {
+    "kanji": "橋",
+    "kana": "はし",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "桥，桥梁"
+  },
+  {
+    "kanji": "角",
+    "kana": "かど",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "拐角"
+  },
+  {
+    "kanji": "横断歩道",
+    "kana": "おうだんほどう",
+    "pitch": "⑤",
+    "pos": "名词",
+    "meaning": "人行横道"
+  },
+  {
+    "kanji": "右",
+    "kana": "みぎ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "右，右边"
+  },
+  {
+    "kanji": "左",
+    "kana": "ひだり",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "左，左边"
+  },
+  {
+    "kanji": "交差点",
+    "kana": "こうさてん",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "十字路口"
+  },
+  {
+    "kanji": "道",
+    "kana": "みち",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "路，道路"
+  },
+  {
+    "kanji": "ドア",
+    "kana": "ドア",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "门"
+  },
+  {
+    "kanji": "電気",
+    "kana": "でんき",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "电，电力"
+  },
+  {
+    "kanji": "太極拳",
+    "kana": "たいきょくけん",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "太极拳"
+  },
+  {
+    "kanji": "朝ご飯",
+    "kana": "あさごはん",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "早饭"
+  },
+  {
+    "kanji": "晩ご飯",
+    "kana": "ばんごはん",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "晚饭"
+  },
+  {
+    "kanji": "バーベキュー",
+    "kana": "バーベキュー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "户外烧烤"
+  },
+  {
+    "kanji": "通る",
+    "kana": "とおる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "通过，经过"
+  },
+  {
+    "kanji": "急ぐ",
+    "kana": "いそぐ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "急，急忙"
+  },
+  {
+    "kanji": "飛ぶ",
+    "kana": "とぶ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "飞，飞行"
+  },
+  {
+    "kanji": "死ぬ",
+    "kana": "しぬ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "死，死亡"
+  },
+  {
+    "kanji": "待つ",
+    "kana": "まつ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "等待，等候"
+  },
+  {
+    "kanji": "売る",
+    "kana": "うる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "卖，销售"
+  },
+  {
+    "kanji": "話す",
+    "kana": "はなす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "说话，说"
+  },
+  {
+    "kanji": "渡る",
+    "kana": "わたる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "过（桥，河），穿过（马路）"
+  },
+  {
+    "kanji": "下ろす",
+    "kana": "おろす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "取，卸货"
+  },
+  {
+    "kanji": "選ぶ",
+    "kana": "えらぶ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "挑选，选择"
+  },
+  {
+    "kanji": "消す",
+    "kana": "けす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "关（灯），消除，去除"
+  },
+  {
+    "kanji": "歩く",
+    "kana": "あるく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "步行，行走"
+  },
+  {
+    "kanji": "曲がる",
+    "kana": "まがる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "拐弯，曲折"
+  },
+  {
+    "kanji": "洗う",
+    "kana": "あらう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "洗，洗涤"
+  },
+  {
+    "kanji": "出る",
+    "kana": "でる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "离开"
+  },
+  {
+    "kanji": "出かける",
+    "kana": "でかける",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "外出，出门"
+  },
+  {
+    "kanji": "開ける",
+    "kana": "あける",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "开，打开，开启"
+  },
+  {
+    "kanji": "過ぎる",
+    "kana": "すぎる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "过"
+  },
+  {
+    "kanji": "見せる",
+    "kana": "みせる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "给～看；出示"
+  },
+  {
+    "kanji": "つける",
+    "kana": "つける",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "开（灯）"
+  },
+  {
+    "kanji": "降りる",
+    "kana": "おりる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "下（车，山）"
+  },
+  {
+    "kanji": "買い物する",
+    "kana": "かいものする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "买东西"
+  },
+  {
+    "kanji": "卒業する",
+    "kana": "そつぎょうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "毕业"
+  },
+  {
+    "kanji": "食事する",
+    "kana": "しょくじする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "吃饭，用餐"
+  },
+  {
+    "kanji": "整理する",
+    "kana": "せいりする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "整理"
+  },
+  {
+    "kanji": "コピーする",
+    "kana": "コピーする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "复印"
+  },
+  {
+    "kanji": "暗い",
+    "kana": "くらい",
+    "pitch": "⓪",
+    "pos": "形容词",
+    "meaning": "黑暗，昏暗"
+  },
+  {
+    "kanji": "大変",
+    "kana": "たいへん",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "够受的，不得了"
+  },
+  {
+    "kanji": "なかなか",
+    "kana": "なかなか",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "相当，很，非常"
+  },
+  {
+    "kanji": "こう",
+    "kana": "こう",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "这样，如此"
+  },
+  {
+    "kanji": "そう/ああ",
+    "kana": "そう/ああ",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "那样"
+  },
+  {
+    "kanji": "後で",
+    "kana": "あとで",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "过会儿"
+  },
+  {
+    "kanji": "それから",
+    "kana": "それから",
+    "pitch": "⓪",
+    "pos": "接续词",
+    "meaning": "然后"
+  }
+]

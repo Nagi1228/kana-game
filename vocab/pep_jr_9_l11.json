@@ -1,0 +1,422 @@
+[
+  {
+    "kanji": "桃源郷",
+    "kana": "とうげんきょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "世外桃源"
+  },
+  {
+    "kanji": "野生",
+    "kana": "やせい",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "野生"
+  },
+  {
+    "kanji": "根本",
+    "kana": "こんぽん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "根本，根源，基础"
+  },
+  {
+    "kanji": "",
+    "kana": "そこで",
+    "pitch": "⓪",
+    "pos": "连",
+    "meaning": "因此，于是"
+  },
+  {
+    "kanji": "保護区",
+    "kana": "ほごく",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "保护区"
+  },
+  {
+    "kanji": "設立",
+    "kana": "せつりつ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "设立，成立"
+  },
+  {
+    "kanji": "整える",
+    "kana": "ととのえる",
+    "pitch": "④",
+    "pos": "动2他",
+    "meaning": "备齐，准备好；整理，整顿"
+  },
+  {
+    "kanji": "産む",
+    "kana": "うむ",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "生产，分娩；产生，创造"
+  },
+  {
+    "kanji": "破壊",
+    "kana": "はかい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "破坏"
+  },
+  {
+    "kanji": "傷害",
+    "kana": "しょうがい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "伤害"
+  },
+  {
+    "kanji": "利益",
+    "kana": "りえき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "利益"
+  },
+  {
+    "kanji": "盗伐",
+    "kana": "とうばつ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "盗伐"
+  },
+  {
+    "kanji": "密猟",
+    "kana": "みつりょう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "非法狩猎"
+  },
+  {
+    "kanji": "犯罪行為",
+    "kana": "はんざいこうい",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "犯罪行为"
+  },
+  {
+    "kanji": "専門家",
+    "kana": "せんもんか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "专家"
+  },
+  {
+    "kanji": "専門知識",
+    "kana": "せんもんちしき",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "专业知识"
+  },
+  {
+    "kanji": "生かす",
+    "kana": "いかす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "活用，发挥"
+  },
+  {
+    "kanji": "意義",
+    "kana": "いぎ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "意义，价值；意思"
+  },
+  {
+    "kanji": "手段",
+    "kana": "しゅだん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "手段"
+  },
+  {
+    "kanji": "面",
+    "kana": "めん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "方面"
+  },
+  {
+    "kanji": "",
+    "kana": "ジャイアントパンダ",
+    "pitch": "⑥",
+    "pos": "名",
+    "meaning": "大熊猫"
+  },
+  {
+    "kanji": "",
+    "kana": "レッサーパンダ",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "小熊猫"
+  },
+  {
+    "kanji": "飼育",
+    "kana": "しいく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "饲养"
+  },
+  {
+    "kanji": "繁殖",
+    "kana": "はんしょく",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "繁殖"
+  },
+  {
+    "kanji": "野外",
+    "kana": "やがい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "野外；户外"
+  },
+  {
+    "kanji": "絶滅",
+    "kana": "ぜつめつ",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "灭绝，根绝"
+  },
+  {
+    "kanji": "危機",
+    "kana": "きき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "危机，险关"
+  },
+  {
+    "kanji": "喜ばしい",
+    "kana": "よろこばしい",
+    "pitch": "⑤",
+    "pos": "形1",
+    "meaning": "喜悦，值得高兴"
+  },
+  {
+    "kanji": "湿地",
+    "kana": "しっち",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "湿地"
+  },
+  {
+    "kanji": "珍しい",
+    "kana": "めずらしい",
+    "pitch": "④",
+    "pos": "形1",
+    "meaning": "稀奇，少有"
+  },
+  {
+    "kanji": "鳥類",
+    "kana": "ちょうるい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "鸟类"
+  },
+  {
+    "kanji": "楽園",
+    "kana": "らくえん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "乐园"
+  },
+  {
+    "kanji": "鶴",
+    "kana": "つる",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "鹤，仙鹤"
+  },
+  {
+    "kanji": "故郷",
+    "kana": "こきょう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "故乡，老家"
+  },
+  {
+    "kanji": "名",
+    "kana": "な",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "名字，名声"
+  },
+  {
+    "kanji": "",
+    "kana": "タンチョウ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "丹顶鹤"
+  },
+  {
+    "kanji": "夕日",
+    "kana": "ゆうひ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "夕阳"
+  },
+  {
+    "kanji": "親子",
+    "kana": "おやこ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "亲子"
+  },
+  {
+    "kanji": "",
+    "kana": "トキ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "朱鹮"
+  },
+  {
+    "kanji": "復帰",
+    "kana": "ふっき",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "复归，回归"
+  },
+  {
+    "kanji": "",
+    "kana": "ステーション",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "站，所，局"
+  },
+  {
+    "kanji": "共同",
+    "kana": "きょうどう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "共同"
+  },
+  {
+    "kanji": "中国産",
+    "kana": "ちゅうごくさん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "中国产；中国制造"
+  },
+  {
+    "kanji": "得る",
+    "kana": "える",
+    "pitch": "①",
+    "pos": "动2他",
+    "meaning": "得到，获得"
+  },
+  {
+    "kanji": "",
+    "kana": "ペア",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "两人一组"
+  },
+  {
+    "kanji": "人工",
+    "kana": "じんこう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "人工，人造，人为"
+  },
+  {
+    "kanji": "収める",
+    "kana": "おさめる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "取得，获得；收纳，收藏"
+  },
+  {
+    "kanji": "措置",
+    "kana": "そち",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "措施，处理方法"
+  },
+  {
+    "kanji": "名称",
+    "kana": "めいしょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "名称"
+  },
+  {
+    "kanji": "対象",
+    "kana": "たいしょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "对象"
+  },
+  {
+    "kanji": "入院",
+    "kana": "にゅういん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "住院"
+  },
+  {
+    "kanji": "手術",
+    "kana": "しゅじゅつ",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "（做）手术"
+  },
+  {
+    "kanji": "不景気",
+    "kana": "ふけいき",
+    "pitch": "②",
+    "pos": "名·形2",
+    "meaning": "不景气，萧条"
+  },
+  {
+    "kanji": "辞める",
+    "kana": "やめる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "辞职"
+  },
+  {
+    "kanji": "駐車場",
+    "kana": "ちゅうしゃじょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "停车场"
+  },
+  {
+    "kanji": "費用",
+    "kana": "ひよう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "费用"
+  },
+  {
+    "kanji": "ガソリン代",
+    "kana": "ガソリンだい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "汽油费"
+  },
+  {
+    "kanji": "差す",
+    "kana": "さす",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "打，撑；照射"
+  },
+  {
+    "kanji": "",
+    "kana": "ぎりぎり",
+    "pitch": "⓪",
+    "pos": "名·形2·副",
+    "meaning": "最大限度，极限"
+  },
+  {
+    "kanji": "",
+    "kana": "コピー",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "拷贝，复制；副本；抄写"
+  }
+]

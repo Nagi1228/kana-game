@@ -1,0 +1,534 @@
+[
+  {
+    "kanji": "",
+    "kana": "モノのインターネット",
+    "pitch": "⑧",
+    "pos": "名",
+    "meaning": "物联网"
+  },
+  {
+    "kanji": "人工知能",
+    "kana": "じんこうちのう",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "人工智能"
+  },
+  {
+    "kanji": "活用",
+    "kana": "かつよう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "有效利用"
+  },
+  {
+    "kanji": "交換",
+    "kana": "こうかん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "交换"
+  },
+  {
+    "kanji": "支払う",
+    "kana": "しはらう",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "支付，支出"
+  },
+  {
+    "kanji": "小包",
+    "kana": "こづつみ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "小包裹"
+  },
+  {
+    "kanji": "仕分ける",
+    "kana": "しわける",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "分开，区分"
+  },
+  {
+    "kanji": "囲碁",
+    "kana": "いご",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "围棋"
+  },
+  {
+    "kanji": "警察",
+    "kana": "けいさつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "警察"
+  },
+  {
+    "kanji": "",
+    "kana": "スクリーン",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "银幕，屏幕"
+  },
+  {
+    "kanji": "映る",
+    "kana": "うつる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "映，照"
+  },
+  {
+    "kanji": "枠",
+    "kana": "わく",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "框，框架；范围"
+  },
+  {
+    "kanji": "映像",
+    "kana": "えいぞう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "映像，影像"
+  },
+  {
+    "kanji": "実物",
+    "kana": "じつぶつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "实物"
+  },
+  {
+    "kanji": "音声",
+    "kana": "おんせい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "声音"
+  },
+  {
+    "kanji": "",
+    "kana": "スマートホーム",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "智能家居"
+  },
+  {
+    "kanji": "",
+    "kana": "タブレット",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "平板电脑"
+  },
+  {
+    "kanji": "",
+    "kana": "スピーカー",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "音箱，扬声器"
+  },
+  {
+    "kanji": "家電",
+    "kana": "かでん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "家电"
+  },
+  {
+    "kanji": "管理",
+    "kana": "かんり",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "管理"
+  },
+  {
+    "kanji": "案内書",
+    "kana": "あんないしょ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "参考手册，简介"
+  },
+  {
+    "kanji": "AIoT",
+    "kana": "エーアイオーティー",
+    "pitch": "⑦",
+    "pos": "名",
+    "meaning": "智能物联网"
+  },
+  {
+    "kanji": "試す",
+    "kana": "ためす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "试，尝试"
+  },
+  {
+    "kanji": "手動",
+    "kana": "しゅどう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "手动"
+  },
+  {
+    "kanji": "",
+    "kana": "アプリ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "应用程序"
+  },
+  {
+    "kanji": "",
+    "kana": "インストール",
+    "pitch": "④",
+    "pos": "名·动3他",
+    "meaning": "安装"
+  },
+  {
+    "kanji": "組み込む",
+    "kana": "くみこむ",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "编入"
+  },
+  {
+    "kanji": "",
+    "kana": "いらっしゃる",
+    "pitch": "④",
+    "pos": "动1自",
+    "meaning": "（敬语）来；去；在"
+  },
+  {
+    "kanji": "留学生",
+    "kana": "りゅうがくせい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "留学生"
+  },
+  {
+    "kanji": "勘違い",
+    "kana": "かんちがい",
+    "pitch": "③",
+    "pos": "名·动3自",
+    "meaning": "错认，误解"
+  },
+  {
+    "kanji": "",
+    "kana": "ただ",
+    "pitch": "①",
+    "pos": "名·副",
+    "meaning": "免费；只是，不过是"
+  },
+  {
+    "kanji": "",
+    "kana": "スマートロボット",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "智能机器人"
+  },
+  {
+    "kanji": "",
+    "kana": "ディープラーニング",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "深度"
+  },
+  {
+    "kanji": "IoT",
+    "kana": "アイオーティー",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "物联网"
+  },
+  {
+    "kanji": "伝達",
+    "kana": "でんたつ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "传递，传达"
+  },
+  {
+    "kanji": "産業",
+    "kana": "さんぎょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "产业，实业，工业"
+  },
+  {
+    "kanji": "物理",
+    "kana": "ぶつり",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "物理"
+  },
+  {
+    "kanji": "盆栽",
+    "kana": "ぼんさい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "盆栽"
+  },
+  {
+    "kanji": "首輪",
+    "kana": "くびわ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "项圈"
+  },
+  {
+    "kanji": "送信",
+    "kana": "そうしん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "发送信息"
+  },
+  {
+    "kanji": "受信",
+    "kana": "じゅしん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "接收信息"
+  },
+  {
+    "kanji": "",
+    "kana": "サイト",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "网页"
+  },
+  {
+    "kanji": "",
+    "kana": "メニュー",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "菜谱"
+  },
+  {
+    "kanji": "",
+    "kana": "おでん",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "杂烩，关东煮"
+  },
+  {
+    "kanji": "",
+    "kana": "いかが",
+    "pitch": "②",
+    "pos": "副",
+    "meaning": "怎么样，如何"
+  },
+  {
+    "kanji": "対話",
+    "kana": "たいわ",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "对话"
+  },
+  {
+    "kanji": "献立",
+    "kana": "こんだて",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "菜单"
+  },
+  {
+    "kanji": "",
+    "kana": "このごろ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "近来，近些时候，现在"
+  },
+  {
+    "kanji": "",
+    "kana": "カーテン",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "窗帘"
+  },
+  {
+    "kanji": "",
+    "kana": "サポート",
+    "pitch": "②",
+    "pos": "名·动3他",
+    "meaning": "支持"
+  },
+  {
+    "kanji": "隅",
+    "kana": "すみ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "角落"
+  },
+  {
+    "kanji": "起こす",
+    "kana": "おこす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "叫醒；扶起"
+  },
+  {
+    "kanji": "",
+    "kana": "まずい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "难吃；拙劣；不合适"
+  },
+  {
+    "kanji": "開け閉め",
+    "kana": "あけしめ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "开关，开合"
+  },
+  {
+    "kanji": "",
+    "kana": "ビッグデータ",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "大数据"
+  },
+  {
+    "kanji": "",
+    "kana": "クラウドサービス",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "云存储，云服务"
+  },
+  {
+    "kanji": "基盤",
+    "kana": "きばん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "基础，底子"
+  },
+  {
+    "kanji": "",
+    "kana": "スマートシティ",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "智慧城市"
+  },
+  {
+    "kanji": "",
+    "kana": "スマートライフ",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "智慧生活"
+  },
+  {
+    "kanji": "",
+    "kana": "メリット",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "优点"
+  },
+  {
+    "kanji": "",
+    "kana": "デメリット",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "缺点"
+  },
+  {
+    "kanji": "生産",
+    "kana": "せいさん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "生产"
+  },
+  {
+    "kanji": "効率",
+    "kana": "こうりつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "效率"
+  },
+  {
+    "kanji": "",
+    "kana": "リスク",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "风险"
+  },
+  {
+    "kanji": "命令",
+    "kana": "めいれい",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "命令"
+  },
+  {
+    "kanji": "下す",
+    "kana": "くだす",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "下达；降，落"
+  },
+  {
+    "kanji": "要求",
+    "kana": "ようきゅう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "要求，请求"
+  },
+  {
+    "kanji": "怠ける",
+    "kana": "なまける",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "懒惰，懈怠，偷懒"
+  },
+  {
+    "kanji": "天気予報",
+    "kana": "てんきよほう",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "天气预报"
+  },
+  {
+    "kanji": "性質",
+    "kana": "せいしつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "性质"
+  },
+  {
+    "kanji": "素人",
+    "kana": "しろうと",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "外行，门外汉"
+  },
+  {
+    "kanji": "柱",
+    "kana": "はしら",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "柱子"
+  },
+  {
+    "kanji": "設備",
+    "kana": "せつび",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "设备"
+  },
+  {
+    "kanji": "故障",
+    "kana": "こしょう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "故障，事故"
+  },
+  {
+    "kanji": "割り勘",
+    "kana": "わりかん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "分摊"
+  },
+  {
+    "kanji": "職業",
+    "kana": "しょくぎょう",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "职业"
+  }
+]

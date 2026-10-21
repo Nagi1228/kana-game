@@ -1,0 +1,422 @@
+[
+  {
+    "kanji": "充実",
+    "kana": "じゅうじつ",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "充实"
+  },
+  {
+    "kanji": "実践",
+    "kana": "じっせん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "实践"
+  },
+  {
+    "kanji": "消防",
+    "kana": "しょうぼう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "消防"
+  },
+  {
+    "kanji": "訓練",
+    "kana": "くんれん",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "训练"
+  },
+  {
+    "kanji": "消火器",
+    "kana": "しょうかき",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "灭火器"
+  },
+  {
+    "kanji": "実際",
+    "kana": "じっさい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "实际"
+  },
+  {
+    "kanji": "火",
+    "kana": "ひ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "火"
+  },
+  {
+    "kanji": "消す",
+    "kana": "けす",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "熄灭, 关闭; 抹去"
+  },
+  {
+    "kanji": "防災",
+    "kana": "ぼうさい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "防灾"
+  },
+  {
+    "kanji": "思う",
+    "kana": "おもう",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "认为，想，考虑"
+  },
+  {
+    "kanji": "災害",
+    "kana": "さいがい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "灾害"
+  },
+  {
+    "kanji": "必ず",
+    "kana": "かならず",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "必定, 一定"
+  },
+  {
+    "kanji": "沿う",
+    "kana": "そう",
+    "pitch": "①",
+    "pos": "动1自",
+    "meaning": "按照，遵循；沿着，顺着"
+  },
+  {
+    "kanji": "果樹園",
+    "kana": "かじゅえん",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "果园"
+  },
+  {
+    "kanji": "果樹",
+    "kana": "かじゅ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "果树"
+  },
+  {
+    "kanji": "観察",
+    "kana": "かんさつ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "观察"
+  },
+  {
+    "kanji": "習う",
+    "kana": "ならう",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "学习(技艺等)"
+  },
+  {
+    "kanji": "印刷",
+    "kana": "いんさつ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "印刷"
+  },
+  {
+    "kanji": "",
+    "kana": "レポート",
+    "pitch": "②",
+    "pos": "名·动3他",
+    "meaning": "报告"
+  },
+  {
+    "kanji": "活字",
+    "kana": "かつじ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "活字"
+  },
+  {
+    "kanji": "道具",
+    "kana": "どうぐ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "道具"
+  },
+  {
+    "kanji": "展示",
+    "kana": "てんじ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "展示, 展出"
+  },
+  {
+    "kanji": "印刷品",
+    "kana": "いんさつひん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "印刷品"
+  },
+  {
+    "kanji": "印刷術",
+    "kana": "いんさつじゅつ",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "印刷术"
+  },
+  {
+    "kanji": "最新",
+    "kana": "さいしん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "最新"
+  },
+  {
+    "kanji": "力",
+    "kana": "ちから",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "力, 力量"
+  },
+  {
+    "kanji": "尽くす",
+    "kana": "つくす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "竭尽"
+  },
+  {
+    "kanji": "深まる",
+    "kana": "ふかまる",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "加深"
+  },
+  {
+    "kanji": "",
+    "kana": "レーザー",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "激光"
+  },
+  {
+    "kanji": "写真植字",
+    "kana": "しゃしんしょくじ",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "照相排版"
+  },
+  {
+    "kanji": "満足",
+    "kana": "まんぞく",
+    "pitch": "①",
+    "pos": "名·动3自他",
+    "meaning": "满足"
+  },
+  {
+    "kanji": "社会",
+    "kana": "しゃかい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "社会"
+  },
+  {
+    "kanji": "視野",
+    "kana": "しや",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "眼界; 视野"
+  },
+  {
+    "kanji": "流れ",
+    "kana": "ながれ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "流程；(水)流，流动"
+  },
+  {
+    "kanji": "並べ替える",
+    "kana": "ならべかえる",
+    "pitch": "④",
+    "pos": "动2他",
+    "meaning": "调整顺序"
+  },
+  {
+    "kanji": "",
+    "kana": "ガイド",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "向导; 指南; 引导"
+  },
+  {
+    "kanji": "海岸線",
+    "kana": "かいがんせん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "海岸线"
+  },
+  {
+    "kanji": "指示",
+    "kana": "しじ",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "指示, 吩咐"
+  },
+  {
+    "kanji": "実験",
+    "kana": "じっけん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "实验"
+  },
+  {
+    "kanji": "",
+    "kana": "うまい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "顺利; 高明; 可口"
+  },
+  {
+    "kanji": "立てる",
+    "kana": "たてる",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "制订(计划)；立，竖"
+  },
+  {
+    "kanji": "説明書",
+    "kana": "せつめいしょ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "说明书"
+  },
+  {
+    "kanji": "操作",
+    "kana": "そうさ",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "操纵, 操作"
+  },
+  {
+    "kanji": "遅れる",
+    "kana": "おくれる",
+    "pitch": "③",
+    "pos": "动2自",
+    "meaning": "迟到; 落后"
+  },
+  {
+    "kanji": "間に合う",
+    "kana": "まにあう",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "来得及"
+  },
+  {
+    "kanji": "別",
+    "kana": "べつ",
+    "pitch": "①",
+    "pos": "名·形2",
+    "meaning": "另外; 区别"
+  },
+  {
+    "kanji": "引っ越す",
+    "kana": "ひっこす",
+    "pitch": "③",
+    "pos": "动1自他",
+    "meaning": "搬家，搬迁"
+  },
+  {
+    "kanji": "若い",
+    "kana": "わかい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "年轻"
+  },
+  {
+    "kanji": "頃",
+    "kana": "ころ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "大概的时期，时候"
+  },
+  {
+    "kanji": "選手",
+    "kana": "せんしゅ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "选手, 运动员"
+  },
+  {
+    "kanji": "壊れる",
+    "kana": "こわれる",
+    "pitch": "③",
+    "pos": "动2自",
+    "meaning": "毁坏, 破损"
+  },
+  {
+    "kanji": "修理",
+    "kana": "しゅうり",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "修理"
+  },
+  {
+    "kanji": "以前",
+    "kana": "いぜん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "以前"
+  },
+  {
+    "kanji": "漫画家",
+    "kana": "まんがか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "漫画家"
+  },
+  {
+    "kanji": "",
+    "kana": "サラリーマン",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "公司职员"
+  },
+  {
+    "kanji": "",
+    "kana": "たぶん",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "大概"
+  },
+  {
+    "kanji": "期末",
+    "kana": "きまつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "期末"
+  },
+  {
+    "kanji": "寝室",
+    "kana": "しんしつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "卧室, 寝室"
+  },
+  {
+    "kanji": "",
+    "kana": "ペン",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "笔, 钢笔"
+  },
+  {
+    "kanji": "考え",
+    "kana": "かんがえ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "想法, 意见"
+  }
+]

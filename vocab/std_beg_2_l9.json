@@ -1,0 +1,324 @@
+[
+  {
+    "kanji": "スーツケース",
+    "kana": "スーツケース",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "旅行箱"
+  },
+  {
+    "kanji": "トランク",
+    "kana": "トランク",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "后备箱；手提箱，皮箱"
+  },
+  {
+    "kanji": "スーツ",
+    "kana": "スーツ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "西服，女套装"
+  },
+  {
+    "kanji": "ズボン",
+    "kana": "ズボン",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "裤子"
+  },
+  {
+    "kanji": "Tシャツ",
+    "kana": "ティーシャツ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "T恤衫"
+  },
+  {
+    "kanji": "サンダル",
+    "kana": "サンダル",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "凉鞋"
+  },
+  {
+    "kanji": "帽子",
+    "kana": "ぼうし",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "帽子"
+  },
+  {
+    "kanji": "腕時計",
+    "kana": "うでどけい",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "手表"
+  },
+  {
+    "kanji": "小物",
+    "kana": "こもの",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "小东西，细小的附件"
+  },
+  {
+    "kanji": "運転手",
+    "kana": "うんてんしゅ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "司机"
+  },
+  {
+    "kanji": "空",
+    "kana": "から",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "空"
+  },
+  {
+    "kanji": "運動会",
+    "kana": "うんどうかい",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "运动会"
+  },
+  {
+    "kanji": "チーム",
+    "kana": "チーム",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "队，团体"
+  },
+  {
+    "kanji": "最後",
+    "kana": "さいご",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "最后"
+  },
+  {
+    "kanji": "再会",
+    "kana": "さいかい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "重逢，再会"
+  },
+  {
+    "kanji": "久しぶり",
+    "kana": "ひさしぶり",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "好久不见"
+  },
+  {
+    "kanji": "カキ",
+    "kana": "カキ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "柿子"
+  },
+  {
+    "kanji": "清涼飲料水",
+    "kana": "せいりょういんりょうすい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "清凉饮料"
+  },
+  {
+    "kanji": "閉まる",
+    "kana": "しまる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "关闭，关"
+  },
+  {
+    "kanji": "壊す",
+    "kana": "こわす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "弄坏"
+  },
+  {
+    "kanji": "割る",
+    "kana": "わる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "割开，打破，打坏"
+  },
+  {
+    "kanji": "付く",
+    "kana": "つく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "附带，附加"
+  },
+  {
+    "kanji": "掛かる",
+    "kana": "かかる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "挂，悬挂"
+  },
+  {
+    "kanji": "汚す",
+    "kana": "よごす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "弄脏"
+  },
+  {
+    "kanji": "やむ",
+    "kana": "やむ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "停，停息，停止"
+  },
+  {
+    "kanji": "建つ",
+    "kana": "たつ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "盖，建"
+  },
+  {
+    "kanji": "並ぶ",
+    "kana": "ならぶ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "排队，排，列队"
+  },
+  {
+    "kanji": "着く",
+    "kana": "つく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "到，到达"
+  },
+  {
+    "kanji": "かぶる",
+    "kana": "かぶる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "戴"
+  },
+  {
+    "kanji": "はく",
+    "kana": "はく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "穿（鞋，裤子）"
+  },
+  {
+    "kanji": "飼う",
+    "kana": "かう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "饲养"
+  },
+  {
+    "kanji": "消える",
+    "kana": "きえる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "熄灭，消失"
+  },
+  {
+    "kanji": "掛ける",
+    "kana": "かける",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "挂"
+  },
+  {
+    "kanji": "落ちる",
+    "kana": "おちる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "落下，掉"
+  },
+  {
+    "kanji": "割れる",
+    "kana": "われる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "裂开，破裂"
+  },
+  {
+    "kanji": "建てる",
+    "kana": "たてる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "盖，建造"
+  },
+  {
+    "kanji": "負ける",
+    "kana": "まける",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "输，败"
+  },
+  {
+    "kanji": "汚れる",
+    "kana": "よごれる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "脏"
+  },
+  {
+    "kanji": "偉い",
+    "kana": "えらい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "了不起，伟大"
+  },
+  {
+    "kanji": "楽",
+    "kana": "らく",
+    "pitch": "②",
+    "pos": "形容动词",
+    "meaning": "容易，简易；快乐，轻松"
+  },
+  {
+    "kanji": "残念",
+    "kana": "ざんねん",
+    "pitch": "③",
+    "pos": "形容动词",
+    "meaning": "可惜，遗憾"
+  },
+  {
+    "kanji": "急に",
+    "kana": "きゅうに",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "突然"
+  },
+  {
+    "kanji": "全部",
+    "kana": "ぜんぶ",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "全部"
+  },
+  {
+    "kanji": "相変わらず",
+    "kana": "あいかわらず",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "照旧，依然"
+  },
+  {
+    "kanji": "うっかり",
+    "kana": "うっかり",
+    "pitch": "③",
+    "pos": "副词",
+    "meaning": "不留神，不注意"
+  },
+  {
+    "kanji": "それにしても",
+    "kana": "それにしても",
+    "pitch": "",
+    "pos": "接续词",
+    "meaning": "即便那样，话虽如此"
+  }
+]

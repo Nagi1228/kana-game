@@ -1,0 +1,513 @@
+[
+  {
+    "kanji": "運動会",
+    "kana": "うんどうかい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "运动会"
+  },
+  {
+    "kanji": "写真",
+    "kana": "しゃしん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "照片"
+  },
+  {
+    "kanji": "",
+    "kana": "いっぱい",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "很多; 充满"
+  },
+  {
+    "kanji": "",
+    "kana": "どの",
+    "pitch": "①",
+    "pos": "连体",
+    "meaning": "哪, 哪个"
+  },
+  {
+    "kanji": "",
+    "kana": "この",
+    "pitch": "⓪",
+    "pos": "连体",
+    "meaning": "这, 这个"
+  },
+  {
+    "kanji": "",
+    "kana": "メートル",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "米"
+  },
+  {
+    "kanji": "",
+    "kana": "リレー",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "接力赛跑；接力，传递"
+  },
+  {
+    "kanji": "参加",
+    "kana": "さんか",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "参加"
+  },
+  {
+    "kanji": "",
+    "kana": "その",
+    "pitch": "⓪",
+    "pos": "连体",
+    "meaning": "那, 那个"
+  },
+  {
+    "kanji": "",
+    "kana": "ゴール",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "终点; 球门"
+  },
+  {
+    "kanji": "時",
+    "kana": "とき",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "时候, 时间"
+  },
+  {
+    "kanji": "応援",
+    "kana": "おうえん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "助威； 援助"
+  },
+  {
+    "kanji": "",
+    "kana": "あの",
+    "pitch": "⓪",
+    "pos": "连体",
+    "meaning": "那, 那个"
+  },
+  {
+    "kanji": "位",
+    "kana": "い",
+    "pitch": "",
+    "pos": "后缀",
+    "meaning": "位, 名"
+  },
+  {
+    "kanji": "綱引き",
+    "kana": "つなひき",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "拔河"
+  },
+  {
+    "kanji": "優勝",
+    "kana": "ゆうしょう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "冠军，第一名"
+  },
+  {
+    "kanji": "残念",
+    "kana": "ざんねん",
+    "pitch": "③",
+    "pos": "形2",
+    "meaning": "遗憾, 可惜"
+  },
+  {
+    "kanji": "強い",
+    "kana": "つよい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "强, 强壮; 强烈"
+  },
+  {
+    "kanji": "",
+    "kana": "ええ",
+    "pitch": "①",
+    "pos": "叹",
+    "meaning": "嗯, 是"
+  },
+  {
+    "kanji": "",
+    "kana": "でも",
+    "pitch": "①",
+    "pos": "连",
+    "meaning": "但是, 可是"
+  },
+  {
+    "kanji": "二十日",
+    "kana": "はつか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "二十日"
+  },
+  {
+    "kanji": "天気",
+    "kana": "てんき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "天气"
+  },
+  {
+    "kanji": "",
+    "kana": "いっしょに",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "一起"
+  },
+  {
+    "kanji": "ラジオ体操",
+    "kana": "ラジオたいそう",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "广播体操"
+  },
+  {
+    "kanji": "演目",
+    "kana": "えんもく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "节目, 曲目"
+  },
+  {
+    "kanji": "苦手",
+    "kana": "にがて",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "不擅长；难对付的人"
+  },
+  {
+    "kanji": "",
+    "kana": "ミス",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "失误"
+  },
+  {
+    "kanji": "優しい",
+    "kana": "やさしい",
+    "pitch": "⓪",
+    "pos": "形1",
+    "meaning": "和蔼, 温和"
+  },
+  {
+    "kanji": "一生懸命",
+    "kana": "いっしょうけんめい",
+    "pitch": "⑤",
+    "pos": "名·形2·副",
+    "meaning": "尽力; 拼命(地),努力"
+  },
+  {
+    "kanji": "",
+    "kana": "だんだん",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "渐渐地"
+  },
+  {
+    "kanji": "付く",
+    "kana": "つく",
+    "pitch": "①",
+    "pos": "动1自",
+    "meaning": "增添; 附着; 跟随"
+  },
+  {
+    "kanji": "全員",
+    "kana": "ぜんいん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "全体人员"
+  },
+  {
+    "kanji": "",
+    "kana": "メモ",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "记录; 笔记"
+  },
+  {
+    "kanji": "年間",
+    "kana": "ねんかん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "年间; 年代; 一年"
+  },
+  {
+    "kanji": "",
+    "kana": "みなさん",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "大家, 各位"
+  },
+  {
+    "kanji": "合格",
+    "kana": "ごうかく",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "合格，通过(考试等)"
+  },
+  {
+    "kanji": "店員",
+    "kana": "てんいん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "店员"
+  },
+  {
+    "kanji": "赤い",
+    "kana": "あかい",
+    "pitch": "①",
+    "pos": "形1",
+    "meaning": "红"
+  },
+  {
+    "kanji": "一人",
+    "kana": "ひとり",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "一人; 单独, 独自"
+  },
+  {
+    "kanji": "二人",
+    "kana": "ふたり",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "两个人"
+  },
+  {
+    "kanji": "博物館",
+    "kana": "はくぶつかん",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "博物馆"
+  },
+  {
+    "kanji": "元",
+    "kana": "げん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "(中国货币)元"
+  },
+  {
+    "kanji": "家族",
+    "kana": "かぞく",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "家人; 家庭"
+  },
+  {
+    "kanji": "映画",
+    "kana": "えいが",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "电影"
+  },
+  {
+    "kanji": "会う",
+    "kana": "あう",
+    "pitch": "①",
+    "pos": "动1自",
+    "meaning": "会面, 碰见"
+  },
+  {
+    "kanji": "電話",
+    "kana": "でんわ",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "(打)电话"
+  },
+  {
+    "kanji": "",
+    "kana": "よく",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "常常; 好好地"
+  },
+  {
+    "kanji": "甘える",
+    "kana": "あまえる",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "撒娇"
+  },
+  {
+    "kanji": "評価",
+    "kana": "ひょうか",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "评价；赞许"
+  },
+  {
+    "kanji": "高い",
+    "kana": "たかい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "价格贵; 高"
+  },
+  {
+    "kanji": "",
+    "kana": "もの",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "东西, 物品; 事物"
+  },
+  {
+    "kanji": "原因",
+    "kana": "げんいん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "原因"
+  },
+  {
+    "kanji": "明らか",
+    "kana": "あきらか",
+    "pitch": "②",
+    "pos": "形2",
+    "meaning": "清楚，明显，显然"
+  },
+  {
+    "kanji": "病気",
+    "kana": "びょうき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "疾病"
+  },
+  {
+    "kanji": "便利",
+    "kana": "べんり",
+    "pitch": "①",
+    "pos": "形2",
+    "meaning": "便利, 方便"
+  },
+  {
+    "kanji": "宿題",
+    "kana": "しゅくだい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "作业，课后作业"
+  },
+  {
+    "kanji": "簡単",
+    "kana": "かんたん",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "简单, 容易"
+  },
+  {
+    "kanji": "一日",
+    "kana": "ついたち",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "一日"
+  },
+  {
+    "kanji": "二日",
+    "kana": "ふつか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "二日"
+  },
+  {
+    "kanji": "三日",
+    "kana": "みっか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "三日"
+  },
+  {
+    "kanji": "四日",
+    "kana": "よっか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "四日"
+  },
+  {
+    "kanji": "五日",
+    "kana": "いつか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "五日"
+  },
+  {
+    "kanji": "六日",
+    "kana": "むいか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "六日"
+  },
+  {
+    "kanji": "七日",
+    "kana": "なのか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "七日"
+  },
+  {
+    "kanji": "八日",
+    "kana": "ようか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "八日"
+  },
+  {
+    "kanji": "九日",
+    "kana": "ここのか",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "九日"
+  },
+  {
+    "kanji": "十日",
+    "kana": "とおか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "十日"
+  },
+  {
+    "kanji": "短い",
+    "kana": "みじかい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "短, 短暂"
+  },
+  {
+    "kanji": "傘",
+    "kana": "かさ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "伞"
+  },
+  {
+    "kanji": "",
+    "kana": "かっこいい",
+    "pitch": "④",
+    "pos": "形1",
+    "meaning": "棒; 帅"
+  },
+  {
+    "kanji": "種目",
+    "kana": "しゅもく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "项目"
+  },
+  {
+    "kanji": "紙",
+    "kana": "かみ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "纸"
+  },
+  {
+    "kanji": "旅行",
+    "kana": "りょこう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "旅行，旅游"
+  }
+]

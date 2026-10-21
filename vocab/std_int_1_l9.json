@@ -1,0 +1,730 @@
+[
+  {
+    "kanji": "手荷物係",
+    "kana": "てにもつがかり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "行李员"
+  },
+  {
+    "kanji": "どのような",
+    "kana": "どのような",
+    "pitch": "",
+    "pos": "连接词",
+    "meaning": "什么样的，怎样的"
+  },
+  {
+    "kanji": "名札",
+    "kana": "なふだ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "姓名牌，姓名卡"
+  },
+  {
+    "kanji": "よろしい",
+    "kana": "よろしい",
+    "pitch": "",
+    "pos": "形容词",
+    "meaning": "可以，行，好"
+  },
+  {
+    "kanji": "職員",
+    "kana": "しょくいん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "工作人员，职员"
+  },
+  {
+    "kanji": "呼び出し",
+    "kana": "よびだし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "呼叫，传唤"
+  },
+  {
+    "kanji": "アナウンス",
+    "kana": "アナウンス",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "广播；报告；通知"
+  },
+  {
+    "kanji": "いったい",
+    "kana": "いったい",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "到底，究竟"
+  },
+  {
+    "kanji": "ロビー",
+    "kana": "ロビー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "大厅"
+  },
+  {
+    "kanji": "後ほど",
+    "kana": "のちほど",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "过一会儿，随后"
+  },
+  {
+    "kanji": "～どおり",
+    "kana": "～どおり",
+    "pitch": "",
+    "pos": "",
+    "meaning": "与～一样，按照～那样，原样，同样"
+  },
+  {
+    "kanji": "ばか",
+    "kana": "ばか",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "胡扯，荒唐，不合理"
+  },
+  {
+    "kanji": "破れる",
+    "kana": "やぶれる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "破，撕破"
+  },
+  {
+    "kanji": "破く",
+    "kana": "やぶく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "弄破"
+  },
+  {
+    "kanji": "食後",
+    "kana": "しょくご",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "饭后"
+  },
+  {
+    "kanji": "デザート",
+    "kana": "デザート",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "甜点，餐后点心"
+  },
+  {
+    "kanji": "希望",
+    "kana": "きぼう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "愿望，希望"
+  },
+  {
+    "kanji": "大学院",
+    "kana": "だいがくいん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "研究生院"
+  },
+  {
+    "kanji": "取り扱い",
+    "kana": "とりあつかい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "办理，处理；对待"
+  },
+  {
+    "kanji": "詳細",
+    "kana": "しょうさい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "详细情况"
+  },
+  {
+    "kanji": "呼び出す",
+    "kana": "よびだす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "呼叫，叫出"
+  },
+  {
+    "kanji": "ことづける",
+    "kana": "ことづける",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "带口信，捎话，传话"
+  },
+  {
+    "kanji": "キャンヤル",
+    "kana": "キャンヤル",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "取消，废除"
+  },
+  {
+    "kanji": "ことづけ",
+    "kana": "ことづけ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "口信，嘱托"
+  },
+  {
+    "kanji": "ことはない",
+    "kana": "そんな",
+    "pitch": "",
+    "pos": "",
+    "meaning": "不会，不可能"
+  },
+  {
+    "kanji": "～待ち",
+    "kana": "～まち",
+    "pitch": "",
+    "pos": "",
+    "meaning": "等待"
+  },
+  {
+    "kanji": "カード",
+    "kana": "カード",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "卡，卡片"
+  },
+  {
+    "kanji": "月末",
+    "kana": "げつまつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "月末，月底"
+  },
+  {
+    "kanji": "先々月",
+    "kana": "せんせんげつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "上上个月"
+  },
+  {
+    "kanji": "先々週",
+    "kana": "せんせんしゅう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "上上个星期"
+  },
+  {
+    "kanji": "申し込む",
+    "kana": "もうしこむ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "预约；提出；申请"
+  },
+  {
+    "kanji": "星野",
+    "kana": "ほしの",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "星野"
+  },
+  {
+    "kanji": "鈴",
+    "kana": "すず",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "铃，铃铛"
+  },
+  {
+    "kanji": "商社",
+    "kana": "しょうしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "商社，贸易公司"
+  },
+  {
+    "kanji": "指示",
+    "kana": "しじ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "指示，吩咐"
+  },
+  {
+    "kanji": "経由",
+    "kana": "けいゆ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "经由，经过"
+  },
+  {
+    "kanji": "観光",
+    "kana": "かんこう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "观光，游览"
+  },
+  {
+    "kanji": "見学",
+    "kana": "けんがく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "参观，学习"
+  },
+  {
+    "kanji": "自由行動",
+    "kana": "じゆうこうどう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "自由活动"
+  },
+  {
+    "kanji": "翌日",
+    "kana": "よくじつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "翌日，次日，第二天"
+  },
+  {
+    "kanji": "入国",
+    "kana": "にゅうこく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "入境"
+  },
+  {
+    "kanji": "不安",
+    "kana": "ふあん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "担心，不安；不放心"
+  },
+  {
+    "kanji": "にこにこ",
+    "kana": "にこにこ",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "笑眯眯，微笑"
+  },
+  {
+    "kanji": "ガイド",
+    "kana": "ガイド",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "导游"
+  },
+  {
+    "kanji": "起床",
+    "kana": "きしょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "起床"
+  },
+  {
+    "kanji": "土産物屋",
+    "kana": "みやげものや",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "土特产店老板；土特产店，礼品店"
+  },
+  {
+    "kanji": "呼びかける",
+    "kana": "よびかける",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "招呼，呼唤"
+  },
+  {
+    "kanji": "黙る",
+    "kana": "だまる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "不说话，不出声，沉默"
+  },
+  {
+    "kanji": "朹洋人",
+    "kana": "とうようじん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "东方人，亚洲人"
+  },
+  {
+    "kanji": "順",
+    "kana": "じゅん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "顺序，次序"
+  },
+  {
+    "kanji": "西暦",
+    "kana": "せいれき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "公元，公历，阳历"
+  },
+  {
+    "kanji": "火山",
+    "kana": "かざん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "火山"
+  },
+  {
+    "kanji": "爆発",
+    "kana": "ばくはつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "爆发"
+  },
+  {
+    "kanji": "埋まる",
+    "kana": "うまる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "埋上，埋藏"
+  },
+  {
+    "kanji": "～語",
+    "kana": "イタリアご",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "意大利语"
+  },
+  {
+    "kanji": "隅",
+    "kana": "すみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "角落，旮旯"
+  },
+  {
+    "kanji": "グループ",
+    "kana": "グループ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "群，组；集团"
+  },
+  {
+    "kanji": "なんとなく",
+    "kana": "なんとなく",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "不由得，总觉得"
+  },
+  {
+    "kanji": "ほっと",
+    "kana": "ほっと",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "放松，放心，松气"
+  },
+  {
+    "kanji": "にっこり",
+    "kana": "にっこり",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "莞尔，微笑，嫣然一笑"
+  },
+  {
+    "kanji": "相通じる",
+    "kana": "あいつうじる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "相通"
+  },
+  {
+    "kanji": "～発",
+    "kana": "～はつ",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～出发"
+  },
+  {
+    "kanji": "～泊",
+    "kana": "～はく",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～晚"
+  },
+  {
+    "kanji": "～屋",
+    "kana": "～や",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～店主，～店，～铺"
+  },
+  {
+    "kanji": "ニーハオ",
+    "kana": "ニーハオ",
+    "pitch": "",
+    "pos": "",
+    "meaning": "你好（汉语）"
+  },
+  {
+    "kanji": "アンニョンハシムニカ",
+    "kana": "アンニョンハシムニカ",
+    "pitch": "",
+    "pos": "",
+    "meaning": "你好（朝鲜语）"
+  },
+  {
+    "kanji": "最終日",
+    "kana": "さいしゅうび",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "最后一天"
+  },
+  {
+    "kanji": "終了",
+    "kana": "しゅうりょうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "结束，终了"
+  },
+  {
+    "kanji": "ふわふわ",
+    "kana": "ふわふわ",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "轻飘飘，软绵绵"
+  },
+  {
+    "kanji": "ぐずぐず",
+    "kana": "ぐずぐず",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "磨磨蹭蹭，慢腾腾"
+  },
+  {
+    "kanji": "ぼんやり",
+    "kana": "ぼんやり",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "发呆，精神恍惚；模糊，不清楚"
+  },
+  {
+    "kanji": "いらいら",
+    "kana": "いらいら",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "焦躁不安，焦急"
+  },
+  {
+    "kanji": "わくわく",
+    "kana": "わくわく",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "欢欣雀跃，兴奋"
+  },
+  {
+    "kanji": "どきっと",
+    "kana": "どきっと",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "大吃一惊，震惊，吓一跳"
+  },
+  {
+    "kanji": "どきどき",
+    "kana": "どきどき",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "七上八下，心怦怦跳；忐忑不安"
+  },
+  {
+    "kanji": "綿",
+    "kana": "わた",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "棉花，棉"
+  },
+  {
+    "kanji": "プロポーズする",
+    "kana": "プロポーズする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "求婚"
+  },
+  {
+    "kanji": "湯気",
+    "kana": "ゆげ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "水蒸气，热气"
+  },
+  {
+    "kanji": "目の前",
+    "kana": "めのまえ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "眼前，面前"
+  },
+  {
+    "kanji": "扇子",
+    "kana": "せんす",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "扇子，折扇"
+  },
+  {
+    "kanji": "羽",
+    "kana": "はね",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "羽毛，翎毛"
+  },
+  {
+    "kanji": "ぞうきん",
+    "kana": "ぞうきん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "抹布"
+  },
+  {
+    "kanji": "いきなり",
+    "kana": "いきなり",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "突然，冷不防"
+  },
+  {
+    "kanji": "朹洋",
+    "kana": "とうよう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "亚洲，东方，亚洲东部和东南部"
+  },
+  {
+    "kanji": "朹洋医学",
+    "kana": "とうよういがく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "东方医学"
+  },
+  {
+    "kanji": "うらやましい",
+    "kana": "うらやましい",
+    "pitch": "",
+    "pos": "形容词",
+    "meaning": "羡慕，眼红"
+  },
+  {
+    "kanji": "幽霊",
+    "kana": "ゆうれい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "幽灵"
+  },
+  {
+    "kanji": "好む",
+    "kana": "このむ",
+    "pitch": "",
+    "pos": "形容词",
+    "meaning": "喜欢，爱好"
+  },
+  {
+    "kanji": "相通",
+    "kana": "あいつうずる",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "相通"
+  },
+  {
+    "kanji": "環境",
+    "kana": "かんきょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "环境"
+  },
+  {
+    "kanji": "集会",
+    "kana": "しゅうかい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "集会"
+  },
+  {
+    "kanji": "終える",
+    "kana": "おえる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "做完，完成，结束"
+  },
+  {
+    "kanji": "閉会",
+    "kana": "へいかいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "闭会，散会；闭幕"
+  },
+  {
+    "kanji": "郵便",
+    "kana": "ゆうびん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "邮政，邮件"
+  },
+  {
+    "kanji": "特急電車",
+    "kana": "とっきゅうでんしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "特快列车"
+  },
+  {
+    "kanji": "友人",
+    "kana": "ゆうじん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "朋友，友人"
+  },
+  {
+    "kanji": "黄色い",
+    "kana": "きいろい",
+    "pitch": "",
+    "pos": "形容词",
+    "meaning": "黄色"
+  },
+  {
+    "kanji": "贈り物品",
+    "kana": "おくりもの",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "礼物，礼品"
+  },
+  {
+    "kanji": "そのうち",
+    "kana": "そのうち",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "不久，过几天"
+  },
+  {
+    "kanji": "紙袋",
+    "kana": "かみぶくろ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "纸袋，纸质口袋"
+  },
+  {
+    "kanji": "上着",
+    "kana": "うわぎ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "上衣"
+  },
+  {
+    "kanji": "音色",
+    "kana": "ねいろ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "音色"
+  },
+  {
+    "kanji": "サラダ",
+    "kana": "サラダ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "色拉，凉拌菜"
+  },
+  {
+    "kanji": "目立つ",
+    "kana": "めだつ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "显眼，显著，引人注目"
+  }
+]

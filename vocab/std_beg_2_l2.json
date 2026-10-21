@@ -1,0 +1,268 @@
+[
+  {
+    "kanji": "大雨",
+    "kana": "おおあめ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "大雨"
+  },
+  {
+    "kanji": "桜",
+    "kana": "さくら",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "樱花"
+  },
+  {
+    "kanji": "風",
+    "kana": "かぜ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "风"
+  },
+  {
+    "kanji": "月",
+    "kana": "つき",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "月亮"
+  },
+  {
+    "kanji": "表",
+    "kana": "ひょう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "表"
+  },
+  {
+    "kanji": "握手",
+    "kana": "あくしゅ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "握手"
+  },
+  {
+    "kanji": "習慣",
+    "kana": "しゅうかん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "习惯"
+  },
+  {
+    "kanji": "お辞儀",
+    "kana": "おじぎ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "鞠躬"
+  },
+  {
+    "kanji": "あいさつ",
+    "kana": "あいさつ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "寒暄"
+  },
+  {
+    "kanji": "手",
+    "kana": "て",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "手"
+  },
+  {
+    "kanji": "お客さん",
+    "kana": "おきゃくさん",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "顾客，客人"
+  },
+  {
+    "kanji": "普通",
+    "kana": "ふつう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "一般，普通"
+  },
+  {
+    "kanji": "次",
+    "kana": "つぎ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "这回，下面，下回"
+  },
+  {
+    "kanji": "スーパー",
+    "kana": "スーパー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "超市"
+  },
+  {
+    "kanji": "料金",
+    "kana": "りょうきん",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "费用"
+  },
+  {
+    "kanji": "会費",
+    "kana": "かいひ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "会费"
+  },
+  {
+    "kanji": "バーゲン",
+    "kana": "バーゲン",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "降价出售"
+  },
+  {
+    "kanji": "クレジットカード",
+    "kana": "クレジットカード",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "信用卡"
+  },
+  {
+    "kanji": "色鉛筆",
+    "kana": "いろえんぴつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "彩色铅笔"
+  },
+  {
+    "kanji": "豊作",
+    "kana": "ほうさく",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "丰收"
+  },
+  {
+    "kanji": "仲",
+    "kana": "なか",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "关系，友情，友谊"
+  },
+  {
+    "kanji": "忘れ物",
+    "kana": "わすれもの",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "忘记的东西，遗忘的物品"
+  },
+  {
+    "kanji": "防ぐ",
+    "kana": "ふせぐ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "防御，防备，防守"
+  },
+  {
+    "kanji": "回る",
+    "kana": "まわる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "走访；转；绕弯"
+  },
+  {
+    "kanji": "走る",
+    "kana": "はしる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "跑，奔跑"
+  },
+  {
+    "kanji": "吹く",
+    "kana": "ふく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "吹"
+  },
+  {
+    "kanji": "挙げる",
+    "kana": "あげる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "举，举起"
+  },
+  {
+    "kanji": "足りる",
+    "kana": "たりる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "足，够"
+  },
+  {
+    "kanji": "スケッチする",
+    "kana": "スケッチする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "素描，写生"
+  },
+  {
+    "kanji": "発言する",
+    "kana": "はつげんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "发言"
+  },
+  {
+    "kanji": "優勝する",
+    "kana": "ゆうしょうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "得冠军"
+  },
+  {
+    "kanji": "合格する",
+    "kana": "ごうかくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "及格，合格"
+  },
+  {
+    "kanji": "もしかしたら",
+    "kana": "もしかしたら",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "也许"
+  },
+  {
+    "kanji": "約束する",
+    "kana": "やくそくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "约定"
+  },
+  {
+    "kanji": "つい",
+    "kana": "つい",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "不知不觉地，无意中"
+  },
+  {
+    "kanji": "すぐに",
+    "kana": "すぐに",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "就要，立刻，马上"
+  },
+  {
+    "kanji": "ほとんど",
+    "kana": "ほとんど",
+    "pitch": "②",
+    "pos": "副词",
+    "meaning": "大部分，几乎"
+  },
+  {
+    "kanji": "それで",
+    "kana": "それで",
+    "pitch": "⓪",
+    "pos": "接续词",
+    "meaning": "因此"
+  }
+]

@@ -1,0 +1,898 @@
+[
+  {
+    "kanji": "瓦",
+    "kana": "かわら",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "瓦"
+  },
+  {
+    "kanji": "瓦屋根",
+    "kana": "かわらやね",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "瓦屋顶"
+  },
+  {
+    "kanji": "映る",
+    "kana": "うつる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "映，照"
+  },
+  {
+    "kanji": "烏蓬船",
+    "kana": "うほうせん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "乌篷船"
+  },
+  {
+    "kanji": "甕",
+    "kana": "かめ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "缸，罐儿"
+  },
+  {
+    "kanji": "積む",
+    "kana": "つむ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "装载"
+  },
+  {
+    "kanji": "以来",
+    "kana": "いらい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "以后，以来"
+  },
+  {
+    "kanji": "手法",
+    "kana": "しゅほう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "方法，手法"
+  },
+  {
+    "kanji": "栄える",
+    "kana": "さかえる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "昌盛繁荣，繁荣兴盛，兴旺"
+  },
+  {
+    "kanji": "まさか",
+    "kana": "まさか",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "绝没想到，怎能"
+  },
+  {
+    "kanji": "酒造",
+    "kana": "しゅぞう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "酿酒（公司）"
+  },
+  {
+    "kanji": "でしたら",
+    "kana": "でしたら",
+    "pitch": "",
+    "pos": "连接词",
+    "meaning": "那么，如此的话"
+  },
+  {
+    "kanji": "面する",
+    "kana": "めんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "面向，面对"
+  },
+  {
+    "kanji": "教科書",
+    "kana": "きょうかしょ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "教科书"
+  },
+  {
+    "kanji": "載る",
+    "kana": "のる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "登载，记载"
+  },
+  {
+    "kanji": "立ち寄る",
+    "kana": "たちよる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "顺路到，顺便到；走近"
+  },
+  {
+    "kanji": "～作り",
+    "kana": "～づくり",
+    "pitch": "",
+    "pos": "",
+    "meaning": "制作～"
+  },
+  {
+    "kanji": "～関係",
+    "kana": "～かんけい",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～方面，～相关"
+  },
+  {
+    "kanji": "右手",
+    "kana": "みぎて",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "右边，右方；右手"
+  },
+  {
+    "kanji": "左手",
+    "kana": "ひだりて",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "左边，左方；左手"
+  },
+  {
+    "kanji": "寺院",
+    "kana": "じいん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "寺院"
+  },
+  {
+    "kanji": "要塞",
+    "kana": "ようさい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "要塞"
+  },
+  {
+    "kanji": "足元",
+    "kana": "あしもと",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "脚底"
+  },
+  {
+    "kanji": "触れる",
+    "kana": "ふれる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "触摸，碰"
+  },
+  {
+    "kanji": "噴水",
+    "kana": "ふんすい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "喷泉"
+  },
+  {
+    "kanji": "水郷",
+    "kana": "すいごう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "水乡"
+  },
+  {
+    "kanji": "チーズ",
+    "kana": "チーズ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "茄—子（音）"
+  },
+  {
+    "kanji": "逆光",
+    "kana": "ぎゃっこう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "逆光"
+  },
+  {
+    "kanji": "見どころ",
+    "kana": "みどころ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "值得看的地方"
+  },
+  {
+    "kanji": "名産",
+    "kana": "めいさん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "特产，名产"
+  },
+  {
+    "kanji": "悠久",
+    "kana": "ゆうきゅう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "悠久"
+  },
+  {
+    "kanji": "一衣帯水",
+    "kana": "いちいたいすい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "一衣带水"
+  },
+  {
+    "kanji": "隣国",
+    "kana": "りんごく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "邻邦，邻国"
+  },
+  {
+    "kanji": "衣帯",
+    "kana": "いたい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "带子；衣服和腰带"
+  },
+  {
+    "kanji": "帯",
+    "kana": "おび",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "带子，腰带"
+  },
+  {
+    "kanji": "隔てる",
+    "kana": "へだてる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "隔开，分开"
+  },
+  {
+    "kanji": "隣り合う",
+    "kana": "となりあう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "相邻，邻接，挨着"
+  },
+  {
+    "kanji": "教員",
+    "kana": "きょういん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "教师，教员"
+  },
+  {
+    "kanji": "犠牲者",
+    "kana": "ぎせいしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "死亡，牺牲者"
+  },
+  {
+    "kanji": "スタジアム",
+    "kana": "スタジアム",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "运动场；棒球场"
+  },
+  {
+    "kanji": "金融",
+    "kana": "きんゆう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "金融"
+  },
+  {
+    "kanji": "表通り",
+    "kana": "おもてどおり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "主要街道，大马路"
+  },
+  {
+    "kanji": "夕日",
+    "kana": "ゆうひ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "夕阳"
+  },
+  {
+    "kanji": "仏教",
+    "kana": "ぶっきょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "佛教"
+  },
+  {
+    "kanji": "半ば",
+    "kana": "なかば",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "中间，一半"
+  },
+  {
+    "kanji": "港",
+    "kana": "みなと",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "港口"
+  },
+  {
+    "kanji": "貿易",
+    "kana": "ぼうえき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "贸易"
+  },
+  {
+    "kanji": "移住～",
+    "kana": "いじゅうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "移居"
+  },
+  {
+    "kanji": "巡る",
+    "kana": "めぐる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "巡游"
+  },
+  {
+    "kanji": "定期",
+    "kana": "ていき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "定期"
+  },
+  {
+    "kanji": "来日～",
+    "kana": "らいにちする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "来日本"
+  },
+  {
+    "kanji": "豪華客船",
+    "kana": "ごうかきゃくせん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "豪华客船"
+  },
+  {
+    "kanji": "誕生～",
+    "kana": "たんじょうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "诞生"
+  },
+  {
+    "kanji": "巨大",
+    "kana": "きょだい",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "巨大"
+  },
+  {
+    "kanji": "津波",
+    "kana": "つなみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "海啸"
+  },
+  {
+    "kanji": "太平洋",
+    "kana": "たいへいよう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "太平洋"
+  },
+  {
+    "kanji": "漂流～",
+    "kana": "ひょうりゅうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "漂流"
+  },
+  {
+    "kanji": "～周",
+    "kana": "～しゅう",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～周"
+  },
+  {
+    "kanji": "下流",
+    "kana": "かりゅう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "下游，下流"
+  },
+  {
+    "kanji": "南岸",
+    "kana": "なんがん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "南岸"
+  },
+  {
+    "kanji": "古鎮",
+    "kana": "こちん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "古镇"
+  },
+  {
+    "kanji": "水上",
+    "kana": "すいじょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "水上，水名"
+  },
+  {
+    "kanji": "初春",
+    "kana": "しょしゅん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "初春"
+  },
+  {
+    "kanji": "ひときわ",
+    "kana": "ひときわ",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "格外，尤其"
+  },
+  {
+    "kanji": "素朴",
+    "kana": "そぼく",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "朴素"
+  },
+  {
+    "kanji": "石畳",
+    "kana": "いしだたみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "石板路，铺石的地"
+  },
+  {
+    "kanji": "延々",
+    "kana": "えんえん",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "绵延不绝，连绵不断"
+  },
+  {
+    "kanji": "必見",
+    "kana": "ひっけん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "必须看（的地方）"
+  },
+  {
+    "kanji": "昆劇",
+    "kana": "こんげき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "昆曲，昆剧"
+  },
+  {
+    "kanji": "越劇",
+    "kana": "えつげき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "越剧"
+  },
+  {
+    "kanji": "ぜひとも",
+    "kana": "ぜひとも",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "一定，务必"
+  },
+  {
+    "kanji": "船頭",
+    "kana": "せんどう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "船家，船老大，船夫"
+  },
+  {
+    "kanji": "瀋庁",
+    "kana": "しんちょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "牌楼"
+  },
+  {
+    "kanji": "柱",
+    "kana": "はしら",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "柱子"
+  },
+  {
+    "kanji": "施す",
+    "kana": "ほどこす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "施加，施"
+  },
+  {
+    "kanji": "雨風",
+    "kana": "あめかぜ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "风雨"
+  },
+  {
+    "kanji": "ひさし",
+    "kana": "ひさし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "垂檐，房檐"
+  },
+  {
+    "kanji": "見張る",
+    "kana": "みはる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "瞠目结舌；监视，看守"
+  },
+  {
+    "kanji": "富豪",
+    "kana": "ふごう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "富豪"
+  },
+  {
+    "kanji": "見飽きる",
+    "kana": "みあきる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "看厌，看腻"
+  },
+  {
+    "kanji": "商店街",
+    "kana": "しょうてんがい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "商业街，商店街"
+  },
+  {
+    "kanji": "色濃い",
+    "kana": "いろこい",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "浓郁地，浓厚地"
+  },
+  {
+    "kanji": "道幅",
+    "kana": "みちはば",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "道路宽度"
+  },
+  {
+    "kanji": "両側",
+    "kana": "りょうがわ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "两侧"
+  },
+  {
+    "kanji": "シンボル",
+    "kana": "シンボル",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "象征"
+  },
+  {
+    "kanji": "～巡り",
+    "kana": "～めぐり",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～游，～巡游"
+  },
+  {
+    "kanji": "四季",
+    "kana": "しき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "四季"
+  },
+  {
+    "kanji": "在学",
+    "kana": "ざいがく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "在校，上学"
+  },
+  {
+    "kanji": "湿度",
+    "kana": "しつど[名]湿度",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "湿度"
+  },
+  {
+    "kanji": "蒸し暑い",
+    "kana": "むしあつい",
+    "pitch": "",
+    "pos": "形容词",
+    "meaning": "闷热"
+  },
+  {
+    "kanji": "幼稚園",
+    "kana": "ようちえん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "幼儿园"
+  },
+  {
+    "kanji": "続々",
+    "kana": "ぞくぞく",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "源源不断，陆续，接着"
+  },
+  {
+    "kanji": "もうもう",
+    "kana": "もうもう",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "烟滚滚，烟蒙蒙，灰蒙蒙"
+  },
+  {
+    "kanji": "煙",
+    "kana": "けむり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "烟"
+  },
+  {
+    "kanji": "マニア",
+    "kana": "マニア",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "～迷，爱好者"
+  },
+  {
+    "kanji": "募金",
+    "kana": "ぼきん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "募捐，捐款"
+  },
+  {
+    "kanji": "化粧",
+    "kana": "けしょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "化妆"
+  },
+  {
+    "kanji": "捜索活動",
+    "kana": "そうさくかつどう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "搜索活动"
+  },
+  {
+    "kanji": "研究開発",
+    "kana": "けんきゅうかいはつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "研究开发"
+  },
+  {
+    "kanji": "主人公",
+    "kana": "しゅじんこう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "主人公"
+  },
+  {
+    "kanji": "飽きる",
+    "kana": "あきる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "腻烦，厌烦，厌倦"
+  },
+  {
+    "kanji": "食べ飽きる",
+    "kana": "たべあきる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "吃腻"
+  },
+  {
+    "kanji": "聞き飽きる",
+    "kana": "ききあきる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "听腻"
+  },
+  {
+    "kanji": "画家",
+    "kana": "がか",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "画家"
+  },
+  {
+    "kanji": "クラブ",
+    "kana": "クラブ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "俱乐部"
+  },
+  {
+    "kanji": "政策",
+    "kana": "せいさく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "政策"
+  },
+  {
+    "kanji": "求人難",
+    "kana": "きゅうじんなん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "招聘人难"
+  },
+  {
+    "kanji": "今さら",
+    "kana": "いまさら",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "现在更（不……）"
+  },
+  {
+    "kanji": "風情",
+    "kana": "ふぜい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "情调，风趣，情趣"
+  },
+  {
+    "kanji": "いわゆる",
+    "kana": "いわゆる",
+    "pitch": "",
+    "pos": "连接词",
+    "meaning": "所谓的"
+  },
+  {
+    "kanji": "描写～",
+    "kana": "びょうしゃする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "描写"
+  },
+  {
+    "kanji": "初～",
+    "kana": "しょ～",
+    "pitch": "",
+    "pos": "",
+    "meaning": "初～"
+  },
+  {
+    "kanji": "晩～",
+    "kana": "ばん～",
+    "pitch": "",
+    "pos": "",
+    "meaning": "晚～"
+  },
+  {
+    "kanji": "初期",
+    "kana": "しょき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "初期"
+  },
+  {
+    "kanji": "推し進める",
+    "kana": "おしすすめる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "推进"
+  },
+  {
+    "kanji": "適～",
+    "kana": "てきする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "适合，适切"
+  },
+  {
+    "kanji": "生涯",
+    "kana": "しょうがい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "生涯"
+  },
+  {
+    "kanji": "信頼関係",
+    "kana": "しんらいかんけい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "信赖关系"
+  },
+  {
+    "kanji": "古都",
+    "kana": "こと",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "古都"
+  },
+  {
+    "kanji": "友好",
+    "kana": "ゆうこう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "友好"
+  },
+  {
+    "kanji": "リーダーシップ",
+    "kana": "リーダーシップ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "领导能力，统率力"
+  },
+  {
+    "kanji": "ミステリーツアー",
+    "kana": "ミステリーツアー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "探险旅游，探秘旅行"
+  },
+  {
+    "kanji": "見物",
+    "kana": "けんぶつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "游览，观光"
+  },
+  {
+    "kanji": "埋め尽くす",
+    "kana": "うめつくす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "挤满，填满"
+  },
+  {
+    "kanji": "結論",
+    "kana": "けつろん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "结论"
+  },
+  {
+    "kanji": "山頂",
+    "kana": "さんちょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "山顶"
+  },
+  {
+    "kanji": "探求心",
+    "kana": "たんきゅうしん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "探求心"
+  },
+  {
+    "kanji": "～心",
+    "kana": "～しん",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～心"
+  }
+]

@@ -1,0 +1,604 @@
+[
+  {
+    "kanji": "折り入って",
+    "kana": "おりいって",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "诚恳，特意"
+  },
+  {
+    "kanji": "改まる",
+    "kana": "あらたまる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "郑重其事，庄重"
+  },
+  {
+    "kanji": "自信",
+    "kana": "じしん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "自信，信心"
+  },
+  {
+    "kanji": "君",
+    "kana": "きみ",
+    "pitch": "",
+    "pos": "代词",
+    "meaning": "你"
+  },
+  {
+    "kanji": "頼み",
+    "kana": "たのみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "请求；信赖"
+  },
+  {
+    "kanji": "引き受ける",
+    "kana": "ひきうける",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "答应，接受；承担"
+  },
+  {
+    "kanji": "もしかして",
+    "kana": "もしかして",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "也许，或许，可能"
+  },
+  {
+    "kanji": "どうしても",
+    "kana": "どうしても",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "无论如何"
+  },
+  {
+    "kanji": "出会う",
+    "kana": "であう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "遇见，碰上"
+  },
+  {
+    "kanji": "格好",
+    "kana": "かっこう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "装束；样子；姿态"
+  },
+  {
+    "kanji": "装置",
+    "kana": "そうち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "装置，设备"
+  },
+  {
+    "kanji": "夕飯",
+    "kana": "ゆうはん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "晚饭，晚餐"
+  },
+  {
+    "kanji": "ハンバーグ",
+    "kana": "ハンバーグ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "汉堡牛肉饼"
+  },
+  {
+    "kanji": "もしかすると",
+    "kana": "もしかすると",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "也许，或许，可能"
+  },
+  {
+    "kanji": "酔う",
+    "kana": "よう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "醉，喝醉"
+  },
+  {
+    "kanji": "魚介類",
+    "kana": "ぎょかいるい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "鱼贝类，鳞介类"
+  },
+  {
+    "kanji": "悪いけど",
+    "kana": "わるいけど",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "不好意思"
+  },
+  {
+    "kanji": "商品開発",
+    "kana": "しょうひんかいはつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "商品开发"
+  },
+  {
+    "kanji": "伝言",
+    "kana": "でんごんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "带口信"
+  },
+  {
+    "kanji": "出版社",
+    "kana": "しゅっぱんしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "出版社"
+  },
+  {
+    "kanji": "出版",
+    "kana": "しゅっぱんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "出版"
+  },
+  {
+    "kanji": "後片づけ",
+    "kana": "あとかたづけ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "善后，整理，收拾"
+  },
+  {
+    "kanji": "～局",
+    "kana": "テレビきょく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "电视台"
+  },
+  {
+    "kanji": "統計",
+    "kana": "とうけい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "统计"
+  },
+  {
+    "kanji": "減少",
+    "kana": "げんしょうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "减少"
+  },
+  {
+    "kanji": "現象",
+    "kana": "げんしょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "现象"
+  },
+  {
+    "kanji": "傾向",
+    "kana": "けいこう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "趋势，倾向"
+  },
+  {
+    "kanji": "背景",
+    "kana": "はいけい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "背景，背景形势"
+  },
+  {
+    "kanji": "出産",
+    "kana": "しゅっさん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "生孩子"
+  },
+  {
+    "kanji": "育児",
+    "kana": "いくじ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "育儿，抚育"
+  },
+  {
+    "kanji": "対する",
+    "kana": "たいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "对，对于"
+  },
+  {
+    "kanji": "晩婚",
+    "kana": "ばんこん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "晚婚"
+  },
+  {
+    "kanji": "控える",
+    "kana": "ひかえる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "抑制，控制，节制"
+  },
+  {
+    "kanji": "出生",
+    "kana": "しゅっしょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "出生，诞生"
+  },
+  {
+    "kanji": "つながる",
+    "kana": "つながる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "牵涉；连接；排列"
+  },
+  {
+    "kanji": "上昇",
+    "kana": "じょうしょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "上涨，上升"
+  },
+  {
+    "kanji": "額",
+    "kana": "がく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "金额，数量"
+  },
+  {
+    "kanji": "住宅問題",
+    "kana": "じゅうたくもんだい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "房问题，住宅问题"
+  },
+  {
+    "kanji": "意志",
+    "kana": "いし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "意愿，意志，意向"
+  },
+  {
+    "kanji": "非婚",
+    "kana": "ひこん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "不结婚；非婚，没结婚"
+  },
+  {
+    "kanji": "年間",
+    "kana": "ねんかん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "一年；年间，年代"
+  },
+  {
+    "kanji": "年月",
+    "kana": "ねんげつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "时间，光阴，年月，岁月"
+  },
+  {
+    "kanji": "～時",
+    "kana": "～じ",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～时，～的时候"
+  },
+  {
+    "kanji": "～数",
+    "kana": "～すう",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～数，～的数量"
+  },
+  {
+    "kanji": "石炭",
+    "kana": "せきたん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "煤，煤炭"
+  },
+  {
+    "kanji": "一途",
+    "kana": "いっと",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "唯一方向；唯一手段"
+  },
+  {
+    "kanji": "たどる",
+    "kana": "たどる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "发展；走向；追溯"
+  },
+  {
+    "kanji": "円安",
+    "kana": "えんやす",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "日元贬值"
+  },
+  {
+    "kanji": "輸入食品",
+    "kana": "ゆにゅうしょくひん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "进口食品"
+  },
+  {
+    "kanji": "値上がり",
+    "kana": "ねあがり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "价格上涨，涨价"
+  },
+  {
+    "kanji": "改善",
+    "kana": "かいぜんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "改善"
+  },
+  {
+    "kanji": "伸ばす",
+    "kana": "のばす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "留（头发），拉长，延长"
+  },
+  {
+    "kanji": "そろばん",
+    "kana": "そろばん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "算盘"
+  },
+  {
+    "kanji": "不況",
+    "kana": "ふきょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "不景气，萧条"
+  },
+  {
+    "kanji": "長所",
+    "kana": "ちょうしょ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "长处，优点"
+  },
+  {
+    "kanji": "短所",
+    "kana": "たんしょ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "短处，弱点"
+  },
+  {
+    "kanji": "整備不良",
+    "kana": "せいびふりょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "维修不良，维修状况差"
+  },
+  {
+    "kanji": "整備",
+    "kana": "せいび",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "（道路）维修，整修；配备，配齐"
+  },
+  {
+    "kanji": "批判",
+    "kana": "ひはん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "批判，批评，评论"
+  },
+  {
+    "kanji": "礼",
+    "kana": "れい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "谢意，礼仪，礼貌，礼节"
+  },
+  {
+    "kanji": "訴える",
+    "kana": "うったえる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "申诉，诉说，呼吁"
+  },
+  {
+    "kanji": "援助",
+    "kana": "えんじょする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "帮助，援助，支持"
+  },
+  {
+    "kanji": "体験",
+    "kana": "たいけん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "体验，经验"
+  },
+  {
+    "kanji": "毎年",
+    "kana": "まいとし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "每年"
+  },
+  {
+    "kanji": "日々",
+    "kana": "ひび",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "天天，每天，日子"
+  },
+  {
+    "kanji": "月々",
+    "kana": "つきづき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "月月，每月"
+  },
+  {
+    "kanji": "状況",
+    "kana": "じょうきょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "情况，状况"
+  },
+  {
+    "kanji": "収入",
+    "kana": "しゅうにゅう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "收入，所得"
+  },
+  {
+    "kanji": "～量",
+    "kana": "～りょう",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～量"
+  },
+  {
+    "kanji": "不～",
+    "kana": "ふ～",
+    "pitch": "",
+    "pos": "",
+    "meaning": "不～，非～"
+  },
+  {
+    "kanji": "肥満",
+    "kana": "ひまん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "肥胖"
+  },
+  {
+    "kanji": "件数",
+    "kana": "けんすう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "件数"
+  },
+  {
+    "kanji": "退学",
+    "kana": "たいがく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "退学"
+  },
+  {
+    "kanji": "ブーム",
+    "kana": "ブーム",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "高潮，热潮"
+  },
+  {
+    "kanji": "権利",
+    "kana": "けんり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "权利"
+  },
+  {
+    "kanji": "排気～",
+    "kana": "はいきガス",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "废气，废烟气"
+  },
+  {
+    "kanji": "ラッシュアワー",
+    "kana": "ラッシュアワー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "上下班高峰时间"
+  },
+  {
+    "kanji": "混雑",
+    "kana": "こんざつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "混乱，拥挤，混杂"
+  },
+  {
+    "kanji": "ペット",
+    "kana": "ペット",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "宠物"
+  },
+  {
+    "kanji": "愛情",
+    "kana": "あいじょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "爱，爱情"
+  },
+  {
+    "kanji": "政治",
+    "kana": "せいじ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "政治"
+  },
+  {
+    "kanji": "感覚",
+    "kana": "かんかく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "感觉"
+  },
+  {
+    "kanji": "日中",
+    "kana": "にっちゅう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "日中，日本和中国"
+  },
+  {
+    "kanji": "外交",
+    "kana": "がいこう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "外交"
+  },
+  {
+    "kanji": "一晩",
+    "kana": "ひとばん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "一晚，一夜，一宿"
+  },
+  {
+    "kanji": "仕組み",
+    "kana": "しくみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "结构；计划，方法"
+  }
+]

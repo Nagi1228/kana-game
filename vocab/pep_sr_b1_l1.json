@@ -1,0 +1,541 @@
+[
+  {
+    "kanji": "お辞儀",
+    "kana": "おじぎ",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "鞠躬，行礼"
+  },
+  {
+    "kanji": "習慣",
+    "kana": "しゅうかん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "习惯"
+  },
+  {
+    "kanji": "振り返る",
+    "kana": "ふりかえる",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "回顾；回头看"
+  },
+  {
+    "kanji": "理解",
+    "kana": "りかい",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "理解"
+  },
+  {
+    "kanji": "",
+    "kana": "それぞれ",
+    "pitch": "②",
+    "pos": "名·副",
+    "meaning": "分别，每个"
+  },
+  {
+    "kanji": "挙げる",
+    "kana": "あげる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "举出"
+  },
+  {
+    "kanji": "印象",
+    "kana": "いんしょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "印象"
+  },
+  {
+    "kanji": "",
+    "kana": "ペア",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "（两人）一组"
+  },
+  {
+    "kanji": "自己紹介",
+    "kana": "じこしょうかい",
+    "pitch": "③",
+    "pos": "名·动3自",
+    "meaning": "自我介绍"
+  },
+  {
+    "kanji": "理由",
+    "kana": "りゆう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "理由"
+  },
+  {
+    "kanji": "故郷",
+    "kana": "ふるさと",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "故乡"
+  },
+  {
+    "kanji": "興味",
+    "kana": "きょうみ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "兴趣"
+  },
+  {
+    "kanji": "付き合う",
+    "kana": "つきあう",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "交往"
+  },
+  {
+    "kanji": "必要",
+    "kana": "ひつよう",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "必要，必须"
+  },
+  {
+    "kanji": "",
+    "kana": "ぜひ",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "一定，务必"
+  },
+  {
+    "kanji": "残す",
+    "kana": "のこす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "留下；遗留"
+  },
+  {
+    "kanji": "気づく",
+    "kana": "きづく",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "意识到，发觉"
+  },
+  {
+    "kanji": "実は",
+    "kana": "じつは",
+    "pitch": "②",
+    "pos": "副",
+    "meaning": "说真的，老实说"
+  },
+  {
+    "kanji": "礼儀",
+    "kana": "れいぎ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "礼节，礼貌"
+  },
+  {
+    "kanji": "喫茶店",
+    "kana": "きっさてん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "茶馆，咖啡馆"
+  },
+  {
+    "kanji": "見学",
+    "kana": "けんがく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "参观"
+  },
+  {
+    "kanji": "～者",
+    "kana": "しゃ",
+    "pitch": "",
+    "pos": "后缀",
+    "meaning": "……者，……人"
+  },
+  {
+    "kanji": "展覧会",
+    "kana": "てんらんかい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "展览会"
+  },
+  {
+    "kanji": "",
+    "kana": "スタッフ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "工作人员"
+  },
+  {
+    "kanji": "尋ねる",
+    "kana": "たずねる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "探访；请教"
+  },
+  {
+    "kanji": "",
+    "kana": "パーティー",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "聚会，晚会"
+  },
+  {
+    "kanji": "お互い",
+    "kana": "おたがい",
+    "pitch": "⓪",
+    "pos": "名·副",
+    "meaning": "互相，双方"
+  },
+  {
+    "kanji": "繰り返す",
+    "kana": "くりかえす",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "反复"
+  },
+  {
+    "kanji": "",
+    "kana": "さきほど",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "刚才"
+  },
+  {
+    "kanji": "売店",
+    "kana": "ばいてん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "商店，小卖铺"
+  },
+  {
+    "kanji": "近所",
+    "kana": "きんじょ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "近处，附近"
+  },
+  {
+    "kanji": "見送る",
+    "kana": "みおくる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "送别"
+  },
+  {
+    "kanji": "お詫び",
+    "kana": "おわび",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "道歉，表示歉意"
+  },
+  {
+    "kanji": "足りる",
+    "kana": "たりる",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "够，足"
+  },
+  {
+    "kanji": "不思議",
+    "kana": "ふしぎ",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "不可思议"
+  },
+  {
+    "kanji": "全く",
+    "kana": "まったく",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "完全，全然"
+  },
+  {
+    "kanji": "内容",
+    "kana": "ないよう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "内容"
+  },
+  {
+    "kanji": "合う",
+    "kana": "あう",
+    "pitch": "①",
+    "pos": "动1自",
+    "meaning": "符合，适合"
+  },
+  {
+    "kanji": "由来",
+    "kana": "ゆらい",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "由来"
+  },
+  {
+    "kanji": "祭り",
+    "kana": "まつり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "祭祀；仪式；节日"
+  },
+  {
+    "kanji": "行事",
+    "kana": "ぎょうじ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "仪式；活动"
+  },
+  {
+    "kanji": "供え物",
+    "kana": "そなえもの",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "供品，祭品"
+  },
+  {
+    "kanji": "腰",
+    "kana": "こし",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "腰，腰部"
+  },
+  {
+    "kanji": "曲がる",
+    "kana": "まがる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "弯曲；转弯"
+  },
+  {
+    "kanji": "表現",
+    "kana": "ひょうげん",
+    "pitch": "③",
+    "pos": "名·动3他",
+    "meaning": "表达"
+  },
+  {
+    "kanji": "尊敬",
+    "kana": "そんけい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "尊敬"
+  },
+  {
+    "kanji": "表す",
+    "kana": "あらわす",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "表现，表示"
+  },
+  {
+    "kanji": "身分",
+    "kana": "みぶん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "身份"
+  },
+  {
+    "kanji": "年配",
+    "kana": "ねんぱい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "相当大年龄；大致年纪"
+  },
+  {
+    "kanji": "下げる",
+    "kana": "さげる",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "使低下"
+  },
+  {
+    "kanji": "曲げる",
+    "kana": "まげる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "弯曲，弄弯"
+  },
+  {
+    "kanji": "地域",
+    "kana": "ちいき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "地域，地区"
+  },
+  {
+    "kanji": "伝わる",
+    "kana": "つたわる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "传播；流传"
+  },
+  {
+    "kanji": "一部",
+    "kana": "いちぶ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "一部分；一册，一部"
+  },
+  {
+    "kanji": "感謝",
+    "kana": "かんしゃ",
+    "pitch": "①",
+    "pos": "名·动3自他",
+    "meaning": "感谢"
+  },
+  {
+    "kanji": "謝る",
+    "kana": "あやまる",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "道歉，认错"
+  },
+  {
+    "kanji": "人々",
+    "kana": "ひとびと",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "人们，人人"
+  },
+  {
+    "kanji": "共通",
+    "kana": "きょうつう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "共同，共通"
+  },
+  {
+    "kanji": "説明",
+    "kana": "せつめい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "说明"
+  },
+  {
+    "kanji": "改まる",
+    "kana": "あらたまる",
+    "pitch": "④",
+    "pos": "动1自",
+    "meaning": "郑重，庄重；改变"
+  },
+  {
+    "kanji": "結婚",
+    "kana": "けっこん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "结婚"
+  },
+  {
+    "kanji": "結婚式",
+    "kana": "けっこんしき",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "结婚典礼"
+  },
+  {
+    "kanji": "両親",
+    "kana": "りょうしん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "父母，双亲"
+  },
+  {
+    "kanji": "学生",
+    "kana": "がくせい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "学生，大学生"
+  },
+  {
+    "kanji": "贈る",
+    "kana": "おくる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "赠送，赠与"
+  },
+  {
+    "kanji": "簡単",
+    "kana": "かんたん",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "简单"
+  },
+  {
+    "kanji": "纏める",
+    "kana": "まとめる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "总结，汇总"
+  },
+  {
+    "kanji": "感想",
+    "kana": "かんそう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "感想"
+  },
+  {
+    "kanji": "発表",
+    "kana": "はっぴょう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "汇报，发表"
+  },
+  {
+    "kanji": "",
+    "kana": "マナー",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "礼貌，规矩"
+  },
+  {
+    "kanji": "込める",
+    "kana": "こめる",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "集中，贯注；装填"
+  },
+  {
+    "kanji": "",
+    "kana": "そろえる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "使一致，使齐备"
+  },
+  {
+    "kanji": "伝統",
+    "kana": "でんとう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "传统"
+  },
+  {
+    "kanji": "受け継ぐ",
+    "kana": "うけつぐ",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "继承，承继"
+  },
+  {
+    "kanji": "摩擦",
+    "kana": "まさつ",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "摩擦"
+  },
+  {
+    "kanji": "避ける",
+    "kana": "さける",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "避开；躲避"
+  },
+  {
+    "kanji": "異文化",
+    "kana": "いぶんか",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "异文化，不同文化"
+  }
+]

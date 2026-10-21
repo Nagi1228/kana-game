@@ -1,0 +1,548 @@
+[
+  {
+    "kanji": "来客",
+    "kana": "らいきゃく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "来客"
+  },
+  {
+    "kanji": "外来",
+    "kana": "がいらい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "外来"
+  },
+  {
+    "kanji": "生物",
+    "kana": "せいぶつ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "生物"
+  },
+  {
+    "kanji": "被害",
+    "kana": "ひがい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "受害, 受灾; 损失"
+  },
+  {
+    "kanji": "注意事項",
+    "kana": "ちゅういじこう",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "注意事项"
+  },
+  {
+    "kanji": "",
+    "kana": "もともと",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "原来, 本来"
+  },
+  {
+    "kanji": "生き物",
+    "kana": "いきもの",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "生物"
+  },
+  {
+    "kanji": "人間",
+    "kana": "にんげん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "人, 人类"
+  },
+  {
+    "kanji": "伴う",
+    "kana": "ともなう",
+    "pitch": "③",
+    "pos": "动1自他",
+    "meaning": "随着; 陪伴"
+  },
+  {
+    "kanji": "侵入",
+    "kana": "しんにゅう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "侵入，闯入"
+  },
+  {
+    "kanji": "生態系",
+    "kana": "せいたいけい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "生态系统"
+  },
+  {
+    "kanji": "命",
+    "kana": "いのち",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "生命, 性命"
+  },
+  {
+    "kanji": "農林水産業",
+    "kana": "のうりんすいさんぎょう",
+    "pitch": "⑦",
+    "pos": "名",
+    "meaning": "农业、林业和水产业"
+  },
+  {
+    "kanji": "深刻",
+    "kana": "しんこく",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "严重, 严肃"
+  },
+  {
+    "kanji": "国々",
+    "kana": "くにぐに",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "各国"
+  },
+  {
+    "kanji": "対策",
+    "kana": "たいさく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "对策"
+  },
+  {
+    "kanji": "海外",
+    "kana": "かいがい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "海外, 国外"
+  },
+  {
+    "kanji": "持ち込み",
+    "kana": "もちこみ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "带入"
+  },
+  {
+    "kanji": "禁止",
+    "kana": "きんし",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "禁止"
+  },
+  {
+    "kanji": "及び",
+    "kana": "および",
+    "pitch": "①",
+    "pos": "连",
+    "meaning": "以及"
+  },
+  {
+    "kanji": "製品",
+    "kana": "せいひん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "制品; 产品"
+  },
+  {
+    "kanji": "生きる",
+    "kana": "いきる",
+    "pitch": "②",
+    "pos": "动2自",
+    "meaning": "生存; 生活"
+  },
+  {
+    "kanji": "検疫",
+    "kana": "けんえき",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "检疫"
+  },
+  {
+    "kanji": "証明書",
+    "kana": "しょうめいしょ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "证明"
+  },
+  {
+    "kanji": "",
+    "kana": "ペット",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "宠物"
+  },
+  {
+    "kanji": "肉類",
+    "kana": "にくるい",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "肉类"
+  },
+  {
+    "kanji": "内臓",
+    "kana": "ないぞう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "内臓"
+  },
+  {
+    "kanji": "含む",
+    "kana": "ふくむ",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "含有, 包含"
+  },
+  {
+    "kanji": "",
+    "kana": "ヨーグルト",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "酸奶"
+  },
+  {
+    "kanji": "乳製品",
+    "kana": "にゅうせいひん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "乳制品"
+  },
+  {
+    "kanji": "苗",
+    "kana": "なえ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "苗, 秧"
+  },
+  {
+    "kanji": "持ち込む",
+    "kana": "もちこむ",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "带入"
+  },
+  {
+    "kanji": "牛肉",
+    "kana": "ぎゅうにく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "牛肉"
+  },
+  {
+    "kanji": "土",
+    "kana": "つち",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "土, 土壤"
+  },
+  {
+    "kanji": "全然",
+    "kana": "ぜんぜん",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "完全"
+  },
+  {
+    "kanji": "微生物",
+    "kana": "びせいぶつ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "微生物"
+  },
+  {
+    "kanji": "隠れる",
+    "kana": "かくれる",
+    "pitch": "③",
+    "pos": "动2自",
+    "meaning": "隐藏"
+  },
+  {
+    "kanji": "国際",
+    "kana": "こくさい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "国际"
+  },
+  {
+    "kanji": "郵便物",
+    "kana": "ゆうびんぶつ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "邮件"
+  },
+  {
+    "kanji": "",
+    "kana": "パンフレット",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "小册子"
+  },
+  {
+    "kanji": "恐ろしい",
+    "kana": "おそろしい",
+    "pitch": "④",
+    "pos": "形1",
+    "meaning": "可怕"
+  },
+  {
+    "kanji": "背高泡立草",
+    "kana": "せいたかあわだちそう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "加拿大一枝黄花"
+  },
+  {
+    "kanji": "天敵",
+    "kana": "てんてき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "天敌"
+  },
+  {
+    "kanji": "崩す",
+    "kana": "くずす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "使……崩溃；打乱"
+  },
+  {
+    "kanji": "及ぼす",
+    "kana": "およぼす",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "波及，影响到"
+  },
+  {
+    "kanji": "恐れ",
+    "kana": "おそれ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "担心, 危险; 恐惧"
+  },
+  {
+    "kanji": "厳しい",
+    "kana": "きびしい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "严格, 严厉"
+  },
+  {
+    "kanji": "当たり前",
+    "kana": "あたりまえ",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "当然；正常"
+  },
+  {
+    "kanji": "再来週",
+    "kana": "さらいしゅう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "下下周"
+  },
+  {
+    "kanji": "連れる",
+    "kana": "つれる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "携带; 带领"
+  },
+  {
+    "kanji": "留学",
+    "kana": "りゅうがく",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "留学"
+  },
+  {
+    "kanji": "園芸",
+    "kana": "えんげい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "园艺"
+  },
+  {
+    "kanji": "贈る",
+    "kana": "おくる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "赠送"
+  },
+  {
+    "kanji": "普及",
+    "kana": "ふきゅう",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "普及"
+  },
+  {
+    "kanji": "",
+    "kana": "コミュニケーション",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "交流; 通信"
+  },
+  {
+    "kanji": "平均",
+    "kana": "へいきん",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "平均"
+  },
+  {
+    "kanji": "寿命",
+    "kana": "じゅみょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "寿命"
+  },
+  {
+    "kanji": "開催",
+    "kana": "かいさい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "举办，召开"
+  },
+  {
+    "kanji": "営業",
+    "kana": "えいぎょう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "营业"
+  },
+  {
+    "kanji": "変更",
+    "kana": "へんこう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "变更，变动"
+  },
+  {
+    "kanji": "",
+    "kana": "だめ",
+    "pitch": "②",
+    "pos": "形2",
+    "meaning": "不行; 白费"
+  },
+  {
+    "kanji": "大学",
+    "kana": "だいがく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "大学"
+  },
+  {
+    "kanji": "知らせ",
+    "kana": "しらせ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "消息, 通知"
+  },
+  {
+    "kanji": "喜ぶ",
+    "kana": "よろこぶ",
+    "pitch": "③",
+    "pos": "动1自他",
+    "meaning": "欢喜, 高兴"
+  },
+  {
+    "kanji": "猿",
+    "kana": "さる",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "猴"
+  },
+  {
+    "kanji": "小学校",
+    "kana": "しょうがっこう",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "小学"
+  },
+  {
+    "kanji": "地球",
+    "kana": "ちきゅう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "地球"
+  },
+  {
+    "kanji": "温暖化",
+    "kana": "おんだんか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "气候变暖"
+  },
+  {
+    "kanji": "年",
+    "kana": "とし",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "年龄;年"
+  },
+  {
+    "kanji": "飛行機",
+    "kana": "ひこうき",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "飞机"
+  },
+  {
+    "kanji": "流れる",
+    "kana": "ながれる",
+    "pitch": "③",
+    "pos": "动2自",
+    "meaning": "流动"
+  },
+  {
+    "kanji": "網",
+    "kana": "あみ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "网"
+  },
+  {
+    "kanji": "集中",
+    "kana": "しゅうちゅう",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "集中"
+  },
+  {
+    "kanji": "見た目",
+    "kana": "みため",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "外观, 外表"
+  },
+  {
+    "kanji": "麻花",
+    "kana": "マーホア",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "麻花儿"
+  },
+  {
+    "kanji": "楽器",
+    "kana": "がっき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "乐器"
+  },
+  {
+    "kanji": "理想",
+    "kana": "りそう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "理想"
+  },
+  {
+    "kanji": "卒業",
+    "kana": "そつぎょう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "毕业"
+  }
+]

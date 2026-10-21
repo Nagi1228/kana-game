@@ -1,0 +1,373 @@
+[
+  {
+    "kanji": "卒業生",
+    "kana": "そつぎょうせい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "毕业生"
+  },
+  {
+    "kanji": "自動車",
+    "kana": "じどうしゃ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "汽车，机动车"
+  },
+  {
+    "kanji": "機械",
+    "kana": "きかい",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "机器，机械"
+  },
+  {
+    "kanji": "物理",
+    "kana": "ぶつり",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "物理"
+  },
+  {
+    "kanji": "工学",
+    "kana": "こうがく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "工科"
+  },
+  {
+    "kanji": "新型",
+    "kana": "しんがた",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "新型，新式"
+  },
+  {
+    "kanji": "保有",
+    "kana": "ほゆう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "保有"
+  },
+  {
+    "kanji": "率",
+    "kana": "りつ",
+    "pitch": "①",
+    "pos": "名·后缀",
+    "meaning": "……率；比率"
+  },
+  {
+    "kanji": "汚染",
+    "kana": "おせん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "污染"
+  },
+  {
+    "kanji": "一員",
+    "kana": "いちいん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "一员，一份子"
+  },
+  {
+    "kanji": "励む",
+    "kana": "はげむ",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "努力，刻苦，勤勉"
+  },
+  {
+    "kanji": "取り入れる",
+    "kana": "とりいれる",
+    "pitch": "④",
+    "pos": "动2他",
+    "meaning": "采用，引进；收进来"
+  },
+  {
+    "kanji": "専門学校",
+    "kana": "せんもんがっこう",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "专业学校"
+  },
+  {
+    "kanji": "入学",
+    "kana": "にゅうがく",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "入学"
+  },
+  {
+    "kanji": "制作",
+    "kana": "せいさく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "制作"
+  },
+  {
+    "kanji": "題材",
+    "kana": "だいざい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "题材"
+  },
+  {
+    "kanji": "作り上げる",
+    "kana": "つくりあげる",
+    "pitch": "⑤",
+    "pos": "动2他",
+    "meaning": "做完，完成"
+  },
+  {
+    "kanji": "進める",
+    "kana": "すすめる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "推进，促进"
+  },
+  {
+    "kanji": "夢",
+    "kana": "ゆめ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "梦想，理想；梦"
+  },
+  {
+    "kanji": "信じる",
+    "kana": "しんじる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "相信"
+  },
+  {
+    "kanji": "やり抜く",
+    "kana": "やりぬく",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "做完，干到底"
+  },
+  {
+    "kanji": "向かう",
+    "kana": "むかう",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "对着，向着"
+  },
+  {
+    "kanji": "進路",
+    "kana": "しんろ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "前程；前进的道路"
+  },
+  {
+    "kanji": "",
+    "kana": "コンピューター",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "电脑"
+  },
+  {
+    "kanji": "",
+    "kana": "プログラマー",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "程序员"
+  },
+  {
+    "kanji": "購入",
+    "kana": "こうにゅう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "购买，购入"
+  },
+  {
+    "kanji": "注文",
+    "kana": "ちゅうもん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "点餐；订货"
+  },
+  {
+    "kanji": "場面",
+    "kana": "ばめん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "场面"
+  },
+  {
+    "kanji": "デジタル化",
+    "kana": "デジタルか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "数字化"
+  },
+  {
+    "kanji": "調理師",
+    "kana": "ちょうりし",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "厨师"
+  },
+  {
+    "kanji": "チェーン店",
+    "kana": "チェーンてん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "连锁店"
+  },
+  {
+    "kanji": "",
+    "kana": "いろんな",
+    "pitch": "⓪",
+    "pos": "连体",
+    "meaning": "各种各样的"
+  },
+  {
+    "kanji": "誘う",
+    "kana": "さそう",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "邀请"
+  },
+  {
+    "kanji": "",
+    "kana": "デザート",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "甜点，甜食"
+  },
+  {
+    "kanji": "",
+    "kana": "チーズケーキ",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "芝士蛋糕"
+  },
+  {
+    "kanji": "客",
+    "kana": "きゃく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "客人，顾客"
+  },
+  {
+    "kanji": "農業",
+    "kana": "のうぎょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "农业"
+  },
+  {
+    "kanji": "絶対",
+    "kana": "ぜったい",
+    "pitch": "⓪",
+    "pos": "名·副",
+    "meaning": "绝对；一定"
+  },
+  {
+    "kanji": "",
+    "kana": "おい",
+    "pitch": "①",
+    "pos": "叹",
+    "meaning": "喂，哎，欸"
+  },
+  {
+    "kanji": "肝心",
+    "kana": "かんじん",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "重要，紧要"
+  },
+  {
+    "kanji": "天気予報",
+    "kana": "てんきよほう",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "天气预报"
+  },
+  {
+    "kanji": "社員",
+    "kana": "しゃいん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "公司职员"
+  },
+  {
+    "kanji": "残り",
+    "kana": "のこり",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "残余，剩余"
+  },
+  {
+    "kanji": "夫",
+    "kana": "おっと",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "丈夫"
+  },
+  {
+    "kanji": "音楽室",
+    "kana": "おんがくしつ",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "音乐教室"
+  },
+  {
+    "kanji": "杯",
+    "kana": "はい",
+    "pitch": "①",
+    "pos": "名·后缀",
+    "meaning": "碗；杯，盅"
+  },
+  {
+    "kanji": "一気に",
+    "kana": "いっきに",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "一下子，一举"
+  },
+  {
+    "kanji": "今月",
+    "kana": "こんげつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "这个月"
+  },
+  {
+    "kanji": "生活費",
+    "kana": "せいかつひ",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "生活费"
+  },
+  {
+    "kanji": "",
+    "kana": "かゆ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "粥，稀饭"
+  },
+  {
+    "kanji": "食欲",
+    "kana": "しょくよく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "食欲"
+  },
+  {
+    "kanji": "日々",
+    "kana": "ひび",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "天天，每天"
+  },
+  {
+    "kanji": "お疲れ様",
+    "kana": "おつかれさま",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "（您）辛苦了"
+  }
+]

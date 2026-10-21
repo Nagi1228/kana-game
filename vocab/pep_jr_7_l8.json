@@ -1,0 +1,485 @@
+[
+  {
+    "kanji": "",
+    "kana": "いろいろ",
+    "pitch": "⓪",
+    "pos": "形2·副",
+    "meaning": "各种各样"
+  },
+  {
+    "kanji": "仕事",
+    "kana": "しごと",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "工作; 职业"
+  },
+  {
+    "kanji": "お邪魔",
+    "kana": "おじゃま",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "打扰；捣乱"
+  },
+  {
+    "kanji": "",
+    "kana": "アイディア",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "主意, 点子"
+  },
+  {
+    "kanji": "親",
+    "kana": "おや",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "父母, 双亲"
+  },
+  {
+    "kanji": "話",
+    "kana": "はなし",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "事情, 话题; 故事"
+  },
+  {
+    "kanji": "両親",
+    "kana": "りょうしん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "父母, 双亲"
+  },
+  {
+    "kanji": "主婦",
+    "kana": "しゅふ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "主妇"
+  },
+  {
+    "kanji": "会社員",
+    "kana": "かいしゃいん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "公司职员"
+  },
+  {
+    "kanji": "運転手",
+    "kana": "うんてんしゅ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "司机"
+  },
+  {
+    "kanji": "看護師",
+    "kana": "かんごし",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "护士"
+  },
+  {
+    "kanji": "助ける",
+    "kana": "たすける",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "帮助"
+  },
+  {
+    "kanji": "自分",
+    "kana": "じぶん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "自己, 自身"
+  },
+  {
+    "kanji": "",
+    "kana": "まず",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "首先"
+  },
+  {
+    "kanji": "内容",
+    "kana": "ないよう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "内容"
+  },
+  {
+    "kanji": "世の中",
+    "kana": "よのなか",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "世间,世上; 时代"
+  },
+  {
+    "kanji": "周り",
+    "kana": "まわり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "周围"
+  },
+  {
+    "kanji": "警察官",
+    "kana": "けいさつかん",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "警察"
+  },
+  {
+    "kanji": "交番",
+    "kana": "こうばん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "岗亭, 警务工作站"
+  },
+  {
+    "kanji": "働く",
+    "kana": "はたらく",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "工作，劳动；起作用"
+  },
+  {
+    "kanji": "住民",
+    "kana": "じゅうみん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "居民"
+  },
+  {
+    "kanji": "相談",
+    "kana": "そうだん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "商量,协商"
+  },
+  {
+    "kanji": "",
+    "kana": "トラブル",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "纠纷, 麻烦; 故障"
+  },
+  {
+    "kanji": "事故",
+    "kana": "じこ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "事故"
+  },
+  {
+    "kanji": "対応",
+    "kana": "たいおう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "应对"
+  },
+  {
+    "kanji": "安全",
+    "kana": "あんぜん",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "安全, 平安"
+  },
+  {
+    "kanji": "守る",
+    "kana": "まもる",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "保护; 遵守"
+  },
+  {
+    "kanji": "記者",
+    "kana": "きしゃ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "记者"
+  },
+  {
+    "kanji": "現場",
+    "kana": "げんば",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "现场"
+  },
+  {
+    "kanji": "状況",
+    "kana": "じょうきょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "情况, 状况"
+  },
+  {
+    "kanji": "報道",
+    "kana": "ほうどう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "报道"
+  },
+  {
+    "kanji": "大変",
+    "kana": "たいへん",
+    "pitch": "⓪",
+    "pos": "名·形2·副",
+    "meaning": "不得了，严重；非常"
+  },
+  {
+    "kanji": "危ない",
+    "kana": "あぶない",
+    "pitch": "⓪",
+    "pos": "形1",
+    "meaning": "危险；令人担心"
+  },
+  {
+    "kanji": "",
+    "kana": "ところ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "地方, 场所"
+  },
+  {
+    "kanji": "事件",
+    "kana": "じけん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "事件, 案件"
+  },
+  {
+    "kanji": "国内外",
+    "kana": "こくないがい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "国内外"
+  },
+  {
+    "kanji": "",
+    "kana": "さまざま",
+    "pitch": "②",
+    "pos": "形2",
+    "meaning": "各种各样"
+  },
+  {
+    "kanji": "",
+    "kana": "できごと",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "事情, 变故"
+  },
+  {
+    "kanji": "",
+    "kana": "すぐに",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "马上, 立即"
+  },
+  {
+    "kanji": "分かる",
+    "kana": "わかる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "明白, 懂"
+  },
+  {
+    "kanji": "配達員",
+    "kana": "はいたついん",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "快递员"
+  },
+  {
+    "kanji": "晚",
+    "kana": "ばん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "傍晚, 晚上"
+  },
+  {
+    "kanji": "荷物",
+    "kana": "にもつ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "行李; 负担"
+  },
+  {
+    "kanji": "配達",
+    "kana": "はいたつ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "送, 投递"
+  },
+  {
+    "kanji": "患者",
+    "kana": "かんじゃ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "病人, 患者"
+  },
+  {
+    "kanji": "届ける",
+    "kana": "とどける",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "送到，送给，送去"
+  },
+  {
+    "kanji": "お年寄り",
+    "kana": "おとしより",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "老年人"
+  },
+  {
+    "kanji": "米",
+    "kana": "こめ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "大米"
+  },
+  {
+    "kanji": "重い",
+    "kana": "おもい",
+    "pitch": "⓪",
+    "pos": "形1",
+    "meaning": "重, 沉"
+  },
+  {
+    "kanji": "生活",
+    "kana": "せいかつ",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "生活"
+  },
+  {
+    "kanji": "役立つ",
+    "kana": "やくだつ",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "有用, 有益"
+  },
+  {
+    "kanji": "",
+    "kana": "やりがい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "价值"
+  },
+  {
+    "kanji": "",
+    "kana": "どう",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "怎样"
+  },
+  {
+    "kanji": "新年",
+    "kana": "しんねん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "新年"
+  },
+  {
+    "kanji": "お茶",
+    "kana": "おちゃ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "茶, 茶叶"
+  },
+  {
+    "kanji": "冷たい",
+    "kana": "つめたい",
+    "pitch": "⓪",
+    "pos": "形1",
+    "meaning": "冷, 凉; 冷淡"
+  },
+  {
+    "kanji": "飲み物",
+    "kana": "のみもの",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "饮料"
+  },
+  {
+    "kanji": "来週",
+    "kana": "らいしゅう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "下周, 下星期"
+  },
+  {
+    "kanji": "発表",
+    "kana": "はっぴょう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "发言，汇报； 发表"
+  },
+  {
+    "kanji": "夏休み",
+    "kana": "なつやすみ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "暑假"
+  },
+  {
+    "kanji": "持つ",
+    "kana": "もつ",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "拿, 带; 拥有"
+  },
+  {
+    "kanji": "今朝",
+    "kana": "けさ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "今天早晨"
+  },
+  {
+    "kanji": "新聞",
+    "kana": "しんぶん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "报纸, 新闻"
+  },
+  {
+    "kanji": "会議",
+    "kana": "かいぎ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "会议"
+  },
+  {
+    "kanji": "会社",
+    "kana": "かいしゃ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "公司"
+  },
+  {
+    "kanji": "来月",
+    "kana": "らいげつ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "下个月"
+  },
+  {
+    "kanji": "冷蔵庫",
+    "kana": "れいぞうこ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "冰箱; 冷库"
+  },
+  {
+    "kanji": "間違える",
+    "kana": "まちがえる",
+    "pitch": "④",
+    "pos": "动2他",
+    "meaning": "弄错，搞错"
+  },
+  {
+    "kanji": "文章",
+    "kana": "ぶんしょう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "文章"
+  }
+]

@@ -1,0 +1,373 @@
+[
+  {
+    "kanji": "",
+    "kana": "ホームステイ",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "临时寄宿别人家"
+  },
+  {
+    "kanji": "",
+    "kana": "いえ",
+    "pitch": "②",
+    "pos": "叹",
+    "meaning": "不"
+  },
+  {
+    "kanji": "",
+    "kana": "ところで",
+    "pitch": "③",
+    "pos": "连",
+    "meaning": "可是；对了"
+  },
+  {
+    "kanji": "",
+    "kana": "わざわざ",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "特地，特意"
+  },
+  {
+    "kanji": "絵葉書",
+    "kana": "えはがき",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "(美术)明信片"
+  },
+  {
+    "kanji": "",
+    "kana": "くれる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "给(我)"
+  },
+  {
+    "kanji": "",
+    "kana": "あげる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "给(他人)"
+  },
+  {
+    "kanji": "",
+    "kana": "ええと",
+    "pitch": "⓪",
+    "pos": "叹",
+    "meaning": "嗯，啊"
+  },
+  {
+    "kanji": "地元",
+    "kana": "じもと",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "本地，当地"
+  },
+  {
+    "kanji": "要望",
+    "kana": "ようぼう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "要求，期望"
+  },
+  {
+    "kanji": "交通機関",
+    "kana": "こうつうきかん",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "交通工具"
+  },
+  {
+    "kanji": "備考",
+    "kana": "びこう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "备考，备注"
+  },
+  {
+    "kanji": "老舗",
+    "kana": "しにせ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "老店，老字号"
+  },
+  {
+    "kanji": "伝統",
+    "kana": "でんとう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "传统"
+  },
+  {
+    "kanji": "移動",
+    "kana": "いどう",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "移动"
+  },
+  {
+    "kanji": "頂上",
+    "kana": "ちょうじょう",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "山顶；顶端"
+  },
+  {
+    "kanji": "特産",
+    "kana": "とくさん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "特产"
+  },
+  {
+    "kanji": "",
+    "kana": "シェア",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "分享，共享"
+  },
+  {
+    "kanji": "シェア自転車",
+    "kana": "シェアじてんしゃ",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "共享自行车"
+  },
+  {
+    "kanji": "応える",
+    "kana": "こたえる",
+    "pitch": "③",
+    "pos": "动2自",
+    "meaning": "响应；答复"
+  },
+  {
+    "kanji": "来年",
+    "kana": "らいねん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "明年"
+  },
+  {
+    "kanji": "",
+    "kana": "いや",
+    "pitch": "①",
+    "pos": "叹",
+    "meaning": "不，不是的"
+  },
+  {
+    "kanji": "遊園地",
+    "kana": "ゆうえんち",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "游乐园"
+  },
+  {
+    "kanji": "",
+    "kana": "うん",
+    "pitch": "①",
+    "pos": "叹",
+    "meaning": "嗯；哦，喔"
+  },
+  {
+    "kanji": "掃除機",
+    "kana": "そうじき",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "吸尘器"
+  },
+  {
+    "kanji": "目薬",
+    "kana": "めぐすり",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "眼药"
+  },
+  {
+    "kanji": "効き目",
+    "kana": "ききめ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "效果，效验"
+  },
+  {
+    "kanji": "",
+    "kana": "チケット",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "票"
+  },
+  {
+    "kanji": "",
+    "kana": "マフラー",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "围巾"
+  },
+  {
+    "kanji": "子犬",
+    "kana": "こいぬ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "小狗，狗崽"
+  },
+  {
+    "kanji": "投げる",
+    "kana": "なげる",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "扔，投"
+  },
+  {
+    "kanji": "追いかける",
+    "kana": "おいかける",
+    "pitch": "④",
+    "pos": "动2他",
+    "meaning": "追赶"
+  },
+  {
+    "kanji": "酒",
+    "kana": "さけ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "酒"
+  },
+  {
+    "kanji": "",
+    "kana": "ガソリン",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "汽油"
+  },
+  {
+    "kanji": "石油",
+    "kana": "せきゆ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "石油"
+  },
+  {
+    "kanji": "水素",
+    "kana": "すいそ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "氢"
+  },
+  {
+    "kanji": "大豆",
+    "kana": "だいず",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "大豆"
+  },
+  {
+    "kanji": "",
+    "kana": "ピクニック",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "郊游，野游"
+  },
+  {
+    "kanji": "",
+    "kana": "ただいま",
+    "pitch": "⓪",
+    "pos": "叹",
+    "meaning": "我回来了"
+  },
+  {
+    "kanji": "",
+    "kana": "ショッピング",
+    "pitch": "①",
+    "pos": "名·动3自",
+    "meaning": "买东西，购物"
+  },
+  {
+    "kanji": "",
+    "kana": "おもちゃ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "玩具"
+  },
+  {
+    "kanji": "絵本",
+    "kana": "えほん",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "图画书"
+  },
+  {
+    "kanji": "ウーロン茶",
+    "kana": "ウーロンちゃ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "乌龙茶"
+  },
+  {
+    "kanji": "煎餅",
+    "kana": "せんべい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "烤米饼，脆饼"
+  },
+  {
+    "kanji": "",
+    "kana": "チャーハン",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "炒饭"
+  },
+  {
+    "kanji": "",
+    "kana": "ペットボトル",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "塑料瓶"
+  },
+  {
+    "kanji": "",
+    "kana": "プラスチック",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "塑料"
+  },
+  {
+    "kanji": "",
+    "kana": "ワイン",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "葡萄酒"
+  },
+  {
+    "kanji": "",
+    "kana": "ぶどう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "葡萄"
+  },
+  {
+    "kanji": "当地",
+    "kana": "とうち",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "当地"
+  },
+  {
+    "kanji": "特有",
+    "kana": "とくゆう",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "特有，独特"
+  },
+  {
+    "kanji": "思い出す",
+    "kana": "おもいだす",
+    "pitch": "④",
+    "pos": "动1他",
+    "meaning": "想起"
+  },
+  {
+    "kanji": "関する",
+    "kana": "かんする",
+    "pitch": "③",
+    "pos": "动3自",
+    "meaning": "有关，关于"
+  }
+]

@@ -1,0 +1,387 @@
+[
+  {
+    "kanji": "速さ",
+    "kana": "はやさ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "速度"
+  },
+  {
+    "kanji": "乗り心地",
+    "kana": "のりごこち",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "乘坐（交通工具等）的感觉、心情"
+  },
+  {
+    "kanji": "新幹線",
+    "kana": "しんかんせん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "（日本高速铁路）新干线"
+  },
+  {
+    "kanji": "高速",
+    "kana": "こうそく",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "高速"
+  },
+  {
+    "kanji": "鉄道",
+    "kana": "てつどう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "铁路"
+  },
+  {
+    "kanji": "",
+    "kana": "サービス",
+    "pitch": "①",
+    "pos": "名·动3自他",
+    "meaning": "服务"
+  },
+  {
+    "kanji": "指定席",
+    "kana": "していせき",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "固定座位，预定座位"
+  },
+  {
+    "kanji": "自由席",
+    "kana": "じゆうせき",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "自由座位"
+  },
+  {
+    "kanji": "車両",
+    "kana": "しゃりょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "车厢；车辆"
+  },
+  {
+    "kanji": "食堂車",
+    "kana": "しょくどうしゃ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "餐车"
+  },
+  {
+    "kanji": "結局",
+    "kana": "けっきょく",
+    "pitch": "⓪",
+    "pos": "名·副",
+    "meaning": "结果，最终；结局"
+  },
+  {
+    "kanji": "代わり",
+    "kana": "かわり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "代替，替代"
+  },
+  {
+    "kanji": "",
+    "kana": "デリバリー",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "外卖"
+  },
+  {
+    "kanji": "頼む",
+    "kana": "たのむ",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "请求，委托"
+  },
+  {
+    "kanji": "",
+    "kana": "ちなみに",
+    "pitch": "⓪",
+    "pos": "连",
+    "meaning": "顺便，附带"
+  },
+  {
+    "kanji": "段階",
+    "kana": "だんかい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "阶段；步骤"
+  },
+  {
+    "kanji": "占める",
+    "kana": "しめる",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "占据，占领"
+  },
+  {
+    "kanji": "網",
+    "kana": "もう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "网"
+  },
+  {
+    "kanji": "在来線",
+    "kana": "ざいらいせん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "日本新干线修建之前的既有铁路"
+  },
+  {
+    "kanji": "総",
+    "kana": "そう",
+    "pitch": "",
+    "pos": "前缀",
+    "meaning": "总，全体"
+  },
+  {
+    "kanji": "距離",
+    "kana": "きょり",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "距离"
+  },
+  {
+    "kanji": "配置",
+    "kana": "はいち",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "配置，布置，部署"
+  },
+  {
+    "kanji": "綱",
+    "kana": "つな",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "绳索"
+  },
+  {
+    "kanji": "南北",
+    "kana": "なんぼく",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "南北"
+  },
+  {
+    "kanji": "重視",
+    "kana": "じゅうし",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "重视"
+  },
+  {
+    "kanji": "",
+    "kana": "アピール",
+    "pitch": "②",
+    "pos": "名·动3自他",
+    "meaning": "宣扬；打动人心"
+  },
+  {
+    "kanji": "路線",
+    "kana": "ろせん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "线路；方针"
+  },
+  {
+    "kanji": "開発",
+    "kana": "かいはつ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "开发"
+  },
+  {
+    "kanji": "語る",
+    "kana": "かたる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "谈，讲"
+  },
+  {
+    "kanji": "条件",
+    "kana": "じょうけん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "条件"
+  },
+  {
+    "kanji": "線路",
+    "kana": "せんろ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "线路"
+  },
+  {
+    "kanji": "場合",
+    "kana": "ばあい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "场合，时候"
+  },
+  {
+    "kanji": "専用",
+    "kana": "せんよう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "专用"
+  },
+  {
+    "kanji": "課題",
+    "kana": "かだい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "课题，题目"
+  },
+  {
+    "kanji": "",
+    "kana": "チャット",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "聊天，网络聊天"
+  },
+  {
+    "kanji": "強調",
+    "kana": "きょうちょう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "强调，极力主张"
+  },
+  {
+    "kanji": "追求",
+    "kana": "ついきゅう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "追求"
+  },
+  {
+    "kanji": "幸福",
+    "kana": "こうふく",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "幸福"
+  },
+  {
+    "kanji": "",
+    "kana": "かむ",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "嚼；咬"
+  },
+  {
+    "kanji": "呼ぶ",
+    "kana": "よぶ",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "叫，唤；请来；称为"
+  },
+  {
+    "kanji": "返事",
+    "kana": "へんじ",
+    "pitch": "③",
+    "pos": "名·动3自",
+    "meaning": "答应，回答；回信"
+  },
+  {
+    "kanji": "休憩",
+    "kana": "きゅうけい",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "休息"
+  },
+  {
+    "kanji": "",
+    "kana": "どんどん",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "接连不断"
+  },
+  {
+    "kanji": "給料",
+    "kana": "きゅうりょう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "工资，薪水"
+  },
+  {
+    "kanji": "物価",
+    "kana": "ぶっか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "物价"
+  },
+  {
+    "kanji": "化学",
+    "kana": "かがく",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "化学"
+  },
+  {
+    "kanji": "遠慮",
+    "kana": "えんりょ",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "客气；深谋远虑；谢绝，推辞"
+  },
+  {
+    "kanji": "消防士",
+    "kana": "しょうぼうし",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "消防员"
+  },
+  {
+    "kanji": "緊急事態",
+    "kana": "きんきゅうじたい",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "紧急情况，紧急事态"
+  },
+  {
+    "kanji": "電卓",
+    "kana": "でんたく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "电子计算器"
+  },
+  {
+    "kanji": "濡れる",
+    "kana": "ぬれる",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "淋湿，润湿"
+  },
+  {
+    "kanji": "予報",
+    "kana": "よほう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "预报"
+  },
+  {
+    "kanji": "晴れ",
+    "kana": "はれ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "晴"
+  },
+  {
+    "kanji": "予約",
+    "kana": "よやく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "预约"
+  },
+  {
+    "kanji": "幸い",
+    "kana": "さいわい",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "幸亏，幸好；幸福，幸运"
+  }
+]

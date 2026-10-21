@@ -1,0 +1,282 @@
+[
+  {
+    "kanji": "デパート",
+    "kana": "デパート",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "百货商店"
+  },
+  {
+    "kanji": "食堂",
+    "kana": "しょくどう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "食堂"
+  },
+  {
+    "kanji": "郵便局",
+    "kana": "ゆうびんきょく",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "邮局"
+  },
+  {
+    "kanji": "銀行",
+    "kana": "ぎんこう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "银行"
+  },
+  {
+    "kanji": "図書館",
+    "kana": "としょかん",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "图书馆"
+  },
+  {
+    "kanji": "マンション",
+    "kana": "マンション",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "(高级）公寓"
+  },
+  {
+    "kanji": "ホテル",
+    "kana": "ホテル",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "宾馆"
+  },
+  {
+    "kanji": "コンビニ",
+    "kana": "コンビニ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "便利店"
+  },
+  {
+    "kanji": "喫茶店",
+    "kana": "きっさてん",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "咖啡馆"
+  },
+  {
+    "kanji": "病院",
+    "kana": "びょういん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "医院"
+  },
+  {
+    "kanji": "本屋",
+    "kana": "ほんや",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "书店"
+  },
+  {
+    "kanji": "レストラン",
+    "kana": "レストラン",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "餐馆，西餐馆"
+  },
+  {
+    "kanji": "ビル",
+    "kana": "ビル",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "大楼，大厦"
+  },
+  {
+    "kanji": "建物",
+    "kana": "たてもの",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "大楼，建筑物"
+  },
+  {
+    "kanji": "売り場",
+    "kana": "うりば",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "柜台，出售处"
+  },
+  {
+    "kanji": "トイレ",
+    "kana": "トイレ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "厕所，盥洗室"
+  },
+  {
+    "kanji": "入り口",
+    "kana": "いりぐち",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "入口"
+  },
+  {
+    "kanji": "事務所",
+    "kana": "じむしょ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "事务所，办事处"
+  },
+  {
+    "kanji": "受付",
+    "kana": "うけつけ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "接待处"
+  },
+  {
+    "kanji": "バーゲン会場",
+    "kana": "バーゲンかいじょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "降价处理大卖场"
+  },
+  {
+    "kanji": "エスカレーター",
+    "kana": "エスカレーター",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "自动扶梯"
+  },
+  {
+    "kanji": "服",
+    "kana": "ふく",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "衣服"
+  },
+  {
+    "kanji": "コート",
+    "kana": "コート",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "风衣，大衣"
+  },
+  {
+    "kanji": "デジカメ",
+    "kana": "デジカメ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "数码相机"
+  },
+  {
+    "kanji": "国",
+    "kana": "くに",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "国，国家"
+  },
+  {
+    "kanji": "地図",
+    "kana": "ちず",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "地图"
+  },
+  {
+    "kanji": "隣",
+    "kana": "となり",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "旁边"
+  },
+  {
+    "kanji": "周辺",
+    "kana": "しゅうへん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "附近，周边"
+  },
+  {
+    "kanji": "今日",
+    "kana": "きょう",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "今天"
+  },
+  {
+    "kanji": "水曜日",
+    "kana": "すいようび",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "星期三"
+  },
+  {
+    "kanji": "木曜日",
+    "kana": "もくようび",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "星期四"
+  },
+  {
+    "kanji": "ここ",
+    "kana": "ここ",
+    "pitch": "⓪",
+    "pos": "代词",
+    "meaning": "这里，这儿"
+  },
+  {
+    "kanji": "そこ",
+    "kana": "そこ",
+    "pitch": "⓪",
+    "pos": "代词",
+    "meaning": "那里，那儿"
+  },
+  {
+    "kanji": "あそこ",
+    "kana": "あそこ",
+    "pitch": "⓪",
+    "pos": "代词",
+    "meaning": "那里，那儿"
+  },
+  {
+    "kanji": "こちら",
+    "kana": "こちら",
+    "pitch": "⓪",
+    "pos": "代词",
+    "meaning": "这儿，这边"
+  },
+  {
+    "kanji": "そちら",
+    "kana": "そちら",
+    "pitch": "⓪",
+    "pos": "代词",
+    "meaning": "那儿，那边"
+  },
+  {
+    "kanji": "あちら",
+    "kana": "あちら",
+    "pitch": "⓪",
+    "pos": "代词",
+    "meaning": "那儿，那边"
+  },
+  {
+    "kanji": "どこ",
+    "kana": "どこ",
+    "pitch": "①",
+    "pos": "代词",
+    "meaning": "哪里，哪儿"
+  },
+  {
+    "kanji": "どちら",
+    "kana": "どちら",
+    "pitch": "①",
+    "pos": "代词",
+    "meaning": "哪儿，哪边"
+  },
+  {
+    "kanji": "あのう",
+    "kana": "あのう",
+    "pitch": "⓪",
+    "pos": "感叹词",
+    "meaning": "请问，对不起"
+  }
+]

@@ -1,0 +1,569 @@
+[
+  {
+    "kanji": "一員",
+    "kana": "いちいん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "一员，一分子"
+  },
+  {
+    "kanji": "手元",
+    "kana": "てもと",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "手边，手头"
+  },
+  {
+    "kanji": "先立つ",
+    "kana": "さきだつ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "在……之前；率先"
+  },
+  {
+    "kanji": "綿密",
+    "kana": "めんみつ",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "细致，周密，详尽"
+  },
+  {
+    "kanji": "見慣れる",
+    "kana": "みなれる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "看惯，看熟"
+  },
+  {
+    "kanji": "驚き",
+    "kana": "おどろき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "吃惊，惊讶，震惊"
+  },
+  {
+    "kanji": "郊外",
+    "kana": "こうがい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "郊外，郊区"
+  },
+  {
+    "kanji": "利点",
+    "kana": "りてん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "好处，长处，优点"
+  },
+  {
+    "kanji": "補足",
+    "kana": "ほそく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "补充，补足"
+  },
+  {
+    "kanji": "開始",
+    "kana": "かいし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "开始"
+  },
+  {
+    "kanji": "水産",
+    "kana": "すいさん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "水产"
+  },
+  {
+    "kanji": "共通",
+    "kana": "きょうつう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "共同，共通"
+  },
+  {
+    "kanji": "両国",
+    "kana": "りょうこく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "两国"
+  },
+  {
+    "kanji": "相互",
+    "kana": "そうご",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "相互"
+  },
+  {
+    "kanji": "代理人",
+    "kana": "だいりにん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "代理人"
+  },
+  {
+    "kanji": "コメント",
+    "kana": "コメント",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "声明，评语，注释"
+  },
+  {
+    "kanji": "原作",
+    "kana": "げんさく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "原著，原作"
+  },
+  {
+    "kanji": "スニーカー",
+    "kana": "スニーカー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "旅游鞋，轻便运动鞋"
+  },
+  {
+    "kanji": "百薬の長",
+    "kana": "ひゃくやくのちょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "百药之王"
+  },
+  {
+    "kanji": "アップする",
+    "kana": "アップする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "提高，增高"
+  },
+  {
+    "kanji": "警察署",
+    "kana": "けいさつしょ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "公安局"
+  },
+  {
+    "kanji": "犯罪",
+    "kana": "はんざい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "犯罪"
+  },
+  {
+    "kanji": "開幕",
+    "kana": "かいまく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "开幕"
+  },
+  {
+    "kanji": "前夜祭",
+    "kana": "ぜんやさい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "节日前夜的庆祝活动"
+  },
+  {
+    "kanji": "当館",
+    "kana": "とうかん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "该馆，本馆，这个馆"
+  },
+  {
+    "kanji": "館長",
+    "kana": "かんちょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "馆长"
+  },
+  {
+    "kanji": "儀式",
+    "kana": "ぎしき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "仪式"
+  },
+  {
+    "kanji": "道理",
+    "kana": "どうり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "道理，情理"
+  },
+  {
+    "kanji": "インターホン",
+    "kana": "インターホン",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "有线对讲机，内线电话"
+  },
+  {
+    "kanji": "大げさ",
+    "kana": "おおげさ",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "夸大，夸张；小题大做"
+  },
+  {
+    "kanji": "従う",
+    "kana": "したがう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "遵守，遵从，服从；跟随"
+  },
+  {
+    "kanji": "死者",
+    "kana": "ししゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "死者，死人"
+  },
+  {
+    "kanji": "負傷者",
+    "kana": "ふしょうしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "受伤的人，负伤者"
+  },
+  {
+    "kanji": "地割れ",
+    "kana": "じわれ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "地裂，地面崩裂"
+  },
+  {
+    "kanji": "火災",
+    "kana": "かさい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "火灾"
+  },
+  {
+    "kanji": "沿岸",
+    "kana": "えんがん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "沿岸，沿海"
+  },
+  {
+    "kanji": "押し寄せる",
+    "kana": "おしよせる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "涌过来，蜂拥而至"
+  },
+  {
+    "kanji": "甚大",
+    "kana": "じんだい",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "巨大，甚大，很大，非常大"
+  },
+  {
+    "kanji": "もたらす",
+    "kana": "もたらす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "造成，招致，带来，带去"
+  },
+  {
+    "kanji": "海底",
+    "kana": "かいてい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "海底"
+  },
+  {
+    "kanji": "构造",
+    "kana": "プレート",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "板块（构造）；板，金属板；感光板，底片"
+  },
+  {
+    "kanji": "岩盤",
+    "kana": "がんばん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "岩盘"
+  },
+  {
+    "kanji": "別",
+    "kana": "べつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "其他，另外"
+  },
+  {
+    "kanji": "押し合う",
+    "kana": "おしあう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "相互推挤，冲撞"
+  },
+  {
+    "kanji": "圧力",
+    "kana": "あつりょく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "压力"
+  },
+  {
+    "kanji": "耐える",
+    "kana": "たえる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "承受，忍受，忍耐"
+  },
+  {
+    "kanji": "一気に",
+    "kana": "いっきに",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "一下子，一口气"
+  },
+  {
+    "kanji": "ずれる",
+    "kana": "ずれる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "错位，错开，移动；背离，偏离"
+  },
+  {
+    "kanji": "地層",
+    "kana": "ちそう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "地层"
+  },
+  {
+    "kanji": "ゆがみ",
+    "kana": "ゆがみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "扭曲，歪曲，歪斜"
+  },
+  {
+    "kanji": "国土",
+    "kana": "こくど",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "国土"
+  },
+  {
+    "kanji": "境界",
+    "kana": "きょうかい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "境界，边界，疆界"
+  },
+  {
+    "kanji": "位置～",
+    "kana": "いちする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "位于，位置"
+  },
+  {
+    "kanji": "科学技術",
+    "kana": "かがくぎじゅつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "科学技术，科技"
+  },
+  {
+    "kanji": "予知",
+    "kana": "よち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "预测，预知，预先知晓"
+  },
+  {
+    "kanji": "高精度",
+    "kana": "こうせいど",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "高精度"
+  },
+  {
+    "kanji": "～棟",
+    "kana": "～とう",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～栋，～幢"
+  },
+  {
+    "kanji": "テーマパーク",
+    "kana": "テーマパーク",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "主题公园"
+  },
+  {
+    "kanji": "オープンする",
+    "kana": "オープンする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "开张，开业，开放"
+  },
+  {
+    "kanji": "悲劇",
+    "kana": "ひげき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "悲剧"
+  },
+  {
+    "kanji": "打ち合う",
+    "kana": "うちあう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "对打，互打"
+  },
+  {
+    "kanji": "順序",
+    "kana": "じゅんじょ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "顺序"
+  },
+  {
+    "kanji": "下車～",
+    "kana": "げしゃする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "下车"
+  },
+  {
+    "kanji": "卒業論文",
+    "kana": "そつぎょうろんぶん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "毕业论文"
+  },
+  {
+    "kanji": "言い合う",
+    "kana": "いいあう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "互相说；各执一司；争论"
+  },
+  {
+    "kanji": "穴",
+    "kana": "あな",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "空，眼；洞穴；漏洞，缺点"
+  },
+  {
+    "kanji": "煮込む",
+    "kana": "にこむ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "炖，煮，熬"
+  },
+  {
+    "kanji": "重ねる",
+    "kana": "かさねる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "反复，多次；摞，叠放"
+  },
+  {
+    "kanji": "反抗～",
+    "kana": "はんこうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "反抗"
+  },
+  {
+    "kanji": "あくまで",
+    "kana": "あくまで",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "到底，毕竟，终归"
+  },
+  {
+    "kanji": "代理",
+    "kana": "だいり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "代理"
+  },
+  {
+    "kanji": "西",
+    "kana": "にし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "西面，西，西方"
+  },
+  {
+    "kanji": "落第",
+    "kana": "らくだい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "留级，落选，落第"
+  },
+  {
+    "kanji": "急落",
+    "kana": "きゅうらく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "暴跌，快速下跌，快速降落"
+  },
+  {
+    "kanji": "遅れ",
+    "kana": "おくれ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "迟缓，延迟，迟到"
+  },
+  {
+    "kanji": "団結～",
+    "kana": "だんけつする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "团结"
+  },
+  {
+    "kanji": "攻める",
+    "kana": "せめる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "进攻，攻击"
+  },
+  {
+    "kanji": "姿勢",
+    "kana": "しせい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "态度，姿态；姿势"
+  },
+  {
+    "kanji": "克服～",
+    "kana": "こくふくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "克服"
+  },
+  {
+    "kanji": "国産",
+    "kana": "こくさん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "国产"
+  },
+  {
+    "kanji": "限度",
+    "kana": "げんど",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "限度，界限，范围"
+  }
+]

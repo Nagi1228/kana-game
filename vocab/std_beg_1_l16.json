@@ -1,0 +1,471 @@
+[
+  {
+    "kanji": "操作",
+    "kana": "そうさ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "操作，操纵"
+  },
+  {
+    "kanji": "機械",
+    "kana": "きかい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "机械，机器"
+  },
+  {
+    "kanji": "旅行会社",
+    "kana": "りょこうがいしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "旅行社"
+  },
+  {
+    "kanji": "航空会社",
+    "kana": "こうくうがいしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "航空公司"
+  },
+  {
+    "kanji": "営業部",
+    "kana": "えいぎょうぶ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "营业部"
+  },
+  {
+    "kanji": "ＩＴ産業",
+    "kana": "アイティーさんぎょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "IT产业，信息技术产业"
+  },
+  {
+    "kanji": "製品",
+    "kana": "せいひん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "产品"
+  },
+  {
+    "kanji": "建築家",
+    "kana": "けんちくか",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "建筑师"
+  },
+  {
+    "kanji": "設計",
+    "kana": "せっけい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "设计"
+  },
+  {
+    "kanji": "デザイン",
+    "kana": "デザイン",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "设计（图），（制作）图案"
+  },
+  {
+    "kanji": "形",
+    "kana": "かたち",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "造型，形状，形式"
+  },
+  {
+    "kanji": "最新",
+    "kana": "さいしん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "最新"
+  },
+  {
+    "kanji": "ネクタイ",
+    "kana": "ネクタイ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "领带"
+  },
+  {
+    "kanji": "財布",
+    "kana": "さいふ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "钱包"
+  },
+  {
+    "kanji": "革",
+    "kana": "かわ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "革，皮革"
+  },
+  {
+    "kanji": "布",
+    "kana": "ぬの",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "布，布匹"
+  },
+  {
+    "kanji": "水筒",
+    "kana": "すいとう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "水壶，水筒"
+  },
+  {
+    "kanji": "緑",
+    "kana": "みどり",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "绿，绿色"
+  },
+  {
+    "kanji": "足",
+    "kana": "あし",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "脚"
+  },
+  {
+    "kanji": "指",
+    "kana": "ゆび",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "手指，指头"
+  },
+  {
+    "kanji": "目",
+    "kana": "め",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "眼，眼睛"
+  },
+  {
+    "kanji": "鼻",
+    "kana": "はな",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "鼻，鼻子"
+  },
+  {
+    "kanji": "顔",
+    "kana": "かお",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "脸，颜面"
+  },
+  {
+    "kanji": "頭",
+    "kana": "あたま",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "头，头脑"
+  },
+  {
+    "kanji": "ＩＤカード",
+    "kana": "アイディーカード",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "身份证件"
+  },
+  {
+    "kanji": "間違い",
+    "kana": "まちがい",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "错误，失误"
+  },
+  {
+    "kanji": "問題",
+    "kana": "もんだい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "问题"
+  },
+  {
+    "kanji": "広告",
+    "kana": "こうこく",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "广告"
+  },
+  {
+    "kanji": "看板",
+    "kana": "かんばん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "牌子"
+  },
+  {
+    "kanji": "展示場",
+    "kana": "てんじじょう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "展览会场"
+  },
+  {
+    "kanji": "入場料",
+    "kana": "にゅうじょうりょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "门票，进场费"
+  },
+  {
+    "kanji": "サービス",
+    "kana": "サービス",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "服务"
+  },
+  {
+    "kanji": "天井",
+    "kana": "てんじょう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "天棚"
+  },
+  {
+    "kanji": "警備",
+    "kana": "けいび",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "戒备，警备"
+  },
+  {
+    "kanji": "クリスマスツリー",
+    "kana": "クリスマスツリー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "圣诞树"
+  },
+  {
+    "kanji": "オーストラリア人",
+    "kana": "オーストラリアじん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "澳大利亚人"
+  },
+  {
+    "kanji": "皆さん",
+    "kana": "みなさん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "大家，诸位"
+  },
+  {
+    "kanji": "子",
+    "kana": "こ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "孩子"
+  },
+  {
+    "kanji": "横",
+    "kana": "よこ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "旁边，侧面"
+  },
+  {
+    "kanji": "持つ",
+    "kana": "もつ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "有，拥有，持有"
+  },
+  {
+    "kanji": "住む",
+    "kana": "すむ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "住，居住"
+  },
+  {
+    "kanji": "知る",
+    "kana": "しる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "认识，知道，了解"
+  },
+  {
+    "kanji": "直す",
+    "kana": "なおす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "改，修改，改正"
+  },
+  {
+    "kanji": "片づける",
+    "kana": "かたづける",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "收拾，整理"
+  },
+  {
+    "kanji": "練習する",
+    "kana": "れんしゅうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "练习"
+  },
+  {
+    "kanji": "結婚する",
+    "kana": "けっこんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "结婚"
+  },
+  {
+    "kanji": "安心する",
+    "kana": "あんしんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "安心，放心"
+  },
+  {
+    "kanji": "明るい",
+    "kana": "あかるい",
+    "pitch": "⓪",
+    "pos": "形容词",
+    "meaning": "明亮，开朗"
+  },
+  {
+    "kanji": "長い",
+    "kana": "ながい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "长，长久，长远"
+  },
+  {
+    "kanji": "短い",
+    "kana": "みじかい",
+    "pitch": "③",
+    "pos": "形容词",
+    "meaning": "短，短暂"
+  },
+  {
+    "kanji": "軽い",
+    "kana": "かるい",
+    "pitch": "⓪",
+    "pos": "形容词",
+    "meaning": "轻巧，轻，轻松，轻微"
+  },
+  {
+    "kanji": "優しい",
+    "kana": "やさしい",
+    "pitch": "⓪",
+    "pos": "形容词",
+    "meaning": "和蔼，温和，体贴"
+  },
+  {
+    "kanji": "細い",
+    "kana": "ほそい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "小，细长，纤细"
+  },
+  {
+    "kanji": "太い",
+    "kana": "ふとい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "粗，胖"
+  },
+  {
+    "kanji": "黒い",
+    "kana": "くろい",
+    "pitch": "①",
+    "pos": "形容词",
+    "meaning": "黑，黑色"
+  },
+  {
+    "kanji": "ユニーク",
+    "kana": "ユニーク",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "独特，唯一"
+  },
+  {
+    "kanji": "安全",
+    "kana": "あんぜん",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "安全"
+  },
+  {
+    "kanji": "派手",
+    "kana": "はで",
+    "pitch": "②",
+    "pos": "形容动词",
+    "meaning": "耀眼，花哨"
+  },
+  {
+    "kanji": "地味",
+    "kana": "じみ",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "朴素，质朴"
+  },
+  {
+    "kanji": "厳重",
+    "kana": "げんじゅう",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "森严；严格"
+  },
+  {
+    "kanji": "まじめ",
+    "kana": "まじめ",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "认真；严肃"
+  },
+  {
+    "kanji": "大切",
+    "kana": "たいせつ",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "重要，珍贵"
+  },
+  {
+    "kanji": "複雑",
+    "kana": "ふくざつ",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "复杂，繁杂"
+  },
+  {
+    "kanji": "ちゃんと",
+    "kana": "ちゃんと",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "好好地，的确，完全"
+  },
+  {
+    "kanji": "すぐ",
+    "kana": "すぐ",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "马上，立即"
+  },
+  {
+    "kanji": "ずいぶん",
+    "kana": "ずいぶん",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "相当，非常，很"
+  },
+  {
+    "kanji": "ほら",
+    "kana": "ほら",
+    "pitch": "①",
+    "pos": "感叹词",
+    "meaning": "你看，瞧，喂"
+  }
+]

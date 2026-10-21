@@ -1,0 +1,338 @@
+[
+  {
+    "kanji": "今",
+    "kana": "いま",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "现在"
+  },
+  {
+    "kanji": "先週",
+    "kana": "せんしゅう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "上个星期"
+  },
+  {
+    "kanji": "来週",
+    "kana": "らいしゅう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "下个星期"
+  },
+  {
+    "kanji": "さ来週",
+    "kana": "さらいしゅう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "下下个星期"
+  },
+  {
+    "kanji": "今週",
+    "kana": "こんしゅう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "这个星期"
+  },
+  {
+    "kanji": "昨日",
+    "kana": "きのう",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "昨天"
+  },
+  {
+    "kanji": "明日",
+    "kana": "あした",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "明天"
+  },
+  {
+    "kanji": "あさって",
+    "kana": "あさって",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "后天"
+  },
+  {
+    "kanji": "おととい",
+    "kana": "おととい",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "前天"
+  },
+  {
+    "kanji": "毎日",
+    "kana": "まいにち",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "每天，每日"
+  },
+  {
+    "kanji": "毎朝",
+    "kana": "まいあさ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "每天早晨"
+  },
+  {
+    "kanji": "毎晩",
+    "kana": "まいばん",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "每天晚上"
+  },
+  {
+    "kanji": "毎週",
+    "kana": "まいしゅう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "每个星期"
+  },
+  {
+    "kanji": "午前",
+    "kana": "ごぜん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "上午"
+  },
+  {
+    "kanji": "午後/ピーエム",
+    "kana": "ごご",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "下午"
+  },
+  {
+    "kanji": "日曜日",
+    "kana": "にちようび",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "星期日"
+  },
+  {
+    "kanji": "月曜日",
+    "kana": "げつようび",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "星期一"
+  },
+  {
+    "kanji": "火曜日",
+    "kana": "かようび",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "星期二"
+  },
+  {
+    "kanji": "金曜日",
+    "kana": "きんようび",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "星期五"
+  },
+  {
+    "kanji": "土曜日",
+    "kana": "どようび",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "星期六"
+  },
+  {
+    "kanji": "今朝",
+    "kana": "けさ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "今天早晨"
+  },
+  {
+    "kanji": "今晩",
+    "kana": "こんばん",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "今天晚上"
+  },
+  {
+    "kanji": "来年",
+    "kana": "らいねん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "明年"
+  },
+  {
+    "kanji": "去年",
+    "kana": "きょねん",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "去年"
+  },
+  {
+    "kanji": "夜",
+    "kana": "よる",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "晚上，夜里，夜晚"
+  },
+  {
+    "kanji": "晩",
+    "kana": "ばん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "晚上"
+  },
+  {
+    "kanji": "朝",
+    "kana": "あさ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "早晨"
+  },
+  {
+    "kanji": "学校",
+    "kana": "がっこう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "学校"
+  },
+  {
+    "kanji": "試験",
+    "kana": "しけん",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "考试"
+  },
+  {
+    "kanji": "仕事",
+    "kana": "しごと",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "工作"
+  },
+  {
+    "kanji": "遅刻",
+    "kana": "ちこく",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "迟到"
+  },
+  {
+    "kanji": "休み",
+    "kana": "やすみ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "休息"
+  },
+  {
+    "kanji": "出張",
+    "kana": "しゅっちょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "出差"
+  },
+  {
+    "kanji": "研修",
+    "kana": "けんしゅう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "进修"
+  },
+  {
+    "kanji": "旅行",
+    "kana": "りょこう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "旅行"
+  },
+  {
+    "kanji": "展覧会",
+    "kana": "てんらんかい",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "展览会"
+  },
+  {
+    "kanji": "歓迎会",
+    "kana": "かんげいかい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "欢迎会"
+  },
+  {
+    "kanji": "パーティー",
+    "kana": "パーティー",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "联欢会"
+  },
+  {
+    "kanji": "お宅",
+    "kana": "おたく",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "府上，"
+  },
+  {
+    "kanji": "いつ",
+    "kana": "いつ",
+    "pitch": "①",
+    "pos": "代词",
+    "meaning": "什么时候"
+  },
+  {
+    "kanji": "休む",
+    "kana": "やすむ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "休息"
+  },
+  {
+    "kanji": "働く",
+    "kana": "はたらく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "工作"
+  },
+  {
+    "kanji": "始まる",
+    "kana": "はじまる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "开始"
+  },
+  {
+    "kanji": "終わる",
+    "kana": "おわる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "结束"
+  },
+  {
+    "kanji": "起きる",
+    "kana": "おきる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "起床"
+  },
+  {
+    "kanji": "寝る",
+    "kana": "ねる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "睡觉"
+  },
+  {
+    "kanji": "勉強する",
+    "kana": "べんきょうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "学习"
+  },
+  {
+    "kanji": "いつも",
+    "kana": "いつも",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "经常，总是"
+  }
+]

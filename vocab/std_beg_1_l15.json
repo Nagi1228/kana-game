@@ -1,0 +1,254 @@
+[
+  {
+    "kanji": "ボート",
+    "kana": "ボート",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "小船，小艇"
+  },
+  {
+    "kanji": "ベンチ",
+    "kana": "ベンチ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "长椅，长凳"
+  },
+  {
+    "kanji": "市役所",
+    "kana": "しやくしょ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "市政府"
+  },
+  {
+    "kanji": "携帯電話",
+    "kana": "けいたいでんわ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "手机"
+  },
+  {
+    "kanji": "禁煙",
+    "kana": "きんえん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "禁止吸烟"
+  },
+  {
+    "kanji": "風邪",
+    "kana": "かぜ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "感冒"
+  },
+  {
+    "kanji": "熱",
+    "kana": "ねつ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "发烧，体温"
+  },
+  {
+    "kanji": "睡眠",
+    "kana": "すいみん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "睡眠"
+  },
+  {
+    "kanji": "お風呂",
+    "kana": "おふろ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "澡堂，浴室"
+  },
+  {
+    "kanji": "薬局",
+    "kana": "やっきょく",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "药店"
+  },
+  {
+    "kanji": "クーラー",
+    "kana": "クーラー",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "空调"
+  },
+  {
+    "kanji": "火",
+    "kana": "ひ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "火"
+  },
+  {
+    "kanji": "気",
+    "kana": "き",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "精神，意识"
+  },
+  {
+    "kanji": "打ち合わせ",
+    "kana": "うちあわせ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "事先商量，碰头，商洽"
+  },
+  {
+    "kanji": "無理",
+    "kana": "むり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "勉强，难以办到"
+  },
+  {
+    "kanji": "駐車禁止",
+    "kana": "ちゅうしゃきんし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "禁止停车"
+  },
+  {
+    "kanji": "立入禁止",
+    "kana": "たちいりきんし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "禁止进入"
+  },
+  {
+    "kanji": "火気厳禁",
+    "kana": "かきげんきん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "严禁烟火"
+  },
+  {
+    "kanji": "撮影禁止",
+    "kana": "さつえいきんし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "禁止拍照"
+  },
+  {
+    "kanji": "乗る",
+    "kana": "のる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "乘坐，乘"
+  },
+  {
+    "kanji": "使う",
+    "kana": "つかう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "用，使用"
+  },
+  {
+    "kanji": "座る",
+    "kana": "すわる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "坐，落座"
+  },
+  {
+    "kanji": "入る",
+    "kana": "はいる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "进入，加入"
+  },
+  {
+    "kanji": "申す",
+    "kana": "もうす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "是，说，讲，告诉"
+  },
+  {
+    "kanji": "とる",
+    "kana": "とる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "取，取得"
+  },
+  {
+    "kanji": "歌う",
+    "kana": "うたう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "唱，歌唱"
+  },
+  {
+    "kanji": "伝える",
+    "kana": "つたえる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "说，传达，转告"
+  },
+  {
+    "kanji": "止める",
+    "kana": "とめる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "停，制止"
+  },
+  {
+    "kanji": "暖かい",
+    "kana": "あたたかい",
+    "pitch": "④",
+    "pos": "形容词",
+    "meaning": "热乎，温暖"
+  },
+  {
+    "kanji": "大丈夫",
+    "kana": "だいじょうぶ",
+    "pitch": "③",
+    "pos": "形容动词",
+    "meaning": "没关系，放心"
+  },
+  {
+    "kanji": "だめ",
+    "kana": "だめ",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "不行，不可以"
+  },
+  {
+    "kanji": "十分",
+    "kana": "じゅうぶん",
+    "pitch": "③",
+    "pos": "副词",
+    "meaning": "好好地，充足地"
+  },
+  {
+    "kanji": "もちろん",
+    "kana": "もちろん",
+    "pitch": "②",
+    "pos": "副词",
+    "meaning": "当然，不用说"
+  },
+  {
+    "kanji": "ゆっくり",
+    "kana": "ゆっくり",
+    "pitch": "③",
+    "pos": "副词",
+    "meaning": "好好地，安静地"
+  },
+  {
+    "kanji": "もしもし",
+    "kana": "もしもし",
+    "pitch": "①",
+    "pos": "感叹词",
+    "meaning": "喂"
+  },
+  {
+    "kanji": "いえ",
+    "kana": "いえ",
+    "pitch": "②",
+    "pos": "感叹词",
+    "meaning": "不，不是"
+  }
+]

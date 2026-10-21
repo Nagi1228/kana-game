@@ -1,0 +1,506 @@
+[
+  {
+    "kanji": "知恵",
+    "kana": "ちえ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "智慧; 智能"
+  },
+  {
+    "kanji": "結晶",
+    "kana": "けっしょう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "结晶，结果；晶体"
+  },
+  {
+    "kanji": "象徴",
+    "kana": "しょうちょう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "象征"
+  },
+  {
+    "kanji": "文字",
+    "kana": "もじ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "文字"
+  },
+  {
+    "kanji": "特徴的",
+    "kana": "とくちょうてき",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "有特点"
+  },
+  {
+    "kanji": "組み合わせる",
+    "kana": "くみあわせる",
+    "pitch": "⑤",
+    "pos": "动2他",
+    "meaning": "组合；编组"
+  },
+  {
+    "kanji": "構造",
+    "kana": "こうぞう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "结构, 构造"
+  },
+  {
+    "kanji": "分ける",
+    "kana": "わける",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "分开; 分类"
+  },
+  {
+    "kanji": "",
+    "kana": "バランス",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "平衡, 均衡"
+  },
+  {
+    "kanji": "魅力",
+    "kana": "みりょく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "魅力, 吸引力"
+  },
+  {
+    "kanji": "地域",
+    "kana": "ちいき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "地域, 地区"
+  },
+  {
+    "kanji": "仮名",
+    "kana": "かな",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "假名"
+  },
+  {
+    "kanji": "偉大",
+    "kana": "いだい",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "伟大"
+  },
+  {
+    "kanji": "発明",
+    "kana": "はつめい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "发明"
+  },
+  {
+    "kanji": "伝承",
+    "kana": "でんしょう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "传承"
+  },
+  {
+    "kanji": "役割",
+    "kana": "やくわり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "作用; 任务; 职务"
+  },
+  {
+    "kanji": "果たす",
+    "kana": "はたす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "实行, 实现"
+  },
+  {
+    "kanji": "伝える",
+    "kana": "つたえる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "传达, 转告"
+  },
+  {
+    "kanji": "約",
+    "kana": "やく",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "大约, 大体"
+  },
+  {
+    "kanji": "甲骨文",
+    "kana": "こうこつぶん",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "甲骨文"
+  },
+  {
+    "kanji": "植物",
+    "kana": "しょくぶつ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "植物"
+  },
+  {
+    "kanji": "状態",
+    "kana": "じょうたい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "状态"
+  },
+  {
+    "kanji": "芽生え",
+    "kana": "めばえ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "发芽；事情的开始"
+  },
+  {
+    "kanji": "通り",
+    "kana": "とおり",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "原样, 一样"
+  },
+  {
+    "kanji": "芽",
+    "kana": "め",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "嫩芽"
+  },
+  {
+    "kanji": "",
+    "kana": "アルファベット",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "拉丁字母; 字母表"
+  },
+  {
+    "kanji": "象形文字",
+    "kana": "しょうけいもじ",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "象形文字"
+  },
+  {
+    "kanji": "創造力",
+    "kana": "そうぞうりょく",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "创造力"
+  },
+  {
+    "kanji": "今まで",
+    "kana": "いままで",
+    "pitch": "③",
+    "pos": "副",
+    "meaning": "到现在, 至今"
+  },
+  {
+    "kanji": "変わる",
+    "kana": "かわる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "变化"
+  },
+  {
+    "kanji": "基本的",
+    "kana": "きほんてき",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "基本的"
+  },
+  {
+    "kanji": "姿",
+    "kana": "すがた",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "姿态, 形态"
+  },
+  {
+    "kanji": "覗く",
+    "kana": "のぞく",
+    "pitch": "⓪",
+    "pos": "动1自他",
+    "meaning": "窥视；俯视；露出"
+  },
+  {
+    "kanji": "発想",
+    "kana": "はっそう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "主意，想法；构思，立意"
+  },
+  {
+    "kanji": "我が",
+    "kana": "わが",
+    "pitch": "①",
+    "pos": "连体",
+    "meaning": "我们的; 我的"
+  },
+  {
+    "kanji": "過去",
+    "kana": "かこ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "过去"
+  },
+  {
+    "kanji": "現在",
+    "kana": "げんざい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "现在, 目前"
+  },
+  {
+    "kanji": "未来",
+    "kana": "みらい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "未来"
+  },
+  {
+    "kanji": "繋ぐ",
+    "kana": "つなぐ",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "连接; 拴; 维系"
+  },
+  {
+    "kanji": "非常",
+    "kana": "ひじょう",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "非常，特别；紧急"
+  },
+  {
+    "kanji": "魅力的",
+    "kana": "みりょくてき",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "有魅力的"
+  },
+  {
+    "kanji": "挙げる",
+    "kana": "あげる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "举出"
+  },
+  {
+    "kanji": "生まれ",
+    "kana": "うまれ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "诞生，出生；出生地"
+  },
+  {
+    "kanji": "価値",
+    "kana": "かち",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "价值"
+  },
+  {
+    "kanji": "誕生",
+    "kana": "たんじょう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "诞生；出生"
+  },
+  {
+    "kanji": "感情",
+    "kana": "かんじょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "感情, 情绪"
+  },
+  {
+    "kanji": "込める",
+    "kana": "こめる",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "贯注，集中；装填"
+  },
+  {
+    "kanji": "意味",
+    "kana": "いみ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "意思, 意义"
+  },
+  {
+    "kanji": "間",
+    "kana": "あいだ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "之间; 期间"
+  },
+  {
+    "kanji": "",
+    "kana": "もしもし",
+    "pitch": "①",
+    "pos": "叹",
+    "meaning": "喂"
+  },
+  {
+    "kanji": "晩ご飯",
+    "kana": "ばんごはん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "晚饭"
+  },
+  {
+    "kanji": "代わる",
+    "kana": "かわる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "代替, 取代"
+  },
+  {
+    "kanji": "待つ",
+    "kana": "まつ",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "等候"
+  },
+  {
+    "kanji": "千羽鶴",
+    "kana": "せんばづる",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "千纸鹤"
+  },
+  {
+    "kanji": "見舞い",
+    "kana": "みまい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "探望，探视；问候，慰问"
+  },
+  {
+    "kanji": "飛び上がる",
+    "kana": "とびあがる",
+    "pitch": "④",
+    "pos": "动1自",
+    "meaning": "跳起来；飞起来，飞上去"
+  },
+  {
+    "kanji": "失礼",
+    "kana": "しつれい",
+    "pitch": "②",
+    "pos": "名·形2·动3自",
+    "meaning": "失礼；告辞"
+  },
+  {
+    "kanji": "担任",
+    "kana": "たんにん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "班主任；担任，担当"
+  },
+  {
+    "kanji": "",
+    "kana": "はっきり",
+    "pitch": "③",
+    "pos": "副",
+    "meaning": "清楚, 明确; 清醒, 爽快"
+  },
+  {
+    "kanji": "興味",
+    "kana": "きょうみ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "兴趣"
+  },
+  {
+    "kanji": "洗濯",
+    "kana": "せんたく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "洗涤，洗(衣服)"
+  },
+  {
+    "kanji": "茶会",
+    "kana": "ちゃかい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "茶会, 茶道会"
+  },
+  {
+    "kanji": "台所",
+    "kana": "だいどころ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "厨房"
+  },
+  {
+    "kanji": "降る",
+    "kana": "ふる",
+    "pitch": "①",
+    "pos": "动1自",
+    "meaning": "下(雨, 雪)"
+  },
+  {
+    "kanji": "外来語",
+    "kana": "がいらいご",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "外来词"
+  },
+  {
+    "kanji": "お手洗い",
+    "kana": "おてあらい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "厕所，盥洗室"
+  },
+  {
+    "kanji": "",
+    "kana": "エレベーター",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "电梯, 升降机"
+  },
+  {
+    "kanji": "",
+    "kana": "まっすぐ",
+    "pitch": "③",
+    "pos": "副·形2",
+    "meaning": "直, 径直"
+  },
+  {
+    "kanji": "街角",
+    "kana": "まちかど",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "街角; 街头"
+  },
+  {
+    "kanji": "曲がる",
+    "kana": "まがる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "转弯; 弯曲"
+  },
+  {
+    "kanji": "空く",
+    "kana": "あく",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "空, 空出"
+  },
+  {
+    "kanji": "我慢",
+    "kana": "がまん",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "忍耐, 忍受"
+  }
+]

@@ -1,0 +1,247 @@
+[
+  {
+    "kanji": "音",
+    "kana": "おと",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "声音，响声"
+  },
+  {
+    "kanji": "声",
+    "kana": "こえ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "声音"
+  },
+  {
+    "kanji": "空気",
+    "kana": "くうき",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "空气"
+  },
+  {
+    "kanji": "息子",
+    "kana": "むすこ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "儿子"
+  },
+  {
+    "kanji": "医者",
+    "kana": "いしゃ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "医生"
+  },
+  {
+    "kanji": "お嬢さん",
+    "kana": "おじょうさん",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "令爱"
+  },
+  {
+    "kanji": "社会人",
+    "kana": "しゃかいじん",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "社会的一员，成人"
+  },
+  {
+    "kanji": "旅行ガイド",
+    "kana": "りょこうガイド",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "旅行导游"
+  },
+  {
+    "kanji": "学者",
+    "kana": "がくしゃ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "学者"
+  },
+  {
+    "kanji": "パイロット",
+    "kana": "パイロット",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "飞行员"
+  },
+  {
+    "kanji": "デザイナー",
+    "kana": "デザイナー",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "设计者，设计家"
+  },
+  {
+    "kanji": "タイムサービス",
+    "kana": "タイムサービス",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "时段廉价销售"
+  },
+  {
+    "kanji": "新春セール",
+    "kana": "しんしゅんセール",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "新年大甩卖"
+  },
+  {
+    "kanji": "３割引",
+    "kana": "さんわりびき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "七折"
+  },
+  {
+    "kanji": "定価",
+    "kana": "ていか",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "定价"
+  },
+  {
+    "kanji": "半額",
+    "kana": "はんがく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "半价"
+  },
+  {
+    "kanji": "値段",
+    "kana": "ねだん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "价格"
+  },
+  {
+    "kanji": "シャツ",
+    "kana": "シャツ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "衬衫"
+  },
+  {
+    "kanji": "スカート",
+    "kana": "スカート",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "裙子"
+  },
+  {
+    "kanji": "色",
+    "kana": "いろ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "颜色"
+  },
+  {
+    "kanji": "赤",
+    "kana": "あか",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "红色"
+  },
+  {
+    "kanji": "青",
+    "kana": "あお",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "蓝色"
+  },
+  {
+    "kanji": "お正月",
+    "kana": "おしょうがつ",
+    "pitch": "⑤",
+    "pos": "名词",
+    "meaning": "过年，新年"
+  },
+  {
+    "kanji": "時間",
+    "kana": "じかん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "时间"
+  },
+  {
+    "kanji": "将来",
+    "kana": "しょうらい",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "将来"
+  },
+  {
+    "kanji": "準備",
+    "kana": "じゅんび",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "准备"
+  },
+  {
+    "kanji": "病気",
+    "kana": "びょうき",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "疾病"
+  },
+  {
+    "kanji": "なる",
+    "kana": "なる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "变，当，变成，成为"
+  },
+  {
+    "kanji": "開く",
+    "kana": "あく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "开"
+  },
+  {
+    "kanji": "似合う",
+    "kana": "にあう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "适合，相称"
+  },
+  {
+    "kanji": "うるさい",
+    "kana": "うるさい",
+    "pitch": "③",
+    "pos": "形容词",
+    "meaning": "闹，使人心烦"
+  },
+  {
+    "kanji": "シンプル",
+    "kana": "シンプル",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "单纯，简洁"
+  },
+  {
+    "kanji": "間もなく",
+    "kana": "まもなく",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "马上，一会儿，不久"
+  },
+  {
+    "kanji": "さらに/もっと",
+    "kana": "さらに/もっと",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "更加，更"
+  },
+  {
+    "kanji": "さあ",
+    "kana": "さあ",
+    "pitch": "①",
+    "pos": "感叹词",
+    "meaning": "啊，喂"
+  }
+]

@@ -1,0 +1,555 @@
+[
+  {
+    "kanji": "修復",
+    "kana": "しゅうふく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "修复"
+  },
+  {
+    "kanji": "削り取る",
+    "kana": "けずりとる",
+    "pitch": "④",
+    "pos": "动1他",
+    "meaning": "切下"
+  },
+  {
+    "kanji": "壁画",
+    "kana": "へきが",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "壁画"
+  },
+  {
+    "kanji": "守護神",
+    "kana": "しゅごしん",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "守护神"
+  },
+  {
+    "kanji": "名誉",
+    "kana": "めいよ",
+    "pitch": "①",
+    "pos": "名·形2",
+    "meaning": "名誉"
+  },
+  {
+    "kanji": "機会",
+    "kana": "きかい",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "机会"
+  },
+  {
+    "kanji": "世界一",
+    "kana": "せかいいち",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "世界第一"
+  },
+  {
+    "kanji": "羨ましい",
+    "kana": "うらやましい",
+    "pitch": "⑤",
+    "pos": "形1",
+    "meaning": "羡慕，眼红"
+  },
+  {
+    "kanji": "号",
+    "kana": "ごう",
+    "pitch": "①",
+    "pos": "量·后缀",
+    "meaning": "号"
+  },
+  {
+    "kanji": "貴重",
+    "kana": "きちょう",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "贵重"
+  },
+  {
+    "kanji": "文化財",
+    "kana": "ぶんかざい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "文物，文化遗产"
+  },
+  {
+    "kanji": "",
+    "kana": "ようやく",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "渐渐；好（不）容易"
+  },
+  {
+    "kanji": "石窟",
+    "kana": "せっくつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "石窟"
+  },
+  {
+    "kanji": "芸術",
+    "kana": "げいじゅつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "艺术"
+  },
+  {
+    "kanji": "玄関口",
+    "kana": "げんかんぐち",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "门口"
+  },
+  {
+    "kanji": "彫刻",
+    "kana": "ちょうこく",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "雕刻"
+  },
+  {
+    "kanji": "南北",
+    "kana": "なんぼく",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "南北"
+  },
+  {
+    "kanji": "広がる",
+    "kana": "ひろがる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "展开；蔓延"
+  },
+  {
+    "kanji": "価値",
+    "kana": "かち",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "价值"
+  },
+  {
+    "kanji": "仏像",
+    "kana": "ぶつぞう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "佛像"
+  },
+  {
+    "kanji": "表情",
+    "kana": "ひょうじょう",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "表情"
+  },
+  {
+    "kanji": "暮らし",
+    "kana": "くらし",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "生活"
+  },
+  {
+    "kanji": "生き生き",
+    "kana": "いきいき",
+    "pitch": "③",
+    "pos": "副",
+    "meaning": "栩栩如生"
+  },
+  {
+    "kanji": "琵琶",
+    "kana": "びわ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "琵琶"
+  },
+  {
+    "kanji": "飛天",
+    "kana": "ひてん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "飞天，天女"
+  },
+  {
+    "kanji": "象徴",
+    "kana": "しょうちょう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "象征"
+  },
+  {
+    "kanji": "各国",
+    "kana": "かっこく",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "各国"
+  },
+  {
+    "kanji": "全面",
+    "kana": "ぜんめん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "全面，一切"
+  },
+  {
+    "kanji": "規模",
+    "kana": "きぼ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "规模"
+  },
+  {
+    "kanji": "大発見",
+    "kana": "だいはっけん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "大发现"
+  },
+  {
+    "kanji": "再び",
+    "kana": "ふたたび",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "再，又，重"
+  },
+  {
+    "kanji": "壊す",
+    "kana": "こわす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "弄坏，损坏"
+  },
+  {
+    "kanji": "盗む",
+    "kana": "ぬすむ",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "偷，盗窃"
+  },
+  {
+    "kanji": "争う",
+    "kana": "あらそう",
+    "pitch": "③",
+    "pos": "动1自他",
+    "meaning": "争夺；争论"
+  },
+  {
+    "kanji": "経つ",
+    "kana": "たつ",
+    "pitch": "①",
+    "pos": "动1自",
+    "meaning": "过；（时间）流逝"
+  },
+  {
+    "kanji": "消える",
+    "kana": "きえる",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "．消失，熄灭"
+  },
+  {
+    "kanji": "落ちる",
+    "kana": "おちる",
+    "pitch": "②",
+    "pos": "动2自",
+    "meaning": "掉，落"
+  },
+  {
+    "kanji": "観光客",
+    "kana": "かんこうきゃく",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "游客"
+  },
+  {
+    "kanji": "訴える",
+    "kana": "うったえる",
+    "pitch": "④",
+    "pos": "动2他",
+    "meaning": "诉说；控告"
+  },
+  {
+    "kanji": "自体",
+    "kana": "じたい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "自身"
+  },
+  {
+    "kanji": "",
+    "kana": "しばらく",
+    "pitch": "②",
+    "pos": "副",
+    "meaning": "暂时，暂且"
+  },
+  {
+    "kanji": "遭う",
+    "kana": "あう",
+    "pitch": "①",
+    "pos": "动1自",
+    "meaning": "遭遇"
+  },
+  {
+    "kanji": "救う",
+    "kana": "すくう",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "挽救，抢救"
+  },
+  {
+    "kanji": "設置",
+    "kana": "せっち",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "设置"
+  },
+  {
+    "kanji": "成立",
+    "kana": "せいりつ",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "成立"
+  },
+  {
+    "kanji": "長年",
+    "kana": "ながねん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "多年，长年累月"
+  },
+  {
+    "kanji": "積み重ねる",
+    "kana": "つみかさねる",
+    "pitch": "⑤",
+    "pos": "动2他",
+    "meaning": "摞（高）；积累"
+  },
+  {
+    "kanji": "緊急",
+    "kana": "きんきゅう",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "紧急"
+  },
+  {
+    "kanji": "補修",
+    "kana": "ほしゅう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "维修，修复"
+  },
+  {
+    "kanji": "日差し",
+    "kana": "ひざし",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "照射的阳光"
+  },
+  {
+    "kanji": "昆虫",
+    "kana": "こんちゅう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "昆虫"
+  },
+  {
+    "kanji": "悪化",
+    "kana": "あっか",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "恶化，变坏"
+  },
+  {
+    "kanji": "戦い",
+    "kana": "たたかい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "战争，战斗"
+  },
+  {
+    "kanji": "年々",
+    "kana": "ねんねん",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "年年，每年"
+  },
+  {
+    "kanji": "入場",
+    "kana": "にゅうじょう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "入场"
+  },
+  {
+    "kanji": "制限",
+    "kana": "せいげん",
+    "pitch": "③",
+    "pos": "名·动3他",
+    "meaning": "限制"
+  },
+  {
+    "kanji": "先端",
+    "kana": "せんたん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "尖端，先进"
+  },
+  {
+    "kanji": "監視",
+    "kana": "かんし",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "监视"
+  },
+  {
+    "kanji": "",
+    "kana": "デジタル",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "数字"
+  },
+  {
+    "kanji": "確立",
+    "kana": "かくりつ",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "确立"
+  },
+  {
+    "kanji": "取り組み",
+    "kana": "とりくみ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "努力；配合"
+  },
+  {
+    "kanji": "人類",
+    "kana": "じんるい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "人类"
+  },
+  {
+    "kanji": "機関",
+    "kana": "きかん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "组织机构"
+  },
+  {
+    "kanji": "印象深い",
+    "kana": "いんしょうぶかい",
+    "pitch": "⑤",
+    "pos": "形1",
+    "meaning": "印象深刻"
+  },
+  {
+    "kanji": "画家",
+    "kana": "がか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "画家"
+  },
+  {
+    "kanji": "苦難",
+    "kana": "くなん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "苦难"
+  },
+  {
+    "kanji": "一生",
+    "kana": "いっしょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "一生，终生"
+  },
+  {
+    "kanji": "共有",
+    "kana": "きょうゆう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "共有，共享"
+  },
+  {
+    "kanji": "信用",
+    "kana": "しんよう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "信用，相信"
+  },
+  {
+    "kanji": "注意事項",
+    "kana": "ちゅういじこう",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "注意事项"
+  },
+  {
+    "kanji": "",
+    "kana": "リスト",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "目录，一览表"
+  },
+  {
+    "kanji": "預かる",
+    "kana": "あずかる",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "收存，（代为）保管"
+  },
+  {
+    "kanji": "勝手",
+    "kana": "かって",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "任意，随便"
+  },
+  {
+    "kanji": "触る",
+    "kana": "さわる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "触摸"
+  },
+  {
+    "kanji": "",
+    "kana": "ネット",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "网络；网状物"
+  },
+  {
+    "kanji": "",
+    "kana": "チケット",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "票"
+  },
+  {
+    "kanji": "予約",
+    "kana": "よやく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "预约，预订"
+  },
+  {
+    "kanji": "崩壊",
+    "kana": "ほうかい",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "倒塌；崩溃"
+  },
+  {
+    "kanji": "騒ぐ",
+    "kana": "さわぐ",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "吵闹，吵嚷"
+  }
+]

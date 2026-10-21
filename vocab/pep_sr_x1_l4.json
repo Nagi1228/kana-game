@@ -1,0 +1,569 @@
+[
+  {
+    "kanji": "海洋",
+    "kana": "かいよう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "海洋"
+  },
+  {
+    "kanji": "恵み",
+    "kana": "めぐみ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "恩惠，恩泽"
+  },
+  {
+    "kanji": "海産物",
+    "kana": "かいさんぶつ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "海产品"
+  },
+  {
+    "kanji": "思い浮かべる",
+    "kana": "おもいうかべる",
+    "pitch": "⑥",
+    "pos": "动2他",
+    "meaning": "忆起，想起"
+  },
+  {
+    "kanji": "水深",
+    "kana": "すいしん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "水深"
+  },
+  {
+    "kanji": "",
+    "kana": "ふるさと",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "故乡"
+  },
+  {
+    "kanji": "生物",
+    "kana": "せいぶつ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "生物"
+  },
+  {
+    "kanji": "海面",
+    "kana": "かいめん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "海面"
+  },
+  {
+    "kanji": "海底",
+    "kana": "かいてい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "海底"
+  },
+  {
+    "kanji": "鉱産",
+    "kana": "こうさん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "矿产"
+  },
+  {
+    "kanji": "大量",
+    "kana": "たいりょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "大量"
+  },
+  {
+    "kanji": "存在",
+    "kana": "そんざい",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "有，存在"
+  },
+  {
+    "kanji": "",
+    "kana": "ガス",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "燃气"
+  },
+  {
+    "kanji": "天然ガス",
+    "kana": "てんねんガス",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "天然气"
+  },
+  {
+    "kanji": "銅",
+    "kana": "どう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "铜"
+  },
+  {
+    "kanji": "探査",
+    "kana": "たんさ",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "探查，探测"
+  },
+  {
+    "kanji": "地表",
+    "kana": "ちひょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "地表"
+  },
+  {
+    "kanji": "貝",
+    "kana": "かい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "贝壳，贝类"
+  },
+  {
+    "kanji": "近年",
+    "kana": "きんねん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "近年"
+  },
+  {
+    "kanji": "增加",
+    "kana": "ぞうか",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "增加"
+  },
+  {
+    "kanji": "消費",
+    "kana": "しょうひ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "消费，花费"
+  },
+  {
+    "kanji": "～当たり",
+    "kana": "あたり",
+    "pitch": "",
+    "pos": "后缀",
+    "meaning": "每……"
+  },
+  {
+    "kanji": "需要",
+    "kana": "じゅよう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "需求，需要"
+  },
+  {
+    "kanji": "",
+    "kana": "これら",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "这些"
+  },
+  {
+    "kanji": "",
+    "kana": "メタンハイドレート",
+    "pitch": "⑦",
+    "pos": "名",
+    "meaning": "天然气水合物，可燃冰"
+  },
+  {
+    "kanji": "凍る",
+    "kana": "こおる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "结冰，冻住"
+  },
+  {
+    "kanji": "物質",
+    "kana": "ぶっしつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "物质"
+  },
+  {
+    "kanji": "波",
+    "kana": "なみ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "波浪，波"
+  },
+  {
+    "kanji": "海水",
+    "kana": "かいすい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "海水"
+  },
+  {
+    "kanji": "温度",
+    "kana": "おんど",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "温度"
+  },
+  {
+    "kanji": "差",
+    "kana": "さ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "差"
+  },
+  {
+    "kanji": "大気",
+    "kana": "たいき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "大气"
+  },
+  {
+    "kanji": "汚染",
+    "kana": "おせん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "污染"
+  },
+  {
+    "kanji": "大気汚染",
+    "kana": "たいきおせん",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "大气污染"
+  },
+  {
+    "kanji": "温暖",
+    "kana": "おんだん",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "温暖"
+  },
+  {
+    "kanji": "再生",
+    "kana": "さいせい",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "再生；播放录音"
+  },
+  {
+    "kanji": "可能",
+    "kana": "かのう",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "可能"
+  },
+  {
+    "kanji": "",
+    "kana": "コメント",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "评论；说明"
+  },
+  {
+    "kanji": "返信",
+    "kana": "へんしん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "回信"
+  },
+  {
+    "kanji": "件",
+    "kana": "けん",
+    "pitch": "①",
+    "pos": "量",
+    "meaning": "条，件"
+  },
+  {
+    "kanji": "一度",
+    "kana": "いちど",
+    "pitch": "③",
+    "pos": "名·副",
+    "meaning": "一次；一下，一旦"
+  },
+  {
+    "kanji": "蟹",
+    "kana": "かに",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "螃蟹"
+  },
+  {
+    "kanji": "挟む",
+    "kana": "はさむ",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "夹住"
+  },
+  {
+    "kanji": "恩恵",
+    "kana": "おんけい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "恩惠"
+  },
+  {
+    "kanji": "海水浴",
+    "kana": "かいすいよく",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "海水浴"
+  },
+  {
+    "kanji": "",
+    "kana": "ところが",
+    "pitch": "③",
+    "pos": "连",
+    "meaning": "然而，但是"
+  },
+  {
+    "kanji": "破壊",
+    "kana": "はかい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "破坏"
+  },
+  {
+    "kanji": "野鳥",
+    "kana": "やちょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "野生的鸟"
+  },
+  {
+    "kanji": "一見",
+    "kana": "いっけん",
+    "pitch": "⓪",
+    "pos": "名·动3他·副",
+    "meaning": "看一眼；乍-看"
+  },
+  {
+    "kanji": "砕ける",
+    "kana": "くだける",
+    "pitch": "③",
+    "pos": "动2自",
+    "meaning": "碎，破碎"
+  },
+  {
+    "kanji": "漂う",
+    "kana": "ただよう",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "漂浮；洋溢"
+  },
+  {
+    "kanji": "流出",
+    "kana": "りゆうしゅつ",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "流出，外流"
+  },
+  {
+    "kanji": "",
+    "kana": "マイクロ",
+    "pitch": "",
+    "pos": "前缀",
+    "meaning": "微……"
+  },
+  {
+    "kanji": "直径",
+    "kana": "ちょっけい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "直径"
+  },
+  {
+    "kanji": "mm",
+    "kana": "ミリ",
+    "pitch": "①",
+    "pos": "量",
+    "meaning": "毫米"
+  },
+  {
+    "kanji": "微細",
+    "kana": "びさい",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "细微，细小"
+  },
+  {
+    "kanji": "吸着",
+    "kana": "きゅうちゃく",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "吸附，吸住"
+  },
+  {
+    "kanji": "海中",
+    "kana": "かいちゅう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "海中，海里"
+  },
+  {
+    "kanji": "体外",
+    "kana": "たいがい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "体外"
+  },
+  {
+    "kanji": "排出",
+    "kana": "はいしゅつ",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "排出，排放"
+  },
+  {
+    "kanji": "表面",
+    "kana": "ひょうめん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "表面"
+  },
+  {
+    "kanji": "体内",
+    "kana": "たいない",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "体内"
+  },
+  {
+    "kanji": "恐れ",
+    "kana": "おそれ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "担心；恐怖"
+  },
+  {
+    "kanji": "巡る",
+    "kana": "めぐる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "循环；围绕；巡游"
+  },
+  {
+    "kanji": "及ぶ",
+    "kana": "およぶ",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "到，及"
+  },
+  {
+    "kanji": "視野",
+    "kana": "しや",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "视野"
+  },
+  {
+    "kanji": "広げる",
+    "kana": "ひろげる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "扩大；展开"
+  },
+  {
+    "kanji": "物事",
+    "kana": "ものごと",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "物和事，事物"
+  },
+  {
+    "kanji": "事件",
+    "kana": "じけん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "事件，事故"
+  },
+  {
+    "kanji": "休日",
+    "kana": "きゅうじつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "休息日"
+  },
+  {
+    "kanji": "地方",
+    "kana": "ちほう",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "地方"
+  },
+  {
+    "kanji": "直接",
+    "kana": "ちょくせつ",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "直接"
+  },
+  {
+    "kanji": "間接",
+    "kana": "かんせつ",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "间接"
+  },
+  {
+    "kanji": "命",
+    "kana": "いのち",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "生命，性命"
+  },
+  {
+    "kanji": "生む",
+    "kana": "うむ",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "生产，生出"
+  },
+  {
+    "kanji": "岸",
+    "kana": "きし",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "海岸，岸边"
+  },
+  {
+    "kanji": "移す",
+    "kana": "うつす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "移动"
+  },
+  {
+    "kanji": "扱う",
+    "kana": "あつかう",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "处理，对待"
+  },
+  {
+    "kanji": "",
+    "kana": "かわいそう",
+    "pitch": "④",
+    "pos": "形2",
+    "meaning": "可怜"
+  },
+  {
+    "kanji": "考え直す",
+    "kana": "かんがえなおす",
+    "pitch": "⑥",
+    "pos": "动1他",
+    "meaning": "重新考虑"
+  },
+  {
+    "kanji": "",
+    "kana": "ゴールデンウイーク",
+    "pitch": "⑦",
+    "pos": "名",
+    "meaning": "黄金周"
+  }
+]

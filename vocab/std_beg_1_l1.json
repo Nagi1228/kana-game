@@ -1,0 +1,184 @@
+[
+  {
+    "kanji": "中国人",
+    "kana": "ちゅうごくじん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "中国人"
+  },
+  {
+    "kanji": "日本人",
+    "kana": "にほんじん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "日本人"
+  },
+  {
+    "kanji": "韓国人",
+    "kana": "かんこくじん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "韩国人"
+  },
+  {
+    "kanji": "アメリカ人",
+    "kana": "アメリカじん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "美国人"
+  },
+  {
+    "kanji": "フランス人",
+    "kana": "フランスじん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "法国人"
+  },
+  {
+    "kanji": "学生",
+    "kana": "がくせい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "（大）学生"
+  },
+  {
+    "kanji": "先生",
+    "kana": "せんせい",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "老师"
+  },
+  {
+    "kanji": "留学生",
+    "kana": "りゅうがくせい",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "留学生"
+  },
+  {
+    "kanji": "教授",
+    "kana": "きょうじゅ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "教授"
+  },
+  {
+    "kanji": "社員",
+    "kana": "しゃいん",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "职员"
+  },
+  {
+    "kanji": "会社員",
+    "kana": "かいしゃいん",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "公司职员"
+  },
+  {
+    "kanji": "店員",
+    "kana": "てんいん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "店员"
+  },
+  {
+    "kanji": "研修生",
+    "kana": "けんしゅうせい",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "进修生"
+  },
+  {
+    "kanji": "企業",
+    "kana": "きぎょう",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "企业"
+  },
+  {
+    "kanji": "大学",
+    "kana": "だいがく",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "大学"
+  },
+  {
+    "kanji": "父",
+    "kana": "ちち",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "（我）父亲"
+  },
+  {
+    "kanji": "課長",
+    "kana": "かちょう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "科长"
+  },
+  {
+    "kanji": "社長",
+    "kana": "しゃちょう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "总经理，社长"
+  },
+  {
+    "kanji": "出迎え",
+    "kana": "でむかえ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "迎接"
+  },
+  {
+    "kanji": "あの人",
+    "kana": "あのひと",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "那个人"
+  },
+  {
+    "kanji": "わたし",
+    "kana": "わたし",
+    "pitch": "⓪",
+    "pos": "代词",
+    "meaning": "我"
+  },
+  {
+    "kanji": "あなた",
+    "kana": "あなた",
+    "pitch": "②",
+    "pos": "代词",
+    "meaning": "你"
+  },
+  {
+    "kanji": "どうも",
+    "kana": "どうも",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "非常，很"
+  },
+  {
+    "kanji": "はい",
+    "kana": "はい",
+    "pitch": "①",
+    "pos": "感叹词",
+    "meaning": "哎，是"
+  },
+  {
+    "kanji": "いいえ",
+    "kana": "いいえ",
+    "pitch": "③",
+    "pos": "感叹词",
+    "meaning": "不，不是"
+  },
+  {
+    "kanji": "あっ",
+    "kana": "あっ",
+    "pitch": "",
+    "pos": "感叹词",
+    "meaning": "哎，哎呀"
+  }
+]

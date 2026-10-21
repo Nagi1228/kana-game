@@ -1,0 +1,422 @@
+[
+  {
+    "kanji": "小鳥",
+    "kana": "ことり",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "小鸟，鸟儿"
+  },
+  {
+    "kanji": "万博",
+    "kana": "ばんぱく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "世博会，万国博览会"
+  },
+  {
+    "kanji": "遺跡",
+    "kana": "いせき",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "遗址，遗迹"
+  },
+  {
+    "kanji": "上司",
+    "kana": "じょうし",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "上司"
+  },
+  {
+    "kanji": "すり",
+    "kana": "すり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "扒手，小偷"
+  },
+  {
+    "kanji": "世代",
+    "kana": "せだい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "世代；一代"
+  },
+  {
+    "kanji": "市場",
+    "kana": "しじょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "市场"
+  },
+  {
+    "kanji": "調査",
+    "kana": "ちょうさ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "调查"
+  },
+  {
+    "kanji": "出荷",
+    "kana": "しゅっか",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "上市，运出货物"
+  },
+  {
+    "kanji": "成長",
+    "kana": "せいちょう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "成长"
+  },
+  {
+    "kanji": "嵐",
+    "kana": "あらし",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "暴风雨，风暴"
+  },
+  {
+    "kanji": "ダイナマイト",
+    "kana": "ダイナマイト",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "炸药"
+  },
+  {
+    "kanji": "ネーミング",
+    "kana": "ネーミング",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "名称，命名，取名"
+  },
+  {
+    "kanji": "コストダウン",
+    "kana": "コストダウン",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "降低成本"
+  },
+  {
+    "kanji": "低価格",
+    "kana": "ていかかく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "低价（格）"
+  },
+  {
+    "kanji": "牛肉",
+    "kana": "ぎゅうにく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "牛肉"
+  },
+  {
+    "kanji": "一昨年/おととし",
+    "kana": "いっさくねん/おととし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "前年"
+  },
+  {
+    "kanji": "昨年",
+    "kana": "さくねん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "去年"
+  },
+  {
+    "kanji": "今後",
+    "kana": "こんご",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "今后"
+  },
+  {
+    "kanji": "すべて",
+    "kana": "すべて",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "全部，所有"
+  },
+  {
+    "kanji": "びしょぬれ",
+    "kana": "びしょぬれ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "落汤鸡，湿透，濡湿"
+  },
+  {
+    "kanji": "魅力",
+    "kana": "みりょく",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "吸引力，魅力"
+  },
+  {
+    "kanji": "汚職事件",
+    "kana": "おしょくじけん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "贪污事件"
+  },
+  {
+    "kanji": "市場調査",
+    "kana": "しじょうちょうさ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "市场调查"
+  },
+  {
+    "kanji": "交通事情",
+    "kana": "こうつうじじょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "交通状况"
+  },
+  {
+    "kanji": "合弁会社",
+    "kana": "ごうべんがいしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "合资公司"
+  },
+  {
+    "kanji": "しかる",
+    "kana": "しかる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "训，责备，斥责"
+  },
+  {
+    "kanji": "かむ",
+    "kana": "かむ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "咬，嚼"
+  },
+  {
+    "kanji": "誘う",
+    "kana": "さそう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "邀请，约请"
+  },
+  {
+    "kanji": "巻き込む",
+    "kana": "まきこむ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "卷入，卷进"
+  },
+  {
+    "kanji": "至る",
+    "kana": "いたる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "到达，达到"
+  },
+  {
+    "kanji": "見つかる",
+    "kana": "みつかる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "找到，发现"
+  },
+  {
+    "kanji": "踏む",
+    "kana": "ふむ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "踩，踏"
+  },
+  {
+    "kanji": "図る",
+    "kana": "はかる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "谋求；考虑"
+  },
+  {
+    "kanji": "見込む",
+    "kana": "みこむ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "预料，估计"
+  },
+  {
+    "kanji": "盗む",
+    "kana": "ぬすむ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "盗取，偷盗"
+  },
+  {
+    "kanji": "起こす",
+    "kana": "おこす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "叫醒，唤醒"
+  },
+  {
+    "kanji": "ほめる",
+    "kana": "ほめる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "表扬，赞扬"
+  },
+  {
+    "kanji": "求める",
+    "kana": "もとめる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "要求；追求；寻求"
+  },
+  {
+    "kanji": "いじめる",
+    "kana": "いじめる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "欺负，折磨，欺侮"
+  },
+  {
+    "kanji": "ぶつける",
+    "kana": "ぶつける",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "碰上，撞上；扔，投，掷"
+  },
+  {
+    "kanji": "発見する",
+    "kana": "はっけんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "发现"
+  },
+  {
+    "kanji": "辞職する",
+    "kana": "じしょくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "辞职"
+  },
+  {
+    "kanji": "創立する",
+    "kana": "そうりつする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "成立，创立"
+  },
+  {
+    "kanji": "依頼する",
+    "kana": "いらいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "委托，请求"
+  },
+  {
+    "kanji": "発売する",
+    "kana": "はつばいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "上市，发售，出售"
+  },
+  {
+    "kanji": "開発する",
+    "kana": "かいはつする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "开发"
+  },
+  {
+    "kanji": "製造する",
+    "kana": "せいぞうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "生产，制造"
+  },
+  {
+    "kanji": "管理する",
+    "kana": "かんりする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "管理"
+  },
+  {
+    "kanji": "実現する",
+    "kana": "じつげんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "实现"
+  },
+  {
+    "kanji": "洗練する",
+    "kana": "せんれんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "精炼，洗练"
+  },
+  {
+    "kanji": "放送する",
+    "kana": "ほうそうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "广播，播送"
+  },
+  {
+    "kanji": "生産する",
+    "kana": "せいさんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "生产"
+  },
+  {
+    "kanji": "翻訳する",
+    "kana": "ほんやくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "翻译，笔译"
+  },
+  {
+    "kanji": "発明する",
+    "kana": "はつめいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "发明"
+  },
+  {
+    "kanji": "幅広い",
+    "kana": "はばひろい",
+    "pitch": "④",
+    "pos": "形容词",
+    "meaning": "广泛，宽广，辽阔"
+  },
+  {
+    "kanji": "大幅",
+    "kana": "おおはば",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "大幅（度），广泛"
+  },
+  {
+    "kanji": "大量",
+    "kana": "たいりょう",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "大量"
+  },
+  {
+    "kanji": "最も",
+    "kana": "もっとも",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "最"
+  },
+  {
+    "kanji": "いやあ",
+    "kana": "いやあ",
+    "pitch": "②",
+    "pos": "感叹词",
+    "meaning": "哎呀"
+  }
+]

@@ -1,0 +1,191 @@
+[
+  {
+    "kanji": "数学",
+    "kana": "すうがく",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "数学"
+  },
+  {
+    "kanji": "専門",
+    "kana": "せんもん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "专门"
+  },
+  {
+    "kanji": "女優",
+    "kana": "じょゆう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "女演员"
+  },
+  {
+    "kanji": "営業課",
+    "kana": "えいぎょうか",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "营业科"
+  },
+  {
+    "kanji": "市街",
+    "kana": "しがい",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "市内，市街，繁华街道"
+  },
+  {
+    "kanji": "道路",
+    "kana": "どうろ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "道路，马路"
+  },
+  {
+    "kanji": "交通量",
+    "kana": "こうつうりょう",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "交通流量，通行量"
+  },
+  {
+    "kanji": "空港",
+    "kana": "くうこう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "机场"
+  },
+  {
+    "kanji": "高速道路",
+    "kana": "こうそくどうろ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "高速公路"
+  },
+  {
+    "kanji": "部品工場",
+    "kana": "ぶひんこうじょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "零件制造厂"
+  },
+  {
+    "kanji": "エレベーター",
+    "kana": "エレベーター",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "电梯"
+  },
+  {
+    "kanji": "絵本",
+    "kana": "えほん",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "图画书，连环画"
+  },
+  {
+    "kanji": "自然",
+    "kana": "しぜん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "大自然"
+  },
+  {
+    "kanji": "給料",
+    "kana": "きゅうりょう",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "工资"
+  },
+  {
+    "kanji": "今夜",
+    "kana": "こんや",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "今天晚上"
+  },
+  {
+    "kanji": "けが",
+    "kana": "けが",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "伤"
+  },
+  {
+    "kanji": "泊まる",
+    "kana": "とまる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "住，过夜，住宿"
+  },
+  {
+    "kanji": "結ぶ",
+    "kana": "むすぶ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "连接，系"
+  },
+  {
+    "kanji": "取る",
+    "kana": "とる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "印，记下"
+  },
+  {
+    "kanji": "生まれる",
+    "kana": "うまれる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "出生，诞生"
+  },
+  {
+    "kanji": "倒産する",
+    "kana": "とうさんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "倒闭，破产"
+  },
+  {
+    "kanji": "渋滞する",
+    "kana": "じゅうたいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "堵车，停滞"
+  },
+  {
+    "kanji": "チェックする",
+    "kana": "チェックする",
+    "pitch": "①",
+    "pos": "动3",
+    "meaning": "确认"
+  },
+  {
+    "kanji": "豊か",
+    "kana": "ゆたか",
+    "pitch": "①",
+    "pos": "形容动词",
+    "meaning": "充裕，丰富"
+  },
+  {
+    "kanji": "大きな",
+    "kana": "おおきな",
+    "pitch": "①",
+    "pos": "连接词",
+    "meaning": "大的"
+  },
+  {
+    "kanji": "小さな",
+    "kana": "ちいさな",
+    "pitch": "①",
+    "pos": "连接词",
+    "meaning": "小的"
+  },
+  {
+    "kanji": "別に",
+    "kana": "べつに",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "并不"
+  }
+]

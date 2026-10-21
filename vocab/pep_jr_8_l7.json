@@ -1,0 +1,450 @@
+[
+  {
+    "kanji": "紙くず",
+    "kana": "かみくず",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "废纸, 纸屑"
+  },
+  {
+    "kanji": "拾う",
+    "kana": "ひろう",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "拾, 捡"
+  },
+  {
+    "kanji": "捨てる",
+    "kana": "すてる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "扔掉"
+  },
+  {
+    "kanji": "偉い",
+    "kana": "えらい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "了不起; 伟大"
+  },
+  {
+    "kanji": "環境",
+    "kana": "かんきょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "环境"
+  },
+  {
+    "kanji": "",
+    "kana": "ごみ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "垃圾"
+  },
+  {
+    "kanji": "分別",
+    "kana": "ぶんべつ",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "分类，区分"
+  },
+  {
+    "kanji": "係",
+    "kana": "かかり",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "主管人员，负责人"
+  },
+  {
+    "kanji": "利用",
+    "kana": "りよう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "利用"
+  },
+  {
+    "kanji": "落書き",
+    "kana": "らくがき",
+    "pitch": "②",
+    "pos": "名·动3自他",
+    "meaning": "涂鸦"
+  },
+  {
+    "kanji": "自身",
+    "kana": "じしん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "自身, 自己"
+  },
+  {
+    "kanji": "この間",
+    "kana": "このあいだ",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "前几天, 最近"
+  },
+  {
+    "kanji": "騷ぐ",
+    "kana": "さわぐ",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "吵闹, 吵嚷"
+  },
+  {
+    "kanji": "迷惑",
+    "kana": "めいわく",
+    "pitch": "①",
+    "pos": "名·动3自·形2",
+    "meaning": "麻烦，打搅"
+  },
+  {
+    "kanji": "場所",
+    "kana": "ばしょ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "地方, 场所"
+  },
+  {
+    "kanji": "過ち",
+    "kana": "あやまち",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "过失, 错误"
+  },
+  {
+    "kanji": "意識",
+    "kana": "いしき",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "意识; 察觉"
+  },
+  {
+    "kanji": "検討",
+    "kana": "けんとう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "研讨，探讨"
+  },
+  {
+    "kanji": "遅刻",
+    "kana": "ちこく",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "迟到"
+  },
+  {
+    "kanji": "真面目",
+    "kana": "まじめ",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "认真; 正直"
+  },
+  {
+    "kanji": "質問",
+    "kana": "しつもん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "提问；问题"
+  },
+  {
+    "kanji": "設備",
+    "kana": "せつび",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "设备; 配备"
+  },
+  {
+    "kanji": "乱暴",
+    "kana": "らんぼう",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "粗鲁, 蛮横"
+  },
+  {
+    "kanji": "扱う",
+    "kana": "あつかう",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "处理, 对待"
+  },
+  {
+    "kanji": "後片付け",
+    "kana": "あとかたづけ",
+    "pitch": "③",
+    "pos": "名·动3他",
+    "meaning": "收拾，善后"
+  },
+  {
+    "kanji": "順番",
+    "kana": "じゅんばん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "顺序, 次序"
+  },
+  {
+    "kanji": "敬意",
+    "kana": "けいい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "敬意"
+  },
+  {
+    "kanji": "注意",
+    "kana": "ちゅうい",
+    "pitch": "①",
+    "pos": "名·动3自他",
+    "meaning": "注意；提醒"
+  },
+  {
+    "kanji": "",
+    "kana": "ふざける",
+    "pitch": "③",
+    "pos": "动2自",
+    "meaning": "打闹, 开玩笑; 戏弄"
+  },
+  {
+    "kanji": "行動",
+    "kana": "こうどう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "行动，行为"
+  },
+  {
+    "kanji": "思いやり",
+    "kana": "おもいやり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "同情心，体谅"
+  },
+  {
+    "kanji": "提案",
+    "kana": "ていあん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "提案"
+  },
+  {
+    "kanji": "普通",
+    "kana": "ふつう",
+    "pitch": "⓪",
+    "pos": "名·形2·副",
+    "meaning": "普通"
+  },
+  {
+    "kanji": "普通体",
+    "kana": "ふつうたい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "(日语)简体"
+  },
+  {
+    "kanji": "書き直す",
+    "kana": "かきなおす",
+    "pitch": "④",
+    "pos": "动1他",
+    "meaning": "改写，重写"
+  },
+  {
+    "kanji": "",
+    "kana": "できるだけ",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "尽量, 尽力"
+  },
+  {
+    "kanji": "残す",
+    "kana": "のこす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "留下; 遗留"
+  },
+  {
+    "kanji": "変",
+    "kana": "へん",
+    "pitch": "①",
+    "pos": "形2",
+    "meaning": "奇怪, 反常"
+  },
+  {
+    "kanji": "列",
+    "kana": "れつ",
+    "pitch": "①",
+    "pos": "名·后缀",
+    "meaning": "行列，队列；……列"
+  },
+  {
+    "kanji": "割り込む",
+    "kana": "わりこむ",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "挤入；插嘴"
+  },
+  {
+    "kanji": "",
+    "kana": "きちんと",
+    "pitch": "②",
+    "pos": "副",
+    "meaning": "认真; 整洁"
+  },
+  {
+    "kanji": "食器",
+    "kana": "しょっき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "餐具"
+  },
+  {
+    "kanji": "戻す",
+    "kana": "もどす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "归还; 恢复"
+  },
+  {
+    "kanji": "始まる",
+    "kana": "はじまる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "开始"
+  },
+  {
+    "kanji": "急ぐ",
+    "kana": "いそぐ",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "赶快, 赶忙"
+  },
+  {
+    "kanji": "遅い",
+    "kana": "おそい",
+    "pitch": "⓪",
+    "pos": "形1",
+    "meaning": "晚; 迟; 慢"
+  },
+  {
+    "kanji": "",
+    "kana": "タクシー",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "出租车"
+  },
+  {
+    "kanji": "芝生",
+    "kana": "しばふ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "草坪"
+  },
+  {
+    "kanji": "触る",
+    "kana": "さわる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "触摸"
+  },
+  {
+    "kanji": "",
+    "kana": "たばこ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "烟草, 卷烟"
+  },
+  {
+    "kanji": "吸う",
+    "kana": "すう",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "吸"
+  },
+  {
+    "kanji": "高校",
+    "kana": "こうこう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "高中"
+  },
+  {
+    "kanji": "声",
+    "kana": "こえ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "(人、动物等的)声音"
+  },
+  {
+    "kanji": "出張",
+    "kana": "しゅっちょう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "出差"
+  },
+  {
+    "kanji": "中秋節",
+    "kana": "ちゅうしゅうせつ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "中秋节"
+  },
+  {
+    "kanji": "ひな祭り",
+    "kana": "ひなまつり",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "(日本)女儿节"
+  },
+  {
+    "kanji": "女",
+    "kana": "おんな",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "女(的)"
+  },
+  {
+    "kanji": "健やか",
+    "kana": "すこやか",
+    "pitch": "②",
+    "pos": "形2",
+    "meaning": "健康; 健全"
+  },
+  {
+    "kanji": "願う",
+    "kana": "ねがう",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "祈求; 请求"
+  },
+  {
+    "kanji": "",
+    "kana": "ゆっくり",
+    "pitch": "③",
+    "pos": "副",
+    "meaning": "慢慢地; 舒适地"
+  },
+  {
+    "kanji": "砂糖",
+    "kana": "さとう",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "白糖"
+  },
+  {
+    "kanji": "風呂",
+    "kana": "ふろ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "浴室; 浴池"
+  },
+  {
+    "kanji": "",
+    "kana": "わさび",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "绿芥末; 山葵"
+  },
+  {
+    "kanji": "",
+    "kana": "ノート",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "笔记(本)"
+  }
+]

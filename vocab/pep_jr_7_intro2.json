@@ -1,0 +1,408 @@
+[
+  {
+    "kanji": "町",
+    "kana": "まち",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "城镇"
+  },
+  {
+    "kanji": "道",
+    "kana": "みち",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "道路"
+  },
+  {
+    "kanji": "雨",
+    "kana": "あめ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "雨"
+  },
+  {
+    "kanji": "雲",
+    "kana": "くも",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "云"
+  },
+  {
+    "kanji": "八百屋",
+    "kana": "やおや",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "果蔬店"
+  },
+  {
+    "kanji": "雪",
+    "kana": "ゆき",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "雪"
+  },
+  {
+    "kanji": "夜",
+    "kana": "よる",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "夜晚"
+  },
+  {
+    "kanji": "村",
+    "kana": "むら",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "村庄"
+  },
+  {
+    "kanji": "薬",
+    "kana": "くすり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "药"
+  },
+  {
+    "kanji": "袋",
+    "kana": "ふくろ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "袋子"
+  },
+  {
+    "kanji": "川",
+    "kana": "かわ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "河"
+  },
+  {
+    "kanji": "",
+    "kana": "レストラン",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "餐厅, 餐馆"
+  },
+  {
+    "kanji": "今",
+    "kana": "いま",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "现在"
+  },
+  {
+    "kanji": "",
+    "kana": "どこ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "哪里"
+  },
+  {
+    "kanji": "本",
+    "kana": "ほん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "书"
+  },
+  {
+    "kanji": "行く",
+    "kana": "いく",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "去"
+  },
+  {
+    "kanji": "駅",
+    "kana": "えき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "地铁站; 火车站"
+  },
+  {
+    "kanji": "お母さん",
+    "kana": "おかあさん",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "母亲，妈妈"
+  },
+  {
+    "kanji": "お兄さん",
+    "kana": "おにいさん",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "哥哥"
+  },
+  {
+    "kanji": "空気",
+    "kana": "くうき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "空气"
+  },
+  {
+    "kanji": "先生",
+    "kana": "せんせい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "老师; 大夫"
+  },
+  {
+    "kanji": "お姉さん",
+    "kana": "おねえさん",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "姐姐"
+  },
+  {
+    "kanji": "帽子",
+    "kana": "ぼうし",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "帽子"
+  },
+  {
+    "kanji": "氷",
+    "kana": "こおり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "冰"
+  },
+  {
+    "kanji": "",
+    "kana": "スカート",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "裙子"
+  },
+  {
+    "kanji": "鍵",
+    "kana": "かぎ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "钥匙; 锁"
+  },
+  {
+    "kanji": "",
+    "kana": "りんご",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "苹果"
+  },
+  {
+    "kanji": "",
+    "kana": "ラジオ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "收音机"
+  },
+  {
+    "kanji": "蓄麦",
+    "kana": "そば",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "荞麦(面)"
+  },
+  {
+    "kanji": "",
+    "kana": "ズボン",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "裤子"
+  },
+  {
+    "kanji": "時計",
+    "kana": "とけい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "钟表"
+  },
+  {
+    "kanji": "",
+    "kana": "ハンバーガー",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "汉堡包"
+  },
+  {
+    "kanji": "",
+    "kana": "バレーボール",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "排球"
+  },
+  {
+    "kanji": "弟",
+    "kana": "おとうと",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "(我)弟弟"
+  },
+  {
+    "kanji": "誰",
+    "kana": "だれ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "谁"
+  },
+  {
+    "kanji": "何",
+    "kana": "なに",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "什么"
+  },
+  {
+    "kanji": "買う",
+    "kana": "かう",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "买"
+  },
+  {
+    "kanji": "姉",
+    "kana": "あね",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "(我)姐姐"
+  },
+  {
+    "kanji": "兄",
+    "kana": "あに",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "(我)哥哥"
+  },
+  {
+    "kanji": "父",
+    "kana": "ちち",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "(我)父亲, (我)爸爸"
+  },
+  {
+    "kanji": "お父さん",
+    "kana": "おとうさん",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "父亲，爸爸"
+  },
+  {
+    "kanji": "母",
+    "kana": "はは",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "(我)母亲, (我)妈妈"
+  },
+  {
+    "kanji": "生徒",
+    "kana": "せいと",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "(初高中)学生"
+  },
+  {
+    "kanji": "娘",
+    "kana": "むすめ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "女儿"
+  },
+  {
+    "kanji": "",
+    "kana": "ケーキ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "西式蛋糕"
+  },
+  {
+    "kanji": "眼鏡",
+    "kana": "めがね",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "眼镜"
+  },
+  {
+    "kanji": "公園",
+    "kana": "こうえん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "公园"
+  },
+  {
+    "kanji": "店",
+    "kana": "みせ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "店铺, 商店"
+  },
+  {
+    "kanji": "",
+    "kana": "かばん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "手提包, 书包"
+  },
+  {
+    "kanji": "彼",
+    "kana": "かれ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "他"
+  },
+  {
+    "kanji": "",
+    "kana": "タオル",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "毛巾"
+  },
+  {
+    "kanji": "地図",
+    "kana": "ちず",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "地图"
+  },
+  {
+    "kanji": "",
+    "kana": "おじいさん",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "祖父, 外祖父"
+  },
+  {
+    "kanji": "祖父",
+    "kana": "そふ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "(我)祖父，(我)外祖父"
+  },
+  {
+    "kanji": "",
+    "kana": "おばあさん",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "祖母, 外祖母"
+  },
+  {
+    "kanji": "祖母",
+    "kana": "そぼ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "(我)祖母，(我)外祖母"
+  },
+  {
+    "kanji": "私",
+    "kana": "わたし",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "我"
+  },
+  {
+    "kanji": "妹",
+    "kana": "いもうと",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "(我)妹妹"
+  }
+]

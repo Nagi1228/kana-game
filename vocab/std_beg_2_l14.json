@@ -1,0 +1,240 @@
+[
+  {
+    "kanji": "商品",
+    "kana": "しょうひん",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "商品"
+  },
+  {
+    "kanji": "ごみ箱",
+    "kana": "ごみばこ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "垃圾箱"
+  },
+  {
+    "kanji": "コップ",
+    "kana": "コップ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "杯子，杯"
+  },
+  {
+    "kanji": "ペットボトル",
+    "kana": "ペットボトル",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "塑料瓶"
+  },
+  {
+    "kanji": "エンジン",
+    "kana": "エンジン",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "发动机，引擎"
+  },
+  {
+    "kanji": "タイヤ",
+    "kana": "タイヤ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "轮胎"
+  },
+  {
+    "kanji": "胡同",
+    "kana": "フートン",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "胡同"
+  },
+  {
+    "kanji": "路地",
+    "kana": "ろじ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "小巷，弄堂"
+  },
+  {
+    "kanji": "油条",
+    "kana": "ヨウテイアオ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "油条"
+  },
+  {
+    "kanji": "日本食",
+    "kana": "にほんしょく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "日本食品"
+  },
+  {
+    "kanji": "刺身",
+    "kana": "さしみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "生鲜鱼，贝片"
+  },
+  {
+    "kanji": "棚",
+    "kana": "たな",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "橱柜，搁板"
+  },
+  {
+    "kanji": "畳",
+    "kana": "たたみ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "草席，草垫"
+  },
+  {
+    "kanji": "着物",
+    "kana": "きもの",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "和服，衣服"
+  },
+  {
+    "kanji": "具合",
+    "kana": "ぐあい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "情况"
+  },
+  {
+    "kanji": "平仮名",
+    "kana": "ひらがな",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "平假名"
+  },
+  {
+    "kanji": "赤ちゃん",
+    "kana": "あかちゃん",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "婴儿，幼儿"
+  },
+  {
+    "kanji": "半分",
+    "kana": "はんぶん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "一半"
+  },
+  {
+    "kanji": "最終",
+    "kana": "さいしゅう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "最终"
+  },
+  {
+    "kanji": "試合",
+    "kana": "しあい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "比赛，竞赛"
+  },
+  {
+    "kanji": "英字新聞",
+    "kana": "えいじしんぶん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "英文报纸"
+  },
+  {
+    "kanji": "衛星放送",
+    "kana": "えいせいほうそう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "卫星广播"
+  },
+  {
+    "kanji": "ストレス",
+    "kana": "ストレス",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "精神紧张状态"
+  },
+  {
+    "kanji": "伝統的",
+    "kana": "でんとうてき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "传统的"
+  },
+  {
+    "kanji": "入り組む",
+    "kana": "いりくむ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "错综复杂"
+  },
+  {
+    "kanji": "減る",
+    "kana": "へる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "减少"
+  },
+  {
+    "kanji": "動かす",
+    "kana": "うごかす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "开动，移动，摇动"
+  },
+  {
+    "kanji": "勝つ",
+    "kana": "かつ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "取胜，获胜"
+  },
+  {
+    "kanji": "通り抜ける",
+    "kana": "とおりぬける",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "走得出去，穿过，通过"
+  },
+  {
+    "kanji": "感じる",
+    "kana": "かんじる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "感觉，觉得"
+  },
+  {
+    "kanji": "取り替える",
+    "kana": "とりかえる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "更换，交换"
+  },
+  {
+    "kanji": "徹夜する",
+    "kana": "てつやする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "熬通宵，彻夜"
+  },
+  {
+    "kanji": "火傷する",
+    "kana": "やけどする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "烫伤，烧伤"
+  },
+  {
+    "kanji": "なんだか",
+    "kana": "なんだか",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "总觉得，总有点"
+  }
+]

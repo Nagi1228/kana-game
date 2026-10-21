@@ -1,0 +1,408 @@
+[
+  {
+    "kanji": "火災",
+    "kana": "かさい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "火灾"
+  },
+  {
+    "kanji": "予防",
+    "kana": "よぼう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "预防"
+  },
+  {
+    "kanji": "防止",
+    "kana": "うし",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "防止"
+  },
+  {
+    "kanji": "火事",
+    "kana": "かじ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "火灾"
+  },
+  {
+    "kanji": "火遊び",
+    "kana": "ひあそび",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "玩火"
+  },
+  {
+    "kanji": "順番",
+    "kana": "じゅんばん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "顺序，次序"
+  },
+  {
+    "kanji": "過去",
+    "kana": "かこ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "过去"
+  },
+  {
+    "kanji": "使用",
+    "kana": "しょう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "使用"
+  },
+  {
+    "kanji": "使用規定",
+    "kana": "しょうきてい",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "使用规定"
+  },
+  {
+    "kanji": "違反",
+    "kana": "いはん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "违反"
+  },
+  {
+    "kanji": "発火",
+    "kana": "はっか",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "起火"
+  },
+  {
+    "kanji": "",
+    "kana": "コンセント",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "插座，插孔"
+  },
+  {
+    "kanji": "挿す",
+    "kana": "さす",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "插，插入"
+  },
+  {
+    "kanji": "",
+    "kana": "ほこり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "灰尘，尘埃"
+  },
+  {
+    "kanji": "不注意",
+    "kana": "ふちゅうい",
+    "pitch": "②",
+    "pos": "名·形2",
+    "meaning": "不小心，疏忽"
+  },
+  {
+    "kanji": "対する",
+    "kana": "たいする",
+    "pitch": "③",
+    "pos": "动3自",
+    "meaning": "对于，针对"
+  },
+  {
+    "kanji": "避難",
+    "kana": "ひなん",
+    "pitch": "①",
+    "pos": "名·动3自",
+    "meaning": "避难，逃难"
+  },
+  {
+    "kanji": "訓練",
+    "kana": "くんれん",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "训练"
+  },
+  {
+    "kanji": "避難訓練",
+    "kana": "ひなんくんれん",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "避难训练"
+  },
+  {
+    "kanji": "発生",
+    "kana": "はっせい",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "发生，出现"
+  },
+  {
+    "kanji": "作業",
+    "kana": "さぎょう",
+    "pitch": "①",
+    "pos": "名·动3自",
+    "meaning": "工作，操作"
+  },
+  {
+    "kanji": "放火",
+    "kana": "ほうか",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "纵火，放火"
+  },
+  {
+    "kanji": "総数",
+    "kana": "そうすう",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "总数"
+  },
+  {
+    "kanji": "",
+    "kana": "おかしい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "可笑；可疑"
+  },
+  {
+    "kanji": "用心",
+    "kana": "ようじん",
+    "pitch": "①",
+    "pos": "名·动3自他",
+    "meaning": "警惕，注意"
+  },
+  {
+    "kanji": "",
+    "kana": "ストーブ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "暖炉，火炉"
+  },
+  {
+    "kanji": "消火器",
+    "kana": "しょうかき",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "灭火器"
+  },
+  {
+    "kanji": "喫煙",
+    "kana": "きつえん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "吸烟"
+  },
+  {
+    "kanji": "叫ぶ",
+    "kana": "さけぶ",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "喊叫，呼喊"
+  },
+  {
+    "kanji": "通報",
+    "kana": "つうほう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "通报，通知"
+  },
+  {
+    "kanji": "濡らす",
+    "kana": "ぬらす",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "浸湿，沾湿"
+  },
+  {
+    "kanji": "",
+    "kana": "ハンカチ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "手帕，手绢"
+  },
+  {
+    "kanji": "逃げる",
+    "kana": "にげる",
+    "pitch": "②",
+    "pos": "动2自",
+    "meaning": "逃跑，溜走"
+  },
+  {
+    "kanji": "上方",
+    "kana": "じょうほう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "上方"
+  },
+  {
+    "kanji": "階下",
+    "kana": "かいか",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "楼下"
+  },
+  {
+    "kanji": "二度と",
+    "kana": "にどと",
+    "pitch": "②",
+    "pos": "副",
+    "meaning": "（决不）再次，再也（不）"
+  },
+  {
+    "kanji": "入口",
+    "kana": "いりぐち",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "入口"
+  },
+  {
+    "kanji": "隙間",
+    "kana": "すきま",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "空隙，缝隙"
+  },
+  {
+    "kanji": "",
+    "kana": "パンフレット",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "小册子"
+  },
+  {
+    "kanji": "電器",
+    "kana": "でんき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "电器"
+  },
+  {
+    "kanji": "中心",
+    "kana": "ちゅうしん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "中心"
+  },
+  {
+    "kanji": "防災",
+    "kana": "ぼうさい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "防灾"
+  },
+  {
+    "kanji": "防火",
+    "kana": "ぼうか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "防火"
+  },
+  {
+    "kanji": "呼びかけ",
+    "kana": "よびかけ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "号召；呼唤，招呼"
+  },
+  {
+    "kanji": "財産",
+    "kana": "ざいさん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "财产"
+  },
+  {
+    "kanji": "台風",
+    "kana": "たいふう",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "台风"
+  },
+  {
+    "kanji": "備える",
+    "kana": "そなえる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "配备，装备"
+  },
+  {
+    "kanji": "当然",
+    "kana": "とうぜん",
+    "pitch": "⓪",
+    "pos": "形2·副",
+    "meaning": "当然"
+  },
+  {
+    "kanji": "",
+    "kana": "キャンパス",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "校园"
+  },
+  {
+    "kanji": "近づく",
+    "kana": "ちかづく",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "靠近"
+  },
+  {
+    "kanji": "道具",
+    "kana": "どうぐ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "道具"
+  },
+  {
+    "kanji": "用いる",
+    "kana": "もちいる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "使用"
+  },
+  {
+    "kanji": "恐ろしい",
+    "kana": "おそろしい",
+    "pitch": "④",
+    "pos": "形1",
+    "meaning": "可怕，惊人，厉害"
+  },
+  {
+    "kanji": "",
+    "kana": "とんでもない",
+    "pitch": "⑤",
+    "pos": "形1",
+    "meaning": "出乎意料，毫无道理"
+  },
+  {
+    "kanji": "突然",
+    "kana": "とつぜん",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "突然"
+  },
+  {
+    "kanji": "慌てる",
+    "kana": "あわてる",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "慌忙，慌张"
+  },
+  {
+    "kanji": "係",
+    "kana": "かかり",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "主管人员，担当者"
+  },
+  {
+    "kanji": "常識",
+    "kana": "じょうしき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "常识"
+  }
+]

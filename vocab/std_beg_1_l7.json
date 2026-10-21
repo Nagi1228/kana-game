@@ -1,0 +1,296 @@
+[
+  {
+    "kanji": "コーヒー",
+    "kana": "コーヒー",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "咖啡"
+  },
+  {
+    "kanji": "コーラ",
+    "kana": "コーラ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "可乐"
+  },
+  {
+    "kanji": "お茶",
+    "kana": "おちゃ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "茶"
+  },
+  {
+    "kanji": "ワイン",
+    "kana": "ワイン",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "葡萄酒"
+  },
+  {
+    "kanji": "パン",
+    "kana": "パン",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "面包"
+  },
+  {
+    "kanji": "ケーキ",
+    "kana": "ケーキ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "蛋糕"
+  },
+  {
+    "kanji": "お粥",
+    "kana": "おかゆ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "粥"
+  },
+  {
+    "kanji": "昼ご飯",
+    "kana": "ひるごはん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "午饭"
+  },
+  {
+    "kanji": "お弁当",
+    "kana": "おべんとう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "盒饭"
+  },
+  {
+    "kanji": "そば",
+    "kana": "そば",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "荞麦面"
+  },
+  {
+    "kanji": "うどん",
+    "kana": "うどん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "面条"
+  },
+  {
+    "kanji": "親子丼",
+    "kana": "おやこどん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "鸡肉鸡蛋盖饭"
+  },
+  {
+    "kanji": "カレー",
+    "kana": "カレー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "咖喱（饭）"
+  },
+  {
+    "kanji": "卵",
+    "kana": "たまご",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "鸡蛋"
+  },
+  {
+    "kanji": "チーズ",
+    "kana": "チーズ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "干酪"
+  },
+  {
+    "kanji": "リンゴ",
+    "kana": "リンゴ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "苹果"
+  },
+  {
+    "kanji": "イチゴ",
+    "kana": "イチゴ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "草莓"
+  },
+  {
+    "kanji": "そば屋",
+    "kana": "そばや",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "荞麦面馆"
+  },
+  {
+    "kanji": "テニス",
+    "kana": "テニス",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "网球"
+  },
+  {
+    "kanji": "ジョギング",
+    "kana": "ジョギング",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "慢跑，跑步"
+  },
+  {
+    "kanji": "サッカー",
+    "kana": "サッカー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "足球"
+  },
+  {
+    "kanji": "野球",
+    "kana": "やきゅう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "棒球"
+  },
+  {
+    "kanji": "申込書",
+    "kana": "もうしこみしょ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "申请书"
+  },
+  {
+    "kanji": "手紙",
+    "kana": "てがみ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "信"
+  },
+  {
+    "kanji": "ＣＤ",
+    "kana": "シーディー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "CD"
+  },
+  {
+    "kanji": "音楽",
+    "kana": "おんがく",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "音乐"
+  },
+  {
+    "kanji": "映画",
+    "kana": "えいが",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "电影"
+  },
+  {
+    "kanji": "動物園",
+    "kana": "どうぶつえん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "动物园"
+  },
+  {
+    "kanji": "パンダ",
+    "kana": "パンダ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "熊猫"
+  },
+  {
+    "kanji": "飲む",
+    "kana": "のむ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "喝"
+  },
+  {
+    "kanji": "買う",
+    "kana": "かう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "买"
+  },
+  {
+    "kanji": "撮る",
+    "kana": "とる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "拍照，拍摄"
+  },
+  {
+    "kanji": "書く",
+    "kana": "かく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "写"
+  },
+  {
+    "kanji": "読む",
+    "kana": "よむ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "读"
+  },
+  {
+    "kanji": "聞く",
+    "kana": "きく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "听"
+  },
+  {
+    "kanji": "食べる",
+    "kana": "たべる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "吃"
+  },
+  {
+    "kanji": "見る",
+    "kana": "みる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "看"
+  },
+  {
+    "kanji": "する",
+    "kana": "する",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "干，做"
+  },
+  {
+    "kanji": "掃除する",
+    "kana": "そうじする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "打扫，扫除"
+  },
+  {
+    "kanji": "これから",
+    "kana": "これから",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "从现在起，今后"
+  },
+  {
+    "kanji": "じゃあ",
+    "kana": "じゃあ",
+    "pitch": "①",
+    "pos": "接续词",
+    "meaning": "那么"
+  },
+  {
+    "kanji": "では",
+    "kana": "では",
+    "pitch": "①",
+    "pos": "接续词",
+    "meaning": "那么"
+  }
+]

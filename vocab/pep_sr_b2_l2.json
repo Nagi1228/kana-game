@@ -1,0 +1,576 @@
+[
+  {
+    "kanji": "年越し",
+    "kana": "としこし",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "过年；除夕"
+  },
+  {
+    "kanji": "探る",
+    "kana": "さぐる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "探索"
+  },
+  {
+    "kanji": "異同",
+    "kana": "いどう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "不同，差别"
+  },
+  {
+    "kanji": "春節",
+    "kana": "しゅんせつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "春节，中国新年"
+  },
+  {
+    "kanji": "",
+    "kana": "チャット",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "聊天；网上聊天"
+  },
+  {
+    "kanji": "増える",
+    "kana": "ふえる",
+    "pitch": "②",
+    "pos": "动2自",
+    "meaning": "增加，增多"
+  },
+  {
+    "kanji": "届く",
+    "kana": "とどく",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "收到，送到"
+  },
+  {
+    "kanji": "元日",
+    "kana": "がんじつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "元旦"
+  },
+  {
+    "kanji": "",
+    "kana": "デザイン",
+    "pitch": "②",
+    "pos": "名·动3自他",
+    "meaning": "设计"
+  },
+  {
+    "kanji": "",
+    "kana": "のんびり",
+    "pitch": "③",
+    "pos": "副",
+    "meaning": "悠闲自在，无拘无束"
+  },
+  {
+    "kanji": "祝日",
+    "kana": "しゅくじつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "节日"
+  },
+  {
+    "kanji": "新暦",
+    "kana": "しんれき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "新历，阳历"
+  },
+  {
+    "kanji": "旧暦",
+    "kana": "きゅうれき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "旧历，农历"
+  },
+  {
+    "kanji": "大掃除",
+    "kana": "おおそうじ",
+    "pitch": "③",
+    "pos": "名·动3自他",
+    "meaning": "大扫除"
+  },
+  {
+    "kanji": "年末",
+    "kana": "ねんまつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "年末，年终"
+  },
+  {
+    "kanji": "対聯",
+    "kana": "ついれん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "对联"
+  },
+  {
+    "kanji": "福",
+    "kana": "ふく",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "福"
+  },
+  {
+    "kanji": "切り絵",
+    "kana": "きりえ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "剪纸"
+  },
+  {
+    "kanji": "飾り物",
+    "kana": "かざりもの",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "装饰品，摆设"
+  },
+  {
+    "kanji": "各地",
+    "kana": "かくち",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "各地"
+  },
+  {
+    "kanji": "土地",
+    "kana": "とち",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "土地"
+  },
+  {
+    "kanji": "家",
+    "kana": "うち",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "家里"
+  },
+  {
+    "kanji": "団らん",
+    "kana": "だんらん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "团聚，欢聚"
+  },
+  {
+    "kanji": "一家団らん",
+    "kana": "いっかだんらん",
+    "pitch": "①⓪",
+    "pos": "词组",
+    "meaning": "一家团圆"
+  },
+  {
+    "kanji": "爆竹",
+    "kana": "ばくちく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "爆竹"
+  },
+  {
+    "kanji": "鳴らす",
+    "kana": "ならす",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "鸣，响"
+  },
+  {
+    "kanji": "年始回り",
+    "kana": "ねんしまわり",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "拜年"
+  },
+  {
+    "kanji": "お年玉",
+    "kana": "おとしだま",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "压岁钱"
+  },
+  {
+    "kanji": "",
+    "kana": "イベント",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "大事；活动"
+  },
+  {
+    "kanji": "疲れ",
+    "kana": "つかれ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "疲劳"
+  },
+  {
+    "kanji": "現れる",
+    "kana": "あらわれる",
+    "pitch": "④",
+    "pos": "动2自",
+    "meaning": "出现；表现出"
+  },
+  {
+    "kanji": "",
+    "kana": "いとこ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "堂兄弟姐妹；表兄弟姐妹"
+  },
+  {
+    "kanji": "化け物",
+    "kana": "ばけもの",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "妖怪"
+  },
+  {
+    "kanji": "最後",
+    "kana": "さいご",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "最后"
+  },
+  {
+    "kanji": "襲う",
+    "kana": "おそう",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "袭击"
+  },
+  {
+    "kanji": "物語",
+    "kana": "ものがたり",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "故事"
+  },
+  {
+    "kanji": "怖がる",
+    "kana": "こわがる",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "害怕"
+  },
+  {
+    "kanji": "飾る",
+    "kana": "かざる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "装饰"
+  },
+  {
+    "kanji": "燃やす",
+    "kana": "もやす",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "燃烧，燃起"
+  },
+  {
+    "kanji": "竹",
+    "kana": "たけ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "竹子"
+  },
+  {
+    "kanji": "投げる",
+    "kana": "なげる",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "扔，投"
+  },
+  {
+    "kanji": "追い出す",
+    "kana": "おいだす",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "赶出，撵出"
+  },
+  {
+    "kanji": "変化",
+    "kana": "へんか",
+    "pitch": "①",
+    "pos": "名·动3自",
+    "meaning": "变化"
+  },
+  {
+    "kanji": "世紀",
+    "kana": "せいき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "世纪"
+  },
+  {
+    "kanji": "西洋",
+    "kana": "せいよう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "西洋，西方；欧美"
+  },
+  {
+    "kanji": "立春",
+    "kana": "りっしゅん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "立春"
+  },
+  {
+    "kanji": "時期",
+    "kana": "じき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "时期"
+  },
+  {
+    "kanji": "名付ける",
+    "kana": "なづける",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "命名，起名"
+  },
+  {
+    "kanji": "盛大",
+    "kana": "せいだい",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "盛大；（规模）宏大"
+  },
+  {
+    "kanji": "関わる",
+    "kana": "かかわる",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "关系到，涉及到"
+  },
+  {
+    "kanji": "縁日",
+    "kana": "えんにち",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "有庙会的日子"
+  },
+  {
+    "kanji": "花火",
+    "kana": "はなび",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "烟火，焰火"
+  },
+  {
+    "kanji": "新年",
+    "kana": "しんねん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "新年，元旦"
+  },
+  {
+    "kanji": "幸福",
+    "kana": "こうふく",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "幸福"
+  },
+  {
+    "kanji": "祝う",
+    "kana": "いわう",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "祝贺"
+  },
+  {
+    "kanji": "祈る",
+    "kana": "いのる",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "祝愿，祈祷"
+  },
+  {
+    "kanji": "縁起",
+    "kana": "えんぎ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "兆头；起源"
+  },
+  {
+    "kanji": "連休",
+    "kana": "れんきゅう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "连续假日，连休"
+  },
+  {
+    "kanji": "苦労",
+    "kana": "くろう",
+    "pitch": "①",
+    "pos": "名·形2",
+    "meaning": "辛苦；操劳"
+  },
+  {
+    "kanji": "必ず",
+    "kana": "かならず",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "必定，一定"
+  },
+  {
+    "kanji": "帰省",
+    "kana": "きせい",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "归省，探亲"
+  },
+  {
+    "kanji": "墓参り",
+    "kana": "はかまいり",
+    "pitch": "③",
+    "pos": "名·动3自",
+    "meaning": "扫墓，上坟"
+  },
+  {
+    "kanji": "先祖",
+    "kana": "せんぞ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "祖先"
+  },
+  {
+    "kanji": "移り変わる",
+    "kana": "うつりかわる",
+    "pitch": "⑤",
+    "pos": "动1自",
+    "meaning": "变迁，变化"
+  },
+  {
+    "kanji": "絆",
+    "kana": "きずな",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "情谊，纽带"
+  },
+  {
+    "kanji": "門松",
+    "kana": "かどまつ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "门松"
+  },
+  {
+    "kanji": "鏡餅",
+    "kana": "かがみもち",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "镜饼（供神的圆形年糕）"
+  },
+  {
+    "kanji": "おせち料理",
+    "kana": "おせちりょうり",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "年饭"
+  },
+  {
+    "kanji": "詰める",
+    "kana": "つめる",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "填充，塞"
+  },
+  {
+    "kanji": "",
+    "kana": "めでたい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "可喜可贺"
+  },
+  {
+    "kanji": "昆布",
+    "kana": "こんぶ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "海带"
+  },
+  {
+    "kanji": "初詣",
+    "kana": "はつもうで",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "新年后初次参拜"
+  },
+  {
+    "kanji": "神社",
+    "kana": "じんじゃ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "神社"
+  },
+  {
+    "kanji": "羽根",
+    "kana": "はね",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "羽毛（毽）"
+  },
+  {
+    "kanji": "羽根つき",
+    "kana": "はねつき",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "羽毛"
+  },
+  {
+    "kanji": "",
+    "kana": "やがて",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "不久"
+  },
+  {
+    "kanji": "歌舞伎",
+    "kana": "かぶき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "歌舞伎"
+  },
+  {
+    "kanji": "公演",
+    "kana": "こうえん",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "公演，演出"
+  },
+  {
+    "kanji": "招待",
+    "kana": "しょうたい",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "邀请、招待"
+  },
+  {
+    "kanji": "孫",
+    "kana": "まご",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "孙子"
+  },
+  {
+    "kanji": "軒",
+    "kana": "のき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "屋檐，房檐"
+  },
+  {
+    "kanji": "回る",
+    "kana": "まわる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "转、回转"
+  }
+]

@@ -1,0 +1,520 @@
+[
+  {
+    "kanji": "自然",
+    "kana": "しぜん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "自然"
+  },
+  {
+    "kanji": "保護",
+    "kana": "ほご",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "保护"
+  },
+  {
+    "kanji": "高まる",
+    "kana": "たかまる",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "提高, 增长"
+  },
+  {
+    "kanji": "改善",
+    "kana": "かいぜん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "改善"
+  },
+  {
+    "kanji": "責任",
+    "kana": "せきにん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "责任"
+  },
+  {
+    "kanji": "努力",
+    "kana": "どりょく",
+    "pitch": "①",
+    "pos": "名·动3自",
+    "meaning": "努力"
+  },
+  {
+    "kanji": "緑化",
+    "kana": "りょっか",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "绿化"
+  },
+  {
+    "kanji": "砂漠",
+    "kana": "さばく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "沙漠"
+  },
+  {
+    "kanji": "植える",
+    "kana": "うえる",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "种植"
+  },
+  {
+    "kanji": "いたる所",
+    "kana": "いたるところ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "到处，随处"
+  },
+  {
+    "kanji": "張る",
+    "kana": "はる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "张贴"
+  },
+  {
+    "kanji": "",
+    "kana": "リサイクル",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "再利用"
+  },
+  {
+    "kanji": "積極的",
+    "kana": "せっきょくてき",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "积极的"
+  },
+  {
+    "kanji": "",
+    "kana": "あらゆる",
+    "pitch": "③",
+    "pos": "连体",
+    "meaning": "所有, 一切"
+  },
+  {
+    "kanji": "人類",
+    "kana": "じんるい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "人类"
+  },
+  {
+    "kanji": "全",
+    "kana": "ぜん",
+    "pitch": "①",
+    "pos": "前缀",
+    "meaning": "全……"
+  },
+  {
+    "kanji": "協力",
+    "kana": "きょうりょく",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "协助，合作"
+  },
+  {
+    "kanji": "共生",
+    "kana": "きょうせい",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "共生"
+  },
+  {
+    "kanji": "共に",
+    "kana": "ともに",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "一起, 共同; 同时"
+  },
+  {
+    "kanji": "暮らす",
+    "kana": "くらす",
+    "pitch": "⓪",
+    "pos": "动1自他",
+    "meaning": "生活"
+  },
+  {
+    "kanji": "頼る",
+    "kana": "たよる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "依靠, 借助"
+  },
+  {
+    "kanji": "人口",
+    "kana": "じんこう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "人口"
+  },
+  {
+    "kanji": "増加",
+    "kana": "ぞうか",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "増加"
+  },
+  {
+    "kanji": "従う",
+    "kana": "したがう",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "随着; 遵从"
+  },
+  {
+    "kanji": "崩れる",
+    "kana": "くずれる",
+    "pitch": "③",
+    "pos": "动2自",
+    "meaning": "崩溃, 垮塌"
+  },
+  {
+    "kanji": "生存",
+    "kana": "せいぞん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "生存，存活"
+  },
+  {
+    "kanji": "持続的",
+    "kana": "じぞくてき",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "持续的"
+  },
+  {
+    "kanji": "電車",
+    "kana": "でんしゃ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "电气列车"
+  },
+  {
+    "kanji": "一人ひとり",
+    "kana": "ひとりひとり",
+    "pitch": "⑤",
+    "pos": "名·副",
+    "meaning": "每人，各自"
+  },
+  {
+    "kanji": "提言",
+    "kana": "ていげん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "建议，提议"
+  },
+  {
+    "kanji": "部分",
+    "kana": "ぶぶん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "部分"
+  },
+  {
+    "kanji": "",
+    "kana": "コンビニ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "便利店"
+  },
+  {
+    "kanji": "外出",
+    "kana": "がいしゅつ",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "出门，外出"
+  },
+  {
+    "kanji": "レジ袋",
+    "kana": "レジぶくろ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "(超市等的)购物袋，塑料袋"
+  },
+  {
+    "kanji": "量",
+    "kana": "りょう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "量, 数量"
+  },
+  {
+    "kanji": "",
+    "kana": "ガラス",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "玻璃"
+  },
+  {
+    "kanji": "割れる",
+    "kana": "われる",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "碎, 裂"
+  },
+  {
+    "kanji": "起こす",
+    "kana": "おこす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "叫醒; 扶起"
+  },
+  {
+    "kanji": "割る",
+    "kana": "わる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "打破; 切, 割"
+  },
+  {
+    "kanji": "面積",
+    "kana": "めんせき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "面积"
+  },
+  {
+    "kanji": "気温",
+    "kana": "きおん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "气温"
+  },
+  {
+    "kanji": "安心",
+    "kana": "あんしん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "放心，安心"
+  },
+  {
+    "kanji": "並べる",
+    "kana": "ならべる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "摆, 排列"
+  },
+  {
+    "kanji": "四季",
+    "kana": "しき",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "四季"
+  },
+  {
+    "kanji": "移り変わり",
+    "kana": "うつりかわり",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "变迁，演变"
+  },
+  {
+    "kanji": "霧",
+    "kana": "きり",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "雾"
+  },
+  {
+    "kanji": "近づく",
+    "kana": "ちかづく",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "临近, 靠拢"
+  },
+  {
+    "kanji": "消える",
+    "kana": "きえる",
+    "pitch": "③",
+    "pos": "动2自",
+    "meaning": "消失, 熄灭"
+  },
+  {
+    "kanji": "",
+    "kana": "すっかり",
+    "pitch": "③",
+    "pos": "副",
+    "meaning": "全, 都"
+  },
+  {
+    "kanji": "",
+    "kana": "カメラ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "照相机"
+  },
+  {
+    "kanji": "壊す",
+    "kana": "こわす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "弄坏, 损坏"
+  },
+  {
+    "kanji": "負ける",
+    "kana": "まける",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "输, 败"
+  },
+  {
+    "kanji": "嫌",
+    "kana": "いや",
+    "pitch": "②",
+    "pos": "形2",
+    "meaning": "讨厌, 厌烦"
+  },
+  {
+    "kanji": "雄大",
+    "kana": "ゆうだい",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "雄伟, 雄壮"
+  },
+  {
+    "kanji": "踊り",
+    "kana": "おどり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "舞, 舞蹈"
+  },
+  {
+    "kanji": "閉める",
+    "kana": "しめる",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "关闭"
+  },
+  {
+    "kanji": "酸素",
+    "kana": "さんそ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "氧"
+  },
+  {
+    "kanji": "無くなる",
+    "kana": "なくなる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "丢失，消失；用完"
+  },
+  {
+    "kanji": "入口",
+    "kana": "いりぐち",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "入口"
+  },
+  {
+    "kanji": "飾る",
+    "kana": "かざる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "装饰"
+  },
+  {
+    "kanji": "資料館",
+    "kana": "しりょうかん",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "资料馆"
+  },
+  {
+    "kanji": "減少",
+    "kana": "げんしょう",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "减少"
+  },
+  {
+    "kanji": "減る",
+    "kana": "へる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "减少, 下降"
+  },
+  {
+    "kanji": "",
+    "kana": "シリーズ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "系列"
+  },
+  {
+    "kanji": "小遣い",
+    "kana": "こづかい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "零钱, 零花钱"
+  },
+  {
+    "kanji": "参考書",
+    "kana": "さんこうしょ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "参考书，工具书"
+  },
+  {
+    "kanji": "途中",
+    "kana": "とちゅう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "半路上, 中途"
+  },
+  {
+    "kanji": "止まる",
+    "kana": "とまる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "停止"
+  },
+  {
+    "kanji": "無くす",
+    "kana": "なくす",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "丢, 丢失"
+  },
+  {
+    "kanji": "有意義",
+    "kana": "ゆういぎ",
+    "pitch": "③",
+    "pos": "名·形2",
+    "meaning": "有意义"
+  },
+  {
+    "kanji": "値段",
+    "kana": "ねだん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "价格"
+  },
+  {
+    "kanji": "複雑",
+    "kana": "ふくざつ",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "复杂"
+  },
+  {
+    "kanji": "片付ける",
+    "kana": "かたづける",
+    "pitch": "④",
+    "pos": "动2他",
+    "meaning": "整理，收拾"
+  },
+  {
+    "kanji": "腕時計",
+    "kana": "うでどけい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "手表"
+  }
+]

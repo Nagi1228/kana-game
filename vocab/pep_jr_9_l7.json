@@ -1,0 +1,247 @@
+[
+  {
+    "kanji": "調査",
+    "kana": "ちょうさ",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "调查"
+  },
+  {
+    "kanji": "図",
+    "kana": "ず",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "图"
+  },
+  {
+    "kanji": "%",
+    "kana": "パーセント",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "百分比"
+  },
+  {
+    "kanji": "動画",
+    "kana": "どうが",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "视频；动画片"
+  },
+  {
+    "kanji": "視聴",
+    "kana": "しちょう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "视听；收看"
+  },
+  {
+    "kanji": "",
+    "kana": "ゲーム",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "游戏"
+  },
+  {
+    "kanji": "検索",
+    "kana": "けんさく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "检索"
+  },
+  {
+    "kanji": "未満",
+    "kana": "みまん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "不足，不到"
+  },
+  {
+    "kanji": "",
+    "kana": "ナビ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "导航"
+  },
+  {
+    "kanji": "目的",
+    "kana": "もくてき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "目的"
+  },
+  {
+    "kanji": "超える",
+    "kana": "こえる",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "超越，超过"
+  },
+  {
+    "kanji": "平日",
+    "kana": "へいじつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "平日；工作日"
+  },
+  {
+    "kanji": "",
+    "kana": "データ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "数据"
+  },
+  {
+    "kanji": "娯楽",
+    "kana": "ごらく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "娱乐"
+  },
+  {
+    "kanji": "",
+    "kana": "オンライン",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "在线；联网"
+  },
+  {
+    "kanji": "",
+    "kana": "アプリ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "应用程序"
+  },
+  {
+    "kanji": "",
+    "kana": "もちろん",
+    "pitch": "②",
+    "pos": "副",
+    "meaning": "当然，不必说"
+  },
+  {
+    "kanji": "",
+    "kana": "せい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "原因，缘故"
+  },
+  {
+    "kanji": "点数",
+    "kana": "てんすう",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "分数；件数"
+  },
+  {
+    "kanji": "上がる",
+    "kana": "あがる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "提高；上，登；上涨"
+  },
+  {
+    "kanji": "似合う",
+    "kana": "にあう",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "适合，相配"
+  },
+  {
+    "kanji": "譲る",
+    "kana": "ゆずる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "让给"
+  },
+  {
+    "kanji": "結論",
+    "kana": "けつろん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "结论"
+  },
+  {
+    "kanji": "下す",
+    "kana": "くだす",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "下达；降，落"
+  },
+  {
+    "kanji": "飼う",
+    "kana": "かう",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "饲养"
+  },
+  {
+    "kanji": "体調",
+    "kana": "たいちょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "健康状态，身体状况"
+  },
+  {
+    "kanji": "志望校",
+    "kana": "しぼうこう",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "志愿学校，希望进入的学校"
+  },
+  {
+    "kanji": "",
+    "kana": "スープ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "汤"
+  },
+  {
+    "kanji": "塩",
+    "kana": "しお",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "盐，食盐"
+  },
+  {
+    "kanji": "",
+    "kana": "ビザ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "签证"
+  },
+  {
+    "kanji": "申請",
+    "kana": "しんせい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "申请"
+  },
+  {
+    "kanji": "迷う",
+    "kana": "まよう",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "迷失（方向）；茫然失措"
+  },
+  {
+    "kanji": "故障",
+    "kana": "こしょう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "故障，事故"
+  },
+  {
+    "kanji": "",
+    "kana": "だるい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "懒倦，慵懒"
+  },
+  {
+    "kanji": "気分",
+    "kana": "きぶん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "身体情况；心情"
+  }
+]

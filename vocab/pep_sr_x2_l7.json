@@ -1,0 +1,499 @@
+[
+  {
+    "kanji": "進学",
+    "kana": "しんがく",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "升学"
+  },
+  {
+    "kanji": "進路",
+    "kana": "しんろ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "前进的道路"
+  },
+  {
+    "kanji": "学部",
+    "kana": "がくぶ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "院系"
+  },
+  {
+    "kanji": "学科",
+    "kana": "がっか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "学科"
+  },
+  {
+    "kanji": "以外",
+    "kana": "いがい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "以外"
+  },
+  {
+    "kanji": "学問",
+    "kana": "がくもん",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "学问；知识"
+  },
+  {
+    "kanji": "踏まえる",
+    "kana": "ふまえる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "立足于，根据；踩，踏"
+  },
+  {
+    "kanji": "有益",
+    "kana": "ゆうえき",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "有益处"
+  },
+  {
+    "kanji": "志望",
+    "kana": "しぼう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "志愿，志望"
+  },
+  {
+    "kanji": "専攻",
+    "kana": "せんこう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "专修，专攻"
+  },
+  {
+    "kanji": "警察官",
+    "kana": "けいさつかん",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "警察"
+  },
+  {
+    "kanji": "就く",
+    "kana": "つく",
+    "pitch": "①",
+    "pos": "动1自",
+    "meaning": "从事"
+  },
+  {
+    "kanji": "",
+    "kana": "プラン",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "计划"
+  },
+  {
+    "kanji": "真剣",
+    "kana": "しんけん",
+    "pitch": "①",
+    "pos": "名·形2",
+    "meaning": "严肃认真；真的刀剑"
+  },
+  {
+    "kanji": "入試",
+    "kana": "にゅうし",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "入学考试"
+  },
+  {
+    "kanji": "筆記試験",
+    "kana": "ひっきしけん",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "笔试"
+  },
+  {
+    "kanji": "口述試験",
+    "kana": "こうじゅつしけん",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "口试"
+  },
+  {
+    "kanji": "実技試験",
+    "kana": "じつぎしけん",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "实操测试"
+  },
+  {
+    "kanji": "面接",
+    "kana": "めんせつ",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "面试"
+  },
+  {
+    "kanji": "支持",
+    "kana": "しじ",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "支持"
+  },
+  {
+    "kanji": "得る",
+    "kana": "える",
+    "pitch": "①",
+    "pos": "动2他",
+    "meaning": "得到"
+  },
+  {
+    "kanji": "逆に",
+    "kana": "ぎゃくに",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "相反，反而"
+  },
+  {
+    "kanji": "疎通",
+    "kana": "そつう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "疏通，沟通"
+  },
+  {
+    "kanji": "奨学金",
+    "kana": "しょうがくきん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "奖学金"
+  },
+  {
+    "kanji": "出身地",
+    "kana": "しゅっしんち",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "出生地点；籍贯"
+  },
+  {
+    "kanji": "",
+    "kana": "ほぼ",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "大略，大体上"
+  },
+  {
+    "kanji": "築く",
+    "kana": "きずく",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "构筑；建立，形成"
+  },
+  {
+    "kanji": "",
+    "kana": "カリキュラム",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "教育课程"
+  },
+  {
+    "kanji": "数学",
+    "kana": "すうがく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "数学"
+  },
+  {
+    "kanji": "絞る",
+    "kana": "しぼる",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "集中，缩小"
+  },
+  {
+    "kanji": "合格",
+    "kana": "ごうかく",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "合格"
+  },
+  {
+    "kanji": "論文",
+    "kana": "ろんぶん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "论文"
+  },
+  {
+    "kanji": "早めに",
+    "kana": "はやめに",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "提前"
+  },
+  {
+    "kanji": "目標",
+    "kana": "もくひょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "目标"
+  },
+  {
+    "kanji": "競争",
+    "kana": "きょうそう",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "竞争"
+  },
+  {
+    "kanji": "相当",
+    "kana": "そうとう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "相当于；比所想的还要……"
+  },
+  {
+    "kanji": "不景気",
+    "kana": "ふけいき",
+    "pitch": "②",
+    "pos": "名·形2",
+    "meaning": "不景气，萧条"
+  },
+  {
+    "kanji": "倒産",
+    "kana": "とうさん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "倒闭，破产"
+  },
+  {
+    "kanji": "商売",
+    "kana": "しょうばい",
+    "pitch": "①",
+    "pos": "名·动3自他",
+    "meaning": "商业，买卖"
+  },
+  {
+    "kanji": "景気",
+    "kana": "けいき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "景气，光景"
+  },
+  {
+    "kanji": "商学",
+    "kana": "しょうがく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "商学"
+  },
+  {
+    "kanji": "商業",
+    "kana": "しょうぎょう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "商业"
+  },
+  {
+    "kanji": "経営",
+    "kana": "けいえい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "经营"
+  },
+  {
+    "kanji": "理論",
+    "kana": "りろん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "理论"
+  },
+  {
+    "kanji": "自慢",
+    "kana": "じまん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "自满，自夸"
+  },
+  {
+    "kanji": "～風",
+    "kana": "ふう",
+    "pitch": "",
+    "pos": "后缀",
+    "meaning": "……风格"
+  },
+  {
+    "kanji": "生け花",
+    "kana": "いけばな",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "插花"
+  },
+  {
+    "kanji": "",
+    "kana": "サークル",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "团体，俱乐部"
+  },
+  {
+    "kanji": "",
+    "kana": "トレーニング",
+    "pitch": "②",
+    "pos": "名·动3自",
+    "meaning": "训练"
+  },
+  {
+    "kanji": "実習",
+    "kana": "じっしゅう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "实习"
+  },
+  {
+    "kanji": "",
+    "kana": "オープンキャンパス",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "大学开放日"
+  },
+  {
+    "kanji": "奏者",
+    "kana": "そうしゃ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "演奏者"
+  },
+  {
+    "kanji": "舞台",
+    "kana": "ぶたい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "舞台"
+  },
+  {
+    "kanji": "課程",
+    "kana": "かてい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "课程"
+  },
+  {
+    "kanji": "愛する",
+    "kana": "あいする",
+    "pitch": "③",
+    "pos": "动3他",
+    "meaning": "喜爱；爱慕"
+  },
+  {
+    "kanji": "教授",
+    "kana": "きょうじゅ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "教授"
+  },
+  {
+    "kanji": "向上",
+    "kana": "こうじょう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "提高，向上"
+  },
+  {
+    "kanji": "図る",
+    "kana": "はかる",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "谋求"
+  },
+  {
+    "kanji": "",
+    "kana": "コンクール",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "竞赛"
+  },
+  {
+    "kanji": "教師",
+    "kana": "きょうし",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "教师"
+  },
+  {
+    "kanji": "目指す",
+    "kana": "めざす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "以……为目标"
+  },
+  {
+    "kanji": "教養",
+    "kana": "きょうよう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "教养，修养"
+  },
+  {
+    "kanji": "自身",
+    "kana": "じしん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "自身，自己"
+  },
+  {
+    "kanji": "古典",
+    "kana": "こてん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "古书，古典作品"
+  },
+  {
+    "kanji": "学費",
+    "kana": "がくひ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "学费，学杂费"
+  },
+  {
+    "kanji": "生活費",
+    "kana": "せいかつひ",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "生活费"
+  },
+  {
+    "kanji": "授業料",
+    "kana": "じゅぎょうりょう",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "学费"
+  },
+  {
+    "kanji": "俳優",
+    "kana": "はいゆう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "演员"
+  },
+  {
+    "kanji": "叩く",
+    "kana": "たたく",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "敲"
+  },
+  {
+    "kanji": "工学",
+    "kana": "こうがく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "工科"
+  },
+  {
+    "kanji": "塾",
+    "kana": "じゅく",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "辅导班"
+  }
+]

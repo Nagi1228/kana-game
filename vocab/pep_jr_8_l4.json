@@ -1,0 +1,450 @@
+[
+  {
+    "kanji": "小さな",
+    "kana": "ちいさな",
+    "pitch": "①",
+    "pos": "连体",
+    "meaning": "小的"
+  },
+  {
+    "kanji": "発見",
+    "kana": "はっけん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "发现"
+  },
+  {
+    "kanji": "家庭",
+    "kana": "かてい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "家庭"
+  },
+  {
+    "kanji": "箸",
+    "kana": "はし",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "筷子"
+  },
+  {
+    "kanji": "尊敬",
+    "kana": "そんけい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "尊敬"
+  },
+  {
+    "kanji": "表す",
+    "kana": "あらわす",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "表现, 表示"
+  },
+  {
+    "kanji": "大皿",
+    "kana": "おおざら",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "大盘子"
+  },
+  {
+    "kanji": "盛る",
+    "kana": "もる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "盛, 装满"
+  },
+  {
+    "kanji": "",
+    "kana": "それぞれ",
+    "pitch": "②",
+    "pos": "名·副",
+    "meaning": "分别, 每个"
+  },
+  {
+    "kanji": "気づく",
+    "kana": "きづく",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "意识到, 发觉"
+  },
+  {
+    "kanji": "",
+    "kana": "ほら",
+    "pitch": "①",
+    "pos": "叹",
+    "meaning": "瞧, 看"
+  },
+  {
+    "kanji": "細い",
+    "kana": "ほそい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "细; 瘦小"
+  },
+  {
+    "kanji": "太い",
+    "kana": "ふとい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "粗"
+  },
+  {
+    "kanji": "お代わり",
+    "kana": "おかわり",
+    "pitch": "②",
+    "pos": "名·动3他",
+    "meaning": "再添一碗(饭、汤等)"
+  },
+  {
+    "kanji": "お腹",
+    "kana": "おなか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "肚子, 肠胃"
+  },
+  {
+    "kanji": "口",
+    "kana": "くち",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "口味; 嘴巴"
+  },
+  {
+    "kanji": "違い",
+    "kana": "ちがい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "差别, 差异; 差错"
+  },
+  {
+    "kanji": "",
+    "kana": "マナー",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "礼貌, 规矩"
+  },
+  {
+    "kanji": "形",
+    "kana": "かたち",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "形状"
+  },
+  {
+    "kanji": "",
+    "kana": "いただく",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "吃，喝；(自谦)承蒙，领受"
+  },
+  {
+    "kanji": "竹製",
+    "kana": "たけせい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "竹制"
+  },
+  {
+    "kanji": "木製",
+    "kana": "もくせい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "木制"
+  },
+  {
+    "kanji": "遠く",
+    "kana": "とおく",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "远处, 远方"
+  },
+  {
+    "kanji": "合わせる",
+    "kana": "あわせる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "适应，结合；对上，合起"
+  },
+  {
+    "kanji": "個人",
+    "kana": "こじん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "个人"
+  },
+  {
+    "kanji": "盛り",
+    "kana": "もり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "盛的分量; 盛"
+  },
+  {
+    "kanji": "一般的",
+    "kana": "いっぱんてき",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "一般的"
+  },
+  {
+    "kanji": "骨",
+    "kana": "ほね",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "鱼刺; 骨, 骨头"
+  },
+  {
+    "kanji": "食習慣",
+    "kana": "しょくしゅうかん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "饮食习惯，用餐习惯"
+  },
+  {
+    "kanji": "",
+    "kana": "ふさわしい",
+    "pitch": "④",
+    "pos": "形1",
+    "meaning": "合适"
+  },
+  {
+    "kanji": "左",
+    "kana": "ひだり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "左"
+  },
+  {
+    "kanji": "右",
+    "kana": "みぎ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "右"
+  },
+  {
+    "kanji": "対する",
+    "kana": "たいする",
+    "pitch": "③",
+    "pos": "动3自",
+    "meaning": "对于, 针对"
+  },
+  {
+    "kanji": "",
+    "kana": "きっかけ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "起首, 开端; 机会"
+  },
+  {
+    "kanji": "狭い",
+    "kana": "せまい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "狭窄"
+  },
+  {
+    "kanji": "余裕",
+    "kana": "よゆう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "富余; 从容"
+  },
+  {
+    "kanji": "",
+    "kana": "ずっと",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "……得多; 一直"
+  },
+  {
+    "kanji": "足",
+    "kana": "あし",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "脚, 腿"
+  },
+  {
+    "kanji": "速い",
+    "kana": "はやい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "快"
+  },
+  {
+    "kanji": "都市",
+    "kana": "とし",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "都市"
+  },
+  {
+    "kanji": "元気",
+    "kana": "げんき",
+    "pitch": "①",
+    "pos": "名·形2",
+    "meaning": "有精神, 健康"
+  },
+  {
+    "kanji": "熱心",
+    "kana": "ねっしん",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "投入, 热忱"
+  },
+  {
+    "kanji": "景色",
+    "kana": "けしき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "景色"
+  },
+  {
+    "kanji": "資源",
+    "kana": "しげん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "资源"
+  },
+  {
+    "kanji": "豊か",
+    "kana": "ゆたか",
+    "pitch": "①",
+    "pos": "形2",
+    "meaning": "丰富; 富裕"
+  },
+  {
+    "kanji": "",
+    "kana": "コーヒー",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "咖啡"
+  },
+  {
+    "kanji": "醤油",
+    "kana": "しょうゆ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "酱油"
+  },
+  {
+    "kanji": "近年",
+    "kana": "きんねん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "近年"
+  },
+  {
+    "kanji": "教師",
+    "kana": "きょうし",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "教师"
+  },
+  {
+    "kanji": "不便",
+    "kana": "ふべん",
+    "pitch": "①",
+    "pos": "形2",
+    "meaning": "不便"
+  },
+  {
+    "kanji": "",
+    "kana": "プレゼント",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "礼物, 赠品"
+  },
+  {
+    "kanji": "皿",
+    "kana": "さら",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "碟子, 盘子"
+  },
+  {
+    "kanji": "低い",
+    "kana": "ひくい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "低, 矮"
+  },
+  {
+    "kanji": "海",
+    "kana": "うみ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "海"
+  },
+  {
+    "kanji": "親切",
+    "kana": "しんせつ",
+    "pitch": "①",
+    "pos": "形2",
+    "meaning": "亲切, 好心"
+  },
+  {
+    "kanji": "電子決済",
+    "kana": "でんしけっさい",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "电子支付"
+  },
+  {
+    "kanji": "靴下",
+    "kana": "くつした",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "袜子"
+  },
+  {
+    "kanji": "子",
+    "kana": "こ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "小孩子；子女"
+  },
+  {
+    "kanji": "資料",
+    "kana": "しりょう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "资料"
+  },
+  {
+    "kanji": "調べる",
+    "kana": "しらべる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "调查, 查找"
+  },
+  {
+    "kanji": "答え",
+    "kana": "こたえ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "回答, 答案"
+  },
+  {
+    "kanji": "茶碗",
+    "kana": "ちゃわん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "碗"
+  },
+  {
+    "kanji": "冬休み",
+    "kana": "ふゆやすみ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "寒假"
+  },
+  {
+    "kanji": "工場",
+    "kana": "こうじょう",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "工厂"
+  }
+]

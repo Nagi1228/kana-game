@@ -1,0 +1,310 @@
+[
+  {
+    "kanji": "学習",
+    "kana": "がくしゅう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "学习"
+  },
+  {
+    "kanji": "交流会",
+    "kana": "こうりゅうかい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "交流会"
+  },
+  {
+    "kanji": "",
+    "kana": "だいぶ",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "相当，很，颇"
+  },
+  {
+    "kanji": "続ける",
+    "kana": "つづける",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "继续，连续"
+  },
+  {
+    "kanji": "",
+    "kana": "アクセント",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "声调，重音"
+  },
+  {
+    "kanji": "恥ずかしい",
+    "kana": "はずかしい",
+    "pitch": "④",
+    "pos": "形1",
+    "meaning": "害羞，惭愧"
+  },
+  {
+    "kanji": "単語",
+    "kana": "たんご",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "单词"
+  },
+  {
+    "kanji": "作文",
+    "kana": "さくぶん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "作文；造句"
+  },
+  {
+    "kanji": "確か",
+    "kana": "たしか",
+    "pitch": "①",
+    "pos": "形2·副",
+    "meaning": "确实；大概"
+  },
+  {
+    "kanji": "表現",
+    "kana": "ひょうげん",
+    "pitch": "③",
+    "pos": "名·动3他",
+    "meaning": "表现，表达"
+  },
+  {
+    "kanji": "真似",
+    "kana": "まね",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "效仿，模仿"
+  },
+  {
+    "kanji": "暗記",
+    "kana": "あんき",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "记住，背诵"
+  },
+  {
+    "kanji": "語",
+    "kana": "ご",
+    "pitch": "①",
+    "pos": "名·后缀",
+    "meaning": "单词；语言"
+  },
+  {
+    "kanji": "",
+    "kana": "すきま",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "闲暇；缝隙，空隙"
+  },
+  {
+    "kanji": "単語帳",
+    "kana": "たんごちょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "单词本"
+  },
+  {
+    "kanji": "互い",
+    "kana": "たがい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "相互，彼此；双方"
+  },
+  {
+    "kanji": "確認",
+    "kana": "かくにん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "确认；证实"
+  },
+  {
+    "kanji": "学習者",
+    "kana": "がくしゅうしゃ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "学习者"
+  },
+  {
+    "kanji": "間違い",
+    "kana": "まちがい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "错误"
+  },
+  {
+    "kanji": "能力",
+    "kana": "のうりょく",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "能力"
+  },
+  {
+    "kanji": "向上",
+    "kana": "こうじょう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "提高，向上"
+  },
+  {
+    "kanji": "効率",
+    "kana": "こうりつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "效率"
+  },
+  {
+    "kanji": "",
+    "kana": "つながる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "有关，牵涉；连接"
+  },
+  {
+    "kanji": "幼い",
+    "kana": "おさない",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "年幼，幼小；幼稚"
+  },
+  {
+    "kanji": "遅く",
+    "kana": "おそく",
+    "pitch": "⓪",
+    "pos": "名·副",
+    "meaning": "晚"
+  },
+  {
+    "kanji": "動く",
+    "kana": "うごく",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "动，行动"
+  },
+  {
+    "kanji": "",
+    "kana": "レシピ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "烹饪法，食谱"
+  },
+  {
+    "kanji": "例文",
+    "kana": "れいぶん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "例句"
+  },
+  {
+    "kanji": "文",
+    "kana": "ぶん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "句子"
+  },
+  {
+    "kanji": "",
+    "kana": "デパート",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "百货大楼"
+  },
+  {
+    "kanji": "",
+    "kana": "コース",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "课程；路线"
+  },
+  {
+    "kanji": "街",
+    "kana": "まち",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "街，大街"
+  },
+  {
+    "kanji": "通訳",
+    "kana": "つうやく",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "(口译)译员；口译"
+  },
+  {
+    "kanji": "課長",
+    "kana": "かちょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "处长；课长；科长"
+  },
+  {
+    "kanji": "見守る",
+    "kana": "みまもる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "关注；照看，监护"
+  },
+  {
+    "kanji": "専攻",
+    "kana": "せんこう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "专业，专修，专攻"
+  },
+  {
+    "kanji": "示す",
+    "kana": "しめす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "表示"
+  },
+  {
+    "kanji": "組み立てる",
+    "kana": "くみたてる",
+    "pitch": "④",
+    "pos": "动2他",
+    "meaning": "组装，装配"
+  },
+  {
+    "kanji": "集合",
+    "kana": "しゅうごう",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "集合"
+  },
+  {
+    "kanji": "思想家",
+    "kana": "しそうか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "思想家"
+  },
+  {
+    "kanji": "",
+    "kana": "アナウンサー",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "播音员"
+  },
+  {
+    "kanji": "テレビ局",
+    "kana": "テレビきょく",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "电视台"
+  },
+  {
+    "kanji": "紅茶",
+    "kana": "こうちゃ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "红茶"
+  },
+  {
+    "kanji": "急",
+    "kana": "きゅう",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "突然，忽然；急迫，紧急"
+  }
+]

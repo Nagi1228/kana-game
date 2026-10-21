@@ -1,0 +1,569 @@
+[
+  {
+    "kanji": "",
+    "kana": "ボランティア",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "志愿者（活动）"
+  },
+  {
+    "kanji": "活動",
+    "kana": "かつどう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "活动"
+  },
+  {
+    "kanji": "ボランティア活動",
+    "kana": "ボランティアかつどう",
+    "pitch": "⑥",
+    "pos": "名",
+    "meaning": "志愿活动"
+  },
+  {
+    "kanji": "",
+    "kana": "よく",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "好好地"
+  },
+  {
+    "kanji": "探す",
+    "kana": "さがす",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "寻找"
+  },
+  {
+    "kanji": "高校生",
+    "kana": "こうこうせい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "高中生"
+  },
+  {
+    "kanji": "経験",
+    "kana": "けいけん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "经验，经历"
+  },
+  {
+    "kanji": "老人",
+    "kana": "ろうじん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "老年人"
+  },
+  {
+    "kanji": "老人ホーム",
+    "kana": "ろうじんホーム",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "敬老院"
+  },
+  {
+    "kanji": "二胡",
+    "kana": "にこ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "二胡"
+  },
+  {
+    "kanji": "向く",
+    "kana": "むく",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "适合；面向"
+  },
+  {
+    "kanji": "余裕",
+    "kana": "よゆう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "富余；充裕"
+  },
+  {
+    "kanji": "献血",
+    "kana": "けんけつ",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "献血"
+  },
+  {
+    "kanji": "未成年",
+    "kana": "みせいねん",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "未成年"
+  },
+  {
+    "kanji": "社会",
+    "kana": "しゃかい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "社会"
+  },
+  {
+    "kanji": "",
+    "kana": "もちろん",
+    "pitch": "②",
+    "pos": "副",
+    "meaning": "当然"
+  },
+  {
+    "kanji": "保護",
+    "kana": "ほご",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "保护，监护"
+  },
+  {
+    "kanji": "保護者",
+    "kana": "ほごしゃ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "监护人"
+  },
+  {
+    "kanji": "許可",
+    "kana": "きょか",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "许可，允许"
+  },
+  {
+    "kanji": "触れ合い",
+    "kana": "ふれあい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "接触，交流"
+  },
+  {
+    "kanji": "理想",
+    "kana": "りそう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "理想"
+  },
+  {
+    "kanji": "判断",
+    "kana": "はんだん",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "判断"
+  },
+  {
+    "kanji": "述べる",
+    "kana": "のべる",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "叙述"
+  },
+  {
+    "kanji": "暮らす",
+    "kana": "くらす",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "生活"
+  },
+  {
+    "kanji": "家事",
+    "kana": "かじ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "家务"
+  },
+  {
+    "kanji": "案内",
+    "kana": "あんない",
+    "pitch": "③",
+    "pos": "名·动3他",
+    "meaning": "引导，向导"
+  },
+  {
+    "kanji": "最近",
+    "kana": "さいきん",
+    "pitch": "⓪",
+    "pos": "名·副",
+    "meaning": "最近"
+  },
+  {
+    "kanji": "お年寄り",
+    "kana": "おとしより",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "老年人"
+  },
+  {
+    "kanji": "通す",
+    "kana": "とおす",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "通过"
+  },
+  {
+    "kanji": "周り",
+    "kana": "まわり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "周围"
+  },
+  {
+    "kanji": "幸せ",
+    "kana": "しあわせ",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "幸福"
+  },
+  {
+    "kanji": "",
+    "kana": "もたらす",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "带来"
+  },
+  {
+    "kanji": "有意義",
+    "kana": "ゆういぎ",
+    "pitch": "③",
+    "pos": "名·形2",
+    "meaning": "有意义"
+  },
+  {
+    "kanji": "積極",
+    "kana": "せっきょく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "积极"
+  },
+  {
+    "kanji": "海岸",
+    "kana": "かいがん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "海岸"
+  },
+  {
+    "kanji": "",
+    "kana": "たまる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "堆积"
+  },
+  {
+    "kanji": "処理",
+    "kana": "しょり",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "处理"
+  },
+  {
+    "kanji": "知識",
+    "kana": "ちしき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "知识"
+  },
+  {
+    "kanji": "残念",
+    "kana": "ざんねん",
+    "pitch": "③",
+    "pos": "形2",
+    "meaning": "遗憾，可惜"
+  },
+  {
+    "kanji": "期待",
+    "kana": "きたい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "期待"
+  },
+  {
+    "kanji": "進む",
+    "kana": "すすむ",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "主动；前进"
+  },
+  {
+    "kanji": "行う",
+    "kana": "おこなう",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "做，实行"
+  },
+  {
+    "kanji": "特別",
+    "kana": "とくべつ",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "特别"
+  },
+  {
+    "kanji": "技術",
+    "kana": "ぎじゅつ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "技术"
+  },
+  {
+    "kanji": "関心",
+    "kana": "かんしん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "关心，感兴趣"
+  },
+  {
+    "kanji": "能力",
+    "kana": "のうりょく",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "能力"
+  },
+  {
+    "kanji": "文字",
+    "kana": "もじ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "文字"
+  },
+  {
+    "kanji": "記録",
+    "kana": "きろく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "记录"
+  },
+  {
+    "kanji": "専用",
+    "kana": "せんよう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "专用"
+  },
+  {
+    "kanji": "",
+    "kana": "ポートフォリオ",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "文件夹"
+  },
+  {
+    "kanji": "演奏会",
+    "kana": "えんそうかい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "演奏会，音乐会"
+  },
+  {
+    "kanji": "正直",
+    "kana": "しょうじき",
+    "pitch": "③",
+    "pos": "名·形2·副",
+    "meaning": "老实；正直"
+  },
+  {
+    "kanji": "自信",
+    "kana": "じしん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "自信"
+  },
+  {
+    "kanji": "無理",
+    "kana": "むり",
+    "pitch": "①",
+    "pos": "名·形2",
+    "meaning": "勉强，硬要"
+  },
+  {
+    "kanji": "重要",
+    "kana": "じゅうよう",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "重要"
+  },
+  {
+    "kanji": "準備",
+    "kana": "じゅんび",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "准备"
+  },
+  {
+    "kanji": "",
+    "kana": "すべて",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "全部，所有"
+  },
+  {
+    "kanji": "",
+    "kana": "うまい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "合适，顺利；好吃"
+  },
+  {
+    "kanji": "会場",
+    "kana": "かいじょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "会场"
+  },
+  {
+    "kanji": "飾り",
+    "kana": "かざり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "装饰"
+  },
+  {
+    "kanji": "面倒",
+    "kana": "めんどう",
+    "pitch": "③",
+    "pos": "名·形2",
+    "meaning": "照顾；麻烦"
+  },
+  {
+    "kanji": "担当",
+    "kana": "たんとう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "担当，担任"
+  },
+  {
+    "kanji": "苦手",
+    "kana": "にがて",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "不擅长"
+  },
+  {
+    "kanji": "今学期",
+    "kana": "こんがっき",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "本学期"
+  },
+  {
+    "kanji": "結果",
+    "kana": "けっか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "结果"
+  },
+  {
+    "kanji": "床",
+    "kana": "ゆか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "地板"
+  },
+  {
+    "kanji": "掃く",
+    "kana": "はく",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "打扫"
+  },
+  {
+    "kanji": "毛布",
+    "kana": "もうふ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "毛毯，盖毯"
+  },
+  {
+    "kanji": "",
+    "kana": "リハーサル",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "彩排"
+  },
+  {
+    "kanji": "交差点",
+    "kana": "こうさてん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "十字路口，交叉点"
+  },
+  {
+    "kanji": "安全",
+    "kana": "あんぜん",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "安全"
+  },
+  {
+    "kanji": "着せる",
+    "kana": "きせる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "给……穿上"
+  },
+  {
+    "kanji": "受付",
+    "kana": "うけつけ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "接待；受理"
+  },
+  {
+    "kanji": "体操",
+    "kana": "たいそう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "体操"
+  },
+  {
+    "kanji": "疑問",
+    "kana": "ぎもん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "疑问"
+  },
+  {
+    "kanji": "解消",
+    "kana": "かいしょう",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "消除"
+  },
+  {
+    "kanji": "",
+    "kana": "たんす",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "衣橱，橱柜"
+  },
+  {
+    "kanji": "",
+    "kana": "しまう",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "收拾；结束"
+  },
+  {
+    "kanji": "割れる",
+    "kana": "われる",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "碎，裂"
+  },
+  {
+    "kanji": "片付ける",
+    "kana": "かたづける",
+    "pitch": "④",
+    "pos": "动2他",
+    "meaning": "收拾"
+  },
+  {
+    "kanji": "汚れる",
+    "kana": "よごれる",
+    "pitch": "③",
+    "pos": "动2自",
+    "meaning": "脏"
+  }
+]

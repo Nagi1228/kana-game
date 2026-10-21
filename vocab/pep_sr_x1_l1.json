@@ -1,0 +1,450 @@
+[
+  {
+    "kanji": "学習",
+    "kana": "がくしゅう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "学习"
+  },
+  {
+    "kanji": "単語",
+    "kana": "たんご",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "单词"
+  },
+  {
+    "kanji": "混乱",
+    "kana": "こんらん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "混乱"
+  },
+  {
+    "kanji": "",
+    "kana": "または",
+    "pitch": "②",
+    "pos": "连",
+    "meaning": "又，或者"
+  },
+  {
+    "kanji": "似る",
+    "kana": "にる",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "相似，相像"
+  },
+  {
+    "kanji": "確かめる",
+    "kana": "たしかめる",
+    "pitch": "④",
+    "pos": "动2他",
+    "meaning": "查明，查对"
+  },
+  {
+    "kanji": "別",
+    "kana": "べつ",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "另外"
+  },
+  {
+    "kanji": "復習",
+    "kana": "ふくしゅう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "复习"
+  },
+  {
+    "kanji": "",
+    "kana": "ちゃんと",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "好好地"
+  },
+  {
+    "kanji": "この間",
+    "kana": "このあいだ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "最近，前些时候"
+  },
+  {
+    "kanji": "余白",
+    "kana": "よはく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "空白"
+  },
+  {
+    "kanji": "",
+    "kana": "メモ",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "笔记，记录"
+  },
+  {
+    "kanji": "纏まる",
+    "kana": "まとまる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "有条理；统一"
+  },
+  {
+    "kanji": "暗記",
+    "kana": "あんき",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "记住，背诵"
+  },
+  {
+    "kanji": "丸暗記",
+    "kana": "まるあんき",
+    "pitch": "③",
+    "pos": "名·动3他",
+    "meaning": "死记硬背"
+  },
+  {
+    "kanji": "部分",
+    "kana": "ぶぶん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "部分"
+  },
+  {
+    "kanji": "～側",
+    "kana": "がわ",
+    "pitch": "",
+    "pos": "后缀",
+    "meaning": "……侧，……方"
+  },
+  {
+    "kanji": "文法",
+    "kana": "ぶんぽう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "句法，文法"
+  },
+  {
+    "kanji": "文法項目",
+    "kana": "ぶんぽうこうもく",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "语法项目"
+  },
+  {
+    "kanji": "例文",
+    "kana": "れいぶん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "例句"
+  },
+  {
+    "kanji": "放課後",
+    "kana": "ほうかご",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "放学后"
+  },
+  {
+    "kanji": "当日",
+    "kana": "とうじつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "当天"
+  },
+  {
+    "kanji": "",
+    "kana": "すでに",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "已经，业已"
+  },
+  {
+    "kanji": "同じく",
+    "kana": "おなじく",
+    "pitch": "②",
+    "pos": "副·连",
+    "meaning": "同，又"
+  },
+  {
+    "kanji": "条件",
+    "kana": "じょうけん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "条件"
+  },
+  {
+    "kanji": "関連",
+    "kana": "かんれん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "关联，有关系"
+  },
+  {
+    "kanji": "記入",
+    "kana": "きにゅう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "写上，填写"
+  },
+  {
+    "kanji": "以前",
+    "kana": "いぜん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "以前"
+  },
+  {
+    "kanji": "単語帳",
+    "kana": "たんごちょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "单词本"
+  },
+  {
+    "kanji": "何となく",
+    "kana": "なんとなく",
+    "pitch": "④",
+    "pos": "副",
+    "meaning": "不知为何，不由得"
+  },
+  {
+    "kanji": "",
+    "kana": "そこで",
+    "pitch": "⓪",
+    "pos": "连",
+    "meaning": "于是；因此"
+  },
+  {
+    "kanji": "反省",
+    "kana": "はんせい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "反省，检查自己"
+  },
+  {
+    "kanji": "中途半端",
+    "kana": "ちゅうとはんぱ",
+    "pitch": "④",
+    "pos": "名·形2",
+    "meaning": "半途而废"
+  },
+  {
+    "kanji": "",
+    "kana": "インプット",
+    "pitch": "③",
+    "pos": "名·动3他",
+    "meaning": "输入"
+  },
+  {
+    "kanji": "",
+    "kana": "アウトプット",
+    "pitch": "④",
+    "pos": "名·动3他",
+    "meaning": "输出"
+  },
+  {
+    "kanji": "意識",
+    "kana": "いしき",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "意识；察觉"
+  },
+  {
+    "kanji": "",
+    "kana": "そうして",
+    "pitch": "⓪",
+    "pos": "连",
+    "meaning": "于是；接着"
+  },
+  {
+    "kanji": "見つける",
+    "kana": "みつける",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "找到，发现"
+  },
+  {
+    "kanji": "",
+    "kana": "フレーズ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "短语，词组"
+  },
+  {
+    "kanji": "記憶",
+    "kana": "きおく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "记忆"
+  },
+  {
+    "kanji": "宝石",
+    "kana": "ほうせき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "宝石"
+  },
+  {
+    "kanji": "動物園",
+    "kana": "どうぶつえん",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "动物园"
+  },
+  {
+    "kanji": "基本",
+    "kana": "きほん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "基本"
+  },
+  {
+    "kanji": "始め",
+    "kana": "はじめ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "开始，开头"
+  },
+  {
+    "kanji": "終わり",
+    "kana": "おわり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "结束，末尾"
+  },
+  {
+    "kanji": "要素",
+    "kana": "ようそ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "要素"
+  },
+  {
+    "kanji": "補足",
+    "kana": "ほそく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "补充"
+  },
+  {
+    "kanji": "立派",
+    "kana": "りっぱ",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "完全；高级；出色"
+  },
+  {
+    "kanji": "本題",
+    "kana": "ほんだい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "正题"
+  },
+  {
+    "kanji": "",
+    "kana": "ずれる",
+    "pitch": "②",
+    "pos": "动2自",
+    "meaning": "偏离，错位"
+  },
+  {
+    "kanji": "本人",
+    "kana": "ほんにん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "本人，当事人"
+  },
+  {
+    "kanji": "癖",
+    "kana": "くせ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "癖好，习惯"
+  },
+  {
+    "kanji": "貯める",
+    "kana": "ためる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "积蓄，储存"
+  },
+  {
+    "kanji": "態度",
+    "kana": "たいど",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "态度"
+  },
+  {
+    "kanji": "固める",
+    "kana": "かためる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "巩固，加固"
+  },
+  {
+    "kanji": "",
+    "kana": "ねじ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "螺丝，螺钉"
+  },
+  {
+    "kanji": "卷く",
+    "kana": "まく",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "拧；卷，缠绕"
+  },
+  {
+    "kanji": "間違える",
+    "kana": "まちがえる",
+    "pitch": "④",
+    "pos": "动2他",
+    "meaning": "弄错，搞错"
+  },
+  {
+    "kanji": "強める",
+    "kana": "つよめる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "加强，增强"
+  },
+  {
+    "kanji": "集中力",
+    "kana": "しゅうちゅうりょく",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "集中力"
+  },
+  {
+    "kanji": "高める",
+    "kana": "たかめる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "提高"
+  },
+  {
+    "kanji": "",
+    "kana": "ポイント",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "要点；得分"
+  },
+  {
+    "kanji": "",
+    "kana": "カレンダー",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "日历，挂历"
+  },
+  {
+    "kanji": "印",
+    "kana": "しるし",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "标志，记号"
+  }
+]

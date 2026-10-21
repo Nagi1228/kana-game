@@ -1,0 +1,541 @@
+[
+  {
+    "kanji": "健康",
+    "kana": "けんこう",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "健康；健全"
+  },
+  {
+    "kanji": "見直す",
+    "kana": "みなおす",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "重新看，反思"
+  },
+  {
+    "kanji": "改善",
+    "kana": "かいぜん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "改善"
+  },
+  {
+    "kanji": "案",
+    "kana": "あん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "意见，主意，方案"
+  },
+  {
+    "kanji": "改善案",
+    "kana": "かいぜんあん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "改善的方案"
+  },
+  {
+    "kanji": "作り出す",
+    "kana": "つくりだす",
+    "pitch": "④",
+    "pos": "动1他",
+    "meaning": "制作，做出"
+  },
+  {
+    "kanji": "与える",
+    "kana": "あたえる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "给"
+  },
+  {
+    "kanji": "",
+    "kana": "アンケート",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "问卷调查"
+  },
+  {
+    "kanji": "関係",
+    "kana": "かんけい",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "关系"
+  },
+  {
+    "kanji": "効果",
+    "kana": "こうか",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "效果"
+  },
+  {
+    "kanji": "早起き",
+    "kana": "はやおき",
+    "pitch": "②",
+    "pos": "名·动3自",
+    "meaning": "早起"
+  },
+  {
+    "kanji": "三文",
+    "kana": "さんもん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "三文钱，很少的钱"
+  },
+  {
+    "kanji": "徳",
+    "kana": "とく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "利益，好的结果"
+  },
+  {
+    "kanji": "",
+    "kana": "ことわざ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "谚语，俗语"
+  },
+  {
+    "kanji": "百歩",
+    "kana": "ひゃっぽ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "一百步"
+  },
+  {
+    "kanji": "生きる",
+    "kana": "いきる",
+    "pitch": "②",
+    "pos": "动2自",
+    "meaning": "生存"
+  },
+  {
+    "kanji": "大事",
+    "kana": "だいじ",
+    "pitch": "③",
+    "pos": "形2",
+    "meaning": "重要；珍惜"
+  },
+  {
+    "kanji": "",
+    "kana": "ところで",
+    "pitch": "③",
+    "pos": "连",
+    "meaning": "可是（转变话题）"
+  },
+  {
+    "kanji": "",
+    "kana": "アイディア",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "主意，想法"
+  },
+  {
+    "kanji": "確かに",
+    "kana": "たしかに",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "确实，的确"
+  },
+  {
+    "kanji": "精神",
+    "kana": "せいしん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "精神"
+  },
+  {
+    "kanji": "",
+    "kana": "もともと",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "原来，本来"
+  },
+  {
+    "kanji": "結局",
+    "kana": "けっきょく",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "结果，最终"
+  },
+  {
+    "kanji": "心理",
+    "kana": "しんり",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "心理"
+  },
+  {
+    "kanji": "普段",
+    "kana": "ふだん",
+    "pitch": "①",
+    "pos": "名·副",
+    "meaning": "平时，平常"
+  },
+  {
+    "kanji": "種類",
+    "kana": "しゅるい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "种类"
+  },
+  {
+    "kanji": "評価",
+    "kana": "ひょうか",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "评价；赞许"
+  },
+  {
+    "kanji": "段階",
+    "kana": "だんかい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "阶段；步骤"
+  },
+  {
+    "kanji": "",
+    "kana": "ボタン",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "按钮；纽扣"
+  },
+  {
+    "kanji": "",
+    "kana": "クリック",
+    "pitch": "②",
+    "pos": "名·动3他",
+    "meaning": "点击鼠标"
+  },
+  {
+    "kanji": "提出",
+    "kana": "ていしゅつ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "提出"
+  },
+  {
+    "kanji": "自動",
+    "kana": "じどう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "自动"
+  },
+  {
+    "kanji": "項目",
+    "kana": "こうもく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "项目"
+  },
+  {
+    "kanji": "",
+    "kana": "ヨーグルト",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "酸奶"
+  },
+  {
+    "kanji": "日帰り",
+    "kana": "ひがえり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "当天返回"
+  },
+  {
+    "kanji": "",
+    "kana": "ハイキング",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "郊游，徒步旅行"
+  },
+  {
+    "kanji": "",
+    "kana": "ジョギング",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "慢跑"
+  },
+  {
+    "kanji": "眠る",
+    "kana": "ねむる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "睡觉"
+  },
+  {
+    "kanji": "",
+    "kana": "なかなか",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "很，非常"
+  },
+  {
+    "kanji": "",
+    "kana": "ストレス",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "紧张状态"
+  },
+  {
+    "kanji": "落ち着く",
+    "kana": "おちつく",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "沉着，稳重；平静"
+  },
+  {
+    "kanji": "気分",
+    "kana": "きぶん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "心情；身体情况"
+  },
+  {
+    "kanji": "落ち込む",
+    "kana": "おちこむ",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "郁闷；坠入"
+  },
+  {
+    "kanji": "悩み",
+    "kana": "なやみ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "烦恼，苦恼"
+  },
+  {
+    "kanji": "調査",
+    "kana": "ちょうさ",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "调查"
+  },
+  {
+    "kanji": "人数",
+    "kana": "にんずう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "人数"
+  },
+  {
+    "kanji": "最も",
+    "kana": "もっとも",
+    "pitch": "③",
+    "pos": "副",
+    "meaning": "最"
+  },
+  {
+    "kanji": "状況",
+    "kana": "じょうきょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "情况，状况"
+  },
+  {
+    "kanji": "",
+    "kana": "パーセント（％）",
+    "pitch": "③",
+    "pos": "量",
+    "meaning": "百分比"
+  },
+  {
+    "kanji": "",
+    "kana": "きちんと",
+    "pitch": "②",
+    "pos": "副",
+    "meaning": "认真；整洁"
+  },
+  {
+    "kanji": "太る",
+    "kana": "ふとる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "发胖"
+  },
+  {
+    "kanji": "栄養",
+    "kana": "えいよう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "营养"
+  },
+  {
+    "kanji": "",
+    "kana": "バランス",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "平衡，均衡"
+  },
+  {
+    "kanji": "注意",
+    "kana": "ちゅうい",
+    "pitch": "①",
+    "pos": "名·动3自他",
+    "meaning": "注意；提醒"
+  },
+  {
+    "kanji": "",
+    "kana": "なるべく",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "尽量，尽可能"
+  },
+  {
+    "kanji": "押さえる",
+    "kana": "おさえる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "控制；按压；抓住"
+  },
+  {
+    "kanji": "推測",
+    "kana": "すいそく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "推测"
+  },
+  {
+    "kanji": "",
+    "kana": "すすぐ",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "漱口，含漱"
+  },
+  {
+    "kanji": "思い出す",
+    "kana": "おもいだす",
+    "pitch": "④",
+    "pos": "动1他",
+    "meaning": "想起，想出"
+  },
+  {
+    "kanji": "休める",
+    "kana": "やすめる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "（使）休息"
+  },
+  {
+    "kanji": "保つ",
+    "kana": "たもつ",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "保持，维持"
+  },
+  {
+    "kanji": "現代",
+    "kana": "げんだい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "现代"
+  },
+  {
+    "kanji": "動かす",
+    "kana": "うごかす",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "活动，移动"
+  },
+  {
+    "kanji": "十分",
+    "kana": "じゅうぶん",
+    "pitch": "③",
+    "pos": "形2·副",
+    "meaning": "十分，足够"
+  },
+  {
+    "kanji": "楽",
+    "kana": "らく",
+    "pitch": "②",
+    "pos": "形2",
+    "meaning": "轻松，舒服"
+  },
+  {
+    "kanji": "",
+    "kana": "あっさり",
+    "pitch": "③",
+    "pos": "副",
+    "meaning": "清淡；朴素"
+  },
+  {
+    "kanji": "",
+    "kana": "カロリー",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "卡（热量单位）"
+  },
+  {
+    "kanji": "胃",
+    "kana": "い",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "胃"
+  },
+  {
+    "kanji": "刺激",
+    "kana": "しげき",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "刺激"
+  },
+  {
+    "kanji": "朝寝坊",
+    "kana": "あさねぼう",
+    "pitch": "③",
+    "pos": "名·动3自",
+    "meaning": "睡懒觉，起床晚"
+  },
+  {
+    "kanji": "背中",
+    "kana": "せなか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "背，脊背"
+  },
+  {
+    "kanji": "腹",
+    "kana": "はら",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "肚子，腹部"
+  },
+  {
+    "kanji": "",
+    "kana": "リラックス",
+    "pitch": "②",
+    "pos": "名·动3自",
+    "meaning": "放松，松弛"
+  },
+  {
+    "kanji": "枕",
+    "kana": "まくら",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "枕头"
+  },
+  {
+    "kanji": "当てる",
+    "kana": "あてる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "垫，铺；猜，推测"
+  },
+  {
+    "kanji": "調子",
+    "kana": "ちょうし",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "状况，情况"
+  },
+  {
+    "kanji": "崩れる",
+    "kana": "くずれる",
+    "pitch": "③",
+    "pos": "动2自",
+    "meaning": "崩溃，溃败，垮塌"
+  }
+]

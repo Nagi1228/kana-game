@@ -1,0 +1,191 @@
+[
+  {
+    "kanji": "荷物",
+    "kana": "にもつ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "包裹"
+  },
+  {
+    "kanji": "はがき",
+    "kana": "はがき",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "明信片"
+  },
+  {
+    "kanji": "切手",
+    "kana": "きって",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "邮票"
+  },
+  {
+    "kanji": "引き出し",
+    "kana": "ひきだし",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "抽屉"
+  },
+  {
+    "kanji": "アルバム",
+    "kana": "アルバム",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "相册"
+  },
+  {
+    "kanji": "タバコ",
+    "kana": "タバコ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "烟，烟草"
+  },
+  {
+    "kanji": "漫画",
+    "kana": "まんが",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "漫画"
+  },
+  {
+    "kanji": "ガレージ",
+    "kana": "ガレージ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "车库，汽车房"
+  },
+  {
+    "kanji": "修理",
+    "kana": "しゅうり",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "修理"
+  },
+  {
+    "kanji": "居酒屋",
+    "kana": "いざかや",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "酒馆"
+  },
+  {
+    "kanji": "生ビール",
+    "kana": "なまビール",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "生啤"
+  },
+  {
+    "kanji": "焼き鳥",
+    "kana": "やきとり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "烤鸡肉串"
+  },
+  {
+    "kanji": "唐揚げ",
+    "kana": "からあげ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "炸鸡，油炸食品"
+  },
+  {
+    "kanji": "肉じゃが",
+    "kana": "にくじゃが",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "土豆炖肉"
+  },
+  {
+    "kanji": "ボーリング",
+    "kana": "ボーリング",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "保龄球"
+  },
+  {
+    "kanji": "髪",
+    "kana": "かみ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "头发"
+  },
+  {
+    "kanji": "象",
+    "kana": "ぞう",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "象，大象"
+  },
+  {
+    "kanji": "昼",
+    "kana": "ひる",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "白天，中午"
+  },
+  {
+    "kanji": "ほか",
+    "kana": "ほか",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "另外，其他"
+  },
+  {
+    "kanji": "かかる",
+    "kana": "かかる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "花费（时间，金钱）"
+  },
+  {
+    "kanji": "咲く",
+    "kana": "さく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "花开"
+  },
+  {
+    "kanji": "泳ぐ",
+    "kana": "およぐ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "游泳"
+  },
+  {
+    "kanji": "遊ぶ",
+    "kana": "あそぶ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "玩，玩耍"
+  },
+  {
+    "kanji": "吸う",
+    "kana": "すう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "吸（烟）"
+  },
+  {
+    "kanji": "切る",
+    "kana": "きる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "剪，切，割"
+  },
+  {
+    "kanji": "だいたい",
+    "kana": "だいたい",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "大约，大概，大体"
+  },
+  {
+    "kanji": "とりあえず",
+    "kana": "とりあえず",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "暂且"
+  }
+]

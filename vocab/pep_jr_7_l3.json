@@ -1,0 +1,373 @@
+[
+  {
+    "kanji": "案内",
+    "kana": "あんない",
+    "pitch": "③",
+    "pos": "名·动3他",
+    "meaning": "引导，导游"
+  },
+  {
+    "kanji": "月曜日",
+    "kana": "げつようび",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "星期一"
+  },
+  {
+    "kanji": "",
+    "kana": "ここ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "这里, 这儿"
+  },
+  {
+    "kanji": "国旗",
+    "kana": "こっき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "国旗"
+  },
+  {
+    "kanji": "揚げる",
+    "kana": "あげる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "升"
+  },
+  {
+    "kanji": "",
+    "kana": "コート",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "球场"
+  },
+  {
+    "kanji": "",
+    "kana": "ある",
+    "pitch": "①",
+    "pos": "动1自",
+    "meaning": "(物)有, 在"
+  },
+  {
+    "kanji": "卓球台",
+    "kana": "たっきゅうだい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "乒乓球台"
+  },
+  {
+    "kanji": "寮",
+    "kana": "りょう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "宿舍"
+  },
+  {
+    "kanji": "前",
+    "kana": "まえ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "前面; 以前"
+  },
+  {
+    "kanji": "広場",
+    "kana": "ひろば",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "广场"
+  },
+  {
+    "kanji": "",
+    "kana": "たくさん",
+    "pitch": "③",
+    "pos": "名·形2·副",
+    "meaning": "很多(作副词时声调为①)"
+  },
+  {
+    "kanji": "",
+    "kana": "いる",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "(人、动物)有, 在"
+  },
+  {
+    "kanji": "正門",
+    "kana": "せいもん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "正门, 大门"
+  },
+  {
+    "kanji": "教学棟",
+    "kana": "きょうがくとう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "教学楼"
+  },
+  {
+    "kanji": "階",
+    "kana": "かい",
+    "pitch": "①",
+    "pos": "名·后缀",
+    "meaning": "层, 楼层;…层"
+  },
+  {
+    "kanji": "建て",
+    "kana": "だて",
+    "pitch": "",
+    "pos": "后缀",
+    "meaning": "(楼房的)层"
+  },
+  {
+    "kanji": "図書室",
+    "kana": "としょしつ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "图书室"
+  },
+  {
+    "kanji": "食堂",
+    "kana": "しょくどう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "食堂"
+  },
+  {
+    "kanji": "後ろ",
+    "kana": "うしろ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "后面, 背后"
+  },
+  {
+    "kanji": "人気",
+    "kana": "にんき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "人气, 声望"
+  },
+  {
+    "kanji": "",
+    "kana": "あそこ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "那儿, 那里"
+  },
+  {
+    "kanji": "立派",
+    "kana": "りっぱ",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "漂亮, 宏伟; 优秀"
+  },
+  {
+    "kanji": "ご飯",
+    "kana": "ごはん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "饭, 餐; 米饭"
+  },
+  {
+    "kanji": "",
+    "kana": "とても",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "很, 非常"
+  },
+  {
+    "kanji": "昼ご飯",
+    "kana": "ひるごはん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "午饭"
+  },
+  {
+    "kanji": "",
+    "kana": "へえ",
+    "pitch": "⓪",
+    "pos": "叹",
+    "meaning": "啊, 哦"
+  },
+  {
+    "kanji": "弁当",
+    "kana": "べんとう",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "盒饭"
+  },
+  {
+    "kanji": "小説",
+    "kana": "しょうせつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "小说"
+  },
+  {
+    "kanji": "",
+    "kana": "そこ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "那儿, 那里"
+  },
+  {
+    "kanji": "辞書",
+    "kana": "じしょ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "词典, 辞典"
+  },
+  {
+    "kanji": "",
+    "kana": "トイレ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "洗手间"
+  },
+  {
+    "kanji": "入り口",
+    "kana": "いりぐち",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "门口, 入口"
+  },
+  {
+    "kanji": "友達",
+    "kana": "ともだち",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "朋友"
+  },
+  {
+    "kanji": "",
+    "kana": "うち",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "我(的),我们(的);里面; 家，自家； 房子"
+  },
+  {
+    "kanji": "中",
+    "kana": "なか",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "里面, 内部; 其中"
+  },
+  {
+    "kanji": "火曜日",
+    "kana": "かようび",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "星期二"
+  },
+  {
+    "kanji": "水曜日",
+    "kana": "すいようび",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "星期三"
+  },
+  {
+    "kanji": "木曜日",
+    "kana": "もくようび",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "星期四"
+  },
+  {
+    "kanji": "金曜日",
+    "kana": "きんようび",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "星期五"
+  },
+  {
+    "kanji": "土曜日",
+    "kana": "どようび",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "星期六"
+  },
+  {
+    "kanji": "",
+    "kana": "あっ",
+    "pitch": "①",
+    "pos": "叹",
+    "meaning": "啊, 哎呀"
+  },
+  {
+    "kanji": "作家",
+    "kana": "さっか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "作家"
+  },
+  {
+    "kanji": "庭",
+    "kana": "にわ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "院子"
+  },
+  {
+    "kanji": "下",
+    "kana": "した",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "下, 下面"
+  },
+  {
+    "kanji": "卓球",
+    "kana": "たっきゅう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "乒乓球"
+  },
+  {
+    "kanji": "中学生",
+    "kana": "ちゅうがくせい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "初中学生"
+  },
+  {
+    "kanji": "出口",
+    "kana": "でぐち",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "出口"
+  },
+  {
+    "kanji": "",
+    "kana": "あなた",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "你"
+  },
+  {
+    "kanji": "昔",
+    "kana": "むかし",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "从前"
+  },
+  {
+    "kanji": "",
+    "kana": "サッカー",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "足球"
+  },
+  {
+    "kanji": "",
+    "kana": "ボール",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "球"
+  },
+  {
+    "kanji": "小学生",
+    "kana": "しょうがくせい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "小学生 七年级"
+  }
+]

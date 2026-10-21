@@ -1,0 +1,541 @@
+[
+  {
+    "kanji": "身近",
+    "kana": "みぢか",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "身边，附近"
+  },
+  {
+    "kanji": "剪紙",
+    "kana": "せんし",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "剪纸，中国剪纸"
+  },
+  {
+    "kanji": "民間",
+    "kana": "みんかん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "民间；民营"
+  },
+  {
+    "kanji": "工芸品",
+    "kana": "こうげいひん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "工艺品"
+  },
+  {
+    "kanji": "切紙",
+    "kana": "きりがみ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "剪纸"
+  },
+  {
+    "kanji": "細工",
+    "kana": "さいく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "手工艺品"
+  },
+  {
+    "kanji": "行事",
+    "kana": "ぎょうじ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "仪式；活动"
+  },
+  {
+    "kanji": "登場",
+    "kana": "とうじょう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "出现，登台"
+  },
+  {
+    "kanji": "日常",
+    "kana": "にちじょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "日常"
+  },
+  {
+    "kanji": "日常生活",
+    "kana": "にちじょうせいかつ",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "日常生活"
+  },
+  {
+    "kanji": "溶け込む",
+    "kana": "とけこむ",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "融入；溶入"
+  },
+  {
+    "kanji": "祝日",
+    "kana": "しゅくじつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "节日"
+  },
+  {
+    "kanji": "縁起",
+    "kana": "えんぎ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "兆头；起源"
+  },
+  {
+    "kanji": "図案",
+    "kana": "ずあん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "图案，设计；设计图"
+  },
+  {
+    "kanji": "芸術",
+    "kana": "げいじゅつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "艺术"
+  },
+  {
+    "kanji": "神話",
+    "kana": "しんわ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "神话"
+  },
+  {
+    "kanji": "伝説",
+    "kana": "でんせつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "传说"
+  },
+  {
+    "kanji": "",
+    "kana": "かかわる",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "涉及，关系到，有牵连"
+  },
+  {
+    "kanji": "",
+    "kana": "はさみ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "剪刀"
+  },
+  {
+    "kanji": "各地",
+    "kana": "かくち",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "各地"
+  },
+  {
+    "kanji": "職人",
+    "kana": "しょくにん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "手艺人，工匠"
+  },
+  {
+    "kanji": "器用",
+    "kana": "きよう",
+    "pitch": "①",
+    "pos": "形2",
+    "meaning": "灵巧，精巧；巧妙，精明"
+  },
+  {
+    "kanji": "手先",
+    "kana": "てさき",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "手指尖儿"
+  },
+  {
+    "kanji": "願い",
+    "kana": "ねがい",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "愿望，心愿；请求"
+  },
+  {
+    "kanji": "",
+    "kana": "より",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "更，更加"
+  },
+  {
+    "kanji": "拡大",
+    "kana": "かくだい",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "扩大；放大"
+  },
+  {
+    "kanji": "分野",
+    "kana": "ぶんや",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "领域，范围"
+  },
+  {
+    "kanji": "採用",
+    "kana": "さいよう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "采用，采取；录用"
+  },
+  {
+    "kanji": "注目",
+    "kana": "ちゅうもく",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "关注"
+  },
+  {
+    "kanji": "無形文化遺産",
+    "kana": "むけいぶんかいさん",
+    "pitch": "⑦",
+    "pos": "名",
+    "meaning": "非物质文化遗产"
+  },
+  {
+    "kanji": "",
+    "kana": "リスト",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "列表，名录"
+  },
+  {
+    "kanji": "物語る",
+    "kana": "ものがたる",
+    "pitch": "④",
+    "pos": "动1他",
+    "meaning": "讲述，诉说"
+  },
+  {
+    "kanji": "",
+    "kana": "うさぎ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "兔子"
+  },
+  {
+    "kanji": "十二支",
+    "kana": "じゅうにし",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "十二生肖"
+  },
+  {
+    "kanji": "馬",
+    "kana": "うま",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "马"
+  },
+  {
+    "kanji": "切り出す",
+    "kana": "きりだす",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "剪出"
+  },
+  {
+    "kanji": "",
+    "kana": "デザイン",
+    "pitch": "②",
+    "pos": "名·动3自他",
+    "meaning": "设计"
+  },
+  {
+    "kanji": "主役",
+    "kana": "しゅやく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "主角，主演"
+  },
+  {
+    "kanji": "真ん中",
+    "kana": "まんなか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "中央，正中"
+  },
+  {
+    "kanji": "生き生き",
+    "kana": "いきいき",
+    "pitch": "③",
+    "pos": "副",
+    "meaning": "栩栩如生"
+  },
+  {
+    "kanji": "提灯",
+    "kana": "ちょうちん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "灯笼"
+  },
+  {
+    "kanji": "赤かぶ",
+    "kana": "あかかぶ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "大红萝卜（我国原产大红萝卜）"
+  },
+  {
+    "kanji": "正月",
+    "kana": "しょうがつ",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "新年"
+  },
+  {
+    "kanji": "赤",
+    "kana": "あか",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "红，红色"
+  },
+  {
+    "kanji": "",
+    "kana": "こうして",
+    "pitch": "⓪",
+    "pos": "连",
+    "meaning": "这样，如此"
+  },
+  {
+    "kanji": "結び",
+    "kana": "むすび",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "结；结束，结语"
+  },
+  {
+    "kanji": "中国結び",
+    "kana": "ちゅうごくむすび",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "中国结"
+  },
+  {
+    "kanji": "左右",
+    "kana": "さゆう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "左面和右面"
+  },
+  {
+    "kanji": "半分",
+    "kana": "はんぶん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "一半"
+  },
+  {
+    "kanji": "",
+    "kana": "こう",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "这样，如此"
+  },
+  {
+    "kanji": "中身",
+    "kana": "なかみ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "内容，容纳的东西"
+  },
+  {
+    "kanji": "難易度",
+    "kana": "なんいど",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "难度"
+  },
+  {
+    "kanji": "名",
+    "kana": "めい",
+    "pitch": "⓪",
+    "pos": "名·后缀",
+    "meaning": "名"
+  },
+  {
+    "kanji": "",
+    "kana": "タスク",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "任务，工作"
+  },
+  {
+    "kanji": "蜜蜂",
+    "kana": "みつばち",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "蜜蜂"
+  },
+  {
+    "kanji": "温度",
+    "kana": "おんど",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "温度"
+  },
+  {
+    "kanji": "下がる",
+    "kana": "さがる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "下降；后退"
+  },
+  {
+    "kanji": "お礼",
+    "kana": "おれい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "礼物，谢意"
+  },
+  {
+    "kanji": "料理人",
+    "kana": "りょうりにん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "厨师，炊事员"
+  },
+  {
+    "kanji": "政府",
+    "kana": "せいふ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "政府"
+  },
+  {
+    "kanji": "焼ける",
+    "kana": "やける",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "烧，烧毁"
+  },
+  {
+    "kanji": "記念館",
+    "kana": "きねんかん",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "纪念馆"
+  },
+  {
+    "kanji": "建てる",
+    "kana": "たてる",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "建造"
+  },
+  {
+    "kanji": "解答",
+    "kana": "かいとう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "解答；答案"
+  },
+  {
+    "kanji": "提出",
+    "kana": "ていしゅつ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "提出"
+  },
+  {
+    "kanji": "疑問",
+    "kana": "ぎもん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "疑问"
+  },
+  {
+    "kanji": "",
+    "kana": "ホテル",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "酒店，饭店，宾馆"
+  },
+  {
+    "kanji": "探す",
+    "kana": "さがす",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "找，寻找"
+  },
+  {
+    "kanji": "撮る",
+    "kana": "とる",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "拍照；摄像"
+  },
+  {
+    "kanji": "不合格",
+    "kana": "ふごうかく",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "不合格，不及格"
+  },
+  {
+    "kanji": "進学",
+    "kana": "しんがく",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "升学"
+  },
+  {
+    "kanji": "間違う",
+    "kana": "まちがう",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "弄错，搞错"
+  },
+  {
+    "kanji": "戻る",
+    "kana": "もどる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "回，返回"
+  },
+  {
+    "kanji": "",
+    "kana": "マンション",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "高级公寓，公馆"
+  },
+  {
+    "kanji": "見せる",
+    "kana": "みせる",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "给……看，让……看"
+  },
+  {
+    "kanji": "",
+    "kana": "よろしい",
+    "pitch": "⓪",
+    "pos": "形1",
+    "meaning": "好，行，没关系"
+  },
+  {
+    "kanji": "集中力",
+    "kana": "しゅうちゅうりょく",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "集中力"
+  }
+]

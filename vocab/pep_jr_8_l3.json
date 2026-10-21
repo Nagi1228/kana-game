@@ -1,0 +1,471 @@
+[
+  {
+    "kanji": "多彩",
+    "kana": "たさい",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "丰富多彩"
+  },
+  {
+    "kanji": "担当",
+    "kana": "たんとう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "担当, 担任"
+  },
+  {
+    "kanji": "",
+    "kana": "テーマ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "主题; 题目"
+  },
+  {
+    "kanji": "系",
+    "kana": "けい",
+    "pitch": "",
+    "pos": "后缀",
+    "meaning": "……系列, ……方面"
+  },
+  {
+    "kanji": "陸上",
+    "kana": "りくじょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "田径；陆(地)上"
+  },
+  {
+    "kanji": "茶道",
+    "kana": "さどう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "茶道"
+  },
+  {
+    "kanji": "華道",
+    "kana": "かどう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "花道"
+  },
+  {
+    "kanji": "合唱",
+    "kana": "がっしょう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "合唱"
+  },
+  {
+    "kanji": "特に",
+    "kana": "とくに",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "特, 特别"
+  },
+  {
+    "kanji": "高める",
+    "kana": "たかめる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "提高"
+  },
+  {
+    "kanji": "",
+    "kana": "こちら",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "这边; 这位"
+  },
+  {
+    "kanji": "様子",
+    "kana": "ようす",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "情况, 动向"
+  },
+  {
+    "kanji": "清聴",
+    "kana": "せいちょう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "垂听，倾听"
+  },
+  {
+    "kanji": "自由",
+    "kana": "じゆう",
+    "pitch": "②",
+    "pos": "名·形2",
+    "meaning": "自由"
+  },
+  {
+    "kanji": "体験",
+    "kana": "たいけん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "体验"
+  },
+  {
+    "kanji": "相手",
+    "kana": "あいて",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "对方"
+  },
+  {
+    "kanji": "初め",
+    "kana": "はじめ",
+    "pitch": "⓪",
+    "pos": "名·副",
+    "meaning": "最初, 起初"
+  },
+  {
+    "kanji": "全体的",
+    "kana": "ぜんたいてき",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "整体的，全体的"
+  },
+  {
+    "kanji": "終わり",
+    "kana": "おわり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "结束, 末尾"
+  },
+  {
+    "kanji": "",
+    "kana": "プログラミング",
+    "pitch": "④",
+    "pos": "名·动3自",
+    "meaning": "编程"
+  },
+  {
+    "kanji": "全国大会",
+    "kana": "ぜんこくたいかい",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "全国大赛"
+  },
+  {
+    "kanji": "二等賞",
+    "kana": "にとうしょう",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "二等奖"
+  },
+  {
+    "kanji": "集まる",
+    "kana": "あつまる",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "集合, 集中"
+  },
+  {
+    "kanji": "作法",
+    "kana": "さほう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "礼法; 做法"
+  },
+  {
+    "kanji": "",
+    "kana": "ちょうど",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "正好, 整"
+  },
+  {
+    "kanji": "稽古",
+    "kana": "けいこ",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "练习"
+  },
+  {
+    "kanji": "",
+    "kana": "ぜひ",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "一定, 务必"
+  },
+  {
+    "kanji": "古く",
+    "kana": "ふるく",
+    "pitch": "①",
+    "pos": "名·副",
+    "meaning": "以前"
+  },
+  {
+    "kanji": "最も",
+    "kana": "もっとも",
+    "pitch": "③",
+    "pos": "副",
+    "meaning": "最"
+  },
+  {
+    "kanji": "専門書",
+    "kana": "せんもんしょ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "专业书籍"
+  },
+  {
+    "kanji": "大きな",
+    "kana": "おおきな",
+    "pitch": "①",
+    "pos": "连体",
+    "meaning": "大的"
+  },
+  {
+    "kanji": "影響",
+    "kana": "えいきょう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "影响"
+  },
+  {
+    "kanji": "与える",
+    "kana": "あたえる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "给"
+  },
+  {
+    "kanji": "詳しい",
+    "kana": "くわしい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "熟悉; 详细"
+  },
+  {
+    "kanji": "合う",
+    "kana": "あう",
+    "pitch": "①",
+    "pos": "动1自",
+    "meaning": "适合; 一致"
+  },
+  {
+    "kanji": "付ける",
+    "kana": "つける",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "注，写；安上；附上"
+  },
+  {
+    "kanji": "伝わる",
+    "kana": "つたわる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "传播"
+  },
+  {
+    "kanji": "参考",
+    "kana": "さんこう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "参考"
+  },
+  {
+    "kanji": "数",
+    "kana": "かず",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "数目"
+  },
+  {
+    "kanji": "成果",
+    "kana": "せいか",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "成果"
+  },
+  {
+    "kanji": "その他",
+    "kana": "そのた",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "其他"
+  },
+  {
+    "kanji": "",
+    "kana": "そちら",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "那边; 那位"
+  },
+  {
+    "kanji": "",
+    "kana": "あちら",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "那边; 那位"
+  },
+  {
+    "kanji": "",
+    "kana": "おすすめ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "推荐"
+  },
+  {
+    "kanji": "電話番号",
+    "kana": "でんわばんごう",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "电话号码"
+  },
+  {
+    "kanji": "先",
+    "kana": "さき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "去处，目的地；前端"
+  },
+  {
+    "kanji": "",
+    "kana": "うどん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "乌冬面, 面条"
+  },
+  {
+    "kanji": "",
+    "kana": "エアコン",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "空调"
+  },
+  {
+    "kanji": "質",
+    "kana": "しつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "质量"
+  },
+  {
+    "kanji": "冬",
+    "kana": "ふゆ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "冬天"
+  },
+  {
+    "kanji": "引く",
+    "kana": "ひく",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "得(感冒)；拉；查(词典)"
+  },
+  {
+    "kanji": "履く",
+    "kana": "はく",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "穿(鞋)"
+  },
+  {
+    "kanji": "",
+    "kana": "ゴールキーパー",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "守门员"
+  },
+  {
+    "kanji": "新鮮",
+    "kana": "しんせん",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "新鲜"
+  },
+  {
+    "kanji": "ごみ箱",
+    "kana": "ごみばこ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "垃圾箱"
+  },
+  {
+    "kanji": "焼きそば",
+    "kana": "やきそば",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "炒面"
+  },
+  {
+    "kanji": "喉",
+    "kana": "のど",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "喉咙"
+  },
+  {
+    "kanji": "痛い",
+    "kana": "いたい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "疼"
+  },
+  {
+    "kanji": "熱",
+    "kana": "ねつ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "发热; 热"
+  },
+  {
+    "kanji": "寺",
+    "kana": "てら",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "庙, 寺院"
+  },
+  {
+    "kanji": "見どころ",
+    "kana": "みどころ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "值得看的地方"
+  },
+  {
+    "kanji": "忘れる",
+    "kana": "わすれる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "忘记"
+  },
+  {
+    "kanji": "丁寧",
+    "kana": "ていねい",
+    "pitch": "①",
+    "pos": "形2",
+    "meaning": "仔细, 认真; 客气"
+  },
+  {
+    "kanji": "軽い",
+    "kana": "かるい",
+    "pitch": "⓪",
+    "pos": "形1",
+    "meaning": "轻"
+  },
+  {
+    "kanji": "生まれる",
+    "kana": "うまれる",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "出生"
+  },
+  {
+    "kanji": "暖かい",
+    "kana": "あたたかい",
+    "pitch": "④",
+    "pos": "形1",
+    "meaning": "暖和, 温暖"
+  },
+  {
+    "kanji": "",
+    "kana": "それに",
+    "pitch": "⓪",
+    "pos": "连",
+    "meaning": "而且"
+  }
+]

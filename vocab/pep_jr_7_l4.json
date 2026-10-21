@@ -1,0 +1,513 @@
+[
+  {
+    "kanji": "趣味",
+    "kana": "しゅみ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "爱好"
+  },
+  {
+    "kanji": "音楽",
+    "kana": "おんがく",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "音乐"
+  },
+  {
+    "kanji": "二つ",
+    "kana": "ふたつ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "两个"
+  },
+  {
+    "kanji": "",
+    "kana": "どんな",
+    "pitch": "①",
+    "pos": "形2",
+    "meaning": "哪样, 怎样"
+  },
+  {
+    "kanji": "",
+    "kana": "クラシック",
+    "pitch": "③",
+    "pos": "名·形2",
+    "meaning": "古典音乐; 古典"
+  },
+  {
+    "kanji": "音楽会",
+    "kana": "おんがくかい",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "音乐会"
+  },
+  {
+    "kanji": "",
+    "kana": "ほとんど",
+    "pitch": "②",
+    "pos": "名·副",
+    "meaning": "几乎, 大概, 大部分"
+  },
+  {
+    "kanji": "每月",
+    "kana": "まいつき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "每月"
+  },
+  {
+    "kanji": "先週",
+    "kana": "せんしゅう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "上星期, 上周"
+  },
+  {
+    "kanji": "音楽館",
+    "kana": "おんがくかん",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "音乐厅"
+  },
+  {
+    "kanji": "",
+    "kana": "リラックス",
+    "pitch": "②",
+    "pos": "名·动3自",
+    "meaning": "放松, 松弛"
+  },
+  {
+    "kanji": "読書",
+    "kana": "どくしょ",
+    "pitch": "①",
+    "pos": "名·动3自",
+    "meaning": "读书"
+  },
+  {
+    "kanji": "最近",
+    "kana": "さいきん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "最近"
+  },
+  {
+    "kanji": "",
+    "kana": "すばらしい",
+    "pitch": "④",
+    "pos": "形1",
+    "meaning": "非常好"
+  },
+  {
+    "kanji": "頻度",
+    "kana": "ひんど",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "频率"
+  },
+  {
+    "kanji": "筝",
+    "kana": "そう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "古筝"
+  },
+  {
+    "kanji": "音",
+    "kana": "おと",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "(物体的)声音, 声响"
+  },
+  {
+    "kanji": "美しい",
+    "kana": "うつくしい",
+    "pitch": "④",
+    "pos": "形1",
+    "meaning": "美丽"
+  },
+  {
+    "kanji": "每週",
+    "kana": "まいしゅう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "每周, 每星期"
+  },
+  {
+    "kanji": "指導",
+    "kana": "しどう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "指导"
+  },
+  {
+    "kanji": "受ける",
+    "kana": "うける",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "接受; 遭受"
+  },
+  {
+    "kanji": "先月",
+    "kana": "せんげつ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "上个月"
+  },
+  {
+    "kanji": "文化祭",
+    "kana": "ぶんかさい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "文化节"
+  },
+  {
+    "kanji": "舞台",
+    "kana": "ぶたい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "舞台"
+  },
+  {
+    "kanji": "弹く",
+    "kana": "ひく",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "弹, 弹奏"
+  },
+  {
+    "kanji": "大好き",
+    "kana": "だいすき",
+    "pitch": "①",
+    "pos": "形2",
+    "meaning": "非常喜欢"
+  },
+  {
+    "kanji": "楽しい",
+    "kana": "たのしい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "快乐, 愉快"
+  },
+  {
+    "kanji": "体",
+    "kana": "からだ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "身体"
+  },
+  {
+    "kanji": "自信",
+    "kana": "じしん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "自信, 信心"
+  },
+  {
+    "kanji": "付ける",
+    "kana": "つける",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "增长(信心) ；调动(身心)"
+  },
+  {
+    "kanji": "",
+    "kana": "できる",
+    "pitch": "②",
+    "pos": "动2自",
+    "meaning": "会; 出现; 发生"
+  },
+  {
+    "kanji": "今年",
+    "kana": "ことし",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "今年"
+  },
+  {
+    "kanji": "",
+    "kana": "チーム",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "团队"
+  },
+  {
+    "kanji": "入る",
+    "kana": "はいる",
+    "pitch": "①",
+    "pos": "动1自",
+    "meaning": "进, 入"
+  },
+  {
+    "kanji": "出る",
+    "kana": "でる",
+    "pitch": "①",
+    "pos": "动2自",
+    "meaning": "参加; 出去"
+  },
+  {
+    "kanji": "悔しい",
+    "kana": "くやしい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "遗憾, 令人懊悔"
+  },
+  {
+    "kanji": "",
+    "kana": "これから",
+    "pitch": "①",
+    "pos": "名·副",
+    "meaning": "今后; 从这里起"
+  },
+  {
+    "kanji": "",
+    "kana": "もっと",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "更加"
+  },
+  {
+    "kanji": "頑張る",
+    "kana": "がんばる",
+    "pitch": "③",
+    "pos": "动1自",
+    "meaning": "坚持, 努力"
+  },
+  {
+    "kanji": "昨日",
+    "kana": "きのう",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "昨天"
+  },
+  {
+    "kanji": "",
+    "kana": "バナナ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "香蕉"
+  },
+  {
+    "kanji": "一つ",
+    "kana": "ひとつ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "一个"
+  },
+  {
+    "kanji": "三つ",
+    "kana": "みっつ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "三个"
+  },
+  {
+    "kanji": "四つ",
+    "kana": "よっつ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "四个"
+  },
+  {
+    "kanji": "五つ",
+    "kana": "いつつ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "五个"
+  },
+  {
+    "kanji": "六つ",
+    "kana": "むっつ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "六个"
+  },
+  {
+    "kanji": "七つ",
+    "kana": "ななつ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "七个"
+  },
+  {
+    "kanji": "八つ",
+    "kana": "やっつ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "八个"
+  },
+  {
+    "kanji": "九つ",
+    "kana": "ここのつ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "九个"
+  },
+  {
+    "kanji": "十",
+    "kana": "とお",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "十个"
+  },
+  {
+    "kanji": "",
+    "kana": "いくつ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "几个, 多少"
+  },
+  {
+    "kanji": "帰る",
+    "kana": "かえる",
+    "pitch": "①",
+    "pos": "动1自",
+    "meaning": "回来, 回去"
+  },
+  {
+    "kanji": "",
+    "kana": "スーパー",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "超市"
+  },
+  {
+    "kanji": "出かける",
+    "kana": "でかける",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "外出，出门"
+  },
+  {
+    "kanji": "置く",
+    "kana": "おく",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "放, 搁; 设置"
+  },
+  {
+    "kanji": "壁",
+    "kana": "かべ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "墙壁"
+  },
+  {
+    "kanji": "掛ける",
+    "kana": "かける",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "挂； 打(电话)"
+  },
+  {
+    "kanji": "黒板",
+    "kana": "こくばん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "黑板"
+  },
+  {
+    "kanji": "車",
+    "kana": "くるま",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "车, 小轿车"
+  },
+  {
+    "kanji": "運転",
+    "kana": "うんてん",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "驾驶"
+  },
+  {
+    "kanji": "千",
+    "kana": "せん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "千, 一千"
+  },
+  {
+    "kanji": "万",
+    "kana": "まん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "万"
+  },
+  {
+    "kanji": "億",
+    "kana": "おく",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "亿"
+  },
+  {
+    "kanji": "頭",
+    "kana": "あたま",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "头; 头脑"
+  },
+  {
+    "kanji": "歴史",
+    "kana": "れきし",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "历史"
+  },
+  {
+    "kanji": "長い",
+    "kana": "ながい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "长, 长久"
+  },
+  {
+    "kanji": "新聞紙",
+    "kana": "しんぶんし",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "报纸，废旧报纸"
+  },
+  {
+    "kanji": "人",
+    "kana": "ひと",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "人"
+  },
+  {
+    "kanji": "",
+    "kana": "けが",
+    "pitch": "②",
+    "pos": "名·动3自",
+    "meaning": "伤, 受伤"
+  },
+  {
+    "kanji": "",
+    "kana": "チョーク",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "粉笔"
+  },
+  {
+    "kanji": "描く",
+    "kana": "えがく",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "画; 描写"
+  },
+  {
+    "kanji": "",
+    "kana": "バス",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "公交车，公共汽车"
+  },
+  {
+    "kanji": "",
+    "kana": "なぜ",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "为什么"
+  }
+]

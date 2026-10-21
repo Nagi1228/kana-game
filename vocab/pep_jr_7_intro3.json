@@ -1,0 +1,317 @@
+[
+  {
+    "kanji": "",
+    "kana": "パンダ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "熊猫"
+  },
+  {
+    "kanji": "鉛筆",
+    "kana": "えんぴつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "铅笔"
+  },
+  {
+    "kanji": "",
+    "kana": "コップ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "杯子"
+  },
+  {
+    "kanji": "",
+    "kana": "ロボット",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "机器人"
+  },
+  {
+    "kanji": "日記",
+    "kana": "にっき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "日记"
+  },
+  {
+    "kanji": "雑誌",
+    "kana": "ざっし",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "杂志"
+  },
+  {
+    "kanji": "切手",
+    "kana": "きって",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "邮票"
+  },
+  {
+    "kanji": "",
+    "kana": "サンドイッチ",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "三明治"
+  },
+  {
+    "kanji": "",
+    "kana": "ベッド",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "床"
+  },
+  {
+    "kanji": "",
+    "kana": "パン",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "面包"
+  },
+  {
+    "kanji": "好き",
+    "kana": "すき",
+    "pitch": "②",
+    "pos": "形2",
+    "meaning": "喜欢, 爱好"
+  },
+  {
+    "kanji": "僕",
+    "kana": "ぼく",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "我(男子自称)"
+  },
+  {
+    "kanji": "",
+    "kana": "バスケットボール",
+    "pitch": "⑥",
+    "pos": "名",
+    "meaning": "篮球"
+  },
+  {
+    "kanji": "",
+    "kana": "ギター",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "吉他"
+  },
+  {
+    "kanji": "",
+    "kana": "バイオリン",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "小提琴"
+  },
+  {
+    "kanji": "",
+    "kana": "オレンジ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "橙子"
+  },
+  {
+    "kanji": "教室",
+    "kana": "きょうしつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "教室; 兴趣班"
+  },
+  {
+    "kanji": "勉強",
+    "kana": "べんきょう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "学习；用功"
+  },
+  {
+    "kanji": "授業",
+    "kana": "じゅぎょう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "课, 上课"
+  },
+  {
+    "kanji": "図書館",
+    "kana": "としょかん",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "图书馆"
+  },
+  {
+    "kanji": "練習",
+    "kana": "れんしゅう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "练习"
+  },
+  {
+    "kanji": "武術",
+    "kana": "ぶじゅつ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "武术"
+  },
+  {
+    "kanji": "医者",
+    "kana": "いしゃ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "医生"
+  },
+  {
+    "kanji": "病院",
+    "kana": "びょういん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "医院"
+  },
+  {
+    "kanji": "中華料理",
+    "kana": "ちゅうかりょうり",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "中国菜"
+  },
+  {
+    "kanji": "体育館",
+    "kana": "たいいくかん",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "体育馆"
+  },
+  {
+    "kanji": "準備",
+    "kana": "じゅんび",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "准备"
+  },
+  {
+    "kanji": "部屋",
+    "kana": "へや",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "房间"
+  },
+  {
+    "kanji": "野球",
+    "kana": "やきゅう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "棒球"
+  },
+  {
+    "kanji": "運動場",
+    "kana": "うんどうじょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "运动场，操场"
+  },
+  {
+    "kanji": "週末",
+    "kana": "しゅうまつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "周末"
+  },
+  {
+    "kanji": "",
+    "kana": "する",
+    "pitch": "⓪",
+    "pos": "动3自他",
+    "meaning": "做"
+  },
+  {
+    "kanji": "中学校",
+    "kana": "ちゅうがっこう",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "初级中学，初中"
+  },
+  {
+    "kanji": "同じ",
+    "kana": "おなじ",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "相同"
+  },
+  {
+    "kanji": "",
+    "kana": "クラス",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "班"
+  },
+  {
+    "kanji": "隣",
+    "kana": "となり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "旁边; 邻居"
+  },
+  {
+    "kanji": "",
+    "kana": "みかん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "橘子, 柑橘"
+  },
+  {
+    "kanji": "柿",
+    "kana": "かき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "柿子"
+  },
+  {
+    "kanji": "",
+    "kana": "チョコレート",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "巧克力"
+  },
+  {
+    "kanji": "",
+    "kana": "ピアノ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "钢琴"
+  },
+  {
+    "kanji": "人参",
+    "kana": "にんじん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "胡萝卜"
+  },
+  {
+    "kanji": "",
+    "kana": "ジョギング",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "跑步, 慢跑"
+  },
+  {
+    "kanji": "午後",
+    "kana": "ごご",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "下午"
+  },
+  {
+    "kanji": "食事",
+    "kana": "しょくじ",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "用餐"
+  },
+  {
+    "kanji": "自習",
+    "kana": "じしゅう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "自习 七年级"
+  }
+]

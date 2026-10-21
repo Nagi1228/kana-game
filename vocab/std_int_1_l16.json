@@ -1,0 +1,471 @@
+[
+  {
+    "kanji": "新郎",
+    "kana": "しんろう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "新郎"
+  },
+  {
+    "kanji": "勤め",
+    "kana": "つとめ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "工作，就职"
+  },
+  {
+    "kanji": "ともに",
+    "kana": "ともに",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "一起，一同；共同"
+  },
+  {
+    "kanji": "白髪",
+    "kana": "しらが",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "白发"
+  },
+  {
+    "kanji": "どうか",
+    "kana": "どうか",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "请"
+  },
+  {
+    "kanji": "祈る",
+    "kana": "いのる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "祝愿，祈求"
+  },
+  {
+    "kanji": "指名",
+    "kana": "しめい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "指名，指定"
+  },
+  {
+    "kanji": "ひと言",
+    "kana": "ひとこと",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "几句话，三言两语"
+  },
+  {
+    "kanji": "本日",
+    "kana": "ほんじつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "今日，今天"
+  },
+  {
+    "kanji": "切れる",
+    "kana": "きれる断",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "断绝关系；断开，中断"
+  },
+  {
+    "kanji": "別れる",
+    "kana": "わかれる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "分手，离别"
+  },
+  {
+    "kanji": "お開き",
+    "kana": "おひらき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "（婚宴）结束；散席，散会"
+  },
+  {
+    "kanji": "招く",
+    "kana": "まねく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "邀请，招待，款待"
+  },
+  {
+    "kanji": "助け合う",
+    "kana": "たすけあう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "互相帮助，互助"
+  },
+  {
+    "kanji": "姉妹",
+    "kana": "しまい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "姐妹"
+  },
+  {
+    "kanji": "暖める",
+    "kana": "あたためる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "弄暖和；加热，加温"
+  },
+  {
+    "kanji": "僭越ながら",
+    "kana": "せんえつながら",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "冒昧，不自量力"
+  },
+  {
+    "kanji": "趙",
+    "kana": "ちょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "赵"
+  },
+  {
+    "kanji": "司会",
+    "kana": "しかい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "主持，主持人"
+  },
+  {
+    "kanji": "ブラウス",
+    "kana": "ブラウス",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "罩衫；女衬衫"
+  },
+  {
+    "kanji": "両社",
+    "kana": "りょうしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "两家公司"
+  },
+  {
+    "kanji": "神社",
+    "kana": "じんじゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "神社"
+  },
+  {
+    "kanji": "神前結婚式",
+    "kana": "しんぜんけっこんしき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "神前式婚礼"
+  },
+  {
+    "kanji": "教会",
+    "kana": "きょうかい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "教堂，教会"
+  },
+  {
+    "kanji": "ある",
+    "kana": "ある",
+    "pitch": "",
+    "pos": "接续词",
+    "meaning": "某，某个"
+  },
+  {
+    "kanji": "～教式結婚式",
+    "kana": "キリストきょうしきけっこんしき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "基督教式婚礼"
+  },
+  {
+    "kanji": "人前結婚式",
+    "kana": "じんぜんけっこんしき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "人前式婚礼"
+  },
+  {
+    "kanji": "信者",
+    "kana": "しんじゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "信徒，教徒；崇拜者"
+  },
+  {
+    "kanji": "限る",
+    "kana": "かぎる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "限于，只限；限定，限制"
+  },
+  {
+    "kanji": "ウエディングドレス",
+    "kana": "ウエディングドレス",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "婚纱，女式结婚礼服"
+  },
+  {
+    "kanji": "挙式",
+    "kana": "きょしきする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "举行（结婚）仪式"
+  },
+  {
+    "kanji": "好み",
+    "kana": "このみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "喜好，爱好，口味"
+  },
+  {
+    "kanji": "宗教",
+    "kana": "しゅうきょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "宗教"
+  },
+  {
+    "kanji": "少数",
+    "kana": "しょうすう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "少数"
+  },
+  {
+    "kanji": "結婚式場",
+    "kana": "けっこんしきじょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "婚礼会场"
+  },
+  {
+    "kanji": "占める",
+    "kana": "しめる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "占，占据；占领"
+  },
+  {
+    "kanji": "～分の～",
+    "kana": "～ぶんの～",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～分之～"
+  },
+  {
+    "kanji": "かっこいい",
+    "kana": "かっこいい",
+    "pitch": "",
+    "pos": "形容词",
+    "meaning": "帅气，真帅；真棒"
+  },
+  {
+    "kanji": "務める",
+    "kana": "つとめる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "担任；当，扮演"
+  },
+  {
+    "kanji": "とげ",
+    "kana": "とげ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "刺；（说话）尖酸，带刺"
+  },
+  {
+    "kanji": "毒",
+    "kana": "どく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "毒，毒物"
+  },
+  {
+    "kanji": "有効",
+    "kana": "ゆうこう",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "有效"
+  },
+  {
+    "kanji": "内向的",
+    "kana": "ないこうてき",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "内向"
+  },
+  {
+    "kanji": "活発",
+    "kana": "かっぱつ",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "活泼，活跃"
+  },
+  {
+    "kanji": "外向的",
+    "kana": "がいこうてき",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "外向"
+  },
+  {
+    "kanji": "平均",
+    "kana": "へいきん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "平均"
+  },
+  {
+    "kanji": "寿命",
+    "kana": "じゅみょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "寿命"
+  },
+  {
+    "kanji": "重病人",
+    "kana": "じゅうびょうにん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "重症患者，重病患者，重病号"
+  },
+  {
+    "kanji": "移動",
+    "kana": "いどうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "移动"
+  },
+  {
+    "kanji": "幼い",
+    "kana": "おさない",
+    "pitch": "",
+    "pos": "形容词",
+    "meaning": "幼小，年幼；幼稚"
+  },
+  {
+    "kanji": "親友",
+    "kana": "しんゆう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "好朋友，好友，密友，至交"
+  },
+  {
+    "kanji": "我が社",
+    "kana": "わがしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "我公司，本公司"
+  },
+  {
+    "kanji": "役員",
+    "kana": "やくいん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "干部；干事；董事"
+  },
+  {
+    "kanji": "質",
+    "kana": "しつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "质量；质，本质"
+  },
+  {
+    "kanji": "長時間",
+    "kana": "ちょうじかん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "长时间"
+  },
+  {
+    "kanji": "年収",
+    "kana": "ねんしゅう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "年收入，年薪"
+  },
+  {
+    "kanji": "現実",
+    "kana": "げんじつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "现实"
+  },
+  {
+    "kanji": "落語",
+    "kana": "らくご",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "单口相声"
+  },
+  {
+    "kanji": "ジャーナリスト",
+    "kana": "ジャーナリスト",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "记者；编辑；通讯员"
+  },
+  {
+    "kanji": "選挙",
+    "kana": "せんきょ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "选举"
+  },
+  {
+    "kanji": "特産",
+    "kana": "とくさん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "特产"
+  },
+  {
+    "kanji": "全体",
+    "kana": "ぜんたい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "全体，全部"
+  },
+  {
+    "kanji": "政党",
+    "kana": "せいとう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "政党"
+  },
+  {
+    "kanji": "支持",
+    "kana": "しじする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "支持"
+  },
+  {
+    "kanji": "多数",
+    "kana": "たすう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "多数"
+  },
+  {
+    "kanji": "半数",
+    "kana": "はんすう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "半数，一半"
+  },
+  {
+    "kanji": "～品",
+    "kana": "～ひん",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～品，～产品，～商品"
+  }
+]

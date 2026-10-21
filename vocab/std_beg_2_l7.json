@@ -1,0 +1,261 @@
+[
+  {
+    "kanji": "ボタン",
+    "kana": "ボタン",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "按钮；纽扣"
+  },
+  {
+    "kanji": "ブローチ",
+    "kana": "ブローチ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "胸针"
+  },
+  {
+    "kanji": "カーテン",
+    "kana": "カーテン",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "窗帘，帘子"
+  },
+  {
+    "kanji": "コンクリート",
+    "kana": "コンクリート",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "混凝土，水泥"
+  },
+  {
+    "kanji": "プラスチック",
+    "kana": "プラスチック",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "塑胶，塑料"
+  },
+  {
+    "kanji": "ひすい",
+    "kana": "ひすい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "翡翠"
+  },
+  {
+    "kanji": "サービスセンター",
+    "kana": "サービスセンター",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "维修服务中心"
+  },
+  {
+    "kanji": "会員",
+    "kana": "かいいん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "会员"
+  },
+  {
+    "kanji": "特典",
+    "kana": "とくてん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "优惠"
+  },
+  {
+    "kanji": "お手洗い",
+    "kana": "おてあらい",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "洗手间，厕所"
+  },
+  {
+    "kanji": "階段",
+    "kana": "かいだん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "楼梯，台阶"
+  },
+  {
+    "kanji": "以降",
+    "kana": "いこう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "以后"
+  },
+  {
+    "kanji": "側",
+    "kana": "そば",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "旁边"
+  },
+  {
+    "kanji": "卓球台",
+    "kana": "たっきゅうだい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "乒乓球桌"
+  },
+  {
+    "kanji": "サイズ",
+    "kana": "サイズ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "大小，尺寸"
+  },
+  {
+    "kanji": "人間",
+    "kana": "にんげん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "人，人类"
+  },
+  {
+    "kanji": "白鳥",
+    "kana": "はくちょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "鹅"
+  },
+  {
+    "kanji": "電源",
+    "kana": "でんげん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "电源"
+  },
+  {
+    "kanji": "スイカ",
+    "kana": "スイカ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "西瓜"
+  },
+  {
+    "kanji": "押す",
+    "kana": "おす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "按，推，挤"
+  },
+  {
+    "kanji": "つく",
+    "kana": "つく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "灯亮，灯开"
+  },
+  {
+    "kanji": "下がる",
+    "kana": "さがる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "下降，降低"
+  },
+  {
+    "kanji": "怒る",
+    "kana": "おこる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "生气"
+  },
+  {
+    "kanji": "回す",
+    "kana": "まわす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "转，传送，传递"
+  },
+  {
+    "kanji": "動く",
+    "kana": "うごく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "运转，转动"
+  },
+  {
+    "kanji": "生きる",
+    "kana": "いきる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "活，生存"
+  },
+  {
+    "kanji": "下りる",
+    "kana": "おりる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "下，下来"
+  },
+  {
+    "kanji": "フリーズする",
+    "kana": "フリーズする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "死机"
+  },
+  {
+    "kanji": "故障する",
+    "kana": "こしょうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "故障"
+  },
+  {
+    "kanji": "美しい",
+    "kana": "うつくしい",
+    "pitch": "④",
+    "pos": "形容词",
+    "meaning": "美丽"
+  },
+  {
+    "kanji": "うまい",
+    "kana": "うまい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "高明，好吃，可口"
+  },
+  {
+    "kanji": "詳しい",
+    "kana": "くわしい",
+    "pitch": "③",
+    "pos": "形容词",
+    "meaning": "详细"
+  },
+  {
+    "kanji": "自由",
+    "kana": "じゆう",
+    "pitch": "②",
+    "pos": "形容动词",
+    "meaning": "随便，自由"
+  },
+  {
+    "kanji": "丁寧",
+    "kana": "ていねい",
+    "pitch": "①",
+    "pos": "形容动词",
+    "meaning": "精心，细心，恭敬"
+  },
+  {
+    "kanji": "きちんと",
+    "kana": "きちんと",
+    "pitch": "②",
+    "pos": "副词",
+    "meaning": "好好地；正经地"
+  },
+  {
+    "kanji": "ただし",
+    "kana": "ただし",
+    "pitch": "①",
+    "pos": "接续词",
+    "meaning": "不过，只是"
+  },
+  {
+    "kanji": "しかし",
+    "kana": "しかし",
+    "pitch": "②",
+    "pos": "接续词",
+    "meaning": "可是，但是"
+  }
+]

@@ -1,0 +1,597 @@
+[
+  {
+    "kanji": "高齢",
+    "kana": "こうれい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "高龄，年高"
+  },
+  {
+    "kanji": "高齢化社会",
+    "kana": "こうれいかしゃかい",
+    "pitch": "⑥",
+    "pos": "名",
+    "meaning": "老龄化社会"
+  },
+  {
+    "kanji": "現状",
+    "kana": "げんじょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "现状"
+  },
+  {
+    "kanji": "把握",
+    "kana": "はあく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "充分理解"
+  },
+  {
+    "kanji": "抱える",
+    "kana": "かかえる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "抱，拥有"
+  },
+  {
+    "kanji": "敬老",
+    "kana": "けいろう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "尊敬老人"
+  },
+  {
+    "kanji": "男性",
+    "kana": "だんせい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "男性"
+  },
+  {
+    "kanji": "",
+    "kana": "データ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "数据"
+  },
+  {
+    "kanji": "公表",
+    "kana": "こうひょう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "公布，发表"
+  },
+  {
+    "kanji": "以下",
+    "kana": "いか",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "以下"
+  },
+  {
+    "kanji": "減る",
+    "kana": "へる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "减少，下降"
+  },
+  {
+    "kanji": "～率",
+    "kana": "りつ",
+    "pitch": "",
+    "pos": "后缀",
+    "meaning": "率"
+  },
+  {
+    "kanji": "研究",
+    "kana": "けんきゅう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "研究"
+  },
+  {
+    "kanji": "身近",
+    "kana": "みぢか",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "身边，附近"
+  },
+  {
+    "kanji": "いつの間にか",
+    "kana": "いつのまにか",
+    "pitch": "④",
+    "pos": "副",
+    "meaning": "不知不觉"
+  },
+  {
+    "kanji": "お年寄り",
+    "kana": "おとしより",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "老人"
+  },
+  {
+    "kanji": "施設",
+    "kana": "しせつ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "设施"
+  },
+  {
+    "kanji": "",
+    "kana": "つまり",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "总之，就是说"
+  },
+  {
+    "kanji": "総人口",
+    "kana": "そうじんこう",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "总人口"
+  },
+  {
+    "kanji": "達する",
+    "kana": "たっする",
+    "pitch": "⓪",
+    "pos": "动3自他",
+    "meaning": "到达；实现"
+  },
+  {
+    "kanji": "上がる",
+    "kana": "あがる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "上升"
+  },
+  {
+    "kanji": "状態",
+    "kana": "じょうたい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "状态"
+  },
+  {
+    "kanji": "円グラフ",
+    "kana": "えんグラフ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "饼图"
+  },
+  {
+    "kanji": "折れ線グラフ",
+    "kana": "おれせんグラフ",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "折线图"
+  },
+  {
+    "kanji": "比較",
+    "kana": "ひかく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "比较"
+  },
+  {
+    "kanji": "棒グラフ",
+    "kana": "ぼうグラフ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "柱状图"
+  },
+  {
+    "kanji": "挑む",
+    "kana": "いどむ",
+    "pitch": "②",
+    "pos": "动1自他",
+    "meaning": "挑战；征服"
+  },
+  {
+    "kanji": "寿命",
+    "kana": "じゅみょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "寿命"
+  },
+  {
+    "kanji": "延びる",
+    "kana": "のびる",
+    "pitch": "②",
+    "pos": "动2自",
+    "meaning": "延长"
+  },
+  {
+    "kanji": "",
+    "kana": "スピード",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "速度"
+  },
+  {
+    "kanji": "国家",
+    "kana": "こっか",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "国家"
+  },
+  {
+    "kanji": "一方",
+    "kana": "いっぽう",
+    "pitch": "③",
+    "pos": "名·连",
+    "meaning": "一方面，另一方面"
+  },
+  {
+    "kanji": "超える",
+    "kana": "こえる",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "超越，超过"
+  },
+  {
+    "kanji": "世代",
+    "kana": "せだい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "世代，一代；辈"
+  },
+  {
+    "kanji": "定年",
+    "kana": "ていねん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "退休年龄"
+  },
+  {
+    "kanji": "職場",
+    "kana": "しょくば",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "岗位；工作地点"
+  },
+  {
+    "kanji": "労働",
+    "kana": "ろうどう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "劳动"
+  },
+  {
+    "kanji": "福祉",
+    "kana": "ふくし",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "福利，福祉"
+  },
+  {
+    "kanji": "費用",
+    "kana": "ひよう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "费用"
+  },
+  {
+    "kanji": "負担",
+    "kana": "ふたん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "负担"
+  },
+  {
+    "kanji": "",
+    "kana": "かかる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "患病；遭受"
+  },
+  {
+    "kanji": "怪我",
+    "kana": "けが",
+    "pitch": "②",
+    "pos": "名·动3自",
+    "meaning": "受伤"
+  },
+  {
+    "kanji": "世带",
+    "kana": "せたい",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "家庭"
+  },
+  {
+    "kanji": "",
+    "kana": "それら",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "那些"
+  },
+  {
+    "kanji": "",
+    "kana": "ケア",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "关怀，照顾"
+  },
+  {
+    "kanji": "老後",
+    "kana": "ろうご",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "晚年"
+  },
+  {
+    "kanji": "公益",
+    "kana": "こうえき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "公益"
+  },
+  {
+    "kanji": "歩む",
+    "kana": "あゆむ",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "前进，行走"
+  },
+  {
+    "kanji": "対処",
+    "kana": "たいしょ",
+    "pitch": "①",
+    "pos": "名·动3自",
+    "meaning": "处理，对待"
+  },
+  {
+    "kanji": "自身",
+    "kana": "じしん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "自身，自己"
+  },
+  {
+    "kanji": "非常に",
+    "kana": "ひじょうに",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "非常"
+  },
+  {
+    "kanji": "重視",
+    "kana": "じゅうし",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "重"
+  },
+  {
+    "kanji": "医療",
+    "kana": "いりょう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "医疗"
+  },
+  {
+    "kanji": "",
+    "kana": "システム",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "系统"
+  },
+  {
+    "kanji": "保険",
+    "kana": "ほけん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "保险"
+  },
+  {
+    "kanji": "笑顔",
+    "kana": "えがお",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "笑脸"
+  },
+  {
+    "kanji": "介護",
+    "kana": "かいご",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "护理，看护"
+  },
+  {
+    "kanji": "介護サービス",
+    "kana": "かいごサービス",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "看护服务"
+  },
+  {
+    "kanji": "提供",
+    "kana": "ていきょう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "提供"
+  },
+  {
+    "kanji": "バリアフリー用品",
+    "kana": "バリアフリーようひん",
+    "pitch": "⑦",
+    "pos": "名",
+    "meaning": "无障碍用品"
+  },
+  {
+    "kanji": "",
+    "kana": "センター",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "中心"
+  },
+  {
+    "kanji": "太極拳",
+    "kana": "たいきょくけん",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "太极拳"
+  },
+  {
+    "kanji": "大学",
+    "kana": "だいがく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "大学"
+  },
+  {
+    "kanji": "",
+    "kana": "ちなみに",
+    "pitch": "⓪",
+    "pos": "连",
+    "meaning": "顺便，附带"
+  },
+  {
+    "kanji": "年代",
+    "kana": "ねんだい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "年代"
+  },
+  {
+    "kanji": "就職",
+    "kana": "しゅうしょく",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "就业"
+  },
+  {
+    "kanji": "技能",
+    "kana": "ぎのう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "技能"
+  },
+  {
+    "kanji": "生かす",
+    "kana": "いかす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "发挥"
+  },
+  {
+    "kanji": "同時",
+    "kana": "どうじ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "同时"
+  },
+  {
+    "kanji": "美徳",
+    "kana": "びとく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "美德"
+  },
+  {
+    "kanji": "奉仕",
+    "kana": "ほうし",
+    "pitch": "①",
+    "pos": "名·动3自",
+    "meaning": "服务"
+  },
+  {
+    "kanji": "寂しい",
+    "kana": "さびしい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "寂寞，冷清"
+  },
+  {
+    "kanji": "具合",
+    "kana": "ぐあい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "状况，样子"
+  },
+  {
+    "kanji": "思いやり",
+    "kana": "おもいやり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "同情心，体谅"
+  },
+  {
+    "kanji": "譲る",
+    "kana": "ゆずる",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "让给"
+  },
+  {
+    "kanji": "一人暮らし",
+    "kana": "ひとりぐらし",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "独居"
+  },
+  {
+    "kanji": "",
+    "kana": "つなぐ",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "连接；拴"
+  },
+  {
+    "kanji": "少子化",
+    "kana": "しょうしか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "少子化"
+  },
+  {
+    "kanji": "子育て",
+    "kana": "こそだて",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "养育孩子"
+  },
+  {
+    "kanji": "尊重",
+    "kana": "そんちょう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "尊重"
+  },
+  {
+    "kanji": "親戚",
+    "kana": "しんせき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "亲戚，亲属"
+  },
+  {
+    "kanji": "核家族",
+    "kana": "かくかぞく",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "（父母与未婚子女构成的）小家庭"
+  },
+  {
+    "kanji": "衣食住",
+    "kana": "いしょくじゅう",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "衣食住"
+  },
+  {
+    "kanji": "",
+    "kana": "ニーズ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "需求"
+  },
+  {
+    "kanji": "",
+    "kana": "ぬるい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "微温；温和"
+  }
+]

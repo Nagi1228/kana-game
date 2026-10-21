@@ -1,0 +1,541 @@
+[
+  {
+    "kanji": "砂漠",
+    "kana": "さばく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "沙漠"
+  },
+  {
+    "kanji": "緑化",
+    "kana": "りょっか",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "绿化"
+  },
+  {
+    "kanji": "～化",
+    "kana": "か",
+    "pitch": "",
+    "pos": "后缀",
+    "meaning": "……化"
+  },
+  {
+    "kanji": "対策",
+    "kana": "たいさく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "对策，应对方法"
+  },
+  {
+    "kanji": "森林",
+    "kana": "しんりん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "森林"
+  },
+  {
+    "kanji": "伐採",
+    "kana": "ばっさい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "采伐，砍伐"
+  },
+  {
+    "kanji": "家畜",
+    "kana": "かちく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "家畜"
+  },
+  {
+    "kanji": "飼育",
+    "kana": "しいく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "饲养"
+  },
+  {
+    "kanji": "地震",
+    "kana": "じしん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "地震"
+  },
+  {
+    "kanji": "津波",
+    "kana": "つなみ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "海啸"
+  },
+  {
+    "kanji": "開発",
+    "kana": "かいはつ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "开发"
+  },
+  {
+    "kanji": "災害",
+    "kana": "さいがい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "灾害"
+  },
+  {
+    "kanji": "黄砂",
+    "kana": "こうさ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "黄沙，黄尘"
+  },
+  {
+    "kanji": "砂嵐",
+    "kana": "すなあらし",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "沙尘暴"
+  },
+  {
+    "kanji": "道路",
+    "kana": "どうろ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "道路，公路"
+  },
+  {
+    "kanji": "草原",
+    "kana": "そうげん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "草原"
+  },
+  {
+    "kanji": "枯れる",
+    "kana": "かれる",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "枯萎，凋零"
+  },
+  {
+    "kanji": "作物",
+    "kana": "さくもつ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "农作物"
+  },
+  {
+    "kanji": "第～",
+    "kana": "だい",
+    "pitch": "",
+    "pos": "前缀",
+    "meaning": "第……"
+  },
+  {
+    "kanji": "",
+    "kana": "フォーラム",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "论坛"
+  },
+  {
+    "kanji": "",
+    "kana": "グリーン",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "绿，绿色"
+  },
+  {
+    "kanji": "経済",
+    "kana": "けいざい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "经济"
+  },
+  {
+    "kanji": "",
+    "kana": "エコロジー",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "生态学；环保（意识）"
+  },
+  {
+    "kanji": "話題",
+    "kana": "わだい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "话题"
+  },
+  {
+    "kanji": "平方",
+    "kana": "へいほう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "平方"
+  },
+  {
+    "kanji": "陸地",
+    "kana": "りくち",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "陆地"
+  },
+  {
+    "kanji": "努力",
+    "kana": "どりょく",
+    "pitch": "①",
+    "pos": "名·动3自",
+    "meaning": "努力"
+  },
+  {
+    "kanji": "課題",
+    "kana": "かだい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "课题；题目"
+  },
+  {
+    "kanji": "成功",
+    "kana": "せいこう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "成功"
+  },
+  {
+    "kanji": "認める",
+    "kana": "みとめる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "承认；许可"
+  },
+  {
+    "kanji": "報道",
+    "kana": "ほうどう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "报道"
+  },
+  {
+    "kanji": "報道官",
+    "kana": "ほうどうかん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "发言人"
+  },
+  {
+    "kanji": "起こる",
+    "kana": "おこる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "发生，产生"
+  },
+  {
+    "kanji": "",
+    "kana": "ついに",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "终于，末了"
+  },
+  {
+    "kanji": "成果",
+    "kana": "せいか",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "成果"
+  },
+  {
+    "kanji": "地理",
+    "kana": "ちり",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "地理"
+  },
+  {
+    "kanji": "",
+    "kana": "ポプラ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "杨树"
+  },
+  {
+    "kanji": "柳",
+    "kana": "やなぎ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "柳树"
+  },
+  {
+    "kanji": "組織",
+    "kana": "そしき",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "组织，组成"
+  },
+  {
+    "kanji": "企業",
+    "kana": "きぎょう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "企业"
+  },
+  {
+    "kanji": "現地",
+    "kana": "げんち",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "当地，现场"
+  },
+  {
+    "kanji": "桃",
+    "kana": "もも",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "桃；桃树"
+  },
+  {
+    "kanji": "似合う",
+    "kana": "にあう",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "适合，相配"
+  },
+  {
+    "kanji": "土",
+    "kana": "つち",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "土，土地"
+  },
+  {
+    "kanji": "飼う",
+    "kana": "かう",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "饲养"
+  },
+  {
+    "kanji": "進める",
+    "kana": "すすめる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "推进，促进"
+  },
+  {
+    "kanji": "現実",
+    "kana": "げんじつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "现实，实际"
+  },
+  {
+    "kanji": "乾燥",
+    "kana": "かんそう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "干燥"
+  },
+  {
+    "kanji": "砂",
+    "kana": "すな",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "沙；砂"
+  },
+  {
+    "kanji": "動く",
+    "kana": "うごく",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "动，移动，摇动"
+  },
+  {
+    "kanji": "",
+    "kana": "ビニールハウス",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "塑料大棚"
+  },
+  {
+    "kanji": "育てる",
+    "kana": "そだてる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "培育，养育"
+  },
+  {
+    "kanji": "原料",
+    "kana": "げんりょう",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "原料"
+  },
+  {
+    "kanji": "餌",
+    "kana": "えさ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "饵食；诱饵"
+  },
+  {
+    "kanji": "痩せる",
+    "kana": "やせる",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "贫瘠；瘦"
+  },
+  {
+    "kanji": "育つ",
+    "kana": "そだつ",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "生长，成长"
+  },
+  {
+    "kanji": "植物",
+    "kana": "しょくぶつ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "植物"
+  },
+  {
+    "kanji": "列",
+    "kana": "れつ",
+    "pitch": "①",
+    "pos": "名·量",
+    "meaning": "列，排；行列，队列"
+  },
+  {
+    "kanji": "平行",
+    "kana": "へいこう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "平行"
+  },
+  {
+    "kanji": "",
+    "kana": "パネル",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "太阳能板；画板"
+  },
+  {
+    "kanji": "茂る",
+    "kana": "しげる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "繁茂"
+  },
+  {
+    "kanji": "岩",
+    "kana": "いわ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "岩石，大石头"
+  },
+  {
+    "kanji": "滑らか",
+    "kana": "なめらか",
+    "pitch": "②",
+    "pos": "形2",
+    "meaning": "光滑；流畅"
+  },
+  {
+    "kanji": "激しい",
+    "kana": "はげしい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "强烈，猛烈"
+  },
+  {
+    "kanji": "支援",
+    "kana": "しえん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "支援"
+  },
+  {
+    "kanji": "工業",
+    "kana": "こうぎょう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "工业"
+  },
+  {
+    "kanji": "信じる",
+    "kana": "しんじる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "相信"
+  },
+  {
+    "kanji": "止める",
+    "kana": "とめる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "阻止，使……停"
+  },
+  {
+    "kanji": "完全",
+    "kana": "かんぜん",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "完全"
+  },
+  {
+    "kanji": "検討",
+    "kana": "けんとう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "研讨、探讨"
+  },
+  {
+    "kanji": "及び",
+    "kana": "および",
+    "pitch": "⓪",
+    "pos": "连",
+    "meaning": "以及"
+  },
+  {
+    "kanji": "具体",
+    "kana": "ぐたい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "具体"
+  },
+  {
+    "kanji": "会議",
+    "kana": "かいぎ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "会议"
+  },
+  {
+    "kanji": "外れる",
+    "kana": "はずれる",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "脱离，脱落"
+  },
+  {
+    "kanji": "霧",
+    "kana": "きり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "雾"
+  },
+  {
+    "kanji": "",
+    "kana": "かかる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "覆盖、罩"
+  },
+  {
+    "kanji": "酸素",
+    "kana": "さんそ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "氧"
+  }
+]

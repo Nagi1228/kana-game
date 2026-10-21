@@ -1,0 +1,212 @@
+[
+  {
+    "kanji": "マフラー",
+    "kana": "マフラー",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "围巾"
+  },
+  {
+    "kanji": "ネックレス",
+    "kana": "ネックレス",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "项链"
+  },
+  {
+    "kanji": "家具",
+    "kana": "かぐ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "家具"
+  },
+  {
+    "kanji": "文章",
+    "kana": "ぶんしょう",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "文章"
+  },
+  {
+    "kanji": "意味",
+    "kana": "いみ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "意思"
+  },
+  {
+    "kanji": "雰囲気",
+    "kana": "ふんいき",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "气氛"
+  },
+  {
+    "kanji": "発音",
+    "kana": "はつおん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "发音"
+  },
+  {
+    "kanji": "不動産屋",
+    "kana": "ふどうさんや",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "房产公司"
+  },
+  {
+    "kanji": "飲食店",
+    "kana": "いんしょくてん",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "饮食店"
+  },
+  {
+    "kanji": "大使館",
+    "kana": "たいしかん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "大使馆"
+  },
+  {
+    "kanji": "新居",
+    "kana": "しんきょ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "新居"
+  },
+  {
+    "kanji": "引っ越し",
+    "kana": "ひっこし",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "搬家"
+  },
+  {
+    "kanji": "近所",
+    "kana": "きんじょ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "附近"
+  },
+  {
+    "kanji": "孫",
+    "kana": "まご",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "孙子，孙女"
+  },
+  {
+    "kanji": "係",
+    "kana": "かかり",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "工作人员，主管人员"
+  },
+  {
+    "kanji": "支社長",
+    "kana": "ししゃちょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "分公司经理"
+  },
+  {
+    "kanji": "就職",
+    "kana": "しゅうしょく",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "就业"
+  },
+  {
+    "kanji": "インターネット",
+    "kana": "インターネット",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "互联网"
+  },
+  {
+    "kanji": "拾う",
+    "kana": "ひろう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "捡，拾"
+  },
+  {
+    "kanji": "訳す",
+    "kana": "やくす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "翻译"
+  },
+  {
+    "kanji": "くれる",
+    "kana": "くれる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "给"
+  },
+  {
+    "kanji": "届ける",
+    "kana": "とどける",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "送到，送去"
+  },
+  {
+    "kanji": "案内する",
+    "kana": "あんないする",
+    "pitch": "③",
+    "pos": "动3",
+    "meaning": "向导，导游"
+  },
+  {
+    "kanji": "交換する",
+    "kana": "こうかんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "换，交换"
+  },
+  {
+    "kanji": "紹介する",
+    "kana": "しょうかいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "介绍"
+  },
+  {
+    "kanji": "すてき",
+    "kana": "すてき",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "漂亮，极好"
+  },
+  {
+    "kanji": "得意",
+    "kana": "とくい",
+    "pitch": "②",
+    "pos": "形容动词",
+    "meaning": "擅长"
+  },
+  {
+    "kanji": "新鮮",
+    "kana": "しんせん",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "新鲜"
+  },
+  {
+    "kanji": "うまく",
+    "kana": "うまく",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "高明地，很好地"
+  },
+  {
+    "kanji": "それに",
+    "kana": "それに",
+    "pitch": "⓪",
+    "pos": "接续词",
+    "meaning": "而且"
+  }
+]

@@ -1,0 +1,436 @@
+[
+  {
+    "kanji": "お手伝い",
+    "kana": "おてつだい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "帮忙，帮助"
+  },
+  {
+    "kanji": "乗り換え",
+    "kana": "のりかえ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "换车，换乘"
+  },
+  {
+    "kanji": "考え",
+    "kana": "かんがえ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "想法，思想"
+  },
+  {
+    "kanji": "女性向け",
+    "kana": "じょせいむけ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "女性专用，专为女性"
+  },
+  {
+    "kanji": "申し出",
+    "kana": "もうしで",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "申请，提议"
+  },
+  {
+    "kanji": "感じ",
+    "kana": "かんじ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "感觉"
+  },
+  {
+    "kanji": "多く",
+    "kana": "おおく",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "多，多数"
+  },
+  {
+    "kanji": "部下",
+    "kana": "ぶか",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "部下"
+  },
+  {
+    "kanji": "監督",
+    "kana": "かんとく",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "教练，领队"
+  },
+  {
+    "kanji": "選手",
+    "kana": "せんしゅ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "运动员，选手"
+  },
+  {
+    "kanji": "消費者",
+    "kana": "しょうひしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "消费者"
+  },
+  {
+    "kanji": "案内役",
+    "kana": "あんないやく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "向导，导游"
+  },
+  {
+    "kanji": "親",
+    "kana": "おや",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "双亲，父母"
+  },
+  {
+    "kanji": "アルファベット",
+    "kana": "アルファベット",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "英语字母，拉丁字母"
+  },
+  {
+    "kanji": "プレゼンテーション/プレゼン",
+    "kana": "プレゼンテーション/プレゼン",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "策划方案说明（会）"
+  },
+  {
+    "kanji": "イメージ",
+    "kana": "イメージ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "形象，印象"
+  },
+  {
+    "kanji": "インパクト",
+    "kana": "インパクト",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "冲击力，力量感"
+  },
+  {
+    "kanji": "ガラス",
+    "kana": "ガラス",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "玻璃，玻璃杯"
+  },
+  {
+    "kanji": "気分",
+    "kana": "きぶん",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "情绪；（身体）舒适（与否）"
+  },
+  {
+    "kanji": "親近感",
+    "kana": "しんきんかん",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "亲切感"
+  },
+  {
+    "kanji": "品質",
+    "kana": "ひんしつ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "质量，品质"
+  },
+  {
+    "kanji": "物価",
+    "kana": "ぶっか",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "物价"
+  },
+  {
+    "kanji": "免税店",
+    "kana": "めんぜいてん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "免税店"
+  },
+  {
+    "kanji": "説明書",
+    "kana": "せつめいしょ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "说明书"
+  },
+  {
+    "kanji": "塾",
+    "kana": "じゅく",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "私塾，补习学校"
+  },
+  {
+    "kanji": "例文",
+    "kana": "れいぶん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "例句"
+  },
+  {
+    "kanji": "会場",
+    "kana": "かいじょう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "会场"
+  },
+  {
+    "kanji": "設備",
+    "kana": "せつび",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "设备"
+  },
+  {
+    "kanji": "洗濯物",
+    "kana": "せんたくもの",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "洗的衣服"
+  },
+  {
+    "kanji": "もの",
+    "kana": "もの",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "东西，事物"
+  },
+  {
+    "kanji": "字",
+    "kana": "じ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "字"
+  },
+  {
+    "kanji": "妻",
+    "kana": "つま",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "妻子"
+  },
+  {
+    "kanji": "我々",
+    "kana": "われわれ",
+    "pitch": "",
+    "pos": "代词",
+    "meaning": "我们"
+  },
+  {
+    "kanji": "引っ張る",
+    "kana": "ひっぱる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "拉，拽"
+  },
+  {
+    "kanji": "浮かぶ",
+    "kana": "うかぶ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "想起，浮，浮现"
+  },
+  {
+    "kanji": "整う",
+    "kana": "ととのう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "齐备，完备"
+  },
+  {
+    "kanji": "乾く",
+    "kana": "かわく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "干，干燥"
+  },
+  {
+    "kanji": "暮らす",
+    "kana": "くらす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "生活"
+  },
+  {
+    "kanji": "避ける",
+    "kana": "さける",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "回避，避免"
+  },
+  {
+    "kanji": "売れる",
+    "kana": "うれる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "好卖，畅销"
+  },
+  {
+    "kanji": "受ける",
+    "kana": "うける",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "感受，受到"
+  },
+  {
+    "kanji": "温める",
+    "kana": "あたためる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "热，温"
+  },
+  {
+    "kanji": "理解する",
+    "kana": "りかいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "理解"
+  },
+  {
+    "kanji": "提案する",
+    "kana": "ていあんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "建议，提案"
+  },
+  {
+    "kanji": "試作する",
+    "kana": "しさくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "试作，试制"
+  },
+  {
+    "kanji": "経験する",
+    "kana": "けいけんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "经验，经历"
+  },
+  {
+    "kanji": "暗記する",
+    "kana": "あんきする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "熟记，背诵"
+  },
+  {
+    "kanji": "早退する",
+    "kana": "そうたいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "早退"
+  },
+  {
+    "kanji": "休職する",
+    "kana": "きゅうしょくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "（暂时）停职"
+  },
+  {
+    "kanji": "力強い",
+    "kana": "ちからづよい",
+    "pitch": "",
+    "pos": "形容词",
+    "meaning": "强有力；心里踏实"
+  },
+  {
+    "kanji": "柔らかい",
+    "kana": "やわらかい",
+    "pitch": "④",
+    "pos": "形容词",
+    "meaning": "柔软"
+  },
+  {
+    "kanji": "硬い",
+    "kana": "かたい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "硬"
+  },
+  {
+    "kanji": "厚い",
+    "kana": "あつい",
+    "pitch": "⓪",
+    "pos": "形容词",
+    "meaning": "厚"
+  },
+  {
+    "kanji": "重要",
+    "kana": "じゅうよう",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "重要"
+  },
+  {
+    "kanji": "単純",
+    "kana": "たんじゅん",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "单纯"
+  },
+  {
+    "kanji": "理想的",
+    "kana": "りそうてき",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "理想"
+  },
+  {
+    "kanji": "具体的",
+    "kana": "ぐたいてき",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "具体"
+  },
+  {
+    "kanji": "斬新",
+    "kana": "ざんしん",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "新颖，崭新"
+  },
+  {
+    "kanji": "ぐっと",
+    "kana": "ぐっと",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "更加；用力"
+  },
+  {
+    "kanji": "例えば",
+    "kana": "たとえば",
+    "pitch": "②",
+    "pos": "副词",
+    "meaning": "比如，例如"
+  },
+  {
+    "kanji": "しかも",
+    "kana": "しかも",
+    "pitch": "②",
+    "pos": "接续词",
+    "meaning": "而且"
+  },
+  {
+    "kanji": "そこで",
+    "kana": "そこで",
+    "pitch": "⓪",
+    "pos": "接续词",
+    "meaning": "因此，于是，所以；那么"
+  }
+]

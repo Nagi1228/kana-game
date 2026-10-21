@@ -1,0 +1,310 @@
+[
+  {
+    "kanji": "毛皮",
+    "kana": "けがわ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "毛皮"
+  },
+  {
+    "kanji": "本物",
+    "kana": "ほんもの",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "真货，真东西"
+  },
+  {
+    "kanji": "柄",
+    "kana": "がら",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "花纹，花样"
+  },
+  {
+    "kanji": "レモン",
+    "kana": "レモン",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "柠檬"
+  },
+  {
+    "kanji": "みそ汁",
+    "kana": "みそしる",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "酱汤"
+  },
+  {
+    "kanji": "お祭り",
+    "kana": "おまつり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "祭日，节日"
+  },
+  {
+    "kanji": "オートバイ",
+    "kana": "オートバイ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "摩托车"
+  },
+  {
+    "kanji": "インタビュー",
+    "kana": "インタビュー",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "采访"
+  },
+  {
+    "kanji": "プラン",
+    "kana": "プラン",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "计划"
+  },
+  {
+    "kanji": "頭痛",
+    "kana": "ずつう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "头疼"
+  },
+  {
+    "kanji": "寒気",
+    "kana": "さむけ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "寒气，寒战"
+  },
+  {
+    "kanji": "吐き気",
+    "kana": "はきけ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "恶心，想要呕吐"
+  },
+  {
+    "kanji": "家事",
+    "kana": "かじ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "家务活"
+  },
+  {
+    "kanji": "面接",
+    "kana": "めんせつ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "面试"
+  },
+  {
+    "kanji": "出来事",
+    "kana": "できごと",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "事情，事件"
+  },
+  {
+    "kanji": "意見",
+    "kana": "いけん",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "意见"
+  },
+  {
+    "kanji": "開設",
+    "kana": "かいせつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "开设"
+  },
+  {
+    "kanji": "候補地",
+    "kana": "こうほち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "候选地"
+  },
+  {
+    "kanji": "周り",
+    "kana": "まわり",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "一带，周围"
+  },
+  {
+    "kanji": "明るさ",
+    "kana": "あかるさ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "明朗，快活"
+  },
+  {
+    "kanji": "におい",
+    "kana": "におい",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "味道，气味"
+  },
+  {
+    "kanji": "せっけん",
+    "kana": "せっけん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "肥皂"
+  },
+  {
+    "kanji": "香水",
+    "kana": "こうすい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "香水"
+  },
+  {
+    "kanji": "ラン",
+    "kana": "ラン",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "兰花"
+  },
+  {
+    "kanji": "末",
+    "kana": "すえ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "末尾，末了"
+  },
+  {
+    "kanji": "初め",
+    "kana": "はじめ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "最初"
+  },
+  {
+    "kanji": "半月",
+    "kana": "はんつき",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "半月，半个月"
+  },
+  {
+    "kanji": "モデル",
+    "kana": "モデル",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "模特儿"
+  },
+  {
+    "kanji": "警察官",
+    "kana": "けいさつかん",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "警察"
+  },
+  {
+    "kanji": "お相撲さん",
+    "kana": "おすもうさん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "相扑选手"
+  },
+  {
+    "kanji": "歌舞伎役者",
+    "kana": "かぶきやくしゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "歌舞伎演员"
+  },
+  {
+    "kanji": "水泳選手",
+    "kana": "すいえいせんしゅ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "游泳选手"
+  },
+  {
+    "kanji": "済む",
+    "kana": "すむ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "结束，完了"
+  },
+  {
+    "kanji": "積もる",
+    "kana": "つもる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "堆积；积攒"
+  },
+  {
+    "kanji": "過ごす",
+    "kana": "すごす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "度过；生活"
+  },
+  {
+    "kanji": "ほほえむ",
+    "kana": "ほほえむ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "微笑"
+  },
+  {
+    "kanji": "延ばす",
+    "kana": "のばす",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "延长"
+  },
+  {
+    "kanji": "済ませる",
+    "kana": "すませる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "搞完，办完"
+  },
+  {
+    "kanji": "枯れる",
+    "kana": "かれる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "枯萎；干燥"
+  },
+  {
+    "kanji": "発送する",
+    "kana": "はっそうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "发送，寄送"
+  },
+  {
+    "kanji": "緊張する",
+    "kana": "きんちょうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "紧张"
+  },
+  {
+    "kanji": "さわやか",
+    "kana": "さわやか",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "清爽，爽快"
+  },
+  {
+    "kanji": "まるで",
+    "kana": "まるで",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "好像，就像"
+  },
+  {
+    "kanji": "いかにも",
+    "kana": "いかにも",
+    "pitch": "②",
+    "pos": "副词",
+    "meaning": "典型的；实在；的确"
+  }
+]

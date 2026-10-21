@@ -1,0 +1,422 @@
+[
+  {
+    "kanji": "朝",
+    "kana": "あさ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "早晨"
+  },
+  {
+    "kanji": "",
+    "kana": "スケジュール",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "日程表"
+  },
+  {
+    "kanji": "起きる",
+    "kana": "おきる",
+    "pitch": "②",
+    "pos": "动2自",
+    "meaning": "起床, 起来"
+  },
+  {
+    "kanji": "每日",
+    "kana": "まいにち",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "每天"
+  },
+  {
+    "kanji": "時",
+    "kana": "じ",
+    "pitch": "①",
+    "pos": "名·后缀",
+    "meaning": "…时, …点; 时, 时刻"
+  },
+  {
+    "kanji": "半",
+    "kana": "はん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "半, 一半"
+  },
+  {
+    "kanji": "早い",
+    "kana": "はやい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "早"
+  },
+  {
+    "kanji": "運動",
+    "kana": "うんどう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "运动"
+  },
+  {
+    "kanji": "近く",
+    "kana": "ちかく",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "附近"
+  },
+  {
+    "kanji": "走る",
+    "kana": "はしる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "跑"
+  },
+  {
+    "kanji": "",
+    "kana": "テキスト",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "课文; 教科书, 教材"
+  },
+  {
+    "kanji": "朗読",
+    "kana": "ろうどく",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "朗读"
+  },
+  {
+    "kanji": "歯",
+    "kana": "は",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "牙齿"
+  },
+  {
+    "kanji": "磨く",
+    "kana": "みがく",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "刷(牙), 磨"
+  },
+  {
+    "kanji": "顔",
+    "kana": "かお",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "脸, 面孔"
+  },
+  {
+    "kanji": "洗う",
+    "kana": "あらう",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "洗"
+  },
+  {
+    "kanji": "録音",
+    "kana": "ろくおん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "录音"
+  },
+  {
+    "kanji": "聞く",
+    "kana": "きく",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "听; 问"
+  },
+  {
+    "kanji": "朝ご飯",
+    "kana": "あさごはん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "早饭"
+  },
+  {
+    "kanji": "食べる",
+    "kana": "たべる",
+    "pitch": "②",
+    "pos": "动2他",
+    "meaning": "吃"
+  },
+  {
+    "kanji": "次",
+    "kana": "つぎ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "下面, 下次"
+  },
+  {
+    "kanji": "",
+    "kana": "どうぞ",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "请"
+  },
+  {
+    "kanji": "分",
+    "kana": "ふん",
+    "pitch": "①",
+    "pos": "名·后缀",
+    "meaning": "…分, …分钟; 分, 分钟"
+  },
+  {
+    "kanji": "",
+    "kana": "ふだん",
+    "pitch": "①",
+    "pos": "名·副",
+    "meaning": "平时, 平常"
+  },
+  {
+    "kanji": "肉まん",
+    "kana": "にくまん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "肉包子"
+  },
+  {
+    "kanji": "ゆで卵",
+    "kana": "ゆでたまご",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "水煮蛋"
+  },
+  {
+    "kanji": "果物",
+    "kana": "くだもの",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "水果"
+  },
+  {
+    "kanji": "豆乳",
+    "kana": "とうにゅう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "豆浆"
+  },
+  {
+    "kanji": "飲む",
+    "kana": "のむ",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "喝; 吃(药)"
+  },
+  {
+    "kanji": "以上",
+    "kana": "いじょう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "以上; 超"
+  },
+  {
+    "kanji": "出席",
+    "kana": "しゅっせき",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "出席"
+  },
+  {
+    "kanji": "取る",
+    "kana": "とる",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "确认(人数等) ；拿；取"
+  },
+  {
+    "kanji": "",
+    "kana": "ジュース",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "果汁"
+  },
+  {
+    "kanji": "今回",
+    "kana": "こんかい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "这次, 这回"
+  },
+  {
+    "kanji": "試合",
+    "kana": "しあい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "比赛"
+  },
+  {
+    "kanji": "書く",
+    "kana": "かく",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "写"
+  },
+  {
+    "kanji": "泳ぐ",
+    "kana": "およぐ",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "游, 游泳"
+  },
+  {
+    "kanji": "話す",
+    "kana": "はなす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "说, 讲述; 交谈"
+  },
+  {
+    "kanji": "立つ",
+    "kana": "たつ",
+    "pitch": "①",
+    "pos": "动1自",
+    "meaning": "站立"
+  },
+  {
+    "kanji": "死ぬ",
+    "kana": "しぬ",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "死, 死亡"
+  },
+  {
+    "kanji": "遊ぶ",
+    "kana": "あそぶ",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "玩"
+  },
+  {
+    "kanji": "読む",
+    "kana": "よむ",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "读, 念; 阅读"
+  },
+  {
+    "kanji": "作る",
+    "kana": "つくる",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "做, 制作"
+  },
+  {
+    "kanji": "鍛える",
+    "kana": "きたえる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "锻炼; 锤炼"
+  },
+  {
+    "kanji": "見る",
+    "kana": "みる",
+    "pitch": "①",
+    "pos": "动2他",
+    "meaning": "看"
+  },
+  {
+    "kanji": "来る",
+    "kana": "くる",
+    "pitch": "①",
+    "pos": "动3自",
+    "meaning": "来"
+  },
+  {
+    "kanji": "紹介",
+    "kana": "しょうかい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "介绍"
+  },
+  {
+    "kanji": "日曜日",
+    "kana": "にちようび",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "星期日"
+  },
+  {
+    "kanji": "牛乳",
+    "kana": "ぎゅうにゅう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "牛奶"
+  },
+  {
+    "kanji": "每朝",
+    "kana": "まいあさ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "每天早晨"
+  },
+  {
+    "kanji": "秒",
+    "kana": "びょう",
+    "pitch": "①",
+    "pos": "名·后缀",
+    "meaning": "…秒, …秒钟; 秒, 秒钟"
+  },
+  {
+    "kanji": "",
+    "kana": "いつ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "什么时候"
+  },
+  {
+    "kanji": "",
+    "kana": "いつも",
+    "pitch": "①",
+    "pos": "名·副",
+    "meaning": "平时; 总是"
+  },
+  {
+    "kanji": "寝る",
+    "kana": "ねる",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "睡觉"
+  },
+  {
+    "kanji": "桜",
+    "kana": "さくら",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "樱花"
+  },
+  {
+    "kanji": "春",
+    "kana": "はる",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "春天"
+  },
+  {
+    "kanji": "咲く",
+    "kana": "さく",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "开放, 盛开"
+  },
+  {
+    "kanji": "",
+    "kana": "ラーメン",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "(日式)拉面; 面条, 汤面"
+  },
+  {
+    "kanji": "休み",
+    "kana": "やすみ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "休息, 休假"
+  },
+  {
+    "kanji": "日",
+    "kana": "ひ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "天, 日子"
+  }
+]

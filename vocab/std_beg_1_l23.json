@@ -1,0 +1,135 @@
+[
+  {
+    "kanji": "週末",
+    "kana": "しゅうまつ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "周末"
+  },
+  {
+    "kanji": "スケート",
+    "kana": "スケート",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "滑冰，溜冰"
+  },
+  {
+    "kanji": "味",
+    "kana": "あじ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "口味，（食物的）味道"
+  },
+  {
+    "kanji": "毎回",
+    "kana": "まいかい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "每次，每回"
+  },
+  {
+    "kanji": "通勤",
+    "kana": "つうきん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "上下班，通勤"
+  },
+  {
+    "kanji": "船",
+    "kana": "ふね",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "船"
+  },
+  {
+    "kanji": "生地",
+    "kana": "きじ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "布料，衣料"
+  },
+  {
+    "kanji": "閉店時刻",
+    "kana": "へいてんじこく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "关门时间"
+  },
+  {
+    "kanji": "卒業式",
+    "kana": "そつぎょうしき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "毕业典礼"
+  },
+  {
+    "kanji": "違う",
+    "kana": "ちがう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "不同，不一样"
+  },
+  {
+    "kanji": "込む",
+    "kana": "こむ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "拥挤，混杂"
+  },
+  {
+    "kanji": "決まる",
+    "kana": "きまる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "定，决定"
+  },
+  {
+    "kanji": "知らせる",
+    "kana": "しらせる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "告诉"
+  },
+  {
+    "kanji": "確かめる",
+    "kana": "たしかめる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "查（看），弄清"
+  },
+  {
+    "kanji": "濃い",
+    "kana": "こい",
+    "pitch": "",
+    "pos": "形容词",
+    "meaning": "口味）重；浓"
+  },
+  {
+    "kanji": "薄い",
+    "kana": "うすい",
+    "pitch": "⓪",
+    "pos": "形容词",
+    "meaning": "口味）轻；薄"
+  },
+  {
+    "kanji": "早い",
+    "kana": "はやい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "早"
+  },
+  {
+    "kanji": "遅い",
+    "kana": "おそい",
+    "pitch": "⓪",
+    "pos": "形容词",
+    "meaning": "晚，慢"
+  },
+  {
+    "kanji": "たぶん",
+    "kana": "たぶん",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "可能，大概"
+  }
+]

@@ -1,0 +1,394 @@
+[
+  {
+    "kanji": "",
+    "kana": "ハイブリッド",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "杂交；混合"
+  },
+  {
+    "kanji": "稲",
+    "kana": "いね",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "稻，水稻"
+  },
+  {
+    "kanji": "院士",
+    "kana": "いんし",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "院士"
+  },
+  {
+    "kanji": "優位性",
+    "kana": "ゆういせい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "优势性"
+  },
+  {
+    "kanji": "農学者",
+    "kana": "のうがくしゃ",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "农学家"
+  },
+  {
+    "kanji": "食糧",
+    "kana": "しょくりょう",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "粮食"
+  },
+  {
+    "kanji": "生産",
+    "kana": "せいさん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "生产"
+  },
+  {
+    "kanji": "農産物",
+    "kana": "のうさんぶつ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "农产物，农产品"
+  },
+  {
+    "kanji": "",
+    "kana": "まったく",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "完全，全然；实在，简直"
+  },
+  {
+    "kanji": "",
+    "kana": "ほぼ",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "大略，大体上"
+  },
+  {
+    "kanji": "",
+    "kana": "それでも",
+    "pitch": "③",
+    "pos": "连",
+    "meaning": "即便那样，但是"
+  },
+  {
+    "kanji": "",
+    "kana": "ようやく",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "好不容易；渐渐"
+  },
+  {
+    "kanji": "通常",
+    "kana": "つうじょう",
+    "pitch": "⓪",
+    "pos": "名·副",
+    "meaning": "通常，平常"
+  },
+  {
+    "kanji": "初",
+    "kana": "はつ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "最初，首个"
+  },
+  {
+    "kanji": "特等発明賞",
+    "kana": "とくとうはつめいしょう",
+    "pitch": "⑦",
+    "pos": "名",
+    "meaning": "特等发明奖"
+  },
+  {
+    "kanji": "受賞",
+    "kana": "じゅしょう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "获奖，得奖"
+  },
+  {
+    "kanji": "涼む",
+    "kana": "すずむ",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "乘凉，纳凉"
+  },
+  {
+    "kanji": "",
+    "kana": "コーリャン",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "高粱"
+  },
+  {
+    "kanji": "養う",
+    "kana": "やしなう",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "养，供养"
+  },
+  {
+    "kanji": "未知",
+    "kana": "みち",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "未知"
+  },
+  {
+    "kanji": "探索",
+    "kana": "たんさく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "探索"
+  },
+  {
+    "kanji": "国境",
+    "kana": "こっきょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "国界，国境"
+  },
+  {
+    "kanji": "愛",
+    "kana": "あい",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "爱"
+  },
+  {
+    "kanji": "亡くなる",
+    "kana": "なくなる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "逝世，去世"
+  },
+  {
+    "kanji": "永遠",
+    "kana": "えいえん",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "永远；永恒"
+  },
+  {
+    "kanji": "履歴",
+    "kana": "りれき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "履历"
+  },
+  {
+    "kanji": "挫折",
+    "kana": "ざせつ",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "挫折，失败"
+  },
+  {
+    "kanji": "",
+    "kana": "プロジェクト",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "计划，项目"
+  },
+  {
+    "kanji": "",
+    "kana": "チームメンバー",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "队员，组员"
+  },
+  {
+    "kanji": "",
+    "kana": "もたらす",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "带来"
+  },
+  {
+    "kanji": "英雄",
+    "kana": "えいゆう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "英雄"
+  },
+  {
+    "kanji": "",
+    "kana": "けれども",
+    "pitch": "①",
+    "pos": "连",
+    "meaning": "但是"
+  },
+  {
+    "kanji": "他国",
+    "kana": "たこく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "他国，外国"
+  },
+  {
+    "kanji": "開設",
+    "kana": "かいせつ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "开设，开办"
+  },
+  {
+    "kanji": "人材",
+    "kana": "じんざい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "人才"
+  },
+  {
+    "kanji": "育成",
+    "kana": "いくせい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "培养"
+  },
+  {
+    "kanji": "含める",
+    "kana": "ふくめる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "包含，包括"
+  },
+  {
+    "kanji": "見習う",
+    "kana": "みならう",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "见习；仿效，视为榜样；模仿"
+  },
+  {
+    "kanji": "",
+    "kana": "せっかく",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "难得，好不容易"
+  },
+  {
+    "kanji": "一言",
+    "kana": "ひとこと",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "一句话；三言两语"
+  },
+  {
+    "kanji": "",
+    "kana": "ドラマ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "电视剧；戏，戏剧；脚本"
+  },
+  {
+    "kanji": "騒ぎ",
+    "kana": "さわぎ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "骚动；吵闹"
+  },
+  {
+    "kanji": "捜す",
+    "kana": "さがす",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "寻找"
+  },
+  {
+    "kanji": "見つかる",
+    "kana": "みつかる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "找到；被发现"
+  },
+  {
+    "kanji": "実施",
+    "kana": "じっし",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "实施"
+  },
+  {
+    "kanji": "大雨",
+    "kana": "おおあめ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "大雨"
+  },
+  {
+    "kanji": "一口",
+    "kana": "ひとくち",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "一口"
+  },
+  {
+    "kanji": "止める",
+    "kana": "とめる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "停车"
+  },
+  {
+    "kanji": "会場",
+    "kana": "かいじょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "会场"
+  },
+  {
+    "kanji": "",
+    "kana": "コンテスト",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "比赛；会演"
+  },
+  {
+    "kanji": "",
+    "kana": "オリンピック",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "奥林匹克"
+  },
+  {
+    "kanji": "実家",
+    "kana": "じっか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "老家；自己出生的家"
+  },
+  {
+    "kanji": "",
+    "kana": "キログラム",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "千克"
+  },
+  {
+    "kanji": "痩せる",
+    "kana": "やせる",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "变瘦"
+  },
+  {
+    "kanji": "貸す",
+    "kana": "かす",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "借出，借给（他人）"
+  },
+  {
+    "kanji": "無理",
+    "kana": "むり",
+    "pitch": "①",
+    "pos": "名·动3自·形2",
+    "meaning": "办不到；强行，硬要；不讲理"
+  }
+]

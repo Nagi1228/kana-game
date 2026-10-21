@@ -1,0 +1,324 @@
+[
+  {
+    "kanji": "経済",
+    "kana": "けいざい",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "经济"
+  },
+  {
+    "kanji": "国際関係学",
+    "kana": "こくさいかんけいがく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "国际关系学"
+  },
+  {
+    "kanji": "大勢",
+    "kana": "おおぜい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "许多，众多"
+  },
+  {
+    "kanji": "高校",
+    "kana": "こうこう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "高中"
+  },
+  {
+    "kanji": "日記",
+    "kana": "にっき",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "日记"
+  },
+  {
+    "kanji": "教師",
+    "kana": "きょうし",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "教师"
+  },
+  {
+    "kanji": "お年寄り",
+    "kana": "おとしより",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "老年人"
+  },
+  {
+    "kanji": "ラジオ体操",
+    "kana": "ラジオたいそう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "广播体操"
+  },
+  {
+    "kanji": "社交ダンス",
+    "kana": "しゃこうダンス",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "交际舞"
+  },
+  {
+    "kanji": "卓球",
+    "kana": "たっきゅう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "乒乓球"
+  },
+  {
+    "kanji": "バスケットボール",
+    "kana": "バスケットボール",
+    "pitch": "⑥",
+    "pos": "名词",
+    "meaning": "篮球"
+  },
+  {
+    "kanji": "スポーツセンター",
+    "kana": "スポーツセンター",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "体育中心"
+  },
+  {
+    "kanji": "入園料",
+    "kana": "にゅうえんりょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "门票，入园费"
+  },
+  {
+    "kanji": "有料",
+    "kana": "ゆうりょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "收费"
+  },
+  {
+    "kanji": "賞",
+    "kana": "しょう",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "奖"
+  },
+  {
+    "kanji": "曲",
+    "kana": "きょく",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "乐曲，歌曲"
+  },
+  {
+    "kanji": "詩",
+    "kana": "し",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "诗歌"
+  },
+  {
+    "kanji": "信号",
+    "kana": "しんごう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "信号，红绿灯"
+  },
+  {
+    "kanji": "はさみ",
+    "kana": "はさみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "剪刀"
+  },
+  {
+    "kanji": "部品",
+    "kana": "ぶひん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "零部件"
+  },
+  {
+    "kanji": "アルバイト",
+    "kana": "アルバイト",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "打工，副业，工读"
+  },
+  {
+    "kanji": "スピーチ",
+    "kana": "スピーチ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "演说，演讲"
+  },
+  {
+    "kanji": "グラフ",
+    "kana": "グラフ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "图表"
+  },
+  {
+    "kanji": "企画",
+    "kana": "きかく",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "策划，计划"
+  },
+  {
+    "kanji": "説明",
+    "kana": "せつめい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "说明"
+  },
+  {
+    "kanji": "ご飯",
+    "kana": "ごはん",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "饭"
+  },
+  {
+    "kanji": "砂糖",
+    "kana": "さとう",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "砂糖"
+  },
+  {
+    "kanji": "海外旅行",
+    "kana": "かいがいりょこう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "海外旅行"
+  },
+  {
+    "kanji": "こと",
+    "kana": "こと",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "事情"
+  },
+  {
+    "kanji": "おじいさん",
+    "kana": "おじいさん",
+    "pitch": "②",
+    "pos": "代词",
+    "meaning": "爷爷；老大爷"
+  },
+  {
+    "kanji": "おばあさん",
+    "kana": "おばあさん",
+    "pitch": "②",
+    "pos": "代词",
+    "meaning": "奶奶；老奶奶"
+  },
+  {
+    "kanji": "姉",
+    "kana": "あね",
+    "pitch": "⓪",
+    "pos": "代词",
+    "meaning": "姐姐"
+  },
+  {
+    "kanji": "通う",
+    "kana": "かよう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "上学，来往"
+  },
+  {
+    "kanji": "集まる",
+    "kana": "あつまる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "聚，集合"
+  },
+  {
+    "kanji": "踊る",
+    "kana": "おどる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "跳舞"
+  },
+  {
+    "kanji": "要る",
+    "kana": "いる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "要"
+  },
+  {
+    "kanji": "困る",
+    "kana": "こまる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "为难，难办"
+  },
+  {
+    "kanji": "たたく",
+    "kana": "たたく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "拍，敲，打"
+  },
+  {
+    "kanji": "入れる",
+    "kana": "いれる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "放入，放进"
+  },
+  {
+    "kanji": "看病する",
+    "kana": "かんびょうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "护理"
+  },
+  {
+    "kanji": "けんかする",
+    "kana": "けんかする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "吵架，打架"
+  },
+  {
+    "kanji": "利用する",
+    "kana": "りようする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "利用"
+  },
+  {
+    "kanji": "そうだんする",
+    "kana": "そうだんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "商谈"
+  },
+  {
+    "kanji": "ほかに",
+    "kana": "ほかに",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "另外"
+  },
+  {
+    "kanji": "しばらく",
+    "kana": "しばらく",
+    "pitch": "②",
+    "pos": "副词",
+    "meaning": "许久，好久；片刻"
+  },
+  {
+    "kanji": "へえ",
+    "kana": "へえ",
+    "pitch": "⓪",
+    "pos": "感叹词",
+    "meaning": "哎，哎呀，哎哟"
+  }
+]

@@ -1,0 +1,919 @@
+[
+  {
+    "kanji": "日系",
+    "kana": "にっけい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "日资，日系"
+  },
+  {
+    "kanji": "独学",
+    "kana": "どくがく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "自学"
+  },
+  {
+    "kanji": "～茶",
+    "kana": "プーアルちゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "普洱茶"
+  },
+  {
+    "kanji": "熟成～熟",
+    "kana": "じゅくせいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "发酵，陈年，成熟"
+  },
+  {
+    "kanji": "深み",
+    "kana": "ふかみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "味道醇厚，深厚，深度"
+  },
+  {
+    "kanji": "独特",
+    "kana": "どくとく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "独特，特有"
+  },
+  {
+    "kanji": "味わい",
+    "kana": "あじわい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "味道；趣味，妙处"
+  },
+  {
+    "kanji": "特級",
+    "kana": "とっきゅう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "特级"
+  },
+  {
+    "kanji": "合わせる",
+    "kana": "あわせる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "总共，合计，合并；配合"
+  },
+  {
+    "kanji": "おまけ",
+    "kana": "おまけ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "免费赠送赠品，另外奉送，附带"
+  },
+  {
+    "kanji": "ティーバッグ",
+    "kana": "ティーバッグ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "袋泡茶"
+  },
+  {
+    "kanji": "サービスする",
+    "kana": "サービスする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "附带奉送，廉价出售"
+  },
+  {
+    "kanji": "いい値段",
+    "kana": "いいねだん",
+    "pitch": "",
+    "pos": "",
+    "meaning": "好价钱，昂贵的价钱"
+  },
+  {
+    "kanji": "～系",
+    "kana": "～けい",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～方面，～部门"
+  },
+  {
+    "kanji": "～g",
+    "kana": "～ぐらむ",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～克"
+  },
+  {
+    "kanji": "～元",
+    "kana": "～げん",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～元"
+  },
+  {
+    "kanji": "～年物",
+    "kana": "～ねんもの",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～年的物品"
+  },
+  {
+    "kanji": "～級",
+    "kana": "～きゅう",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～级"
+  },
+  {
+    "kanji": "合計",
+    "kana": "ごうけい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "总共，合计"
+  },
+  {
+    "kanji": "税込み",
+    "kana": "ぜいこみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "含税（的价格）"
+  },
+  {
+    "kanji": "自宅",
+    "kana": "じたく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "自己家，自己的住宅"
+  },
+  {
+    "kanji": "余る",
+    "kana": "あまる",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "剩余，剩下；过分"
+  },
+  {
+    "kanji": "板",
+    "kana": "いた",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "板，木板"
+  },
+  {
+    "kanji": "窓辺",
+    "kana": "まどべ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "窗边，窗户附近"
+  },
+  {
+    "kanji": "めくれる",
+    "kana": "めくれる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "打卷儿，卷缩"
+  },
+  {
+    "kanji": "金庫",
+    "kana": "きんこ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "保险柜，金库"
+  },
+  {
+    "kanji": "扉",
+    "kana": "とびら",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "门，门扇；扉页"
+  },
+  {
+    "kanji": "おめでたい",
+    "kana": "おめでたい",
+    "pitch": "",
+    "pos": "形容词",
+    "meaning": "可喜可贺，值得庆贺"
+  },
+  {
+    "kanji": "繁殖～",
+    "kana": "はんしょくする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "繁殖"
+  },
+  {
+    "kanji": "輝く",
+    "kana": "かがやく",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "闪亮，放光，辉耀"
+  },
+  {
+    "kanji": "濃厚",
+    "kana": "のうこう",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "味厚，浓厚，醇厚"
+  },
+  {
+    "kanji": "こってり",
+    "kana": "こってり",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "味浓，油腻"
+  },
+  {
+    "kanji": "薄味",
+    "kana": "うすあじ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "味淡，清淡"
+  },
+  {
+    "kanji": "淡泊",
+    "kana": "たんぱく然",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "清淡，淡；坦率；淡然"
+  },
+  {
+    "kanji": "あっさり",
+    "kana": "あっさり",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "清淡；朴素；淡泊"
+  },
+  {
+    "kanji": "さっぱり",
+    "kana": "さっぱり",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "清爽；整洁，利落"
+  },
+  {
+    "kanji": "甘み",
+    "kana": "あまみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "甜味"
+  },
+  {
+    "kanji": "辛み",
+    "kana": "からみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "辣味"
+  },
+  {
+    "kanji": "苦み",
+    "kana": "にがみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "苦味"
+  },
+  {
+    "kanji": "味わう",
+    "kana": "あじわう",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "品味，品尝"
+  },
+  {
+    "kanji": "風味",
+    "kana": "ふうみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "风味，味道"
+  },
+  {
+    "kanji": "成立～",
+    "kana": "せいりつする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "成立，完成"
+  },
+  {
+    "kanji": "仕上がり",
+    "kana": "しあがり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "完成情况"
+  },
+  {
+    "kanji": "ライブ",
+    "kana": "ライブ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "演唱会"
+  },
+  {
+    "kanji": "入手",
+    "kana": "にゅうしゅ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "得手，到手，得到"
+  },
+  {
+    "kanji": "電流",
+    "kana": "でんりゅう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "电流"
+  },
+  {
+    "kanji": "精神",
+    "kana": "せいしん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "精神"
+  },
+  {
+    "kanji": "～口",
+    "kana": "～くち",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～味，～口味"
+  },
+  {
+    "kanji": "試乗",
+    "kana": "しじょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "试乘"
+  },
+  {
+    "kanji": "ひき肉",
+    "kana": "ひきにく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "肉末，肉馅"
+  },
+  {
+    "kanji": "赤～",
+    "kana": "あかワイン",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "红葡萄酒"
+  },
+  {
+    "kanji": "シャンパン",
+    "kana": "シャンパン",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "香槟酒"
+  },
+  {
+    "kanji": "トランプ",
+    "kana": "トランプ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "扑克牌"
+  },
+  {
+    "kanji": "茶さじ",
+    "kana": "ちゃさじ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "茶匙"
+  },
+  {
+    "kanji": "キーホルダー",
+    "kana": "キーホルダー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "圈"
+  },
+  {
+    "kanji": "発酵～",
+    "kana": "はっこうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "发酵"
+  },
+  {
+    "kanji": "干し～",
+    "kana": "ほしブドウ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "葡萄干"
+  },
+  {
+    "kanji": "乾燥～燥",
+    "kana": "かんそうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "晾干，晒干，干燥"
+  },
+  {
+    "kanji": "温室",
+    "kana": "おんしつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "温室"
+  },
+  {
+    "kanji": "ごちそう",
+    "kana": "ごちそう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "饭菜，好吃的饭菜"
+  },
+  {
+    "kanji": "料理人",
+    "kana": "りょうりにん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "厨师，炊事员"
+  },
+  {
+    "kanji": "学会",
+    "kana": "がっかい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "学会"
+  },
+  {
+    "kanji": "皿洗い",
+    "kana": "さらあらい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "洗盘子，洗碟子"
+  },
+  {
+    "kanji": "～料",
+    "kana": "アルバイトりょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "打工挣的钱"
+  },
+  {
+    "kanji": "弁償～",
+    "kana": "べんしょうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "赔，赔偿"
+  },
+  {
+    "kanji": "すだれ",
+    "kana": "すだれ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "帘子，竹帘"
+  },
+  {
+    "kanji": "文明",
+    "kana": "ぶんめい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "文明"
+  },
+  {
+    "kanji": "中国茶",
+    "kana": "ちゅうごくちゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "中国茶"
+  },
+  {
+    "kanji": "すっきり",
+    "kana": "すっきり",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "爽气，舒畅，畅快；流畅，齐整，整洁"
+  },
+  {
+    "kanji": "リューマチ",
+    "kana": "リューマチ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "风湿病"
+  },
+  {
+    "kanji": "痛み",
+    "kana": "いたみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "疼痛，痛"
+  },
+  {
+    "kanji": "和らげる",
+    "kana": "やわらげる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "使柔和，使缓和"
+  },
+  {
+    "kanji": "塗り薬剂",
+    "kana": "ぬりぐすり",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "外用药，涂剂，涂抹药剂"
+  },
+  {
+    "kanji": "嗜好品饮品",
+    "kana": "しこうひん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "嗜好品，嗜好食品，饮品"
+  },
+  {
+    "kanji": "栽培～",
+    "kana": "さいばいする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "栽培"
+  },
+  {
+    "kanji": "飛躍的",
+    "kana": "ひやくてき",
+    "pitch": "",
+    "pos": "形容动词",
+    "meaning": "急剧，飞跃，快速"
+  },
+  {
+    "kanji": "各地",
+    "kana": "かくち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "各地"
+  },
+  {
+    "kanji": "独自",
+    "kana": "どくじ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "特色，独自，个人"
+  },
+  {
+    "kanji": "品種",
+    "kana": "ひんしゅ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "品种"
+  },
+  {
+    "kanji": "花茶",
+    "kana": "はなちゃ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "花茶"
+  },
+  {
+    "kanji": "代表",
+    "kana": "だいひょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "代表"
+  },
+  {
+    "kanji": "ジャスミン",
+    "kana": "ジャスミン",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "茉莉花，茉莉花香料"
+  },
+  {
+    "kanji": "キンモクセイ",
+    "kana": "キンモクセイ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "金桂，丹桂"
+  },
+  {
+    "kanji": "産地",
+    "kana": "さんち",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "产地"
+  },
+  {
+    "kanji": "体内",
+    "kana": "たいない",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "体内"
+  },
+  {
+    "kanji": "脂肪",
+    "kana": "しぼう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "脂肪"
+  },
+  {
+    "kanji": "中東",
+    "kana": "ちゅうとう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "中东"
+  },
+  {
+    "kanji": "ルーツ",
+    "kana": "ルーツ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "始祖，根本，本源"
+  },
+  {
+    "kanji": "過言",
+    "kana": "かごん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "夸大，夸张，言过其实"
+  },
+  {
+    "kanji": "音",
+    "kana": "おん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "发音，读音，字音"
+  },
+  {
+    "kanji": "～語",
+    "kana": "ヒンディーご",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "印地语"
+  },
+  {
+    "kanji": "～語",
+    "kana": "アラビアご",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "阿拉伯语"
+  },
+  {
+    "kanji": "～語",
+    "kana": "トルコご",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "土耳其语"
+  },
+  {
+    "kanji": "～語",
+    "kana": "オランダご",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "荷兰语"
+  },
+  {
+    "kanji": "～語",
+    "kana": "ドイツご",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "德语"
+  },
+  {
+    "kanji": "もっぱら",
+    "kana": "もっぱら",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "专门，完全"
+  },
+  {
+    "kanji": "用いる",
+    "kana": "もちいる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "使用，用"
+  },
+  {
+    "kanji": "嗜好",
+    "kana": "しこう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "嗜好；喜好"
+  },
+  {
+    "kanji": "鏡",
+    "kana": "かがみ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "镜子"
+  },
+  {
+    "kanji": "学ぶ",
+    "kana": "まなぶ",
+    "pitch": "",
+    "pos": "动1",
+    "meaning": "学习，模仿"
+  },
+  {
+    "kanji": "信仰～",
+    "kana": "しんこうする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "信仰"
+  },
+  {
+    "kanji": "国々",
+    "kana": "くにぐに",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "各国，诸国"
+  },
+  {
+    "kanji": "客室",
+    "kana": "きゃくしつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "客房，客厅"
+  },
+  {
+    "kanji": "統一～",
+    "kana": "とういつする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "统一"
+  },
+  {
+    "kanji": "歯～",
+    "kana": "はブラシ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "牙刷"
+  },
+  {
+    "kanji": "整髪料",
+    "kana": "せいはつりょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "整发液"
+  },
+  {
+    "kanji": "大陸",
+    "kana": "たいりく",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "大陆"
+  },
+  {
+    "kanji": "動向",
+    "kana": "どうこう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "走向，动向"
+  },
+  {
+    "kanji": "専念～",
+    "kana": "せんねんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "专心，专心致志"
+  },
+  {
+    "kanji": "疲労",
+    "kana": "ひろう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "疲劳"
+  },
+  {
+    "kanji": "人間～",
+    "kana": "にんげんドック",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "短期住院综合体检"
+  },
+  {
+    "kanji": "健康診断",
+    "kana": "けんこうしんだん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "体检，健康检查"
+  },
+  {
+    "kanji": "～症候群",
+    "kana": "メタボリックしょうこうぐん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "代谢症候群，代谢综合症"
+  },
+  {
+    "kanji": "糖尿病",
+    "kana": "とうにょうびょう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "糖尿病"
+  },
+  {
+    "kanji": "痛風",
+    "kana": "つうふう",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "痛风"
+  },
+  {
+    "kanji": "ひざ関節炎",
+    "kana": "ひざかんせつえん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "膝关节炎"
+  },
+  {
+    "kanji": "～代",
+    "kana": "～だい",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～多岁"
+  },
+  {
+    "kanji": "我慢～",
+    "kana": "がまんする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "忍耐"
+  },
+  {
+    "kanji": "通用～",
+    "kana": "つうようする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "通用，兼用"
+  },
+  {
+    "kanji": "電子辞書",
+    "kana": "でんしじしょ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "电子辞典"
+  },
+  {
+    "kanji": "台所",
+    "kana": "だいどころ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "厨房"
+  },
+  {
+    "kanji": "ソファー",
+    "kana": "ソファー",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "沙发"
+  },
+  {
+    "kanji": "下着",
+    "kana": "したぎ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "内衣，衬衣"
+  },
+  {
+    "kanji": "美術品",
+    "kana": "びじゅつひん",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "美术品"
+  },
+  {
+    "kanji": "コック",
+    "kana": "コック",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "厨师"
+  },
+  {
+    "kanji": "規則正しい",
+    "kana": "きそくただしい",
+    "pitch": "",
+    "pos": "形容词",
+    "meaning": "懂规矩，有规矩"
+  },
+  {
+    "kanji": "秘訣",
+    "kana": "ひけつ",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "秘诀"
+  },
+  {
+    "kanji": "人類",
+    "kana": "じんるい",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "人类"
+  },
+  {
+    "kanji": "捧げる",
+    "kana": "ささげる",
+    "pitch": "",
+    "pos": "动2",
+    "meaning": "奉献，贡献"
+  },
+  {
+    "kanji": "指摘～",
+    "kana": "してきする",
+    "pitch": "",
+    "pos": "动3",
+    "meaning": "指出"
+  },
+  {
+    "kanji": "～用品",
+    "kana": "～ようひん",
+    "pitch": "",
+    "pos": "",
+    "meaning": "～用品"
+  }
+]

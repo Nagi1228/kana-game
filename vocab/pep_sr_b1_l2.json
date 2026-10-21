@@ -1,0 +1,569 @@
+[
+  {
+    "kanji": "部活",
+    "kana": "ぶかつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "兴趣小组活动"
+  },
+  {
+    "kanji": "選択",
+    "kana": "せんたく",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "选择"
+  },
+  {
+    "kanji": "情報",
+    "kana": "じょうほう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "信息，消息"
+  },
+  {
+    "kanji": "整理",
+    "kana": "せいり",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "整理，整顿"
+  },
+  {
+    "kanji": "",
+    "kana": "クラブ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "俱乐部，兴趣小组"
+  },
+  {
+    "kanji": "部",
+    "kana": "ぶ",
+    "pitch": "①",
+    "pos": "名·后缀",
+    "meaning": "部；……部"
+  },
+  {
+    "kanji": "書道",
+    "kana": "しょどう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "书法"
+  },
+  {
+    "kanji": "吹奏楽",
+    "kana": "すいそうがく",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "管乐器与打击乐器的合奏音乐"
+  },
+  {
+    "kanji": "美術",
+    "kana": "びじゅつ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "美术"
+  },
+  {
+    "kanji": "思い出",
+    "kana": "おもいで",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "回忆"
+  },
+  {
+    "kanji": "高校",
+    "kana": "こうこう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "高中"
+  },
+  {
+    "kanji": "～系",
+    "kana": "けい",
+    "pitch": "",
+    "pos": "后缀",
+    "meaning": "方面，……部门"
+  },
+  {
+    "kanji": "参加",
+    "kana": "さんか",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "参加，加入"
+  },
+  {
+    "kanji": "人気",
+    "kana": "にんき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "受欢迎"
+  },
+  {
+    "kanji": "部員",
+    "kana": "ぶいん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "成员，队员"
+  },
+  {
+    "kanji": "募集",
+    "kana": "ぼしゅう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "招募，征集"
+  },
+  {
+    "kanji": "",
+    "kana": "テニス",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "网球"
+  },
+  {
+    "kanji": "大体",
+    "kana": "だいたい",
+    "pitch": "⓪",
+    "pos": "名·副",
+    "meaning": "大概，大略；大部分"
+  },
+  {
+    "kanji": "盛ん",
+    "kana": "さかん",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "繁盛；热烈"
+  },
+  {
+    "kanji": "楽しむ",
+    "kana": "たのしむ",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "享受，欣赏；期待"
+  },
+  {
+    "kanji": "武術",
+    "kana": "ぶじゅつ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "武术"
+  },
+  {
+    "kanji": "読書",
+    "kana": "どくしょ",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "读书"
+  },
+  {
+    "kanji": "",
+    "kana": "スローガン",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "标语，口号"
+  },
+  {
+    "kanji": "同士",
+    "kana": "どうし",
+    "pitch": "①",
+    "pos": "名·后缀",
+    "meaning": "同伴，伙伴"
+  },
+  {
+    "kanji": "励む",
+    "kana": "はげむ",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "努力，刻苦，勤勉"
+  },
+  {
+    "kanji": "演奏",
+    "kana": "えんそう",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "演奏"
+  },
+  {
+    "kanji": "楽器",
+    "kana": "がっき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "乐器"
+  },
+  {
+    "kanji": "用意",
+    "kana": "ようい",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "准备"
+  },
+  {
+    "kanji": "他人",
+    "kana": "たにん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "别人，他人"
+  },
+  {
+    "kanji": "",
+    "kana": "いじめる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "欺负，捉弄"
+  },
+  {
+    "kanji": "武徳",
+    "kana": "ぶとく",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "武德"
+  },
+  {
+    "kanji": "意志",
+    "kana": "いし",
+    "pitch": "①",
+    "pos": "名·动3自",
+    "meaning": "意志"
+  },
+  {
+    "kanji": "鍛える",
+    "kana": "きたえる",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "锻炼"
+  },
+  {
+    "kanji": "素敵",
+    "kana": "すてき",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "出色，极好"
+  },
+  {
+    "kanji": "出会う",
+    "kana": "であう",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "遇见，碰见"
+  },
+  {
+    "kanji": "",
+    "kana": "ルール",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "规则"
+  },
+  {
+    "kanji": "遅刻",
+    "kana": "ちこく",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "迟到"
+  },
+  {
+    "kanji": "連絡",
+    "kana": "れんらく",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "联络，联系"
+  },
+  {
+    "kanji": "",
+    "kana": "コンピューター",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "电脑"
+  },
+  {
+    "kanji": "表",
+    "kana": "ひょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "表格"
+  },
+  {
+    "kanji": "悩む",
+    "kana": "なやむ",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "烦恼，苦恼"
+  },
+  {
+    "kanji": "",
+    "kana": "やはり",
+    "pitch": "②",
+    "pos": "副",
+    "meaning": "仍然，还是；果然"
+  },
+  {
+    "kanji": "不安",
+    "kana": "ふあん",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "担心，不安"
+  },
+  {
+    "kanji": "",
+    "kana": "かなり",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "很、颇，相当"
+  },
+  {
+    "kanji": "心配",
+    "kana": "しんぱい",
+    "pitch": "⓪",
+    "pos": "名·动3他·形2",
+    "meaning": "担心，挂念；操心"
+  },
+  {
+    "kanji": "回答",
+    "kana": "かいとう",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "回答"
+  },
+  {
+    "kanji": "",
+    "kana": "せっかく",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "难得，好不容易"
+  },
+  {
+    "kanji": "茶道",
+    "kana": "さどう",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "茶道"
+  },
+  {
+    "kanji": "魅力",
+    "kana": "みりょく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "魅力，吸引力"
+  },
+  {
+    "kanji": "稽古",
+    "kana": "けいこ",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "练习（钢琴、茶道、剑术等）"
+  },
+  {
+    "kanji": "最初",
+    "kana": "さいしょ",
+    "pitch": "⓪",
+    "pos": "名·副",
+    "meaning": "最初，起初"
+  },
+  {
+    "kanji": "",
+    "kana": "ゼロ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "零"
+  },
+  {
+    "kanji": "詳しい",
+    "kana": "くわしい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "详细"
+  },
+  {
+    "kanji": "意見",
+    "kana": "いけん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "意见，见解"
+  },
+  {
+    "kanji": "",
+    "kana": "アドバイス",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "劝告，忠告"
+  },
+  {
+    "kanji": "動き",
+    "kana": "うごき",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "活动；动向"
+  },
+  {
+    "kanji": "華やか",
+    "kana": "はなやか",
+    "pitch": "②",
+    "pos": "形2",
+    "meaning": "华丽"
+  },
+  {
+    "kanji": "通う",
+    "kana": "かよう",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "上学，上班"
+  },
+  {
+    "kanji": "",
+    "kana": "イメージ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "形象；影像"
+  },
+  {
+    "kanji": "派手",
+    "kana": "はで",
+    "pitch": "②",
+    "pos": "形2",
+    "meaning": "华丽；花哨"
+  },
+  {
+    "kanji": "",
+    "kana": "しっかり",
+    "pitch": "③",
+    "pos": "副",
+    "meaning": "切实地，牢牢地"
+  },
+  {
+    "kanji": "基礎",
+    "kana": "きそ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "基础"
+  },
+  {
+    "kanji": "安心",
+    "kana": "あんしん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "放心"
+  },
+  {
+    "kanji": "",
+    "kana": "かっこいい",
+    "pitch": "④",
+    "pos": "形1",
+    "meaning": "棒；帅"
+  },
+  {
+    "kanji": "示す",
+    "kana": "しめす",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "表示"
+  },
+  {
+    "kanji": "影響",
+    "kana": "えいきょう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "影响"
+  },
+  {
+    "kanji": "勧める",
+    "kana": "すすめる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "劝说；推荐"
+  },
+  {
+    "kanji": "",
+    "kana": "メンバー",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "成员"
+  },
+  {
+    "kanji": "唇",
+    "kana": "くちびる",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "嘴唇"
+  },
+  {
+    "kanji": "",
+    "kana": "かむ",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "咬；嚼"
+  },
+  {
+    "kanji": "外す",
+    "kana": "はずす",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "取消、解除"
+  },
+  {
+    "kanji": "相撲",
+    "kana": "すもう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "相扑"
+  },
+  {
+    "kanji": "折る",
+    "kana": "おる",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "折"
+  },
+  {
+    "kanji": "折れる",
+    "kana": "おれる",
+    "pitch": "②",
+    "pos": "动2自",
+    "meaning": "折、叠、弯"
+  },
+  {
+    "kanji": "味方",
+    "kana": "みかた",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "我方；同伴"
+  },
+  {
+    "kanji": "大いに",
+    "kana": "おおいに",
+    "pitch": "①",
+    "pos": "副",
+    "meaning": "多、很"
+  },
+  {
+    "kanji": "成長",
+    "kana": "せいちょう",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "成长"
+  },
+  {
+    "kanji": "養う",
+    "kana": "やしなう",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "养，供养"
+  },
+  {
+    "kanji": "",
+    "kana": "チーム",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "队，团体"
+  },
+  {
+    "kanji": "",
+    "kana": "ゴール",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "终点"
+  },
+  {
+    "kanji": "",
+    "kana": "スケジュール",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "日程（表）"
+  }
+]

@@ -1,0 +1,492 @@
+[
+  {
+    "kanji": "食べ物",
+    "kana": "たべもの",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "食物"
+  },
+  {
+    "kanji": "北京ダック",
+    "kana": "ペキンダック",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "北京烤鸭"
+  },
+  {
+    "kanji": "",
+    "kana": "ピザ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "比萨"
+  },
+  {
+    "kanji": "",
+    "kana": "タコス",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "墨西哥夹饼"
+  },
+  {
+    "kanji": "",
+    "kana": "カレーライス",
+    "pitch": "④",
+    "pos": "名",
+    "meaning": "咖喱饭"
+  },
+  {
+    "kanji": "全部",
+    "kana": "ぜんぶ",
+    "pitch": "①",
+    "pos": "名·副",
+    "meaning": "全部, 都"
+  },
+  {
+    "kanji": "味",
+    "kana": "あじ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "味道"
+  },
+  {
+    "kanji": "違う",
+    "kana": "ちがう",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "不同; 不对"
+  },
+  {
+    "kanji": "",
+    "kana": "どちら",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "哪个; 哪里; 哪位"
+  },
+  {
+    "kanji": "独特",
+    "kana": "どくとく",
+    "pitch": "⓪",
+    "pos": "名·形2",
+    "meaning": "独特, 特有"
+  },
+  {
+    "kanji": "水餃子",
+    "kana": "すいぎょうざ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "水饺"
+  },
+  {
+    "kanji": "揚げる",
+    "kana": "あげる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "油炸"
+  },
+  {
+    "kanji": "揚げ餃子",
+    "kana": "あげぎょうざ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "炸饺子"
+  },
+  {
+    "kanji": "焼く",
+    "kana": "やく",
+    "pitch": "⓪",
+    "pos": "动1他",
+    "meaning": "烧, 烤"
+  },
+  {
+    "kanji": "焼き餃子",
+    "kana": "やきぎょうざ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "煎饺，锅贴"
+  },
+  {
+    "kanji": "家庭科",
+    "kana": "かていか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "家政课"
+  },
+  {
+    "kanji": "講座",
+    "kana": "こうざ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "讲座"
+  },
+  {
+    "kanji": "代表的",
+    "kana": "だいひょうてき",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "有代表性的"
+  },
+  {
+    "kanji": "皮",
+    "kana": "かわ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "皮"
+  },
+  {
+    "kanji": "小麦粉",
+    "kana": "こむぎこ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "面粉"
+  },
+  {
+    "kanji": "具",
+    "kana": "ぐ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "馅料"
+  },
+  {
+    "kanji": "細かい",
+    "kana": "こまかい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "细小; 零碎"
+  },
+  {
+    "kanji": "切る",
+    "kana": "きる",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "切, 割, 砍"
+  },
+  {
+    "kanji": "蒸す",
+    "kana": "むす",
+    "pitch": "①",
+    "pos": "动1自他",
+    "meaning": "蒸; 闷热"
+  },
+  {
+    "kanji": "蒸し餃子",
+    "kana": "むしぎょうざ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "蒸饺"
+  },
+  {
+    "kanji": "種類",
+    "kana": "しゅるい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "种类"
+  },
+  {
+    "kanji": "主",
+    "kana": "おも",
+    "pitch": "①",
+    "pos": "形2",
+    "meaning": "主要, 重要"
+  },
+  {
+    "kanji": "",
+    "kana": "のり",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "海苔；紫菜；海藻"
+  },
+  {
+    "kanji": "",
+    "kana": "えび",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "虾"
+  },
+  {
+    "kanji": "",
+    "kana": "いか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "乌贼, 墨鱼"
+  },
+  {
+    "kanji": "握り寿司",
+    "kana": "にぎりずし",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "攥寿司"
+  },
+  {
+    "kanji": "巻き寿司",
+    "kana": "まきずし",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "寿司卷"
+  },
+  {
+    "kanji": "押し寿司",
+    "kana": "おしずし",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "模压寿司"
+  },
+  {
+    "kanji": "生地",
+    "kana": "きじ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "面团；布料，质地"
+  },
+  {
+    "kanji": "厚い",
+    "kana": "あつい",
+    "pitch": "⓪",
+    "pos": "形1",
+    "meaning": "厚"
+  },
+  {
+    "kanji": "薄い",
+    "kana": "うすい",
+    "pitch": "⓪",
+    "pos": "形1",
+    "meaning": "薄;淡"
+  },
+  {
+    "kanji": "",
+    "kana": "チーズ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "奶酪"
+  },
+  {
+    "kanji": "載せる",
+    "kana": "のせる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "放在……上；装载"
+  },
+  {
+    "kanji": "本文",
+    "kana": "ほんぶん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "原文; 正文"
+  },
+  {
+    "kanji": "情報",
+    "kana": "じょうほう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "信息, 消息"
+  },
+  {
+    "kanji": "整理",
+    "kana": "せいり",
+    "pitch": "①",
+    "pos": "名·动3他",
+    "meaning": "整理, 整顿"
+  },
+  {
+    "kanji": "適当",
+    "kana": "てきとう",
+    "pitch": "⓪",
+    "pos": "形2",
+    "meaning": "适当, 恰好"
+  },
+  {
+    "kanji": "",
+    "kana": "シャーペン",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "自动铅笔"
+  },
+  {
+    "kanji": "",
+    "kana": "テニス",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "网球"
+  },
+  {
+    "kanji": "遠足",
+    "kana": "えんそく",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "郊游，徒步旅行"
+  },
+  {
+    "kanji": "問題",
+    "kana": "もんだい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "问题; 试题"
+  },
+  {
+    "kanji": "",
+    "kana": "すべて",
+    "pitch": "①",
+    "pos": "名·副",
+    "meaning": "一切, 所有"
+  },
+  {
+    "kanji": "解決",
+    "kana": "かいけつ",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "解决"
+  },
+  {
+    "kanji": "",
+    "kana": "あさって",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "后天"
+  },
+  {
+    "kanji": "人民",
+    "kana": "じんみん",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "人民"
+  },
+  {
+    "kanji": "掃除",
+    "kana": "そうじ",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "打扫, 扫除"
+  },
+  {
+    "kanji": "巣",
+    "kana": "す",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "巢"
+  },
+  {
+    "kanji": "先日",
+    "kana": "せんじつ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "前几天"
+  },
+  {
+    "kanji": "団地",
+    "kana": "だんち",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "小区, 住宅区"
+  },
+  {
+    "kanji": "火事",
+    "kana": "かじ",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "火灾"
+  },
+  {
+    "kanji": "欲しい",
+    "kana": "ほしい",
+    "pitch": "②",
+    "pos": "形1",
+    "meaning": "想要"
+  },
+  {
+    "kanji": "お土産",
+    "kana": "おみやげ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "礼物, 土特产"
+  },
+  {
+    "kanji": "",
+    "kana": "おととい",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "前天"
+  },
+  {
+    "kanji": "",
+    "kana": "ポイント",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "要点; 点"
+  },
+  {
+    "kanji": "",
+    "kana": "ない",
+    "pitch": "①",
+    "pos": "形1",
+    "meaning": "没有"
+  },
+  {
+    "kanji": "",
+    "kana": "パーティー",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "聚会, 晚会"
+  },
+  {
+    "kanji": "上手",
+    "kana": "じょうず",
+    "pitch": "③",
+    "pos": "形2",
+    "meaning": "擅长, 拿手"
+  },
+  {
+    "kanji": "",
+    "kana": "ゆうべ",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "昨晚"
+  },
+  {
+    "kanji": "廊下",
+    "kana": "ろうか",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "走廊, 楼道"
+  },
+  {
+    "kanji": "歩く",
+    "kana": "あるく",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "步行, 走"
+  },
+  {
+    "kanji": "折る",
+    "kana": "おる",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "折, 叠, 弯"
+  },
+  {
+    "kanji": "",
+    "kana": "あ",
+    "pitch": "①",
+    "pos": "叹",
+    "meaning": "啊"
+  },
+  {
+    "kanji": "祭り",
+    "kana": "まつり",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "庙会; 节日"
+  },
+  {
+    "kanji": "",
+    "kana": "ねえ",
+    "pitch": "①",
+    "pos": "叹",
+    "meaning": "喂, 哎"
+  },
+  {
+    "kanji": "昼",
+    "kana": "ひる",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "白天; 中午"
+  }
+]

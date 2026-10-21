@@ -1,0 +1,471 @@
+[
+  {
+    "kanji": "料理",
+    "kana": "りょうり",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "菜肴，饭菜"
+  },
+  {
+    "kanji": "四川料理",
+    "kana": "しせんりょうり",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "四川菜"
+  },
+  {
+    "kanji": "スープ",
+    "kana": "スープ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "汤"
+  },
+  {
+    "kanji": "北京ダック",
+    "kana": "ぺキンダック",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "北京烤鸭"
+  },
+  {
+    "kanji": "食べ物",
+    "kana": "たべもの",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "食物，食品"
+  },
+  {
+    "kanji": "すき焼き",
+    "kana": "すきやき",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "日式牛肉火锅"
+  },
+  {
+    "kanji": "温泉",
+    "kana": "おんせん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "温泉"
+  },
+  {
+    "kanji": "お湯",
+    "kana": "おゆ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "热水，开水"
+  },
+  {
+    "kanji": "水",
+    "kana": "みず",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "水，凉水"
+  },
+  {
+    "kanji": "浴衣",
+    "kana": "ゆかた",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "浴衣，夏季和服"
+  },
+  {
+    "kanji": "眺め",
+    "kana": "ながめ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "景色，风景"
+  },
+  {
+    "kanji": "薬",
+    "kana": "くすり",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "药"
+  },
+  {
+    "kanji": "天気",
+    "kana": "てんき",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "天气"
+  },
+  {
+    "kanji": "海",
+    "kana": "うみ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "大海"
+  },
+  {
+    "kanji": "山",
+    "kana": "やま",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "山"
+  },
+  {
+    "kanji": "紙",
+    "kana": "かみ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "纸"
+  },
+  {
+    "kanji": "ニュース",
+    "kana": "ニュース",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "新闻"
+  },
+  {
+    "kanji": "女性",
+    "kana": "じょせい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "女性"
+  },
+  {
+    "kanji": "お客様",
+    "kana": "おきゃくさま",
+    "pitch": "",
+    "pos": "名词",
+    "meaning": "来宾"
+  },
+  {
+    "kanji": "グラス",
+    "kana": "グラス",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "玻璃杯"
+  },
+  {
+    "kanji": "歌舞伎",
+    "kana": "かぶき",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "歌舞伎"
+  },
+  {
+    "kanji": "気持ち",
+    "kana": "きもち",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "心情"
+  },
+  {
+    "kanji": "たくさん",
+    "kana": "たくさん",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "很多"
+  },
+  {
+    "kanji": "辛い",
+    "kana": "からい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "辣"
+  },
+  {
+    "kanji": "甘い",
+    "kana": "あまい",
+    "pitch": "⓪",
+    "pos": "形容词",
+    "meaning": "甜"
+  },
+  {
+    "kanji": "塩辛い/しょっぱい",
+    "kana": "しおからい",
+    "pitch": "",
+    "pos": "形容词",
+    "meaning": "咸"
+  },
+  {
+    "kanji": "酸っぱい",
+    "kana": "すっぱい",
+    "pitch": "",
+    "pos": "形容词",
+    "meaning": "酸"
+  },
+  {
+    "kanji": "苦い",
+    "kana": "にがい",
+    "pitch": "",
+    "pos": "形容词",
+    "meaning": "苦"
+  },
+  {
+    "kanji": "おいしい",
+    "kana": "おいしい",
+    "pitch": "⓪",
+    "pos": "形容词",
+    "meaning": "好吃，可口"
+  },
+  {
+    "kanji": "まずい",
+    "kana": "まずい",
+    "pitch": "",
+    "pos": "形容词",
+    "meaning": "不好吃，难吃"
+  },
+  {
+    "kanji": "あつい",
+    "kana": "あつい",
+    "pitch": "",
+    "pos": "形容词",
+    "meaning": "热，烫"
+  },
+  {
+    "kanji": "冷たい",
+    "kana": "つめたい",
+    "pitch": "⓪",
+    "pos": "形容词",
+    "meaning": "凉"
+  },
+  {
+    "kanji": "楽しい",
+    "kana": "たのしい",
+    "pitch": "③",
+    "pos": "形容词",
+    "meaning": "愉快，快乐"
+  },
+  {
+    "kanji": "おもしろい",
+    "kana": "おもしろい",
+    "pitch": "④",
+    "pos": "形容词",
+    "meaning": "有趣，有意思"
+  },
+  {
+    "kanji": "つまらない",
+    "kana": "つまらない",
+    "pitch": "③",
+    "pos": "形容词",
+    "meaning": "无聊"
+  },
+  {
+    "kanji": "広い",
+    "kana": "ひろい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "广阔，宽敞"
+  },
+  {
+    "kanji": "狭い",
+    "kana": "せまい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "狭窄"
+  },
+  {
+    "kanji": "大きい",
+    "kana": "おおきい",
+    "pitch": "③",
+    "pos": "形容词",
+    "meaning": "大"
+  },
+  {
+    "kanji": "小さい",
+    "kana": "ちいさい",
+    "pitch": "③",
+    "pos": "形容词",
+    "meaning": "小"
+  },
+  {
+    "kanji": "忙しい",
+    "kana": "いそがしい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "忙，忙碌"
+  },
+  {
+    "kanji": "いい",
+    "kana": "いい",
+    "pitch": "①",
+    "pos": "形容词",
+    "meaning": "好"
+  },
+  {
+    "kanji": "悪い",
+    "kana": "わるい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "不好，坏"
+  },
+  {
+    "kanji": "すばらしい",
+    "kana": "すばらしい",
+    "pitch": "④",
+    "pos": "形容词",
+    "meaning": "极好，绝佳"
+  },
+  {
+    "kanji": "遠い",
+    "kana": "とおい",
+    "pitch": "⓪",
+    "pos": "形容词",
+    "meaning": "远"
+  },
+  {
+    "kanji": "近い",
+    "kana": "ちかい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "近"
+  },
+  {
+    "kanji": "高い",
+    "kana": "たかい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "高，贵"
+  },
+  {
+    "kanji": "低い",
+    "kana": "ひくい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "低"
+  },
+  {
+    "kanji": "安い",
+    "kana": "やすい",
+    "pitch": "①",
+    "pos": "形容词",
+    "meaning": "便宜"
+  },
+  {
+    "kanji": "寒い",
+    "kana": "さむい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "寒冷"
+  },
+  {
+    "kanji": "暑い",
+    "kana": "あつい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "天气）热"
+  },
+  {
+    "kanji": "青い",
+    "kana": "あおい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "蓝色的"
+  },
+  {
+    "kanji": "白い",
+    "kana": "しろい",
+    "pitch": "⓪",
+    "pos": "形容词",
+    "meaning": "白色的"
+  },
+  {
+    "kanji": "新しい",
+    "kana": "あたらしい",
+    "pitch": "④",
+    "pos": "形容词",
+    "meaning": "新"
+  },
+  {
+    "kanji": "古い",
+    "kana": "ふるい",
+    "pitch": "②",
+    "pos": "形容词",
+    "meaning": "旧"
+  },
+  {
+    "kanji": "難しい",
+    "kana": "むずかしい",
+    "pitch": "⓪",
+    "pos": "形容词",
+    "meaning": "难"
+  },
+  {
+    "kanji": "易しい",
+    "kana": "やさしい",
+    "pitch": "⓪",
+    "pos": "形容词",
+    "meaning": "容易"
+  },
+  {
+    "kanji": "多い",
+    "kana": "おおい",
+    "pitch": "①",
+    "pos": "形容词",
+    "meaning": "多"
+  },
+  {
+    "kanji": "少ない",
+    "kana": "すくない",
+    "pitch": "③",
+    "pos": "形容词",
+    "meaning": "少"
+  },
+  {
+    "kanji": "かわいい",
+    "kana": "かわいい",
+    "pitch": "③",
+    "pos": "形容词",
+    "meaning": "可爱"
+  },
+  {
+    "kanji": "本当に",
+    "kana": "ほんとうに",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "真的，实在是"
+  },
+  {
+    "kanji": "あまり",
+    "kana": "あまり",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "不（太）～，不很～"
+  },
+  {
+    "kanji": "とても/たいへん",
+    "kana": "とても/たいへん",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "很，非常"
+  },
+  {
+    "kanji": "少し/ちょっと",
+    "kana": "すこし/ちょっと",
+    "pitch": "",
+    "pos": "副词",
+    "meaning": "一点儿"
+  },
+  {
+    "kanji": "全然",
+    "kana": "ぜんぜん",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "根本"
+  },
+  {
+    "kanji": "ちょうど",
+    "kana": "ちょうど",
+    "pitch": "⓪",
+    "pos": "副词",
+    "meaning": "正好，恰好"
+  },
+  {
+    "kanji": "あら/あれ",
+    "kana": "あら/あれ",
+    "pitch": "",
+    "pos": "感叹词",
+    "meaning": "哎呀，咦"
+  },
+  {
+    "kanji": "ああ",
+    "kana": "ああ",
+    "pitch": "①",
+    "pos": "感叹词",
+    "meaning": "啊"
+  }
+]

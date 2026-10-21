@@ -1,0 +1,422 @@
+[
+  {
+    "kanji": "丹頂",
+    "kana": "タンチョウ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "丹顶鹤"
+  },
+  {
+    "kanji": "形象",
+    "kana": "けいしょう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "形象"
+  },
+  {
+    "kanji": "保護区",
+    "kana": "ほごく",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "保护区"
+  },
+  {
+    "kanji": "翼",
+    "kana": "つばさ",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "翅膀"
+  },
+  {
+    "kanji": "先",
+    "kana": "さき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "尖儿，前端"
+  },
+  {
+    "kanji": "優雅",
+    "kana": "ゆうが",
+    "pitch": "①",
+    "pos": "名·形2",
+    "meaning": "优雅"
+  },
+  {
+    "kanji": "半島",
+    "kana": "はんとう",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "半岛"
+  },
+  {
+    "kanji": "生息",
+    "kana": "せいそく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "生存；繁殖"
+  },
+  {
+    "kanji": "渡り鳥",
+    "kana": "わたりどり",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "候鸟"
+  },
+  {
+    "kanji": "周辺",
+    "kana": "しゅうへん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "周边"
+  },
+  {
+    "kanji": "移動",
+    "kana": "いどう",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "移动"
+  },
+  {
+    "kanji": "最大",
+    "kana": "さいだい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "最大"
+  },
+  {
+    "kanji": "父親",
+    "kana": "ちちおや",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "父亲"
+  },
+  {
+    "kanji": "ひな鳥",
+    "kana": "ひなどり",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "雏鸟"
+  },
+  {
+    "kanji": "貧しい",
+    "kana": "まずしい",
+    "pitch": "③",
+    "pos": "形1",
+    "meaning": "贫困；贫瘠"
+  },
+  {
+    "kanji": "溺れる",
+    "kana": "おぼれる",
+    "pitch": "⓪",
+    "pos": "动2自",
+    "meaning": "淹没，溺水；沉迷"
+  },
+  {
+    "kanji": "亡くなる",
+    "kana": "なくなる",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "逝世，去世"
+  },
+  {
+    "kanji": "熱意",
+    "kana": "ねつい",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "热情，热忱"
+  },
+  {
+    "kanji": "合作",
+    "kana": "がっさく",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "合作，协作"
+  },
+  {
+    "kanji": "引き継ぐ",
+    "kana": "ひきつぐ",
+    "pitch": "③",
+    "pos": "动1他",
+    "meaning": "继承；交接过来"
+  },
+  {
+    "kanji": "湧く",
+    "kana": "わく",
+    "pitch": "⓪",
+    "pos": "动1自",
+    "meaning": "涌出；涌现"
+  },
+  {
+    "kanji": "捕まえる",
+    "kana": "つかまえる",
+    "pitch": "④",
+    "pos": "动2他",
+    "meaning": "逮住，捕到"
+  },
+  {
+    "kanji": "湿原",
+    "kana": "しつげん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "湿地"
+  },
+  {
+    "kanji": "激減",
+    "kana": "げきげん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "锐减，剧减"
+  },
+  {
+    "kanji": "絶滅",
+    "kana": "ぜつめつ",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "灭绝，根绝"
+  },
+  {
+    "kanji": "末期",
+    "kana": "まっき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "末期"
+  },
+  {
+    "kanji": "天然記念物",
+    "kana": "てんねんきねんぶつ",
+    "pitch": "⓪-②",
+    "pos": "名",
+    "meaning": "自然保护动（植）物"
+  },
+  {
+    "kanji": "指定",
+    "kana": "してい",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "指定"
+  },
+  {
+    "kanji": "",
+    "kana": "マイナス",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "零下；负；减"
+  },
+  {
+    "kanji": "前後",
+    "kana": "ぜんご",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "前后；上下"
+  },
+  {
+    "kanji": "受け入れる",
+    "kana": "うけいれる",
+    "pitch": "④",
+    "pos": "动2他",
+    "meaning": "采纳，接纳；同意"
+  },
+  {
+    "kanji": "生息数",
+    "kana": "せいそくすう",
+    "pitch": "⑤",
+    "pos": "名",
+    "meaning": "生存数量"
+  },
+  {
+    "kanji": "回復",
+    "kana": "かいふく",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "恢复；康复；收复"
+  },
+  {
+    "kanji": "",
+    "kana": "ただ",
+    "pitch": "①",
+    "pos": "连",
+    "meaning": "但是，不过"
+  },
+  {
+    "kanji": "増やす",
+    "kana": "ふやす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "增加"
+  },
+  {
+    "kanji": "生き物",
+    "kana": "いきもの",
+    "pitch": "③",
+    "pos": "名",
+    "meaning": "生物"
+  },
+  {
+    "kanji": "保全",
+    "kana": "ほぜん",
+    "pitch": "⓪",
+    "pos": "名·动3他",
+    "meaning": "保全"
+  },
+  {
+    "kanji": "",
+    "kana": "シンボル",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "象征；符号"
+  },
+  {
+    "kanji": "段落",
+    "kana": "だんらく",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "段落"
+  },
+  {
+    "kanji": "以内",
+    "kana": "いない",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "以内"
+  },
+  {
+    "kanji": "崩す",
+    "kana": "くずす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "打乱，瓦解"
+  },
+  {
+    "kanji": "共生",
+    "kana": "きょうせい",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "共生"
+  },
+  {
+    "kanji": "発言",
+    "kana": "はつげん",
+    "pitch": "⓪",
+    "pos": "名·动3自",
+    "meaning": "发言"
+  },
+  {
+    "kanji": "減少",
+    "kana": "げんしょう",
+    "pitch": "⓪",
+    "pos": "名·动3自他",
+    "meaning": "减少"
+  },
+  {
+    "kanji": "穴",
+    "kana": "あな",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "洞，穴"
+  },
+  {
+    "kanji": "掘る",
+    "kana": "ほる",
+    "pitch": "①",
+    "pos": "动1他",
+    "meaning": "挖掘"
+  },
+  {
+    "kanji": "治る",
+    "kana": "なおる",
+    "pitch": "②",
+    "pos": "动1自",
+    "meaning": "痊愈"
+  },
+  {
+    "kanji": "治す",
+    "kana": "なおす",
+    "pitch": "②",
+    "pos": "动1他",
+    "meaning": "治疗，医治"
+  },
+  {
+    "kanji": "生態",
+    "kana": "せいたい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "生态"
+  },
+  {
+    "kanji": "敵",
+    "kana": "てき",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "天敌，敌人"
+  },
+  {
+    "kanji": "気の毒",
+    "kana": "きのどく",
+    "pitch": "③",
+    "pos": "形2",
+    "meaning": "可怜，悲惨"
+  },
+  {
+    "kanji": "",
+    "kana": "ほっと",
+    "pitch": "⓪",
+    "pos": "副",
+    "meaning": "安心，放心"
+  },
+  {
+    "kanji": "裁判",
+    "kana": "さいばん",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "法院"
+  },
+  {
+    "kanji": "設ける",
+    "kana": "もうける",
+    "pitch": "③",
+    "pos": "动2他",
+    "meaning": "设置，安排"
+  },
+  {
+    "kanji": "手袋",
+    "kana": "てぶくろ",
+    "pitch": "②",
+    "pos": "名",
+    "meaning": "手套"
+  },
+  {
+    "kanji": "",
+    "kana": "はめる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "安，嵌"
+  },
+  {
+    "kanji": "集団",
+    "kana": "しゅうだん",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "集团，集体"
+  },
+  {
+    "kanji": "団体",
+    "kana": "だんたい",
+    "pitch": "⓪",
+    "pos": "名",
+    "meaning": "集体，团体"
+  },
+  {
+    "kanji": "劇",
+    "kana": "げき",
+    "pitch": "①",
+    "pos": "名",
+    "meaning": "短剧，戏剧"
+  },
+  {
+    "kanji": "演じる",
+    "kana": "えんじる",
+    "pitch": "⓪",
+    "pos": "动2他",
+    "meaning": "演出，出演"
+  }
+]

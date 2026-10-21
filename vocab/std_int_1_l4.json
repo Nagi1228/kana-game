@@ -1,0 +1,716 @@
+[
+  {
+    "kanji": "本社",
+    "kana": "ほんしゃ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "总部，总公司，本部"
+  },
+  {
+    "kanji": "担当者",
+    "kana": "たんとうしゃ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "负责人，责任人，担当者"
+  },
+  {
+    "kanji": "要望",
+    "kana": "ようぼう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "迫切要求，迫切期望"
+  },
+  {
+    "kanji": "推薦する",
+    "kana": "すいせんする",
+    "pitch": "⓪",
+    "pos": "动3",
+    "meaning": "推荐"
+  },
+  {
+    "kanji": "事情",
+    "kana": "じじょう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "情况；缘故，缘由"
+  },
+  {
+    "kanji": "豆",
+    "kana": "まめ",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "豆，大豆"
+  },
+  {
+    "kanji": "ダム",
+    "kana": "ダム",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "水库，大坝"
+  },
+  {
+    "kanji": "体長",
+    "kana": "たいちょう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "体长，身长"
+  },
+  {
+    "kanji": "研究室",
+    "kana": "けんきゅうしつ",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "研究室"
+  },
+  {
+    "kanji": "建築",
+    "kana": "けんちく",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "建筑"
+  },
+  {
+    "kanji": "学科",
+    "kana": "がっか",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "学科，专业，科目"
+  },
+  {
+    "kanji": "進学する",
+    "kana": "しんがくする",
+    "pitch": "⓪",
+    "pos": "动3",
+    "meaning": "升学"
+  },
+  {
+    "kanji": "太陽",
+    "kana": "たいよう",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "日头，太阳"
+  },
+  {
+    "kanji": "沈む",
+    "kana": "しずむ",
+    "pitch": "⓪",
+    "pos": "动1",
+    "meaning": "落山；沉没；消沉"
+  },
+  {
+    "kanji": "ブドウ",
+    "kana": "ブドウ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "葡萄"
+  },
+  {
+    "kanji": "家庭",
+    "kana": "かてい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "家庭，家"
+  },
+  {
+    "kanji": "侵入する",
+    "kana": "しんにゅうする",
+    "pitch": "⓪",
+    "pos": "动3",
+    "meaning": "闯入，侵入"
+  },
+  {
+    "kanji": "トラック",
+    "kana": "トラック",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "卡车"
+  },
+  {
+    "kanji": "免許",
+    "kana": "めんきょ",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "驾照，执照，许可证"
+  },
+  {
+    "kanji": "疲れ",
+    "kana": "つかれ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "劳累，疲劳，劳顿"
+  },
+  {
+    "kanji": "急病",
+    "kana": "きゅうびょう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "突然得病，急病"
+  },
+  {
+    "kanji": "想像",
+    "kana": "そうぞう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "想象，设想"
+  },
+  {
+    "kanji": "がっかりする",
+    "kana": "がっかりする",
+    "pitch": "③",
+    "pos": "动3",
+    "meaning": "失望，灰心丧气"
+  },
+  {
+    "kanji": "激しい",
+    "kana": "はげしい",
+    "pitch": "③",
+    "pos": "形容词",
+    "meaning": "激烈，剧烈，厉害"
+  },
+  {
+    "kanji": "サンプル",
+    "kana": "サンプル",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "样品，样板，标本"
+  },
+  {
+    "kanji": "でき上がる",
+    "kana": "できあがる",
+    "pitch": "④",
+    "pos": "动1",
+    "meaning": "做好，完成"
+  },
+  {
+    "kanji": "注文",
+    "kana": "ちゅうもん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "订货，订购；点菜"
+  },
+  {
+    "kanji": "くやしい",
+    "kana": "くやしい",
+    "pitch": "③",
+    "pos": "形容词",
+    "meaning": "懊恼，懊悔，遗憾"
+  },
+  {
+    "kanji": "契約",
+    "kana": "けいやく",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "契约，合同"
+  },
+  {
+    "kanji": "新人研修",
+    "kana": "しんじんけんしゅう",
+    "pitch": "⑤",
+    "pos": "名词",
+    "meaning": "新员工培训"
+  },
+  {
+    "kanji": "顔色",
+    "kana": "かおいろ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "脸色，表情"
+  },
+  {
+    "kanji": "近年",
+    "kana": "きんねん",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "近年来，近些年"
+  },
+  {
+    "kanji": "かつて",
+    "kana": "かつて",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "过去，以前，曾经"
+  },
+  {
+    "kanji": "深夜",
+    "kana": "しんや",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "深夜"
+  },
+  {
+    "kanji": "休日出勤",
+    "kana": "きゅうじつしゅっきん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "节假日上班"
+  },
+  {
+    "kanji": "当たり前",
+    "kana": "あたりまえ",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "当然，理所当然"
+  },
+  {
+    "kanji": "週休二日制",
+    "kana": "しゅうきゅうふつかせい",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "双休日制度"
+  },
+  {
+    "kanji": "導入する",
+    "kana": "どうにゅうする",
+    "pitch": "⓪",
+    "pos": "动1",
+    "meaning": "引进，引入，导入"
+  },
+  {
+    "kanji": "労働",
+    "kana": "ろうどう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "劳动"
+  },
+  {
+    "kanji": "減らす",
+    "kana": "へらす",
+    "pitch": "⓪",
+    "pos": "动1",
+    "meaning": "减少，减轻"
+  },
+  {
+    "kanji": "取り組み",
+    "kana": "とりくみ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "措施，举措，努力"
+  },
+  {
+    "kanji": "実施する",
+    "kana": "じっしする",
+    "pitch": "⓪",
+    "pos": "动3",
+    "meaning": "实施，施行"
+  },
+  {
+    "kanji": "国家",
+    "kana": "こっか",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "国家"
+  },
+  {
+    "kanji": "公務員",
+    "kana": "こうむいん",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "公务员"
+  },
+  {
+    "kanji": "制度",
+    "kana": "せいど",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "制度"
+  },
+  {
+    "kanji": "パーセント",
+    "kana": "パーセント",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "百分比"
+  },
+  {
+    "kanji": "フレックスタイム制度",
+    "kana": "フレックスタイムせいど",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "弹性工作时间制度"
+  },
+  {
+    "kanji": "退勤",
+    "kana": "たいきん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "下班"
+  },
+  {
+    "kanji": "労働者",
+    "kana": "ろうどうしゃ",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "劳动者，工人"
+  },
+  {
+    "kanji": "バランス",
+    "kana": "バランス",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "平衡，均衡"
+  },
+  {
+    "kanji": "設ける",
+    "kana": "もうける",
+    "pitch": "⓪",
+    "pos": "动2",
+    "meaning": "制定，设置，设立"
+  },
+  {
+    "kanji": "育児休暇",
+    "kana": "いくじきゅうか",
+    "pitch": "⑤",
+    "pos": "名词",
+    "meaning": "育婴休假，产假"
+  },
+  {
+    "kanji": "ほとんど",
+    "kana": "ほとんど",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "基本上，几乎"
+  },
+  {
+    "kanji": "得る",
+    "kana": "える",
+    "pitch": "①",
+    "pos": "动2",
+    "meaning": "得到，取得"
+  },
+  {
+    "kanji": "出世",
+    "kana": "しゅっせ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "晋升，出人头地，出息，发迹"
+  },
+  {
+    "kanji": "妨げ",
+    "kana": "さまたげ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "妨碍，妨害"
+  },
+  {
+    "kanji": "比べる",
+    "kana": "くらべる",
+    "pitch": "⓪",
+    "pos": "动2",
+    "meaning": "相比，比较，对比"
+  },
+  {
+    "kanji": "追う",
+    "kana": "おう",
+    "pitch": "⓪",
+    "pos": "动1",
+    "meaning": "追，赶；催逼"
+  },
+  {
+    "kanji": "これまで",
+    "kana": "これまで",
+    "pitch": "③",
+    "pos": "",
+    "meaning": "以往，此前"
+  },
+  {
+    "kanji": "見られる",
+    "kana": "みられる",
+    "pitch": "③",
+    "pos": "动2",
+    "meaning": "出现，能看到"
+  },
+  {
+    "kanji": "時間に追われる",
+    "kana": "じかんにおわれる",
+    "pitch": "④+⓪",
+    "pos": "",
+    "meaning": "被时间追赶"
+  },
+  {
+    "kanji": "かって",
+    "kana": "かって",
+    "pitch": "①",
+    "pos": "副词",
+    "meaning": "过去，以前，曾经"
+  },
+  {
+    "kanji": "連想する",
+    "kana": "れんそうする",
+    "pitch": "⓪",
+    "pos": "动3",
+    "meaning": "联想"
+  },
+  {
+    "kanji": "環境問題",
+    "kana": "かんきょうもんだい",
+    "pitch": "⑥",
+    "pos": "名词",
+    "meaning": "环境问题"
+  },
+  {
+    "kanji": "食器",
+    "kana": "しょっき",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "餐具"
+  },
+  {
+    "kanji": "扱う",
+    "kana": "あつかう",
+    "pitch": "⓪",
+    "pos": "动1",
+    "meaning": "经营；对待，处理"
+  },
+  {
+    "kanji": "増加する",
+    "kana": "ぞうかする",
+    "pitch": "⓪",
+    "pos": "动3",
+    "meaning": "增加"
+  },
+  {
+    "kanji": "急激",
+    "kana": "きゅうげき",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "急剧，急速"
+  },
+  {
+    "kanji": "生活習慣病",
+    "kana": "せいかつしゅうかんびょう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "生活习惯病，成人病"
+  },
+  {
+    "kanji": "農業",
+    "kana": "のうぎょう",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "农业"
+  },
+  {
+    "kanji": "盛ん",
+    "kana": "さかん",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "兴盛，旺盛，热烈"
+  },
+  {
+    "kanji": "工業",
+    "kana": "こうぎょう",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "工业"
+  },
+  {
+    "kanji": "保つ",
+    "kana": "たもつ",
+    "pitch": "⓪",
+    "pos": "动1",
+    "meaning": "保持，维持；保，保住"
+  },
+  {
+    "kanji": "崩れる",
+    "kana": "くずれる",
+    "pitch": "③",
+    "pos": "动2",
+    "meaning": "崩溃，毁坏"
+  },
+  {
+    "kanji": "失う",
+    "kana": "うしなう",
+    "pitch": "②",
+    "pos": "动1",
+    "meaning": "失去，丧失"
+  },
+  {
+    "kanji": "収支",
+    "kana": "しゅうし",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "收支"
+  },
+  {
+    "kanji": "直前",
+    "kana": "ちょくぜん",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "即将……之前；正前面"
+  },
+  {
+    "kanji": "細かい",
+    "kana": "こまかい",
+    "pitch": "⓪",
+    "pos": "形容词",
+    "meaning": "细小，细致，琐碎"
+  },
+  {
+    "kanji": "点",
+    "kana": "てん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "点，方面"
+  },
+  {
+    "kanji": "疑問",
+    "kana": "ぎもん",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "疑问"
+  },
+  {
+    "kanji": "予測",
+    "kana": "よそく",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "预测"
+  },
+  {
+    "kanji": "Uターン現象",
+    "kana": "ユーターンげんしょう",
+    "pitch": "⑥",
+    "pos": "名词",
+    "meaning": "调头现象"
+  },
+  {
+    "kanji": "Ｉターン現象",
+    "kana": "アイターンげんしょう",
+    "pitch": "⑥",
+    "pos": "名词",
+    "meaning": "单行现象"
+  },
+  {
+    "kanji": "代表的",
+    "kana": "だいひょうてき",
+    "pitch": "⓪",
+    "pos": "形容动词",
+    "meaning": "有代表性的"
+  },
+  {
+    "kanji": "職業",
+    "kana": "しょくぎょう",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "职业"
+  },
+  {
+    "kanji": "アナウンサー",
+    "kana": "アナウンサー",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "播音员，广播员"
+  },
+  {
+    "kanji": "作曲家",
+    "kana": "さっきょくか",
+    "pitch": "③",
+    "pos": "名词",
+    "meaning": "作曲家"
+  },
+  {
+    "kanji": "和室",
+    "kana": "わしつ",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "日式房间"
+  },
+  {
+    "kanji": "住宅",
+    "kana": "じゅうたく",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "住宅"
+  },
+  {
+    "kanji": "半年",
+    "kana": "はんとし",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "半年"
+  },
+  {
+    "kanji": "脳",
+    "kana": "のう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "脑，大脑"
+  },
+  {
+    "kanji": "働き",
+    "kana": "はたらき",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "作用，功能；工作"
+  },
+  {
+    "kanji": "解明する",
+    "kana": "かいめいする",
+    "pitch": "⓪",
+    "pos": "动3",
+    "meaning": "弄清楚，讲清楚，阐明"
+  },
+  {
+    "kanji": "景気",
+    "kana": "けいき",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "市场情况，商业状况，景气"
+  },
+  {
+    "kanji": "回復する",
+    "kana": "かいふくする",
+    "pitch": "⓪",
+    "pos": "动3",
+    "meaning": "恢复；康复"
+  },
+  {
+    "kanji": "迫る",
+    "kana": "せまる",
+    "pitch": "②",
+    "pos": "动1",
+    "meaning": "接近，迫近，临近"
+  },
+  {
+    "kanji": "俳優",
+    "kana": "はいゆう",
+    "pitch": "⓪",
+    "pos": "名词",
+    "meaning": "演员"
+  },
+  {
+    "kanji": "リサイクル",
+    "kana": "リサイクル",
+    "pitch": "②",
+    "pos": "名词",
+    "meaning": "再利用，循环使用"
+  },
+  {
+    "kanji": "意識",
+    "kana": "いしき",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "意识"
+  },
+  {
+    "kanji": "長期",
+    "kana": "ちょうき",
+    "pitch": "①",
+    "pos": "名词",
+    "meaning": "长期"
+  },
+  {
+    "kanji": "国内旅行",
+    "kana": "こくないりょこう",
+    "pitch": "⑥",
+    "pos": "名词",
+    "meaning": "国内旅行"
+  },
+  {
+    "kanji": "電気製品",
+    "kana": "でんきせいひん",
+    "pitch": "④",
+    "pos": "名词",
+    "meaning": "电器"
+  }
+]
