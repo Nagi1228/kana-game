@@ -2,211 +2,240 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>かなゲーム - 方块模式</title>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <style>
-    :root {
-      --primary: #3b82f6;
-      --bg-color: #f0f7ff;
-      --text-main: #1e3a8a;
-      --border-color: #dbeafe;
-    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-main);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      touch-action: manipulation;
+      overflow: hidden;
+      background: linear-gradient(180deg, #38bdf8 0%, #818cf8 55%, #c084fc 100%);
+      user-select: none;
     }
 
-    header {
-      width: 100%;
-      background: rgba(255, 255, 255, 0.92);
-      border-bottom: 1px solid var(--border-color);
+    /* 原版顶部半透明状态栏 */
+    .tetris-top {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 10px 24px;
+      gap: 12px;
+      padding: 12px 20px;
+      background: rgba(0,0,0,0.18);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255,255,255,0.25);
+      color: #fff;
+      z-index: 10;
     }
-    .logo {
-      font-size: 22px;
-      font-weight: 900;
-      background: linear-gradient(135deg, #2563eb, #f97316);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .tet-back-btn {
+      background: rgba(255,255,255,0.25);
+      border: 2px solid rgba(255,255,255,0.5);
+      border-radius: 24px;
+      padding: 7px 16px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
       cursor: pointer;
     }
+    .tet-back-btn:hover { background: rgba(255,255,255,0.4); }
+    .tetris-score {
+      font-size: 1.05rem;
+      font-weight: 900;
+      color: #fff;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+    }
+    .tetris-score span {
+      background: rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 4px 12px;
+      margin-left: 4px;
+    }
+    .tet-lives {
+      margin-left: auto;
+      font-size: 1.4rem;
+      display: flex;
+      gap: 4px;
+    }
 
-    .main-container {
-      width: 100%;
-      max-width: 500px;
-      padding: 16px;
+    /* 题目展示区 */
+    .tetris-word-display {
+      padding: 12px 20px;
+      text-align: center;
+      background: rgba(0,0,0,0.1);
+      color: #fff;
+      z-index: 10;
+    }
+    .tetris-kanji-hint {
+      font-size: 2.2rem;
+      font-weight: 900;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      letter-spacing: 0.05em;
+    }
+    .tetris-meaning-hint {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.9);
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    /* 核心舞台与下落区域 */
+    .tetris-main {
+      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
-    }
-
-    .top-bar {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .capsule-btn {
-      padding: 6px 14px;
-      border-radius: 9999px;
-      border: 1px solid #bfdbfe;
-      background: #ffffff;
-      color: var(--primary);
-      font-size: 13px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-    .score-badge {
-      padding: 6px 14px;
-      border-radius: 9999px;
-      border: 1px solid #fed7aa;
-      background: #ffffff;
-      color: #ea580c;
-      font-size: 13px;
-      font-weight: 800;
-    }
-
-    .target-hint {
-      background: #ffffff;
-      border: 1.5px solid #bfdbfe;
-      border-radius: 16px;
-      padding: 12px 20px;
-      text-align: center;
-      width: 100%;
-      box-shadow: 0 4px 10px rgba(59, 130, 246, 0.06);
-    }
-    .target-title { font-size: 12px; color: #64748b; font-weight: 700; }
-    .target-meaning { font-size: 24px; font-weight: 900; color: #1e3a8a; }
-
-    /* 游戏舞台 */
-    .game-stage {
-      width: 100%;
-      height: 380px;
-      background: #ffffff;
-      border: 2px solid #bfdbfe;
-      border-radius: 20px;
+      justify-content: flex-end;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 6px 16px rgba(59, 130, 246, 0.08);
+      min-height: 0;
     }
-
-    .tracks {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-    }
-    .track-col {
+    .tetris-canvas-wrap {
       flex: 1;
-      border-right: 1px dashed #e2e8f0;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      padding-bottom: 12px;
+      width: 100%;
+      max-width: 500px;
+      position: relative;
     }
-    .track-col:last-child { border-right: none; }
-    .catcher-box {
-      width: 80%;
-      height: 48px;
-      background: #eff6ff;
-      border: 2px solid #3b82f6;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      font-weight: 800;
-      color: #2563eb;
-      transition: background 0.15s ease;
-    }
-    .catcher-box.active {
-      background: #2563eb;
-      color: #ffffff;
-    }
-
-    /* 下落方块百分比定位 */
-    .falling-block {
+    
+    /* 下落的大假名卡片 */
+    .falling-kana {
       position: absolute;
       top: 0;
-      width: 70px;
-      height: 60px;
-      border-radius: 14px;
-      background: #3b82f6;
-      color: #ffffff;
-      font-size: 20px;
+      width: 68px;
+      height: 68px;
+      background: rgba(255,255,255,0.95);
+      border: 3px solid #3b82f6;
+      border-radius: 18px;
+      color: #1e3a8a;
+      font-size: 2rem;
       font-weight: 900;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
       transform: translateX(-50%);
-      transition: left 0.15s ease-out;
+      transition: left 0.12s ease-out;
     }
 
-    .controls {
-      display: flex;
-      gap: 16px;
+    /* 底部凹槽接盘 */
+    .tetris-ground {
       width: 100%;
-      margin-top: 6px;
+      max-width: 500px;
+      padding-bottom: 8px;
+      background: rgba(0,0,0,0.08);
+      border-top: 2px solid rgba(255,255,255,0.25);
     }
-    .ctrl-btn {
+    .tetris-slots-row {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 12px 0;
+    }
+    .tetris-slot {
       flex: 1;
-      padding: 14px;
+      height: 64px;
+      border: 2.5px solid rgba(255,255,255,0.5);
       border-radius: 16px;
-      background: #ffffff;
-      border: 1.5px solid #bfdbfe;
-      color: #2563eb;
-      font-size: 20px;
-      font-weight: 800;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(59, 130, 246, 0.1);
-      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: #fff;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(6px);
+      transition: all 0.15s ease;
     }
-    .ctrl-btn:active { background: #eff6ff; }
+    .tetris-slot.active {
+      background: rgba(37,99,235,0.85);
+      border-color: #fff;
+      box-shadow: 0 0 16px rgba(255,255,255,0.6);
+      transform: scale(1.04);
+    }
+
+    /* 原版大圆控制按钮区 */
+    .tetris-controls {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      padding: 14px 20px;
+      background: rgba(0,0,0,0.18);
+      z-index: 10;
+    }
+    .ctrl-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .tetris-ctrl-btn {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      border: 3px solid rgba(255,255,255,0.6);
+      background: rgba(255,255,255,0.25);
+      backdrop-filter: blur(6px);
+      font-size: 1.6rem;
+      color: #fff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+      transition: all 0.1s;
+    }
+    .tetris-ctrl-btn:active {
+      background: rgba(255,255,255,0.45);
+      transform: scale(0.92);
+    }
+    .ctrl-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.8);
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo" onclick="location.href='index.html'">かなゲーム</div>
-  </header>
 
-  <div class="main-container">
-    <div class="top-bar">
-      <button class="capsule-btn" onclick="location.href='index.html'">← 返回</button>
-      <div class="capsule-btn">🎮 方块模式</div>
-      <div class="score-badge"><span id="scoreNum">0</span> 分</div>
+  <div class="tetris-top">
+    <button class="tet-back-btn" onclick="location.href='index.html'">← 返回</button>
+    <span class="tetris-score">得分<span id="tet-score">0</span></span>
+    <span class="tetris-score">关卡<span id="tet-level">1</span></span>
+    <div class="tet-lives" id="tet-lives">❤️❤️❤️</div>
+  </div>
+
+  <div class="tetris-word-display">
+    <div class="tetris-kanji-hint" id="tet-kanji">正在载入...</div>
+    <div class="tetris-meaning-hint" id="tet-meaning"></div>
+  </div>
+
+  <div class="tetris-main">
+    <div class="tetris-canvas-wrap" id="canvasWrap">
+      <div class="falling-kana" id="fallingKana">あ</div>
     </div>
-
-    <div class="target-hint">
-      <div class="target-title">按键移动接住正确的假名：</div>
-      <div class="target-meaning" id="targetMeaning">正在载入...</div>
-    </div>
-
-    <div class="game-stage" id="stage">
-      <div class="tracks">
-        <div class="track-col"><div class="catcher-box" id="catcher-0">轨道 1</div></div>
-        <div class="track-col"><div class="catcher-box" id="catcher-1">轨道 2</div></div>
-        <div class="track-col"><div class="catcher-box" id="catcher-2">轨道 3</div></div>
+    <div class="tetris-ground">
+      <div class="tetris-slots-row">
+        <div class="tetris-slot" id="slot-0">轨道 1</div>
+        <div class="tetris-slot" id="slot-1">轨道 2</div>
+        <div class="tetris-slot" id="slot-2">轨道 3</div>
       </div>
-      <div class="falling-block" id="block">あ</div>
     </div>
+  </div>
 
-    <div class="controls">
-      <button class="ctrl-btn" onclick="moveLeft()">◀ 左移 (A)</button>
-      <button class="ctrl-btn" onclick="moveRight()">右移 (D) ▶</button>
+  <div class="tetris-controls">
+    <div class="ctrl-col">
+      <button class="tetris-ctrl-btn" onclick="moveLeft()">◀</button>
+      <div class="ctrl-label">左移 (A)</div>
+    </div>
+    <div class="ctrl-col">
+      <button class="tetris-ctrl-btn" onclick="quickDrop()">⬇</button>
+      <div class="ctrl-label">快落 (S)</div>
+    </div>
+    <div class="ctrl-col">
+      <button class="tetris-ctrl-btn" onclick="moveRight()">▶</button>
+      <div class="ctrl-label">右移 (D)</div>
     </div>
   </div>
 
@@ -217,17 +246,20 @@
 
     let currentUser = null;
     let score = 0;
+    let level = 1;
+    let lives = 3;
     let currentTrack = 1; // 0, 1, 2
-    let blockY = 0;
     let targetTrack = 1;
+    let blockY = 0;
+    let dropSpeed = 1.8;
     let animId = null;
 
-    const blockQuestions = [
-      { kana: 'せんせい', meaning: '老师' },
-      { kana: 'ともだち', meaning: '朋友' },
-      { kana: 'テスト', meaning: '测试' },
-      { kana: 'がくせい', meaning: '学生' },
-      { kana: 'ありがとう', meaning: '谢谢' }
+    const blockList = [
+      { kanji: '先生', kana: 'せんせい', meaning: '老师' },
+      { kanji: '学生', kana: 'がくせい', meaning: '学生' },
+      { kanji: '友達', kana: 'ともだち', meaning: '朋友' },
+      { kanji: 'テスト', kana: 'テスト', meaning: '测验，测试' },
+      { kanji: '本', kana: 'ほん', meaning: '书' }
     ];
     let qIndex = 0;
 
@@ -256,67 +288,83 @@
       }
     }
 
-    // 采用百分比定位 3 条轨道中心：16.6%, 50%, 83.3%
     const trackPercents = ['16.6%', '50%', '83.3%'];
 
-    function updateCatcherUI() {
+    function updateTrackUI() {
       for (let i = 0; i < 3; i++) {
-        document.getElementById(`catcher-${i}`).classList.toggle('active', i === currentTrack);
+        document.getElementById(`slot-${i}`).classList.toggle('active', i === currentTrack);
       }
-      const block = document.getElementById('block');
-      block.style.left = trackPercents[currentTrack];
+      document.getElementById('fallingKana').style.left = trackPercents[currentTrack];
     }
 
     function moveLeft() {
-      if (currentTrack > 0) { currentTrack--; updateCatcherUI(); }
+      if (currentTrack > 0) { currentTrack--; updateTrackUI(); }
     }
 
     function moveRight() {
-      if (currentTrack < 2) { currentTrack++; updateCatcherUI(); }
+      if (currentTrack < 2) { currentTrack++; updateTrackUI(); }
+    }
+
+    function quickDrop() {
+      dropSpeed = 9;
     }
 
     window.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') moveLeft();
       if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') moveRight();
+      if (e.key === 'ArrowDown' || e.key === 's' || e.key === 'S') quickDrop();
     });
 
-    function spawnBlock() {
-      if (qIndex >= blockQuestions.length) qIndex = 0;
-      const q = blockQuestions[qIndex];
-      document.getElementById('targetMeaning').innerText = q.meaning;
-      document.getElementById('block').innerText = q.kana;
+    function spawnNext() {
+      if (qIndex >= blockList.length) qIndex = 0;
+      const q = blockList[qIndex];
+      document.getElementById('tet-kanji').innerText = q.kanji;
+      document.getElementById('tet-meaning').innerText = q.meaning;
+      document.getElementById('fallingKana').innerText = q.kana;
 
       targetTrack = Math.floor(Math.random() * 3);
       currentTrack = 1;
       blockY = 0;
-      updateCatcherUI();
+      dropSpeed = 1.8;
+      updateTrackUI();
 
       if (animId) cancelAnimationFrame(animId);
-      animateDrop();
+      animate();
     }
 
-    function animateDrop() {
-      blockY += 2;
-      const block = document.getElementById('block');
-      block.style.top = `${blockY}px`;
+    function animate() {
+      const wrap = document.getElementById('canvasWrap');
+      const maxH = wrap.clientHeight - 70;
 
-      if (blockY >= 305) {
+      blockY += dropSpeed;
+      document.getElementById('fallingKana').style.top = `${blockY}px`;
+
+      if (blockY >= maxH) {
+        // 到达底部判定
         if (currentTrack === targetTrack) {
           score += 10;
-          document.getElementById('scoreNum').innerText = score;
+          document.getElementById('tet-score').innerText = score;
         } else {
-          recordMistake(blockQuestions[qIndex]);
+          lives--;
+          document.getElementById('tet-lives').innerText = '❤️'.repeat(Math.max(0, lives));
+          recordMistake(blockList[qIndex]);
+
+          if (lives <= 0) {
+            alert('💔 生命值耗尽，游戏结束！');
+            location.reload();
+            return;
+          }
         }
         qIndex++;
-        setTimeout(spawnBlock, 400);
+        setTimeout(spawnNext, 300);
       } else {
-        animId = requestAnimationFrame(animateDrop);
+        animId = requestAnimationFrame(animate);
       }
     }
 
     window.addEventListener('DOMContentLoaded', async () => {
       await initAuth();
-      spawnBlock();
+      spawnNext();
     });
   </script>
 </body>
