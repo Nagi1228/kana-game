@@ -180,6 +180,10 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
             <circle cx="0" cy="10" r="20"/><circle cx="0" cy="10" r="14"/><circle cx="0" cy="10" r="8"/>
             <circle cx="40" cy="10" r="20"/><circle cx="40" cy="10" r="14"/><circle cx="40" cy="10" r="8"/>
           </g>
+        </pattern>
+        <linearGradient id="bg-wave-fade" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0" stop-color="#ffffff"/>
+          <stop offset="1" stop-color="#000000"/>
         </linearGradient>
         <mask id="bg-wave-mask">
           <rect x="0" y="640" width="1600" height="360" fill="url(#bg-wave-fade)"/>
@@ -223,7 +227,7 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
     <div class="deck-selector">
       <div class="deck-selector-header">
         <label class="cn-text">📖 选择词库</label>
-        <span class="deck-word-count-badge cn-text" id="deckWordCountBadge">加载中...</span>
+        <span class="deck-word-count-badge cn-text" id="deckWordCountBadge">本册总词数计算中...</span>
       </div>
       <div class="cascade-grid">
         <div class="select-group">
@@ -236,7 +240,7 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
         </div>
         <div class="select-group">
           <span class="select-sublabel cn-text">三级：章节 / 课时</span>
-          <select class="deck-pick cn-text" id="lessonSelect" onchange="updateLessonCount()"></select>
+          <select class="deck-pick cn-text" id="lessonSelect" onchange="onLessonSelectChange()"></select>
         </div>
       </div>
     </div>
@@ -328,7 +332,6 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
     let currentNickname = localStorage.getItem('tangogo_nickname') || '';
     let mistakesList = JSON.parse(localStorage.getItem('tangogo_mistakes') || '[]');
 
-    // 与后台完全一致的课程目录树
     function makeLessons(prefix, count, startNo = 1) {
       return Array.from({ length: count }, (_, i) => ({
         id: `${prefix}_l${i + 1}`,
@@ -377,7 +380,6 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
         bSel.innerHTML += `<option value="${b.id}">${b.name}</option>`;
       });
 
-      // 默认记住上次选择的教材
       const savedBook = localStorage.getItem('tangogo_pref_book');
       if (savedBook && CURRICULUM.some(b => b.id === savedBook)) {
         bSel.value = savedBook;
@@ -406,7 +408,7 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
       onGradeChange(isInitial);
     }
 
-    function onGradeChange(isInitial = false) {
+    async function onGradeChange(isInitial = false) {
       const bId = document.getElementById('bookSelect').value;
       const gId = document.getElementById('gradeSelect').value;
       localStorage.setItem('tangogo_pref_grade', gId);
@@ -415,50 +417,57 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
       const grade = book ? book.children.find(g => g.id === gId) : null;
       const lSel = document.getElementById('lessonSelect');
       lSel.innerHTML = '';
-      if (grade) {
-        grade.lessons.forEach(l => {
-          lSel.innerHTML += `<option value="${l.id}">${l.name}</option>`;
-        });
+
+      if (!grade) return;
+
+      const badge = document.getElementById('deckWordCountBadge');
+      badge.innerText = '正在统计词数...';
+
+      // 1. 查询当前整册所有单词所属的 lesson_id
+      let countsMap = {};
+      let totalGradeWords = 0;
+
+      if (sbClient) {
+        try {
+          const { data, error } = await sbClient
+            .from('words')
+            .select('lesson_id')
+            .eq('book_id', bId)
+            .eq('grade_id', gId);
+
+          if (!error && data) {
+            totalGradeWords = data.length;
+            data.forEach(row => {
+              countsMap[row.lesson_id] = (countsMap[row.lesson_id] || 0) + 1;
+            });
+          }
+        } catch (e) {
+          console.warn('统计整册词数失败:', e);
+        }
       }
+
+      // 2. 更新上方整册总词数徽章
+      badge.innerText = `本册总词数：${totalGradeWords} 词`;
+
+      // 3. 将各课单词数直接标注在三级下拉选项中
+      grade.lessons.forEach(l => {
+        const count = countsMap[l.id] || 0;
+        lSel.innerHTML += `<option value="${l.id}">${l.name} (${count}词)</option>`;
+      });
 
       if (isInitial) {
         const savedLesson = localStorage.getItem('tangogo_pref_lesson');
-        if (savedLesson && grade && grade.lessons.some(l => l.id === savedLesson)) {
+        if (savedLesson && grade.lessons.some(l => l.id === savedLesson)) {
           lSel.value = savedLesson;
         }
       }
-      updateLessonCount();
+
+      onLessonSelectChange();
     }
 
-    async function updateLessonCount() {
-      const bId = document.getElementById('bookSelect').value;
-      const gId = document.getElementById('gradeSelect').value;
+    function onLessonSelectChange() {
       const lId = document.getElementById('lessonSelect').value;
       localStorage.setItem('tangogo_pref_lesson', lId);
-
-      const badge = document.getElementById('deckWordCountBadge');
-      if (!sbClient) {
-        badge.innerText = '离线模式';
-        return;
-      }
-
-      badge.innerText = '计算中...';
-      try {
-        const { count, error } = await sbClient
-          .from('words')
-          .select('*', { count: 'exact', head: true })
-          .eq('book_id', bId)
-          .eq('grade_id', gId)
-          .eq('lesson_id', lId);
-
-        if (!error && count !== null) {
-          badge.innerText = `当前课共 ${count} 词`;
-        } else {
-          badge.innerText = '当前课共 0 词';
-        }
-      } catch (e) {
-        badge.innerText = '已选定课程';
-      }
     }
 
     function startGame(modeName) {
