@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>かなゲーム - 连连看模式</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" media="print" onload="this.media='all';this.onload=null"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=M+PLUS+Rounded+1c:wght@400;700;900&family=Noto+Sans+SC:wght@400;700;900&display=swap">
 <style>
 :root {
   --bg: #f0f7ff;
@@ -24,24 +28,20 @@
   --wrong-bg: #ffe4e6;
   --shadow: rgba(37,99,235,0.18);
 }
-
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-  min-height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh; font-family: 'Noto Sans SC', sans-serif;
   background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
-  color: var(--fg);
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
+  color: var(--fg); overflow-x: hidden; display: flex; flex-direction: column; user-select: none;
 }
+.jp-text { font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif; }
+.cn-text { font-family: 'Noto Sans SC', sans-serif; }
+[hidden] { display: none !important; }
 
 .top-nav {
   display: flex; align-items: center; gap: 10px; padding: 12px 24px;
-  background-color: var(--surface);
-  border-bottom: 2px solid var(--border);
-  box-shadow: 0 2px 12px var(--shadow);
-  position: sticky; top: 0; z-index: 50;
+  background-color: var(--surface); border-bottom: 2px solid var(--border);
+  box-shadow: 0 2px 12px var(--shadow); position: sticky; top: 0; z-index: 50;
 }
 .nav-logo { font-size: 1.6rem; font-weight: 900; color: var(--accent); cursor: pointer; }
 .nav-logo span { color: var(--accent-hot); }
@@ -53,100 +53,95 @@ body {
 .game-header.match-header { width: 100%; max-width: 1180px; display: flex; align-items: center; gap: 12px; }
 .back-btn {
   background: var(--surface); border: 2px solid var(--border); border-radius: 24px;
-  padding: 8px 16px; font-size: 0.95rem; font-weight: 700; color: var(--fg2);
-  cursor: pointer; transition: all 0.15s;
+  padding: 8px 16px; font-size: 0.95rem; font-weight: 700; color: var(--fg2); cursor: pointer;
 }
 .back-btn:hover { border-color: var(--accent); color: var(--accent); }
-.score-chip {
-  background: var(--bg2); border-radius: 24px; padding: 6px 16px; font-size: 0.95rem;
-  font-weight: 700; color: var(--fg2);
-}
+.score-chip { background: var(--bg2); border-radius: 24px; padding: 6px 16px; font-size: 0.95rem; font-weight: 700; color: var(--fg2); }
 .score-chip.level-chip { color: var(--accent); background: var(--surface); border: 2px solid var(--border); }
-.score-chip.big {
-  font-size: 1.1rem; color: var(--accent-hot); background: var(--surface);
-  border: 2px solid var(--border); margin-left: auto;
-}
+.score-chip.big { font-size: 1.1rem; color: var(--accent-hot); background: var(--surface); border: 2px solid var(--border); margin-left: auto; }
 
-.match-tip {
-  width: 100%; max-width: 1180px; text-align: center;
-  font-size: 0.88rem; font-weight: 700; color: var(--fg2);
-}
+.match-tip { width: 100%; max-width: 1180px; text-align: center; font-size: 0.88rem; font-weight: 700; color: var(--fg2); }
 
-/* 原版连连看外围大板与 SVG 连线层 */
 .match-board-wrap {
   position: relative; width: 100%; max-width: 1180px;
   background: var(--surface); border: 3px solid var(--border); border-radius: 24px;
   padding: 24px; box-shadow: 0 8px 28px var(--shadow);
 }
-.match-lines {
-  position: absolute; inset: 0; width: 100%; height: 100%;
-  pointer-events: none; z-index: 3; overflow: visible;
-}
+.match-lines { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 3; overflow: visible; }
 .match-line line { stroke-linecap: round; }
 .match-line.ok line { stroke: #ef4444; stroke-width: 3.5; }
 .match-line.ok circle { fill: #ef4444; }
 
-/* 左右对称网格，中间留出超宽连线跑道 */
 .match-board {
-  position: relative; width: 100%;
-  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 14px 190px;
+  position: relative; width: 100%; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: 14px 160px;
 }
-@media (max-width: 760px) {
-  .match-board { gap: 12px 40px; }
-}
+@media (max-width: 760px) { .match-board { gap: 12px 30px; } }
 
 .match-item {
-  position: relative; z-index: 1;
-  display: flex; flex-direction: column; justify-content: center; gap: 4px;
-  min-height: 58px; min-width: 0;
-  padding: 11px 16px; border-radius: 14px;
+  position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: center; gap: 4px;
+  min-height: 60px; padding: 11px 16px; border-radius: 14px;
   border: 2.5px solid var(--border); background: var(--surface2);
-  cursor: pointer; user-select: none;
-  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+  cursor: pointer; transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
 }
 .match-item:hover { border-color: var(--accent); box-shadow: 0 6px 18px var(--shadow); }
 .match-item.match-left { align-items: center; text-align: center; }
 .match-item.match-right { align-items: center; text-align: center; }
 
-.match-item .match-word {
-  font-size: 1.32rem; font-weight: 700; color: var(--fg); line-height: 1.25;
-}
-.match-item .m-tags { display: flex; align-items: baseline; gap: 10px; }
-.match-item .m-pos {
-  font-size: 0.82rem; font-weight: 800; color: var(--fg3);
-  background: var(--bg2); border-radius: 8px; padding: 2px 8px;
-}
-.match-item .m-mean { font-size: 1.32rem; font-weight: 700; color: var(--fg); line-height: 1.3; }
+.match-item .match-word { font-size: 1.34rem; font-weight: 700; color: var(--fg); }
+.match-item .m-tags { display: flex; align-items: baseline; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.match-item .m-pos { font-size: 0.8rem; font-weight: 800; color: var(--fg3); background: var(--bg2); border-radius: 8px; padding: 2px 8px; }
+.match-item .m-kana { font-size: 1.25rem; font-weight: 700; color: var(--fg2); }
+.match-item .m-mean { font-size: 1.25rem; font-weight: 700; color: var(--fg); }
 
-.match-item.sel {
-  border-color: var(--accent); background: rgba(37,99,235,0.13);
-  box-shadow: 0 0 0 4px rgba(37,99,235,0.16);
+.match-item.sel { border-color: var(--accent); background: rgba(37,99,235,0.13); box-shadow: 0 0 0 4px rgba(37,99,235,0.16); }
+.match-item.done { border-color: var(--correct); background: var(--correct-bg); cursor: default; opacity: 0.85; pointer-events: none; }
+.match-item.wrong { border-color: var(--wrong); background: var(--wrong-bg); animation: shakeX 0.32s; }
+@keyframes shakeX { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
+
+/* 底部胶囊 Toast */
+.toast {
+  position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%) translateY(20px);
+  background: var(--fg); color: #fff; border-radius: 28px; padding: 12px 26px;
+  font-size: 1rem; font-weight: 700; opacity: 0; transition: all 0.25s ease; z-index: 300; pointer-events: none;
 }
-.match-item.done {
-  border-color: var(--correct); background: var(--correct-bg);
-  cursor: default; opacity: 0.85; box-shadow: none; pointer-events: none;
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* 原生结算 Overlay */
+.overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.65); display: flex; align-items: center; justify-content: center;
+  z-index: 200; padding: 20px; backdrop-filter: blur(8px);
 }
-.match-item.wrong {
-  border-color: var(--wrong); background: var(--wrong-bg); animation: shakeX 0.32s;
+.overlay-card {
+  background: var(--surface); border-radius: 28px; padding: 34px 28px; text-align: center;
+  width: 100%; max-width: 440px; display: flex; flex-direction: column; gap: 14px;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.35); border: 2px solid var(--border);
 }
-@keyframes shakeX {
-  0%,100% { transform: translateX(0); }
-  25% { transform: translateX(-6px); }
-  75% { transform: translateX(6px); }
+.overlay-emoji { font-size: 3.2rem; }
+.overlay-title { font-size: 1.8rem; font-weight: 900; }
+.overlay-body { font-size: 1rem; color: var(--fg2); line-height: 1.65; }
+.overlay-stats-box {
+  background: var(--bg); border-radius: 16px; padding: 12px 16px; display: grid; grid-template-columns: 1fr 1fr;
+  gap: 8px; font-size: 0.9rem; font-weight: 700; text-align: left;
 }
+.overlay-stats-item b { color: var(--accent); }
+.overlay-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 6px; }
+.action-btn { padding: 10px 20px; border-radius: 24px; border: none; font-size: 0.95rem; font-weight: 700; cursor: pointer; }
+.btn-primary { background: linear-gradient(135deg, var(--accent), #1d4ed8); color: #fff; }
+.btn-hot { background: linear-gradient(135deg, var(--accent-hot), #ea580c); color: #fff; }
+.btn-secondary { background: var(--surface); color: var(--fg2); border: 2px solid var(--border); }
 </style>
 </head>
 <body>
 
   <nav class="top-nav">
-    <div class="nav-logo" onclick="location.href='index.html'">かな<span>ゲーム</span></div>
+    <div class="nav-logo jp-text" onclick="location.href='index.html'">かな<span>ゲーム</span></div>
   </nav>
 
   <div class="match-game">
     <div class="game-header match-header">
       <button class="back-btn" onclick="location.href='index.html'">← 返回</button>
-      <span class="score-chip level-chip">🔗 连连看闯关</span>
+      <span class="score-chip level-chip" id="groupBadge">🔗 连连看 第 1 组</span>
       <span class="score-chip" id="match-mistakes">失误 0</span>
       <span class="score-chip big" id="match-score">0分</span>
     </div>
@@ -159,25 +154,23 @@ body {
     </div>
   </div>
 
+  <div class="overlay" id="overlay" hidden>
+    <div class="overlay-card">
+      <div class="overlay-emoji" id="ov-emoji">🏆</div>
+      <div class="overlay-title cn-text" id="ov-title">整课大通关！</div>
+      <div class="overlay-body cn-text" id="ov-body"></div>
+      <div class="overlay-stats-box" id="ov-stats" hidden></div>
+      <div class="overlay-actions" id="ov-actions"></div>
+    </div>
+  </div>
+
+  <div class="toast cn-text" id="toast"></div>
+
   <script>
     const SUPABASE_URL = 'https://zbfjbtzvnhmfzyvooact.supabase.co';
     const SUPABASE_KEY = 'sb_publishable_AP0YnQLgzmB3d63_4zbpjg_vHeTyo8Z';
     const sbClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
-
     let currentUser = null;
-    let score = 0;
-    let mistakes = 0;
-    let matchedCount = 0;
-    let selectedLeft = null;
-    let selectedRight = null;
-
-    const roundWords = [
-      { id: 1, kanji: '先生', kana: 'せんせい', pos: '名', meaning: '老师' },
-      { id: 2, kanji: '学生', kana: 'がくせい', pos: '名', meaning: '学生' },
-      { id: 3, kanji: '友達', kana: 'ともだち', pos: '名', meaning: '朋友' },
-      { id: 4, kanji: 'テスト', kana: 'テスト', pos: '名', meaning: '测验，测试' },
-      { id: 5, kanji: '挨拶', kana: 'あいさつ', pos: '名', meaning: '寒暄，打招呼' }
-    ];
 
     async function initAuth() {
       if (!sbClient) return;
@@ -204,37 +197,82 @@ body {
       }
     }
 
-    function initBoard() {
+    // 生词表（包含词性、汉字、假名与中文释义）
+    const ALL_WORDS = [
+      { id: 1, kanji: '友達', kana: 'ともだち', pos: '名', meaning: '朋友' },
+      { id: 2, kanji: '先生', kana: 'せんせい', pos: '名', meaning: '老师' },
+      { id: 3, kanji: '挨拶', kana: 'あいさつ', pos: '名', meaning: '寒暄，打招呼' },
+      { id: 4, kanji: '学生', kana: 'がくせい', pos: '名', meaning: '学生' },
+      { id: 5, kanji: '', kana: 'テスト', pos: '名', meaning: '测验，测试' },
+      { id: 6, kanji: '本', kana: 'ほん', pos: '名', meaning: '书' },
+      // 第2组 (6个)
+      { id: 7, kanji: '靴', kana: 'くつ', pos: '名', meaning: '鞋' },
+      { id: 8, kanji: '時計', kana: 'とけい', pos: '名', meaning: '钟，表' },
+      { id: 9, kanji: '', kana: 'ノート', pos: '名', meaning: '笔记本' },
+      { id: 10, kanji: '鉛筆', kana: 'えんぴつ', pos: '名', meaning: '铅笔' },
+      { id: 11, kanji: '傘', kana: 'かさ', pos: '名', meaning: '伞' },
+      { id: 12, kanji: '', kana: 'カメラ', pos: '名', meaning: '照相机' }
+    ];
+
+    const GROUP_SIZE = 6;
+    let currentGroup = 0;
+    const totalGroups = Math.ceil(ALL_WORDS.length / GROUP_SIZE);
+
+    let score = 0;
+    let mistakes = 0;
+    let matchedCount = 0;
+    let selectedLeft = null;
+    let selectedRight = null;
+    let startTime = Date.now();
+    let currentRoundWords = [];
+
+    let toastTimer = null;
+    function showToast(msg, duration = 2200) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => t.classList.remove('show'), duration);
+    }
+
+    function startGroup(groupIdx) {
+      currentGroup = groupIdx;
+      document.getElementById('groupBadge').innerText = `🔗 连连看 第 ${currentGroup + 1}/${totalGroups} 组`;
       matchedCount = 0;
       selectedLeft = null;
       selectedRight = null;
       document.getElementById('svgLines').innerHTML = '';
 
-      const leftList = [...roundWords].sort(() => Math.random() - 0.5);
-      const rightList = [...roundWords].sort(() => Math.random() - 0.5);
+      const start = groupIdx * GROUP_SIZE;
+      const end = Math.min(start + GROUP_SIZE, ALL_WORDS.length);
+      currentRoundWords = ALL_WORDS.slice(start, end);
+
+      const leftList = [...currentRoundWords].sort(() => Math.random() - 0.5);
+      const rightList = [...currentRoundWords].sort(() => Math.random() - 0.5);
 
       const board = document.getElementById('matchBoard');
       board.innerHTML = '';
 
-      // 按照左右交错排进网格：每个左边元素紧接着右边元素
-      for (let i = 0; i < roundWords.length; i++) {
-        // 左边卡片
+      for (let i = 0; i < currentRoundWords.length; i++) {
         const l = leftList[i];
         const leftEl = document.createElement('div');
         leftEl.className = 'match-item match-left';
         leftEl.dataset.id = l.id;
-        leftEl.innerHTML = `<div class="match-word">${l.kanji || l.kana}</div>`;
+        leftEl.innerHTML = `<div class="match-word jp-text">${l.kanji || l.kana}</div>`;
         leftEl.onclick = () => selectCard('left', leftEl, l);
         board.appendChild(leftEl);
 
-        // 右边卡片
+        // 核心改动 2：右栏完整提供 [词性] + 假名 + 中文含义
         const r = rightList[i];
         const rightEl = document.createElement('div');
         rightEl.className = 'match-item match-right';
         rightEl.dataset.id = r.id;
         rightEl.innerHTML = `
-          <div class="m-tags"><span class="m-pos">${r.pos}</span></div>
-          <div class="m-mean">${r.meaning}</div>
+          <div class="m-tags">
+            <span class="m-pos">${r.pos}</span>
+            <span class="m-kana jp-text">${r.kana}</span>
+            <span class="m-mean cn-text">${r.meaning}</span>
+          </div>
         `;
         rightEl.onclick = () => selectCard('right', rightEl, r);
         board.appendChild(rightEl);
@@ -251,15 +289,11 @@ body {
         selectedRight = { el, item };
         el.classList.add('sel');
       }
-
-      if (selectedLeft && selectedRight) {
-        checkMatch();
-      }
+      if (selectedLeft && selectedRight) checkMatch();
     }
 
     function checkMatch() {
       if (selectedLeft.item.id === selectedRight.item.id) {
-        // 配对正确：划红线并连通
         drawSvgLine(selectedLeft.el, selectedRight.el);
         selectedLeft.el.classList.remove('sel');
         selectedRight.el.classList.remove('sel');
@@ -269,37 +303,118 @@ body {
         score += 10;
         matchedCount++;
         document.getElementById('match-score').innerText = `${score}分`;
-
         selectedLeft = null;
         selectedRight = null;
 
-        if (matchedCount === roundWords.length) {
-          setTimeout(() => {
-            alert('🎉 恭喜！全部连线消除成功！');
-            location.reload();
-          }, 400);
+        if (matchedCount === currentRoundWords.length) {
+          handleGroupComplete();
         }
       } else {
-        // 配对错误
         mistakes++;
         document.getElementById('match-mistakes').innerText = `失误 ${mistakes}`;
         recordMistake(selectedLeft.item);
 
-        const lEl = selectedLeft.el;
-        const rEl = selectedRight.el;
-        lEl.classList.add('wrong');
-        rEl.classList.add('wrong');
-
+        const lEl = selectedLeft.el; const rEl = selectedRight.el;
+        lEl.classList.add('wrong'); rEl.classList.add('wrong');
         setTimeout(() => {
           lEl.classList.remove('sel', 'wrong');
           rEl.classList.remove('sel', 'wrong');
-          selectedLeft = null;
-          selectedRight = null;
+          selectedLeft = null; selectedRight = null;
         }, 400);
       }
     }
 
-    // 在卡片右锚点与左锚点之间拉出原版红线
+    function handleGroupComplete() {
+      if (currentGroup < totalGroups - 1) {
+        // 还有下一组：平滑提示，自动切组
+        showToast(`🎉 第 ${currentGroup + 1} 组完成！准备进入下一组...`);
+        setTimeout(() => {
+          startGroup(currentGroup + 1);
+        }, 1200);
+      } else {
+        // 整课通关：展示大弹窗与4个按钮
+        const totalSeconds = Math.max(1, Math.round((Date.now() - startTime) / 1000));
+        const m = Math.floor(totalSeconds / 60); const s = totalSeconds % 60;
+        const timeFormatted = `${m > 0 ? m + '分' : ''}${s}秒`;
+
+        const overlay = document.getElementById('overlay');
+        document.getElementById('ov-body').textContent = `恭喜通关！本课全部 ${ALL_WORDS.length} 个单词已全部连线消除！`;
+        const statsEl = document.getElementById('ov-stats');
+        statsEl.hidden = false;
+        statsEl.innerHTML = `
+          <div class="overlay-stats-item">总得分：<b>${score} 分</b></div>
+          <div class="overlay-stats-item">总用时：<b>${timeFormatted}</b></div>
+          <div class="overlay-stats-item">总词数：<b>${ALL_WORDS.length} 词</b></div>
+          <div class="overlay-stats-item">失误数：<b>${mistakes} 次</b></div>
+        `;
+
+        const actEl = document.getElementById('ov-actions');
+        actEl.innerHTML = '';
+
+        actEl.appendChild(createBtn('下一课', 'btn-primary', () => {
+          showToast('正在前往下一课...');
+          setTimeout(() => location.href = 'link.html?lesson=unit1_lesson2', 500);
+        }));
+        actEl.appendChild(createBtn('再来1遍', 'btn-secondary', () => {
+          overlay.hidden = true;
+          score = 0; mistakes = 0; startTime = Date.now();
+          startGroup(0);
+        }));
+        actEl.appendChild(createBtn('📸 分享成绩', 'btn-hot', () => generateShareCard(score, timeFormatted, ALL_WORDS.length)));
+        actEl.appendChild(createBtn('回到首页', 'btn-secondary', () => location.href = 'index.html'));
+
+        overlay.hidden = false;
+      }
+    }
+
+    function createBtn(text, cls, onClick) {
+      const b = document.createElement('button');
+      b.className = 'action-btn cn-text ' + cls;
+      b.textContent = text;
+      b.onclick = onClick;
+      return b;
+    }
+
+    function generateShareCard(score, timeSpent, totalWords) {
+      showToast('正在生成成绩单图片...');
+      const cvs = document.createElement('canvas');
+      cvs.width = 640; cvs.height = 840;
+      const ctx = cvs.getContext('2d');
+      const bgGrad = ctx.createLinearGradient(0, 0, 640, 840);
+      bgGrad.addColorStop(0, '#f0f7ff'); bgGrad.addColorStop(1, '#bfdbfe');
+      ctx.fillStyle = bgGrad; ctx.fillRect(0, 0, 640, 840);
+
+      ctx.strokeStyle = '#2563eb'; ctx.lineWidth = 10; ctx.strokeRect(20, 20, 600, 800);
+      ctx.fillStyle = '#2563eb'; ctx.font = "900 34px sans-serif"; ctx.textAlign = 'center';
+      ctx.fillText('かなゲーム · 连连看闯关', 320, 90);
+      ctx.font = "72px sans-serif"; ctx.fillText('🏆', 320, 180);
+      ctx.fillStyle = '#0c2340'; ctx.font = "900 32px sans-serif"; ctx.fillText('通 关 荣 誉 证 书', 320, 240);
+
+      const userNick = localStorage.getItem('tangogo_nickname') || '日语学员';
+      ctx.font = "700 22px sans-serif"; ctx.fillStyle = '#1e4d8c'; ctx.fillText(`学员：${userNick}`, 320, 290);
+
+      ctx.fillStyle = '#ffffff'; ctx.fillRect(80, 330, 480, 320);
+      ctx.fillStyle = '#64748b'; ctx.font = "700 18px sans-serif"; ctx.textAlign = 'left';
+      ctx.fillText('⏱ 通关用时', 120, 400);
+      ctx.fillText('📖 掌握词汇', 120, 460);
+      ctx.fillText('🌟 最终得分', 120, 520);
+      ctx.fillText('🎮 挑战模式', 120, 580);
+
+      ctx.textAlign = 'right'; ctx.fillStyle = '#0c2340'; ctx.font = "900 20px sans-serif";
+      ctx.fillText(timeSpent, 520, 400);
+      ctx.fillText(`${totalWords} 词`, 520, 460);
+      ctx.fillStyle = '#ea580c'; ctx.font = "900 26px sans-serif"; ctx.fillText(`${score} 分`, 520, 520);
+      ctx.fillStyle = '#2563eb'; ctx.font = "900 20px sans-serif"; ctx.fillText('连连看模式', 520, 580);
+
+      setTimeout(() => {
+        const a = document.createElement('a');
+        a.href = cvs.toDataURL('image/png');
+        a.download = `连连看通关成绩单_${Date.now()}.png`;
+        a.click();
+        showToast('🎉 成绩单图片已保存到本地！');
+      }, 350);
+    }
+
     function drawSvgLine(el1, el2) {
       const wrapRect = document.getElementById('boardWrap').getBoundingClientRect();
       const r1 = el1.getBoundingClientRect();
@@ -315,30 +430,21 @@ body {
       g.setAttribute('class', 'match-line ok');
 
       const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-      line.setAttribute('x1', x1);
-      line.setAttribute('y1', y1);
-      line.setAttribute('x2', x2);
-      line.setAttribute('y2', y2);
+      line.setAttribute('x1', x1); line.setAttribute('y1', y1);
+      line.setAttribute('x2', x2); line.setAttribute('y2', y2);
 
       const c1 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-      c1.setAttribute('cx', x1);
-      c1.setAttribute('cy', y1);
-      c1.setAttribute('r', '5');
-
+      c1.setAttribute('cx', x1); c1.setAttribute('cy', y1); c1.setAttribute('r', '5');
       const c2 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-      c2.setAttribute('cx', x2);
-      c2.setAttribute('cy', y2);
-      c2.setAttribute('r', '5');
+      c2.setAttribute('cx', x2); c2.setAttribute('cy', y2); c2.setAttribute('r', '5');
 
-      g.appendChild(line);
-      g.appendChild(c1);
-      g.appendChild(c2);
+      g.appendChild(line); g.appendChild(c1); g.appendChild(c2);
       svg.appendChild(g);
     }
 
     window.addEventListener('DOMContentLoaded', async () => {
       await initAuth();
-      initBoard();
+      startGroup(0);
     });
   </script>
 </body>
