@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>かなゲーム - 日语单词闯关</title>
+<title>かなゲーム - 连连看模式</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,502 +22,464 @@
   --fg3: #2563eb;
   --accent: #2563eb;
   --accent-hot: #f97316;
+  --correct: #059669;
+  --correct-bg: #d1fae5;
+  --wrong: #e11d48;
+  --wrong-bg: #ffe4e6;
   --shadow: rgba(37,99,235,0.18);
 }
-
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html, body {
-  min-height: 100vh;
-  font-family: 'Noto Sans SC', sans-serif;
-  background: var(--bg);
-  color: var(--fg);
-  overflow-x: hidden;
+body {
+  min-height: 100vh; font-family: 'Noto Sans SC', sans-serif;
+  background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+  color: var(--fg); overflow-x: hidden; display: flex; flex-direction: column; user-select: none;
 }
 .jp-text { font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif; }
 .cn-text { font-family: 'Noto Sans SC', sans-serif; }
+[hidden] { display: none !important; }
 
-/* 顶部青海波纹样导航条（图 3 原版） */
 .top-nav {
   display: flex; align-items: center; gap: 10px; padding: 12px 24px;
-  background-color: var(--surface);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='42' viewBox='0 0 84 42'%3E%3Cg fill='none' stroke='%232563eb' stroke-opacity='0.17' stroke-width='1.2'%3E%3Ccircle cx='42' cy='42' r='40'/%3E%3Ccircle cx='42' cy='42' r='30'/%3E%3Ccircle cx='42' cy='42' r='20'/%3E%3Ccircle cx='42' cy='42' r='10'/%3E%3Ccircle cx='0' cy='21' r='40'/%3E%3Ccircle cx='0' cy='21' r='30'/%3E%3Ccircle cx='0' cy='21' r='20'/%3E%3Ccircle cx='0' cy='21' r='10'/%3E%3Ccircle cx='84' cy='21' r='40'/%3E%3Ccircle cx='84' cy='21' r='30'/%3E%3Ccircle cx='84' cy='21' r='20'/%3E%3Ccircle cx='84' cy='21' r='10'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: 84px 42px;
-  background-position: 0 7px;
-  border-bottom: 2px solid var(--border);
-  position: sticky; top: 0; z-index: 50;
-  box-shadow: 0 2px 12px var(--shadow);
+  background-color: var(--surface); border-bottom: 2px solid var(--border);
+  box-shadow: 0 2px 12px var(--shadow); position: sticky; top: 0; z-index: 50;
 }
-.nav-logo { font-size: 1.6rem; font-weight: 900; color: var(--accent); letter-spacing: -0.02em; margin-right: auto; cursor: pointer; }
+.nav-logo { font-size: 1.6rem; font-weight: 900; color: var(--accent); cursor: pointer; }
 .nav-logo span { color: var(--accent-hot); }
-.nav-actions { display: flex; align-items: center; gap: 8px; }
-.nav-btn {
-  padding: 6px 14px; font-size: 0.92rem; font-weight: 700; color: var(--fg2);
-  background: none; border: 2px solid transparent; border-radius: 20px; cursor: pointer; transition: all 0.15s;
-}
-.nav-btn:hover { background: var(--bg2); border-color: var(--border); }
-.nav-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
-.nav-badge {
-  display: inline-block; margin-left: 4px; min-width: 18px; padding: 1px 6px;
-  border-radius: 10px; background: var(--accent-hot); color: #fff; font-size: 0.72rem; font-weight: 800;
-}
-.user-capsule {
-  display: flex; align-items: center; gap: 6px; padding: 5px 14px;
-  border: 2px solid var(--border); border-radius: 24px; background: #fff; cursor: pointer;
-  font-size: 0.92rem; font-weight: 700; color: var(--fg); box-shadow: 0 1px 4px var(--shadow);
-}
-.user-capsule:hover { border-color: var(--accent); }
 
-/* 主体容器与日式简约风背景（图 3 原版 SVG） */
-.home-wrap {
-  min-height: calc(100vh - 65px);
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 24px; padding: 24px 20px 60px;
-  position: relative;
+.match-game {
+  flex: 1; display: flex; flex-direction: column; align-items: center;
+  padding: 22px 16px; gap: 16px; justify-content: center;
 }
-.home-bg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
-.home-wrap > :not(.home-bg) { position: relative; z-index: 1; }
-.bg-grid-line { fill: none; stroke: var(--border); stroke-width: 1; opacity: 0.18; }
-.bg-wave { fill: none; stroke: var(--border); stroke-width: 1.1; }
-.bg-fuji { fill: var(--fg3); opacity: 0.18; }
-.bg-fuji-snow { fill: var(--bg); opacity: 0.75; }
-.bg-kana { fill: var(--fg3); opacity: 0.085; font-weight: 700; font-family: 'Yu Gothic UI', sans-serif; }
-.bg-petal { fill: #f472b6; opacity: 0.35; }
 
-.home-hero { text-align: center; margin-top: 4px; }
-.home-mascot { font-size: 3.4rem; line-height: 1; margin-bottom: 8px; }
-.home-title { font-size: clamp(2.3rem, 4.5vw, 3.6rem); font-weight: 900; color: var(--fg); line-height: 1.1; }
-.home-title em { color: var(--accent); font-style: normal; }
-.home-sub { font-size: 1.1rem; color: var(--fg2); margin-top: 8px; font-weight: 700; }
+.match-top-card {
+  width: 100%; max-width: 1180px; background: var(--surface); border: 2.5px solid var(--border);
+  border-radius: 20px; padding: 12px 20px; display: flex; align-items: center; gap: 14px;
+  box-shadow: 0 4px 16px var(--shadow); flex-wrap: wrap;
+}
+.back-btn {
+  background: var(--surface); border: 2px solid var(--border); border-radius: 24px;
+  padding: 7px 16px; font-size: 0.95rem; font-weight: 700; color: var(--fg2); cursor: pointer;
+}
+.back-btn:hover { border-color: var(--accent); color: var(--accent); }
+.lesson-chip {
+  background: var(--surface2); border: 2px solid var(--border); border-radius: 20px;
+  padding: 6px 16px; font-size: 0.95rem; font-weight: 800; color: var(--accent); white-space: nowrap;
+}
+.progress-bar-wrap { flex: 1; height: 10px; background: var(--bg3); border-radius: 6px; overflow: hidden; min-width: 120px; }
+.progress-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), var(--accent-hot)); transition: width 0.3s; }
+.group-counter { font-size: 1rem; font-weight: 800; color: var(--fg2); white-space: nowrap; }
+.mistake-chip { font-size: 0.95rem; font-weight: 700; color: var(--fg2); white-space: nowrap; }
+.score-chip {
+  padding: 6px 18px; border-radius: 24px; border: 2px solid var(--border); background: var(--surface);
+  color: var(--accent-hot); font-size: 1.1rem; font-weight: 900; white-space: nowrap; margin-left: auto;
+}
 
-/* 3. 板块放大：选择词库大卡片（宽度 900px，排版舒展大气） */
-.deck-selector {
-  width: 100%; max-width: 900px; display: flex; flex-direction: column; gap: 14px;
-  background: var(--surface); padding: 22px 26px; border-radius: 22px;
-  border: 2.5px solid var(--border); box-shadow: 0 6px 24px var(--shadow);
-}
-.deck-selector-header { display: flex; align-items: center; justify-content: space-between; }
-.deck-selector-header label { font-size: 1.05rem; font-weight: 900; color: var(--fg2); }
-.deck-word-count-badge { font-size: 0.88rem; font-weight: 700; color: var(--accent); background: var(--bg2); padding: 5px 14px; border-radius: 20px; }
+.match-tip { width: 100%; max-width: 1180px; text-align: center; font-size: 0.88rem; font-weight: 700; color: var(--fg2); }
 
-.cascade-grid { display: grid; grid-template-columns: 1fr 0.85fr 1.7fr; gap: 12px; }
-@media (max-width: 680px) { .cascade-grid { grid-template-columns: 1fr; } }
-.select-group { display: flex; flex-direction: column; gap: 6px; }
-.select-sublabel { font-size: 0.8rem; font-weight: 700; color: var(--fg3); padding-left: 2px; }
-select.deck-pick {
-  width: 100%; padding: 13px 36px 13px 16px; border-radius: 14px; border: 2px solid var(--border);
-  background-color: var(--surface2); color: var(--fg); font-family: inherit; font-size: 1rem;
-  font-weight: 700; appearance: none; cursor: pointer; outline: none; transition: all 0.15s;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2.5'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-  background-repeat: no-repeat; background-position: right 14px center;
+.match-board-wrap {
+  position: relative; width: 100%; max-width: 1180px;
+  background: var(--surface); border: 3px solid var(--border); border-radius: 24px;
+  padding: 24px; box-shadow: 0 8px 28px var(--shadow);
 }
-select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(37,99,235,0.15); }
+.match-lines { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 3; overflow: visible; }
+.match-line line { stroke-linecap: round; }
+.match-line.ok line { stroke: #ef4444; stroke-width: 3.5; }
+.match-line.ok circle { fill: #ef4444; }
 
-/* 3. 板块放大：4 款模式大卡片（对齐 900px，字号增大，宽松舒适） */
-.mode-cards {
-  width: 100%; max-width: 900px; display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px;
+.match-board {
+  position: relative; width: 100%; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: 14px 160px;
 }
-@media (max-width: 640px) { .mode-cards { grid-template-columns: 1fr; } }
-.mode-card {
-  background: var(--surface); border: 3px solid var(--border); border-radius: 22px;
-  padding: 20px 22px; cursor: pointer; transition: all 0.15s;
-  display: flex; align-items: center; gap: 18px; box-shadow: 0 4px 16px var(--shadow);
-}
-.mode-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 12px 30px var(--shadow); }
-.mode-card .icon { font-size: 2.6rem; line-height: 1; flex-shrink: 0; }
-.mode-text { display: flex; flex-direction: column; gap: 4px; }
-.mode-card .name { font-size: 1.2rem; font-weight: 900; color: var(--fg); }
-.mode-card .desc { font-size: 0.88rem; color: var(--fg2); line-height: 1.45; }
-.mode-card.mode-puzzle { border-color: #86efac; }
-.mode-card.mode-tetris { border-color: #818cf8; }
-.mode-card.mode-match { border-color: #34d399; }
-.mode-card.mode-elim { border-color: #fbbf24; }
+@media (max-width: 760px) { .match-board { gap: 12px 30px; } }
 
-/* 登录/个人中心弹窗 */
-.modal-overlay {
-  position: fixed; inset: 0; background: rgba(12, 35, 64, 0.55);
-  backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center;
-  z-index: 999999; padding: 16px;
+.match-item {
+  position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: center; gap: 4px;
+  min-height: 60px; padding: 11px 16px; border-radius: 14px;
+  border: 2.5px solid var(--border); background: var(--surface2);
+  cursor: pointer; transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
 }
-.modal-content {
-  background: #fff; border-radius: 22px; padding: 26px; width: 100%; max-width: 400px;
-  box-shadow: 0 20px 30px rgba(0,0,0,0.25); border: 2px solid var(--border);
+.match-item:hover { border-color: var(--accent); box-shadow: 0 6px 18px var(--shadow); }
+.match-item.match-left { align-items: center; text-align: center; }
+.match-item.match-right { align-items: center; text-align: center; }
+
+.match-item .match-word { font-size: 1.34rem; font-weight: 700; color: var(--fg); }
+.match-item .m-tags { display: flex; align-items: baseline; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.match-item .m-pos { font-size: 0.8rem; font-weight: 800; color: var(--fg3); background: var(--bg2); border-radius: 8px; padding: 2px 8px; }
+.match-item .m-kana { font-size: 1.25rem; font-weight: 700; color: var(--fg2); }
+.match-item .m-mean { font-size: 1.25rem; font-weight: 700; color: var(--fg); }
+
+.match-item.sel { border-color: var(--accent); background: rgba(37,99,235,0.13); box-shadow: 0 0 0 4px rgba(37,99,235,0.16); }
+.match-item.done { border-color: var(--correct); background: var(--correct-bg); cursor: default; opacity: 0.85; pointer-events: none; }
+.match-item.wrong { border-color: var(--wrong); background: var(--wrong-bg); animation: shakeX 0.32s; }
+@keyframes shakeX { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
+
+.toast {
+  position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%) translateY(20px);
+  background: var(--fg); color: #fff; border-radius: 28px; padding: 12px 26px;
+  font-size: 1rem; font-weight: 700; opacity: 0; transition: all 0.25s ease; z-index: 300; pointer-events: none;
 }
-.modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
-.modal-title { font-size: 1.2rem; font-weight: 900; color: var(--fg); }
-.close-btn { background: none; border: none; font-size: 24px; cursor: pointer; color: #94a3b8; }
-.input-group { margin-bottom: 14px; display: flex; flex-direction: column; gap: 6px; }
-.input-group label { font-size: 0.82rem; font-weight: 700; color: #475569; }
-.input-group input { padding: 11px 13px; border: 2px solid var(--border); border-radius: 12px; font-size: 0.95rem; outline: none; }
-.btn { background: var(--accent); color: #fff; border: none; border-radius: 12px; padding: 11px 18px; font-size: 0.95rem; font-weight: 800; cursor: pointer; }
-.btn-secondary { background: #f1f5f9; color: #334155; }
-.btn-danger { background: #ef4444; color: #fff; }
-.avatar-list { display: flex; gap: 10px; margin: 6px 0 12px 0; }
-.avatar-btn { font-size: 26px; padding: 6px; border: 2px solid var(--border); border-radius: 12px; cursor: pointer; background: #fff; }
-.avatar-btn.selected { border-color: var(--accent); background: #eff6ff; }
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+.overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.65); display: flex; align-items: center; justify-content: center;
+  z-index: 200; padding: 20px; backdrop-filter: blur(8px);
+}
+.overlay-card {
+  background: var(--surface); border-radius: 28px; padding: 34px 28px; text-align: center;
+  width: 100%; max-width: 440px; display: flex; flex-direction: column; gap: 14px;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.35); border: 2px solid var(--border);
+}
+.overlay-emoji { font-size: 3.2rem; }
+.overlay-title { font-size: 1.8rem; font-weight: 900; }
+.overlay-body { font-size: 1rem; color: var(--fg2); line-height: 1.65; }
+.overlay-stats-box {
+  background: var(--bg); border-radius: 16px; padding: 12px 16px; display: grid; grid-template-columns: 1fr 1fr;
+  gap: 8px; font-size: 0.9rem; font-weight: 700; text-align: left;
+}
+.overlay-stats-item b { color: var(--accent); }
+.overlay-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 6px; }
+.action-btn { padding: 10px 20px; border-radius: 24px; border: none; font-size: 0.95rem; font-weight: 700; cursor: pointer; }
+.btn-primary { background: linear-gradient(135deg, var(--accent), #1d4ed8); color: #fff; }
+.btn-hot { background: linear-gradient(135deg, var(--accent-hot), #ea580c); color: #fff; }
+.btn-secondary { background: var(--surface); color: var(--fg2); border: 2px solid var(--border); }
 </style>
 </head>
 <body>
 
   <nav class="top-nav">
-    <div class="nav-logo jp-text" onclick="location.reload()">かな<span>ゲーム</span></div>
-    <div class="nav-actions">
-      <button class="nav-btn active cn-text">首页</button>
-      <button class="nav-btn cn-text" onclick="alert('词库管理模块即将开放')">词库</button>
-      <button class="nav-btn cn-text" onclick="openMistakesModal()">错词本<span class="nav-badge" id="mistakeBadge">0</span></button>
-      
-      <div class="user-capsule" onclick="openUserModal()">
-        <span id="userAvatarIcon">🌸</span>
-        <span id="userDisplayName">游客</span>
-      </div>
-    </div>
+    <div class="nav-logo jp-text" onclick="location.href='index.html'">かな<span>ゲーム</span></div>
   </nav>
 
-  <div class="home-wrap">
-    <!-- 图 3 原版日式简约背景：原稿纸方格 + 富士山剪影 + 青海波 + 假名水印 + 樱花花瓣 -->
-    <svg class="home-bg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
-      <defs>
-        <pattern id="bg-genko" width="48" height="48" patternUnits="userSpaceOnUse">
-          <path class="bg-grid-line" d="M0 48 H48 M48 0 V48"/>
-        </pattern>
-        <pattern id="bg-seigaiha" width="40" height="20" patternUnits="userSpaceOnUse">
-          <g class="bg-wave">
-            <circle cx="20" cy="20" r="20"/><circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="8"/>
-            <circle cx="0" cy="10" r="20"/><circle cx="0" cy="10" r="14"/><circle cx="0" cy="10" r="8"/>
-            <circle cx="40" cy="10" r="20"/><circle cx="40" cy="10" r="14"/><circle cx="40" cy="10" r="8"/>
-          </g>
-        </pattern>
-        <linearGradient id="bg-wave-fade" x1="0" y1="1" x2="0" y2="0">
-          <stop offset="0" stop-color="#ffffff"/>
-          <stop offset="1" stop-color="#000000"/>
-        </linearGradient>
-        <mask id="bg-wave-mask">
-          <rect x="0" y="640" width="1600" height="360" fill="url(#bg-wave-fade)"/>
-        </mask>
-        <path id="bg-petal-shape" d="M0 0 C 9 -10 14 -22 10 -30 C 7 -36 2 -38 0 -34 C -2 -38 -7 -36 -10 -30 C -14 -22 -9 -10 0 0 Z"/>
-      </defs>
-
-      <!-- 1. 原稿用紙方格 -->
-      <rect width="1600" height="1000" fill="url(#bg-genko)"/>
-
-      <!-- 2. 富士山剪影 -->
-      <path class="bg-fuji" d="M300 1060 C 480 1030 660 920 762 846 C 780 832 820 832 838 846 C 940 920 1120 1030 1300 1060 Z"/>
-      <path class="bg-fuji-snow" d="M726 900 L756 872 L776 886 L800 856 L824 886 L844 872 L874 900 C 848 916 828 906 800 918 C 772 930 752 916 726 900 Z"/>
-
-      <!-- 3. 底部青海波 -->
-      <g mask="url(#bg-wave-mask)">
-        <rect x="0" y="640" width="1600" height="360" fill="url(#bg-seigaiha)"/>
-      </g>
-
-      <!-- 4. 假名水印 -->
-      <g class="bg-kana">
-        <text x="118" y="262" font-size="152">あ</text>
-        <text x="1330" y="212" font-size="132">い</text>
-        <text x="92" y="648" font-size="118">う</text>
-        <text x="1408" y="620" font-size="150">え</text>
-        <text x="330" y="922" font-size="106">お</text>
-        <text x="1198" y="938" font-size="106">か</text>
-      </g>
-
-      <!-- 5. 飘落樱花瓣 -->
-      <g class="bg-petal">
-        <use href="#bg-petal-shape" transform="translate(268,150) rotate(24) scale(1.6)"/>
-        <use href="#bg-petal-shape" transform="translate(1298,392) rotate(-40) scale(1.35)"/>
-        <use href="#bg-petal-shape" transform="translate(150,600) rotate(66) scale(1.2)"/>
-        <use href="#bg-petal-shape" transform="translate(1462,806) rotate(-16) scale(1.5)"/>
-        <use href="#bg-petal-shape" transform="translate(560,880) rotate(40) scale(1.25)"/>
-      </g>
-    </svg>
-
-    <div class="home-hero">
-      <div class="home-mascot">🌸</div>
-      <div class="home-title cn-text">日语单词<em class="cn-text">闯关</em></div>
-      <div class="home-sub cn-text">选择教材与课程，开始挑战 ✨</div>
+  <div class="match-game">
+    <div class="match-top-card">
+      <button class="back-btn cn-text" onclick="location.href='index.html'">← 返回</button>
+      <div class="lesson-chip cn-text" id="lessonName">入门单元 第1课</div>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-fill" id="progressFill"></div>
+      </div>
+      <div class="group-counter cn-text" id="groupCounter">1/8 组</div>
+      <div class="mistake-chip cn-text" id="mistakeChip">失误 0</div>
+      <div class="score-chip cn-text" id="scoreChip">0分</div>
     </div>
 
-    <!-- 舒展大号：选择词库 -->
-    <div class="deck-selector">
-      <div class="deck-selector-header">
-        <label class="cn-text">📖 选择词库</label>
-        <span class="deck-word-count-badge cn-text">当前课共 40 词</span>
-      </div>
-      <div class="cascade-grid">
-        <div class="select-group">
-          <span class="select-sublabel cn-text">一级：教材系列</span>
-          <select class="deck-pick cn-text" id="bookSelect"><option value="renjiao-new">人教版初中日语（新）</option></select>
-        </div>
-        <div class="select-group">
-          <span class="select-sublabel cn-text">二级：年级 / 分册</span>
-          <select class="deck-pick cn-text" id="gradeSelect"><option value="grade7">七年级</option></select>
-        </div>
-        <div class="select-group">
-          <span class="select-sublabel cn-text">三级：章节 / 课时</span>
-          <select class="deck-pick cn-text" id="lessonSelect"><option value="unit1_lesson1">入门单元 第1课</option></select>
-        </div>
-      </div>
-    </div>
+    <div class="match-tip">点左边的日语单词和右边对应的释义即可连线，先点哪边都行</div>
 
-    <!-- 舒展大号：4 款游戏模式卡片 -->
-    <div class="mode-cards">
-      <div class="mode-card mode-puzzle" onclick="startGame('拼图模式')">
-        <div class="icon">🧩</div>
-        <div class="mode-text">
-          <div class="name cn-text">拼图模式</div>
-          <div class="desc cn-text">点击假名按钮<br>依次填入空格拼出单词</div>
-        </div>
-      </div>
-      <div class="mode-card mode-tetris" onclick="startGame('方块模式')">
-        <div class="icon">🎮</div>
-        <div class="mode-text">
-          <div class="name cn-text">方块模式</div>
-          <div class="desc cn-text">假名从天而降<br>移动到正确位置接住它！</div>
-        </div>
-      </div>
-      <div class="mode-card mode-match" onclick="startGame('连连看模式')">
-        <div class="icon">🔗</div>
-        <div class="mode-text">
-          <div class="name cn-text">连连看模式</div>
-          <div class="desc cn-text">左右配对连线<br>把单词和释义连起来</div>
-        </div>
-      </div>
-      <div class="mode-card mode-elim" onclick="startGame('消消乐模式')">
-        <div class="icon">🍬</div>
-        <div class="mode-text">
-          <div class="name cn-text">消消乐模式</div>
-          <div class="desc cn-text">12 张卡片两两配对<br>点对了就一起消失</div>
-        </div>
-      </div>
+    <div class="match-board-wrap" id="boardWrap">
+      <svg class="match-lines" id="svgLines"></svg>
+      <div class="match-board" id="matchBoard"></div>
     </div>
   </div>
 
-  <!-- 登录 / 个人中心弹窗 -->
-  <div class="modal-overlay" id="userModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div class="modal-title" id="modalTitle">用户登录 / 注册</div>
-        <button class="close-btn" onclick="closeUserModal()">&times;</button>
-      </div>
-
-      <div id="unauthPanel">
-        <div class="input-group">
-          <label>邮箱地址</label>
-          <input type="email" id="inputEmail" placeholder="your@email.com">
-        </div>
-        <div class="input-group">
-          <label>密码</label>
-          <input type="password" id="inputPwd" placeholder="不少于6位密码">
-        </div>
-        <div style="display:flex; gap:10px; margin-top:16px;">
-          <button class="btn" style="flex:1;" onclick="doSignIn()">登录</button>
-          <button class="btn btn-secondary" style="flex:1;" onclick="doSignUp()">注册新账号</button>
-        </div>
-      </div>
-
-      <div id="profilePanel" style="display:none;">
-        <p style="font-size:13px; color:var(--fg2); margin-bottom:12px;">当前账号：<b id="profileEmailTxt"></b></p>
-        <div class="input-group">
-          <label>挑选专属头像</label>
-          <div class="avatar-list">
-            <span class="avatar-btn" data-av="🌸" onclick="chooseAvatar('🌸')">🌸</span>
-            <span class="avatar-btn" data-av="🗻" onclick="chooseAvatar('🗻')">🗻</span>
-            <span class="avatar-btn" data-av="🍣" onclick="chooseAvatar('🍣')">🍣</span>
-            <span class="avatar-btn" data-av="🐱" onclick="chooseAvatar('🐱')">🐱</span>
-          </div>
-        </div>
-        <div class="input-group">
-          <label>个性昵称</label>
-          <input type="text" id="inputNickname" placeholder="输入自定义昵称">
-        </div>
-        <div style="display:flex; flex-direction:column; gap:8px; margin-top:16px;">
-          <button class="btn" onclick="saveUserProfile()">保存修改</button>
-          <button class="btn btn-danger" onclick="doSignOut()">退出登录</button>
-        </div>
-      </div>
+  <div class="overlay" id="overlay" hidden>
+    <div class="overlay-card">
+      <div class="overlay-emoji" id="ov-emoji">🏆</div>
+      <div class="overlay-title cn-text" id="ov-title">整课大通关！</div>
+      <div class="overlay-body cn-text" id="ov-body"></div>
+      <div class="overlay-stats-box" id="ov-stats" hidden></div>
+      <div class="overlay-actions" id="ov-actions"></div>
     </div>
   </div>
+
+  <div class="toast cn-text" id="toast"></div>
 
   <script>
     const SUPABASE_URL = 'https://zbfjbtzvnhmfzyvooact.supabase.co';
     const SUPABASE_KEY = 'sb_publishable_AP0YnQLgzmB3d63_4zbpjg_vHeTyo8Z';
     const sbClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
-
     let currentUser = null;
-    let selectedAvatar = localStorage.getItem('tangogo_avatar') || '🌸';
-    let currentNickname = localStorage.getItem('tangogo_nickname') || '';
-    let mistakesList = JSON.parse(localStorage.getItem('tangogo_mistakes') || '[]');
 
-    function openUserModal() {
-      const modal = document.getElementById('userModal');
-      const unauth = document.getElementById('unauthPanel');
-      const profile = document.getElementById('profilePanel');
-      if (currentUser) {
-        document.getElementById('modalTitle').innerText = '个人中心';
-        unauth.style.display = 'none';
-        profile.style.display = 'block';
-        document.getElementById('profileEmailTxt').innerText = currentUser.email;
-        document.getElementById('inputNickname').value = currentNickname || currentUser.email.split('@')[0];
-        chooseAvatar(selectedAvatar);
-      } else {
-        document.getElementById('modalTitle').innerText = '用户登录 / 注册';
-        unauth.style.display = 'block';
-        profile.style.display = 'none';
+    async function initAuth() {
+      if (!sbClient) return;
+      const { data: { session } } = await sbClient.auth.getSession();
+      if (session) currentUser = session.user;
+    }
+
+    async function recordMistake(word) {
+      let localMistakes = JSON.parse(localStorage.getItem('tangogo_mistakes') || '[]');
+      if (!localMistakes.some(m => m.word === word.kana)) {
+        localMistakes.push({ word: word.kana, meaning: word.meaning });
+        localStorage.setItem('tangogo_mistakes', JSON.stringify(localMistakes));
       }
-      modal.style.display = 'flex';
-    }
-
-    function closeUserModal() {
-      document.getElementById('userModal').style.display = 'none';
-    }
-
-    function chooseAvatar(av) {
-      selectedAvatar = av;
-      document.querySelectorAll('.avatar-btn').forEach(btn => {
-        btn.classList.toggle('selected', btn.getAttribute('data-av') === av);
-      });
-    }
-
-    function refreshHeaderUI() {
-      const iconEl = document.getElementById('userAvatarIcon');
-      const nameEl = document.getElementById('userDisplayName');
-      if (currentUser) {
-        iconEl.innerText = selectedAvatar;
-        nameEl.innerText = currentNickname || currentUser.email.split('@')[0];
-      } else {
-        iconEl.innerText = '🌸';
-        nameEl.innerText = '登录 / 注册';
-      }
-    }
-
-    async function doSignUp() {
-      const email = document.getElementById('inputEmail').value.trim();
-      const password = document.getElementById('inputPwd').value;
-      if (!email || !password) return alert('请填写邮箱和密码');
-      if (!sbClient) return alert('数据库组件加载中，请稍后再试');
-      
-      const { data, error } = await sbClient.auth.signUp({ email, password });
-      if (error) return alert('注册失败: ' + error.message);
-      alert('注册成功！已为您登录');
-      currentUser = data.user;
-      closeUserModal();
-      await syncDataFromCloud();
-      refreshHeaderUI();
-    }
-
-    async function doSignIn() {
-      const email = document.getElementById('inputEmail').value.trim();
-      const password = document.getElementById('inputPwd').value;
-      if (!email || !password) return alert('请填写邮箱和密码');
-      if (!sbClient) return alert('数据库组件加载中，请稍后再试');
-
-      const { data, error } = await sbClient.auth.signInWithPassword({ email, password });
-      if (error) return alert('登录失败: ' + error.message);
-      currentUser = data.user;
-      closeUserModal();
-      await syncDataFromCloud();
-      refreshHeaderUI();
-    }
-
-    async function doSignOut() {
-      if (sbClient) await sbClient.auth.signOut();
-      currentUser = null;
-      currentNickname = '';
-      localStorage.removeItem('tangogo_nickname');
-      closeUserModal();
-      refreshHeaderUI();
-      alert('已退出登录');
-    }
-
-    async function saveUserProfile() {
-      const nicknameInput = document.getElementById('inputNickname').value.trim();
-      currentNickname = nicknameInput || (currentUser ? currentUser.email.split('@')[0] : '');
-      
-      localStorage.setItem('tangogo_avatar', selectedAvatar);
-      localStorage.setItem('tangogo_nickname', currentNickname);
-
       if (currentUser && sbClient) {
-        await sbClient.from('profiles').upsert({
-          id: currentUser.id,
-          avatar_id: selectedAvatar,
-          username: currentNickname,
-          updated_at: new Date().toISOString()
-        });
-      }
-      refreshHeaderUI();
-      closeUserModal();
-      alert('个人设置已保存！');
-    }
-
-    async function syncDataFromCloud() {
-      if (!currentUser || !sbClient) return;
-      try {
-        const { data: profile } = await sbClient.from('profiles').select('*').eq('id', currentUser.id).maybeSingle();
-        if (profile) {
-          if (profile.avatar_id) {
-            selectedAvatar = profile.avatar_id;
-            localStorage.setItem('tangogo_avatar', selectedAvatar);
-          }
-          if (profile.username) {
-            currentNickname = profile.username;
-            localStorage.setItem('tangogo_nickname', currentNickname);
-          }
-        }
-
-        const { data: cloudMistakes } = await sbClient.from('user_mistakes').select('*').eq('user_id', currentUser.id);
-        if (cloudMistakes && cloudMistakes.length > 0) {
-          mistakesList = cloudMistakes;
-          localStorage.setItem('tangogo_mistakes', JSON.stringify(mistakesList));
-          document.getElementById('mistakeBadge').innerText = mistakesList.length;
-        }
-      } catch (e) {
-        console.error('云端数据同步失败:', e);
+        try {
+          await sbClient.from('user_mistakes').upsert({
+            user_id: currentUser.id,
+            word: word.kana,
+            meaning: word.meaning,
+            wrong_count: 1,
+            updated_at: new Date().toISOString()
+          }, { onConflict: 'user_id,word' });
+        } catch (e) { console.error(e); }
       }
     }
 
-    function openMistakesModal() {
-      alert(mistakesList.length === 0 ? '当前错词本为空，继续保持！' : `错词记录已保存在云端，共有 ${mistakesList.length} 个错题。`);
+    const ALL_WORDS = [
+      { id: 1, kanji: 'いとこ', kana: 'いとこ', pos: '名', meaning: '堂(表)兄弟；堂(表)姐妹' },
+      { id: 2, kanji: '乙', kana: 'おつ', pos: '名', meaning: '乙' },
+      { id: 3, kanji: '草', kana: 'くさ', pos: '名', meaning: '草' },
+      { id: 4, kanji: '家', kana: 'いえ', pos: '名', meaning: '房屋；家' },
+      { id: 5, kanji: '', kana: 'アイス', pos: '名', meaning: '冰；冰淇淋' },
+      { id: 6, kanji: '友達', kana: 'ともだち', pos: '名', meaning: '朋友' },
+      { id: 7, kanji: '先生', kana: 'せんせい', pos: '名', meaning: '老师' },
+      { id: 8, kanji: '学生', kana: 'がくせい', pos: '名', meaning: '学生' },
+      { id: 9, kanji: '本', kana: 'ほん', pos: '名', meaning: '书' },
+      { id: 10, kanji: '靴', kana: 'くつ', pos: '名', meaning: '鞋' },
+      { id: 11, kanji: '', kana: 'テスト', pos: '名', meaning: '测验，测试' },
+      { id: 12, kanji: '挨拶', kana: 'あいさつ', pos: '名', meaning: '寒暄，打招呼' }
+    ];
+
+    const GROUP_SIZE = 6;
+    let currentGroup = 0;
+    const totalGroups = Math.ceil(ALL_WORDS.length / GROUP_SIZE);
+
+    let score = 0;
+    let mistakes = 0;
+    let matchedCount = 0;
+    let selectedLeft = null;
+    let selectedRight = null;
+    let startTime = Date.now();
+    let currentRoundWords = [];
+
+    let toastTimer = null;
+    function showToast(msg, duration = 2200) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => t.classList.remove('show'), duration);
     }
 
-    function startGame(modeName) {
-      const routes = {
-        '拼图模式': 'puzzle.html',
-        '方块模式': 'blocks.html',
-        '连连看模式': 'link.html',
-        '消消乐模式': 'match.html'
-      };
-
-      const target = routes[modeName];
-      if (!target) return;
-
-      const book = document.getElementById('bookSelect')?.value || 'renjiao-new';
-      const grade = document.getElementById('gradeSelect')?.value || 'grade7';
-      const lesson = document.getElementById('lessonSelect')?.value || 'unit1_lesson1';
-
-      window.location.href = `${target}?book=${encodeURIComponent(book)}&grade=${encodeURIComponent(grade)}&lesson=${encodeURIComponent(lesson)}`;
+    function shuffleArray(arr) {
+      const a = [...arr];
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
     }
 
-    async function initApp() {
-      document.getElementById('mistakeBadge').innerText = mistakesList.length;
-      if (sbClient) {
-        const { data: { session } } = await sbClient.auth.getSession();
-        if (session) {
-          currentUser = session.user;
-          await syncDataFromCloud();
+    function getShuffledRight(leftList) {
+      let right = shuffleArray(leftList);
+      if (leftList.length > 1) {
+        let attempts = 0;
+        while (attempts < 10 && right.some((item, idx) => item.id === leftList[idx].id)) {
+          right = shuffleArray(leftList);
+          attempts++;
         }
       }
-      refreshHeaderUI();
+      return right;
     }
 
-    window.openUserModal = openUserModal;
-    window.closeUserModal = closeUserModal;
-    window.doSignUp = doSignUp;
-    window.doSignIn = doSignIn;
-    window.doSignOut = doSignOut;
-    window.chooseAvatar = chooseAvatar;
-    window.saveUserProfile = saveUserProfile;
-    window.openMistakesModal = openMistakesModal;
-    window.startGame = startGame;
+    function startGroup(groupIdx) {
+      currentGroup = groupIdx;
+      matchedCount = 0;
+      selectedLeft = null;
+      selectedRight = null;
+      document.getElementById('svgLines').innerHTML = '';
 
-    initApp();
+      document.getElementById('groupCounter').innerText = `${currentGroup + 1}/${totalGroups} 组`;
+      document.getElementById('progressFill').style.width = `${((currentGroup + 1) / totalGroups) * 100}%`;
+
+      const start = groupIdx * GROUP_SIZE;
+      const end = Math.min(start + GROUP_SIZE, ALL_WORDS.length);
+      currentRoundWords = ALL_WORDS.slice(start, end);
+
+      const leftList = shuffleArray(currentRoundWords);
+      const rightList = getShuffledRight(leftList);
+
+      const board = document.getElementById('matchBoard');
+      board.innerHTML = '';
+
+      for (let i = 0; i < currentRoundWords.length; i++) {
+        const l = leftList[i];
+        const leftEl = document.createElement('div');
+        leftEl.className = 'match-item match-left';
+        leftEl.dataset.id = l.id;
+        leftEl.innerHTML = `<div class="match-word jp-text">${l.kanji || l.kana}</div>`;
+        leftEl.onclick = () => selectCard('left', leftEl, l);
+        board.appendChild(leftEl);
+
+        const r = rightList[i];
+        const rightEl = document.createElement('div');
+        rightEl.className = 'match-item match-right';
+        rightEl.dataset.id = r.id;
+        rightEl.innerHTML = `
+          <div class="m-tags">
+            <span class="m-pos">${r.pos}</span>
+            <span class="m-kana jp-text">${r.kana}</span>
+            <span class="m-mean cn-text">${r.meaning}</span>
+          </div>
+        `;
+        rightEl.onclick = () => selectCard('right', rightEl, r);
+        board.appendChild(rightEl);
+      }
+    }
+
+    function selectCard(side, el, item) {
+      if (side === 'left') {
+        if (selectedLeft) selectedLeft.el.classList.remove('sel');
+        selectedLeft = { el, item };
+        el.classList.add('sel');
+      } else {
+        if (selectedRight) selectedRight.el.classList.remove('sel');
+        selectedRight = { el, item };
+        el.classList.add('sel');
+      }
+      if (selectedLeft && selectedRight) checkMatch();
+    }
+
+    function checkMatch() {
+      if (selectedLeft.item.id === selectedRight.item.id) {
+        drawSvgLine(selectedLeft.el, selectedRight.el);
+        selectedLeft.el.classList.remove('sel');
+        selectedRight.el.classList.remove('sel');
+        selectedLeft.el.classList.add('done');
+        selectedRight.el.classList.add('done');
+
+        score += 10;
+        matchedCount++;
+        document.getElementById('scoreChip').innerText = `${score}分`;
+        selectedLeft = null;
+        selectedRight = null;
+
+        if (matchedCount === currentRoundWords.length) {
+          handleGroupComplete();
+        }
+      } else {
+        mistakes++;
+        document.getElementById('mistakeChip').innerText = `失误 ${mistakes}`;
+        recordMistake(selectedLeft.item);
+
+        const lEl = selectedLeft.el; const rEl = selectedRight.el;
+        lEl.classList.add('wrong'); rEl.classList.add('wrong');
+        setTimeout(() => {
+          lEl.classList.remove('sel', 'wrong');
+          rEl.classList.remove('sel', 'wrong');
+          selectedLeft = null; selectedRight = null;
+        }, 400);
+      }
+    }
+
+    function handleGroupComplete() {
+      if (currentGroup < totalGroups - 1) {
+        showToast(`🎉 第 ${currentGroup + 1} 组完成！准备进入下一组...`);
+        setTimeout(() => {
+          startGroup(currentGroup + 1);
+        }, 1200);
+      } else {
+        const totalSeconds = Math.max(1, Math.round((Date.now() - startTime) / 1000));
+        const m = Math.floor(totalSeconds / 60); const s = totalSeconds % 60;
+        const timeFormatted = `${m > 0 ? m + '分' : ''}${s}秒`;
+
+        const overlay = document.getElementById('overlay');
+        document.getElementById('ov-body').textContent = `恭喜通关！本课全部 ${ALL_WORDS.length} 个单词已全部连线消除！`;
+        const statsEl = document.getElementById('ov-stats');
+        statsEl.hidden = false;
+        statsEl.innerHTML = `
+          <div class="overlay-stats-item">总得分：<b>${score} 分</b></div>
+          <div class="overlay-stats-item">总用时：<b>${timeFormatted}</b></div>
+          <div class="overlay-stats-item">总词数：<b>${ALL_WORDS.length} 词</b></div>
+          <div class="overlay-stats-item">失误数：<b>${mistakes} 次</b></div>
+        `;
+
+        const actEl = document.getElementById('ov-actions');
+        actEl.innerHTML = '';
+
+        actEl.appendChild(createBtn('下一课', 'btn-primary', () => {
+          showToast('正在前往下一课...');
+          setTimeout(() => location.href = 'link.html?lesson=unit1_lesson2', 500);
+        }));
+        actEl.appendChild(createBtn('再来1遍', 'btn-secondary', () => {
+          overlay.hidden = true;
+          score = 0; mistakes = 0; startTime = Date.now();
+          startGroup(0);
+        }));
+        actEl.appendChild(createBtn('📸 分享成绩', 'btn-hot', () => generateShareCard(score, timeFormatted, ALL_WORDS.length)));
+        actEl.appendChild(createBtn('回到首页', 'btn-secondary', () => location.href = 'index.html'));
+
+        overlay.hidden = false;
+      }
+    }
+
+    function createBtn(text, cls, onClick) {
+      const b = document.createElement('button');
+      b.className = 'action-btn cn-text ' + cls;
+      b.textContent = text;
+      b.onclick = onClick;
+      return b;
+    }
+
+    function generateShareCard(score, timeSpent, totalWords) {
+      showToast('正在生成成绩单图片...');
+      const cvs = document.createElement('canvas');
+      cvs.width = 640; cvs.height = 840;
+      const ctx = cvs.getContext('2d');
+      const bgGrad = ctx.createLinearGradient(0, 0, 640, 840);
+      bgGrad.addColorStop(0, '#f0f7ff'); bgGrad.addColorStop(1, '#bfdbfe');
+      ctx.fillStyle = bgGrad; ctx.fillRect(0, 0, 640, 840);
+
+      ctx.strokeStyle = '#2563eb'; ctx.lineWidth = 10; ctx.strokeRect(20, 20, 600, 800);
+      ctx.fillStyle = '#2563eb'; ctx.font = "900 34px sans-serif"; ctx.textAlign = 'center';
+      ctx.fillText('かなゲーム · 连连看闯关', 320, 90);
+      ctx.font = "72px sans-serif"; ctx.fillText('🏆', 320, 180);
+      ctx.fillStyle = '#0c2340'; ctx.font = "900 32px sans-serif"; ctx.fillText('通 关 荣 誉 证 书', 320, 240);
+
+      const userNick = localStorage.getItem('tangogo_nickname') || '日语学习达人';
+      ctx.font = "700 22px sans-serif"; ctx.fillStyle = '#1e4d8c'; ctx.fillText(`学员：${userNick}`, 320, 290);
+
+      ctx.fillStyle = '#ffffff'; ctx.fillRect(80, 330, 480, 320);
+      ctx.fillStyle = '#64748b'; ctx.font = "700 18px sans-serif"; ctx.textAlign = 'left';
+      ctx.fillText('⏱ 通关用时', 120, 400);
+      ctx.fillText('📖 掌握词汇', 120, 460);
+      ctx.fillText('🌟 最终得分', 120, 520);
+      ctx.fillText('🎮 挑战模式', 120, 580);
+
+      ctx.textAlign = 'right'; ctx.fillStyle = '#0c2340'; ctx.font = "900 20px sans-serif";
+      ctx.fillText(timeSpent, 520, 400);
+      ctx.fillText(`${totalWords} 词`, 520, 460);
+      ctx.fillStyle = '#ea580c'; ctx.font = "900 26px sans-serif"; ctx.fillText(`${score} 分`, 520, 520);
+      ctx.fillStyle = '#2563eb'; ctx.font = "900 20px sans-serif"; ctx.fillText('连连看模式', 520, 580);
+
+      setTimeout(() => {
+        const a = document.createElement('a');
+        a.href = cvs.toDataURL('image/png');
+        a.download = `连连看通关成绩单_${Date.now()}.png`;
+        a.click();
+        showToast('🎉 成绩单图片已保存到本地！');
+      }, 350);
+    }
+
+    function drawSvgLine(el1, el2) {
+      const wrapRect = document.getElementById('boardWrap').getBoundingClientRect();
+      const r1 = el1.getBoundingClientRect();
+      const r2 = el2.getBoundingClientRect();
+
+      const x1 = r1.right - wrapRect.left;
+      const y1 = r1.top + r1.height / 2 - wrapRect.top;
+      const x2 = r2.left - wrapRect.left;
+      const y2 = r2.top + r2.height / 2 - wrapRect.top;
+
+      const svg = document.getElementById('svgLines');
+      const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+      g.setAttribute('class', 'match-line ok');
+
+      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      line.setAttribute('x1', x1); line.setAttribute('y1', y1);
+      line.setAttribute('x2', x2); line.setAttribute('y2', y2);
+
+      const c1 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      c1.setAttribute('cx', x1); c1.setAttribute('cy', y1); c1.setAttribute('r', '5');
+      const c2 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      c2.setAttribute('cx', x2); c2.setAttribute('cy', y2); c2.setAttribute('r', '5');
+
+      g.appendChild(line); g.appendChild(c1); g.appendChild(c2);
+      svg.appendChild(g);
+    }
+
+    window.addEventListener('DOMContentLoaded', async () => {
+      await initAuth();
+      startGroup(0);
+    });
   </script>
 </body>
 </html>
