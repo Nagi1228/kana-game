@@ -26,8 +26,6 @@
   --correct-bg: #d1fae5;
   --wrong: #e11d48;
   --wrong-bg: #ffe4e6;
-  --warn: #d97706;
-  --warn-bg: #fef3c7;
   --shadow: rgba(37,99,235,0.18);
 }
 
@@ -68,11 +66,11 @@ body {
 .vocab-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
 .vocab-header h2 { font-size: 1.4rem; font-weight: 900; color: var(--fg); }
 
-/* 选择器卡片 */
 .vocab-picker-box, .add-word-form {
   background: var(--surface); border: 2.5px solid var(--border); border-radius: 20px;
   padding: 20px 22px; display: flex; flex-direction: column; gap: 14px;
   box-shadow: 0 4px 16px var(--shadow);
+  width: 100%; overflow: hidden;
 }
 .deck-selector-header { display: flex; align-items: center; justify-content: space-between; }
 .deck-selector-header label { font-size: 0.95rem; font-weight: 900; color: var(--fg2); }
@@ -80,7 +78,7 @@ body {
 
 .cascade-grid { display: grid; grid-template-columns: 1fr 0.85fr 1.7fr; gap: 12px; }
 @media (max-width: 680px) { .cascade-grid { grid-template-columns: 1fr; } }
-.select-group { display: flex; flex-direction: column; gap: 6px; }
+.select-group { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
 .select-sublabel { font-size: 0.78rem; font-weight: 700; color: var(--fg3); }
 select.deck-pick {
   width: 100%; padding: 11px 36px 11px 14px; border-radius: 12px; border: 2px solid var(--border);
@@ -91,16 +89,23 @@ select.deck-pick {
 }
 select.deck-pick:focus { border-color: var(--accent); }
 
-/* 单词输入行 */
-.form-row-5 { display: grid; grid-template-columns: 1.1fr 1.2fr 0.8fr 0.9fr 1.3fr; gap: 10px; }
-@media (max-width: 720px) { .form-row-5 { grid-template-columns: 1fr 1fr; } }
+/* 修复核心：网格各列限制 min-width: 0，杜绝右侧溢出 */
+.form-row-5 {
+  display: grid;
+  grid-template-columns: 1.2fr 1.3fr 0.9fr 0.9fr 1.7fr;
+  gap: 10px;
+  width: 100%;
+}
+@media (max-width: 760px) {
+  .form-row-5 { grid-template-columns: 1fr 1fr; }
+}
 .form-input {
+  width: 100%; min-width: 0;
   padding: 10px 12px; border-radius: 12px; border: 2px solid var(--border);
   background: var(--bg2); color: var(--fg); font-size: 0.95rem; outline: none;
 }
 .form-input:focus { border-color: var(--accent); background: #fff; }
 
-/* 批量导入文本框与文件上传 */
 .csv-upload-label {
   display: flex; align-items: center; gap: 10px; cursor: pointer;
   border: 2px dashed var(--border); border-radius: 14px; padding: 12px 18px;
@@ -115,7 +120,6 @@ select.deck-pick:focus { border-color: var(--accent); }
 .import-area:focus { border-color: var(--accent); background: #fff; }
 .import-hint { font-size: 0.82rem; color: var(--fg3); line-height: 1.6; }
 
-/* 单词表格 */
 .word-table-container {
   background: var(--surface); border-radius: 20px; border: 2.5px solid var(--border);
   overflow-x: auto; box-shadow: 0 4px 16px var(--shadow);
@@ -132,7 +136,6 @@ select.deck-pick:focus { border-color: var(--accent); }
 .td-kana { font-size: 1.05rem; font-weight: 800; color: var(--accent); }
 .td-pos { font-size: 0.82rem; font-weight: 800; color: var(--fg3); background: var(--bg2); border-radius: 6px; padding: 2px 6px; }
 
-/* 操作按钮 */
 .action-btn {
   padding: 10px 20px; border-radius: 24px; border: none; font-size: 0.92rem; font-weight: 800;
   cursor: pointer; transition: transform 0.1s, box-shadow 0.15s;
@@ -171,7 +174,6 @@ select.deck-pick:focus { border-color: var(--accent); }
       <button class="action-btn btn-secondary cn-text" onclick="exportBackupJSON()">💾 导出整库备份 JSON</button>
     </div>
 
-    <!-- 三级联动选择器 -->
     <div class="vocab-picker-box">
       <div class="deck-selector-header">
         <label class="cn-text">选择当前编辑课时</label>
@@ -193,7 +195,7 @@ select.deck-pick:focus { border-color: var(--accent); }
       </div>
     </div>
 
-    <!-- 单词添加表单 -->
+    <!-- 紧凑整齐的单条录入，右边框严密对齐 -->
     <div class="add-word-form">
       <h3 class="cn-text">➕ 单条录入（保存到当前选中课时）</h3>
       <div class="form-row-5">
@@ -208,7 +210,6 @@ select.deck-pick:focus { border-color: var(--accent); }
       </div>
     </div>
 
-    <!-- 批量导入模块 -->
     <div class="add-word-form">
       <h3 class="cn-text">📥 批量导入（CSV / 文本粘贴）</h3>
       <p class="import-hint cn-text">
@@ -226,7 +227,6 @@ select.deck-pick:focus { border-color: var(--accent); }
       </div>
     </div>
 
-    <!-- 当前课单词列表 -->
     <div class="vocab-header" style="margin-top:6px;">
       <h2 class="cn-text">📝 当前课已收录单词</h2>
       <span class="import-hint cn-text" id="syncStatus">数据已与 Supabase 同步</span>
@@ -257,9 +257,7 @@ select.deck-pick:focus { border-color: var(--accent); }
     const SUPABASE_URL = 'https://zbfjbtzvnhmfzyvooact.supabase.co';
     const SUPABASE_KEY = 'sb_publishable_AP0YnQLgzmB3d63_4zbpjg_vHeTyo8Z';
     const sbClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
-    let currentUser = null;
 
-    // 经典教材课程树状索引
     function makeLessons(prefix, count, startNo = 1) {
       return Array.from({ length: count }, (_, i) => ({
         id: `${prefix}_l${i + 1}`,
@@ -315,7 +313,7 @@ select.deck-pick:focus { border-color: var(--accent); }
     function initCurriculumUI() {
       const bSel = document.getElementById('selBook');
       bSel.innerHTML = '';
-      CURRICULUM.forEach((b, i) => {
+      CURRICULUM.forEach(b => {
         bSel.innerHTML += `<option value="${b.id}">${b.name}</option>`;
       });
       onBookChange();
@@ -349,7 +347,6 @@ select.deck-pick:focus { border-color: var(--accent); }
       loadWords();
     }
 
-    // 从 Supabase 查询当前课时单词
     async function loadWords() {
       const bId = document.getElementById('selBook').value;
       const gId = document.getElementById('selGrade').value;
@@ -405,7 +402,6 @@ select.deck-pick:focus { border-color: var(--accent); }
       `).join('');
     }
 
-    // 单条录入
     async function addSingleWord() {
       const kanji = document.getElementById('inpKanji').value.trim();
       const kana = document.getElementById('inpKana').value.trim();
@@ -441,7 +437,6 @@ select.deck-pick:focus { border-color: var(--accent); }
       }
     }
 
-    // 删除单词
     async function deleteWord(id) {
       if (!confirm('确定要删除该单词吗？')) return;
       const { error } = await sbClient.from('words').delete().eq('id', id);
@@ -453,7 +448,6 @@ select.deck-pick:focus { border-color: var(--accent); }
       }
     }
 
-    // 清空当前单课
     async function clearCurrentLessonWords() {
       if (!confirm('警告：确定要清空当前选中的这节课所有词汇吗？')) return;
       const bId = document.getElementById('selBook').value;
@@ -474,7 +468,6 @@ select.deck-pick:focus { border-color: var(--accent); }
       }
     }
 
-    // 批量解析文本并入库
     async function importBatchWords() {
       const text = document.getElementById('importArea').value.trim();
       if (!text) return alert('请先粘贴或上传词汇内容！');
@@ -492,7 +485,6 @@ select.deck-pick:focus { border-color: var(--accent); }
         if (!row || row.startsWith('#')) return;
         const cols = row.split(',').map(c => c.trim());
         if (cols.length >= 2) {
-          // 容错匹配：汉字, 假名, 声调, 词性, 含义
           let kanji = cols[0] || '';
           let kana = cols[1] || '';
           let pitch = cols[2] || '';
@@ -528,7 +520,6 @@ select.deck-pick:focus { border-color: var(--accent); }
       }
     }
 
-    // CSV 文件读取
     function handleFileUpload(event) {
       const file = event.target.files[0];
       if (!file) return;
@@ -540,7 +531,6 @@ select.deck-pick:focus { border-color: var(--accent); }
       reader.readAsText(file, 'utf-8');
     }
 
-    // 导出备份
     async function exportBackupJSON() {
       showToast('正在提取云端词库数据...');
       const { data, error } = await sbClient.from('words').select('*');
