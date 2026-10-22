@@ -21,9 +21,7 @@
   --fg2: #1e4d8c;
   --fg3: #2563eb;
   --accent: #2563eb;
-  --accent2: #3b82f6;
   --accent-hot: #f97316;
-  --accent-fg: #ffffff;
   --correct: #059669;
   --correct-bg: #d1fae5;
   --wrong: #e11d48;
@@ -31,19 +29,12 @@
   --warn: #d97706;
   --warn-bg: #fef3c7;
   --shadow: rgba(37,99,235,0.18);
-  --shadow-hot: rgba(249,115,22,0.22);
 }
-
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-  min-height: 100vh;
-  font-family: 'Noto Sans SC', sans-serif;
+  min-height: 100vh; font-family: 'Noto Sans SC', sans-serif;
   background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
-  color: var(--fg);
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  user-select: none;
+  color: var(--fg); overflow-x: hidden; display: flex; flex-direction: column; user-select: none;
 }
 .jp-text { font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif; }
 .cn-text { font-family: 'Noto Sans SC', sans-serif; }
@@ -51,10 +42,8 @@ body {
 
 .top-nav {
   display: flex; align-items: center; gap: 10px; padding: 12px 24px;
-  background-color: var(--surface);
-  border-bottom: 2px solid var(--border);
-  box-shadow: 0 2px 12px var(--shadow);
-  position: sticky; top: 0; z-index: 50;
+  background-color: var(--surface); border-bottom: 2px solid var(--border);
+  box-shadow: 0 2px 12px var(--shadow); position: sticky; top: 0; z-index: 50;
 }
 .nav-logo { font-size: 1.6rem; font-weight: 900; color: var(--accent); cursor: pointer; }
 .nav-logo span { color: var(--accent-hot); }
@@ -80,30 +69,25 @@ body {
 .score-chip.big { font-size: 1.1rem; color: var(--accent-hot); background: var(--surface); border: 2px solid var(--border); }
 .score-chip.level-chip { color: var(--accent); background: var(--surface); border: 2px solid var(--border); }
 
-/* 限时控制栏 */
 .timer-toggle-row {
-  width: 100%; max-width: 840px;
-  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-  background: var(--surface); border-radius: 16px; padding: 10px 16px;
-  border: 2px solid var(--border); box-shadow: 0 2px 8px var(--shadow);
+  width: 100%; max-width: 840px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  background: var(--surface); border-radius: 16px; padding: 10px 16px; border: 2px solid var(--border);
+  box-shadow: 0 2px 8px var(--shadow);
 }
 .timer-toggle-label { font-size: 0.9rem; font-weight: 700; color: var(--fg2); margin-right: 4px; }
 .timer-opt-btn {
   padding: 7px 16px; border-radius: 20px; border: 2px solid var(--border);
-  background: var(--surface); font-size: 0.88rem; font-weight: 700;
-  color: var(--fg2); cursor: pointer; transition: all 0.15s;
+  background: var(--surface); font-size: 0.88rem; font-weight: 700; color: var(--fg2); cursor: pointer; transition: all 0.15s;
 }
 .timer-opt-btn:hover { border-color: var(--accent); color: var(--accent); }
 .timer-opt-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
 
 .sort-timer-wrap { width: 100%; max-width: 840px; display: flex; flex-direction: column; gap: 6px; }
-.sort-timer-wrap[hidden] { display: none !important; }
 .sort-timer-row { display: flex; align-items: center; gap: 12px; }
 #sort-timer-num { font-size: 1.5rem; font-weight: 900; color: var(--accent-hot); font-variant-numeric: tabular-nums; min-width: 44px; }
 .sort-timer-bar { flex: 1; height: 12px; background: var(--bg3); border-radius: 6px; overflow: hidden; }
 #sort-timer-fill { height: 100%; border-radius: 6px; transition: width 0.9s linear, background-color 0.5s; background: #22c55e; width: 100%; }
 
-/* 单词展示卡片 */
 .word-card {
   width: 100%; max-width: 840px; background: var(--surface); border-radius: 24px;
   padding: 28px 32px; text-align: center; box-shadow: 0 6px 28px var(--shadow);
@@ -117,7 +101,6 @@ body {
 .word-meaning { font-size: 1.45rem; color: var(--fg2); font-weight: 800; }
 .word-hint { font-size: 0.88rem; color: var(--fg3); font-weight: 700; }
 
-/* 填空插槽 */
 .answer-zone {
   width: 100%; max-width: 840px; display: flex; justify-content: center;
   gap: 12px; min-height: 80px; align-items: center; flex-wrap: wrap;
@@ -136,13 +119,11 @@ body {
 @keyframes pop-in { 0%{transform:scale(0.6)} 70%{transform:scale(1.18)} 100%{transform:scale(1)} }
 .slot-num { position: absolute; top: 4px; left: 50%; transform: translateX(-50%); font-size: 0.6rem; font-weight: 700; color: var(--fg3); opacity: 0.5; }
 
-/* 假名按钮池 */
 .kana-pool { width: 100%; max-width: 840px; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
 .kana-btn {
   width: 72px; height: 72px; border-radius: 18px; border: 3px solid var(--border);
-  background: var(--surface); font-size: 1.8rem; font-weight: 900;
-  color: var(--fg); cursor: pointer; transition: all 0.12s;
-  user-select: none; box-shadow: 0 3px 10px var(--shadow); flex-shrink: 0;
+  background: var(--surface); font-size: 1.8rem; font-weight: 900; color: var(--fg);
+  cursor: pointer; transition: all 0.12s; user-select: none; box-shadow: 0 3px 10px var(--shadow); flex-shrink: 0;
 }
 .kana-btn:hover:not(:disabled):not(.used) { border-color: var(--accent); background: var(--bg2); transform: translateY(-3px) scale(1.06); box-shadow: 0 8px 20px var(--shadow); }
 .kana-btn:active:not(:disabled):not(.used) { transform: scale(0.95); }
@@ -150,14 +131,13 @@ body {
 
 .sort-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 .action-btn {
-  padding: 12px 26px; border-radius: 28px; border: none;
-  font-size: 1rem; font-weight: 700; cursor: pointer; transition: transform 0.1s, box-shadow 0.15s;
+  padding: 12px 26px; border-radius: 28px; border: none; font-size: 1rem;
+  font-weight: 700; cursor: pointer; transition: transform 0.1s, box-shadow 0.15s;
 }
 .action-btn:active { transform: scale(0.96); }
 .btn-primary { background: linear-gradient(135deg, var(--accent), #1d4ed8); color: #fff; box-shadow: 0 4px 16px var(--shadow); }
 .btn-hot { background: linear-gradient(135deg, var(--accent-hot), #ea580c); color: #fff; }
 .btn-secondary { background: var(--surface); color: var(--fg2); border: 2.5px solid var(--border); }
-.btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
 
 .result-message {
   font-size: 1.25rem; font-weight: 700; text-align: center; padding: 16px 24px;
@@ -166,7 +146,6 @@ body {
 .result-message.success { background: var(--correct-bg); color: var(--correct); }
 .result-message.fail { background: var(--wrong-bg); color: var(--wrong); }
 
-/* 原生 Toast 与 通关 Overlay */
 .toast {
   position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%) translateY(20px);
   background: var(--fg); color: #fff; border-radius: 28px; padding: 12px 26px;
@@ -227,13 +206,13 @@ body {
     </div>
 
     <div class="word-card">
-      <div class="word-kanji jp-text" id="sort-kanji">测验，测试</div>
+      <div class="word-kanji jp-text" id="sort-kanji">——</div>
       <div class="word-meta-badges">
-        <span class="meta-badge pitch-badge cn-text" id="sort-pitch">声调: ①</span>
-        <span class="meta-badge pos-badge cn-text" id="sort-pos">词性: 名词</span>
+        <span class="meta-badge pitch-badge cn-text" id="sort-pitch">声调: ⓪</span>
+        <span class="meta-badge pos-badge cn-text" id="sort-pos">词性: 名</span>
       </div>
-      <div class="word-meaning cn-text" id="sort-meaning">测验，测试</div>
-      <div class="word-hint cn-text" id="sort-hint">共 3 个假名</div>
+      <div class="word-meaning cn-text" id="sort-meaning">加载中...</div>
+      <div class="word-hint cn-text" id="sort-hint">共 0 个假名</div>
     </div>
 
     <div class="answer-zone" id="sort-answer-zone"></div>
@@ -247,7 +226,6 @@ body {
     <div class="result-message cn-text" id="sort-result" hidden></div>
   </div>
 
-  <!-- 原生通关/结束弹窗 -->
   <div class="overlay" id="overlay" hidden>
     <div class="overlay-card">
       <div class="overlay-emoji" id="ov-emoji">🏆</div>
@@ -291,40 +269,43 @@ body {
       }
     }
 
-    // 本课完整生词库
-    const FULL_LESSON_WORDS = [
-      { kanji: '本', kana: 'ほん', pitch: '①', pos: '名词', meaning: '书' },
-      { kanji: '', kana: 'かばん', pitch: '⓪', pos: '名词', meaning: '包，公文包' },
-      { kanji: '', kana: 'ノート', pitch: '①', pos: '名词', meaning: '笔记本，本子' },
-      { kanji: '鉛筆', kana: 'えんぴつ', pitch: '⓪', pos: '名词', meaning: '铅笔' },
-      { kanji: '傘', kana: 'かさ', pitch: '①', pos: '名词', meaning: '伞' },
-      { kanji: '靴', kana: 'くつ', pitch: '②', pos: '名词', meaning: '鞋' },
-      { kanji: '新聞', kana: 'しんぶん', pitch: '⓪', pos: '名词', meaning: '报纸' },
-      { kanji: '雑誌', kana: 'ざっし', pitch: '⓪', pos: '名词', meaning: '杂志' },
-      { kanji: '辞書', kana: 'じしょ', pitch: '①', pos: '名词', meaning: '词典' },
-      { kanji: '', kana: 'カメラ', pitch: '①', pos: '名词', meaning: '照相机' },
-      // 第 2 组 (11~20)
-      { kanji: '', kana: 'テレビ', pitch: '①', pos: '名词', meaning: '电视机' },
-      { kanji: '', kana: 'パソコン', pitch: '②', pos: '名词', meaning: '个人电脑' },
-      { kanji: '', kana: 'ラジオ', pitch: '①', pos: '名词', meaning: '收音机' },
-      { kanji: '電話', kana: 'でんわ', pitch: '⓪', pos: '名词', meaning: '电话' },
-      { kanji: '机', kana: 'つくえ', pitch: '⓪', pos: '名词', meaning: '桌子，书桌' },
-      { kanji: '', kana: 'いす', pitch: '⓪', pos: '名词', meaning: '椅子' },
-      { kanji: '', kana: 'かぎ', pitch: '②', pos: '名词', meaning: '钥匙，锁' },
-      { kanji: '時計', kana: 'とけい', pitch: '⓪', pos: '名词', meaning: '钟，表' },
-      { kanji: '手帳', kana: 'てちょう', pitch: '⓪', pos: '名词', meaning: '记事本' },
-      { kanji: '写真', kana: 'しゃしん', pitch: '⓪', pos: '名词', meaning: '照片' },
-      // 第 3 组 (21~25)
-      { kanji: '車', kana: 'くるま', pitch: '⓪', pos: '名词', meaning: '车' },
-      { kanji: '自転車', kana: 'じてんしゃ', pitch: '②', pos: '名词', meaning: '自行车' },
-      { kanji: 'お土産', kana: 'おみやげ', pitch: '⓪', pos: '名词', meaning: '礼物' },
-      { kanji: '会社', kana: 'かいしゃ', pitch: '⓪', pos: '名词', meaning: '公司' },
-      { kanji: '日本語', kana: 'にほんご', pitch: '⓪', pos: '名词', meaning: '日语' }
+    // 参数归一化
+    function normalizeParams(rawBook, rawGrade, rawLesson) {
+      let b = rawBook || 'pep_jr';
+      let g = rawGrade || 'pep_jr_7';
+      let l = rawLesson || 'pep_jr_7_intro1';
+
+      if (b === 'renjiao-new') b = 'pep_jr';
+      if (g === 'grade7') g = 'pep_jr_7';
+      if (l === 'unit1_lesson1') l = 'pep_jr_7_intro1';
+
+      return { b, g, l };
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const { b: currentBook, g: currentGrade, l: currentLesson } = normalizeParams(
+      urlParams.get('book'),
+      urlParams.get('grade'),
+      urlParams.get('lesson')
+    );
+
+    const DEFAULT_FALLBACK_WORDS = [
+      { kanji: '本', kana: 'ほん', pitch: '①', pos: '名', meaning: '书' },
+      { kanji: '', kana: 'かばん', pitch: '⓪', pos: '名', meaning: '包，公文包' },
+      { kanji: '', kana: 'ノート', pitch: '①', pos: '名', meaning: '笔记本' },
+      { kanji: '鉛筆', kana: 'えんぴつ', pitch: '⓪', pos: '名', meaning: '铅笔' },
+      { kanji: '傘', kana: 'かさ', pitch: '①', pos: '名', meaning: '伞' },
+      { kanji: '靴', kana: 'くつ', pitch: '②', pos: '名', meaning: '鞋' },
+      { kanji: '新聞', kana: 'しんぶん', pitch: '⓪', pos: '名', meaning: '报纸' },
+      { kanji: '雑誌', kana: 'ざっし', pitch: '⓪', pos: '名', meaning: '杂志' },
+      { kanji: '辞書', kana: 'じしょ', pitch: '①', pos: '名', meaning: '词典' },
+      { kanji: '', kana: 'カメラ', pitch: '①', pos: '名', meaning: '照相机' }
     ];
 
+    let FULL_LESSON_WORDS = [];
     const GROUP_SIZE = 10;
     let currentGroupIndex = 0;
-    const totalGroups = Math.ceil(FULL_LESSON_WORDS.length / GROUP_SIZE);
+    let totalGroups = 1;
 
     let currentGroupWords = [];
     let currentIndex = 0;
@@ -344,6 +325,30 @@ body {
       t.classList.add('show');
       clearTimeout(toastTimer);
       toastTimer = setTimeout(() => t.classList.remove('show'), duration);
+    }
+
+    async function fetchCurrentLessonWords() {
+      if (sbClient) {
+        try {
+          const { data, error } = await sbClient
+            .from('words')
+            .select('kanji,kana,pitch,pos,meaning')
+            .eq('book_id', currentBook)
+            .eq('grade_id', currentGrade)
+            .eq('lesson_id', currentLesson)
+            .order('sort_order', { ascending: true })
+            .order('created_at', { ascending: true });
+
+          if (!error && data && data.length > 0) {
+            showToast(`已成功载入云端题库（共 ${data.length} 词）`);
+            return data;
+          }
+        } catch (e) {
+          console.warn('读取云端失败:', e);
+        }
+      }
+      showToast('使用默认精选题库');
+      return DEFAULT_FALLBACK_WORDS;
     }
 
     function shuffle(arr) {
@@ -577,7 +582,7 @@ body {
 
         actEl.appendChild(createBtn('下一课', 'btn-primary', () => {
           showToast('正在前往下一课...');
-          setTimeout(() => location.href = 'puzzle.html?lesson=unit1_lesson2', 500);
+          setTimeout(() => location.href = `puzzle.html?book=${encodeURIComponent(currentBook)}&grade=${encodeURIComponent(currentGrade)}&lesson=pep_jr_7_intro2`, 500);
         }));
         actEl.appendChild(createBtn('再来1遍', 'btn-secondary', () => {
           overlay.hidden = true;
@@ -600,117 +605,66 @@ body {
       return b;
     }
 
-    // 1:1 严格对照截图模板绘制成绩证书海报
     function generateShareCard(score, timeSpent, totalWords) {
       showToast('正在生成成绩单图片...');
       const cvs = document.createElement('canvas');
-      cvs.width = 640;
-      cvs.height = 880;
+      cvs.width = 640; cvs.height = 880;
       const ctx = cvs.getContext('2d');
 
-      // 背景渐变
       const bgGrad = ctx.createLinearGradient(0, 0, 640, 880);
-      bgGrad.addColorStop(0, '#f0f7ff');
-      bgGrad.addColorStop(0.5, '#dbeafe');
-      bgGrad.addColorStop(1, '#bfdbfe');
-      ctx.fillStyle = bgGrad;
-      ctx.fillRect(0, 0, 640, 880);
+      bgGrad.addColorStop(0, '#f0f7ff'); bgGrad.addColorStop(0.5, '#dbeafe'); bgGrad.addColorStop(1, '#bfdbfe');
+      ctx.fillStyle = bgGrad; ctx.fillRect(0, 0, 640, 880);
 
-      // 双层外边框
-      ctx.strokeStyle = '#2563eb';
-      ctx.lineWidth = 10;
-      ctx.strokeRect(16, 16, 608, 848);
+      ctx.strokeStyle = '#2563eb'; ctx.lineWidth = 10; ctx.strokeRect(16, 16, 608, 848);
+      ctx.strokeStyle = '#93c5fd'; ctx.lineWidth = 2; ctx.strokeRect(26, 26, 588, 828);
 
-      ctx.strokeStyle = '#93c5fd';
-      ctx.lineWidth = 2;
-      ctx.strokeRect(26, 26, 588, 828);
-
-      // 顶部大标题
-      ctx.fillStyle = '#2563eb';
-      ctx.font = "900 36px 'Noto Sans SC', sans-serif";
-      ctx.textAlign = 'center';
+      ctx.fillStyle = '#2563eb'; ctx.font = "900 36px 'Noto Sans SC', sans-serif"; ctx.textAlign = 'center';
       ctx.fillText('かなゲーム · 日语单词闯关', 320, 92);
+      ctx.font = "76px sans-serif"; ctx.fillText('🏆', 320, 185);
 
-      // 金色大奖杯
-      ctx.font = "76px sans-serif";
-      ctx.fillText('🏆', 320, 185);
-
-      // 通关荣誉证书
-      ctx.fillStyle = '#0c2340';
-      ctx.font = "900 34px 'Noto Sans SC', sans-serif";
+      ctx.fillStyle = '#0c2340'; ctx.font = "900 34px 'Noto Sans SC', sans-serif";
       ctx.fillText('通 关 荣 誉 证 书', 320, 245);
 
-      // 用户名
       const userNick = localStorage.getItem('tangogo_nickname') || '日语学习达人';
       const userAvatar = localStorage.getItem('tangogo_avatar') || '🌸';
-      ctx.font = "700 22px 'Noto Sans SC', sans-serif";
-      ctx.fillStyle = '#1e4d8c';
+      ctx.font = "700 22px 'Noto Sans SC', sans-serif"; ctx.fillStyle = '#1e4d8c';
       ctx.fillText(`${userAvatar} 学员：${userNick}`, 320, 295);
 
-      // 细分割线
-      ctx.strokeStyle = '#3b82f6';
-      ctx.lineWidth = 1.8;
-      ctx.beginPath();
-      ctx.moveTo(80, 325);
-      ctx.lineTo(560, 325);
-      ctx.stroke();
+      ctx.strokeStyle = '#3b82f6'; ctx.lineWidth = 1.8; ctx.beginPath(); ctx.moveTo(80, 325); ctx.lineTo(560, 325); ctx.stroke();
 
-      // 白色战绩圆角大卡片
-      ctx.save();
-      ctx.fillStyle = '#ffffff';
-      ctx.shadowColor = 'rgba(37,99,235,0.18)';
-      ctx.shadowBlur = 24;
+      ctx.save(); ctx.fillStyle = '#ffffff'; ctx.shadowColor = 'rgba(37,99,235,0.18)'; ctx.shadowBlur = 24;
       const bx = 80, by = 350, bw = 480, bh = 345, r = 24;
-      ctx.beginPath();
-      ctx.moveTo(bx + r, by); ctx.lineTo(bx + bw - r, by);
+      ctx.beginPath(); ctx.moveTo(bx + r, by); ctx.lineTo(bx + bw - r, by);
       ctx.quadraticCurveTo(bx + bw, by, bx + bw, by + r); ctx.lineTo(bx + bw, by + bh - r);
       ctx.quadraticCurveTo(bx + bw, by + bh, bx + bw - r, by + bh); ctx.lineTo(bx + r, by + bh);
       ctx.quadraticCurveTo(bx, by + bh, bx, by + bh - r); ctx.lineTo(bx, by + r);
-      ctx.quadraticCurveTo(bx, by, bx + r, by);
-      ctx.closePath();
-      ctx.fill();
-      ctx.restore();
+      ctx.quadraticCurveTo(bx, by, bx + r, by); ctx.closePath(); ctx.fill(); ctx.restore();
 
-      // 左侧列标签
-      ctx.fillStyle = '#64748b';
-      ctx.font = "700 18px 'Noto Sans SC', sans-serif";
-      ctx.textAlign = 'left';
+      ctx.fillStyle = '#64748b'; ctx.font = "700 18px 'Noto Sans SC', sans-serif"; ctx.textAlign = 'left';
       ctx.fillText('📚 学习课程', 124, 405);
       ctx.fillText('⏱ 通关用时', 124, 465);
       ctx.fillText('📖 掌握词汇', 124, 525);
       ctx.fillText('🌟 最终得分', 124, 585);
       ctx.fillText('🎮 挑战模式', 124, 645);
 
-      // 右侧列数值
-      ctx.textAlign = 'right';
-      ctx.fillStyle = '#0c2340';
-      ctx.font = "900 20px 'Noto Sans SC', sans-serif";
+      ctx.textAlign = 'right'; ctx.fillStyle = '#0c2340'; ctx.font = "900 20px 'Noto Sans SC', sans-serif";
       ctx.fillText('人教新版 · 入门第1课', 516, 405);
       ctx.fillText(timeSpent, 516, 465);
       ctx.fillText(`${totalWords} 词 (全通过)`, 516, 525);
 
-      ctx.fillStyle = '#ea580c';
-      ctx.font = "900 28px 'Noto Sans SC', sans-serif";
+      ctx.fillStyle = '#ea580c'; ctx.font = "900 28px 'Noto Sans SC', sans-serif";
       ctx.fillText(`${score} 分`, 516, 585);
-
-      ctx.fillStyle = '#2563eb';
-      ctx.font = "900 20px 'Noto Sans SC', sans-serif";
+      ctx.fillStyle = '#2563eb'; ctx.font = "900 20px sans-serif";
       ctx.fillText('拼图闯关 (Puzzle)', 516, 645);
 
-      // 底部鼓励寄语
-      ctx.textAlign = 'center';
-      ctx.fillStyle = '#1e4d8c';
-      ctx.font = "700 18px 'Noto Sans SC', sans-serif";
+      ctx.textAlign = 'center'; ctx.fillStyle = '#1e4d8c'; ctx.font = "700 18px 'Noto Sans SC', sans-serif";
       ctx.fillText('持之以恒，日语单词轻松过！ ✨', 320, 742);
 
-      // 平台与日期
       const today = new Date();
       const dateStr = `${today.getFullYear()}/${String(today.getMonth() + 1).padStart(2, '0')}/${String(today.getDate()).padStart(2, '0')}`;
-      ctx.fillStyle = '#64748b';
-      ctx.font = "500 15px sans-serif";
+      ctx.fillStyle = '#64748b'; ctx.font = "500 15px sans-serif";
       ctx.fillText(`挑战平台: tangogo.online  |  发证日期: ${dateStr}`, 320, 782);
 
-      // 触发自动下载
       setTimeout(() => {
         const a = document.createElement('a');
         a.href = cvs.toDataURL('image/png');
@@ -723,6 +677,8 @@ body {
     window.addEventListener('DOMContentLoaded', async () => {
       await initAuth();
       lessonStartTime = Date.now();
+      FULL_LESSON_WORDS = await fetchCurrentLessonWords();
+      totalGroups = Math.max(1, Math.ceil(FULL_LESSON_WORDS.length / GROUP_SIZE));
       startGroup(0);
     });
   </script>
