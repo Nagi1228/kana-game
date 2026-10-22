@@ -89,16 +89,13 @@ select.deck-pick {
 }
 select.deck-pick:focus { border-color: var(--accent); }
 
-/* 修复核心：网格各列限制 min-width: 0，杜绝右侧溢出 */
 .form-row-5 {
   display: grid;
   grid-template-columns: 1.2fr 1.3fr 0.9fr 0.9fr 1.7fr;
   gap: 10px;
   width: 100%;
 }
-@media (max-width: 760px) {
-  .form-row-5 { grid-template-columns: 1fr 1fr; }
-}
+@media (max-width: 760px) { .form-row-5 { grid-template-columns: 1fr 1fr; } }
 .form-input {
   width: 100%; min-width: 0;
   padding: 10px 12px; border-radius: 12px; border: 2px solid var(--border);
@@ -115,7 +112,7 @@ select.deck-pick:focus { border-color: var(--accent); }
 .import-area {
   width: 100%; padding: 12px; border-radius: 14px; border: 2px dashed var(--border);
   background: var(--bg2); color: var(--fg); font-family: monospace; font-size: 0.92rem;
-  resize: vertical; min-height: 100px; outline: none;
+  resize: vertical; min-height: 120px; outline: none;
 }
 .import-area:focus { border-color: var(--accent); background: #fff; }
 .import-hint { font-size: 0.82rem; color: var(--fg3); line-height: 1.6; }
@@ -174,9 +171,10 @@ select.deck-pick:focus { border-color: var(--accent); }
       <button class="action-btn btn-secondary cn-text" onclick="exportBackupJSON()">💾 导出整库备份 JSON</button>
     </div>
 
+    <!-- 级联选择器 -->
     <div class="vocab-picker-box">
       <div class="deck-selector-header">
-        <label class="cn-text">选择当前编辑课时</label>
+        <label class="cn-text">选择当前编辑课时（导入整册时需选准教材与分册）</label>
         <span class="deck-count-badge cn-text" id="deckWordCount">0 词</span>
       </div>
       <div class="cascade-grid">
@@ -195,7 +193,7 @@ select.deck-pick:focus { border-color: var(--accent); }
       </div>
     </div>
 
-    <!-- 紧凑整齐的单条录入，右边框严密对齐 -->
+    <!-- 单条录入 -->
     <div class="add-word-form">
       <h3 class="cn-text">➕ 单条录入（保存到当前选中课时）</h3>
       <div class="form-row-5">
@@ -210,23 +208,25 @@ select.deck-pick:focus { border-color: var(--accent); }
       </div>
     </div>
 
+    <!-- 批量导入与整册智能分课 -->
     <div class="add-word-form">
-      <h3 class="cn-text">📥 批量导入（CSV / 文本粘贴）</h3>
+      <h3 class="cn-text">📥 批量导入 / 整册智能分课导入</h3>
       <p class="import-hint cn-text">
-        💡 <strong>标准 5 列格式（每行一个）</strong>：<code>汉字,假名,声调,词性,中文释义</code><br>
-        示例：<code>先生,せんせい,③,名,老师</code> 或 <code>,テスト,①,名,测验，测试</code>（无汉字首列逗号前留空）
+        ✨ <strong>支持整册一次性上传</strong>：只要文件中包含分课行（如 <code>第1课</code>、<code># 第2课</code>、<code>Lesson 1</code>、<code>入门单元 第1课</code> 等），系统会自动按课时分割归档。<br>
+        💡 <strong>词汇行格式</strong>：<code>汉字,假名,声调,词性,中文释义</code>（逗号分隔，无汉字首列留空）。
       </p>
       <label class="csv-upload-label">
         <input type="file" id="csvFileInput" accept=".csv,.txt" style="display:none" onchange="handleFileUpload(event)">
-        <span>📂 点击上传 CSV / TXT 词库文件</span>
+        <span>📂 点击上传整册 / 单课 CSV 或 TXT 词库文件</span>
       </label>
-      <textarea class="import-area jp-text" id="importArea" placeholder="直接粘贴词汇文本，每行一条..."></textarea>
+      <textarea class="import-area jp-text" id="importArea" placeholder="直接粘贴整册词汇文本（包含分课标记）或单课词汇..."></textarea>
       <div style="display:flex; gap:12px; flex-wrap:wrap;">
-        <button class="action-btn btn-primary cn-text" onclick="importBatchWords()">开始批量入库</button>
+        <button class="action-btn btn-primary cn-text" onclick="importBatchWords()">开始智能解析入库</button>
         <button class="action-btn btn-danger cn-text" onclick="clearCurrentLessonWords()">🗑️ 清空当前课词汇</button>
       </div>
     </div>
 
+    <!-- 单词表格 -->
     <div class="vocab-header" style="margin-top:6px;">
       <h2 class="cn-text">📝 当前课已收录单词</h2>
       <span class="import-hint cn-text" id="syncStatus">数据已与 Supabase 同步</span>
@@ -468,21 +468,68 @@ select.deck-pick:focus { border-color: var(--accent); }
       }
     }
 
+    // 智能识别分课行辅助函数
+    function matchLessonLine(line, availableLessons) {
+      const clean = line.replace(/[#\[\]\(\)\/]/g, '').trim();
+
+      // 1. 优先尝试精准匹配课时名称（如：入门单元 第1课 / 第1课）
+      const exact = availableLessons.find(l => clean.includes(l.name));
+      if (exact) return exact.id;
+
+      // 2. 匹配 "第X课" / "第 X 课"
+      const mZh = clean.match(/第\s*(\d+)\s*课/);
+      if (mZh) {
+        const num = parseInt(mZh[1], 10);
+        // 按课时名称中的数字或索引匹配
+        const found = availableLessons.find(l => {
+          const lNum = l.name.match(/第\s*(\d+)\s*课/);
+          return lNum && parseInt(lNum[1], 10) === num;
+        });
+        if (found) return found.id;
+      }
+
+      // 3. 匹配 "Lesson X" / "L X"
+      const mEn = clean.match(/(?:lesson|l)\s*(\d+)/i);
+      if (mEn) {
+        const num = parseInt(mEn[1], 10);
+        if (availableLessons[num - 1]) return availableLessons[num - 1].id;
+      }
+
+      return null;
+    }
+
+    // 批量导入（支持整册按分课行自动切课）
     async function importBatchWords() {
       const text = document.getElementById('importArea').value.trim();
       if (!text) return alert('请先粘贴或上传词汇内容！');
 
-      const lines = text.split('\n');
       const bId = document.getElementById('selBook').value;
       const gId = document.getElementById('selGrade').value;
-      const lId = document.getElementById('selLesson').value;
+      let activeLessonId = document.getElementById('selLesson').value;
 
+      const book = CURRICULUM.find(b => b.id === bId);
+      const grade = book ? book.children.find(g => g.id === gId) : null;
+      const availableLessons = grade ? grade.lessons : [];
+
+      const lines = text.split('\n');
       const rowsToInsert = [];
-      let baseOrder = currentLessonWords.length;
+      const lessonWordCounters = {};
+      const affectedLessons = new Set();
 
       lines.forEach(line => {
         const row = line.trim();
-        if (!row || row.startsWith('#')) return;
+        if (!row) return;
+
+        // 检查该行是否为分课指示行
+        const matchedLId = matchLessonLine(row, availableLessons);
+        if (matchedLId) {
+          activeLessonId = matchedLId;
+          affectedLessons.add(activeLessonId);
+          return;
+        }
+
+        if (row.startsWith('#') || row.startsWith('//')) return;
+
         const cols = row.split(',').map(c => c.trim());
         if (cols.length >= 2) {
           let kanji = cols[0] || '';
@@ -492,32 +539,42 @@ select.deck-pick:focus { border-color: var(--accent); }
           let meaning = cols[4] || cols[cols.length - 1] || '';
 
           if (kana && meaning) {
-            baseOrder++;
+            lessonWordCounters[activeLessonId] = (lessonWordCounters[activeLessonId] || 0) + 1;
+            affectedLessons.add(activeLessonId);
+
             rowsToInsert.push({
               book_id: bId,
               grade_id: gId,
-              lesson_id: lId,
+              lesson_id: activeLessonId,
               kanji, kana, pitch, pos, meaning,
-              sort_order: baseOrder
+              sort_order: lessonWordCounters[activeLessonId]
             });
           }
         }
       });
 
       if (rowsToInsert.length === 0) {
-        return alert('未能解析到符合规范的数据，请检查格式');
+        return alert('未能解析到符合规范的单词数据，请检查文件格式');
       }
 
-      showToast(`正在写入 ${rowsToInsert.length} 个单词...`);
-      const { error } = await sbClient.from('words').insert(rowsToInsert);
+      showToast(`正在写入 ${rowsToInsert.length} 个单词，跨越 ${affectedLessons.size} 个课时...`);
 
-      if (error) {
-        alert('导入失败: ' + error.message);
-      } else {
-        alert(`🎉 成功录入 ${rowsToInsert.length} 个单词到当前课时！`);
-        document.getElementById('importArea').value = '';
-        loadWords();
+      // 分批写入，每批 200 条，防止 Supabase 请求体过大
+      const batchSize = 200;
+      let insertedCount = 0;
+
+      for (let i = 0; i < rowsToInsert.length; i += batchSize) {
+        const batch = rowsToInsert.slice(i, i + batchSize);
+        const { error } = await sbClient.from('words').insert(batch);
+        if (error) {
+          return alert(`导入中断于第 ${i + 1} 条: ` + error.message);
+        }
+        insertedCount += batch.length;
       }
+
+      alert(`🎉 整册导入成功！共录入 ${insertedCount} 个单词，已自动分配至 ${affectedLessons.size} 节课时！`);
+      document.getElementById('importArea').value = '';
+      loadWords();
     }
 
     function handleFileUpload(event) {
@@ -526,7 +583,7 @@ select.deck-pick:focus { border-color: var(--accent); }
       const reader = new FileReader();
       reader.onload = e => {
         document.getElementById('importArea').value = e.target.result;
-        showToast('文件已加载到文本框，点击“开始批量入库”完成导入');
+        showToast('整册文件已加载到文本框，点击“开始智能解析入库”即可自动分课！');
       };
       reader.readAsText(file, 'utf-8');
     }
