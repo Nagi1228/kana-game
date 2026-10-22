@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>かなゲーム - 拼图模式</title>
+  <!-- 引入 Supabase 官方 SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <style>
+    :root {
+      --primary: #3b82f6;
+      --primary-hover: #2563eb;
+      --success: #22c55e;
+      --danger: #ef4444;
+      --text-main: #1e293b;
+      --text-sub: #64748b;
+      --border-color: #e2e8f0;
+      --card-bg: #ffffff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f0f7ff;
+      background-image: 
+        radial-gradient(#dbeafe 1.5px, transparent 1.5px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(240, 247, 255, 0.95));
+      background-size: 24px 24px, 100% 100%;
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .back-btn {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 6px 14px;
+      background: #eff6ff;
+      color: var(--primary);
+      border: 1px solid #bfdbfe;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .back-btn:hover { background: #dbeafe; }
+    .game-title { font-size: 16px; font-weight: 800; color: #1e3a8a; }
+    .score-badge {
+      font-size: 13px;
+      font-weight: 700;
+      color: #ea580c;
+      background: #fff7ed;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      border: 1px solid #ffedd5;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 500px;
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* 题目展示卡片 */
+    .word-card {
+      width: 100%;
+      background: var(--card-bg);
+      border-radius: 20px;
+      padding: 24px;
+      text-align: center;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+    }
+    .meaning { font-size: 24px; font-weight: 900; color: #1e293b; margin-bottom: 6px; }
+    .romaji-hint { font-size: 13px; color: var(--text-sub); }
+
+    /* 拼图填空插槽区 */
+    .slots-container {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 10px 0;
+      min-height: 54px;
+    }
+    .slot-box {
+      width: 50px;
+      height: 52px;
+      border: 2px dashed #93c5fd;
+      border-radius: 12px;
+      background: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .slot-box.filled {
+      border: 2px solid var(--primary);
+      background: #eff6ff;
+    }
+
+    /* 备选假名按钮池 */
+    .letters-pool {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      width: 100%;
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 20px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+    }
+    .letter-btn {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      border: 1px solid var(--border-color);
+      background: #ffffff;
+      font-size: 22px;
+      font-weight: 800;
+      color: #334155;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.1s, background-color 0.15s;
+    }
+    .letter-btn:active { transform: scale(0.92); }
+    .letter-btn.used {
+      opacity: 0.3;
+      pointer-events: none;
+      border-style: dashed;
+    }
+
+    .feedback-msg {
+      font-size: 14px;
+      font-weight: 700;
+      min-height: 24px;
+    }
+    .feedback-msg.correct { color: var(--success); }
+    .feedback-msg.wrong { color: var(--danger); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <button class="back-btn" onclick="location.href='index.html'">← 返回首页</button>
+    <div class="game-title">🧩 拼图闯关</div>
+    <div class="score-badge">得分: <span id="scoreTxt">0</span></div>
+  </header>
+
+  <div class="container">
+    <div class="word-card">
+      <div class="meaning" id="wordMeaning">正在载入...</div>
+      <div class="romaji-hint" id="wordRomaji"></div>
+    </div>
+
+    <div class="slots-container" id="slotsContainer"></div>
+
+    <div class="feedback-msg" id="feedbackMsg"></div>
+
+    <div class="letters-pool" id="lettersPool"></div>
+  </div>
+
+  <script>
+    const SUPABASE_URL = 'https://zbfjbtzvnhmfzyvooact.supabase.co';
+    const SUPABASE_KEY = 'sb_publishable_AP0YnQLgzmB3d63_4zbpjg_vHeTyo8Z';
+    const sbClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
+
+    let currentUser = null;
+    let score = 0;
+    let currentIndex = 0;
+    let currentInput = [];
+
+    // 默认课时词库样例（后续可从 Supabase 动态加载）
+    const sampleWords = [
+      { kana: 'あいさつ', meaning: '寒暄、打招呼', romaji: 'aisatsu' },
+      { kana: 'せんせい', meaning: '老师', romaji: 'sensei' },
+      { kana: 'がくせい', meaning: '学生', romaji: 'gakusei' },
+      { kana: 'ともだち', meaning: '朋友', romaji: 'tomodachi' },
+      { kana: 'ありがとう', meaning: '谢谢', romaji: 'arigatou' }
+    ];
+
+    // 初始化用户
+    async function initAuth() {
+      if (!sbClient) return;
+      const { data: { session } } = await sbClient.auth.getSession();
+      if (session) currentUser = session.user;
+    }
+
+    // 记录错题到 Supabase
+    async function recordMistake(word) {
+      // 本地备份
+      let localMistakes = JSON.parse(localStorage.getItem('tangogo_mistakes') || '[]');
+      if (!localMistakes.some(m => m.word === word.kana)) {
+        localMistakes.push({ word: word.kana, meaning: word.meaning });
+        localStorage.setItem('tangogo_mistakes', JSON.stringify(localMistakes));
+      }
+
+      // 云端持久化
+      if (currentUser && sbClient) {
+        try {
+          await sbClient.from('user_mistakes').upsert({
+            user_id: currentUser.id,
+            word: word.kana,
+            meaning: word.meaning,
+            wrong_count: 1,
+            updated_at: new Date().toISOString()
+          }, { onConflict: 'user_id,word' });
+        } catch (e) {
+          console.error('错词上传失败:', e);
+        }
+      }
+    }
+
+    function loadQuestion() {
+      if (currentIndex >= sampleWords.length) {
+        document.getElementById('wordMeaning').innerText = '🎉 挑战全部完成！';
+        document.getElementById('wordRomaji').innerText = `最终得分: ${score}`;
+        document.getElementById('slotsContainer').innerHTML = '';
+        document.getElementById('lettersPool').innerHTML = '<button class="letter-btn" style="width:auto; padding:0 20px;" onclick="location.reload()">再玩一次</button>';
+        return;
+      }
+
+      const q = sampleWords[currentIndex];
+      currentInput = [];
+      document.getElementById('feedbackMsg').innerText = '';
+      document.getElementById('wordMeaning').innerText = q.meaning;
+      document.getElementById('wordRomaji').innerText = `罗马音提示: ${q.romaji}`;
+
+      // 渲染拼图槽位
+      const slotsContainer = document.getElementById('slotsContainer');
+      slotsContainer.innerHTML = '';
+      for (let i = 0; i < q.kana.length; i++) {
+        const slot = document.createElement('div');
+        slot.className = 'slot-box';
+        slot.id = `slot-${i}`;
+        slot.onclick = () => removeSlotLetter(i);
+        slotsContainer.appendChild(slot);
+      }
+
+      // 生成打乱顺序的假名按钮
+      const chars = q.kana.split('').sort(() => Math.random() - 0.5);
+      const pool = document.getElementById('lettersPool');
+      pool.innerHTML = '';
+      chars.forEach((char, idx) => {
+        const btn = document.createElement('button');
+        btn.className = 'letter-btn';
+        btn.id = `btn-${idx}`;
+        btn.innerText = char;
+        btn.onclick = () => selectLetter(char, idx);
+        pool.appendChild(btn);
+      });
+    }
+
+    function selectLetter(char, btnIdx) {
+      const q = sampleWords[currentIndex];
+      if (currentInput.length >= q.kana.length) return;
+
+      currentInput.push({ char, btnIdx });
+      document.getElementById(`btn-${btnIdx}`).classList.add('used');
+      renderSlots();
+
+      if (currentInput.length === q.kana.length) {
+        checkAnswer();
+      }
+    }
+
+    function removeSlotLetter(slotIdx) {
+      if (!currentInput[slotIdx]) return;
+      const removed = currentInput.splice(slotIdx, 1)[0];
+      document.getElementById(`btn-${removed.btnIdx}`).classList.remove('used');
+      renderSlots();
+    }
+
+    function renderSlots() {
+      const q = sampleWords[currentIndex];
+      for (let i = 0; i < q.kana.length; i++) {
+        const slot = document.getElementById(`slot-${i}`);
+        if (currentInput[i]) {
+          slot.innerText = currentInput[i].char;
+          slot.classList.add('filled');
+        } else {
+          slot.innerText = '';
+          slot.classList.remove('filled');
+        }
+      }
+    }
+
+    function checkAnswer() {
+      const q = sampleWords[currentIndex];
+      const ans = currentInput.map(item => item.char).join('');
+      const feedback = document.getElementById('feedbackMsg');
+
+      if (ans === q.kana) {
+        feedback.className = 'feedback-msg correct';
+        feedback.innerText = '✨ 回答正确！+10分';
+        score += 10;
+        document.getElementById('scoreTxt').innerText = score;
+        setTimeout(() => {
+          currentIndex++;
+          loadQuestion();
+        }, 900);
+      } else {
+        feedback.className = 'feedback-msg wrong';
+        feedback.innerText = `❌ 拼错啦，正确是: ${q.kana}（已加入错题本）`;
+        recordMistake(q);
+        setTimeout(() => {
+          currentIndex++;
+          loadQuestion();
+        }, 1600);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', async () => {
+      await initAuth();
+      loadQuestion();
+    });
+  </script>
+</body>
+</html>
