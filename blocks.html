@@ -75,7 +75,7 @@ html, body {
 }
 .nav-btn:hover { background: var(--bg2); border-color: var(--border); }
 
-/* 方块下落模式主容器 */
+/* 主视口 */
 .tetris-wrap {
   flex: 1; display: flex; flex-direction: column; overflow: hidden;
   position: relative; background: linear-gradient(180deg, #38bdf8 0%, #818cf8 55%, #c084fc 100%);
@@ -90,7 +90,7 @@ html, body {
   pointer-events: none; z-index: 0;
 }
 
-/* 第一行状态栏 */
+/* 顶部状态头栏 */
 .tetris-top {
   display: flex; align-items: center; gap: 14px; padding: 12px 20px;
   background: rgba(0,0,0,0.18); backdrop-filter: blur(8px);
@@ -106,7 +106,7 @@ html, body {
 .tetris-score { font-size: 1.05rem; font-weight: 900; color: #fff; font-variant-numeric: tabular-nums; text-shadow: 0 1px 4px rgba(0,0,0,0.3); }
 .tetris-score span { background: rgba(255,255,255,0.2); border-radius: 20px; padding: 4px 12px; margin-left: 4px; }
 .word-count-badge {
-  font-size: 0.8rem; font-weight: 700; color: rgba(255,255,255,0.85);
+  font-size: 0.8rem; font-weight: 700; color: rgba(255,255,255,0.9);
   background: rgba(0,0,0,0.2); border-radius: 12px; padding: 3px 10px;
   margin-left: auto; white-space: nowrap;
 }
@@ -114,7 +114,7 @@ html, body {
 .life-icon { font-size: 1.4rem; transition: transform 0.3s; }
 .life-icon.lost { filter: grayscale(1); opacity: 0.25; transform: scale(0.8); }
 
-/* 第二行子工具栏 */
+/* 子工具栏 */
 .tetris-subbar {
   display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
   padding: 8px 20px; flex-shrink: 0; position: relative; z-index: 10;
@@ -142,7 +142,7 @@ html, body {
 .tet-hint-btn:hover:not(:disabled) { background: rgba(255,235,120,0.42); }
 .tet-hint-btn:disabled { opacity: 0.38; cursor: default; }
 
-/* 单词汉字与释义展示区 */
+/* 题目展示区 */
 .tetris-word-display {
   padding: 14px 20px; text-align: center;
   flex-shrink: 0; position: relative; z-index: 10; background: rgba(0,0,0,0.1);
@@ -150,7 +150,7 @@ html, body {
 .tetris-kanji-hint { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.3); letter-spacing: 0.05em; }
 .tetris-meaning-hint { font-size: 1.1rem; color: rgba(255,255,255,0.85); font-weight: 700; margin-top: 3px; }
 
-/* 舞台与画布区 */
+/* 舞台与画布 */
 .tetris-main {
   flex: 1; display: flex; flex-direction: column; align-items: center;
   justify-content: flex-end; position: relative; overflow: hidden; z-index: 5; min-height: 0;
@@ -186,7 +186,7 @@ html, body {
 .pause-text { font-size: 2.5rem; font-weight: 900; color: #fff; text-shadow: 0 2px 16px rgba(0,0,0,0.5); }
 .pause-sub { font-size: 1rem; color: rgba(255,255,255,0.75); }
 
-/* 底部插槽地面 */
+/* 底部插槽 */
 .tetris-ground {
   width: 100%; padding-bottom: 10px; position: relative; z-index: 6; flex-shrink: 0;
   background: rgba(0,0,0,0.08); border-top: 2px solid rgba(255,255,255,0.25);
@@ -258,28 +258,36 @@ html, body {
 }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
-/* 通关 / 结束遮罩弹窗 */
+/* 通关/结组弹窗 Overlay */
 .overlay {
-  position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+  position: fixed; inset: 0; background: rgba(0,0,0,0.65);
   display: flex; align-items: center; justify-content: center;
   z-index: 200; padding: 20px; backdrop-filter: blur(8px);
 }
 .overlay-card {
-  background: var(--surface); border-radius: 28px; padding: 36px 32px;
-  text-align: center; width: 100%; max-width: 420px;
-  display: flex; flex-direction: column; gap: 16px;
+  background: var(--surface); border-radius: 28px; padding: 34px 28px;
+  text-align: center; width: 100%; max-width: 440px;
+  display: flex; flex-direction: column; gap: 14px;
   box-shadow: 0 24px 70px rgba(0,0,0,0.35); border: 2px solid var(--border);
 }
-.overlay-emoji { font-size: 3.5rem; }
-.overlay-title { font-size: 1.9rem; font-weight: 900; color: var(--fg); }
-.overlay-body { font-size: 1.05rem; color: var(--fg2); line-height: 1.7; }
-.overlay-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 4px; }
-.action-btn {
-  padding: 12px 26px; border-radius: 28px; border: none; font-family: inherit;
-  font-size: 1rem; font-weight: 700; cursor: pointer; transition: transform 0.1s, box-shadow 0.15s;
+.overlay-emoji { font-size: 3.2rem; }
+.overlay-title { font-size: 1.8rem; font-weight: 900; color: var(--fg); }
+.overlay-body { font-size: 1rem; color: var(--fg2); line-height: 1.65; }
+.overlay-stats-box {
+  background: var(--bg); border-radius: 16px; padding: 12px 16px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 4px 0;
+  font-size: 0.9rem; font-weight: 700; text-align: left;
 }
+.overlay-stats-item b { color: var(--accent); }
+.overlay-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 6px; }
+.action-btn {
+  padding: 10px 20px; border-radius: 24px; border: none; font-family: inherit;
+  font-size: 0.95rem; font-weight: 700; cursor: pointer; transition: transform 0.1s, box-shadow 0.15s;
+}
+.action-btn:active { transform: scale(0.96); }
 .btn-primary { background: linear-gradient(135deg, var(--accent), #1d4ed8); color: #fff; box-shadow: 0 4px 16px var(--shadow); }
-.btn-secondary { background: var(--surface); color: var(--fg2); border: 2.5px solid var(--border); }
+.btn-hot { background: linear-gradient(135deg, var(--accent-hot), #ea580c); color: #fff; }
+.btn-secondary { background: var(--surface); color: var(--fg2); border: 2px solid var(--border); }
 </style>
 </head>
 <body>
@@ -318,14 +326,12 @@ html, body {
       <div class="tetris-canvas-wrap" id="tetris-canvas-wrap">
         <canvas id="tetris-canvas"></canvas>
 
-        <!-- 准备阶段：先亮出完整假名记忆 -->
         <div class="tetris-preview" id="tetris-preview" hidden>
           <div class="preview-kana jp-text" id="tetris-preview-kana"></div>
           <div class="preview-hint cn-text">记住这个单词，马上开始！</div>
           <div class="preview-bar"><div class="preview-bar-fill" id="tetris-preview-bar"></div></div>
         </div>
 
-        <!-- 暂停遮罩 -->
         <div class="tetris-pause-overlay" id="tetris-pause-overlay" hidden>
           <div class="pause-text cn-text">⏸ 已暂停</div>
           <div class="pause-sub cn-text">按 P 键或点击继续按钮恢复游戏</div>
@@ -358,22 +364,22 @@ html, body {
   </div>
 </div>
 
-<!-- 通关 / 结束遮罩弹窗 -->
+<!-- 通关 / 结组动态弹窗 -->
 <div class="overlay" id="overlay" hidden>
   <div class="overlay-card">
     <div class="overlay-emoji" id="ov-emoji">🎉</div>
-    <div class="overlay-title cn-text" id="ov-title">完成！</div>
+    <div class="overlay-title cn-text" id="ov-title">本组通关！</div>
     <div class="overlay-body cn-text" id="ov-body"></div>
+    <div class="overlay-stats-box" id="ov-stats" hidden></div>
     <div class="overlay-actions" id="ov-actions"></div>
   </div>
 </div>
 
-<!-- 底部胶囊提示 Toast -->
 <div class="toast cn-text" id="toast"></div>
 
 <script>
 // ============================================================
-//  1. 原版音效引擎 (Web Audio API) —— 区分单格落对、单格落错、整词完成
+//  1. 音效引擎
 // ============================================================
 let audioCtx = null;
 function getAudioCtx() {
@@ -385,7 +391,6 @@ function getAudioCtx() {
   }
   return audioCtx;
 }
-// 全局首次交互自动唤醒音频上下文，确保每次发声必响
 ['pointerdown', 'keydown', 'touchstart'].forEach(evt => {
   window.addEventListener(evt, () => getAudioCtx(), { once: false, passive: true });
 });
@@ -406,27 +411,20 @@ function playTone(freq, type, duration, vol, decay) {
   } catch(e){}
 }
 
-// 按钮轻点音效
-function sfxClick() {
-  playTone(520, 'sine', 0.07, 0.22, 0.06);
-}
-// 单格落对音效（清脆双音叮咚，音量适中 0.32）
+function sfxClick() { playTone(520, 'sine', 0.07, 0.22, 0.06); }
 function sfxLand() {
   playTone(523, 'sine', 0.12, 0.32, 0.11);
   setTimeout(() => playTone(784, 'triangle', 0.16, 0.34, 0.15), 65);
 }
-// 单格落错音效（低沉锯齿双音警告）
 function sfxWrong() {
   playTone(280, 'sawtooth', 0.22, 0.32, 0.2);
   setTimeout(() => playTone(195, 'sawtooth', 0.24, 0.30, 0.22), 95);
 }
-// 整词完全拼好音效（五连音欢快琶音，音量明显放大至 0.55！）
 function sfxWordComplete() {
   [523, 659, 784, 1047, 1319].forEach((f, i) => {
     setTimeout(() => playTone(f, 'triangle', 0.28, 0.55, 0.25), i * 68);
   });
 }
-// 游戏结束音效
 function sfxGameOver() {
   [330, 294, 262, 220].forEach((f, i) => {
     setTimeout(() => playTone(f, 'sawtooth', 0.28, 0.35, 0.25), i * 100);
@@ -434,7 +432,7 @@ function sfxGameOver() {
 }
 
 // ============================================================
-//  2. 原版底部 Toast 与 Overlay 控制
+//  2. Toast 提示
 // ============================================================
 let toastTimer = null;
 function showToast(msg, duration = 2200) {
@@ -445,27 +443,8 @@ function showToast(msg, duration = 2200) {
   toastTimer = setTimeout(() => t.classList.remove('show'), duration);
 }
 
-function showOverlay(emoji, title, body, actions) {
-  document.getElementById('ov-emoji').textContent = emoji;
-  document.getElementById('ov-title').textContent = title;
-  document.getElementById('ov-body').textContent = body;
-  const actEl = document.getElementById('ov-actions');
-  actEl.innerHTML = '';
-  actions.forEach(a => {
-    const btn = document.createElement('button');
-    btn.className = 'action-btn cn-text ' + (a.primary ? 'btn-primary' : 'btn-secondary');
-    btn.textContent = a.label;
-    btn.onclick = () => {
-      document.getElementById('overlay').hidden = true;
-      a.fn();
-    };
-    actEl.appendChild(btn);
-  });
-  document.getElementById('overlay').hidden = false;
-}
-
 // ============================================================
-//  3. Supabase 用户与错题本同步
+//  3. Supabase 与 错题同步
 // ============================================================
 const SUPABASE_URL = 'https://zbfjbtzvnhmfzyvooact.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_AP0YnQLgzmB3d63_4zbpjg_vHeTyo8Z';
@@ -498,20 +477,54 @@ async function recordMistake(word) {
 }
 
 // ============================================================
-//  4. 原版方块落格核心引擎
+//  4. 词库与分组数据管理（一课几十词，1组10词）
 // ============================================================
-const WORDS_POOL = [
-  { kanji: '先生', kana: 'せんせい', meaning: '老师' },
-  { kanji: 'お菓子', kana: 'おかし', meaning: '点心；糖果' },
-  { kanji: '靴', kana: 'くつ', meaning: '鞋' },
-  { kanji: '本', kana: 'ほん', meaning: '书' },
-  { kanji: '学生', kana: 'がくせい', meaning: '学生' },
-  { kanji: '友達', kana: 'ともだち', meaning: '朋友' },
-  { kanji: 'テスト', kana: 'テスト', meaning: '测验，测试' },
-  { kanji: '時計', kana: 'とけい', meaning: '钟，表' },
-  { kanji: '傘', kana: 'かさ', meaning: '伞' },
-  { kanji: '机', kana: 'つくえ', meaning: '桌子，书桌' }
+// 默认词库（模拟标准初级上一课的丰富词库）
+const FULL_LESSON_WORDS = [
+  {"kanji":"本","kana":"ほん","meaning":"书"},
+  {"kanji":"かばん","kana":"かばん","meaning":"包，公文包"},
+  {"kanji":"ノート","kana":"ノート","meaning":"笔记本，本子"},
+  {"kanji":"鉛筆","kana":"えんぴつ","meaning":"铅笔"},
+  {"kanji":"傘","kana":"かさ","meaning":"伞"},
+  {"kanji":"靴","kana":"くつ","meaning":"鞋"},
+  {"kanji":"新聞","kana":"しんぶん","meaning":"报纸"},
+  {"kanji":"雑誌","kana":"ざっし","meaning":"杂志"},
+  {"kanji":"辞書","kana":"じしょ","meaning":"词典"},
+  {"kanji":"カメラ","kana":"カメラ","meaning":"照相机"},
+  // 第 2 组 (11~20)
+  {"kanji":"テレビ","kana":"テレビ","meaning":"电视机"},
+  {"kanji":"パソコン","kana":"パソコン","meaning":"个人电脑"},
+  {"kanji":"ラジオ","kana":"ラジオ","meaning":"收音机"},
+  {"kanji":"電話","kana":"でんわ","meaning":"电话"},
+  {"kanji":"机","kana":"つくえ","meaning":"桌子，书桌"},
+  {"kanji":"いす","kana":"いす","meaning":"椅子"},
+  {"kanji":"かぎ","kana":"かぎ","meaning":"钥匙，锁"},
+  {"kanji":"時計","kana":"とけい","meaning":"钟，表"},
+  {"kanji":"手帳","kana":"てちょう","meaning":"记事本"},
+  {"kanji":"写真","kana":"しゃしん","meaning":"照片"},
+  // 第 3 组 (21~26)
+  {"kanji":"車","kana":"くるま","meaning":"车"},
+  {"kanji":"自転車","kana":"じてんしゃ","meaning":"自行车"},
+  {"kanji":"お土産","kana":"おみやげ","meaning":"礼物"},
+  {"kanji":"名産品","kana":"めいさんひん","meaning":"特产，名产"},
+  {"kanji":"会社","kana":"かいしゃ","meaning":"公司"},
+  {"kanji":"日本語","kana":"にほんご","meaning":"日语"}
 ];
+
+const GROUP_SIZE = 10;
+let currentGroupIndex = 0; // 当前组索引 (0 代表第 1 组)
+let totalGroups = Math.ceil(FULL_LESSON_WORDS.length / GROUP_SIZE);
+
+// 统计数据
+let lessonStartTime = Date.now();
+let lessonScoreTotal = 0;
+let lessonWordsLearned = 0;
+
+// URL 参数解析
+const urlParams = new URLSearchParams(window.location.search);
+const currentBook = urlParams.get('book') || 'renjiao-new';
+const currentGrade = urlParams.get('grade') || 'grade7';
+const currentLesson = urlParams.get('lesson') || 'unit1_lesson1';
 
 const MAX_MISTAKES_PER_LIFE = 3;
 let tetWords = [];
@@ -525,7 +538,7 @@ let tetOrderMode = 'random'; // 'random' | 'order'
 let tetKanaList = [];
 let tetSlotFilled = [];
 let tetFallQueue = [];
-let tetCurrentBlock = null; // { kana, targetSlot, col, y, fast }
+let tetCurrentBlock = null;
 let tetSlotW = 68;
 let tetRunning = false;
 let tetPaused = false;
@@ -545,22 +558,25 @@ function shuffle(arr) {
   return a;
 }
 
-function splitKana(str) {
-  return Array.from(str.trim());
-}
+function splitKana(str) { return Array.from(str.trim()); }
 
-function startTetrisGame() {
-  tetWords = shuffle(WORDS_POOL).slice(0, 10);
+function startGroup(groupIdx) {
+  currentGroupIndex = groupIdx;
+  const start = groupIdx * GROUP_SIZE;
+  const end = Math.min(start + GROUP_SIZE, FULL_LESSON_WORDS.length);
+  const rawWords = FULL_LESSON_WORDS.slice(start, end);
+
+  tetWords = shuffle(rawWords);
   tetWordIdx = 0;
   tetScore = 0;
-  tetLevel = 1;
+  tetLevel = groupIdx + 1;
   tetLives = 3;
   tetMistakes = 0;
   tetRunning = true;
   tetPaused = false;
 
-  document.getElementById('tet-score').textContent = '0';
-  document.getElementById('tet-level').textContent = '1';
+  document.getElementById('tet-score').textContent = tetScore;
+  document.getElementById('tet-level').textContent = tetLevel;
   renderLives();
   renderMistakes();
   syncModeUI();
@@ -653,14 +669,16 @@ function clearHint() {
 }
 
 function loadTetrisWord() {
+  // 当前组 10 个词全部答完
   if (tetWordIdx >= tetWords.length) {
     tetRunning = false;
     cancelAnimationFrame(tetAnimId);
     sfxWordComplete();
-    showOverlay('🏆', '全部通关！', `最终得分：${tetScore} 分`, [
-      { label: '再来一局', primary: true, fn: startTetrisGame },
-      { label: '返回首页', primary: false, fn: () => location.href = 'index.html' }
-    ]);
+
+    lessonScoreTotal += tetScore;
+    lessonWordsLearned += tetWords.length;
+
+    handleGroupOrLessonCompletion();
     return;
   }
 
@@ -678,6 +696,220 @@ function loadTetrisWord() {
   setupCanvas();
   renderSlots();
   startWordPreview(word);
+}
+
+// ============================================================
+//  5. 核心结算弹窗分流：组结算 vs 整课通关结算
+// ============================================================
+function handleGroupOrLessonCompletion() {
+  const isLessonComplete = (currentGroupIndex >= totalGroups - 1);
+  const overlay = document.getElementById('overlay');
+  const emojiEl = document.getElementById('ov-emoji');
+  const titleEl = document.getElementById('ov-title');
+  const bodyEl = document.getElementById('ov-body');
+  const statsEl = document.getElementById('ov-stats');
+  const actEl = document.getElementById('ov-actions');
+
+  actEl.innerHTML = '';
+
+  if (!isLessonComplete) {
+    // 场景 1：当前组结束，还有后续组
+    emojiEl.textContent = '👏';
+    titleEl.textContent = `第 ${currentGroupIndex + 1} 组挑战成功！`;
+    bodyEl.textContent = `本组 10 个单词已掌握，得分：${tetScore} 分。当前课程进度：${(currentGroupIndex + 1) * 10}/${FULL_LESSON_WORDS.length} 词。`;
+    statsEl.hidden = true;
+
+    // 3 个按钮：下一组、再来1遍、回到首页
+    const btnNextGroup = createBtn('下一组 (' + (currentGroupIndex + 2) + '/' + totalGroups + ')', 'btn-primary', () => {
+      overlay.hidden = true;
+      startGroup(currentGroupIndex + 1);
+    });
+    const btnRetryGroup = createBtn('再来1遍', 'btn-secondary', () => {
+      overlay.hidden = true;
+      startGroup(currentGroupIndex);
+    });
+    const btnHome = createBtn('回到首页', 'btn-secondary', () => {
+      location.href = 'index.html';
+    });
+
+    actEl.appendChild(btnNextGroup);
+    actEl.appendChild(btnRetryGroup);
+    actEl.appendChild(btnHome);
+  } else {
+    // 场景 2：该课全部单词学完（整课通关）
+    const totalSeconds = Math.max(1, Math.round((Date.now() - lessonStartTime) / 1000));
+    const m = Math.floor(totalSeconds / 60);
+    const s = totalSeconds % 60;
+    const timeFormatted = `${m > 0 ? m + '分' : ''}${s}秒`;
+
+    emojiEl.textContent = '🏆';
+    titleEl.textContent = '整课大通关！';
+    bodyEl.textContent = `太棒了！您已成功掌握了本课全部 ${FULL_LESSON_WORDS.length} 个单词！`;
+    
+    // 显示统计框
+    statsEl.hidden = false;
+    statsEl.innerHTML = `
+      <div class="overlay-stats-item">总得分：<b>${lessonScoreTotal} 分</b></div>
+      <div class="overlay-stats-item">总用时：<b>${timeFormatted}</b></div>
+      <div class="overlay-stats-item">总词数：<b>${FULL_LESSON_WORDS.length} 词</b></div>
+      <div class="overlay-stats-item">剩余生命：<b>${tetLives} ❤️</b></div>
+    `;
+
+    // 4 个按钮：下一课、再来1遍、回到首页、分享成绩
+    const btnNextLesson = createBtn('下一课', 'btn-primary', () => {
+      // 课时自增跳转，例如第1课跳第2课
+      showToast('正在前往下一课...');
+      setTimeout(() => {
+        location.href = `blocks.html?book=${encodeURIComponent(currentBook)}&grade=${encodeURIComponent(currentGrade)}&lesson=unit1_lesson2`;
+      }, 600);
+    });
+
+    const btnRetryLesson = createBtn('再来1遍', 'btn-secondary', () => {
+      overlay.hidden = true;
+      lessonStartTime = Date.now();
+      lessonScoreTotal = 0;
+      lessonWordsLearned = 0;
+      startGroup(0);
+    });
+
+    const btnShare = createBtn('📸 分享成绩', 'btn-hot', () => {
+      generateShareCard(lessonScoreTotal, timeFormatted, FULL_LESSON_WORDS.length);
+    });
+
+    const btnHome = createBtn('回到首页', 'btn-secondary', () => {
+      location.href = 'index.html';
+    });
+
+    actEl.appendChild(btnNextLesson);
+    actEl.appendChild(btnRetryLesson);
+    actEl.appendChild(btnShare);
+    actEl.appendChild(btnHome);
+  }
+
+  overlay.hidden = false;
+}
+
+function createBtn(text, cls, onClick) {
+  const b = document.createElement('button');
+  b.className = 'action-btn cn-text ' + cls;
+  b.textContent = text;
+  b.onclick = onClick;
+  return b;
+}
+
+// ============================================================
+//  6. 离线 Canvas 生成精美成绩卡片海报
+// ============================================================
+function generateShareCard(score, timeSpent, totalWords) {
+  showToast('正在生成成绩单图片...');
+  const cvs = document.createElement('canvas');
+  cvs.width = 640;
+  cvs.height = 880;
+  const ctx = cvs.getContext('2d');
+
+  // 背景渐变
+  const bgGrad = ctx.createLinearGradient(0, 0, 640, 880);
+  bgGrad.addColorStop(0, '#f0f7ff');
+  bgGrad.addColorStop(0.5, '#dbeafe');
+  bgGrad.addColorStop(1, '#bfdbfe');
+  ctx.fillStyle = bgGrad;
+  ctx.fillRect(0, 0, 640, 880);
+
+  // 边框装饰
+  ctx.strokeStyle = '#2563eb';
+  ctx.lineWidth = 10;
+  ctx.strokeRect(20, 20, 600, 840);
+
+  ctx.strokeStyle = '#93c5fd';
+  ctx.lineWidth = 2;
+  ctx.strokeRect(28, 28, 584, 824);
+
+  // 顶部 Logo
+  ctx.fillStyle = '#2563eb';
+  ctx.font = "900 36px 'Noto Sans SC', sans-serif";
+  ctx.textAlign = 'center';
+  ctx.fillText('かなゲーム · 日语单词闯关', 320, 90);
+
+  // 奖状大徽章
+  ctx.font = "72px sans-serif";
+  ctx.fillText('🏆', 320, 180);
+
+  // 结业标题
+  ctx.fillStyle = '#0c2340';
+  ctx.font = "900 34px 'Noto Sans SC', sans-serif";
+  ctx.fillText('通 关 荣 誉 证 书', 320, 240);
+
+  // 用户信息
+  const userNick = localStorage.getItem('tangogo_nickname') || '日语学习达人';
+  const userAvatar = localStorage.getItem('tangogo_avatar') || '🌸';
+  ctx.font = "700 22px 'Noto Sans SC', sans-serif";
+  ctx.fillStyle = '#1e4d8c';
+  ctx.fillText(`${userAvatar} 学员：${userNick}`, 320, 290);
+
+  // 装饰分割线
+  ctx.strokeStyle = '#3b82f6';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(80, 320);
+  ctx.lineTo(560, 320);
+  ctx.stroke();
+
+  // 核心战绩白底大卡
+  ctx.fillStyle = '#ffffff';
+  ctx.shadowColor = 'rgba(37,99,235,0.18)';
+  ctx.shadowBlur = 20;
+  ctx.roundRect ? ctx.roundRect(80, 350, 480, 340, 20) : ctx.fillRect(80, 350, 480, 340);
+  ctx.fill();
+  ctx.shadowBlur = 0;
+
+  // 战绩详情
+  ctx.fillStyle = '#64748b';
+  ctx.font = "700 18px 'Noto Sans SC', sans-serif";
+  ctx.textAlign = 'left';
+  ctx.fillText('📚 学习课程', 120, 405);
+  ctx.fillText('⏱ 通关用时', 120, 465);
+  ctx.fillText('📖 掌握词汇', 120, 525);
+  ctx.fillText('🌟 最终得分', 120, 585);
+  ctx.fillText('🎮 挑战模式', 120, 645);
+
+  ctx.textAlign = 'right';
+  ctx.fillStyle = '#0c2340';
+  ctx.font = "900 20px 'Noto Sans SC', sans-serif";
+  ctx.fillText('人教新版 · 入门第1课', 520, 405);
+  ctx.fillText(timeSpent, 520, 465);
+  ctx.fillText(`${totalWords} 词 (全通过)`, 520, 525);
+
+  ctx.fillStyle = '#ea580c';
+  ctx.font = "900 28px 'Noto Sans SC', sans-serif";
+  ctx.fillText(`${score} 分`, 520, 585);
+
+  ctx.fillStyle = '#2563eb';
+  ctx.font = "900 20px 'Noto Sans SC', sans-serif";
+  ctx.fillText('方块落格 (Tetris)', 520, 645);
+
+  // 底部寄语
+  ctx.textAlign = 'center';
+  ctx.fillStyle = '#1e4d8c';
+  ctx.font = "700 18px 'Noto Sans SC', sans-serif";
+  ctx.fillText('持之以恒，日语单词轻松过！✨', 320, 740);
+
+  // 底部网址与日期
+  const todayStr = new Date().toLocaleDateString('zh-CN');
+  ctx.fillStyle = '#64748b';
+  ctx.font = "500 15px sans-serif";
+  ctx.fillText(`挑战平台: tangogo.online  |  发证日期: ${todayStr}`, 320, 780);
+
+  // 导出图片并自动下载
+  setTimeout(() => {
+    const dataUrl = cvs.toDataURL('image/png');
+    const a = document.createElement('a');
+    a.href = dataUrl;
+    a.download = `日语单词通关成绩单_${Date.now()}.png`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    showToast('🎉 成绩单图片已保存到本地！');
+  }, 400);
 }
 
 function startWordPreview(word) {
@@ -762,7 +994,6 @@ function spawnNextBlock() {
   clearHint();
   const remaining = tetSlotFilled.filter(f => !f).length;
   if (remaining === 0) {
-    // 整个单词全部拼好：播放更大音量的五连音完成音效！
     sfxWordComplete();
     tetScore += 20 * tetLevel;
     document.getElementById('tet-score').textContent = tetScore;
@@ -783,7 +1014,6 @@ function spawnNextBlock() {
   const kana = tetKanaList[targetSlot];
   const n = tetKanaList.length;
 
-  // 随机出生列：避开所有同样是该假名的未填槽位，必须玩家手动移动
   const validSlotsForThisKana = [];
   for (let i = 0; i < n; i++) {
     if (!tetSlotFilled[i] && tetKanaList[i] === kana) validSlotsForThisKana.push(i);
@@ -818,7 +1048,6 @@ function getSlotX(colIdx) {
   return startX + colIdx * tetSlotW + tetSlotW / 2;
 }
 
-// 动画主循环：平时平缓下落，一旦点击“快落”直接 680px/s 极速俯冲到底！
 function tetrisLoop(now) {
   if (!tetRunning || tetPaused || tetPreviewing) return;
   const dt = Math.min((now - tetLastTime) / 1000, 0.1);
@@ -826,7 +1055,6 @@ function tetrisLoop(now) {
 
   const canvas = document.getElementById('tetris-canvas');
   const baseSpeed = 58 + (tetLevel - 1) * 14;
-  // 快落速度：固定至少 680px/s（约 11.5 倍速），瞬间丝滑落底，毫无阻力感
   const speed = (tetCurrentBlock && tetCurrentBlock.fast) ? Math.max(680, baseSpeed * 11) : baseSpeed;
 
   if (tetCurrentBlock) {
@@ -849,11 +1077,10 @@ function landBlock() {
   tetCurrentBlock = null;
   const slotEl = document.getElementById('tet-slot-' + col);
 
-  // 核心修复：只要落入的格子是空的，且该格子的目标假名与当前下落假名相同（支持含相同假名的单词，如 せんせい 的两个 せ），即算对！
+  // 相同假名兼任判定
   if (!tetSlotFilled[col] && tetKanaList[col] === kana) {
     tetSlotFilled[col] = true;
 
-    // 如果玩家放进的是另一个同名假名格（例如 targetSlot 是 0，但玩家放进了第 2 格），同步更新队列
     if (col !== targetSlot) {
       const idxInQueue = tetFallQueue.indexOf(col);
       if (idxInQueue !== -1) {
@@ -866,11 +1093,8 @@ function landBlock() {
     tetScore += 10 * tetLevel;
     document.getElementById('tet-score').textContent = tetScore;
     
-    // 如果还有剩余格子未填，播放单格落对音效；如果这是最后一格，交由 spawnNextBlock 播放更大声的整词完成音效
     const stillRemaining = tetSlotFilled.some(f => !f);
-    if (stillRemaining) {
-      sfxLand();
-    }
+    if (stillRemaining) sfxLand();
 
     renderSlots();
 
@@ -881,7 +1105,6 @@ function landBlock() {
     }
     setTimeout(() => { if (tetRunning) spawnNextBlock(); }, 220);
   } else {
-    // 落错格：播放低沉错误音效
     sfxWrong();
     recordMistake(tetWords[tetWordIdx]);
     if (slotEl) {
@@ -899,10 +1122,23 @@ function landBlock() {
         tetRunning = false;
         cancelAnimationFrame(tetAnimId);
         sfxGameOver();
-        showOverlay('💔', '游戏结束', `最终得分：${tetScore} 分`, [
-          { label: '再来一局', primary: true, fn: startTetrisGame },
-          { label: '返回首页', primary: false, fn: () => location.href = 'index.html' }
-        ]);
+        
+        const overlay = document.getElementById('overlay');
+        document.getElementById('ov-emoji').textContent = '💔';
+        document.getElementById('ov-title').textContent = '挑战失败';
+        document.getElementById('ov-body').textContent = `生命已耗尽，本组得分：${tetScore} 分。`;
+        document.getElementById('ov-stats').hidden = true;
+        
+        const actEl = document.getElementById('ov-actions');
+        actEl.innerHTML = '';
+        actEl.appendChild(createBtn('重试本组', 'btn-primary', () => {
+          overlay.hidden = true;
+          startGroup(currentGroupIndex);
+        }));
+        actEl.appendChild(createBtn('回到首页', 'btn-secondary', () => {
+          location.href = 'index.html';
+        }));
+        overlay.hidden = false;
         return;
       }
       showToast(`💔 失误满 ${MAX_MISTAKES_PER_LIFE} 次，扣 1 颗心！`);
@@ -910,7 +1146,6 @@ function landBlock() {
       renderMistakes();
     }
 
-    // 没接对的假名塞回队列重来
     if (tetOrderMode === 'order') {
       tetFallQueue.unshift(targetSlot);
     } else {
@@ -932,7 +1167,7 @@ function drawTetris() {
   const totalW = n * tetSlotW;
   const startX = (canvas.width - totalW) / 2;
 
-  // 1. 绘制垂直分轨虚线
+  // 1. 分轨虚线
   ctx.strokeStyle = 'rgba(255,255,255,0.18)';
   ctx.lineWidth = 1;
   ctx.setLineDash([5, 7]);
@@ -945,7 +1180,7 @@ function drawTetris() {
   }
   ctx.setLineDash([]);
 
-  // 2. 顺序模式：绘制目标列的白色发光轨道与底部小三角箭头
+  // 2. 顺序模式光带与箭头
   if (tetOrderMode === 'order' && tetCurrentBlock) {
     const tx = startX + tetCurrentBlock.targetSlot * tetSlotW;
     ctx.fillStyle = 'rgba(255,255,255,0.14)';
@@ -960,14 +1195,14 @@ function drawTetris() {
     ctx.fill();
   }
 
-  // 3. 点击提示后：绘制目标列的暖金色发光轨道
+  // 3. 提示光柱
   if (tetHintSlot >= 0 && tetHintSlot < n) {
     const hx = startX + tetHintSlot * tetSlotW;
     ctx.fillStyle = 'rgba(253, 230, 138, 0.28)';
     ctx.fillRect(hx, 0, tetSlotW, canvas.height);
   }
 
-  // 4. 绘制当前方块所在轨道的淡蓝色光带与下落方块本体
+  // 4. 方块本体
   if (tetCurrentBlock) {
     const { col, y, kana } = tetCurrentBlock;
     const x = getSlotX(col);
@@ -1022,7 +1257,6 @@ function roundRect(ctx, x, y, w, h, r) {
   ctx.closePath();
 }
 
-// 操控与暂停
 function moveLeft() {
   if (!tetCurrentBlock || !tetRunning || tetPaused || tetPreviewing) return;
   if (tetCurrentBlock.col > 0) {
@@ -1041,7 +1275,6 @@ function moveRight() {
   }
 }
 
-// 触发快落：一旦按下快落按钮，该方块直接锁定高速下落直达底部，不再中途减速！
 function triggerFastDrop() {
   if (!tetCurrentBlock || !tetRunning || tetPaused || tetPreviewing) return;
   tetCurrentBlock.fast = true;
@@ -1072,7 +1305,7 @@ function togglePause() {
   sfxClick();
 }
 
-// 事件绑定
+// 控件绑定
 document.getElementById('mode-btn-random').addEventListener('click', () => setTetrisOrderMode('random'));
 document.getElementById('mode-btn-order').addEventListener('click', () => setTetrisOrderMode('order'));
 document.getElementById('tet-hint').addEventListener('click', useTetrisHint);
@@ -1080,7 +1313,6 @@ document.getElementById('tet-left').addEventListener('click', moveLeft);
 document.getElementById('tet-right').addEventListener('click', moveRight);
 document.getElementById('tet-pause').addEventListener('click', togglePause);
 
-// 快落按钮：无论点击还是按下，立即锁定极速下落到底
 const dropBtn = document.getElementById('tet-drop');
 dropBtn.addEventListener('pointerdown', (e) => { e.preventDefault(); triggerFastDrop(); });
 dropBtn.addEventListener('click', triggerFastDrop);
@@ -1104,7 +1336,8 @@ window.addEventListener('resize', () => {
 
 window.addEventListener('DOMContentLoaded', async () => {
   await initAuth();
-  startTetrisGame();
+  lessonStartTime = Date.now();
+  startGroup(0);
 });
 </script>
 </body>
