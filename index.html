@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>かなゲーム - 日语单词闯关</title>
+  <!-- 引入 Supabase 官方 SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <style>
     :root {
@@ -41,7 +42,6 @@
       position: sticky;
       top: 0;
       z-index: 50;
-      box-sizing: border-box;
     }
     .logo {
       font-size: 20px;
@@ -52,11 +52,7 @@
       cursor: pointer;
       white-space: nowrap;
     }
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+    .nav-actions { display: flex; align-items: center; gap: 8px; }
     .nav-btn {
       padding: 5px 10px;
       font-size: 13px;
@@ -191,7 +187,7 @@
     .mode-info h3 { font-size: 15px; font-weight: 700; color: #1e293b; margin-bottom: 2px; }
     .mode-info p { font-size: 12px; color: var(--text-sub); line-height: 1.4; }
 
-    /* 模态框样式：使用 class 控制显隐，彻底杜绝 display 冲突 */
+    /* 模态框 */
     .modal-overlay {
       position: fixed;
       top: 0; left: 0; width: 100vw; height: 100vh;
@@ -202,9 +198,6 @@
       justify-content: center;
       z-index: 999999;
       padding: 16px;
-    }
-    .modal-overlay.active {
-      display: flex !important;
     }
     .modal-content {
       background: #fff;
@@ -265,7 +258,6 @@
       <button class="nav-btn" onclick="alert('词库管理模块即将开放')">词库</button>
       <button class="nav-btn" onclick="openMistakesModal()">错词 (<span id="mistakeBadge">0</span>)</button>
       
-      <!-- 用户状态胶囊按钮：显式 onclick 直连 -->
       <div class="user-capsule" id="userCapsuleBtn" onclick="openUserModal()">
         <span class="user-avatar-tag" id="userAvatarIcon">🌸</span>
         <span id="userDisplayName">登录 / 注册</span>
@@ -388,8 +380,7 @@
     let selectedAvatar = localStorage.getItem('tangogo_avatar') || '🌸';
     let mistakesList = JSON.parse(localStorage.getItem('tangogo_mistakes') || '[]');
 
-    // 显式挂载到 window，确保无论何种情况都能直接触发
-    window.openUserModal = function() {
+    function openUserModal() {
       const modal = document.getElementById('userModal');
       const unauth = document.getElementById('unauthPanel');
       const profile = document.getElementById('profilePanel');
@@ -404,21 +395,21 @@
         unauth.style.display = 'block';
         profile.style.display = 'none';
       }
-      modal.classList.add('active');
-    };
+      modal.style.display = 'flex';
+    }
 
-    window.closeUserModal = function() {
-      document.getElementById('userModal').classList.remove('active');
-    };
+    function closeUserModal() {
+      document.getElementById('userModal').style.display = 'none';
+    }
 
-    window.chooseAvatar = function(av) {
+    function chooseAvatar(av) {
       selectedAvatar = av;
       document.querySelectorAll('.avatar-btn').forEach(btn => {
         btn.classList.toggle('selected', btn.getAttribute('data-av') === av);
       });
-    };
+    }
 
-    window.refreshHeaderUI = function() {
+    function refreshHeaderUI() {
       const iconEl = document.getElementById('userAvatarIcon');
       const nameEl = document.getElementById('userDisplayName');
       if (currentUser) {
@@ -428,9 +419,9 @@
         iconEl.innerText = '🌸';
         nameEl.innerText = '登录 / 注册';
       }
-    };
+    }
 
-    window.doSignUp = async function() {
+    async function doSignUp() {
       const email = document.getElementById('inputEmail').value.trim();
       const password = document.getElementById('inputPwd').value;
       if (!email || !password) return alert('请填写邮箱和密码');
@@ -443,9 +434,9 @@
       closeUserModal();
       await syncDataFromCloud();
       refreshHeaderUI();
-    };
+    }
 
-    window.doSignIn = async function() {
+    async function doSignIn() {
       const email = document.getElementById('inputEmail').value.trim();
       const password = document.getElementById('inputPwd').value;
       if (!email || !password) return alert('请填写邮箱和密码');
@@ -457,17 +448,17 @@
       closeUserModal();
       await syncDataFromCloud();
       refreshHeaderUI();
-    };
+    }
 
-    window.doSignOut = async function() {
+    async function doSignOut() {
       if (sbClient) await sbClient.auth.signOut();
       currentUser = null;
       closeUserModal();
       refreshHeaderUI();
       alert('已退出登录');
-    };
+    }
 
-    window.saveUserProfile = async function() {
+    async function saveUserProfile() {
       localStorage.setItem('tangogo_avatar', selectedAvatar);
       const nickname = document.getElementById('inputNickname').value.trim();
       if (currentUser && sbClient) {
@@ -480,9 +471,9 @@
       refreshHeaderUI();
       closeUserModal();
       alert('个人设置已保存！');
-    };
+    }
 
-    window.syncDataFromCloud = async function() {
+    async function syncDataFromCloud() {
       if (!currentUser || !sbClient) return;
       try {
         const { data: profile } = await sbClient.from('profiles').select('*').eq('id', currentUser.id).single();
@@ -497,17 +488,16 @@
       } catch (e) {
         console.error('云端数据同步失败:', e);
       }
-    };
+    }
 
-    window.openMistakesModal = function() {
+    function openMistakesModal() {
       alert(mistakesList.length === 0 ? '当前错词本为空，继续保持！' : `错词记录已安全保存在云端，共有 ${mistakesList.length} 个错题。`);
-    };
+    }
 
-    window.startGame = function(modeName) {
+    function startGame(modeName) {
       alert(`正在启动【${modeName}】，请稍候...`);
-    };
+    }
 
-    // 页面启动检查
     async function initApp() {
       document.getElementById('mistakeBadge').innerText = mistakesList.length;
       if (sbClient) {
@@ -519,6 +509,17 @@
       }
       refreshHeaderUI();
     }
+
+    // 确保全局挂载
+    window.openUserModal = openUserModal;
+    window.closeUserModal = closeUserModal;
+    window.doSignUp = doSignUp;
+    window.doSignIn = doSignIn;
+    window.doSignOut = doSignOut;
+    window.chooseAvatar = chooseAvatar;
+    window.saveUserProfile = saveUserProfile;
+    window.openMistakesModal = openMistakesModal;
+    window.startGame = startGame;
 
     initApp();
   </script>
