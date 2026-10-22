@@ -175,7 +175,7 @@ select.deck-pick:focus { border-color: var(--accent); }
     <div class="vocab-picker-box">
       <div class="deck-selector-header">
         <label class="cn-text">选择当前编辑课时（导入整册时需选准教材与分册）</label>
-        <span class="deck-count-badge cn-text" id="deckWordCount">0 词</span>
+        <span class="deck-count-badge cn-text" id="deckWordCount">本册总词数计算中...</span>
       </div>
       <div class="cascade-grid">
         <div class="select-group">
@@ -300,6 +300,7 @@ select.deck-pick:focus { border-color: var(--accent); }
     ];
 
     let currentLessonWords = [];
+    let lessonCountsMap = {};
     let toastTimer = null;
 
     function showToast(msg) {
@@ -332,18 +333,56 @@ select.deck-pick:focus { border-color: var(--accent); }
       onGradeChange();
     }
 
-    function onGradeChange() {
+    async function onGradeChange() {
       const bId = document.getElementById('selBook').value;
       const gId = document.getElementById('selGrade').value;
       const book = CURRICULUM.find(b => b.id === bId);
       const grade = book ? book.children.find(g => g.id === gId) : null;
       const lSel = document.getElementById('selLesson');
+      const prevLessonVal = lSel.value;
       lSel.innerHTML = '';
-      if (grade) {
-        grade.lessons.forEach(l => {
-          lSel.innerHTML += `<option value="${l.id}">${l.name}</option>`;
-        });
+
+      if (!grade) return;
+
+      const badge = document.getElementById('deckWordCount');
+      badge.innerText = '正在统计整册词数...';
+
+      // 1. 查询当前整册所有词汇，建立课时统计哈希表
+      lessonCountsMap = {};
+      let totalGradeWords = 0;
+
+      if (sbClient) {
+        try {
+          const { data, error } = await sbClient
+            .from('words')
+            .select('lesson_id')
+            .eq('book_id', bId)
+            .eq('grade_id', gId);
+
+          if (!error && data) {
+            totalGradeWords = data.length;
+            data.forEach(row => {
+              lessonCountsMap[row.lesson_id] = (lessonCountsMap[row.lesson_id] || 0) + 1;
+            });
+          }
+        } catch (e) {
+          console.warn('统计整册词数失败:', e);
+        }
       }
+
+      // 2. 更新顶部徽章为整册总数
+      badge.innerText = `本册总词数：${totalGradeWords} 词`;
+
+      // 3. 将各课数量注入三级下拉选项
+      grade.lessons.forEach(l => {
+        const c = lessonCountsMap[l.id] || 0;
+        lSel.innerHTML += `<option value="${l.id}">${l.name} (${c}词)</option>`;
+      });
+
+      if (prevLessonVal && grade.lessons.some(l => l.id === prevLessonVal)) {
+        lSel.value = prevLessonVal;
+      }
+
       loadWords();
     }
 
@@ -375,7 +414,6 @@ select.deck-pick:focus { border-color: var(--accent); }
       }
 
       currentLessonWords = data || [];
-      document.getElementById('deckWordCount').innerText = `${currentLessonWords.length} 词`;
       document.getElementById('syncStatus').innerText = '已与云端同步';
       renderTable();
     }
@@ -433,7 +471,8 @@ select.deck-pick:focus { border-color: var(--accent); }
         document.getElementById('inpKana').value = '';
         document.getElementById('inpPitch').value = '';
         document.getElementById('inpMeaning').value = '';
-        loadWords();
+        // 重新刷新整册统计与下拉菜单
+        await onGradeChange();
       }
     }
 
@@ -444,7 +483,7 @@ select.deck-pick:focus { border-color: var(--accent); }
         alert('删除失败: ' + error.message);
       } else {
         showToast('已删除');
-        loadWords();
+        await onGradeChange();
       }
     }
 
@@ -464,23 +503,19 @@ select.deck-pick:focus { border-color: var(--accent); }
       if (error) alert('清空失败: ' + error.message);
       else {
         showToast('当前课词汇已清空');
-        loadWords();
+        await onGradeChange();
       }
     }
 
-    // 智能识别分课行辅助函数
     function matchLessonLine(line, availableLessons) {
       const clean = line.replace(/[#\[\]\(\)\/]/g, '').trim();
 
-      // 1. 优先尝试精准匹配课时名称（如：入门单元 第1课 / 第1课）
       const exact = availableLessons.find(l => clean.includes(l.name));
       if (exact) return exact.id;
 
-      // 2. 匹配 "第X课" / "第 X 课"
       const mZh = clean.match(/第\s*(\d+)\s*课/);
       if (mZh) {
         const num = parseInt(mZh[1], 10);
-        // 按课时名称中的数字或索引匹配
         const found = availableLessons.find(l => {
           const lNum = l.name.match(/第\s*(\d+)\s*课/);
           return lNum && parseInt(lNum[1], 10) === num;
@@ -488,7 +523,6 @@ select.deck-pick:focus { border-color: var(--accent); }
         if (found) return found.id;
       }
 
-      // 3. 匹配 "Lesson X" / "L X"
       const mEn = clean.match(/(?:lesson|l)\s*(\d+)/i);
       if (mEn) {
         const num = parseInt(mEn[1], 10);
@@ -498,7 +532,6 @@ select.deck-pick:focus { border-color: var(--accent); }
       return null;
     }
 
-    // 批量导入（支持整册按分课行自动切课）
     async function importBatchWords() {
       const text = document.getElementById('importArea').value.trim();
       if (!text) return alert('请先粘贴或上传词汇内容！');
@@ -520,7 +553,6 @@ select.deck-pick:focus { border-color: var(--accent); }
         const row = line.trim();
         if (!row) return;
 
-        // 检查该行是否为分课指示行
         const matchedLId = matchLessonLine(row, availableLessons);
         if (matchedLId) {
           activeLessonId = matchedLId;
@@ -559,7 +591,6 @@ select.deck-pick:focus { border-color: var(--accent); }
 
       showToast(`正在写入 ${rowsToInsert.length} 个单词，跨越 ${affectedLessons.size} 个课时...`);
 
-      // 分批写入，每批 200 条，防止 Supabase 请求体过大
       const batchSize = 200;
       let insertedCount = 0;
 
@@ -574,7 +605,7 @@ select.deck-pick:focus { border-color: var(--accent); }
 
       alert(`🎉 整册导入成功！共录入 ${insertedCount} 个单词，已自动分配至 ${affectedLessons.size} 节课时！`);
       document.getElementById('importArea').value = '';
-      loadWords();
+      await onGradeChange();
     }
 
     function handleFileUpload(event) {
