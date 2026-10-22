@@ -1,1 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>かなゲーム - 连连看模式</title>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <style>
+    :root {
+      --primary: #3b82f6;
+      --primary-hover: #2563eb;
+      --bg-color: #f0f7ff;
+      --text-main: #1e3a8a;
+      --border-color: #dbeafe;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-color);
+      background-image: 
+        radial-gradient(#dbeafe 1.5px, transparent 1.5px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(240, 247, 255, 0.95));
+      background-size: 24px 24px, 100% 100%;
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
+    header {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #2563eb, #f97316);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      cursor: pointer;
+    }
+
+    .main-container {
+      width: 100%;
+      max-width: 680px;
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .top-bar {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .capsule-btn {
+      padding: 6px 14px;
+      border-radius: 9999px;
+      border: 1px solid #bfdbfe;
+      background: #ffffff;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .capsule-btn:hover { background: #eff6ff; }
+    .progress-bar-bg {
+      flex: 1;
+      height: 10px;
+      background: #e2e8f0;
+      border-radius: 9999px;
+      overflow: hidden;
+    }
+    .progress-bar-fill {
+      width: 0%;
+      height: 100%;
+      background: #93c5fd;
+      border-radius: 9999px;
+      transition: width 0.3s ease;
+    }
+    .counter-txt { font-size: 14px; font-weight: 800; color: #3b82f6; white-space: nowrap; }
+    .score-badge {
+      padding: 6px 14px;
+      border-radius: 9999px;
+      border: 1px solid #fed7aa;
+      background: #ffffff;
+      color: #ea580c;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .timer-bar {
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid #bfdbfe;
+      border-radius: 18px;
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 2px 8px rgba(59, 130, 246, 0.05);
+    }
+    .timer-label { font-size: 13px; font-weight: 800; color: #2563eb; }
+    .time-opt {
+      padding: 4px 14px;
+      border-radius: 9999px;
+      border: 1px solid #bfdbfe;
+      background: #ffffff;
+      color: #3b82f6;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .time-opt.active { background: #2563eb; color: #ffffff; border-color: #2563eb; }
+    .time-countdown { margin-left: auto; font-size: 14px; font-weight: 800; color: #ef4444; display: none; }
+
+    /* 连连看核心区域 */
+    .link-board {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 10px;
+    }
+    .link-column {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .link-card {
+      background: #ffffff;
+      border: 2px solid #bfdbfe;
+      border-radius: 16px;
+      padding: 16px 12px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 800;
+      color: #1e3a8a;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(59, 130, 246, 0.08);
+      transition: all 0.15s ease;
+      user-select: none;
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .link-card:hover { transform: translateY(-2px); border-color: #3b82f6; }
+    .link-card.selected {
+      background: #eff6ff;
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    }
+    .link-card.matched {
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .link-card.wrong {
+      animation: shake 0.4s ease;
+      border-color: #ef4444;
+      background: #fef2f2;
+      color: #ef4444;
+    }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-6px); }
+      40%, 80% { transform: translateX(6px); }
+    }
+
+    .feedback-banner {
+      font-size: 15px;
+      font-weight: 800;
+      min-height: 24px;
+      text-align: center;
+    }
+    .feedback-banner.correct { color: #16a34a; }
+    .feedback-banner.wrong { color: #ef4444; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo" onclick="location.href='index.html'">かなゲーム</div>
+  </header>
+
+  <div class="main-container">
+    <div class="top-bar">
+      <button class="capsule-btn" onclick="location.href='index.html'">← 返回</button>
+      <div class="capsule-btn" id="roundBadge">连连看第 1 轮</div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progressFill"></div>
+      </div>
+      <div class="counter-txt" id="progressTxt">0/5</div>
+      <div class="score-badge"><span id="scoreNum">0</span> 分</div>
+    </div>
+
+    <div class="timer-bar">
+      <div class="timer-label">⏱ 限时</div>
+      <button class="time-opt active" onclick="setTimer(0, this)">关闭</button>
+      <button class="time-opt" onclick="setTimer(30, this)">30秒</button>
+      <button class="time-opt" onclick="setTimer(60, this)">60秒</button>
+      <div class="time-countdown" id="countdownTxt">倒计时: 00</div>
+    </div>
+
+    <div class="feedback-banner" id="feedbackBanner">点击左右卡片进行对应配对 ✨</div>
+
+    <div class="link-board" id="linkBoard">
+      <div class="link-column" id="leftCol"></div>
+      <div class="link-column" id="rightCol"></div>
+    </div>
+  </div>
+
+  <script>
+    const SUPABASE_URL = 'https://zbfjbtzvnhmfzyvooact.supabase.co';
+    const SUPABASE_KEY = 'sb_publishable_AP0YnQLgzmB3d63_4zbpjg_vHeTyo8Z';
+    const sbClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
+
+    let currentUser = null;
+    let score = 0;
+    let currentRound = 1;
+    let matchedCount = 0;
+    let selectedLeft = null;
+    let selectedRight = null;
+    let timerDuration = 0;
+    let timerInterval = null;
+    let timeLeft = 0;
+
+    const roundWords = [
+      { id: 1, kana: 'せんせい', meaning: '老师' },
+      { id: 2, kana: 'がくせい', meaning: '学生' },
+      { id: 3, kana: 'ともだち', meaning: '朋友' },
+      { id: 4, kana: 'テスト', meaning: '测验，测试' },
+      { id: 5, kana: 'あいさつ', meaning: '寒暄，打招呼' }
+    ];
+
+    async function initAuth() {
+      if (!sbClient) return;
+      const { data: { session } } = await sbClient.auth.getSession();
+      if (session) currentUser = session.user;
+    }
+
+    async function recordMistake(word) {
+      let localMistakes = JSON.parse(localStorage.getItem('tangogo_mistakes') || '[]');
+      if (!localMistakes.some(m => m.word === word.kana)) {
+        localMistakes.push({ word: word.kana, meaning: word.meaning });
+        localStorage.setItem('tangogo_mistakes', JSON.stringify(localMistakes));
+      }
+      if (currentUser && sbClient) {
+        try {
+          await sbClient.from('user_mistakes').upsert({
+            user_id: currentUser.id,
+            word: word.kana,
+            meaning: word.meaning,
+            wrong_count: 1,
+            updated_at: new Date().toISOString()
+          }, { onConflict: 'user_id,word' });
+        } catch (e) { console.error(e); }
+      }
+    }
+
+    function setTimer(seconds, el) {
+      timerDuration = seconds;
+      document.querySelectorAll('.time-opt').forEach(btn => btn.classList.remove('active'));
+      el.classList.add('active');
+      startTimer();
+    }
+
+    function startTimer() {
+      clearInterval(timerInterval);
+      const cdTxt = document.getElementById('countdownTxt');
+      if (timerDuration === 0) {
+        cdTxt.style.display = 'none';
+        return;
+      }
+      timeLeft = timerDuration;
+      cdTxt.style.display = 'block';
+      cdTxt.innerText = `倒计时: ${timeLeft}秒`;
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        cdTxt.innerText = `倒计时: ${timeLeft}秒`;
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          alert('时间到！本轮已结束');
+          location.reload();
+        }
+      }, 1000);
+    }
+
+    function initBoard() {
+      matchedCount = 0;
+      selectedLeft = null;
+      selectedRight = null;
+      document.getElementById('progressTxt').innerText = `0/${roundWords.length}`;
+      document.getElementById('progressFill').style.width = '0%';
+
+      const leftList = [...roundWords].sort(() => Math.random() - 0.5);
+      const rightList = [...roundWords].sort(() => Math.random() - 0.5);
+
+      const leftCol = document.getElementById('leftCol');
+      const rightCol = document.getElementById('rightCol');
+      leftCol.innerHTML = '';
+      rightCol.innerHTML = '';
+
+      leftList.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'link-card';
+        div.innerText = item.kana;
+        div.dataset.id = item.id;
+        div.onclick = () => selectCard('left', div, item);
+        leftCol.appendChild(div);
+      });
+
+      rightList.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'link-card';
+        div.innerText = item.meaning;
+        div.dataset.id = item.id;
+        div.onclick = () => selectCard('right', div, item);
+        rightCol.appendChild(div);
+      });
+
+      startTimer();
+    }
+
+    function selectCard(side, el, item) {
+      if (side === 'left') {
+        if (selectedLeft) selectedLeft.el.classList.remove('selected');
+        selectedLeft = { el, item };
+        el.classList.add('selected');
+      } else {
+        if (selectedRight) selectedRight.el.classList.remove('selected');
+        selectedRight = { el, item };
+        el.classList.add('selected');
+      }
+
+      if (selectedLeft && selectedRight) {
+        checkMatch();
+      }
+    }
+
+    function checkMatch() {
+      const fb = document.getElementById('feedbackBanner');
+      if (selectedLeft.item.id === selectedRight.item.id) {
+        fb.className = 'feedback-banner correct';
+        fb.innerText = `✨ 配对成功！${selectedLeft.item.kana} = ${selectedRight.item.meaning}`;
+        selectedLeft.el.classList.add('matched');
+        selectedRight.el.classList.add('matched');
+        score += 10;
+        matchedCount++;
+        document.getElementById('scoreNum').innerText = score;
+        document.getElementById('progressTxt').innerText = `${matchedCount}/${roundWords.length}`;
+        document.getElementById('progressFill').style.width = `${(matchedCount / roundWords.length) * 100}%`;
+
+        selectedLeft = null;
+        selectedRight = null;
+
+        if (matchedCount === roundWords.length) {
+          clearInterval(timerInterval);
+          fb.innerText = '🎉 全部连线消除完成！太棒了！';
+        }
+      } else {
+        fb.className = 'feedback-banner wrong';
+        fb.innerText = '❌ 对应错误，已记入错词本';
+        recordMistake(selectedLeft.item);
+
+        const leftEl = selectedLeft.el;
+        const rightEl = selectedRight.el;
+        leftEl.classList.add('wrong');
+        rightEl.classList.add('wrong');
+
+        setTimeout(() => {
+          leftEl.classList.remove('wrong', 'selected');
+          rightEl.classList.remove('wrong', 'selected');
+        }, 500);
+
+        selectedLeft = null;
+        selectedRight = null;
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', async () => {
+      await initAuth();
+      initBoard();
+    });
+  </script>
+</body>
+</html>
