@@ -18,7 +18,6 @@
   --border: #93c5fd;
   --fg: #0c2340;
   --fg2: #1e4d8c;
-  --fg3: #2563eb;
   --accent: #2563eb;
   --accent-hot: #f97316;
   --shadow: rgba(37,99,235,0.18);
@@ -50,6 +49,14 @@ html, body {
   flex: 1; display: flex; flex-direction: column; overflow: hidden; position: relative;
   background: linear-gradient(180deg, #38bdf8 0%, #818cf8 55%, #c084fc 100%);
 }
+.tetris-wrap::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 120px 50px at 10% 15%, rgba(255,255,255,0.55) 0%, transparent 70%),
+    radial-gradient(ellipse 90px 40px at 80% 8%, rgba(255,255,255,0.45) 0%, transparent 70%),
+    radial-gradient(ellipse 70px 35px at 55% 22%, rgba(255,255,255,0.35) 0%, transparent 70%);
+  pointer-events: none; z-index: 0;
+}
 .tetris-top {
   display: flex; align-items: center; gap: 14px; padding: 12px 20px;
   background: rgba(0,0,0,0.18); backdrop-filter: blur(8px);
@@ -59,6 +66,7 @@ html, body {
   background: rgba(255,255,255,0.25); border: 2px solid rgba(255,255,255,0.5);
   border-radius: 24px; padding: 7px 16px; font-size: 0.95rem; font-weight: 700; color: #fff; cursor: pointer;
 }
+.tet-back-btn:hover { background: rgba(255,255,255,0.4); }
 .tetris-score { font-size: 1.05rem; font-weight: 900; color: #fff; }
 .tetris-score span { background: rgba(255,255,255,0.2); border-radius: 20px; padding: 4px 12px; margin-left: 4px; }
 .word-count-badge { font-size: 0.8rem; font-weight: 700; color: rgba(255,255,255,0.9); background: rgba(0,0,0,0.2); border-radius: 12px; padding: 3px 10px; margin-left: auto; }
@@ -329,8 +337,8 @@ async function recordMistake(word) {
   }
 }
 
-// 包含有汉字与纯假名/外来语的生词表
-const FULL_LESSON_WORDS = [
+// 离线或当前课尚未录入单词时的兜底精选词库
+const DEFAULT_FALLBACK_WORDS = [
   {"kanji":"","kana":"テスト","pos":"名词","meaning":"测验，测试"},
   {"kanji":"本","kana":"ほん","pos":"名词","meaning":"书"},
   {"kanji":"靴","kana":"くつ","pos":"名词","meaning":"鞋"},
@@ -340,25 +348,44 @@ const FULL_LESSON_WORDS = [
   {"kanji":"友達","kana":"ともだち","pos":"名词","meaning":"朋友"},
   {"kanji":"鉛筆","kana":"えんぴつ","pos":"名词","meaning":"铅笔"},
   {"kanji":"傘","kana":"かさ","pos":"名词","meaning":"伞"},
-  {"kanji":"","kana":"カメラ","pos":"名词","meaning":"照相机"},
-  // 第二组
-  {"kanji":"","kana":"テレビ","pos":"名词","meaning":"电视机"},
-  {"kanji":"","kana":"パソコン","pos":"名词","meaning":"个人电脑"},
-  {"kanji":"","kana":"ラジオ","pos":"名词","meaning":"收音机"},
-  {"kanji":"電話","kana":"でんわ","pos":"名词","meaning":"电话"},
-  {"kanji":"机","kana":"つくえ","pos":"名词","meaning":"桌子，书桌"},
-  {"kanji":"","kana":"いす","pos":"名词","meaning":"椅子"},
-  {"kanji":"","kana":"かぎ","pos":"名词","meaning":"钥匙，锁"},
-  {"kanji":"時計","kana":"とけい","pos":"名词","meaning":"钟，表"},
-  {"kanji":"手帳","kana":"てちょう","pos":"名词","meaning":"记事本"},
-  {"kanji":"写真","kana":"しゃしん","pos":"名词","meaning":"照片"}
+  {"kanji":"","kana":"カメラ","pos":"名词","meaning":"照相机"}
 ];
 
+let FULL_LESSON_WORDS = []; // 真正存储从 Supabase 拉取的生词
 const GROUP_SIZE = 10;
 let currentGroupIndex = 0;
-let totalGroups = Math.ceil(FULL_LESSON_WORDS.length / GROUP_SIZE);
+let totalGroups = 1;
 let lessonStartTime = Date.now();
 let lessonScoreTotal = 0;
+
+// 解析从首页传递进来的参数
+const urlParams = new URLSearchParams(window.location.search);
+const currentBook = urlParams.get('book') || 'pep_jr';
+const currentGrade = urlParams.get('grade') || 'pep_jr_7';
+const currentLesson = urlParams.get('lesson') || 'pep_jr_7_intro1';
+
+// 核心：从 Supabase 动态查询词库
+async function fetchCurrentLessonWords() {
+  if (sbClient) {
+    try {
+      const { data, error } = await sbClient
+        .from('words')
+        .select('kanji,kana,pos,meaning')
+        .eq('book_id', currentBook)
+        .eq('grade_id', currentGrade)
+        .eq('lesson_id', currentLesson)
+        .order('sort_order', { ascending: true })
+        .order('created_at', { ascending: true });
+
+      if (!error && data && data.length > 0) {
+        return data; // 成功查询到云端词表
+      }
+    } catch (e) {
+      console.warn('查询云端词库失败，使用兜底词库:', e);
+    }
+  }
+  return DEFAULT_FALLBACK_WORDS;
+}
 
 const MAX_MISTAKES_PER_LIFE = 3;
 let tetWords = [];
@@ -517,7 +544,6 @@ function loadTetrisWord() {
   tetCurrentBlock = null;
   clearHint();
 
-  // 核心改动 1：没有汉字的纯假名/外来语单词，不显示假名原形，改用破折号占位，彻底避免直接剧透
   const hasKanji = word.kanji && word.kanji.trim() !== '' && word.kanji.trim() !== word.kana.trim();
   document.getElementById('tet-kanji').textContent = hasKanji ? word.kanji : '——';
   document.getElementById('tet-meaning').textContent = `${word.pos ? '[' + word.pos + '] ' : ''}${word.meaning}`;
@@ -608,7 +634,7 @@ function generateShareCard(score, timeSpent, totalWords) {
   ctx.font = "72px sans-serif"; ctx.fillText('🏆', 320, 180);
   ctx.fillStyle = '#0c2340'; ctx.font = "900 32px sans-serif"; ctx.fillText('通 关 荣 誉 证 书', 320, 240);
 
-  const userNick = localStorage.getItem('tangogo_nickname') || '日语学员';
+  const userNick = localStorage.getItem('tangogo_nickname') || '日语学习达人';
   ctx.font = "700 22px sans-serif"; ctx.fillStyle = '#1e4d8c'; ctx.fillText(`学员：${userNick}`, 320, 290);
 
   ctx.fillStyle = '#ffffff';
@@ -952,6 +978,12 @@ window.addEventListener('resize', () => {
 
 window.addEventListener('DOMContentLoaded', async () => {
   await initAuth();
+  lessonStartTime = Date.now();
+  
+  // 核心：启动时自动去 Supabase 查询当前课时对应的全部词汇
+  FULL_LESSON_WORDS = await fetchCurrentLessonWords();
+  totalGroups = Math.max(1, Math.ceil(FULL_LESSON_WORDS.length / GROUP_SIZE));
+  
   startGroup(0);
 });
 </script>
