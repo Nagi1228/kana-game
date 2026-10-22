@@ -7,160 +7,239 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <style>
     :root {
-      --primary: #3b82f6;
-      --bg-color: #f0f7ff;
-      --text-main: #1e3a8a;
-      --border-color: #dbeafe;
+      --bg: #f0f7ff;
+      --bg2: #dbeafe;
+      --surface: #ffffff;
+      --surface2: #f8faff;
+      --border: #93c5fd;
+      --fg: #0c2340;
+      --fg2: #1e4d8c;
+      --fg3: #2563eb;
+      --accent: #2563eb;
+      --accent-hot: #f97316;
+      --correct: #059669;
+      --correct-bg: #d1fae5;
+      --wrong: #e11d48;
+      --wrong-bg: #ffe4e6;
+      --shadow: rgba(37,99,235,0.18);
+      /* 原版两类卡片双底色 */
+      --elim-word-bg: #e7f0fe;
+      --elim-word-bd: #aac9f2;
+      --elim-desc-bg: #fdf2df;
+      --elim-desc-bd: #e9cb92;
+      --elim-pos-bg: rgba(12,35,64,0.07);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      background-color: var(--bg-color);
-      background-image: 
-        radial-gradient(#dbeafe 1.5px, transparent 1.5px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(240, 247, 255, 0.95));
-      background-size: 24px 24px, 100% 100%;
-      color: var(--text-main);
+      background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+      color: var(--fg);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
+      overflow-x: hidden;
     }
 
     header {
       width: 100%;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border-color);
+      background: var(--surface);
+      border-bottom: 2px solid var(--border);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 24px;
+      padding: 12px 24px;
+      box-shadow: 0 2px 12px var(--shadow);
       position: sticky;
       top: 0;
       z-index: 50;
     }
     .logo {
-      font-size: 22px;
+      font-size: 1.6rem;
       font-weight: 900;
-      background: linear-gradient(135deg, #2563eb, #f97316);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--accent);
       cursor: pointer;
     }
+    .logo span { color: var(--accent-hot); }
 
-    .main-container {
+    .elim-game {
       width: 100%;
-      max-width: 600px;
+      max-width: 1180px;
       padding: 24px 16px;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 16px;
-    }
-
-    .top-bar {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-    .capsule-btn {
-      padding: 6px 14px;
-      border-radius: 9999px;
-      border: 1px solid #bfdbfe;
-      background: #ffffff;
-      color: var(--primary);
-      font-size: 13px;
-      font-weight: 700;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-    .capsule-btn:hover { background: #eff6ff; }
-    .score-badge {
-      padding: 6px 14px;
-      border-radius: 9999px;
-      border: 1px solid #fed7aa;
-      background: #ffffff;
-      color: #ea580c;
-      font-size: 13px;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-
-    .feedback-banner {
-      font-size: 15px;
-      font-weight: 800;
-      min-height: 24px;
-      text-align: center;
-      color: #3b82f6;
-    }
-    .feedback-banner.correct { color: #16a34a; }
-    .feedback-banner.wrong { color: #ef4444; }
-
-    /* 稳固卡片尺寸与网格 */
-    .grid-board {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      width: 100%;
-      margin-top: 8px;
-    }
-    @media (min-width: 480px) {
-      .grid-board { grid-template-columns: repeat(4, 1fr); }
-    }
-    .match-card {
-      min-height: 85px;
-      background: #ffffff;
-      border: 2px solid #bfdbfe;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
+      flex: 1;
       justify-content: center;
-      text-align: center;
-      padding: 10px 6px;
-      font-size: 17px;
-      font-weight: 800;
-      color: #1e3a8a;
+    }
+
+    /* 原版游戏顶部头栏 */
+    .game-header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .back-btn {
+      background: var(--surface);
+      border: 2px solid var(--border);
+      border-radius: 24px;
+      padding: 8px 16px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--fg2);
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(59, 130, 246, 0.08);
-      transition: all 0.2s ease;
+      transition: all 0.15s;
+    }
+    .back-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .score-chip {
+      background: var(--bg2);
+      border-radius: 24px;
+      padding: 6px 16px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--fg2);
+    }
+    .score-chip.level-chip {
+      color: var(--accent);
+      background: var(--surface);
+      border: 2px solid var(--border);
+    }
+    .score-chip.big {
+      font-size: 1.1rem;
+      color: var(--accent-hot);
+      background: var(--surface);
+      border: 2px solid var(--border);
+      margin-left: auto;
+    }
+
+    .elim-tip {
+      width: 100%;
+      text-align: center;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--fg2);
+    }
+
+    /* 原版消消乐外围大卡片 */
+    .elim-board-wrap {
+      position: relative;
+      width: 100%;
+      background: var(--surface);
+      border: 3px solid var(--border);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 8px 28px var(--shadow);
+    }
+
+    /* 原版 4 列网格 */
+    .elim-board {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+    @media (max-width: 860px) {
+      .elim-board { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+    }
+    @media (max-width: 480px) {
+      .elim-board { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+    }
+
+    .elim-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      min-height: 96px;
+      padding: 10px 12px;
+      border-radius: 16px;
+      border: 2.5px solid var(--border);
+      text-align: center;
+      cursor: pointer;
       user-select: none;
+      transition: border-color 0.15s, background 0.15s, box-shadow 0.15s, opacity 0.2s;
     }
-    .match-card:hover { transform: translateY(-2px); border-color: #3b82f6; }
-    .match-card.active {
-      background: #eff6ff;
-      border-color: #2563eb;
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+    .elim-card:hover { border-color: var(--accent); box-shadow: 0 6px 18px var(--shadow); }
+    
+    /* 原版双配色：原形卡与释义卡 */
+    .elim-card-word { background: var(--elim-word-bg); border-color: var(--elim-word-bd); }
+    .elim-card-desc { background: var(--elim-desc-bg); border-color: var(--elim-desc-bd); }
+
+    .elim-card .elim-word {
+      font-size: 1.34rem;
+      font-weight: 700;
+      color: var(--fg);
+      line-height: 1.25;
+      word-break: break-word;
     }
-    .match-card.matched {
-      visibility: hidden;
-      opacity: 0;
+    .elim-card .m-tags {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: center;
+      gap: 8px;
+    }
+    .elim-card .m-pos {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--fg3);
+      background: var(--elim-pos-bg);
+      border-radius: 8px;
+      padding: 2px 7px;
+      line-height: 1.5;
+    }
+    .elim-card .m-kana { font-size: 1.34rem; font-weight: 700; color: var(--fg2); line-height: 1.3; }
+    .elim-card .m-mean { font-size: 1.34rem; font-weight: 700; color: var(--fg); line-height: 1.3; }
+
+    .elim-card.sel {
+      border-color: var(--accent);
+      background: rgba(37,99,235,0.13);
+      box-shadow: 0 0 0 4px rgba(37,99,235,0.16);
+    }
+    .elim-card.wrong {
+      border-color: var(--wrong);
+      background: var(--wrong-bg);
+      animation: shakeX 0.32s;
+    }
+    @keyframes shakeX {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-6px); }
+      75% { transform: translateX(6px); }
+    }
+    .elim-card.matched {
+      animation: elimPop 0.34s ease forwards;
       pointer-events: none;
     }
-    .match-card.wrong {
-      background: #fef2f2;
-      border-color: #ef4444;
-      color: #ef4444;
+    @keyframes elimPop {
+      0% { opacity: 1; transform: scale(1); }
+      30% { opacity: 1; transform: scale(1.07); border-color: var(--correct); background: var(--correct-bg); }
+      100% { opacity: 0; transform: scale(0.55); }
     }
+    .elim-card.gone { visibility: hidden; }
   </style>
 </head>
 <body>
+
   <header>
-    <div class="logo" onclick="location.href='index.html'">かなゲーム</div>
+    <div class="logo" onclick="location.href='index.html'">かな<span>ゲーム</span></div>
   </header>
 
-  <div class="main-container">
-    <div class="top-bar">
-      <button class="capsule-btn" onclick="location.href='index.html'">← 返回</button>
-      <div class="capsule-btn">🍬 12张卡片消消乐</div>
-      <div class="score-badge"><span id="scoreNum">0</span> 分</div>
+  <div class="elim-game">
+    <div class="game-header">
+      <button class="back-btn" onclick="location.href='index.html'">← 返回</button>
+      <span class="score-chip level-chip">🍬 12张卡片消消乐</span>
+      <span class="score-chip" id="elim-mistakes">失误 0</span>
+      <span class="score-chip big" id="elim-score">0分</span>
     </div>
 
-    <div class="feedback-banner" id="feedbackBanner">点击两张卡片进行配对消除 ✨</div>
+    <div class="elim-tip">每轮 12 张卡片：6 个单词原形 + 6 个对应释义，点中配对的两张就会一起消失</div>
 
-    <div class="grid-board" id="gridBoard"></div>
+    <div class="elim-board-wrap">
+      <div class="elim-board" id="elim-board"></div>
+    </div>
   </div>
 
   <script>
@@ -170,17 +249,18 @@
 
     let currentUser = null;
     let score = 0;
-    let flippedCards = [];
+    let mistakes = 0;
+    let selectedCards = [];
     let isProcessing = false;
     let matchedPairs = 0;
 
-    const wordPairs = [
-      { id: 1, kana: 'せんせい', meaning: '老师' },
-      { id: 2, kana: 'がくせい', meaning: '学生' },
-      { id: 3, kana: 'ともだち', meaning: '朋友' },
-      { id: 4, kana: 'テスト', meaning: '测试' },
-      { id: 5, kana: 'ありがとう', meaning: '谢谢' },
-      { id: 6, kana: 'おはよう', meaning: '早上好' }
+    const roundWords = [
+      { id: 1, kanji: '先生', kana: 'せんせい', pos: '名词', meaning: '老师' },
+      { id: 2, kanji: '学生', kana: 'がくせい', pos: '名词', meaning: '学生' },
+      { id: 3, kanji: '友達', kana: 'ともだち', pos: '名词', meaning: '朋友' },
+      { id: 4, kanji: 'テスト', kana: 'テスト', pos: '名词', meaning: '测验，测试' },
+      { id: 5, kanji: 'ありがとう', kana: 'ありがとう', pos: '感叹词', meaning: '谢谢' },
+      { id: 6, kanji: 'おはよう', kana: 'おはよう', pos: '感叹词', meaning: '早上好' }
     ];
 
     async function initAuth() {
@@ -208,78 +288,96 @@
       }
     }
 
-    function initGame() {
+    function initBoard() {
       const cards = [];
-      wordPairs.forEach(p => {
-        cards.push({ id: p.id, text: p.kana, pair: p, type: 'kana' });
-        cards.push({ id: p.id, text: p.meaning, pair: p, type: 'meaning' });
+      roundWords.forEach(w => {
+        // 原形卡片（淡蓝冷调）
+        cards.push({ id: w.id, kind: 'word', raw: w });
+        // 释义卡片（米杏暖调）
+        cards.push({ id: w.id, kind: 'desc', raw: w });
       });
 
       cards.sort(() => Math.random() - 0.5);
 
-      const board = document.getElementById('gridBoard');
+      const board = document.getElementById('elim-board');
       board.innerHTML = '';
-      cards.forEach(card => {
+      cards.forEach(c => {
         const el = document.createElement('div');
-        el.className = 'match-card';
-        el.innerText = card.text;
-        el.onclick = () => onCardClick(el, card);
+        el.className = `elim-card ${c.kind === 'word' ? 'elim-card-word' : 'elim-card-desc'}`;
+        
+        if (c.kind === 'word') {
+          el.innerHTML = `<div class="elim-word">${c.raw.kanji || c.raw.kana}</div>`;
+        } else {
+          el.innerHTML = `
+            <div class="m-tags"><span class="m-pos">${c.raw.pos}</span></div>
+            <div class="m-mean">${c.raw.meaning}</div>
+          `;
+        }
+
+        el.onclick = () => onCardClick(el, c);
         board.appendChild(el);
       });
     }
 
     function onCardClick(el, card) {
-      if (isProcessing || el.classList.contains('active') || el.classList.contains('matched')) return;
+      if (isProcessing || el.classList.contains('sel') || el.classList.contains('matched')) return;
 
-      el.classList.add('active');
-      flippedCards.push({ el, card });
+      el.classList.add('sel');
+      selectedCards.push({ el, card });
 
-      if (flippedCards.length === 2) {
+      if (selectedCards.length === 2) {
         isProcessing = true;
         checkMatch();
       }
     }
 
     function checkMatch() {
-      const [c1, c2] = flippedCards;
-      const fb = document.getElementById('feedbackBanner');
+      const [c1, c2] = selectedCards;
 
-      if (c1.card.id === c2.card.id && c1.card.type !== c2.card.type) {
-        fb.className = 'feedback-banner correct';
-        fb.innerText = `✨ 消除成功！+10分`;
+      if (c1.card.id === c2.card.id && c1.card.kind !== c2.card.kind) {
+        // 配对成功
         score += 10;
         matchedPairs++;
-        document.getElementById('scoreNum').innerText = score;
+        document.getElementById('elim-score').innerText = `${score}分`;
+
+        c1.el.classList.remove('sel');
+        c2.el.classList.remove('sel');
+        c1.el.classList.add('matched');
+        c2.el.classList.add('matched');
 
         setTimeout(() => {
-          c1.el.classList.add('matched');
-          c2.el.classList.add('matched');
-          flippedCards = [];
+          c1.el.classList.add('gone');
+          c2.el.classList.add('gone');
+          selectedCards = [];
           isProcessing = false;
-          if (matchedPairs === wordPairs.length) {
-            fb.innerText = '🎉 12 张卡片全部消除！太厉害了！';
+          if (matchedPairs === roundWords.length) {
+            setTimeout(() => {
+              alert('🎉 恭喜！本轮卡片全部消除完毕！');
+              location.reload();
+            }, 300);
           }
-        }, 300);
+        }, 340);
       } else {
-        fb.className = 'feedback-banner wrong';
-        fb.innerText = '❌ 配对不对哦，已记入错词本';
-        recordMistake(c1.card.pair);
+        // 配对错误
+        mistakes++;
+        document.getElementById('elim-mistakes').innerText = `失误 ${mistakes}`;
+        recordMistake(c1.card.raw);
 
         c1.el.classList.add('wrong');
         c2.el.classList.add('wrong');
 
         setTimeout(() => {
-          c1.el.classList.remove('active', 'wrong');
-          c2.el.classList.remove('active', 'wrong');
-          flippedCards = [];
+          c1.el.classList.remove('sel', 'wrong');
+          c2.el.classList.remove('sel', 'wrong');
+          selectedCards = [];
           isProcessing = false;
-        }, 700);
+        }, 500);
       }
     }
 
     window.addEventListener('DOMContentLoaded', async () => {
       await initAuth();
-      initGame();
+      initBoard();
     });
   </script>
 </body>
