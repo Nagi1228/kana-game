@@ -66,7 +66,7 @@ body {
   padding: 6px 16px; font-size: 0.95rem; font-weight: 800; color: var(--accent); white-space: nowrap;
 }
 .progress-bar-wrap { flex: 1; height: 10px; background: var(--bg3); border-radius: 6px; overflow: hidden; min-width: 120px; }
-.progress-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), var(--accent-hot)); transition: width 0.3s; }
+.progress-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), var(--accent-hot)); transition: width 0.3s ease; }
 .group-counter { font-size: 1rem; font-weight: 800; color: var(--fg2); white-space: nowrap; }
 .mistake-chip { font-size: 0.95rem; font-weight: 700; color: var(--fg2); white-space: nowrap; }
 .score-chip {
@@ -213,19 +213,28 @@ body {
       }
     }
 
+    // 丰富的生词库列表（支持多组推进）
     const ALL_WORDS = [
       { id: 1, kanji: 'いとこ', kana: 'いとこ', pos: '名', meaning: '堂(表)兄弟；堂(表)姐妹' },
       { id: 2, kanji: '乙', kana: 'おつ', pos: '名', meaning: '乙' },
       { id: 3, kanji: '草', kana: 'くさ', pos: '名', meaning: '草' },
       { id: 4, kanji: '家', kana: 'いえ', pos: '名', meaning: '房屋；家' },
       { id: 5, kanji: '', kana: 'アイス', pos: '名', meaning: '冰；冰淇淋' },
-      { id: 6, kanji: '友達', kana: 'ともだち', pos: '名', meaning: '朋友' },
-      { id: 7, kanji: '先生', kana: 'せんせい', pos: '名', meaning: '老师' },
-      { id: 8, kanji: '学生', kana: 'がくせい', pos: '名', meaning: '学生' },
-      { id: 9, kanji: '本', kana: 'ほん', pos: '名', meaning: '书' },
-      { id: 10, kanji: '靴', kana: 'くつ', pos: '名', meaning: '鞋' },
-      { id: 11, kanji: '', kana: 'テスト', pos: '名', meaning: '测验，测试' },
-      { id: 12, kanji: '挨拶', kana: 'あいさつ', pos: '名', meaning: '寒暄，打招呼' }
+      { id: 6, kanji: '星', kana: 'ほし', pos: '名', meaning: '星星' },
+      // 第2组
+      { id: 7, kanji: '机', kana: 'つくえ', pos: '名', meaning: '书桌' },
+      { id: 8, kanji: 'お菓子', kana: 'おかし', pos: '名', meaning: '点心；糖果' },
+      { id: 9, kanji: '友達', kana: 'ともだち', pos: '名', meaning: '朋友' },
+      { id: 10, kanji: '先生', kana: 'せんせい', pos: '名', meaning: '老师' },
+      { id: 11, kanji: '学生', kana: 'がくせい', pos: '名', meaning: '学生' },
+      { id: 12, kanji: '本', kana: 'ほん', pos: '名', meaning: '书' },
+      // 第3组
+      { id: 13, kanji: '靴', kana: 'くつ', pos: '名', meaning: '鞋' },
+      { id: 14, kanji: '', kana: 'テスト', pos: '名', meaning: '测验，测试' },
+      { id: 15, kanji: '時計', kana: 'とけい', pos: '名', meaning: '钟，表' },
+      { id: 16, kanji: '挨拶', kana: 'あいさつ', pos: '名', meaning: '寒暄，打招呼' },
+      { id: 17, kanji: '鉛筆', kana: 'えんぴつ', pos: '名', meaning: '铅笔' },
+      { id: 18, kanji: '傘', kana: 'かさ', pos: '名', meaning: '伞' }
     ];
 
     const GROUP_SIZE = 6;
@@ -234,7 +243,7 @@ body {
 
     let score = 0;
     let mistakes = 0;
-    let matchedCount = 0;
+    let matchedInGroup = 0; // 当前组连对的词数
     let selectedLeft = null;
     let selectedRight = null;
     let startTime = Date.now();
@@ -270,15 +279,24 @@ body {
       return right;
     }
 
+    // 关键修复：计算当前词条在整课所有单词中的累计百分比
+    function updateProgressBar() {
+      const totalWords = ALL_WORDS.length;
+      const completedWords = (currentGroup * GROUP_SIZE) + matchedInGroup;
+      const pct = Math.min(100, Math.round((completedWords / totalWords) * 100));
+      document.getElementById('progressFill').style.width = `${pct}%`;
+    }
+
     function startGroup(groupIdx) {
       currentGroup = groupIdx;
-      matchedCount = 0;
+      matchedInGroup = 0;
       selectedLeft = null;
       selectedRight = null;
       document.getElementById('svgLines').innerHTML = '';
 
+      // 更新组指示器与词条累计进度条
       document.getElementById('groupCounter').innerText = `${currentGroup + 1}/${totalGroups} 组`;
-      document.getElementById('progressFill').style.width = `${((currentGroup + 1) / totalGroups) * 100}%`;
+      updateProgressBar();
 
       const start = groupIdx * GROUP_SIZE;
       const end = Math.min(start + GROUP_SIZE, ALL_WORDS.length);
@@ -337,12 +355,16 @@ body {
         selectedRight.el.classList.add('done');
 
         score += 10;
-        matchedCount++;
+        matchedInGroup++;
         document.getElementById('scoreChip').innerText = `${score}分`;
+        
+        // 连对一个词，进度条即时平滑增加一格
+        updateProgressBar();
+
         selectedLeft = null;
         selectedRight = null;
 
-        if (matchedCount === currentRoundWords.length) {
+        if (matchedInGroup === currentRoundWords.length) {
           handleGroupComplete();
         }
       } else {
