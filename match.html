@@ -216,7 +216,7 @@
       }
     }
 
-    // 参数归一化
+    // 参数归一化映射
     function normalizeParams(rawBook, rawGrade, rawLesson) {
       let b = rawBook || 'pep_jr';
       let g = rawGrade || 'pep_jr_7';
@@ -252,7 +252,7 @@
 
     let score = 0;
     let mistakes = 0;
-    let matchedPairs = 0;
+    let matchedPairs = 0; // 当前组已配对消除的词数
     let selectedCards = [];
     let isProcessing = false;
     let startTime = Date.now();
@@ -291,6 +291,14 @@
       return DEFAULT_FALLBACK_WORDS;
     }
 
+    // 与连连看一致的逐词进度计算函数
+    function updateProgressBar() {
+      const totalWords = ALL_WORDS.length;
+      const completedWords = (currentGroup * GROUP_SIZE) + matchedPairs;
+      const pct = Math.min(100, Math.round((completedWords / totalWords) * 100));
+      document.getElementById('progressFill').style.width = `${pct}%`;
+    }
+
     function startGroup(groupIdx) {
       currentGroup = groupIdx;
       matchedPairs = 0;
@@ -298,7 +306,7 @@
       isProcessing = false;
 
       document.getElementById('groupCounter').innerText = `${currentGroup + 1}/${totalGroups} 组`;
-      document.getElementById('progressFill').style.width = `${((currentGroup + 1) / totalGroups) * 100}%`;
+      updateProgressBar();
 
       const start = groupIdx * GROUP_SIZE;
       const end = Math.min(start + GROUP_SIZE, ALL_WORDS.length);
@@ -354,6 +362,9 @@
         score += 10;
         matchedPairs++;
         document.getElementById('scoreChip').innerText = `${score}分`;
+
+        // 连对一对，进度条立即平滑推进
+        updateProgressBar();
 
         c1.el.classList.remove('sel'); c2.el.classList.remove('sel');
         c1.el.classList.add('matched'); c2.el.classList.add('matched');
