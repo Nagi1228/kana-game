@@ -3,27 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>かなゲーム - 拼图模式</title>
-  <!-- 引入 Supabase 官方 SDK -->
+  <title>かなゲーム - 拼图闯关</title>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <style>
     :root {
       --primary: #3b82f6;
       --primary-hover: #2563eb;
-      --success: #22c55e;
-      --danger: #ef4444;
-      --text-main: #1e293b;
-      --text-sub: #64748b;
-      --border-color: #e2e8f0;
+      --bg-color: #f0f7ff;
       --card-bg: #ffffff;
+      --text-main: #1e3a8a;
+      --text-sub: #64748b;
+      --border-color: #dbeafe;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      background-color: #f0f7ff;
+      background-color: var(--bg-color);
       background-image: 
         radial-gradient(#dbeafe 1.5px, transparent 1.5px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(240, 247, 255, 0.95));
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(240, 247, 255, 0.95));
       background-size: 24px 24px, 100% 100%;
       color: var(--text-main);
       min-height: 100vh;
@@ -34,155 +32,338 @@
 
     header {
       width: 100%;
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.92);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--border-color);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 16px;
+      padding: 10px 24px;
       position: sticky;
       top: 0;
       z-index: 50;
     }
-    .back-btn {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      padding: 6px 14px;
-      background: #eff6ff;
-      color: var(--primary);
-      border: 1px solid #bfdbfe;
-      border-radius: 9999px;
-      font-size: 13px;
-      font-weight: 700;
+    .logo {
+      font-size: 22px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #2563eb, #f97316);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       cursor: pointer;
     }
-    .back-btn:hover { background: #dbeafe; }
-    .game-title { font-size: 16px; font-weight: 800; color: #1e3a8a; }
-    .score-badge {
-      font-size: 13px;
+    .nav-links { display: flex; gap: 16px; }
+    .nav-item {
+      font-size: 14px;
       font-weight: 700;
-      color: #ea580c;
-      background: #fff7ed;
-      padding: 4px 12px;
-      border-radius: 9999px;
-      border: 1px solid #ffedd5;
+      color: #475569;
+      text-decoration: none;
+      cursor: pointer;
     }
 
-    .container {
+    .main-container {
       width: 100%;
-      max-width: 500px;
+      max-width: 680px;
       padding: 24px 16px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 16px;
     }
 
-    /* 题目展示卡片 */
-    .word-card {
+    /* 顶部控制与进度栏 */
+    .top-bar {
       width: 100%;
-      background: var(--card-bg);
-      border-radius: 20px;
-      padding: 24px;
-      text-align: center;
-      border: 1px solid var(--border-color);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
-    }
-    .meaning { font-size: 24px; font-weight: 900; color: #1e293b; margin-bottom: 6px; }
-    .romaji-hint { font-size: 13px; color: var(--text-sub); }
-
-    /* 拼图填空插槽区 */
-    .slots-container {
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin: 10px 0;
-      min-height: 54px;
-    }
-    .slot-box {
-      width: 50px;
-      height: 52px;
-      border: 2px dashed #93c5fd;
-      border-radius: 12px;
-      background: #f8fafc;
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      font-weight: 800;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .capsule-btn {
+      padding: 6px 14px;
+      border-radius: 9999px;
+      border: 1px solid #bfdbfe;
+      background: #ffffff;
       color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+      white-space: nowrap;
+    }
+    .capsule-btn:hover { background: #eff6ff; }
+    .progress-bar-bg {
+      flex: 1;
+      height: 10px;
+      background: #e2e8f0;
+      border-radius: 9999px;
+      overflow: hidden;
+    }
+    .progress-bar-fill {
+      width: 10%;
+      height: 100%;
+      background: #93c5fd;
+      border-radius: 9999px;
+      transition: width 0.3s ease;
+    }
+    .counter-txt { font-size: 14px; font-weight: 800; color: #3b82f6; white-space: nowrap; }
+    .score-badge {
+      padding: 6px 14px;
+      border-radius: 9999px;
+      border: 1px solid #fed7aa;
+      background: #ffffff;
+      color: #ea580c;
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    /* 限时设置胶囊条 */
+    .timer-bar {
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid #bfdbfe;
+      border-radius: 18px;
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 2px 8px rgba(59, 130, 246, 0.05);
+    }
+    .timer-label {
+      font-size: 13px;
+      font-weight: 800;
+      color: #2563eb;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .time-opt {
+      padding: 4px 14px;
+      border-radius: 9999px;
+      border: 1px solid #bfdbfe;
+      background: #ffffff;
+      color: #3b82f6;
+      font-size: 12px;
+      font-weight: 700;
       cursor: pointer;
       transition: all 0.15s ease;
     }
-    .slot-box.filled {
-      border: 2px solid var(--primary);
-      background: #eff6ff;
+    .time-opt.active {
+      background: #2563eb;
+      color: #ffffff;
+      border-color: #2563eb;
+    }
+    .time-countdown {
+      margin-left: auto;
+      font-size: 14px;
+      font-weight: 800;
+      color: #ef4444;
+      display: none;
     }
 
-    /* 备选假名按钮池 */
-    .letters-pool {
+    /* 题目展示卡片 */
+    .question-card {
+      width: 100%;
+      background: #ffffff;
+      border-radius: 24px;
+      border: 1.5px solid #bfdbfe;
+      padding: 28px 20px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .tags-row { display: flex; gap: 8px; }
+    .tag-accent {
+      background: #fef3c7;
+      color: #d97706;
+      padding: 2px 10px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 700;
+      border: 1px solid #fde68a;
+    }
+    .tag-pos {
+      background: #dbeafe;
+      color: #2563eb;
+      padding: 2px 10px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 700;
+      border: 1px solid #bfdbfe;
+    }
+    .question-meaning {
+      font-size: 32px;
+      font-weight: 900;
+      color: #1e3a8a;
+      letter-spacing: 0.5px;
+    }
+    .question-hint {
+      font-size: 13px;
+      font-weight: 700;
+      color: #60a5fa;
+    }
+
+    /* 拼图空槽区 */
+    .slots-area {
       display: flex;
       justify-content: center;
-      gap: 10px;
+      gap: 12px;
       flex-wrap: wrap;
-      width: 100%;
-      background: var(--card-bg);
-      padding: 20px;
-      border-radius: 20px;
-      border: 1px solid var(--border-color);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      margin: 10px 0;
     }
-    .letter-btn {
-      width: 54px;
-      height: 54px;
-      border-radius: 14px;
-      border: 1px solid var(--border-color);
-      background: #ffffff;
-      font-size: 22px;
-      font-weight: 800;
-      color: #334155;
+    .slot-cell {
+      width: 68px;
+      height: 72px;
+      border: 2px dashed #93c5fd;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.85);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: 900;
+      color: #1e3a8a;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+      transition: all 0.15s ease;
       cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      transition: transform 0.1s, background-color 0.15s;
     }
-    .letter-btn:active { transform: scale(0.92); }
-    .letter-btn.used {
-      opacity: 0.3;
-      pointer-events: none;
-      border-style: dashed;
+    .slot-cell .slot-num {
+      position: absolute;
+      top: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #94a3b8;
+    }
+    .slot-cell.filled {
+      border: 2px solid #3b82f6;
+      background: #eff6ff;
+      box-shadow: 0 4px 10px rgba(59, 130, 246, 0.15);
     }
 
-    .feedback-msg {
-      font-size: 14px;
-      font-weight: 700;
-      min-height: 24px;
+    /* 备选字母卡片区 */
+    .letters-area {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 6px 0;
     }
-    .feedback-msg.correct { color: var(--success); }
-    .feedback-msg.wrong { color: var(--danger); }
+    .letter-card {
+      width: 68px;
+      height: 72px;
+      border-radius: 18px;
+      border: 1px solid #bfdbfe;
+      background: #ffffff;
+      font-size: 32px;
+      font-weight: 900;
+      color: #1e3a8a;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.12);
+      transition: transform 0.1s, box-shadow 0.1s, opacity 0.15s;
+      user-select: none;
+    }
+    .letter-card:active { transform: scale(0.92); }
+    .letter-card.used {
+      opacity: 0.25;
+      pointer-events: none;
+      box-shadow: none;
+      border: 1px dashed #cbd5e1;
+    }
+
+    /* 底部操作按钮 */
+    .actions-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 8px;
+    }
+    .action-btn {
+      padding: 8px 18px;
+      border-radius: 9999px;
+      border: 1px solid #bfdbfe;
+      background: #ffffff;
+      color: #2563eb;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      box-shadow: 0 2px 6px rgba(59, 130, 246, 0.08);
+    }
+    .action-btn:hover { background: #eff6ff; }
+
+    /* 结果反馈动画 */
+    .feedback-banner {
+      font-size: 15px;
+      font-weight: 800;
+      min-height: 24px;
+      text-align: center;
+    }
+    .feedback-banner.correct { color: #16a34a; }
+    .feedback-banner.wrong { color: #ef4444; }
   </style>
 </head>
 <body>
 
   <header>
-    <button class="back-btn" onclick="location.href='index.html'">← 返回首页</button>
-    <div class="game-title">🧩 拼图闯关</div>
-    <div class="score-badge">得分: <span id="scoreTxt">0</span></div>
+    <div class="logo" onclick="location.href='index.html'">かなゲーム</div>
+    <div class="nav-links">
+      <span class="nav-item" onclick="location.href='index.html'">首页</span>
+      <span class="nav-item" onclick="alert('词库管理模块即将开放')">词库</span>
+    </div>
   </header>
 
-  <div class="container">
-    <div class="word-card">
-      <div class="meaning" id="wordMeaning">正在载入...</div>
-      <div class="romaji-hint" id="wordRomaji"></div>
+  <div class="main-container">
+    <!-- 顶部状态栏 -->
+    <div class="top-bar">
+      <button class="capsule-btn" onclick="location.href='index.html'">← 返回</button>
+      <div class="capsule-btn" id="levelBadge">第 1 关</div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progressFill"></div>
+      </div>
+      <div class="counter-txt" id="progressTxt">1/10</div>
+      <div class="score-badge"><span id="scoreNum">0</span> 分</div>
     </div>
 
-    <div class="slots-container" id="slotsContainer"></div>
+    <!-- 限时模式选择栏 -->
+    <div class="timer-bar">
+      <div class="timer-label">⏱ 限时</div>
+      <button class="time-opt active" onclick="setTimer(0, this)">关闭</button>
+      <button class="time-opt" onclick="setTimer(20, this)">20秒</button>
+      <button class="time-opt" onclick="setTimer(40, this)">40秒</button>
+      <button class="time-opt" onclick="setTimer(60, this)">60秒</button>
+      <div class="time-countdown" id="countdownTxt">倒计时: 00</div>
+    </div>
 
-    <div class="feedback-msg" id="feedbackMsg"></div>
+    <!-- 题目主卡片 -->
+    <div class="question-card">
+      <div class="tags-row">
+        <span class="tag-accent" id="accentTag">声调: ①</span>
+        <span class="tag-pos" id="posTag">词性: 名</span>
+      </div>
+      <div class="question-meaning" id="meaningTxt">测验，测试</div>
+      <div class="question-hint" id="kanaCountTxt">共 3 个假名</div>
+    </div>
 
-    <div class="letters-pool" id="lettersPool"></div>
+    <!-- 填空槽位区 -->
+    <div class="slots-area" id="slotsArea"></div>
+
+    <!-- 反馈提示 -->
+    <div class="feedback-banner" id="feedbackBanner"></div>
+
+    <!-- 假名备选池 -->
+    <div class="letters-area" id="lettersArea"></div>
+
+    <!-- 撤销/重置快捷键 -->
+    <div class="actions-row">
+      <button class="action-btn" onclick="undoLast()">↩ 撤销</button>
+      <button class="action-btn" onclick="resetSlots()">⟲ 重置</button>
+    </div>
   </div>
 
   <script>
@@ -194,33 +375,36 @@
     let score = 0;
     let currentIndex = 0;
     let currentInput = [];
+    let timerDuration = 0; // 0 代表关闭限时
+    let timerInterval = null;
+    let timeLeft = 0;
 
-    // 默认课时词库样例（后续可从 Supabase 动态加载）
-    const sampleWords = [
-      { kana: 'あいさつ', meaning: '寒暄、打招呼', romaji: 'aisatsu' },
-      { kana: 'せんせい', meaning: '老师', romaji: 'sensei' },
-      { kana: 'がくせい', meaning: '学生', romaji: 'gakusei' },
-      { kana: 'ともだち', meaning: '朋友', romaji: 'tomodachi' },
-      { kana: 'ありがとう', meaning: '谢谢', romaji: 'arigatou' }
+    // 经典原版题库
+    const questions = [
+      { kana: 'テスト', meaning: '测验，测试', accent: '①', pos: '名' },
+      { kana: 'あいさつ', meaning: '寒暄，打招呼', accent: '①', pos: '名' },
+      { kana: 'せんせい', meaning: '老师', accent: '③', pos: '名' },
+      { kana: 'がくせい', meaning: '学生', accent: '⓪', pos: '名' },
+      { kana: 'ともだち', meaning: '朋友', accent: '⓪', pos: '名' },
+      { kana: 'ありがとう', meaning: '谢谢', accent: '②', pos: '感' },
+      { kana: 'おはよう', meaning: '早上好', accent: '⓪', pos: '感' },
+      { kana: 'さようなら', meaning: '再见', accent: '④', pos: '感' },
+      { kana: 'ほん', meaning: '书', accent: '①', pos: '名' },
+      { kana: 'ノート', meaning: '笔记本', accent: '①', pos: '名' }
     ];
 
-    // 初始化用户
     async function initAuth() {
       if (!sbClient) return;
       const { data: { session } } = await sbClient.auth.getSession();
       if (session) currentUser = session.user;
     }
 
-    // 记录错题到 Supabase
     async function recordMistake(word) {
-      // 本地备份
       let localMistakes = JSON.parse(localStorage.getItem('tangogo_mistakes') || '[]');
       if (!localMistakes.some(m => m.word === word.kana)) {
         localMistakes.push({ word: word.kana, meaning: word.meaning });
         localStorage.setItem('tangogo_mistakes', JSON.stringify(localMistakes));
       }
-
-      // 云端持久化
       if (currentUser && sbClient) {
         try {
           await sbClient.from('user_mistakes').upsert({
@@ -231,53 +415,106 @@
             updated_at: new Date().toISOString()
           }, { onConflict: 'user_id,word' });
         } catch (e) {
-          console.error('错词上传失败:', e);
+          console.error(e);
         }
       }
     }
 
+    function setTimer(seconds, el) {
+      timerDuration = seconds;
+      document.querySelectorAll('.time-opt').forEach(btn => btn.classList.remove('active'));
+      el.classList.add('active');
+      startTimer();
+    }
+
+    function startTimer() {
+      clearInterval(timerInterval);
+      const cdTxt = document.getElementById('countdownTxt');
+      if (timerDuration === 0) {
+        cdTxt.style.display = 'none';
+        return;
+      }
+      timeLeft = timerDuration;
+      cdTxt.style.display = 'block';
+      cdTxt.innerText = `倒计时: ${timeLeft}秒`;
+
+      timerInterval = setInterval(() => {
+        timeLeft--;
+        cdTxt.innerText = `倒计时: ${timeLeft}秒`;
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          handleTimeout();
+        }
+      }, 1000);
+    }
+
+    function handleTimeout() {
+      const q = questions[currentIndex];
+      const fb = document.getElementById('feedbackBanner');
+      fb.className = 'feedback-banner wrong';
+      fb.innerText = `⏰ 时间到！正确答案是：${q.kana}`;
+      recordMistake(q);
+      setTimeout(() => {
+        currentIndex++;
+        loadQuestion();
+      }, 1500);
+    }
+
     function loadQuestion() {
-      if (currentIndex >= sampleWords.length) {
-        document.getElementById('wordMeaning').innerText = '🎉 挑战全部完成！';
-        document.getElementById('wordRomaji').innerText = `最终得分: ${score}`;
-        document.getElementById('slotsContainer').innerHTML = '';
-        document.getElementById('lettersPool').innerHTML = '<button class="letter-btn" style="width:auto; padding:0 20px;" onclick="location.reload()">再玩一次</button>';
+      if (currentIndex >= questions.length) {
+        clearInterval(timerInterval);
+        document.getElementById('meaningTxt').innerText = '🎉 通关完成！';
+        document.getElementById('kanaCountTxt').innerText = `最终得分: ${score} 分`;
+        document.getElementById('slotsArea').innerHTML = '';
+        document.getElementById('lettersArea').innerHTML = '<button class="action-btn" onclick="location.reload()" style="font-size:16px; padding:10px 24px;">再玩一次</button>';
         return;
       }
 
-      const q = sampleWords[currentIndex];
+      const q = questions[currentIndex];
       currentInput = [];
-      document.getElementById('feedbackMsg').innerText = '';
-      document.getElementById('wordMeaning').innerText = q.meaning;
-      document.getElementById('wordRomaji').innerText = `罗马音提示: ${q.romaji}`;
+      document.getElementById('feedbackBanner').innerText = '';
+      
+      // 更新顶部状态
+      document.getElementById('levelBadge').innerText = `第 ${currentIndex + 1} 关`;
+      document.getElementById('progressTxt').innerText = `${currentIndex + 1}/${questions.length}`;
+      document.getElementById('progressFill').style.width = `${((currentIndex + 1) / questions.length) * 100}%`;
 
-      // 渲染拼图槽位
-      const slotsContainer = document.getElementById('slotsContainer');
-      slotsContainer.innerHTML = '';
+      // 更新卡片内容
+      document.getElementById('accentTag').innerText = `声调: ${q.accent || '⓪'}`;
+      document.getElementById('posTag').innerText = `词性: ${q.pos || '名'}`;
+      document.getElementById('meaningTxt').innerText = q.meaning;
+      document.getElementById('kanaCountTxt').innerText = `共 ${q.kana.length} 个假名`;
+
+      // 渲染槽位（带 1, 2, 3 序号角标）
+      const slotsArea = document.getElementById('slotsArea');
+      slotsArea.innerHTML = '';
       for (let i = 0; i < q.kana.length; i++) {
         const slot = document.createElement('div');
-        slot.className = 'slot-box';
+        slot.className = 'slot-cell';
         slot.id = `slot-${i}`;
+        slot.innerHTML = `<span class="slot-num">${i + 1}</span><span class="slot-val"></span>`;
         slot.onclick = () => removeSlotLetter(i);
-        slotsContainer.appendChild(slot);
+        slotsArea.appendChild(slot);
       }
 
-      // 生成打乱顺序的假名按钮
+      // 生成假名按键池并打乱
       const chars = q.kana.split('').sort(() => Math.random() - 0.5);
-      const pool = document.getElementById('lettersPool');
-      pool.innerHTML = '';
+      const lettersArea = document.getElementById('lettersArea');
+      lettersArea.innerHTML = '';
       chars.forEach((char, idx) => {
         const btn = document.createElement('button');
-        btn.className = 'letter-btn';
+        btn.className = 'letter-card';
         btn.id = `btn-${idx}`;
         btn.innerText = char;
         btn.onclick = () => selectLetter(char, idx);
-        pool.appendChild(btn);
+        lettersArea.appendChild(btn);
       });
+
+      startTimer();
     }
 
     function selectLetter(char, btnIdx) {
-      const q = sampleWords[currentIndex];
+      const q = questions[currentIndex];
       if (currentInput.length >= q.kana.length) return;
 
       currentInput.push({ char, btnIdx });
@@ -296,42 +533,60 @@
       renderSlots();
     }
 
+    function undoLast() {
+      if (currentInput.length === 0) return;
+      const removed = currentInput.pop();
+      document.getElementById(`btn-${removed.btnIdx}`).classList.remove('used');
+      renderSlots();
+    }
+
+    function resetSlots() {
+      currentInput.forEach(item => {
+        document.getElementById(`btn-${item.btnIdx}`).classList.remove('used');
+      });
+      currentInput = [];
+      renderSlots();
+    }
+
     function renderSlots() {
-      const q = sampleWords[currentIndex];
+      const q = questions[currentIndex];
       for (let i = 0; i < q.kana.length; i++) {
         const slot = document.getElementById(`slot-${i}`);
+        const valEl = slot.querySelector('.slot-val');
         if (currentInput[i]) {
-          slot.innerText = currentInput[i].char;
+          valEl.innerText = currentInput[i].char;
           slot.classList.add('filled');
         } else {
-          slot.innerText = '';
+          valEl.innerText = '';
           slot.classList.remove('filled');
         }
       }
     }
 
     function checkAnswer() {
-      const q = sampleWords[currentIndex];
+      const q = questions[currentIndex];
       const ans = currentInput.map(item => item.char).join('');
-      const feedback = document.getElementById('feedbackMsg');
+      const fb = document.getElementById('feedbackBanner');
 
       if (ans === q.kana) {
-        feedback.className = 'feedback-msg correct';
-        feedback.innerText = '✨ 回答正确！+10分';
+        clearInterval(timerInterval);
+        fb.className = 'feedback-banner correct';
+        fb.innerText = '✨ 回答正确！+10分';
         score += 10;
-        document.getElementById('scoreTxt').innerText = score;
+        document.getElementById('scoreNum').innerText = score;
         setTimeout(() => {
           currentIndex++;
           loadQuestion();
-        }, 900);
+        }, 800);
       } else {
-        feedback.className = 'feedback-msg wrong';
-        feedback.innerText = `❌ 拼错啦，正确是: ${q.kana}（已加入错题本）`;
+        clearInterval(timerInterval);
+        fb.className = 'feedback-banner wrong';
+        fb.innerText = `❌ 拼错啦，正确是: ${q.kana}（已加入错题本）`;
         recordMistake(q);
         setTimeout(() => {
           currentIndex++;
           loadQuestion();
-        }, 1600);
+        }, 1500);
       }
     }
 
