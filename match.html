@@ -86,45 +86,56 @@
       color: #ea580c;
       font-size: 13px;
       font-weight: 800;
+      white-space: nowrap;
     }
 
-    /* 12卡片网格布局 */
+    .feedback-banner {
+      font-size: 15px;
+      font-weight: 800;
+      min-height: 24px;
+      text-align: center;
+      color: #3b82f6;
+    }
+    .feedback-banner.correct { color: #16a34a; }
+    .feedback-banner.wrong { color: #ef4444; }
+
+    /* 稳固卡片尺寸与网格 */
     .grid-board {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+      gap: 12px;
       width: 100%;
-      margin-top: 10px;
+      margin-top: 8px;
     }
     @media (min-width: 480px) {
       .grid-board { grid-template-columns: repeat(4, 1fr); }
     }
     .match-card {
-      aspect-ratio: 1;
+      min-height: 85px;
       background: #ffffff;
       border: 2px solid #bfdbfe;
-      border-radius: 18px;
+      border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 8px;
-      font-size: 16px;
+      padding: 10px 6px;
+      font-size: 17px;
       font-weight: 800;
       color: #1e3a8a;
       cursor: pointer;
-      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.08);
+      box-shadow: 0 4px 10px rgba(59, 130, 246, 0.08);
       transition: all 0.2s ease;
       user-select: none;
     }
-    .match-card:hover { transform: scale(1.03); border-color: #3b82f6; }
+    .match-card:hover { transform: translateY(-2px); border-color: #3b82f6; }
     .match-card.active {
       background: #eff6ff;
       border-color: #2563eb;
       box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
     }
     .match-card.matched {
-      transform: scale(0);
+      visibility: hidden;
       opacity: 0;
       pointer-events: none;
     }
@@ -133,15 +144,6 @@
       border-color: #ef4444;
       color: #ef4444;
     }
-
-    .feedback-banner {
-      font-size: 15px;
-      font-weight: 800;
-      min-height: 24px;
-      text-align: center;
-    }
-    .feedback-banner.correct { color: #16a34a; }
-    .feedback-banner.wrong { color: #ef4444; }
   </style>
 </head>
 <body>
@@ -156,7 +158,7 @@
       <div class="score-badge"><span id="scoreNum">0</span> 分</div>
     </div>
 
-    <div class="feedback-banner" id="feedbackBanner">翻开两张卡片，找出对应的单词和释义！</div>
+    <div class="feedback-banner" id="feedbackBanner">点击两张卡片进行配对消除 ✨</div>
 
     <div class="grid-board" id="gridBoard"></div>
   </div>
@@ -260,7 +262,7 @@
         }, 300);
       } else {
         fb.className = 'feedback-banner wrong';
-        fb.innerText = '❌ 配对不对哦，已记录错词';
+        fb.innerText = '❌ 配对不对哦，已记入错词本';
         recordMistake(c1.card.pair);
 
         c1.el.classList.add('wrong');
