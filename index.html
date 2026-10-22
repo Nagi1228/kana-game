@@ -371,13 +371,14 @@
     </div>
   </div>
 
-  <script>
+<script>
     const SUPABASE_URL = 'https://zbfjbtzvnhmfzyvooact.supabase.co';
     const SUPABASE_KEY = 'sb_publishable_AP0YnQLgzmB3d63_4zbpjg_vHeTyo8Z';
     const sbClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
 
     let currentUser = null;
     let selectedAvatar = localStorage.getItem('tangogo_avatar') || '🌸';
+    let currentNickname = localStorage.getItem('tangogo_nickname') || '';
     let mistakesList = JSON.parse(localStorage.getItem('tangogo_mistakes') || '[]');
 
     function openUserModal() {
@@ -389,6 +390,8 @@
         unauth.style.display = 'none';
         profile.style.display = 'block';
         document.getElementById('profileEmailTxt').innerText = currentUser.email;
+        // 回显当前已保存的昵称到输入框
+        document.getElementById('inputNickname').value = currentNickname || currentUser.email.split('@')[0];
         chooseAvatar(selectedAvatar);
       } else {
         document.getElementById('modalTitle').innerText = '用户登录 / 注册';
@@ -414,7 +417,7 @@
       const nameEl = document.getElementById('userDisplayName');
       if (currentUser) {
         iconEl.innerText = selectedAvatar;
-        nameEl.innerText = currentUser.user_metadata?.username || currentUser.email.split('@')[0];
+        nameEl.innerText = currentNickname || currentUser.email.split('@')[0];
       } else {
         iconEl.innerText = '🌸';
         nameEl.innerText = '登录 / 注册';
@@ -453,20 +456,28 @@
     async function doSignOut() {
       if (sbClient) await sbClient.auth.signOut();
       currentUser = null;
+      currentNickname = '';
+      localStorage.removeItem('tangogo_nickname');
       closeUserModal();
       refreshHeaderUI();
       alert('已退出登录');
     }
 
     async function saveUserProfile() {
+      const nicknameInput = document.getElementById('inputNickname').value.trim();
+      currentNickname = nicknameInput || (currentUser ? currentUser.email.split('@')[0] : '');
+      
       localStorage.setItem('tangogo_avatar', selectedAvatar);
-      const nickname = document.getElementById('inputNickname').value.trim();
+      localStorage.setItem('tangogo_nickname', currentNickname);
+
       if (currentUser && sbClient) {
-        await sbClient.from('profiles').update({
+        // 同步更新数据库 profiles 表
+        await sbClient.from('profiles').upsert({
+          id: currentUser.id,
           avatar_id: selectedAvatar,
-          username: nickname || currentUser.email.split('@')[0],
+          username: currentNickname,
           updated_at: new Date().toISOString()
-        }).eq('id', currentUser.id);
+        });
       }
       refreshHeaderUI();
       closeUserModal();
@@ -476,8 +487,17 @@
     async function syncDataFromCloud() {
       if (!currentUser || !sbClient) return;
       try {
-        const { data: profile } = await sbClient.from('profiles').select('*').eq('id', currentUser.id).single();
-        if (profile?.avatar_id) selectedAvatar = profile.avatar_id;
+        const { data: profile } = await sbClient.from('profiles').select('*').eq('id', currentUser.id).maybeSingle();
+        if (profile) {
+          if (profile.avatar_id) {
+            selectedAvatar = profile.avatar_id;
+            localStorage.setItem('tangogo_avatar', selectedAvatar);
+          }
+          if (profile.username) {
+            currentNickname = profile.username;
+            localStorage.setItem('tangogo_nickname', currentNickname);
+          }
+        }
 
         const { data: cloudMistakes } = await sbClient.from('user_mistakes').select('*').eq('user_id', currentUser.id);
         if (cloudMistakes && cloudMistakes.length > 0) {
@@ -510,7 +530,7 @@
       refreshHeaderUI();
     }
 
-    // 确保全局挂载
+    // 全局挂载，确保点击生效
     window.openUserModal = openUserModal;
     window.closeUserModal = closeUserModal;
     window.doSignUp = doSignUp;
