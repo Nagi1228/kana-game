@@ -216,7 +216,6 @@
       }
     }
 
-    // 参数归一化映射
     function normalizeParams(rawBook, rawGrade, rawLesson) {
       let b = rawBook || 'pep_jr';
       let g = rawGrade || 'pep_jr_7';
@@ -252,7 +251,7 @@
 
     let score = 0;
     let mistakes = 0;
-    let matchedPairs = 0; // 当前组已配对消除的词数
+    let matchedPairs = 0;
     let selectedCards = [];
     let isProcessing = false;
     let startTime = Date.now();
@@ -291,7 +290,6 @@
       return DEFAULT_FALLBACK_WORDS;
     }
 
-    // 与连连看一致的逐词进度计算函数
     function updateProgressBar() {
       const totalWords = ALL_WORDS.length;
       const completedWords = (currentGroup * GROUP_SIZE) + matchedPairs;
@@ -329,10 +327,12 @@
         if (c.kind === 'word') {
           el.innerHTML = `<div class="elim-word jp-text">${c.raw.kanji || c.raw.kana}</div>`;
         } else {
+          // 核心优化：如果该词无汉字（或汉字与假名一致），释义卡片不再重复显示假名
+          const hasKanji = c.raw.kanji && c.raw.kanji.trim() !== '' && c.raw.kanji.trim() !== c.raw.kana.trim();
           el.innerHTML = `
             <div class="m-tags">
               <span class="m-pos">${c.raw.pos || '名'}</span>
-              <span class="m-kana jp-text">${c.raw.kana}</span>
+              ${hasKanji ? `<span class="m-kana jp-text">${c.raw.kana}</span>` : ''}
               <span class="m-mean cn-text">${c.raw.meaning}</span>
             </div>
           `;
@@ -362,8 +362,6 @@
         score += 10;
         matchedPairs++;
         document.getElementById('scoreChip').innerText = `${score}分`;
-
-        // 连对一对，进度条立即平滑推进
         updateProgressBar();
 
         c1.el.classList.remove('sel'); c2.el.classList.remove('sel');
