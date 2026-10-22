@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>かなゲーム - 云端词库管理</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" media="print" onload="this.media='all';this.onload=null"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=M+PLUS+Rounded+1c:wght@400;700;900&family=Noto+Sans+SC:wght@400;700;900&display=swap">
+<style>
+:root {
+  --bg: #f0f7ff;
+  --bg2: #dbeafe;
+  --bg3: #bfdbfe;
+  --surface: #ffffff;
+  --surface2: #f8faff;
+  --border: #93c5fd;
+  --fg: #0c2340;
+  --fg2: #1e4d8c;
+  --fg3: #2563eb;
+  --accent: #2563eb;
+  --accent-hot: #f97316;
+  --correct: #059669;
+  --correct-bg: #d1fae5;
+  --wrong: #e11d48;
+  --wrong-bg: #ffe4e6;
+  --warn: #d97706;
+  --warn-bg: #fef3c7;
+  --shadow: rgba(37,99,235,0.18);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  min-height: 100vh;
+  font-family: 'Noto Sans SC', sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.jp-text { font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif; }
+.cn-text { font-family: 'Noto Sans SC', sans-serif; }
+
+.top-nav {
+  display: flex; align-items: center; gap: 10px; padding: 12px 24px;
+  background-color: var(--surface);
+  border-bottom: 2px solid var(--border);
+  box-shadow: 0 2px 12px var(--shadow);
+  position: sticky; top: 0; z-index: 50;
+}
+.nav-logo { font-size: 1.6rem; font-weight: 900; color: var(--accent); cursor: pointer; }
+.nav-logo span { color: var(--accent-hot); }
+.nav-actions { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+.nav-btn {
+  padding: 6px 16px; border-radius: 20px; border: 2px solid transparent;
+  background: none; font-size: 0.92rem; font-weight: 700; color: var(--fg2); cursor: pointer;
+}
+.nav-btn:hover { background: var(--bg2); border-color: var(--border); }
+.nav-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+.vocab-wrap {
+  flex: 1; padding: 24px 16px; max-width: 980px; width: 100%; margin: 0 auto;
+  display: flex; flex-direction: column; gap: 20px;
+}
+.vocab-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.vocab-header h2 { font-size: 1.4rem; font-weight: 900; color: var(--fg); }
+
+/* 选择器卡片 */
+.vocab-picker-box, .add-word-form {
+  background: var(--surface); border: 2.5px solid var(--border); border-radius: 20px;
+  padding: 20px 22px; display: flex; flex-direction: column; gap: 14px;
+  box-shadow: 0 4px 16px var(--shadow);
+}
+.deck-selector-header { display: flex; align-items: center; justify-content: space-between; }
+.deck-selector-header label { font-size: 0.95rem; font-weight: 900; color: var(--fg2); }
+.deck-count-badge { font-size: 0.84rem; font-weight: 800; color: var(--accent); background: var(--bg2); padding: 4px 12px; border-radius: 20px; }
+
+.cascade-grid { display: grid; grid-template-columns: 1fr 0.85fr 1.7fr; gap: 12px; }
+@media (max-width: 680px) { .cascade-grid { grid-template-columns: 1fr; } }
+.select-group { display: flex; flex-direction: column; gap: 6px; }
+.select-sublabel { font-size: 0.78rem; font-weight: 700; color: var(--fg3); }
+select.deck-pick {
+  width: 100%; padding: 11px 36px 11px 14px; border-radius: 12px; border: 2px solid var(--border);
+  background-color: var(--surface2); color: var(--fg); font-size: 0.95rem; font-weight: 700;
+  appearance: none; cursor: pointer; outline: none; transition: all 0.15s;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2.5'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center;
+}
+select.deck-pick:focus { border-color: var(--accent); }
+
+/* 单词输入行 */
+.form-row-5 { display: grid; grid-template-columns: 1.1fr 1.2fr 0.8fr 0.9fr 1.3fr; gap: 10px; }
+@media (max-width: 720px) { .form-row-5 { grid-template-columns: 1fr 1fr; } }
+.form-input {
+  padding: 10px 12px; border-radius: 12px; border: 2px solid var(--border);
+  background: var(--bg2); color: var(--fg); font-size: 0.95rem; outline: none;
+}
+.form-input:focus { border-color: var(--accent); background: #fff; }
+
+/* 批量导入文本框与文件上传 */
+.csv-upload-label {
+  display: flex; align-items: center; gap: 10px; cursor: pointer;
+  border: 2px dashed var(--border); border-radius: 14px; padding: 12px 18px;
+  background: var(--surface2); transition: all 0.15s;
+}
+.csv-upload-label:hover { border-color: var(--accent); background: var(--bg2); }
+.import-area {
+  width: 100%; padding: 12px; border-radius: 14px; border: 2px dashed var(--border);
+  background: var(--bg2); color: var(--fg); font-family: monospace; font-size: 0.92rem;
+  resize: vertical; min-height: 100px; outline: none;
+}
+.import-area:focus { border-color: var(--accent); background: #fff; }
+.import-hint { font-size: 0.82rem; color: var(--fg3); line-height: 1.6; }
+
+/* 单词表格 */
+.word-table-container {
+  background: var(--surface); border-radius: 20px; border: 2.5px solid var(--border);
+  overflow-x: auto; box-shadow: 0 4px 16px var(--shadow);
+}
+.word-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.word-table th {
+  text-align: left; padding: 12px; font-size: 0.82rem; font-weight: 800;
+  color: var(--fg2); border-bottom: 2px solid var(--border); background: var(--surface2); white-space: nowrap;
+}
+.word-table td { padding: 10px 12px; border-bottom: 1px solid var(--bg3); vertical-align: middle; }
+.word-table tr:hover td { background: var(--bg2); }
+.word-table tr:last-child td { border-bottom: none; }
+.td-kanji { font-size: 1.15rem; font-weight: 700; color: var(--fg); }
+.td-kana { font-size: 1.05rem; font-weight: 800; color: var(--accent); }
+.td-pos { font-size: 0.82rem; font-weight: 800; color: var(--fg3); background: var(--bg2); border-radius: 6px; padding: 2px 6px; }
+
+/* 操作按钮 */
+.action-btn {
+  padding: 10px 20px; border-radius: 24px; border: none; font-size: 0.92rem; font-weight: 800;
+  cursor: pointer; transition: transform 0.1s, box-shadow 0.15s;
+}
+.action-btn:active { transform: scale(0.96); }
+.btn-primary { background: linear-gradient(135deg, var(--accent), #1d4ed8); color: #fff; box-shadow: 0 2px 8px var(--shadow); }
+.btn-secondary { background: var(--surface); color: var(--fg2); border: 2px solid var(--border); }
+.btn-danger { background: var(--wrong-bg); color: var(--wrong); border: 1.5px solid rgba(225,29,72,0.3); }
+
+.td-btn { padding: 4px 10px; border-radius: 8px; font-size: 0.82rem; font-weight: 800; border: none; cursor: pointer; }
+.td-del { background: var(--wrong-bg); color: var(--wrong); }
+.td-del:hover { background: var(--wrong); color: #fff; }
+
+.toast {
+  position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%) translateY(20px);
+  background: var(--fg); color: #fff; border-radius: 28px; padding: 10px 24px;
+  font-size: 0.95rem; font-weight: 700; opacity: 0; transition: all 0.25s ease; z-index: 300; pointer-events: none;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+
+  <nav class="top-nav">
+    <div class="nav-logo jp-text" onclick="location.href='index.html'">かな<span>ゲーム</span></div>
+    <div class="nav-actions">
+      <button class="nav-btn cn-text" onclick="location.href='index.html'">首页</button>
+      <button class="nav-btn active cn-text" onclick="location.reload()">词库</button>
+      <button class="nav-btn cn-text" onclick="location.href='index.html'">错词本</button>
+    </div>
+  </nav>
+
+  <div class="vocab-wrap">
+    <div class="vocab-header">
+      <h2 class="cn-text">📚 云端词库管理</h2>
+      <button class="action-btn btn-secondary cn-text" onclick="exportBackupJSON()">💾 导出整库备份 JSON</button>
+    </div>
+
+    <!-- 三级联动选择器 -->
+    <div class="vocab-picker-box">
+      <div class="deck-selector-header">
+        <label class="cn-text">选择当前编辑课时</label>
+        <span class="deck-count-badge cn-text" id="deckWordCount">0 词</span>
+      </div>
+      <div class="cascade-grid">
+        <div class="select-group">
+          <span class="select-sublabel cn-text">一级：教材系列</span>
+          <select class="deck-pick cn-text" id="selBook" onchange="onBookChange()"></select>
+        </div>
+        <div class="select-group">
+          <span class="select-sublabel cn-text">二级：年级 / 分册</span>
+          <select class="deck-pick cn-text" id="selGrade" onchange="onGradeChange()"></select>
+        </div>
+        <div class="select-group">
+          <span class="select-sublabel cn-text">三级：章节 / 课时</span>
+          <select class="deck-pick cn-text" id="selLesson" onchange="loadWords()"></select>
+        </div>
+      </div>
+    </div>
+
+    <!-- 单词添加表单 -->
+    <div class="add-word-form">
+      <h3 class="cn-text">➕ 单条录入（保存到当前选中课时）</h3>
+      <div class="form-row-5">
+        <input class="form-input jp-text" id="inpKanji" placeholder="汉字（外来语留空）">
+        <input class="form-input jp-text" id="inpKana" placeholder="假名 *（如: せんせい）">
+        <input class="form-input cn-text" id="inpPitch" placeholder="声调（如: ①）">
+        <input class="form-input cn-text" id="inpPos" placeholder="词性（如: 名）">
+        <input class="form-input cn-text" id="inpMeaning" placeholder="中文含义 *（如: 老师）">
+      </div>
+      <div>
+        <button class="action-btn btn-primary cn-text" onclick="addSingleWord()">立即保存入库</button>
+      </div>
+    </div>
+
+    <!-- 批量导入模块 -->
+    <div class="add-word-form">
+      <h3 class="cn-text">📥 批量导入（CSV / 文本粘贴）</h3>
+      <p class="import-hint cn-text">
+        💡 <strong>标准 5 列格式（每行一个）</strong>：<code>汉字,假名,声调,词性,中文释义</code><br>
+        示例：<code>先生,せんせい,③,名,老师</code> 或 <code>,テスト,①,名,测验，测试</code>（无汉字首列逗号前留空）
+      </p>
+      <label class="csv-upload-label">
+        <input type="file" id="csvFileInput" accept=".csv,.txt" style="display:none" onchange="handleFileUpload(event)">
+        <span>📂 点击上传 CSV / TXT 词库文件</span>
+      </label>
+      <textarea class="import-area jp-text" id="importArea" placeholder="直接粘贴词汇文本，每行一条..."></textarea>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <button class="action-btn btn-primary cn-text" onclick="importBatchWords()">开始批量入库</button>
+        <button class="action-btn btn-danger cn-text" onclick="clearCurrentLessonWords()">🗑️ 清空当前课词汇</button>
+      </div>
+    </div>
+
+    <!-- 当前课单词列表 -->
+    <div class="vocab-header" style="margin-top:6px;">
+      <h2 class="cn-text">📝 当前课已收录单词</h2>
+      <span class="import-hint cn-text" id="syncStatus">数据已与 Supabase 同步</span>
+    </div>
+    <div class="word-table-container">
+      <table class="word-table">
+        <thead>
+          <tr>
+            <th style="width:40px;">#</th>
+            <th>汉字</th>
+            <th>假名</th>
+            <th>声调</th>
+            <th>词性</th>
+            <th>中文含义</th>
+            <th style="text-align:right; width:80px;">操作</th>
+          </tr>
+        </thead>
+        <tbody id="wordTableBody">
+          <tr><td colspan="7" style="text-align:center; padding:24px; color:#94a3b8;">正在加载词库...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="toast cn-text" id="toast"></div>
+
+  <script>
+    const SUPABASE_URL = 'https://zbfjbtzvnhmfzyvooact.supabase.co';
+    const SUPABASE_KEY = 'sb_publishable_AP0YnQLgzmB3d63_4zbpjg_vHeTyo8Z';
+    const sbClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
+    let currentUser = null;
+
+    // 经典教材课程树状索引
+    function makeLessons(prefix, count, startNo = 1) {
+      return Array.from({ length: count }, (_, i) => ({
+        id: `${prefix}_l${i + 1}`,
+        name: `第${startNo + i}课`
+      }));
+    }
+
+    const CURRICULUM = [
+      {
+        id: 'std_beg', name: '新版标准日本语初级',
+        children: [
+          { id: 'std_beg_1', name: '初级上册', lessons: makeLessons('std_beg_1', 24) },
+          { id: 'std_beg_2', name: '初级下册', lessons: makeLessons('std_beg_2', 24, 25) }
+        ]
+      },
+      {
+        id: 'pep_jr', name: '人教版初中日语（新）',
+        children: [
+          {
+            id: 'pep_jr_7', name: '七年级',
+            lessons: [
+              { id: 'pep_jr_7_intro1', name: '入门单元 第1课' },
+              { id: 'pep_jr_7_intro2', name: '入门单元 第2课' },
+              { id: 'pep_jr_7_intro3', name: '入门单元 第3课' },
+              ...makeLessons('pep_jr_7', 12)
+            ]
+          },
+          { id: 'pep_jr_8', name: '八年级', lessons: makeLessons('pep_jr_8', 12) },
+          { id: 'pep_jr_9', name: '九年级', lessons: makeLessons('pep_jr_9', 12) }
+        ]
+      },
+      {
+        id: 'pep_sr', name: '人教版高中日语',
+        children: [
+          { id: 'pep_sr_b1', name: '必修一', lessons: makeLessons('pep_sr_b1', 4) },
+          { id: 'pep_sr_b2', name: '必修二', lessons: makeLessons('pep_sr_b2', 4, 5) },
+          { id: 'pep_sr_b3', name: '必修三', lessons: makeLessons('pep_sr_b3', 4, 9) }
+        ]
+      }
+    ];
+
+    let currentLessonWords = [];
+    let toastTimer = null;
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => t.classList.remove('show'), 2200);
+    }
+
+    function initCurriculumUI() {
+      const bSel = document.getElementById('selBook');
+      bSel.innerHTML = '';
+      CURRICULUM.forEach((b, i) => {
+        bSel.innerHTML += `<option value="${b.id}">${b.name}</option>`;
+      });
+      onBookChange();
+    }
+
+    function onBookChange() {
+      const bId = document.getElementById('selBook').value;
+      const book = CURRICULUM.find(b => b.id === bId);
+      const gSel = document.getElementById('selGrade');
+      gSel.innerHTML = '';
+      if (book) {
+        book.children.forEach(g => {
+          gSel.innerHTML += `<option value="${g.id}">${g.name}</option>`;
+        });
+      }
+      onGradeChange();
+    }
+
+    function onGradeChange() {
+      const bId = document.getElementById('selBook').value;
+      const gId = document.getElementById('selGrade').value;
+      const book = CURRICULUM.find(b => b.id === bId);
+      const grade = book ? book.children.find(g => g.id === gId) : null;
+      const lSel = document.getElementById('selLesson');
+      lSel.innerHTML = '';
+      if (grade) {
+        grade.lessons.forEach(l => {
+          lSel.innerHTML += `<option value="${l.id}">${l.name}</option>`;
+        });
+      }
+      loadWords();
+    }
+
+    // 从 Supabase 查询当前课时单词
+    async function loadWords() {
+      const bId = document.getElementById('selBook').value;
+      const gId = document.getElementById('selGrade').value;
+      const lId = document.getElementById('selLesson').value;
+
+      document.getElementById('syncStatus').innerText = '正在读取云端...';
+      const tbody = document.getElementById('wordTableBody');
+
+      if (!sbClient) {
+        tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding:20px; color:#ef4444;">数据库组件未连接</td></tr>';
+        return;
+      }
+
+      const { data, error } = await sbClient
+        .from('words')
+        .select('*')
+        .eq('book_id', bId)
+        .eq('grade_id', gId)
+        .eq('lesson_id', lId)
+        .order('sort_order', { ascending: true })
+        .order('created_at', { ascending: true });
+
+      if (error) {
+        tbody.innerHTML = `<tr><td colspan="7" style="text-align:center; padding:20px; color:#ef4444;">读取失败: ${error.message}</td></tr>`;
+        return;
+      }
+
+      currentLessonWords = data || [];
+      document.getElementById('deckWordCount').innerText = `${currentLessonWords.length} 词`;
+      document.getElementById('syncStatus').innerText = '已与云端同步';
+      renderTable();
+    }
+
+    function renderTable() {
+      const tbody = document.getElementById('wordTableBody');
+      if (currentLessonWords.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding:32px; color:#94a3b8;">当前课暂未录入单词，可在上方单条添加或批量导入</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = currentLessonWords.map((w, idx) => `
+        <tr>
+          <td style="color:#94a3b8; font-weight:700;">${idx + 1}</td>
+          <td class="td-kanji jp-text">${w.kanji || '—'}</td>
+          <td class="td-kana jp-text">${w.kana}</td>
+          <td style="font-weight:700; color:#d97706;">${w.pitch || ''}</td>
+          <td><span class="td-pos">${w.pos || '名'}</span></td>
+          <td style="font-weight:700;">${w.meaning}</td>
+          <td style="text-align:right;">
+            <button class="td-btn td-del" onclick="deleteWord('${w.id}')">删除</button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    // 单条录入
+    async function addSingleWord() {
+      const kanji = document.getElementById('inpKanji').value.trim();
+      const kana = document.getElementById('inpKana').value.trim();
+      const pitch = document.getElementById('inpPitch').value.trim();
+      const pos = document.getElementById('inpPos').value.trim() || '名';
+      const meaning = document.getElementById('inpMeaning').value.trim();
+
+      if (!kana || !meaning) {
+        return alert('假名和中文含义是必填项！');
+      }
+
+      const bId = document.getElementById('selBook').value;
+      const gId = document.getElementById('selGrade').value;
+      const lId = document.getElementById('selLesson').value;
+
+      const { error } = await sbClient.from('words').insert([{
+        book_id: bId,
+        grade_id: gId,
+        lesson_id: lId,
+        kanji, kana, pitch, pos, meaning,
+        sort_order: currentLessonWords.length + 1
+      }]);
+
+      if (error) {
+        alert('保存失败: ' + error.message);
+      } else {
+        showToast('✨ 单词已成功添加！');
+        document.getElementById('inpKanji').value = '';
+        document.getElementById('inpKana').value = '';
+        document.getElementById('inpPitch').value = '';
+        document.getElementById('inpMeaning').value = '';
+        loadWords();
+      }
+    }
+
+    // 删除单词
+    async function deleteWord(id) {
+      if (!confirm('确定要删除该单词吗？')) return;
+      const { error } = await sbClient.from('words').delete().eq('id', id);
+      if (error) {
+        alert('删除失败: ' + error.message);
+      } else {
+        showToast('已删除');
+        loadWords();
+      }
+    }
+
+    // 清空当前单课
+    async function clearCurrentLessonWords() {
+      if (!confirm('警告：确定要清空当前选中的这节课所有词汇吗？')) return;
+      const bId = document.getElementById('selBook').value;
+      const gId = document.getElementById('selGrade').value;
+      const lId = document.getElementById('selLesson').value;
+
+      const { error } = await sbClient
+        .from('words')
+        .delete()
+        .eq('book_id', bId)
+        .eq('grade_id', gId)
+        .eq('lesson_id', lId);
+
+      if (error) alert('清空失败: ' + error.message);
+      else {
+        showToast('当前课词汇已清空');
+        loadWords();
+      }
+    }
+
+    // 批量解析文本并入库
+    async function importBatchWords() {
+      const text = document.getElementById('importArea').value.trim();
+      if (!text) return alert('请先粘贴或上传词汇内容！');
+
+      const lines = text.split('\n');
+      const bId = document.getElementById('selBook').value;
+      const gId = document.getElementById('selGrade').value;
+      const lId = document.getElementById('selLesson').value;
+
+      const rowsToInsert = [];
+      let baseOrder = currentLessonWords.length;
+
+      lines.forEach(line => {
+        const row = line.trim();
+        if (!row || row.startsWith('#')) return;
+        const cols = row.split(',').map(c => c.trim());
+        if (cols.length >= 2) {
+          // 容错匹配：汉字, 假名, 声调, 词性, 含义
+          let kanji = cols[0] || '';
+          let kana = cols[1] || '';
+          let pitch = cols[2] || '';
+          let pos = cols[3] || '名';
+          let meaning = cols[4] || cols[cols.length - 1] || '';
+
+          if (kana && meaning) {
+            baseOrder++;
+            rowsToInsert.push({
+              book_id: bId,
+              grade_id: gId,
+              lesson_id: lId,
+              kanji, kana, pitch, pos, meaning,
+              sort_order: baseOrder
+            });
+          }
+        }
+      });
+
+      if (rowsToInsert.length === 0) {
+        return alert('未能解析到符合规范的数据，请检查格式');
+      }
+
+      showToast(`正在写入 ${rowsToInsert.length} 个单词...`);
+      const { error } = await sbClient.from('words').insert(rowsToInsert);
+
+      if (error) {
+        alert('导入失败: ' + error.message);
+      } else {
+        alert(`🎉 成功录入 ${rowsToInsert.length} 个单词到当前课时！`);
+        document.getElementById('importArea').value = '';
+        loadWords();
+      }
+    }
+
+    // CSV 文件读取
+    function handleFileUpload(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = e => {
+        document.getElementById('importArea').value = e.target.result;
+        showToast('文件已加载到文本框，点击“开始批量入库”完成导入');
+      };
+      reader.readAsText(file, 'utf-8');
+    }
+
+    // 导出备份
+    async function exportBackupJSON() {
+      showToast('正在提取云端词库数据...');
+      const { data, error } = await sbClient.from('words').select('*');
+      if (error) return alert('导出失败: ' + error.message);
+
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `kanagame_words_backup_${Date.now()}.json`;
+      a.click();
+      showToast('备份文件已下载！');
+    }
+
+    window.addEventListener('DOMContentLoaded', async () => {
+      initCurriculumUI();
+    });
+  </script>
+</body>
+</html>
