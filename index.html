@@ -87,6 +87,7 @@ html, body {
 .home-title em { color: var(--accent); font-style: normal; }
 .home-sub { font-size: 1.1rem; color: var(--fg2); margin-top: 8px; font-weight: 700; }
 
+/* 词库选择器 */
 .deck-selector {
   width: 100%; max-width: 900px; display: flex; flex-direction: column; gap: 14px;
   background: var(--surface); padding: 22px 26px; border-radius: 22px;
@@ -109,6 +110,7 @@ select.deck-pick {
 }
 select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(37,99,235,0.15); }
 
+/* 四个游戏模式大卡片 */
 .mode-cards {
   width: 100%; max-width: 900px; display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px;
@@ -129,6 +131,7 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
 .mode-card.mode-match { border-color: #34d399; }
 .mode-card.mode-elim { border-color: #fbbf24; }
 
+/* 用户弹窗 */
 .modal-overlay {
   position: fixed; inset: 0; background: rgba(12, 35, 64, 0.55);
   backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center;
@@ -158,7 +161,7 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
     <div class="nav-logo jp-text" onclick="location.reload()">かな<span>ゲーム</span></div>
     <div class="nav-actions">
       <button class="nav-btn active cn-text">首页</button>
-      <button class="nav-btn cn-text" onclick="alert('词库管理模块即将开放')">词库</button>
+      <button class="nav-btn cn-text" onclick="location.href='vocab.html'">词库</button>
       <button class="nav-btn cn-text" onclick="openMistakesModal()">错词本<span class="nav-badge" id="mistakeBadge">0</span></button>
       
       <div class="user-capsule" onclick="openUserModal()">
@@ -169,6 +172,7 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
   </nav>
 
   <div class="home-wrap">
+    <!-- 日式简约风背景 -->
     <svg class="home-bg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
       <defs>
         <pattern id="bg-genko" width="48" height="48" patternUnits="userSpaceOnUse">
@@ -223,27 +227,36 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
       <div class="home-sub cn-text">选择教材与课程，开始挑战 ✨</div>
     </div>
 
+    <!-- 这里的 value 值与 vocab.html 保持一致 -->
     <div class="deck-selector">
       <div class="deck-selector-header">
         <label class="cn-text">📖 选择词库</label>
-        <span class="deck-word-count-badge cn-text">当前课共 40 词</span>
+        <span class="deck-word-count-badge cn-text" id="deckWordCountBadge">当前课共 3 词</span>
       </div>
       <div class="cascade-grid">
         <div class="select-group">
           <span class="select-sublabel cn-text">一级：教材系列</span>
-          <select class="deck-pick cn-text" id="bookSelect"><option value="renjiao-new">人教版初中日语（新）</option></select>
+          <select class="deck-pick cn-text" id="bookSelect">
+            <option value="pep_jr">人教版初中日语（新）</option>
+            <option value="std_beg">新版标准日本语初级</option>
+          </select>
         </div>
         <div class="select-group">
           <span class="select-sublabel cn-text">二级：年级 / 分册</span>
-          <select class="deck-pick cn-text" id="gradeSelect"><option value="grade7">七年级</option></select>
+          <select class="deck-pick cn-text" id="gradeSelect">
+            <option value="pep_jr_7">七年级</option>
+          </select>
         </div>
         <div class="select-group">
           <span class="select-sublabel cn-text">三级：章节 / 课时</span>
-          <select class="deck-pick cn-text" id="lessonSelect"><option value="unit1_lesson1">入门单元 第1课</option></select>
+          <select class="deck-pick cn-text" id="lessonSelect">
+            <option value="pep_jr_7_intro1">入门单元 第1课</option>
+          </select>
         </div>
       </div>
     </div>
 
+    <!-- 四大模式入口 -->
     <div class="mode-cards">
       <div class="mode-card mode-puzzle" onclick="startGame('拼图模式')">
         <div class="icon">🧩</div>
@@ -276,6 +289,7 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
     </div>
   </div>
 
+  <!-- 个人中心/登录弹窗 -->
   <div class="modal-overlay" id="userModal">
     <div class="modal-content">
       <div class="modal-header">
@@ -377,14 +391,13 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
       const email = document.getElementById('inputEmail').value.trim();
       const password = document.getElementById('inputPwd').value;
       if (!email || !password) return alert('请填写邮箱和密码');
-      if (!sbClient) return alert('数据库组件加载中，请稍后再试');
+      if (!sbClient) return alert('数据库连接中，请稍后再试');
       
       const { data, error } = await sbClient.auth.signUp({ email, password });
       if (error) return alert('注册失败: ' + error.message);
       alert('注册成功！已为您登录');
       currentUser = data.user;
       closeUserModal();
-      await syncDataFromCloud();
       refreshHeaderUI();
     }
 
@@ -392,13 +405,12 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
       const email = document.getElementById('inputEmail').value.trim();
       const password = document.getElementById('inputPwd').value;
       if (!email || !password) return alert('请填写邮箱和密码');
-      if (!sbClient) return alert('数据库组件加载中，请稍后再试');
+      if (!sbClient) return alert('数据库连接中，请稍后再试');
 
       const { data, error } = await sbClient.auth.signInWithPassword({ email, password });
       if (error) return alert('登录失败: ' + error.message);
       currentUser = data.user;
       closeUserModal();
-      await syncDataFromCloud();
       refreshHeaderUI();
     }
 
@@ -432,34 +444,8 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
       alert('个人设置已保存！');
     }
 
-    async function syncDataFromCloud() {
-      if (!currentUser || !sbClient) return;
-      try {
-        const { data: profile } = await sbClient.from('profiles').select('*').eq('id', currentUser.id).maybeSingle();
-        if (profile) {
-          if (profile.avatar_id) {
-            selectedAvatar = profile.avatar_id;
-            localStorage.setItem('tangogo_avatar', selectedAvatar);
-          }
-          if (profile.username) {
-            currentNickname = profile.username;
-            localStorage.setItem('tangogo_nickname', currentNickname);
-          }
-        }
-
-        const { data: cloudMistakes } = await sbClient.from('user_mistakes').select('*').eq('user_id', currentUser.id);
-        if (cloudMistakes && cloudMistakes.length > 0) {
-          mistakesList = cloudMistakes;
-          localStorage.setItem('tangogo_mistakes', JSON.stringify(mistakesList));
-          document.getElementById('mistakeBadge').innerText = mistakesList.length;
-        }
-      } catch (e) {
-        console.error('云端数据同步失败:', e);
-      }
-    }
-
     function openMistakesModal() {
-      alert(mistakesList.length === 0 ? '当前错词本为空，继续保持！' : `错词记录已保存在云端，共有 ${mistakesList.length} 个错题。`);
+      alert(mistakesList.length === 0 ? '当前错词本为空，继续保持！' : `错词记录共有 ${mistakesList.length} 个单词。`);
     }
 
     function startGame(modeName) {
@@ -473,9 +459,9 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
       const target = routes[modeName];
       if (!target) return;
 
-      const book = document.getElementById('bookSelect')?.value || 'renjiao-new';
-      const grade = document.getElementById('gradeSelect')?.value || 'grade7';
-      const lesson = document.getElementById('lessonSelect')?.value || 'unit1_lesson1';
+      const book = document.getElementById('bookSelect')?.value || 'pep_jr';
+      const grade = document.getElementById('gradeSelect')?.value || 'pep_jr_7';
+      const lesson = document.getElementById('lessonSelect')?.value || 'pep_jr_7_intro1';
 
       window.location.href = `${target}?book=${encodeURIComponent(book)}&grade=${encodeURIComponent(grade)}&lesson=${encodeURIComponent(lesson)}`;
     }
@@ -484,9 +470,18 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
       document.getElementById('mistakeBadge').innerText = mistakesList.length;
       if (sbClient) {
         const { data: { session } } = await sbClient.auth.getSession();
-        if (session) {
-          currentUser = session.user;
-          await syncDataFromCloud();
+        if (session) currentUser = session.user;
+
+        // 尝试动态更新当前选中课时的总词数徽章
+        const { count } = await sbClient
+          .from('words')
+          .select('*', { count: 'exact', head: true })
+          .eq('book_id', 'pep_jr')
+          .eq('grade_id', 'pep_jr_7')
+          .eq('lesson_id', 'pep_jr_7_intro1');
+          
+        if (count !== null && count !== undefined) {
+          document.getElementById('deckWordCountBadge').innerText = `当前课共 ${count} 词`;
         }
       }
       refreshHeaderUI();
