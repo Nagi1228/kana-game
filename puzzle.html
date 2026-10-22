@@ -291,7 +291,7 @@ body {
       }
     }
 
-    // 本课完整生词库（按每组 10 词划分）
+    // 本课完整生词库
     const FULL_LESSON_WORDS = [
       { kanji: '本', kana: 'ほん', pitch: '①', pos: '名词', meaning: '书' },
       { kanji: '', kana: 'かばん', pitch: '⓪', pos: '名词', meaning: '包，公文包' },
@@ -550,16 +550,13 @@ body {
       }
     }
 
-    // 核心分组与整课通关流
     function handleGroupOrLessonComplete() {
       if (currentGroupIndex < totalGroups - 1) {
-        // 还有下一组：平滑通知并自动切入下一组
         showToast(`🎉 第 ${currentGroupIndex + 1} 组完成！准备进入下一组...`);
         setTimeout(() => {
           startGroup(currentGroupIndex + 1);
         }, 1200);
       } else {
-        // 整课通关：展示大弹窗与4个功能按钮
         const totalSeconds = Math.max(1, Math.round((Date.now() - lessonStartTime) / 1000));
         const m = Math.floor(totalSeconds / 60); const s = totalSeconds % 60;
         const timeFormatted = `${m > 0 ? m + '分' : ''}${s}秒`;
@@ -603,41 +600,121 @@ body {
       return b;
     }
 
+    // 1:1 严格对照截图模板绘制成绩证书海报
     function generateShareCard(score, timeSpent, totalWords) {
       showToast('正在生成成绩单图片...');
       const cvs = document.createElement('canvas');
-      cvs.width = 640; cvs.height = 840;
+      cvs.width = 640;
+      cvs.height = 880;
       const ctx = cvs.getContext('2d');
-      const bgGrad = ctx.createLinearGradient(0, 0, 640, 840);
-      bgGrad.addColorStop(0, '#f0f7ff'); bgGrad.addColorStop(1, '#bfdbfe');
-      ctx.fillStyle = bgGrad; ctx.fillRect(0, 0, 640, 840);
 
-      ctx.strokeStyle = '#2563eb'; ctx.lineWidth = 10; ctx.strokeRect(20, 20, 600, 800);
-      ctx.fillStyle = '#2563eb'; ctx.font = "900 34px sans-serif"; ctx.textAlign = 'center';
-      ctx.fillText('かなゲーム · 拼图闯关', 320, 90);
-      ctx.font = "72px sans-serif"; ctx.fillText('🏆', 320, 180);
-      ctx.fillStyle = '#0c2340'; ctx.font = "900 32px sans-serif"; ctx.fillText('通 关 荣 誉 证 书', 320, 240);
+      // 背景渐变
+      const bgGrad = ctx.createLinearGradient(0, 0, 640, 880);
+      bgGrad.addColorStop(0, '#f0f7ff');
+      bgGrad.addColorStop(0.5, '#dbeafe');
+      bgGrad.addColorStop(1, '#bfdbfe');
+      ctx.fillStyle = bgGrad;
+      ctx.fillRect(0, 0, 640, 880);
 
-      const userNick = localStorage.getItem('tangogo_nickname') || '日语学员';
-      ctx.font = "700 22px sans-serif"; ctx.fillStyle = '#1e4d8c'; ctx.fillText(`学员：${userNick}`, 320, 290);
+      // 双层外边框
+      ctx.strokeStyle = '#2563eb';
+      ctx.lineWidth = 10;
+      ctx.strokeRect(16, 16, 608, 848);
 
-      ctx.fillStyle = '#ffffff'; ctx.fillRect(80, 330, 480, 320);
-      ctx.fillStyle = '#64748b'; ctx.font = "700 18px sans-serif"; ctx.textAlign = 'left';
-      ctx.fillText('⏱ 通关用时', 120, 400);
-      ctx.fillText('📖 掌握词汇', 120, 460);
-      ctx.fillText('🌟 最终得分', 120, 520);
-      ctx.fillText('🎮 挑战模式', 120, 580);
+      ctx.strokeStyle = '#93c5fd';
+      ctx.lineWidth = 2;
+      ctx.strokeRect(26, 26, 588, 828);
 
-      ctx.textAlign = 'right'; ctx.fillStyle = '#0c2340'; ctx.font = "900 20px sans-serif";
-      ctx.fillText(timeSpent, 520, 400);
-      ctx.fillText(`${totalWords} 词`, 520, 460);
-      ctx.fillStyle = '#ea580c'; ctx.font = "900 26px sans-serif"; ctx.fillText(`${score} 分`, 520, 520);
-      ctx.fillStyle = '#2563eb'; ctx.font = "900 20px sans-serif"; ctx.fillText('拼图模式', 520, 580);
+      // 顶部大标题
+      ctx.fillStyle = '#2563eb';
+      ctx.font = "900 36px 'Noto Sans SC', sans-serif";
+      ctx.textAlign = 'center';
+      ctx.fillText('かなゲーム · 日语单词闯关', 320, 92);
 
+      // 金色大奖杯
+      ctx.font = "76px sans-serif";
+      ctx.fillText('🏆', 320, 185);
+
+      // 通关荣誉证书
+      ctx.fillStyle = '#0c2340';
+      ctx.font = "900 34px 'Noto Sans SC', sans-serif";
+      ctx.fillText('通 关 荣 誉 证 书', 320, 245);
+
+      // 用户名
+      const userNick = localStorage.getItem('tangogo_nickname') || '日语学习达人';
+      const userAvatar = localStorage.getItem('tangogo_avatar') || '🌸';
+      ctx.font = "700 22px 'Noto Sans SC', sans-serif";
+      ctx.fillStyle = '#1e4d8c';
+      ctx.fillText(`${userAvatar} 学员：${userNick}`, 320, 295);
+
+      // 细分割线
+      ctx.strokeStyle = '#3b82f6';
+      ctx.lineWidth = 1.8;
+      ctx.beginPath();
+      ctx.moveTo(80, 325);
+      ctx.lineTo(560, 325);
+      ctx.stroke();
+
+      // 白色战绩圆角大卡片
+      ctx.save();
+      ctx.fillStyle = '#ffffff';
+      ctx.shadowColor = 'rgba(37,99,235,0.18)';
+      ctx.shadowBlur = 24;
+      const bx = 80, by = 350, bw = 480, bh = 345, r = 24;
+      ctx.beginPath();
+      ctx.moveTo(bx + r, by); ctx.lineTo(bx + bw - r, by);
+      ctx.quadraticCurveTo(bx + bw, by, bx + bw, by + r); ctx.lineTo(bx + bw, by + bh - r);
+      ctx.quadraticCurveTo(bx + bw, by + bh, bx + bw - r, by + bh); ctx.lineTo(bx + r, by + bh);
+      ctx.quadraticCurveTo(bx, by + bh, bx, by + bh - r); ctx.lineTo(bx, by + r);
+      ctx.quadraticCurveTo(bx, by, bx + r, by);
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+
+      // 左侧列标签
+      ctx.fillStyle = '#64748b';
+      ctx.font = "700 18px 'Noto Sans SC', sans-serif";
+      ctx.textAlign = 'left';
+      ctx.fillText('📚 学习课程', 124, 405);
+      ctx.fillText('⏱ 通关用时', 124, 465);
+      ctx.fillText('📖 掌握词汇', 124, 525);
+      ctx.fillText('🌟 最终得分', 124, 585);
+      ctx.fillText('🎮 挑战模式', 124, 645);
+
+      // 右侧列数值
+      ctx.textAlign = 'right';
+      ctx.fillStyle = '#0c2340';
+      ctx.font = "900 20px 'Noto Sans SC', sans-serif";
+      ctx.fillText('人教新版 · 入门第1课', 516, 405);
+      ctx.fillText(timeSpent, 516, 465);
+      ctx.fillText(`${totalWords} 词 (全通过)`, 516, 525);
+
+      ctx.fillStyle = '#ea580c';
+      ctx.font = "900 28px 'Noto Sans SC', sans-serif";
+      ctx.fillText(`${score} 分`, 516, 585);
+
+      ctx.fillStyle = '#2563eb';
+      ctx.font = "900 20px 'Noto Sans SC', sans-serif";
+      ctx.fillText('拼图闯关 (Puzzle)', 516, 645);
+
+      // 底部鼓励寄语
+      ctx.textAlign = 'center';
+      ctx.fillStyle = '#1e4d8c';
+      ctx.font = "700 18px 'Noto Sans SC', sans-serif";
+      ctx.fillText('持之以恒，日语单词轻松过！ ✨', 320, 742);
+
+      // 平台与日期
+      const today = new Date();
+      const dateStr = `${today.getFullYear()}/${String(today.getMonth() + 1).padStart(2, '0')}/${String(today.getDate()).padStart(2, '0')}`;
+      ctx.fillStyle = '#64748b';
+      ctx.font = "500 15px sans-serif";
+      ctx.fillText(`挑战平台: tangogo.online  |  发证日期: ${dateStr}`, 320, 782);
+
+      // 触发自动下载
       setTimeout(() => {
         const a = document.createElement('a');
         a.href = cvs.toDataURL('image/png');
-        a.download = `拼图闯关成绩单_${Date.now()}.png`;
+        a.download = `日语单词通关成绩单_${Date.now()}.png`;
         a.click();
         showToast('🎉 成绩单图片已保存到本地！');
       }, 350);
