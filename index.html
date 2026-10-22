@@ -158,12 +158,13 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
     <div class="nav-logo jp-text" onclick="location.reload()">かな<span>ゲーム</span></div>
     <div class="nav-actions">
       <button class="nav-btn active cn-text">首页</button>
-      <button class="nav-btn cn-text" onclick="location.href='vocab.html'">词库</button>
+      <!-- 默认彻底隐藏“词库”按钮，仅当云端验证为管理员时才显示 -->
+      <button class="nav-btn cn-text" id="adminVocabBtn" style="display:none;" onclick="location.href='vocab.html'">词库</button>
       <button class="nav-btn cn-text" onclick="openMistakesModal()">错词本<span class="nav-badge" id="mistakeBadge">0</span></button>
       
       <div class="user-capsule" onclick="openUserModal()">
         <span id="userAvatarIcon">🌸</span>
-        <span id="userDisplayName">游客</span>
+        <span id="userDisplayName">登录 / 注册</span>
       </div>
     </div>
   </nav>
@@ -223,7 +224,6 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
       <div class="home-sub cn-text">选择教材与课程，开始挑战 ✨</div>
     </div>
 
-    <!-- 动态级联选择器 -->
     <div class="deck-selector">
       <div class="deck-selector-header">
         <label class="cn-text">📖 选择词库</label>
@@ -373,6 +373,38 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
       }
     ];
 
+    // 核心功能：向云端数据库实测当前登录用户是否拥有管理员写入权限
+    async function checkAdminPermission() {
+      const btn = document.getElementById('adminVocabBtn');
+      if (!currentUser || !sbClient) {
+        btn.style.display = 'none';
+        return false;
+      }
+      try {
+        // 尝试向数据库插入一条测试探针，如果非管理员，Supabase RLS 会直接返回错误拦截
+        const { data, error } = await sbClient.from('words').insert([{
+          book_id: '_auth_probe_',
+          grade_id: '_auth_probe_',
+          lesson_id: '_auth_probe_',
+          kana: 'probe',
+          meaning: 'probe'
+        }]).select('id');
+
+        if (!error && data && data.length > 0) {
+          // 检验通过！清理探针记录并显示“词库”按钮
+          await sbClient.from('words').delete().eq('id', data[0].id);
+          btn.style.display = 'inline-block';
+          return true;
+        } else {
+          btn.style.display = 'none';
+          return false;
+        }
+      } catch (e) {
+        btn.style.display = 'none';
+        return false;
+      }
+    }
+
     function initCurriculumUI() {
       const bSel = document.getElementById('bookSelect');
       bSel.innerHTML = '';
@@ -423,7 +455,6 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
       const badge = document.getElementById('deckWordCountBadge');
       badge.innerText = '正在统计词数...';
 
-      // 1. 查询当前整册所有单词所属的 lesson_id
       let countsMap = {};
       let totalGradeWords = 0;
 
@@ -446,10 +477,8 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
         }
       }
 
-      // 2. 更新上方整册总词数徽章
       badge.innerText = `本册总词数：${totalGradeWords} 词`;
 
-      // 3. 将各课单词数直接标注在三级下拉选项中
       grade.lessons.forEach(l => {
         const count = countsMap[l.id] || 0;
         lSel.innerHTML += `<option value="${l.id}">${l.name} (${count}词)</option>`;
@@ -515,7 +544,7 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
       });
     }
 
-    function refreshHeaderUI() {
+    async function refreshHeaderUI() {
       const iconEl = document.getElementById('userAvatarIcon');
       const nameEl = document.getElementById('userDisplayName');
       if (currentUser) {
@@ -525,6 +554,7 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
         iconEl.innerText = '🌸';
         nameEl.innerText = '登录 / 注册';
       }
+      await checkAdminPermission();
     }
 
     async function doSignUp() {
@@ -537,7 +567,7 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
       alert('注册成功！已为您登录');
       currentUser = data.user;
       closeUserModal();
-      refreshHeaderUI();
+      await refreshHeaderUI();
     }
 
     async function doSignIn() {
@@ -549,7 +579,7 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
       if (error) return alert('登录失败: ' + error.message);
       currentUser = data.user;
       closeUserModal();
-      refreshHeaderUI();
+      await refreshHeaderUI();
     }
 
     async function doSignOut() {
@@ -558,7 +588,7 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
       currentNickname = '';
       localStorage.removeItem('tangogo_nickname');
       closeUserModal();
-      refreshHeaderUI();
+      await refreshHeaderUI();
       alert('已退出登录');
     }
 
@@ -576,7 +606,7 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
           updated_at: new Date().toISOString()
         });
       }
-      refreshHeaderUI();
+      await refreshHeaderUI();
       closeUserModal();
       alert('个人设置已保存！');
     }
@@ -592,7 +622,7 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
         const { data: { session } } = await sbClient.auth.getSession();
         if (session) currentUser = session.user;
       }
-      refreshHeaderUI();
+      await refreshHeaderUI();
     });
   </script>
 </body>
