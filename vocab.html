@@ -168,7 +168,10 @@ select.deck-pick:focus { border-color: var(--accent); }
   <div class="vocab-wrap">
     <div class="vocab-header">
       <h2 class="cn-text">📚 云端词库管理</h2>
-      <button class="action-btn btn-secondary cn-text" onclick="exportBackupJSON()">💾 导出整库备份 JSON</button>
+      <div style="display:flex; gap:10px;">
+        <button class="action-btn btn-danger cn-text" onclick="clearCurrentGradeWords()">🗑️ 一键清空本年级词库</button>
+        <button class="action-btn btn-secondary cn-text" onclick="exportBackupJSON()">💾 导出整库备份 JSON</button>
+      </div>
     </div>
 
     <!-- 级联选择器 -->
@@ -212,7 +215,7 @@ select.deck-pick:focus { border-color: var(--accent); }
     <div class="add-word-form">
       <h3 class="cn-text">📥 批量导入 / 整册智能分课导入</h3>
       <p class="import-hint cn-text">
-        ✨ <strong>支持整册一次性上传</strong>：只要文件中包含分课行（如 <code>第1课</code>、<code># 第2课</code>、<code>Lesson 1</code>、<code>入门单元 第1课</code> 等），系统会自动按课时分割归档。<br>
+        ✨ <strong>支持整册一次性上传</strong>：自动精确识别 <code>入门单元第1课</code>、<code>入门单元 第1课</code>、<code>第1课</code> 等各课标记并归类。<br>
         💡 <strong>词汇行格式</strong>：<code>汉字,假名,声调,词性,中文释义</code>（逗号分隔，无汉字首列留空）。
       </p>
       <label class="csv-upload-label">
@@ -222,7 +225,7 @@ select.deck-pick:focus { border-color: var(--accent); }
       <textarea class="import-area jp-text" id="importArea" placeholder="直接粘贴整册词汇文本（包含分课标记）或单课词汇..."></textarea>
       <div style="display:flex; gap:12px; flex-wrap:wrap;">
         <button class="action-btn btn-primary cn-text" onclick="importBatchWords()">开始智能解析入库</button>
-        <button class="action-btn btn-danger cn-text" onclick="clearCurrentLessonWords()">🗑️ 清空当前课词汇</button>
+        <button class="action-btn btn-danger cn-text" onclick="clearCurrentLessonWords()">🗑️ 清空当前选中课词汇</button>
       </div>
     </div>
 
@@ -347,7 +350,6 @@ select.deck-pick:focus { border-color: var(--accent); }
       const badge = document.getElementById('deckWordCount');
       badge.innerText = '正在统计整册词数...';
 
-      // 1. 查询当前整册所有词汇，建立课时统计哈希表
       lessonCountsMap = {};
       let totalGradeWords = 0;
 
@@ -370,10 +372,8 @@ select.deck-pick:focus { border-color: var(--accent); }
         }
       }
 
-      // 2. 更新顶部徽章为整册总数
       badge.innerText = `本册总词数：${totalGradeWords} 词`;
 
-      // 3. 将各课数量注入三级下拉选项
       grade.lessons.forEach(l => {
         const c = lessonCountsMap[l.id] || 0;
         lSel.innerHTML += `<option value="${l.id}">${l.name} (${c}词)</option>`;
@@ -471,7 +471,6 @@ select.deck-pick:focus { border-color: var(--accent); }
         document.getElementById('inpKana').value = '';
         document.getElementById('inpPitch').value = '';
         document.getElementById('inpMeaning').value = '';
-        // 重新刷新整册统计与下拉菜单
         await onGradeChange();
       }
     }
@@ -507,26 +506,66 @@ select.deck-pick:focus { border-color: var(--accent); }
       }
     }
 
-    function matchLessonLine(line, availableLessons) {
-      const clean = line.replace(/[#\[\]\(\)\/]/g, '').trim();
+    async function clearCurrentGradeWords() {
+      const bId = document.getElementById('selBook').value;
+      const gId = document.getElementById('selGrade').value;
+      if (!confirm('⚠️ 高危确认：确定要彻底清空该年级/分册下的所有词汇吗？')) return;
 
-      const exact = availableLessons.find(l => clean.includes(l.name));
+      const { error } = await sbClient
+        .from('words')
+        .delete()
+        .eq('book_id', bId)
+        .eq('grade_id', gId);
+
+      if (error) alert('清空失败: ' + error.message);
+      else {
+        showToast('整册词库已清空，可重新上传');
+        await onGradeChange();
+      }
+    }
+
+    // 智能匹配升级版：彻底消除空格影响，优先捕获“入门”与单元信息
+    function matchLessonLine(line, availableLessons) {
+      // 移除所有符号和空格：如 "入门单元第1课" 或 "入门单元 第1课" 都统一变成 "入门单元第1课"
+      const clean = line.replace(/[#\[\]\(\)\/\s,]/g, '').trim();
+
+      // 1. 优先匹配包含“入门”的情况
+      if (clean.includes('入门')) {
+        const mIntro = clean.match(/入门.*?(\d+)/);
+        if (mIntro) {
+          const introNum = parseInt(mIntro[1], 10);
+          const found = availableLessons.find(l => l.id.includes(`intro${introNum}`));
+          if (found) return found.id;
+        }
+      }
+
+      // 2. 无空格完全包含匹配
+      const exact = availableLessons.find(l => {
+        const lClean = l.name.replace(/\s+/g, '');
+        return clean.includes(lClean) && (!clean.includes('入门') || lClean.includes('入门'));
+      });
       if (exact) return exact.id;
 
-      const mZh = clean.match(/第\s*(\d+)\s*课/);
+      // 3. 匹配常规 "第X课"
+      const mZh = clean.match(/第(\d+)课/);
       if (mZh) {
         const num = parseInt(mZh[1], 10);
         const found = availableLessons.find(l => {
+          // 排除 intro 项，只匹配正课
+          if (l.id.includes('intro')) return false;
           const lNum = l.name.match(/第\s*(\d+)\s*课/);
           return lNum && parseInt(lNum[1], 10) === num;
         });
         if (found) return found.id;
       }
 
-      const mEn = clean.match(/(?:lesson|l)\s*(\d+)/i);
+      // 4. 匹配 "Lesson X" / "L X"
+      const mEn = clean.match(/(?:lesson|l)(\d+)/i);
       if (mEn) {
         const num = parseInt(mEn[1], 10);
-        if (availableLessons[num - 1]) return availableLessons[num - 1].id;
+        // 跳过 intro 找到正课第 num 课
+        const regularLessons = availableLessons.filter(l => !l.id.includes('intro'));
+        if (regularLessons[num - 1]) return regularLessons[num - 1].id;
       }
 
       return null;
@@ -553,6 +592,7 @@ select.deck-pick:focus { border-color: var(--accent); }
         const row = line.trim();
         if (!row) return;
 
+        // 检查该行是否为分课指示行
         const matchedLId = matchLessonLine(row, availableLessons);
         if (matchedLId) {
           activeLessonId = matchedLId;
@@ -560,7 +600,7 @@ select.deck-pick:focus { border-color: var(--accent); }
           return;
         }
 
-        if (row.startsWith('#') || row.startsWith('//')) return;
+        if (row.startsWith('#') || row.startsWith('//') || row.startsWith('汉字,假名')) return;
 
         const cols = row.split(',').map(c => c.trim());
         if (cols.length >= 2) {
@@ -569,6 +609,9 @@ select.deck-pick:focus { border-color: var(--accent); }
           let pitch = cols[2] || '';
           let pos = cols[3] || '名';
           let meaning = cols[4] || cols[cols.length - 1] || '';
+
+          if (pitch === '?') pitch = '⓪';
+          pos = pos.replace('?', '·').replace(/[\(\)（）]/g, '').trim();
 
           if (kana && meaning) {
             lessonWordCounters[activeLessonId] = (lessonWordCounters[activeLessonId] || 0) + 1;
