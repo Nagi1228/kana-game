@@ -33,7 +33,6 @@ body {
   -webkit-user-select: none;
 }
 
-/* 顶部青海波导航条 */
 .top-nav {
   display: flex; align-items: center; gap: 10px; padding: 12px 24px;
   background-color: var(--surface);
@@ -46,7 +45,6 @@ body {
 .nav-actions { margin-left: auto; display: flex; align-items: center; gap: 10px; }
 .nav-tag { font-size: 0.9rem; font-weight: 700; color: var(--fg2); text-decoration: none; cursor: pointer; }
 
-/* 方块下落主游戏视口 */
 .tetris-wrap {
   flex: 1; display: flex; flex-direction: column; overflow: hidden;
   position: relative;
@@ -61,7 +59,6 @@ body {
   pointer-events: none; z-index: 0;
 }
 
-/* 状态头栏 */
 .tetris-top {
   display: flex; align-items: center; gap: 14px; padding: 10px 20px;
   background: rgba(0,0,0,0.18); backdrop-filter: blur(8px);
@@ -82,7 +79,6 @@ body {
 }
 .tetris-lives { display: flex; gap: 5px; margin-left: auto; font-size: 1.3rem; }
 
-/* 次级控制条（随机/顺序/失误/提示） */
 .tetris-subbar {
   display: flex; align-items: center; gap: 10px; padding: 8px 20px;
   flex-shrink: 0; position: relative; z-index: 10;
@@ -106,7 +102,6 @@ body {
 }
 .tet-hint-btn:hover { background: rgba(255,235,120,0.42); }
 
-/* 题目居中展示 */
 .tetris-word-display {
   padding: 12px 20px; text-align: center; flex-shrink: 0;
   position: relative; z-index: 10;
@@ -119,61 +114,60 @@ body {
   font-size: 1.15rem; color: rgba(255,255,255,0.9); font-weight: 700; margin-top: 4px;
 }
 
-/* 核心舞台 */
 .tetris-main {
   flex: 1; display: flex; flex-direction: column; align-items: center;
   justify-content: flex-end; position: relative; overflow: hidden; z-index: 5;
 }
 .tetris-stage-wrap {
-  flex: 1; width: 100%; max-width: 680px; position: relative; overflow: hidden;
+  flex: 1; width: 100%; position: relative; overflow: hidden;
 }
 
 /* 下落的单假名橙色圆角方块 */
 .falling-block {
   position: absolute;
-  width: 68px; height: 68px;
+  width: 72px; height: 72px;
   background: linear-gradient(135deg, #fb923c, #ea580c);
-  border: 3px solid rgba(255,255,255,0.9);
+  border: 3.5px solid rgba(255,255,255,0.95);
   border-radius: 20px;
   display: flex; align-items: center; justify-content: center;
   font-size: 2.3rem; font-weight: 900; color: #fff;
   box-shadow: 0 8px 24px rgba(0,0,0,0.3), inset 0 2px 4px rgba(255,255,255,0.4);
   transform: translateX(-50%);
-  transition: left 0.1s ease-out;
+  transition: left 0.12s cubic-bezier(0.2, 0.8, 0.2, 1);
   pointer-events: none;
 }
 
-/* 底部插槽栏 */
+/* 底部插槽栏：居中固定宽度，与方块对齐 */
 .tetris-ground {
-  width: 100%; max-width: 680px; padding-bottom: 12px;
+  width: 100%; padding-bottom: 12px;
   position: relative; z-index: 6; flex-shrink: 0;
+  display: flex; justify-content: center;
 }
 .tetris-slots-row {
-  display: flex; justify-content: center; gap: 10px; padding: 8px 16px 0;
+  display: flex; justify-content: center; gap: 12px; padding: 8px 16px 0;
 }
 .tetris-slot {
-  height: 68px; flex: 1; max-width: 90px;
+  width: 76px; height: 72px;
   border: 2.5px solid rgba(255,255,255,0.5);
-  border-radius: 16px;
+  border-radius: 18px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.8rem; font-weight: 900; color: #fff;
+  font-size: 1.9rem; font-weight: 900; color: #fff;
   background: rgba(255,255,255,0.2); backdrop-filter: blur(6px);
   position: relative; transition: all 0.2s;
 }
 .tetris-slot .slot-idx {
-  position: absolute; top: 3px; font-size: 0.65rem; color: rgba(255,255,255,0.7);
+  position: absolute; top: 4px; font-size: 0.65rem; color: rgba(255,255,255,0.7);
 }
 .tetris-slot.correct-slot {
-  background: rgba(16,185,129,0.7); border-color: #34d399; color: #fff;
-  box-shadow: 0 0 16px rgba(52,211,153,0.8);
+  background: #10b981; border-color: #a7f3d0; color: #fff;
+  box-shadow: 0 0 18px rgba(16,185,129,0.9);
 }
 .tetris-slot.wrong-slot {
-  background: rgba(239,68,68,0.65); border-color: #fca5a5;
+  background: rgba(239,68,68,0.7); border-color: #fca5a5;
   animation: shake 0.35s ease;
 }
 @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
 
-/* 底部四个大圆控制按键 */
 .tetris-controls {
   display: flex; gap: 24px; justify-content: center; align-items: center;
   padding: 12px 20px 20px; flex-shrink: 0; position: relative; z-index: 10;
@@ -192,7 +186,6 @@ body {
 .tetris-ctrl-btn.paused-btn { background: rgba(255,220,80,0.45); border-color: rgba(255,220,80,0.85); }
 .ctrl-label { font-size: 0.72rem; font-weight: 700; color: rgba(255,255,255,0.8); }
 
-/* 暂停遮罩 */
 .tetris-pause-overlay {
   position: absolute; inset: 0; background: rgba(0,0,0,0.6);
   display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -281,7 +274,7 @@ body {
     let lives = 3;
     let mistakes = 0;
     let isPaused = false;
-    let playMode = 'random'; // random | order
+    let playMode = 'random';
 
     const questions = [
       { kanji: '靴', kana: 'くつ', meaning: '鞋' },
@@ -298,10 +291,10 @@ body {
 
     let qIdx = 0;
     let currentWord = null;
-    let filledChars = [];     // 当前单词已接住的假名数组
+    let filledChars = [];
     let currentFallingChar = '';
-    let targetSlotIndex = 0;   // 当前掉落假名在单词里的正确位置下标
-    let currentTrack = 0;      // 玩家当前控制方块所在的轨道下标
+    let targetSlotIndex = 0;
+    let currentTrack = 0;
     let slotCount = 2;
     let blockY = 0;
     let dropSpeed = 1.8;
@@ -364,7 +357,7 @@ body {
 
     function loadWord() {
       if (qIdx >= questions.length) {
-        alert(`🎉 恭喜完成挑战！最终得分: ${score}`);
+        alert(`🎉 恭喜通关！最终得分: ${score}`);
         location.reload();
         return;
       }
@@ -377,7 +370,6 @@ body {
       document.getElementById('tet-kanji').innerText = currentWord.kanji;
       document.getElementById('tet-meaning').innerText = currentWord.meaning;
 
-      // 动态生成和单词长度严格匹配的插槽
       const slotsRow = document.getElementById('slotsRow');
       slotsRow.innerHTML = '';
       for (let i = 0; i < slotCount; i++) {
@@ -391,7 +383,6 @@ body {
       spawnNextChar();
     }
 
-    // 随机或者按顺序选择下一个掉落的单假名
     function spawnNextChar() {
       const remainingIndices = [];
       for (let i = 0; i < slotCount; i++) {
@@ -399,7 +390,6 @@ body {
       }
 
       if (remainingIndices.length === 0) {
-        // 整个单词的假名已全部接完
         score += 20;
         document.getElementById('tet-score').innerText = score;
         qIdx++;
@@ -416,21 +406,30 @@ body {
       currentFallingChar = currentWord.kana[targetSlotIndex];
       document.getElementById('fallingBlock').innerText = currentFallingChar;
 
-      currentTrack = Math.floor(slotCount / 2);
+      // 默认让未填入的第一个空位作为初始落点
+      currentTrack = remainingIndices[0];
       blockY = 0;
       dropSpeed = 1.8;
-      updateBlockPosition();
+      
+      // 保证 DOM 渲染完成后精确对准对应插槽中心
+      requestAnimationFrame(updateBlockPosition);
 
       if (animId) cancelAnimationFrame(animId);
       if (!isPaused) animate();
     }
 
+    // 关键修正：直接获取下方对应 slot 的真实屏幕坐标进行 1:1 吸附对齐
     function updateBlockPosition() {
+      const targetSlot = document.getElementById(`tet-slot-${currentTrack}`);
       const stage = document.getElementById('stageWrap');
-      const stageW = stage.clientWidth;
-      const colW = stageW / slotCount;
-      const centerX = currentTrack * colW + colW / 2;
-      document.getElementById('fallingBlock').style.left = `${centerX}px`;
+      if (!targetSlot || !stage) return;
+
+      const slotRect = targetSlot.getBoundingClientRect();
+      const stageRect = stage.getBoundingClientRect();
+
+      // 计算对应插槽的绝对水平中心
+      const slotCenterX = (slotRect.left + slotRect.width / 2) - stageRect.left;
+      document.getElementById('fallingBlock').style.left = `${slotCenterX}px`;
     }
 
     function moveLeft() {
@@ -451,7 +450,7 @@ body {
 
     function quickDrop() {
       if (isPaused) return;
-      dropSpeed = 10;
+      dropSpeed = 11;
     }
 
     window.addEventListener('keydown', (e) => {
@@ -464,13 +463,12 @@ body {
     function animate() {
       if (isPaused) return;
       const stage = document.getElementById('stageWrap');
-      const maxH = stage.clientHeight - 68;
+      const maxH = stage.clientHeight - 70;
 
       blockY += dropSpeed;
       document.getElementById('fallingBlock').style.top = `${blockY}px`;
 
       if (blockY >= maxH) {
-        // 落地碰撞判定
         handleLanding();
       } else {
         animId = requestAnimationFrame(animate);
@@ -480,7 +478,6 @@ body {
     function handleLanding() {
       const slotEl = document.getElementById(`tet-slot-${currentTrack}`);
 
-      // 玩家将假名落入正确的插槽位置
       if (currentTrack === targetSlotIndex) {
         filledChars[targetSlotIndex] = currentFallingChar;
         slotEl.classList.add('correct-slot');
@@ -488,7 +485,6 @@ body {
         score += 10;
         document.getElementById('tet-score').innerText = score;
       } else {
-        // 落错位置
         slotEl.classList.add('wrong-slot');
         setTimeout(() => slotEl.classList.remove('wrong-slot'), 400);
 
