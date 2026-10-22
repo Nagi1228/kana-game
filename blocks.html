@@ -54,7 +54,7 @@ html, body {
   height: 100%;
 }
 
-/* 顶部青海波纹样导航栏（1:1 原版） */
+/* 顶部青海波纹样导航栏 */
 .top-nav {
   display: flex; align-items: center; gap: 10px; padding: 12px 20px;
   background-color: var(--surface);
@@ -114,7 +114,7 @@ html, body {
 .life-icon { font-size: 1.4rem; transition: transform 0.3s; }
 .life-icon.lost { filter: grayscale(1); opacity: 0.25; transform: scale(0.8); }
 
-/* 第二行子工具栏：随机/顺序、失误计数、提示按钮 */
+/* 第二行子工具栏 */
 .tetris-subbar {
   display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
   padding: 8px 20px; flex-shrink: 0; position: relative; z-index: 10;
@@ -160,7 +160,7 @@ html, body {
 }
 #tetris-canvas { display: block; touch-action: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-/* 准备阶段：2.2秒记忆遮罩 */
+/* 准备阶段遮罩 */
 .tetris-preview {
   position: absolute; inset: 0; z-index: 15;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -186,7 +186,7 @@ html, body {
 .pause-text { font-size: 2.5rem; font-weight: 900; color: #fff; text-shadow: 0 2px 16px rgba(0,0,0,0.5); }
 .pause-sub { font-size: 1rem; color: rgba(255,255,255,0.75); }
 
-/* 底部插槽地面（1:1 还原原版无缝连排） */
+/* 底部插槽地面 */
 .tetris-ground {
   width: 100%; padding-bottom: 10px; position: relative; z-index: 6; flex-shrink: 0;
   background: rgba(0,0,0,0.08); border-top: 2px solid rgba(255,255,255,0.25);
@@ -212,12 +212,10 @@ html, body {
   background: rgba(239,68,68,0.45); border-color: #fca5a5; color: #fff;
   animation: shake 0.4s ease;
 }
-/* 顺序模式：当前待落入的目标插槽白色虚线呼吸提示 */
 .tetris-slot.pending-slot {
   background: rgba(255,255,255,0.35); border-color: #fff; border-style: dashed;
   animation: pulse-pending 1.2s ease infinite;
 }
-/* 点击提示按钮后：目标插槽暖金色发光提示 */
 .tetris-slot.hint-slot {
   background: rgba(255,235,120,0.55); border-color: #fde68a;
   animation: pulse-hint 0.7s ease infinite;
@@ -250,7 +248,7 @@ html, body {
 .tetris-ctrl-btn.paused-btn { background: rgba(255,220,80,0.4); border-color: rgba(255,220,80,0.8); }
 .ctrl-label { font-size: 0.7rem; font-weight: 700; color: rgba(255,255,255,0.75); text-align: center; margin-top: 4px; }
 
-/* 原版底部深色胶囊 Toast 提示（替代难看的浏览器 alert） */
+/* 底部深色胶囊 Toast 提示 */
 .toast {
   position: fixed; bottom: calc(env(safe-area-inset-bottom, 0px) + 28px);
   left: 50%; transform: translateX(-50%) translateY(20px);
@@ -260,7 +258,7 @@ html, body {
 }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
-/* 原版通关/结束弹窗 Overlay */
+/* 通关 / 结束遮罩弹窗 */
 .overlay {
   position: fixed; inset: 0; background: rgba(0,0,0,0.6);
   display: flex; align-items: center; justify-content: center;
@@ -375,31 +373,64 @@ html, body {
 
 <script>
 // ============================================================
-//  1. 原版音效引擎 (Web Audio API)
+//  1. 原版音效引擎 (Web Audio API) —— 区分单格落对、单格落错、整词完成
 // ============================================================
 let audioCtx = null;
 function getAudioCtx() {
-  if (!audioCtx) { try { audioCtx = new (window.AudioContext || window.webkitAudioContext)(); } catch(e){} }
+  if (!audioCtx) {
+    try { audioCtx = new (window.AudioContext || window.webkitAudioContext)(); } catch(e){}
+  }
+  if (audioCtx && audioCtx.state === 'suspended') {
+    audioCtx.resume().catch(() => {});
+  }
   return audioCtx;
 }
+// 全局首次交互自动唤醒音频上下文，确保每次发声必响
+['pointerdown', 'keydown', 'touchstart'].forEach(evt => {
+  window.addEventListener(evt, () => getAudioCtx(), { once: false, passive: true });
+});
+
 function playTone(freq, type, duration, vol, decay) {
   try {
     const ctx = getAudioCtx(); if (!ctx) return;
-    const osc = ctx.createOscillator(); const gain = ctx.createGain();
-    osc.connect(gain); gain.connect(ctx.destination);
-    osc.type = type || 'sine'; osc.frequency.setValueAtTime(freq, ctx.currentTime);
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.type = type || 'sine';
+    osc.frequency.setValueAtTime(freq, ctx.currentTime);
     gain.gain.setValueAtTime(vol || 0.35, ctx.currentTime);
     gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + (decay || duration));
-    osc.start(ctx.currentTime); osc.stop(ctx.currentTime + duration);
+    osc.start(ctx.currentTime);
+    osc.stop(ctx.currentTime + duration);
   } catch(e){}
 }
-function sfxClick() { playTone(520, 'sine', 0.08, 0.3, 0.07); }
-function sfxWrong() { playTone(280, 'sawtooth', 0.22, 0.25, 0.2); setTimeout(() => playTone(200, 'sawtooth', 0.2, 0.2, 0.18), 90); }
-function sfxWordComplete() { [523, 659, 784, 1047, 1319].forEach((f, i) => setTimeout(() => playTone(f, 'triangle', 0.25, 0.32, 0.22), i * 65)); }
-function sfxGameOver() { [330, 294, 262, 220].forEach((f, i) => setTimeout(() => playTone(f, 'sawtooth', 0.28, 0.28, 0.25), i * 100)); }
+
+// 按钮轻点音效
+function sfxClick() {
+  playTone(520, 'sine', 0.07, 0.22, 0.06);
+}
+// 单格落对音效（清脆双音叮咚，音量适中 0.32）
 function sfxLand() {
-  playTone(260, 'sine', 0.14, 0.4, 0.12);
-  setTimeout(() => playTone(520, 'triangle', 0.08, 0.18, 0.08), 65);
+  playTone(523, 'sine', 0.12, 0.32, 0.11);
+  setTimeout(() => playTone(784, 'triangle', 0.16, 0.34, 0.15), 65);
+}
+// 单格落错音效（低沉锯齿双音警告）
+function sfxWrong() {
+  playTone(280, 'sawtooth', 0.22, 0.32, 0.2);
+  setTimeout(() => playTone(195, 'sawtooth', 0.24, 0.30, 0.22), 95);
+}
+// 整词完全拼好音效（五连音欢快琶音，音量明显放大至 0.55！）
+function sfxWordComplete() {
+  [523, 659, 784, 1047, 1319].forEach((f, i) => {
+    setTimeout(() => playTone(f, 'triangle', 0.28, 0.55, 0.25), i * 68);
+  });
+}
+// 游戏结束音效
+function sfxGameOver() {
+  [330, 294, 262, 220].forEach((f, i) => {
+    setTimeout(() => playTone(f, 'sawtooth', 0.28, 0.35, 0.25), i * 100);
+  });
 }
 
 // ============================================================
@@ -467,13 +498,13 @@ async function recordMistake(word) {
 }
 
 // ============================================================
-//  4. 原版方块落格核心引擎 (Canvas 轨道光柱 + 严丝合缝落格)
+//  4. 原版方块落格核心引擎
 // ============================================================
 const WORDS_POOL = [
+  { kanji: '先生', kana: 'せんせい', meaning: '老师' },
   { kanji: 'お菓子', kana: 'おかし', meaning: '点心；糖果' },
   { kanji: '靴', kana: 'くつ', meaning: '鞋' },
   { kanji: '本', kana: 'ほん', meaning: '书' },
-  { kanji: '先生', kana: 'せんせい', meaning: '老师' },
   { kanji: '学生', kana: 'がくせい', meaning: '学生' },
   { kanji: '友達', kana: 'ともだち', meaning: '朋友' },
   { kanji: 'テスト', kana: 'テスト', meaning: '测验，测试' },
@@ -559,7 +590,6 @@ function syncModeUI() {
   });
 }
 
-// 构造下落队列：顺序模式按 0..N-1，随机模式打乱
 function buildFallQueue() {
   const remaining = [];
   for (let i = 0; i < tetKanaList.length; i++) {
@@ -568,7 +598,6 @@ function buildFallQueue() {
   return tetOrderMode === 'order' ? remaining : shuffle(remaining);
 }
 
-// 切换「随机 / 顺序」模式并立即对当前方块生效！
 function setTetrisOrderMode(mode) {
   if (mode !== 'random' && mode !== 'order') return;
   tetOrderMode = mode;
@@ -576,9 +605,7 @@ function setTetrisOrderMode(mode) {
   sfxClick();
 
   if (tetRunning) {
-    // 立即重建未完成的假名掉落队列
     tetFallQueue = buildFallQueue();
-    // 如果当前正有假名在下落，立即将该下落块替换为新模式队列的第一个假名
     if (tetCurrentBlock && !tetPreviewing) {
       const nextTarget = tetFallQueue.shift();
       if (nextTarget !== undefined) {
@@ -595,7 +622,6 @@ function setTetrisOrderMode(mode) {
     : '🎲 随机模式：假名打乱掉落，无提示，测记忆');
 }
 
-// 点击右上角「💡 提示」按钮：底部弹出胶囊提示 + 轨道与目标格金色发光
 function useTetrisHint() {
   if (!tetRunning || tetPaused || tetPreviewing || !tetCurrentBlock) return;
 
@@ -736,6 +762,7 @@ function spawnNextBlock() {
   clearHint();
   const remaining = tetSlotFilled.filter(f => !f).length;
   if (remaining === 0) {
+    // 整个单词全部拼好：播放更大音量的五连音完成音效！
     sfxWordComplete();
     tetScore += 20 * tetLevel;
     document.getElementById('tet-score').textContent = tetScore;
@@ -744,7 +771,7 @@ function spawnNextBlock() {
       tetLevel = Math.min(5, tetLevel + 1);
       document.getElementById('tet-level').textContent = tetLevel;
     }
-    setTimeout(() => { if (tetRunning) loadTetrisWord(); }, 550);
+    setTimeout(() => { if (tetRunning) loadTetrisWord(); }, 650);
     return;
   }
 
@@ -756,10 +783,21 @@ function spawnNextBlock() {
   const kana = tetKanaList[targetSlot];
   const n = tetKanaList.length;
 
-  // 随机出生列（若列数>1，避免直接出生在目标列正上方，确保需要手动移动）
-  let startCol = Math.floor(Math.random() * n);
-  if (n > 1 && startCol === targetSlot) {
-    startCol = (startCol + 1) % n;
+  // 随机出生列：避开所有同样是该假名的未填槽位，必须玩家手动移动
+  const validSlotsForThisKana = [];
+  for (let i = 0; i < n; i++) {
+    if (!tetSlotFilled[i] && tetKanaList[i] === kana) validSlotsForThisKana.push(i);
+  }
+  const nonTargetCols = [];
+  for (let i = 0; i < n; i++) {
+    if (!validSlotsForThisKana.includes(i)) nonTargetCols.push(i);
+  }
+
+  let startCol = 0;
+  if (nonTargetCols.length > 0) {
+    startCol = nonTargetCols[Math.floor(Math.random() * nonTargetCols.length)];
+  } else {
+    startCol = Math.floor(Math.random() * n);
   }
 
   tetCurrentBlock = {
@@ -780,7 +818,7 @@ function getSlotX(colIdx) {
   return startX + colIdx * tetSlotW + tetSlotW / 2;
 }
 
-// 动画主循环：方块一直下落到底部与插槽严丝合缝重合
+// 动画主循环：平时平缓下落，一旦点击“快落”直接 680px/s 极速俯冲到底！
 function tetrisLoop(now) {
   if (!tetRunning || tetPaused || tetPreviewing) return;
   const dt = Math.min((now - tetLastTime) / 1000, 0.1);
@@ -788,11 +826,11 @@ function tetrisLoop(now) {
 
   const canvas = document.getElementById('tetris-canvas');
   const baseSpeed = 58 + (tetLevel - 1) * 14;
-  const speed = tetCurrentBlock && tetCurrentBlock.fast ? baseSpeed * 5.2 : baseSpeed;
+  // 快落速度：固定至少 680px/s（约 11.5 倍速），瞬间丝滑落底，毫无阻力感
+  const speed = (tetCurrentBlock && tetCurrentBlock.fast) ? Math.max(680, baseSpeed * 11) : baseSpeed;
 
   if (tetCurrentBlock) {
     tetCurrentBlock.y += speed * dt;
-    // 当方块底边严格贴合画布底边（即正下方无缝紧贴的插槽顶边）时触发落地
     const groundY = canvas.height - tetSlotW / 2 + 4;
     if (tetCurrentBlock.y >= groundY) {
       landBlock();
@@ -811,12 +849,29 @@ function landBlock() {
   tetCurrentBlock = null;
   const slotEl = document.getElementById('tet-slot-' + col);
 
-  if (col === targetSlot && !tetSlotFilled[col]) {
-    // 命中正确格
+  // 核心修复：只要落入的格子是空的，且该格子的目标假名与当前下落假名相同（支持含相同假名的单词，如 せんせい 的两个 せ），即算对！
+  if (!tetSlotFilled[col] && tetKanaList[col] === kana) {
     tetSlotFilled[col] = true;
+
+    // 如果玩家放进的是另一个同名假名格（例如 targetSlot 是 0，但玩家放进了第 2 格），同步更新队列
+    if (col !== targetSlot) {
+      const idxInQueue = tetFallQueue.indexOf(col);
+      if (idxInQueue !== -1) {
+        tetFallQueue[idxInQueue] = targetSlot;
+      } else if (!tetSlotFilled[targetSlot]) {
+        tetFallQueue.unshift(targetSlot);
+      }
+    }
+
     tetScore += 10 * tetLevel;
     document.getElementById('tet-score').textContent = tetScore;
-    sfxLand();
+    
+    // 如果还有剩余格子未填，播放单格落对音效；如果这是最后一格，交由 spawnNextBlock 播放更大声的整词完成音效
+    const stillRemaining = tetSlotFilled.some(f => !f);
+    if (stillRemaining) {
+      sfxLand();
+    }
+
     renderSlots();
 
     const landedEl = document.getElementById('tet-slot-' + col);
@@ -826,7 +881,7 @@ function landBlock() {
     }
     setTimeout(() => { if (tetRunning) spawnNextBlock(); }, 220);
   } else {
-    // 落错格
+    // 落错格：播放低沉错误音效
     sfxWrong();
     recordMistake(tetWords[tetWordIdx]);
     if (slotEl) {
@@ -890,12 +945,11 @@ function drawTetris() {
   }
   ctx.setLineDash([]);
 
-  // 2. 顺序模式：绘制目标列的白色发光轨道与底部小三角箭头（如图3）
+  // 2. 顺序模式：绘制目标列的白色发光轨道与底部小三角箭头
   if (tetOrderMode === 'order' && tetCurrentBlock) {
     const tx = startX + tetCurrentBlock.targetSlot * tetSlotW;
     ctx.fillStyle = 'rgba(255,255,255,0.14)';
     ctx.fillRect(tx, 0, tetSlotW, canvas.height);
-    // 底部指示小三角箭头
     const cx = tx + tetSlotW / 2;
     ctx.fillStyle = 'rgba(255,255,255,0.75)';
     ctx.beginPath();
@@ -906,7 +960,7 @@ function drawTetris() {
     ctx.fill();
   }
 
-  // 3. 点击提示后：绘制目标列的暖金色发光轨道（如图4）
+  // 3. 点击提示后：绘制目标列的暖金色发光轨道
   if (tetHintSlot >= 0 && tetHintSlot < n) {
     const hx = startX + tetHintSlot * tetSlotW;
     ctx.fillStyle = 'rgba(253, 230, 138, 0.28)';
@@ -921,11 +975,9 @@ function drawTetris() {
     const bx = x - size / 2;
     const by = y - size / 2;
 
-    // 当前所在列背景光带
     ctx.fillStyle = 'rgba(56, 189, 248, 0.22)';
     ctx.fillRect(startX + col * tetSlotW, 0, tetSlotW, canvas.height);
 
-    // 橙色圆角方块本体
     ctx.save();
     ctx.shadowColor = 'rgba(249, 115, 22, 0.5)';
     ctx.shadowBlur = 16;
@@ -941,13 +993,11 @@ function drawTetris() {
     roundRect(ctx, bx, by, size, size, 16);
     ctx.stroke();
 
-    // 顶部高光细节
     ctx.fillStyle = 'rgba(255,255,255,0.22)';
     roundRect(ctx, bx + 5, by + 5, size - 10, size * 0.35, 9);
     ctx.fill();
     ctx.restore();
 
-    // 假名深蓝大字
     ctx.save();
     ctx.fillStyle = '#0c2340';
     ctx.font = `900 ${Math.floor(size * 0.52)}px 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif`;
@@ -991,9 +1041,11 @@ function moveRight() {
   }
 }
 
-function setFastDrop(fast) {
+// 触发快落：一旦按下快落按钮，该方块直接锁定高速下落直达底部，不再中途减速！
+function triggerFastDrop() {
   if (!tetCurrentBlock || !tetRunning || tetPaused || tetPreviewing) return;
-  tetCurrentBlock.fast = fast;
+  tetCurrentBlock.fast = true;
+  sfxClick();
 }
 
 function togglePause() {
@@ -1028,16 +1080,10 @@ document.getElementById('tet-left').addEventListener('click', moveLeft);
 document.getElementById('tet-right').addEventListener('click', moveRight);
 document.getElementById('tet-pause').addEventListener('click', togglePause);
 
+// 快落按钮：无论点击还是按下，立即锁定极速下落到底
 const dropBtn = document.getElementById('tet-drop');
-dropBtn.addEventListener('pointerdown', () => setFastDrop(true));
-dropBtn.addEventListener('pointerup', () => setFastDrop(false));
-dropBtn.addEventListener('pointerleave', () => setFastDrop(false));
-dropBtn.addEventListener('click', () => {
-  if (tetCurrentBlock) {
-    tetCurrentBlock.fast = true;
-    setTimeout(() => { if (tetCurrentBlock) tetCurrentBlock.fast = false; }, 280);
-  }
-});
+dropBtn.addEventListener('pointerdown', (e) => { e.preventDefault(); triggerFastDrop(); });
+dropBtn.addEventListener('click', triggerFastDrop);
 
 document.addEventListener('keydown', e => {
   if (!tetRunning) return;
@@ -1045,10 +1091,7 @@ document.addEventListener('keydown', e => {
   if (tetPaused || tetPreviewing) return;
   if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') { e.preventDefault(); moveLeft(); }
   else if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') { e.preventDefault(); moveRight(); }
-  else if (e.key === 'ArrowDown' || e.key === 's' || e.key === 'S' || e.key === ' ') { e.preventDefault(); setFastDrop(true); }
-});
-document.addEventListener('keyup', e => {
-  if (e.key === 'ArrowDown' || e.key === 's' || e.key === 'S' || e.key === ' ') setFastDrop(false);
+  else if (e.key === 'ArrowDown' || e.key === 's' || e.key === 'S' || e.key === ' ') { e.preventDefault(); triggerFastDrop(); }
 });
 
 window.addEventListener('resize', () => {
