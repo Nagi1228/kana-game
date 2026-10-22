@@ -1,1 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>かなゲーム - 方块模式</title>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <style>
+    :root {
+      --primary: #3b82f6;
+      --bg-color: #f0f7ff;
+      --text-main: #1e3a8a;
+      --border-color: #dbeafe;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      touch-action: manipulation;
+    }
 
+    header {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.92);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 24px;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #2563eb, #f97316);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      cursor: pointer;
+    }
+
+    .main-container {
+      width: 100%;
+      max-width: 500px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .top-bar {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .capsule-btn {
+      padding: 6px 14px;
+      border-radius: 9999px;
+      border: 1px solid #bfdbfe;
+      background: #ffffff;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .score-badge {
+      padding: 6px 14px;
+      border-radius: 9999px;
+      border: 1px solid #fed7aa;
+      background: #ffffff;
+      color: #ea580c;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .target-hint {
+      background: #ffffff;
+      border: 1.5px solid #bfdbfe;
+      border-radius: 16px;
+      padding: 12px 20px;
+      text-align: center;
+      width: 100%;
+      box-shadow: 0 4px 10px rgba(59, 130, 246, 0.06);
+    }
+    .target-title { font-size: 12px; color: #64748b; font-weight: 700; }
+    .target-meaning { font-size: 24px; font-weight: 900; color: #1e3a8a; }
+
+    /* 下落游戏视口 */
+    .game-stage {
+      width: 100%;
+      height: 380px;
+      background: #ffffff;
+      border: 2px solid #bfdbfe;
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(59, 130, 246, 0.08);
+    }
+
+    /* 3 条下落轨道 */
+    .tracks {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+    }
+    .track-col {
+      flex: 1;
+      border-right: 1px dashed #e2e8f0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 12px;
+    }
+    .track-col:last-child { border-right: none; }
+    .catcher-box {
+      width: 80%;
+      height: 48px;
+      background: #eff6ff;
+      border: 2px solid #3b82f6;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 800;
+      color: #2563eb;
+    }
+    .catcher-box.active {
+      background: #2563eb;
+      color: #ffffff;
+    }
+
+    /* 下落的方块 */
+    .falling-block {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border-radius: 14px;
+      background: #3b82f6;
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+      transition: left 0.1s ease-out;
+    }
+
+    /* 移动端/屏幕控制按键 */
+    .controls {
+      display: flex;
+      gap: 16px;
+      width: 100%;
+      margin-top: 6px;
+    }
+    .ctrl-btn {
+      flex: 1;
+      padding: 14px;
+      border-radius: 16px;
+      background: #ffffff;
+      border: 1.5px solid #bfdbfe;
+      color: #2563eb;
+      font-size: 20px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(59, 130, 246, 0.1);
+    }
+    .ctrl-btn:active { background: #eff6ff; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo" onclick="location.href='index.html'">かなゲーム</div>
+  </header>
+
+  <div class="main-container">
+    <div class="top-bar">
+      <button class="capsule-btn" onclick="location.href='index.html'">← 返回</button>
+      <div class="capsule-btn">🎮 方块模式</div>
+      <div class="score-badge"><span id="scoreNum">0</span> 分</div>
+    </div>
+
+    <div class="target-hint">
+      <div class="target-title">请接住对应单词的假名</div>
+      <div class="target-meaning" id="targetMeaning">正在载入...</div>
+    </div>
+
+    <div class="game-stage" id="stage">
+      <div class="tracks">
+        <div class="track-col"><div class="catcher-box" id="catcher-0">轨道 1</div></div>
+        <div class="track-col"><div class="catcher-box" id="catcher-1">轨道 2</div></div>
+        <div class="track-col"><div class="catcher-box" id="catcher-2">轨道 3</div></div>
+      </div>
+      <div class="falling-block" id="block">あ</div>
+    </div>
+
+    <div class="controls">
+      <button class="ctrl-btn" onclick="moveLeft()">◀ 左移 (A)</button>
+      <button class="ctrl-btn" onclick="moveRight()">右移 (D) ▶</button>
+    </div>
+  </div>
+
+  <script>
+    const SUPABASE_URL = 'https://zbfjbtzvnhmfzyvooact.supabase.co';
+    const SUPABASE_KEY = 'sb_publishable_AP0YnQLgzmB3d63_4zbpjg_vHeTyo8Z';
+    const sbClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
+
+    let currentUser = null;
+    let score = 0;
+    let currentTrack = 1; // 0, 1, 2
+    let blockY = 0;
+    let targetTrack = 1;
+    let animFrame = null;
+
+    const blockQuestions = [
+      { kana: 'せんせい', meaning: '老师' },
+      { kana: 'ともだち', meaning: '朋友' },
+      { kana: 'テスト', meaning: '测试' },
+      { kana: 'がくせい', meaning: '学生' }
+    ];
+    let qIndex = 0;
+
+    async function initAuth() {
+      if (!sbClient) return;
+      const { data: { session } } = await sbClient.auth.getSession();
+      if (session) currentUser = session.user;
+    }
+
+    async function recordMistake(word) {
+      let localMistakes = JSON.parse(localStorage.getItem('tangogo_mistakes') || '[]');
+      if (!localMistakes.some(m => m.word === word.kana)) {
+        localMistakes.push({ word: word.kana, meaning: word.meaning });
+        localStorage.setItem('tangogo_mistakes', JSON.stringify(localMistakes));
+      }
+      if (currentUser && sbClient) {
+        try {
+          await sbClient.from('user_mistakes').upsert({
+            user_id: currentUser.id,
+            word: word.kana,
+            meaning: word.meaning,
+            wrong_count: 1,
+            updated_at: new Date().toISOString()
+          }, { onConflict: 'user_id,word' });
+        } catch (e) { console.error(e); }
+      }
+    }
+
+    function updateCatcherUI() {
+      for (let i = 0; i < 3; i++) {
+        document.getElementById(`catcher-${i}`).classList.toggle('active', i === currentTrack);
+      }
+      const stageWidth = document.getElementById('stage').clientWidth;
+      const colWidth = stageWidth / 3;
+      const block = document.getElementById('block');
+      block.style.left = `${currentTrack * colWidth + (colWidth - 60) / 2}px`;
+    }
+
+    function moveLeft() {
+      if (currentTrack > 0) { currentTrack--; updateCatcherUI(); }
+    }
+
+    function moveRight() {
+      if (currentTrack < 2) { currentTrack++; updateCatcherUI(); }
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft' || e.key === 'a' || e.key === 'A') moveLeft();
+      if (e.key === 'ArrowRight' || e.key === 'd' || e.key === 'D') moveRight();
+    });
+
+    function spawnBlock() {
+      if (qIndex >= blockQuestions.length) qIndex = 0;
+      const q = blockQuestions[qIndex];
+      document.getElementById('targetMeaning').innerText = q.meaning;
+      document.getElementById('block').innerText = q.kana;
+
+      targetTrack = Math.floor(Math.random() * 3);
+      currentTrack = 1;
+      blockY = 0;
+      updateCatcherUI();
+
+      animateDrop();
+    }
+
+    function animateDrop() {
+      blockY += 2.2;
+      const block = document.getElementById('block');
+      block.style.top = `${blockY}px`;
+
+      if (blockY >= 310) {
+        // 到达底部判定
+        if (currentTrack === targetTrack) {
+          score += 10;
+          document.getElementById('scoreNum').innerText = score;
+        } else {
+          recordMistake(blockQuestions[qIndex]);
+        }
+        qIndex++;
+        setTimeout(spawnBlock, 300);
+      } else {
+        animFrame = requestAnimationFrame(animateDrop);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', async () => {
+      await initAuth();
+      spawnBlock();
+    });
+  </script>
+</body>
+</html>
