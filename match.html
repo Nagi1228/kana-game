@@ -1,1 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>かなゲーム - 消消乐模式</title>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <style>
+    :root {
+      --primary: #3b82f6;
+      --bg-color: #f0f7ff;
+      --text-main: #1e3a8a;
+      --border-color: #dbeafe;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-color);
+      background-image: 
+        radial-gradient(#dbeafe 1.5px, transparent 1.5px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(240, 247, 255, 0.95));
+      background-size: 24px 24px, 100% 100%;
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
+    header {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #2563eb, #f97316);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      cursor: pointer;
+    }
+
+    .main-container {
+      width: 100%;
+      max-width: 600px;
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .top-bar {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .capsule-btn {
+      padding: 6px 14px;
+      border-radius: 9999px;
+      border: 1px solid #bfdbfe;
+      background: #ffffff;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .capsule-btn:hover { background: #eff6ff; }
+    .score-badge {
+      padding: 6px 14px;
+      border-radius: 9999px;
+      border: 1px solid #fed7aa;
+      background: #ffffff;
+      color: #ea580c;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    /* 12卡片网格布局 */
+    .grid-board {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      width: 100%;
+      margin-top: 10px;
+    }
+    @media (min-width: 480px) {
+      .grid-board { grid-template-columns: repeat(4, 1fr); }
+    }
+    .match-card {
+      aspect-ratio: 1;
+      background: #ffffff;
+      border: 2px solid #bfdbfe;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8px;
+      font-size: 16px;
+      font-weight: 800;
+      color: #1e3a8a;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.08);
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+    .match-card:hover { transform: scale(1.03); border-color: #3b82f6; }
+    .match-card.active {
+      background: #eff6ff;
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+    }
+    .match-card.matched {
+      transform: scale(0);
+      opacity: 0;
+      pointer-events: none;
+    }
+    .match-card.wrong {
+      background: #fef2f2;
+      border-color: #ef4444;
+      color: #ef4444;
+    }
+
+    .feedback-banner {
+      font-size: 15px;
+      font-weight: 800;
+      min-height: 24px;
+      text-align: center;
+    }
+    .feedback-banner.correct { color: #16a34a; }
+    .feedback-banner.wrong { color: #ef4444; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo" onclick="location.href='index.html'">かなゲーム</div>
+  </header>
+
+  <div class="main-container">
+    <div class="top-bar">
+      <button class="capsule-btn" onclick="location.href='index.html'">← 返回</button>
+      <div class="capsule-btn">🍬 12张卡片消消乐</div>
+      <div class="score-badge"><span id="scoreNum">0</span> 分</div>
+    </div>
+
+    <div class="feedback-banner" id="feedbackBanner">翻开两张卡片，找出对应的单词和释义！</div>
+
+    <div class="grid-board" id="gridBoard"></div>
+  </div>
+
+  <script>
+    const SUPABASE_URL = 'https://zbfjbtzvnhmfzyvooact.supabase.co';
+    const SUPABASE_KEY = 'sb_publishable_AP0YnQLgzmB3d63_4zbpjg_vHeTyo8Z';
+    const sbClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
+
+    let currentUser = null;
+    let score = 0;
+    let flippedCards = [];
+    let isProcessing = false;
+    let matchedPairs = 0;
+
+    const wordPairs = [
+      { id: 1, kana: 'せんせい', meaning: '老师' },
+      { id: 2, kana: 'がくせい', meaning: '学生' },
+      { id: 3, kana: 'ともだち', meaning: '朋友' },
+      { id: 4, kana: 'テスト', meaning: '测试' },
+      { id: 5, kana: 'ありがとう', meaning: '谢谢' },
+      { id: 6, kana: 'おはよう', meaning: '早上好' }
+    ];
+
+    async function initAuth() {
+      if (!sbClient) return;
+      const { data: { session } } = await sbClient.auth.getSession();
+      if (session) currentUser = session.user;
+    }
+
+    async function recordMistake(word) {
+      let localMistakes = JSON.parse(localStorage.getItem('tangogo_mistakes') || '[]');
+      if (!localMistakes.some(m => m.word === word.kana)) {
+        localMistakes.push({ word: word.kana, meaning: word.meaning });
+        localStorage.setItem('tangogo_mistakes', JSON.stringify(localMistakes));
+      }
+      if (currentUser && sbClient) {
+        try {
+          await sbClient.from('user_mistakes').upsert({
+            user_id: currentUser.id,
+            word: word.kana,
+            meaning: word.meaning,
+            wrong_count: 1,
+            updated_at: new Date().toISOString()
+          }, { onConflict: 'user_id,word' });
+        } catch (e) { console.error(e); }
+      }
+    }
+
+    function initGame() {
+      const cards = [];
+      wordPairs.forEach(p => {
+        cards.push({ id: p.id, text: p.kana, pair: p, type: 'kana' });
+        cards.push({ id: p.id, text: p.meaning, pair: p, type: 'meaning' });
+      });
+
+      cards.sort(() => Math.random() - 0.5);
+
+      const board = document.getElementById('gridBoard');
+      board.innerHTML = '';
+      cards.forEach(card => {
+        const el = document.createElement('div');
+        el.className = 'match-card';
+        el.innerText = card.text;
+        el.onclick = () => onCardClick(el, card);
+        board.appendChild(el);
+      });
+    }
+
+    function onCardClick(el, card) {
+      if (isProcessing || el.classList.contains('active') || el.classList.contains('matched')) return;
+
+      el.classList.add('active');
+      flippedCards.push({ el, card });
+
+      if (flippedCards.length === 2) {
+        isProcessing = true;
+        checkMatch();
+      }
+    }
+
+    function checkMatch() {
+      const [c1, c2] = flippedCards;
+      const fb = document.getElementById('feedbackBanner');
+
+      if (c1.card.id === c2.card.id && c1.card.type !== c2.card.type) {
+        fb.className = 'feedback-banner correct';
+        fb.innerText = `✨ 消除成功！+10分`;
+        score += 10;
+        matchedPairs++;
+        document.getElementById('scoreNum').innerText = score;
+
+        setTimeout(() => {
+          c1.el.classList.add('matched');
+          c2.el.classList.add('matched');
+          flippedCards = [];
+          isProcessing = false;
+          if (matchedPairs === wordPairs.length) {
+            fb.innerText = '🎉 12 张卡片全部消除！太厉害了！';
+          }
+        }, 300);
+      } else {
+        fb.className = 'feedback-banner wrong';
+        fb.innerText = '❌ 配对不对哦，已记录错词';
+        recordMistake(c1.card.pair);
+
+        c1.el.classList.add('wrong');
+        c2.el.classList.add('wrong');
+
+        setTimeout(() => {
+          c1.el.classList.remove('active', 'wrong');
+          c2.el.classList.remove('active', 'wrong');
+          flippedCards = [];
+          isProcessing = false;
+        }, 700);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', async () => {
+      await initAuth();
+      initGame();
+    });
+  </script>
+</body>
+</html>
