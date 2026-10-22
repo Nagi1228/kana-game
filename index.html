@@ -87,7 +87,6 @@ html, body {
 .home-title em { color: var(--accent); font-style: normal; }
 .home-sub { font-size: 1.1rem; color: var(--fg2); margin-top: 8px; font-weight: 700; }
 
-/* 词库选择器 */
 .deck-selector {
   width: 100%; max-width: 900px; display: flex; flex-direction: column; gap: 14px;
   background: var(--surface); padding: 22px 26px; border-radius: 22px;
@@ -99,7 +98,7 @@ html, body {
 
 .cascade-grid { display: grid; grid-template-columns: 1fr 0.85fr 1.7fr; gap: 12px; }
 @media (max-width: 680px) { .cascade-grid { grid-template-columns: 1fr; } }
-.select-group { display: flex; flex-direction: column; gap: 6px; }
+.select-group { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
 .select-sublabel { font-size: 0.8rem; font-weight: 700; color: var(--fg3); padding-left: 2px; }
 select.deck-pick {
   width: 100%; padding: 13px 36px 13px 16px; border-radius: 14px; border: 2px solid var(--border);
@@ -110,7 +109,6 @@ select.deck-pick {
 }
 select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(37,99,235,0.15); }
 
-/* 四个游戏模式大卡片 */
 .mode-cards {
   width: 100%; max-width: 900px; display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px;
@@ -131,7 +129,6 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
 .mode-card.mode-match { border-color: #34d399; }
 .mode-card.mode-elim { border-color: #fbbf24; }
 
-/* 用户弹窗 */
 .modal-overlay {
   position: fixed; inset: 0; background: rgba(12, 35, 64, 0.55);
   backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center;
@@ -172,7 +169,6 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
   </nav>
 
   <div class="home-wrap">
-    <!-- 日式简约风背景 -->
     <svg class="home-bg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
       <defs>
         <pattern id="bg-genko" width="48" height="48" patternUnits="userSpaceOnUse">
@@ -184,10 +180,6 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
             <circle cx="0" cy="10" r="20"/><circle cx="0" cy="10" r="14"/><circle cx="0" cy="10" r="8"/>
             <circle cx="40" cy="10" r="20"/><circle cx="40" cy="10" r="14"/><circle cx="40" cy="10" r="8"/>
           </g>
-        </pattern>
-        <linearGradient id="bg-wave-fade" x1="0" y1="1" x2="0" y2="0">
-          <stop offset="0" stop-color="#ffffff"/>
-          <stop offset="1" stop-color="#000000"/>
         </linearGradient>
         <mask id="bg-wave-mask">
           <rect x="0" y="640" width="1600" height="360" fill="url(#bg-wave-fade)"/>
@@ -227,36 +219,28 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
       <div class="home-sub cn-text">选择教材与课程，开始挑战 ✨</div>
     </div>
 
-    <!-- 这里的 value 值与 vocab.html 保持一致 -->
+    <!-- 动态级联选择器 -->
     <div class="deck-selector">
       <div class="deck-selector-header">
         <label class="cn-text">📖 选择词库</label>
-        <span class="deck-word-count-badge cn-text" id="deckWordCountBadge">当前课共 3 词</span>
+        <span class="deck-word-count-badge cn-text" id="deckWordCountBadge">加载中...</span>
       </div>
       <div class="cascade-grid">
         <div class="select-group">
           <span class="select-sublabel cn-text">一级：教材系列</span>
-          <select class="deck-pick cn-text" id="bookSelect">
-            <option value="pep_jr">人教版初中日语（新）</option>
-            <option value="std_beg">新版标准日本语初级</option>
-          </select>
+          <select class="deck-pick cn-text" id="bookSelect" onchange="onBookChange()"></select>
         </div>
         <div class="select-group">
           <span class="select-sublabel cn-text">二级：年级 / 分册</span>
-          <select class="deck-pick cn-text" id="gradeSelect">
-            <option value="pep_jr_7">七年级</option>
-          </select>
+          <select class="deck-pick cn-text" id="gradeSelect" onchange="onGradeChange()"></select>
         </div>
         <div class="select-group">
           <span class="select-sublabel cn-text">三级：章节 / 课时</span>
-          <select class="deck-pick cn-text" id="lessonSelect">
-            <option value="pep_jr_7_intro1">入门单元 第1课</option>
-          </select>
+          <select class="deck-pick cn-text" id="lessonSelect" onchange="updateLessonCount()"></select>
         </div>
       </div>
     </div>
 
-    <!-- 四大模式入口 -->
     <div class="mode-cards">
       <div class="mode-card mode-puzzle" onclick="startGame('拼图模式')">
         <div class="icon">🧩</div>
@@ -289,7 +273,6 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
     </div>
   </div>
 
-  <!-- 个人中心/登录弹窗 -->
   <div class="modal-overlay" id="userModal">
     <div class="modal-content">
       <div class="modal-header">
@@ -345,6 +328,157 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
     let currentNickname = localStorage.getItem('tangogo_nickname') || '';
     let mistakesList = JSON.parse(localStorage.getItem('tangogo_mistakes') || '[]');
 
+    // 与后台完全一致的课程目录树
+    function makeLessons(prefix, count, startNo = 1) {
+      return Array.from({ length: count }, (_, i) => ({
+        id: `${prefix}_l${i + 1}`,
+        name: `第${startNo + i}课`
+      }));
+    }
+
+    const CURRICULUM = [
+      {
+        id: 'std_beg', name: '新版标准日本语初级',
+        children: [
+          { id: 'std_beg_1', name: '初级上册', lessons: makeLessons('std_beg_1', 24) },
+          { id: 'std_beg_2', name: '初级下册', lessons: makeLessons('std_beg_2', 24, 25) }
+        ]
+      },
+      {
+        id: 'pep_jr', name: '人教版初中日语（新）',
+        children: [
+          {
+            id: 'pep_jr_7', name: '七年级',
+            lessons: [
+              { id: 'pep_jr_7_intro1', name: '入门单元 第1课' },
+              { id: 'pep_jr_7_intro2', name: '入门单元 第2课' },
+              { id: 'pep_jr_7_intro3', name: '入门单元 第3课' },
+              ...makeLessons('pep_jr_7', 12)
+            ]
+          },
+          { id: 'pep_jr_8', name: '八年级', lessons: makeLessons('pep_jr_8', 12) },
+          { id: 'pep_jr_9', name: '九年级', lessons: makeLessons('pep_jr_9', 12) }
+        ]
+      },
+      {
+        id: 'pep_sr', name: '人教版高中日语',
+        children: [
+          { id: 'pep_sr_b1', name: '必修一', lessons: makeLessons('pep_sr_b1', 4) },
+          { id: 'pep_sr_b2', name: '必修二', lessons: makeLessons('pep_sr_b2', 4, 5) },
+          { id: 'pep_sr_b3', name: '必修三', lessons: makeLessons('pep_sr_b3', 4, 9) }
+        ]
+      }
+    ];
+
+    function initCurriculumUI() {
+      const bSel = document.getElementById('bookSelect');
+      bSel.innerHTML = '';
+      CURRICULUM.forEach(b => {
+        bSel.innerHTML += `<option value="${b.id}">${b.name}</option>`;
+      });
+
+      // 默认记住上次选择的教材
+      const savedBook = localStorage.getItem('tangogo_pref_book');
+      if (savedBook && CURRICULUM.some(b => b.id === savedBook)) {
+        bSel.value = savedBook;
+      }
+      onBookChange(true);
+    }
+
+    function onBookChange(isInitial = false) {
+      const bId = document.getElementById('bookSelect').value;
+      localStorage.setItem('tangogo_pref_book', bId);
+      const book = CURRICULUM.find(b => b.id === bId);
+      const gSel = document.getElementById('gradeSelect');
+      gSel.innerHTML = '';
+      if (book) {
+        book.children.forEach(g => {
+          gSel.innerHTML += `<option value="${g.id}">${g.name}</option>`;
+        });
+      }
+
+      if (isInitial) {
+        const savedGrade = localStorage.getItem('tangogo_pref_grade');
+        if (savedGrade && book && book.children.some(g => g.id === savedGrade)) {
+          gSel.value = savedGrade;
+        }
+      }
+      onGradeChange(isInitial);
+    }
+
+    function onGradeChange(isInitial = false) {
+      const bId = document.getElementById('bookSelect').value;
+      const gId = document.getElementById('gradeSelect').value;
+      localStorage.setItem('tangogo_pref_grade', gId);
+
+      const book = CURRICULUM.find(b => b.id === bId);
+      const grade = book ? book.children.find(g => g.id === gId) : null;
+      const lSel = document.getElementById('lessonSelect');
+      lSel.innerHTML = '';
+      if (grade) {
+        grade.lessons.forEach(l => {
+          lSel.innerHTML += `<option value="${l.id}">${l.name}</option>`;
+        });
+      }
+
+      if (isInitial) {
+        const savedLesson = localStorage.getItem('tangogo_pref_lesson');
+        if (savedLesson && grade && grade.lessons.some(l => l.id === savedLesson)) {
+          lSel.value = savedLesson;
+        }
+      }
+      updateLessonCount();
+    }
+
+    async function updateLessonCount() {
+      const bId = document.getElementById('bookSelect').value;
+      const gId = document.getElementById('gradeSelect').value;
+      const lId = document.getElementById('lessonSelect').value;
+      localStorage.setItem('tangogo_pref_lesson', lId);
+
+      const badge = document.getElementById('deckWordCountBadge');
+      if (!sbClient) {
+        badge.innerText = '离线模式';
+        return;
+      }
+
+      badge.innerText = '计算中...';
+      try {
+        const { count, error } = await sbClient
+          .from('words')
+          .select('*', { count: 'exact', head: true })
+          .eq('book_id', bId)
+          .eq('grade_id', gId)
+          .eq('lesson_id', lId);
+
+        if (!error && count !== null) {
+          badge.innerText = `当前课共 ${count} 词`;
+        } else {
+          badge.innerText = '当前课共 0 词';
+        }
+      } catch (e) {
+        badge.innerText = '已选定课程';
+      }
+    }
+
+    function startGame(modeName) {
+      const routes = {
+        '拼图模式': 'puzzle.html',
+        '方块模式': 'blocks.html',
+        '连连看模式': 'link.html',
+        '消消乐模式': 'match.html'
+      };
+
+      const target = routes[modeName];
+      if (!target) return;
+
+      const book = document.getElementById('bookSelect').value;
+      const grade = document.getElementById('gradeSelect').value;
+      const lesson = document.getElementById('lessonSelect').value;
+
+      window.location.href = `${target}?book=${encodeURIComponent(book)}&grade=${encodeURIComponent(grade)}&lesson=${encodeURIComponent(lesson)}`;
+    }
+
     function openUserModal() {
       const modal = document.getElementById('userModal');
       const unauth = document.getElementById('unauthPanel');
@@ -364,10 +498,7 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
       modal.style.display = 'flex';
     }
 
-    function closeUserModal() {
-      document.getElementById('userModal').style.display = 'none';
-    }
-
+    function closeUserModal() { document.getElementById('userModal').style.display = 'none'; }
     function chooseAvatar(av) {
       selectedAvatar = av;
       document.querySelectorAll('.avatar-btn').forEach(btn => {
@@ -392,7 +523,6 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
       const password = document.getElementById('inputPwd').value;
       if (!email || !password) return alert('请填写邮箱和密码');
       if (!sbClient) return alert('数据库连接中，请稍后再试');
-      
       const { data, error } = await sbClient.auth.signUp({ email, password });
       if (error) return alert('注册失败: ' + error.message);
       alert('注册成功！已为您登录');
@@ -406,7 +536,6 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
       const password = document.getElementById('inputPwd').value;
       if (!email || !password) return alert('请填写邮箱和密码');
       if (!sbClient) return alert('数据库连接中，请稍后再试');
-
       const { data, error } = await sbClient.auth.signInWithPassword({ email, password });
       if (error) return alert('登录失败: ' + error.message);
       currentUser = data.user;
@@ -427,7 +556,6 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
     async function saveUserProfile() {
       const nicknameInput = document.getElementById('inputNickname').value.trim();
       currentNickname = nicknameInput || (currentUser ? currentUser.email.split('@')[0] : '');
-      
       localStorage.setItem('tangogo_avatar', selectedAvatar);
       localStorage.setItem('tangogo_nickname', currentNickname);
 
@@ -448,56 +576,15 @@ select.deck-pick:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba
       alert(mistakesList.length === 0 ? '当前错词本为空，继续保持！' : `错词记录共有 ${mistakesList.length} 个单词。`);
     }
 
-    function startGame(modeName) {
-      const routes = {
-        '拼图模式': 'puzzle.html',
-        '方块模式': 'blocks.html',
-        '连连看模式': 'link.html',
-        '消消乐模式': 'match.html'
-      };
-
-      const target = routes[modeName];
-      if (!target) return;
-
-      const book = document.getElementById('bookSelect')?.value || 'pep_jr';
-      const grade = document.getElementById('gradeSelect')?.value || 'pep_jr_7';
-      const lesson = document.getElementById('lessonSelect')?.value || 'pep_jr_7_intro1';
-
-      window.location.href = `${target}?book=${encodeURIComponent(book)}&grade=${encodeURIComponent(grade)}&lesson=${encodeURIComponent(lesson)}`;
-    }
-
-    async function initApp() {
+    window.addEventListener('DOMContentLoaded', async () => {
+      initCurriculumUI();
       document.getElementById('mistakeBadge').innerText = mistakesList.length;
       if (sbClient) {
         const { data: { session } } = await sbClient.auth.getSession();
         if (session) currentUser = session.user;
-
-        // 尝试动态更新当前选中课时的总词数徽章
-        const { count } = await sbClient
-          .from('words')
-          .select('*', { count: 'exact', head: true })
-          .eq('book_id', 'pep_jr')
-          .eq('grade_id', 'pep_jr_7')
-          .eq('lesson_id', 'pep_jr_7_intro1');
-          
-        if (count !== null && count !== undefined) {
-          document.getElementById('deckWordCountBadge').innerText = `当前课共 ${count} 词`;
-        }
       }
       refreshHeaderUI();
-    }
-
-    window.openUserModal = openUserModal;
-    window.closeUserModal = closeUserModal;
-    window.doSignUp = doSignUp;
-    window.doSignIn = doSignIn;
-    window.doSignOut = doSignOut;
-    window.chooseAvatar = chooseAvatar;
-    window.saveUserProfile = saveUserProfile;
-    window.openMistakesModal = openMistakesModal;
-    window.startGame = startGame;
-
-    initApp();
+    });
   </script>
 </body>
 </html>
