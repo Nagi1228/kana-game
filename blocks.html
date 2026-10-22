@@ -337,7 +337,7 @@ async function recordMistake(word) {
   }
 }
 
-// 统一参数对照映射表
+// 统一参数标准化
 function normalizeParams(rawBook, rawGrade, rawLesson) {
   let b = rawBook || 'pep_jr';
   let g = rawGrade || 'pep_jr_7';
@@ -357,6 +357,7 @@ const { b: currentBook, g: currentGrade, l: currentLesson } = normalizeParams(
   urlParams.get('lesson')
 );
 
+// 完整标准的 10 个兜底生词（彻底更正ともだち）
 const DEFAULT_FALLBACK_WORDS = [
   {"kanji":"","kana":"テスト","pos":"名词","meaning":"测验，测试"},
   {"kanji":"本","kana":"ほん","pos":"名词","meaning":"书"},
@@ -364,7 +365,10 @@ const DEFAULT_FALLBACK_WORDS = [
   {"kanji":"","kana":"ノート","pos":"名词","meaning":"笔记本，本子"},
   {"kanji":"先生","kana":"せんせい","pos":"名词","meaning":"老师"},
   {"kanji":"学生","kana":"がくせい","pos":"名词","meaning":"学生"},
-  {"kanji":"友達","kana":"とも达","pos":"名词","meaning":"朋友"}
+  {"kanji":"友達","kana":"ともだち","pos":"名词","meaning":"朋友"},
+  {"kanji":"鉛筆","kana":"えんぴつ","pos":"名词","meaning":"铅笔"},
+  {"kanji":"傘","kana":"かさ","pos":"名词","meaning":"伞"},
+  {"kanji":"","kana":"カメラ","pos":"名词","meaning":"照相机"}
 ];
 
 let FULL_LESSON_WORDS = [];
@@ -374,7 +378,7 @@ let totalGroups = 1;
 let lessonStartTime = Date.now();
 let lessonScoreTotal = 0;
 
-// 从 Supabase 动态加载当前课所有单词
+// 从 Supabase 查询当前课时对应的单词
 async function fetchCurrentLessonWords() {
   if (sbClient) {
     try {
@@ -392,10 +396,10 @@ async function fetchCurrentLessonWords() {
         return data;
       }
     } catch (e) {
-      console.warn('读取云端失败:', e);
+      console.warn('查询云端失败:', e);
     }
   }
-  showToast('使用默认本地词库');
+  showToast('使用默认精选词库');
   return DEFAULT_FALLBACK_WORDS;
 }
 
@@ -437,8 +441,7 @@ function startGroup(groupIdx) {
   currentGroupIndex = groupIdx;
   const start = groupIdx * GROUP_SIZE;
   const end = Math.min(start + GROUP_SIZE, FULL_LESSON_WORDS.length);
-  
-  // 按照分组索引提取题目并打乱
+
   tetWords = shuffle(FULL_LESSON_WORDS.slice(start, end));
   tetWordIdx = 0;
   tetScore = 0;
@@ -994,11 +997,10 @@ window.addEventListener('DOMContentLoaded', async () => {
   await initAuth();
   lessonStartTime = Date.now();
   
-  // 1. 动态拉取当前选中课时的全部单词
+  // 异步获取当前课词库
   FULL_LESSON_WORDS = await fetchCurrentLessonWords();
   totalGroups = Math.max(1, Math.ceil(FULL_LESSON_WORDS.length / GROUP_SIZE));
   
-  // 2. 启动第一组
   startGroup(0);
 });
 </script>
