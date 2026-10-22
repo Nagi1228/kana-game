@@ -337,7 +337,26 @@ async function recordMistake(word) {
   }
 }
 
-// 离线或当前课尚未录入单词时的兜底精选词库
+// 统一参数对照映射表
+function normalizeParams(rawBook, rawGrade, rawLesson) {
+  let b = rawBook || 'pep_jr';
+  let g = rawGrade || 'pep_jr_7';
+  let l = rawLesson || 'pep_jr_7_intro1';
+
+  if (b === 'renjiao-new') b = 'pep_jr';
+  if (g === 'grade7') g = 'pep_jr_7';
+  if (l === 'unit1_lesson1') l = 'pep_jr_7_intro1';
+
+  return { b, g, l };
+}
+
+const urlParams = new URLSearchParams(window.location.search);
+const { b: currentBook, g: currentGrade, l: currentLesson } = normalizeParams(
+  urlParams.get('book'),
+  urlParams.get('grade'),
+  urlParams.get('lesson')
+);
+
 const DEFAULT_FALLBACK_WORDS = [
   {"kanji":"","kana":"テスト","pos":"名词","meaning":"测验，测试"},
   {"kanji":"本","kana":"ほん","pos":"名词","meaning":"书"},
@@ -345,26 +364,17 @@ const DEFAULT_FALLBACK_WORDS = [
   {"kanji":"","kana":"ノート","pos":"名词","meaning":"笔记本，本子"},
   {"kanji":"先生","kana":"せんせい","pos":"名词","meaning":"老师"},
   {"kanji":"学生","kana":"がくせい","pos":"名词","meaning":"学生"},
-  {"kanji":"友達","kana":"ともだち","pos":"名词","meaning":"朋友"},
-  {"kanji":"鉛筆","kana":"えんぴつ","pos":"名词","meaning":"铅笔"},
-  {"kanji":"傘","kana":"かさ","pos":"名词","meaning":"伞"},
-  {"kanji":"","kana":"カメラ","pos":"名词","meaning":"照相机"}
+  {"kanji":"友達","kana":"とも达","pos":"名词","meaning":"朋友"}
 ];
 
-let FULL_LESSON_WORDS = []; // 真正存储从 Supabase 拉取的生词
+let FULL_LESSON_WORDS = [];
 const GROUP_SIZE = 10;
 let currentGroupIndex = 0;
 let totalGroups = 1;
 let lessonStartTime = Date.now();
 let lessonScoreTotal = 0;
 
-// 解析从首页传递进来的参数
-const urlParams = new URLSearchParams(window.location.search);
-const currentBook = urlParams.get('book') || 'pep_jr';
-const currentGrade = urlParams.get('grade') || 'pep_jr_7';
-const currentLesson = urlParams.get('lesson') || 'pep_jr_7_intro1';
-
-// 核心：从 Supabase 动态查询词库
+// 从 Supabase 动态加载当前课所有单词
 async function fetchCurrentLessonWords() {
   if (sbClient) {
     try {
@@ -378,12 +388,14 @@ async function fetchCurrentLessonWords() {
         .order('created_at', { ascending: true });
 
       if (!error && data && data.length > 0) {
-        return data; // 成功查询到云端词表
+        showToast(`已成功载入云端题库（共 ${data.length} 词）`);
+        return data;
       }
     } catch (e) {
-      console.warn('查询云端词库失败，使用兜底词库:', e);
+      console.warn('读取云端失败:', e);
     }
   }
+  showToast('使用默认本地词库');
   return DEFAULT_FALLBACK_WORDS;
 }
 
@@ -425,6 +437,8 @@ function startGroup(groupIdx) {
   currentGroupIndex = groupIdx;
   const start = groupIdx * GROUP_SIZE;
   const end = Math.min(start + GROUP_SIZE, FULL_LESSON_WORDS.length);
+  
+  // 按照分组索引提取题目并打乱
   tetWords = shuffle(FULL_LESSON_WORDS.slice(start, end));
   tetWordIdx = 0;
   tetScore = 0;
@@ -567,7 +581,7 @@ function handleGroupOrLessonCompletion() {
   if (!isLessonComplete) {
     emojiEl.textContent = '👏';
     titleEl.textContent = `第 ${currentGroupIndex + 1} 组挑战成功！`;
-    bodyEl.textContent = `本组已完成，得分：${tetScore} 分。当前课程进度：${(currentGroupIndex + 1) * GROUP_SIZE}/${FULL_LESSON_WORDS.length} 词。`;
+    bodyEl.textContent = `本组已完成，得分：${tetScore} 分。当前进度：${(currentGroupIndex + 1) * GROUP_SIZE}/${FULL_LESSON_WORDS.length} 词。`;
     statsEl.hidden = true;
 
     actEl.appendChild(createBtn('下一组 (' + (currentGroupIndex + 2) + '/' + totalGroups + ')', 'btn-primary', () => {
@@ -597,7 +611,7 @@ function handleGroupOrLessonCompletion() {
 
     actEl.appendChild(createBtn('下一课', 'btn-primary', () => {
       showToast('正在前往下一课...');
-      setTimeout(() => location.href = 'blocks.html?lesson=unit1_lesson2', 600);
+      setTimeout(() => location.href = 'blocks.html?lesson=pep_jr_7_intro2', 600);
     }));
     actEl.appendChild(createBtn('再来1遍', 'btn-secondary', () => {
       overlay.hidden = true;
@@ -980,10 +994,11 @@ window.addEventListener('DOMContentLoaded', async () => {
   await initAuth();
   lessonStartTime = Date.now();
   
-  // 核心：启动时自动去 Supabase 查询当前课时对应的全部词汇
+  // 1. 动态拉取当前选中课时的全部单词
   FULL_LESSON_WORDS = await fetchCurrentLessonWords();
   totalGroups = Math.max(1, Math.ceil(FULL_LESSON_WORDS.length / GROUP_SIZE));
   
+  // 2. 启动第一组
   startGroup(0);
 });
 </script>
