@@ -59,10 +59,16 @@ body {
 .nav-btn:hover { background: var(--bg2); border-color: var(--border); }
 .nav-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
 
+/* 默认锁定隐藏整个管理界面，通过管理员校验后才显现 */
 .vocab-wrap {
   flex: 1; padding: 24px 16px; max-width: 980px; width: 100%; margin: 0 auto;
-  display: flex; flex-direction: column; gap: 20px;
+  display: none; flex-direction: column; gap: 20px;
 }
+.auth-checking {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; font-weight: 800; color: var(--fg2);
+}
+
 .vocab-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
 .vocab-header h2 { font-size: 1.4rem; font-weight: 900; color: var(--fg); }
 
@@ -165,7 +171,9 @@ select.deck-pick:focus { border-color: var(--accent); }
     </div>
   </nav>
 
-  <div class="vocab-wrap">
+  <div class="auth-checking cn-text" id="authChecking">🔒 正在验证管理员权限...</div>
+
+  <div class="vocab-wrap" id="vocabMainWrap">
     <div class="vocab-header">
       <h2 class="cn-text">📚 云端词库管理</h2>
       <div style="display:flex; gap:10px;">
@@ -174,7 +182,6 @@ select.deck-pick:focus { border-color: var(--accent); }
       </div>
     </div>
 
-    <!-- 级联选择器 -->
     <div class="vocab-picker-box">
       <div class="deck-selector-header">
         <label class="cn-text">选择当前编辑课时（导入整册时需选准教材与分册）</label>
@@ -196,7 +203,6 @@ select.deck-pick:focus { border-color: var(--accent); }
       </div>
     </div>
 
-    <!-- 单条录入 -->
     <div class="add-word-form">
       <h3 class="cn-text">➕ 单条录入（保存到当前选中课时）</h3>
       <div class="form-row-5">
@@ -211,7 +217,6 @@ select.deck-pick:focus { border-color: var(--accent); }
       </div>
     </div>
 
-    <!-- 批量导入与整册智能分课 -->
     <div class="add-word-form">
       <h3 class="cn-text">📥 批量导入 / 整册智能分课导入</h3>
       <p class="import-hint cn-text">
@@ -229,7 +234,6 @@ select.deck-pick:focus { border-color: var(--accent); }
       </div>
     </div>
 
-    <!-- 单词表格 -->
     <div class="vocab-header" style="margin-top:6px;">
       <h2 class="cn-text">📝 当前课已收录单词</h2>
       <span class="import-hint cn-text" id="syncStatus">数据已与 Supabase 同步</span>
@@ -260,6 +264,40 @@ select.deck-pick:focus { border-color: var(--accent); }
     const SUPABASE_URL = 'https://zbfjbtzvnhmfzyvooact.supabase.co';
     const SUPABASE_KEY = 'sb_publishable_AP0YnQLgzmB3d63_4zbpjg_vHeTyo8Z';
     const sbClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
+
+    // 页面访问硬性守卫：未登录或非管理员直接拦截并跳回首页
+    async function verifyAdminGuard() {
+      if (!sbClient) {
+        location.replace('index.html');
+        return false;
+      }
+      const { data: { session } } = await sbClient.auth.getSession();
+      if (!session || !session.user) {
+        alert('⚠️ 权限不足：请先使用管理员账号登录！');
+        location.replace('index.html');
+        return false;
+      }
+
+      // 实测云端 RLS 写入权限
+      const { data, error } = await sbClient.from('words').insert([{
+        book_id: '_auth_probe_',
+        grade_id: '_auth_probe_',
+        lesson_id: '_auth_probe_',
+        kana: 'probe',
+        meaning: 'probe'
+      }]).select('id');
+
+      if (!error && data && data.length > 0) {
+        await sbClient.from('words').delete().eq('id', data[0].id);
+        document.getElementById('authChecking').style.display = 'none';
+        document.getElementById('vocabMainWrap').style.display = 'flex';
+        return true;
+      } else {
+        alert('⚠️ 拒绝访问：当前账号无词库管理权限！');
+        location.replace('index.html');
+        return false;
+      }
+    }
 
     function makeLessons(prefix, count, startNo = 1) {
       return Array.from({ length: count }, (_, i) => ({
@@ -524,11 +562,9 @@ select.deck-pick:focus { border-color: var(--accent); }
       }
     }
 
-    // 智能匹配升级版：彻底消除空格影响，优先捕获“入门”与单元信息
     function matchLessonLine(line, availableLessons) {
       const clean = line.replace(/[#\[\]\(\)\/\s,]/g, '').trim();
 
-      // 1. 优先匹配包含“入门”的情况
       if (clean.includes('入门')) {
         const mIntro = clean.match(/入门.*?(\d+)/);
         if (mIntro) {
@@ -538,14 +574,12 @@ select.deck-pick:focus { border-color: var(--accent); }
         }
       }
 
-      // 2. 无空格完全包含匹配
       const exact = availableLessons.find(l => {
         const lClean = l.name.replace(/\s+/g, '');
         return clean.includes(lClean) && (!clean.includes('入门') || lClean.includes('入门'));
       });
       if (exact) return exact.id;
 
-      // 3. 匹配常规 "第X课"
       const mZh = clean.match(/第(\d+)课/);
       if (mZh) {
         const num = parseInt(mZh[1], 10);
@@ -557,7 +591,6 @@ select.deck-pick:focus { border-color: var(--accent); }
         if (found) return found.id;
       }
 
-      // 4. 匹配 "Lesson X" / "L X"
       const mEn = clean.match(/(?:lesson|l)(\d+)/i);
       if (mEn) {
         const num = parseInt(mEn[1], 10);
@@ -589,7 +622,6 @@ select.deck-pick:focus { border-color: var(--accent); }
         const row = line.trim();
         if (!row) return;
 
-        // 检查该行是否为分课指示行
         const matchedLId = matchLessonLine(row, availableLessons);
         if (matchedLId) {
           activeLessonId = matchedLId;
@@ -648,7 +680,6 @@ select.deck-pick:focus { border-color: var(--accent); }
       await onGradeChange();
     }
 
-    // 采用与本地版一致的标准解码（完美支持转换好的 UTF-8 文件）
     function handleFileUpload(event) {
       const file = event.target.files[0];
       if (!file) return;
@@ -656,15 +687,12 @@ select.deck-pick:focus { border-color: var(--accent); }
       const reader = new FileReader();
       reader.onload = function(e) {
         let content = e.target.result;
-        // 自动剔除可能存在的 UTF-8 BOM 头
         if (content.charCodeAt(0) === 0xFEFF) {
           content = content.slice(1);
         }
         document.getElementById('importArea').value = content;
         showToast('✅ 文件加载成功！');
       };
-      
-      // 默认使用 UTF-8 读取（与你本地版一致）
       reader.readAsText(file, 'utf-8');
     }
 
@@ -682,7 +710,10 @@ select.deck-pick:focus { border-color: var(--accent); }
     }
 
     window.addEventListener('DOMContentLoaded', async () => {
-      initCurriculumUI();
+      const isOk = await verifyAdminGuard();
+      if (isOk) {
+        initCurriculumUI();
+      }
     });
   </script>
 </body>
