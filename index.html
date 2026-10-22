@@ -187,7 +187,7 @@
     .mode-info h3 { font-size: 15px; font-weight: 700; color: #1e293b; margin-bottom: 2px; }
     .mode-info p { font-size: 12px; color: var(--text-sub); line-height: 1.4; }
 
-    /* 模态框 */
+    /* 登录/个人中心弹窗 */
     .modal-overlay {
       position: fixed;
       top: 0; left: 0; width: 100vw; height: 100vh;
@@ -272,6 +272,7 @@
       <p>选择教材与课程，开始挑战 ✨</p>
     </div>
 
+    <!-- 词库筛选下拉框 -->
     <div class="section-card">
       <div class="card-header-row">
         <div style="font-size: 14px; font-weight: 700; color: #334155;">📖 选择词库</div>
@@ -280,19 +281,20 @@
       <div class="selectors-grid">
         <div class="select-item">
           <label>一级：教材系列</label>
-          <select><option>人教版初中日语（新）</option></select>
+          <select id="bookSelect"><option value="renjiao-new">人教版初中日语（新）</option></select>
         </div>
         <div class="select-item">
           <label>二级：年级 / 分册</label>
-          <select><option>七年级</option></select>
+          <select id="gradeSelect"><option value="grade7">七年级</option></select>
         </div>
         <div class="select-item">
           <label>三级：章节 / 课时</label>
-          <select><option>入门单元 第1课</option></select>
+          <select id="lessonSelect"><option value="unit1_lesson1">入门单元 第1课</option></select>
         </div>
       </div>
     </div>
 
+    <!-- 游戏玩法卡片 -->
     <div class="modes-grid">
       <div class="mode-card puzzle" onclick="startGame('拼图模式')">
         <div class="mode-icon">🧩</div>
@@ -371,7 +373,7 @@
     </div>
   </div>
 
-<script>
+  <script>
     const SUPABASE_URL = 'https://zbfjbtzvnhmfzyvooact.supabase.co';
     const SUPABASE_KEY = 'sb_publishable_AP0YnQLgzmB3d63_4zbpjg_vHeTyo8Z';
     const sbClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
@@ -390,7 +392,6 @@
         unauth.style.display = 'none';
         profile.style.display = 'block';
         document.getElementById('profileEmailTxt').innerText = currentUser.email;
-        // 回显当前已保存的昵称到输入框
         document.getElementById('inputNickname').value = currentNickname || currentUser.email.split('@')[0];
         chooseAvatar(selectedAvatar);
       } else {
@@ -471,7 +472,6 @@
       localStorage.setItem('tangogo_nickname', currentNickname);
 
       if (currentUser && sbClient) {
-        // 同步更新数据库 profiles 表
         await sbClient.from('profiles').upsert({
           id: currentUser.id,
           avatar_id: selectedAvatar,
@@ -514,8 +514,23 @@
       alert(mistakesList.length === 0 ? '当前错词本为空，继续保持！' : `错词记录已安全保存在云端，共有 ${mistakesList.length} 个错题。`);
     }
 
+    // 核心跳转路由（方式 A）：携带选中的下拉框参数进入独立网页
     function startGame(modeName) {
-      alert(`正在启动【${modeName}】，请稍候...`);
+      const routes = {
+        '拼图模式': 'puzzle.html',
+        '方块模式': 'blocks.html',
+        '连连看模式': 'link.html',
+        '消消乐模式': 'match.html'
+      };
+
+      const target = routes[modeName];
+      if (!target) return;
+
+      const book = document.getElementById('bookSelect')?.value || 'renjiao-new';
+      const grade = document.getElementById('gradeSelect')?.value || 'grade7';
+      const lesson = document.getElementById('lessonSelect')?.value || 'unit1_lesson1';
+
+      window.location.href = `${target}?book=${encodeURIComponent(book)}&grade=${encodeURIComponent(grade)}&lesson=${encodeURIComponent(lesson)}`;
     }
 
     async function initApp() {
@@ -530,7 +545,7 @@
       refreshHeaderUI();
     }
 
-    // 全局挂载，确保点击生效
+    // 挂载全局方法
     window.openUserModal = openUserModal;
     window.closeUserModal = closeUserModal;
     window.doSignUp = doSignUp;
