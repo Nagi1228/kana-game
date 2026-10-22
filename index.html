@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>かなゲーム - 日语单词闯关</title>
-  <!-- 引入 Supabase 官方 SDK (使用 unpkg 避免 jsdelivr 存储拦截问题) -->
-  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+  <!-- 引入 Supabase 官方 SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <style>
     :root {
       --primary: #3b82f6;
@@ -30,49 +30,53 @@
       align-items: center;
     }
 
+    /* 顶部导航栏 - 优化移动端不换行挤压 */
     header {
       width: 100%;
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--border-color);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px 32px;
+      padding: 10px 16px;
       position: sticky;
       top: 0;
       z-index: 50;
+      box-sizing: border-box;
     }
     .logo {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 900;
       background: linear-gradient(135deg, #2563eb, #f97316);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       cursor: pointer;
+      white-space: nowrap;
     }
     .nav-actions {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 8px;
     }
     .nav-btn {
-      padding: 6px 14px;
-      font-size: 14px;
+      padding: 5px 10px;
+      font-size: 13px;
       font-weight: 600;
       color: var(--text-sub);
       background: none;
       border: none;
       border-radius: 9999px;
       cursor: pointer;
+      white-space: nowrap;
     }
     .nav-btn.active { color: #fff; background: var(--primary); }
 
     .user-capsule {
       display: flex;
       align-items: center;
-      gap: 6px;
-      padding: 5px 14px;
+      gap: 5px;
+      padding: 5px 12px;
       border: 1px solid var(--border-color);
       border-radius: 9999px;
       background: #fff;
@@ -81,46 +85,47 @@
       font-weight: 600;
       color: var(--text-main);
       box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      white-space: nowrap;
     }
     .user-capsule:hover { border-color: var(--primary); }
     .user-avatar-tag {
       background: #eff6ff;
       border-radius: 50%;
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 13px;
+      font-size: 12px;
     }
 
     .container {
       width: 100%;
       max-width: 820px;
-      padding: 32px 16px;
+      padding: 24px 16px;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-    .hero-title { text-align: center; margin-bottom: 28px; }
+    .hero-title { text-align: center; margin-bottom: 24px; }
     .hero-icon { font-size: 32px; margin-bottom: 6px; }
-    .hero-title h1 { font-size: 36px; font-weight: 900; color: #1e3a8a; }
-    .hero-title p { font-size: 14px; color: var(--text-sub); margin-top: 6px; }
+    .hero-title h1 { font-size: 32px; font-weight: 900; color: #1e3a8a; }
+    .hero-title p { font-size: 13px; color: var(--text-sub); margin-top: 6px; }
 
     .section-card {
       background: var(--card-bg);
       border-radius: 18px;
       border: 1px solid var(--border-color);
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-      padding: 20px 24px;
+      padding: 18px 20px;
       width: 100%;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
     .card-header-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
     .word-badge {
       background: #eff6ff;
@@ -133,7 +138,10 @@
     .selectors-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
+      gap: 10px;
+    }
+    @media (max-width: 600px) {
+      .selectors-grid { grid-template-columns: 1fr; }
     }
     .select-item label {
       display: block;
@@ -144,7 +152,7 @@
     }
     .select-item select {
       width: 100%;
-      padding: 9px 12px;
+      padding: 8px 10px;
       border: 1px solid var(--border-color);
       border-radius: 10px;
       background: #f8fafc;
@@ -156,17 +164,20 @@
     .modes-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px;
+      gap: 14px;
       width: 100%;
+    }
+    @media (max-width: 600px) {
+      .modes-grid { grid-template-columns: 1fr; }
     }
     .mode-card {
       background: var(--card-bg);
       border: 2px solid transparent;
       border-radius: 16px;
-      padding: 20px;
+      padding: 16px;
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 14px;
       cursor: pointer;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
       transition: transform 0.15s ease;
@@ -176,55 +187,53 @@
     .mode-card.blocks { border-color: #ddd6fe; }
     .mode-card.link { border-color: #99f6e4; }
     .mode-card.match { border-color: #fed7aa; }
-    .mode-icon { font-size: 28px; }
-    .mode-info h3 { font-size: 16px; font-weight: 700; color: #1e293b; margin-bottom: 2px; }
+    .mode-icon { font-size: 26px; }
+    .mode-info h3 { font-size: 15px; font-weight: 700; color: #1e293b; margin-bottom: 2px; }
     .mode-info p { font-size: 12px; color: var(--text-sub); line-height: 1.4; }
 
-    /* 模态框 */
+    /* 登录弹窗遮罩 */
     .modal-overlay {
       position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(15, 23, 42, 0.5);
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(15, 23, 42, 0.6);
       backdrop-filter: blur(4px);
       display: none;
       align-items: center;
       justify-content: center;
-      z-index: 1000;
+      z-index: 99999;
       padding: 16px;
     }
-    .modal-overlay.open { display: flex !important; }
     .modal-content {
       background: #fff;
       border-radius: 20px;
-      padding: 28px;
+      padding: 24px;
       width: 100%;
-      max-width: 400px;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      max-width: 380px;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
     }
     .modal-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
-    .modal-title { font-size: 18px; font-weight: 800; color: #1e293b; }
+    .modal-title { font-size: 17px; font-weight: 800; color: #1e293b; }
     .close-btn { background: none; border: none; font-size: 24px; cursor: pointer; color: #94a3b8; }
-    .input-group { margin-bottom: 16px; display: flex; flex-direction: column; gap: 6px; }
+    .input-group { margin-bottom: 14px; display: flex; flex-direction: column; gap: 5px; }
     .input-group label { font-size: 12px; font-weight: 700; color: #475569; }
     .input-group input {
-      padding: 10px 14px;
+      padding: 10px 12px;
       border: 1px solid var(--border-color);
       border-radius: 10px;
       font-size: 14px;
       outline: none;
     }
-    .input-group input:focus { border-color: var(--primary); }
     .btn {
       background: var(--primary);
       color: #fff;
       border: none;
       border-radius: 10px;
-      padding: 11px 18px;
+      padding: 10px 16px;
       font-size: 14px;
       font-weight: 700;
       cursor: pointer;
@@ -232,12 +241,12 @@
     .btn:hover { background: var(--primary-hover); }
     .btn-secondary { background: #f1f5f9; color: #334155; }
     .btn-danger { background: #ef4444; color: #fff; }
-    .avatar-list { display: flex; gap: 12px; margin: 10px 0 16px 0; }
+    .avatar-list { display: flex; gap: 10px; margin: 8px 0 14px 0; }
     .avatar-btn {
-      font-size: 26px;
-      padding: 8px;
+      font-size: 24px;
+      padding: 6px;
       border: 2px solid var(--border-color);
-      border-radius: 12px;
+      border-radius: 10px;
       cursor: pointer;
       background: #fff;
     }
@@ -251,18 +260,17 @@
     <div class="logo" onclick="location.reload()">かなゲーム</div>
     <div class="nav-actions">
       <button class="nav-btn active">首页</button>
-      <button class="nav-btn" onclick="alert('词库管理扩展中')">词库</button>
-      <button class="nav-btn" onclick="openMistakesModal()">错词本 (<span id="mistakeBadge">0</span>)</button>
+      <button class="nav-btn" onclick="alert('词库模块即将开放')">词库</button>
+      <button class="nav-btn" onclick="openMistakesModal()">错词 (<span id="mistakeBadge">0</span>)</button>
       
       <!-- 用户状态胶囊按钮 -->
-      <div class="user-capsule" id="userBtn" onclick="openUserModal()">
+      <div class="user-capsule" id="userCapsuleBtn">
         <span class="user-avatar-tag" id="userAvatarIcon">🌸</span>
         <span id="userDisplayName">登录 / 注册</span>
       </div>
     </div>
   </header>
 
-  <!-- 游戏大厅内容区 -->
   <div class="container">
     <div class="hero-title">
       <div class="hero-icon">🌸</div>
@@ -270,10 +278,9 @@
       <p>选择教材与课程，开始挑战 ✨</p>
     </div>
 
-    <!-- 词库选择卡片 -->
     <div class="section-card">
       <div class="card-header-row">
-        <div style="font-size: 15px; font-weight: 700; color: #334155;">📖 选择词库</div>
+        <div style="font-size: 14px; font-weight: 700; color: #334155;">📖 选择词库</div>
         <div class="word-badge">40 词</div>
       </div>
       <div class="selectors-grid">
@@ -292,7 +299,6 @@
       </div>
     </div>
 
-    <!-- 游戏玩法模式选择卡片 -->
     <div class="modes-grid">
       <div class="mode-card puzzle" onclick="startGame('拼图模式')">
         <div class="mode-icon">🧩</div>
@@ -301,7 +307,6 @@
           <p>点击假名按钮<br>依次填入空格拼出单词</p>
         </div>
       </div>
-
       <div class="mode-card blocks" onclick="startGame('方块模式')">
         <div class="mode-icon">🎮</div>
         <div class="mode-info">
@@ -309,7 +314,6 @@
           <p>假名从天而降<br>移动到正确位置接住它！</p>
         </div>
       </div>
-
       <div class="mode-card link" onclick="startGame('连连看模式')">
         <div class="mode-icon">🔗</div>
         <div class="mode-info">
@@ -317,7 +321,6 @@
           <p>左右配对连线<br>把单词和释义连起来</p>
         </div>
       </div>
-
       <div class="mode-card match" onclick="startGame('消消乐模式')">
         <div class="mode-icon">🍬</div>
         <div class="mode-info">
@@ -328,15 +331,14 @@
     </div>
   </div>
 
-  <!-- 登录 / 注册 / 个人中心 弹窗 -->
+  <!-- 弹窗 -->
   <div class="modal-overlay" id="userModal">
     <div class="modal-content">
       <div class="modal-header">
         <div class="modal-title" id="modalTitle">用户登录 / 注册</div>
-        <button class="close-btn" onclick="closeUserModal()">&times;</button>
+        <button class="close-btn" id="closeModalBtn">&times;</button>
       </div>
 
-      <!-- 未登录面板 -->
       <div id="unauthPanel">
         <div class="input-group">
           <label>邮箱地址</label>
@@ -346,13 +348,12 @@
           <label>密码</label>
           <input type="password" id="inputPwd" placeholder="不少于6位密码">
         </div>
-        <div style="display:flex; gap:10px; margin-top:20px;">
+        <div style="display:flex; gap:10px; margin-top:16px;">
           <button class="btn" style="flex:1;" onclick="doSignIn()">登录</button>
           <button class="btn btn-secondary" style="flex:1;" onclick="doSignUp()">注册新账号</button>
         </div>
       </div>
 
-      <!-- 已登录个人中心面板 -->
       <div id="profilePanel" style="display:none;">
         <p style="font-size:13px; color:var(--text-sub); margin-bottom:12px;">当前账号：<b id="profileEmailTxt"></b></p>
         <div class="input-group">
@@ -368,7 +369,7 @@
           <label>个性昵称</label>
           <input type="text" id="inputNickname" placeholder="输入自定义昵称">
         </div>
-        <div style="display:flex; flex-direction:column; gap:10px; margin-top:20px;">
+        <div style="display:flex; flex-direction:column; gap:8px; margin-top:16px;">
           <button class="btn" onclick="saveUserProfile()">保存修改</button>
           <button class="btn btn-danger" onclick="doSignOut()">退出登录</button>
         </div>
@@ -377,17 +378,16 @@
   </div>
 
   <script>
-    // Supabase 客户端配置
+    // Supabase 初始化（重命名为 sbClient 避开同名冲突）
     const SUPABASE_URL = 'https://zbfjbtzvnhmfzyvooact.supabase.co';
     const SUPABASE_KEY = 'sb_publishable_AP0YnQLgzmB3d63_4zbpjg_vHeTyo8Z';
-    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+    const sbClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
 
     let currentUser = null;
     let selectedAvatar = localStorage.getItem('tangogo_avatar') || '🌸';
     let mistakesList = JSON.parse(localStorage.getItem('tangogo_mistakes') || '[]');
 
-    // 弹窗显隐控制函数（确保挂载在全局）
-    window.openUserModal = function() {
+    function openUserModal() {
       const modal = document.getElementById('userModal');
       const unauth = document.getElementById('unauthPanel');
       const profile = document.getElementById('profilePanel');
@@ -402,21 +402,21 @@
         unauth.style.display = 'block';
         profile.style.display = 'none';
       }
-      modal.classList.add('open');
-    };
+      modal.style.display = 'flex';
+    }
 
-    window.closeUserModal = function() {
-      document.getElementById('userModal').classList.remove('open');
-    };
+    function closeUserModal() {
+      document.getElementById('userModal').style.display = 'none';
+    }
 
-    window.chooseAvatar = function(av) {
+    function chooseAvatar(av) {
       selectedAvatar = av;
       document.querySelectorAll('.avatar-btn').forEach(btn => {
         btn.classList.toggle('active', btn.getAttribute('data-av') === av);
       });
-    };
+    }
 
-    window.refreshHeaderUI = function() {
+    function refreshHeaderUI() {
       const iconEl = document.getElementById('userAvatarIcon');
       const nameEl = document.getElementById('userDisplayName');
       if (currentUser) {
@@ -426,47 +426,50 @@
         iconEl.innerText = '🌸';
         nameEl.innerText = '登录 / 注册';
       }
-    };
+    }
 
-    // 登录 / 注册 / 登出逻辑
-    window.doSignUp = async function() {
+    async function doSignUp() {
       const email = document.getElementById('inputEmail').value.trim();
       const password = document.getElementById('inputPwd').value;
       if (!email || !password) return alert('请填写邮箱和密码');
-      const { data, error } = await supabase.auth.signUp({ email, password });
+      if (!sbClient) return alert('数据库组件加载中，请稍后再试');
+      
+      const { data, error } = await sbClient.auth.signUp({ email, password });
       if (error) return alert('注册失败: ' + error.message);
       alert('注册成功！');
       currentUser = data.user;
       closeUserModal();
       await syncDataFromCloud();
       refreshHeaderUI();
-    };
+    }
 
-    window.doSignIn = async function() {
+    async function doSignIn() {
       const email = document.getElementById('inputEmail').value.trim();
       const password = document.getElementById('inputPwd').value;
       if (!email || !password) return alert('请填写邮箱和密码');
-      const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+      if (!sbClient) return alert('数据库组件加载中，请稍后再试');
+
+      const { data, error } = await sbClient.auth.signInWithPassword({ email, password });
       if (error) return alert('登录失败: ' + error.message);
       currentUser = data.user;
       closeUserModal();
       await syncDataFromCloud();
       refreshHeaderUI();
-    };
+    }
 
-    window.doSignOut = async function() {
-      await supabase.auth.signOut();
+    async function doSignOut() {
+      if (sbClient) await sbClient.auth.signOut();
       currentUser = null;
       closeUserModal();
       refreshHeaderUI();
       alert('已退出登录');
-    };
+    }
 
-    window.saveUserProfile = async function() {
+    async function saveUserProfile() {
       localStorage.setItem('tangogo_avatar', selectedAvatar);
       const nickname = document.getElementById('inputNickname').value.trim();
-      if (currentUser) {
-        await supabase.from('profiles').update({
+      if (currentUser && sbClient) {
+        await sbClient.from('profiles').update({
           avatar_id: selectedAvatar,
           username: nickname || currentUser.email.split('@')[0],
           updated_at: new Date().toISOString()
@@ -475,48 +478,28 @@
       refreshHeaderUI();
       closeUserModal();
       alert('个人设置已保存！');
-    };
+    }
 
-    window.syncDataFromCloud = async function() {
-      if (!currentUser) return;
+    async function syncDataFromCloud() {
+      if (!currentUser || !sbClient) return;
       try {
-        const { data: profile } = await supabase.from('profiles').select('*').eq('id', currentUser.id).single();
+        const { data: profile } = await sbClient.from('profiles').select('*').eq('id', currentUser.id).single();
         if (profile?.avatar_id) selectedAvatar = profile.avatar_id;
 
-        const { data: cloudMistakes } = await supabase.from('user_mistakes').select('*').eq('user_id', currentUser.id);
+        const { data: cloudMistakes } = await sbClient.from('user_mistakes').select('*').eq('user_id', currentUser.id);
         if (cloudMistakes && cloudMistakes.length > 0) {
           mistakesList = cloudMistakes;
           localStorage.setItem('tangogo_mistakes', JSON.stringify(mistakesList));
-          updateMistakeBadge();
+          document.getElementById('mistakeBadge').innerText = mistakesList.length;
         }
       } catch (e) {
         console.error('云端数据同步失败:', e);
       }
-    };
-
-    window.updateMistakeBadge = function() {
-      document.getElementById('mistakeBadge').innerText = mistakesList.length;
-    };
-
-    window.openMistakesModal = function() {
-      alert(mistakesList.length === 0 ? '当前错词本为空，继续保持！' : `错词记录已安全保存在云端，共有 ${mistakesList.length} 个错题。`);
-    };
-
-    window.startGame = function(modeName) {
-      alert(`正在启动【${modeName}】，请稍候...`);
-    };
-
-    // 页面初始化
-    async function initApp() {
-      updateMistakeBadge();
-      const { data: { session } } = await supabase.auth.getSession();
-      if (session) {
-        currentUser = session.user;
-        await syncDataFromCloud();
-      }
-      refreshHeaderUI();
     }
-    initApp();
-  </script>
-</body>
-</html>
+
+    function openMistakesModal() {
+      alert(mistakesList.length === 0 ? '当前错词本为空，继续保持！' : `错词记录已安全保存在云端，共有 ${mistakesList.length} 个错题。`);
+    }
+
+    function startGame(modeName) {
+      alert(`正在启动【${modeName}】，请稍候...
