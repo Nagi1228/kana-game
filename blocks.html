@@ -119,28 +119,26 @@ body {
   font-size: 1.15rem; color: rgba(255,255,255,0.9); font-weight: 700; margin-top: 4px;
 }
 
-/* 核心舞台 */
+/* 核心舞台与下落区域：设为 relative 统一管理方块坐标 */
 .tetris-main {
   flex: 1; display: flex; flex-direction: column; align-items: center;
   justify-content: flex-end; position: relative; overflow: hidden; z-index: 5;
 }
-.tetris-stage-wrap {
-  flex: 1; width: 100%; position: relative; overflow: hidden;
-}
 
-/* 下落的单假名橙色圆角方块 */
+/* 下落的单假名橙色圆角方块：尺寸与下方插槽完全严格一致 (76px * 72px, border-radius: 18px) */
 .falling-block {
   position: absolute;
-  width: 72px; height: 72px;
+  width: 76px; height: 72px;
   background: linear-gradient(135deg, #fb923c, #ea580c);
-  border: 3.5px solid rgba(255,255,255,0.95);
-  border-radius: 20px;
+  border: 3px solid rgba(255,255,255,0.95);
+  border-radius: 18px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 2.3rem; font-weight: 900; color: #fff;
+  font-size: 2.1rem; font-weight: 900; color: #fff;
   box-shadow: 0 8px 24px rgba(0,0,0,0.3), inset 0 2px 4px rgba(255,255,255,0.4);
   transform: translateX(-50%);
   transition: left 0.12s cubic-bezier(0.2, 0.8, 0.2, 1);
   pointer-events: none;
+  z-index: 8;
 }
 
 /* 原版准备学习阶段遮罩 */
@@ -164,7 +162,7 @@ body {
   transition: width 2s linear;
 }
 
-/* 底部插槽栏：居中固定宽度，与方块对齐 */
+/* 底部插槽栏 */
 .tetris-ground {
   width: 100%; padding-bottom: 12px;
   position: relative; z-index: 6; flex-shrink: 0;
@@ -178,16 +176,25 @@ body {
   border: 2.5px solid rgba(255,255,255,0.5);
   border-radius: 18px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.9rem; font-weight: 900; color: #fff;
+  font-size: 2.1rem; font-weight: 900; color: #fff;
   background: rgba(255,255,255,0.2); backdrop-filter: blur(6px);
-  position: relative; transition: all 0.2s;
+  position: relative; transition: all 0.15s ease;
 }
 .tetris-slot .slot-idx {
   position: absolute; top: 4px; font-size: 0.65rem; color: rgba(255,255,255,0.7);
 }
+
+/* 原版落地弹跳动画 */
+@keyframes land-bounce {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.15); }
+  60% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
 .tetris-slot.correct-slot {
   background: #10b981; border-color: #a7f3d0; color: #fff;
   box-shadow: 0 0 18px rgba(16,185,129,0.9);
+  animation: land-bounce 0.38s cubic-bezier(0.175,0.885,0.32,1.4);
 }
 .tetris-slot.wrong-slot {
   background: rgba(239,68,68,0.7); border-color: #fca5a5;
@@ -257,22 +264,22 @@ body {
       <div class="tetris-meaning-hint" id="tet-meaning">鞋</div>
     </div>
 
-    <div class="tetris-main">
-      <div class="tetris-stage-wrap" id="stageWrap">
-        <!-- 准备学习阶段遮罩 -->
-        <div class="tetris-preview" id="tetrisPreview" hidden>
-          <div class="preview-kana" id="previewKana">くつ</div>
-          <div class="preview-hint">记住这个单词，马上开始！</div>
-          <div class="preview-bar"><div class="preview-bar-fill" id="previewBarFill"></div></div>
-        </div>
-
-        <div class="falling-block" id="fallingBlock" style="display:none;">つ</div>
-        
-        <div class="tetris-pause-overlay" id="pauseOverlay" hidden>
-          <div class="pause-text">⏸ 已暂停</div>
-          <div class="pause-sub">点击下方继续按钮或按 P 键恢复</div>
-        </div>
+    <div class="tetris-main" id="tetrisMain">
+      <!-- 准备学习阶段遮罩 -->
+      <div class="tetris-preview" id="tetrisPreview" hidden>
+        <div class="preview-kana" id="previewKana">くつ</div>
+        <div class="preview-hint">记住这个单词，马上开始！</div>
+        <div class="preview-bar"><div class="preview-bar-fill" id="previewBarFill"></div></div>
       </div>
+
+      <!-- 下落方块直接置于主舞台内统一运动坐标 -->
+      <div class="falling-block" id="fallingBlock" style="display:none;">つ</div>
+      
+      <div class="tetris-pause-overlay" id="pauseOverlay" hidden>
+        <div class="pause-text">⏸ 已暂停</div>
+        <div class="pause-sub">点击下方继续按钮或按 P 键恢复</div>
+      </div>
+
       <div class="tetris-ground">
         <div class="tetris-slots-row" id="slotsRow"></div>
       </div>
@@ -328,11 +335,10 @@ body {
     let currentWord = null;
     let filledChars = [];
     let currentFallingChar = '';
-    let targetSlotIndex = 0; // 该假名在单词里的真实正确位置
-    let currentTrack = 0;    // 当前方块所在的轨道（玩家可移动）
+    let targetSlotIndex = 0;
+    let currentTrack = 0;
     let slotCount = 2;
     let blockY = 0;
-    // 原版平缓下落初速：0.9px/帧
     const NORMAL_SPEED = 0.9;
     let dropSpeed = NORMAL_SPEED;
     let animId = null;
@@ -408,7 +414,6 @@ body {
       document.getElementById('tet-meaning').innerText = currentWord.meaning;
       document.getElementById('fallingBlock').style.display = 'none';
 
-      // 动态生成和单词长度完全匹配的插槽
       const slotsRow = document.getElementById('slotsRow');
       slotsRow.innerHTML = '';
       for (let i = 0; i < slotCount; i++) {
@@ -419,7 +424,6 @@ body {
         slotsRow.appendChild(slot);
       }
 
-      // 4. 原版学习时间（2秒记忆预览遮罩）
       startWordPreview();
     }
 
@@ -469,10 +473,9 @@ body {
       blockEl.innerText = currentFallingChar;
       blockEl.style.display = 'flex';
 
-      // 3. 初始位置：随机出生，不直接停留在目标插槽正上方，必须用户手动调整
+      // 错开初始出生轨道
       if (slotCount > 1) {
         let spawnTrack = Math.floor(Math.random() * slotCount);
-        // 如果随机抽中了正确位置，主动错开一格
         if (spawnTrack === targetSlotIndex) {
           spawnTrack = (spawnTrack + 1) % slotCount;
         }
@@ -482,7 +485,7 @@ body {
       }
 
       blockY = 0;
-      dropSpeed = NORMAL_SPEED; // 1. 速度放慢，反应时间充裕
+      dropSpeed = NORMAL_SPEED;
       
       requestAnimationFrame(updateBlockPosition);
 
@@ -490,20 +493,19 @@ body {
       if (!isPaused) animate();
     }
 
-    // 2. 方块始终严丝合缝垂直对准下方对应的插槽正中心
+    // 方块水平垂直对应目标插槽
     function updateBlockPosition() {
       const targetSlot = document.getElementById(`tet-slot-${currentTrack}`);
-      const stage = document.getElementById('stageWrap');
-      if (!targetSlot || !stage) return;
+      const mainStage = document.getElementById('tetrisMain');
+      if (!targetSlot || !mainStage) return;
 
       const slotRect = targetSlot.getBoundingClientRect();
-      const stageRect = stage.getBoundingClientRect();
+      const stageRect = mainStage.getBoundingClientRect();
 
       const slotCenterX = (slotRect.left + slotRect.width / 2) - stageRect.left;
       document.getElementById('fallingBlock').style.left = `${slotCenterX}px`;
     }
 
-    // 左右切轨
     function moveLeft() {
       if (isPaused) return;
       if (currentTrack > 0) {
@@ -522,7 +524,7 @@ body {
 
     function quickDrop() {
       if (isPaused) return;
-      dropSpeed = 10;
+      dropSpeed = 11;
     }
 
     window.addEventListener('keydown', (e) => {
@@ -532,27 +534,47 @@ body {
       if (e.key === 'ArrowDown' || e.key === 's' || e.key === 'S') quickDrop();
     });
 
+    // 核心下落与精确重合判定
     function animate() {
       if (isPaused) return;
-      const stage = document.getElementById('stageWrap');
-      const maxH = stage.clientHeight - 72;
+
+      const targetSlot = document.getElementById(`tet-slot-${currentTrack}`);
+      const mainStage = document.getElementById('tetrisMain');
+      
+      // 准确读取当前对应插槽的绝对 top 位置
+      let slotTop = 0;
+      if (targetSlot && mainStage) {
+        const slotRect = targetSlot.getBoundingClientRect();
+        const stageRect = mainStage.getBoundingClientRect();
+        slotTop = slotRect.top - stageRect.top;
+      } else {
+        slotTop = mainStage.clientHeight - 84;
+      }
 
       blockY += dropSpeed;
-      document.getElementById('fallingBlock').style.top = `${blockY}px`;
 
-      if (blockY >= maxH) {
+      // 当方块的顶部严格达到/超过插槽顶部时，即算作完全重合落进空格
+      if (blockY >= slotTop) {
+        blockY = slotTop;
+        document.getElementById('fallingBlock').style.top = `${blockY}px`;
         handleLanding();
       } else {
+        document.getElementById('fallingBlock').style.top = `${blockY}px`;
         animId = requestAnimationFrame(animate);
       }
     }
 
     function handleLanding() {
       const slotEl = document.getElementById(`tet-slot-${currentTrack}`);
+      const blockEl = document.getElementById('fallingBlock');
 
-      // 玩家移动到位，正确命中目标位置
+      // 方块已完美沉入插槽中，隐藏悬浮方块，由插槽承接展示
+      blockEl.style.display = 'none';
+
+      // 玩家移动到位，正确落入目标空格
       if (currentTrack === targetSlotIndex) {
         filledChars[targetSlotIndex] = currentFallingChar;
+        slotEl.classList.remove('wrong-slot');
         slotEl.classList.add('correct-slot');
         slotEl.querySelector('.slot-char').innerText = currentFallingChar;
         score += 10;
