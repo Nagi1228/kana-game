@@ -215,7 +215,7 @@ select.deck-pick:focus { border-color: var(--accent); }
     <div class="add-word-form">
       <h3 class="cn-text">📥 批量导入 / 整册智能分课导入</h3>
       <p class="import-hint cn-text">
-        ✨ <strong>支持各种格式文件</strong>：系统已内置 GBK/GB18030/UTF-8 编码自动识别，Excel 导出的 CSV 文件直接上传绝不乱码！<br>
+        ✨ <strong>支持各类已转换好的 CSV 文件</strong>：采用原生纯净解码，完美杜绝乱码。<br>
         💡 <strong>分课规则</strong>：自动精确识别 <code>入门单元第1课</code>、<code>入门单元 第1课</code>、<code>第1课</code> 等各课标记并归档。
       </p>
       <label class="csv-upload-label">
@@ -524,9 +524,11 @@ select.deck-pick:focus { border-color: var(--accent); }
       }
     }
 
+    // 智能匹配升级版：彻底消除空格影响，优先捕获“入门”与单元信息
     function matchLessonLine(line, availableLessons) {
       const clean = line.replace(/[#\[\]\(\)\/\s,]/g, '').trim();
 
+      // 1. 优先匹配包含“入门”的情况
       if (clean.includes('入门')) {
         const mIntro = clean.match(/入门.*?(\d+)/);
         if (mIntro) {
@@ -536,12 +538,14 @@ select.deck-pick:focus { border-color: var(--accent); }
         }
       }
 
+      // 2. 无空格完全包含匹配
       const exact = availableLessons.find(l => {
         const lClean = l.name.replace(/\s+/g, '');
         return clean.includes(lClean) && (!clean.includes('入门') || lClean.includes('入门'));
       });
       if (exact) return exact.id;
 
+      // 3. 匹配常规 "第X课"
       const mZh = clean.match(/第(\d+)课/);
       if (mZh) {
         const num = parseInt(mZh[1], 10);
@@ -553,6 +557,7 @@ select.deck-pick:focus { border-color: var(--accent); }
         if (found) return found.id;
       }
 
+      // 4. 匹配 "Lesson X" / "L X"
       const mEn = clean.match(/(?:lesson|l)(\d+)/i);
       if (mEn) {
         const num = parseInt(mEn[1], 10);
@@ -584,6 +589,7 @@ select.deck-pick:focus { border-color: var(--accent); }
         const row = line.trim();
         if (!row) return;
 
+        // 检查该行是否为分课指示行
         const matchedLId = matchLessonLine(row, availableLessons);
         if (matchedLId) {
           activeLessonId = matchedLId;
@@ -642,41 +648,24 @@ select.deck-pick:focus { border-color: var(--accent); }
       await onGradeChange();
     }
 
-    // 智能双编码自适应读取：彻底解决 GBK/ANSI 乱码
+    // 采用与本地版一致的标准解码（完美支持转换好的 UTF-8 文件）
     function handleFileUpload(event) {
       const file = event.target.files[0];
       if (!file) return;
 
       const reader = new FileReader();
       reader.onload = function(e) {
-        const buffer = e.target.result;
-        
-        // 1. 尝试以 UTF-8 解码
-        let text = '';
-        let isUtf8 = true;
-        try {
-          const decoderUtf8 = new TextDecoder('utf-8', { fatal: true });
-          text = decoderUtf8.decode(buffer);
-        } catch (err) {
-          isUtf8 = false;
+        let content = e.target.result;
+        // 自动剔除可能存在的 UTF-8 BOM 头
+        if (content.charCodeAt(0) === 0xFEFF) {
+          content = content.slice(1);
         }
-
-        // 2. 如果 UTF-8 解码失败或包含乱码替换符，直接采用 GB18030 (完美兼容 GBK / ANSI)
-        if (!isUtf8 || text.includes('')) {
-          try {
-            const decoderGbk = new TextDecoder('gb18030');
-            text = decoderGbk.decode(buffer);
-          } catch (err2) {
-            console.error('解码失败:', err2);
-          }
-        }
-
-        document.getElementById('importArea').value = text;
-        showToast('✅ 识别文件编码成功！假名已正常显示');
+        document.getElementById('importArea').value = content;
+        showToast('✅ 文件加载成功！');
       };
-
-      // 以原始 ArrayBuffer 读取，交由 TextDecoder 智能判断
-      reader.readAsArrayBuffer(file);
+      
+      // 默认使用 UTF-8 读取（与你本地版一致）
+      reader.readAsText(file, 'utf-8');
     }
 
     async function exportBackupJSON() {
