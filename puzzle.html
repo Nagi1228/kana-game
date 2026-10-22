@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>かなゲーム - 拼图模式</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" media="print" onload="this.media='all';this.onload=null"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=M+PLUS+Rounded+1c:wght@400;700;900&family=Noto+Sans+SC:wght@400;700;900&display=swap">
 <style>
 :root {
   --bg: #f0f7ff;
@@ -33,13 +37,17 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   min-height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Noto Sans SC', sans-serif;
   background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
   color: var(--fg);
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
+  user-select: none;
 }
+.jp-text { font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif; }
+.cn-text { font-family: 'Noto Sans SC', sans-serif; }
+[hidden] { display: none !important; }
 
 .top-nav {
   display: flex; align-items: center; gap: 10px; padding: 12px 24px;
@@ -55,14 +63,14 @@ body {
   flex: 1; display: flex; flex-direction: column; align-items: center;
   padding: 24px 16px; gap: 18px;
 }
-.game-header { width: 100%; max-width: 840px; display: flex; align-items: center; gap: 14px; }
+.game-header { width: 100%; max-width: 840px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
 .back-btn {
   background: var(--surface); border: 2px solid var(--border); border-radius: 24px;
   padding: 8px 16px; font-size: 0.95rem; font-weight: 700; color: var(--fg2);
   cursor: pointer; transition: border-color 0.15s, color 0.15s; white-space: nowrap;
 }
 .back-btn:hover { border-color: var(--accent); color: var(--accent); }
-.progress-row { flex: 1; display: flex; align-items: center; gap: 10px; min-width: 0; }
+.progress-row { flex: 1; display: flex; align-items: center; gap: 10px; min-width: 140px; }
 .progress-bar { flex: 1; height: 10px; background: var(--bg3); border-radius: 5px; overflow: hidden; min-width: 0; }
 .progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-hot)); border-radius: 5px; transition: width 0.4s ease; width: 10%; }
 .score-chip {
@@ -95,13 +103,13 @@ body {
 .sort-timer-bar { flex: 1; height: 12px; background: var(--bg3); border-radius: 6px; overflow: hidden; }
 #sort-timer-fill { height: 100%; border-radius: 6px; transition: width 0.9s linear, background-color 0.5s; background: #22c55e; width: 100%; }
 
-/* 原版单词卡片 */
+/* 单词展示卡片 */
 .word-card {
   width: 100%; max-width: 840px; background: var(--surface); border-radius: 24px;
   padding: 28px 32px; text-align: center; box-shadow: 0 6px 28px var(--shadow);
   border: 2px solid var(--border); display: flex; flex-direction: column; align-items: center; gap: 12px;
 }
-.word-kanji { font-size: clamp(2.6rem, 5.5vw, 4.2rem); font-weight: 900; color: var(--fg); line-height: 1.15; }
+.word-kanji { font-size: clamp(2.6rem, 5.5vw, 4.2rem); font-weight: 900; color: var(--fg); line-height: 1.15; min-height: 52px; }
 .word-meta-badges { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; }
 .meta-badge { display: inline-flex; align-items: center; gap: 5px; padding: 5px 14px; border-radius: 20px; font-size: 0.95rem; font-weight: 800; }
 .meta-badge.pitch-badge { background: var(--warn-bg); color: var(--warn); border: 1.5px solid rgba(217,119,6,0.35); }
@@ -124,11 +132,11 @@ body {
 .slot.filled { border-style: solid; border-color: var(--accent); background: var(--bg2); box-shadow: 0 2px 10px var(--shadow); }
 .slot.correct { border-color: var(--correct); background: var(--correct-bg); color: var(--correct); animation: pop-in 0.35s cubic-bezier(0.175,0.885,0.32,1.4); }
 .slot.wrong { border-color: var(--wrong); background: var(--wrong-bg); color: var(--wrong); animation: shake 0.4s ease; }
-@keyframes shake { 0%,100%{transform:translateX(0)}20%{transform:translateX(-7px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(5px)} }
-@keyframes pop-in { 0%{transform:scale(0.6)}70%{transform:scale(1.18)}100%{transform:scale(1)} }
+@keyframes shake { 0%,100%{transform:translateX(0)} 20%{transform:translateX(-7px)} 40%{transform:translateX(7px)} 60%{transform:translateX(-5px)} 80%{transform:translateX(5px)} }
+@keyframes pop-in { 0%{transform:scale(0.6)} 70%{transform:scale(1.18)} 100%{transform:scale(1)} }
 .slot-num { position: absolute; top: 4px; left: 50%; transform: translateX(-50%); font-size: 0.6rem; font-weight: 700; color: var(--fg3); opacity: 0.5; }
 
-/* 原版假名卡片池 */
+/* 假名按钮池 */
 .kana-pool { width: 100%; max-width: 840px; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
 .kana-btn {
   width: 72px; height: 72px; border-radius: 18px; border: 3px solid var(--border);
@@ -146,39 +154,69 @@ body {
   font-size: 1rem; font-weight: 700; cursor: pointer; transition: transform 0.1s, box-shadow 0.15s;
 }
 .action-btn:active { transform: scale(0.96); }
+.btn-primary { background: linear-gradient(135deg, var(--accent), #1d4ed8); color: #fff; box-shadow: 0 4px 16px var(--shadow); }
+.btn-hot { background: linear-gradient(135deg, var(--accent-hot), #ea580c); color: #fff; }
 .btn-secondary { background: var(--surface); color: var(--fg2); border: 2.5px solid var(--border); }
 .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
 .result-message {
   font-size: 1.25rem; font-weight: 700; text-align: center; padding: 16px 24px;
   border-radius: 16px; width: 100%; max-width: 840px;
 }
 .result-message.success { background: var(--correct-bg); color: var(--correct); }
 .result-message.fail { background: var(--wrong-bg); color: var(--wrong); }
+
+/* 原生 Toast 与 通关 Overlay */
+.toast {
+  position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%) translateY(20px);
+  background: var(--fg); color: #fff; border-radius: 28px; padding: 12px 26px;
+  font-size: 1rem; font-weight: 700; opacity: 0; transition: all 0.25s ease; z-index: 300; pointer-events: none;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+.overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.65); display: flex; align-items: center; justify-content: center;
+  z-index: 200; padding: 20px; backdrop-filter: blur(8px);
+}
+.overlay-card {
+  background: var(--surface); border-radius: 28px; padding: 34px 28px; text-align: center;
+  width: 100%; max-width: 440px; display: flex; flex-direction: column; gap: 14px;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.35); border: 2px solid var(--border);
+}
+.overlay-emoji { font-size: 3.2rem; }
+.overlay-title { font-size: 1.8rem; font-weight: 900; }
+.overlay-body { font-size: 1rem; color: var(--fg2); line-height: 1.65; }
+.overlay-stats-box {
+  background: var(--bg); border-radius: 16px; padding: 12px 16px; display: grid; grid-template-columns: 1fr 1fr;
+  gap: 8px; font-size: 0.9rem; font-weight: 700; text-align: left;
+}
+.overlay-stats-item b { color: var(--accent); }
+.overlay-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 6px; }
 </style>
 </head>
 <body>
 
   <nav class="top-nav">
-    <div class="nav-logo" onclick="location.href='index.html'">かな<span>ゲーム</span></div>
+    <div class="nav-logo jp-text" onclick="location.href='index.html'">かな<span>ゲーム</span></div>
   </nav>
 
   <div class="sort-game">
     <div class="game-header">
-      <button class="back-btn" onclick="location.href='index.html'">← 返回</button>
-      <span class="score-chip level-chip">第 <span id="sort-level">1</span> 关</span>
+      <button class="back-btn cn-text" onclick="location.href='index.html'">← 返回</button>
+      <span class="score-chip level-chip cn-text" id="groupBadge">第 1 关</span>
       <div class="progress-row">
         <div class="progress-bar"><div class="progress-fill" id="sort-progress"></div></div>
         <span class="score-chip" id="sort-counter">1/10</span>
       </div>
-      <span class="score-chip big" id="sort-score">0分</span>
+      <span class="score-chip big cn-text" id="sort-score">0分</span>
     </div>
 
     <div class="timer-toggle-row">
-      <span class="timer-toggle-label">⏱ 限时</span>
-      <button class="timer-opt-btn active" onclick="setTimerSecs(0, this)">关闭</button>
-      <button class="timer-opt-btn" onclick="setTimerSecs(15, this)">15秒</button>
-      <button class="timer-opt-btn" onclick="setTimerSecs(30, this)">30秒</button>
-      <button class="timer-opt-btn" onclick="setTimerSecs(45, this)">45秒</button>
+      <span class="timer-toggle-label cn-text">⏱ 限时</span>
+      <button class="timer-opt-btn cn-text active" onclick="setTimerSecs(0, this)">关闭</button>
+      <button class="timer-opt-btn cn-text" onclick="setTimerSecs(15, this)">15秒</button>
+      <button class="timer-opt-btn cn-text" onclick="setTimerSecs(30, this)">30秒</button>
+      <button class="timer-opt-btn cn-text" onclick="setTimerSecs(45, this)">45秒</button>
     </div>
 
     <div class="sort-timer-wrap" id="sort-timer-wrap" hidden>
@@ -189,51 +227,44 @@ body {
     </div>
 
     <div class="word-card">
-      <div class="word-kanji" id="sort-kanji">测验，测试</div>
+      <div class="word-kanji jp-text" id="sort-kanji">测验，测试</div>
       <div class="word-meta-badges">
-        <span class="meta-badge pitch-badge" id="sort-pitch">声调: ①</span>
-        <span class="meta-badge pos-badge" id="sort-pos">词性: 名词</span>
+        <span class="meta-badge pitch-badge cn-text" id="sort-pitch">声调: ①</span>
+        <span class="meta-badge pos-badge cn-text" id="sort-pos">词性: 名词</span>
       </div>
-      <div class="word-meaning" id="sort-meaning">测验，测试</div>
-      <div class="word-hint" id="sort-hint">共 3 个假名</div>
+      <div class="word-meaning cn-text" id="sort-meaning">测验，测试</div>
+      <div class="word-hint cn-text" id="sort-hint">共 3 个假名</div>
     </div>
 
     <div class="answer-zone" id="sort-answer-zone"></div>
-    <div class="kana-pool" id="sort-kana-pool"></div>
+    <div class="kana-pool jp-text" id="sort-kana-pool"></div>
 
     <div class="sort-actions">
-      <button class="action-btn btn-secondary" onclick="undoLast()">↩ 撤销</button>
-      <button class="action-btn btn-secondary" onclick="resetSlots()">🔄 重置</button>
+      <button class="action-btn btn-secondary cn-text" onclick="undoLast()">↩ 撤销</button>
+      <button class="action-btn btn-secondary cn-text" onclick="resetSlots()">🔄 重置</button>
     </div>
 
-    <div class="result-message" id="sort-result" hidden></div>
+    <div class="result-message cn-text" id="sort-result" hidden></div>
   </div>
+
+  <!-- 原生通关/结束弹窗 -->
+  <div class="overlay" id="overlay" hidden>
+    <div class="overlay-card">
+      <div class="overlay-emoji" id="ov-emoji">🏆</div>
+      <div class="overlay-title cn-text" id="ov-title">整课大通关！</div>
+      <div class="overlay-body cn-text" id="ov-body"></div>
+      <div class="overlay-stats-box" id="ov-stats" hidden></div>
+      <div class="overlay-actions" id="ov-actions"></div>
+    </div>
+  </div>
+
+  <div class="toast cn-text" id="toast"></div>
 
   <script>
     const SUPABASE_URL = 'https://zbfjbtzvnhmfzyvooact.supabase.co';
     const SUPABASE_KEY = 'sb_publishable_AP0YnQLgzmB3d63_4zbpjg_vHeTyo8Z';
     const sbClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
-
     let currentUser = null;
-    let score = 0;
-    let currentIndex = 0;
-    let currentInput = [];
-    let timerSecs = 0;
-    let timerInterval = null;
-    let timeLeft = 0;
-
-    const questions = [
-      { kanji: 'テスト', kana: 'テスト', pitch: '①', pos: '名词', meaning: '测验，测试' },
-      { kanji: '先生', kana: 'せんせい', pitch: '③', pos: '名词', meaning: '老师' },
-      { kanji: '学生', kana: 'がくせい', pitch: '⓪', pos: '名词', meaning: '学生' },
-      { kanji: '友達', kana: 'ともだち', pitch: '⓪', pos: '名词', meaning: '朋友' },
-      { kanji: '本', kana: 'ほん', pitch: '①', pos: '名词', meaning: '书' },
-      { kanji: 'ありがとう', kana: 'ありがとう', pitch: '②', pos: '感叹词', meaning: '谢谢' },
-      { kanji: 'おはよう', kana: 'おはよう', pitch: '⓪', pos: '感叹词', meaning: '早上好' },
-      { kanji: '挨拶', kana: 'あいさつ', pitch: '①', pos: '名词', meaning: '寒暄，打招呼' },
-      { kanji: 'ノート', kana: 'ノート', pitch: '①', pos: '名词', meaning: '笔记本' },
-      { kanji: '時計', kana: 'とけい', pitch: '⓪', pos: '名词', meaning: '手表，钟表' }
-    ];
 
     async function initAuth() {
       if (!sbClient) return;
@@ -258,6 +289,83 @@ body {
           }, { onConflict: 'user_id,word' });
         } catch (e) { console.error(e); }
       }
+    }
+
+    // 本课完整生词库（按每组 10 词划分）
+    const FULL_LESSON_WORDS = [
+      { kanji: '本', kana: 'ほん', pitch: '①', pos: '名词', meaning: '书' },
+      { kanji: '', kana: 'かばん', pitch: '⓪', pos: '名词', meaning: '包，公文包' },
+      { kanji: '', kana: 'ノート', pitch: '①', pos: '名词', meaning: '笔记本，本子' },
+      { kanji: '鉛筆', kana: 'えんぴつ', pitch: '⓪', pos: '名词', meaning: '铅笔' },
+      { kanji: '傘', kana: 'かさ', pitch: '①', pos: '名词', meaning: '伞' },
+      { kanji: '靴', kana: 'くつ', pitch: '②', pos: '名词', meaning: '鞋' },
+      { kanji: '新聞', kana: 'しんぶん', pitch: '⓪', pos: '名词', meaning: '报纸' },
+      { kanji: '雑誌', kana: 'ざっし', pitch: '⓪', pos: '名词', meaning: '杂志' },
+      { kanji: '辞書', kana: 'じしょ', pitch: '①', pos: '名词', meaning: '词典' },
+      { kanji: '', kana: 'カメラ', pitch: '①', pos: '名词', meaning: '照相机' },
+      // 第 2 组 (11~20)
+      { kanji: '', kana: 'テレビ', pitch: '①', pos: '名词', meaning: '电视机' },
+      { kanji: '', kana: 'パソコン', pitch: '②', pos: '名词', meaning: '个人电脑' },
+      { kanji: '', kana: 'ラジオ', pitch: '①', pos: '名词', meaning: '收音机' },
+      { kanji: '電話', kana: 'でんわ', pitch: '⓪', pos: '名词', meaning: '电话' },
+      { kanji: '机', kana: 'つくえ', pitch: '⓪', pos: '名词', meaning: '桌子，书桌' },
+      { kanji: '', kana: 'いす', pitch: '⓪', pos: '名词', meaning: '椅子' },
+      { kanji: '', kana: 'かぎ', pitch: '②', pos: '名词', meaning: '钥匙，锁' },
+      { kanji: '時計', kana: 'とけい', pitch: '⓪', pos: '名词', meaning: '钟，表' },
+      { kanji: '手帳', kana: 'てちょう', pitch: '⓪', pos: '名词', meaning: '记事本' },
+      { kanji: '写真', kana: 'しゃしん', pitch: '⓪', pos: '名词', meaning: '照片' },
+      // 第 3 组 (21~25)
+      { kanji: '車', kana: 'くるま', pitch: '⓪', pos: '名词', meaning: '车' },
+      { kanji: '自転車', kana: 'じてんしゃ', pitch: '②', pos: '名词', meaning: '自行车' },
+      { kanji: 'お土産', kana: 'おみやげ', pitch: '⓪', pos: '名词', meaning: '礼物' },
+      { kanji: '会社', kana: 'かいしゃ', pitch: '⓪', pos: '名词', meaning: '公司' },
+      { kanji: '日本語', kana: 'にほんご', pitch: '⓪', pos: '名词', meaning: '日语' }
+    ];
+
+    const GROUP_SIZE = 10;
+    let currentGroupIndex = 0;
+    const totalGroups = Math.ceil(FULL_LESSON_WORDS.length / GROUP_SIZE);
+
+    let currentGroupWords = [];
+    let currentIndex = 0;
+    let currentInput = [];
+    let score = 0;
+    let lessonScoreTotal = 0;
+    let lessonStartTime = Date.now();
+
+    let timerSecs = 0;
+    let timerInterval = null;
+    let timeLeft = 0;
+    let toastTimer = null;
+
+    function showToast(msg, duration = 2200) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => t.classList.remove('show'), duration);
+    }
+
+    function shuffle(arr) {
+      const a = [...arr];
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    function startGroup(groupIdx) {
+      currentGroupIndex = groupIdx;
+      const start = groupIdx * GROUP_SIZE;
+      const end = Math.min(start + GROUP_SIZE, FULL_LESSON_WORDS.length);
+      currentGroupWords = shuffle(FULL_LESSON_WORDS.slice(start, end));
+      currentIndex = 0;
+      score = 0;
+
+      document.getElementById('groupBadge').innerText = `第 ${currentGroupIndex + 1}/${totalGroups} 组`;
+      document.getElementById('sort-score').innerText = `${score}分`;
+      loadQuestion();
     }
 
     function setTimerSecs(secs, btn) {
@@ -298,7 +406,7 @@ body {
     }
 
     function handleTimeout() {
-      const q = questions[currentIndex];
+      const q = currentGroupWords[currentIndex];
       const res = document.getElementById('sort-result');
       res.hidden = false;
       res.className = 'result-message fail';
@@ -311,31 +419,27 @@ body {
     }
 
     function loadQuestion() {
-      if (currentIndex >= questions.length) {
+      if (currentIndex >= currentGroupWords.length) {
         clearInterval(timerInterval);
-        document.getElementById('sort-kanji').innerText = '🎉 挑战完成！';
-        document.getElementById('sort-meaning').innerText = `最终得分: ${score} 分`;
-        document.getElementById('sort-hint').innerText = '';
-        document.getElementById('sort-answer-zone').innerHTML = '';
-        document.getElementById('sort-kana-pool').innerHTML = '<button class="action-btn btn-secondary" onclick="location.reload()">再玩一次</button>';
+        lessonScoreTotal += score;
+        handleGroupOrLessonComplete();
         return;
       }
 
-      const q = questions[currentIndex];
+      const q = currentGroupWords[currentIndex];
       currentInput = [];
       document.getElementById('sort-result').hidden = true;
 
-      document.getElementById('sort-level').innerText = currentIndex + 1;
-      document.getElementById('sort-counter').innerText = `${currentIndex + 1}/${questions.length}`;
-      document.getElementById('sort-progress').style.width = `${((currentIndex + 1) / questions.length) * 100}%`;
+      document.getElementById('sort-counter').innerText = `${currentIndex + 1}/${currentGroupWords.length}`;
+      document.getElementById('sort-progress').style.width = `${((currentIndex + 1) / currentGroupWords.length) * 100}%`;
 
-      document.getElementById('sort-kanji').innerText = q.meaning;
+      const hasKanji = q.kanji && q.kanji.trim() !== '' && q.kanji.trim() !== q.kana.trim();
+      document.getElementById('sort-kanji').innerText = hasKanji ? q.kanji : '——';
       document.getElementById('sort-pitch').innerText = `声调: ${q.pitch || '⓪'}`;
       document.getElementById('sort-pos').innerText = `词性: ${q.pos || '名'}`;
-      document.getElementById('sort-meaning').innerText = q.kanji;
+      document.getElementById('sort-meaning').innerText = q.meaning;
       document.getElementById('sort-hint').innerText = `共 ${q.kana.length} 个假名`;
 
-      // 渲染插槽
       const ansZone = document.getElementById('sort-answer-zone');
       ansZone.innerHTML = '';
       for (let i = 0; i < q.kana.length; i++) {
@@ -347,7 +451,6 @@ body {
         ansZone.appendChild(slot);
       }
 
-      // 打乱假名生成按钮
       const chars = q.kana.split('').sort(() => Math.random() - 0.5);
       const pool = document.getElementById('sort-kana-pool');
       pool.innerHTML = '';
@@ -364,7 +467,7 @@ body {
     }
 
     function selectLetter(char, btnIdx) {
-      const q = questions[currentIndex];
+      const q = currentGroupWords[currentIndex];
       if (currentInput.length >= q.kana.length) return;
 
       currentInput.push({ char, btnIdx });
@@ -399,7 +502,7 @@ body {
     }
 
     function renderSlots() {
-      const q = questions[currentIndex];
+      const q = currentGroupWords[currentIndex];
       for (let i = 0; i < q.kana.length; i++) {
         const slot = document.getElementById(`slot-${i}`);
         const valEl = slot.querySelector('.slot-val');
@@ -414,7 +517,7 @@ body {
     }
 
     function checkAnswer() {
-      const q = questions[currentIndex];
+      const q = currentGroupWords[currentIndex];
       const ans = currentInput.map(item => item.char).join('');
       const res = document.getElementById('sort-result');
       res.hidden = false;
@@ -447,9 +550,103 @@ body {
       }
     }
 
+    // 核心分组与整课通关流
+    function handleGroupOrLessonComplete() {
+      if (currentGroupIndex < totalGroups - 1) {
+        // 还有下一组：平滑通知并自动切入下一组
+        showToast(`🎉 第 ${currentGroupIndex + 1} 组完成！准备进入下一组...`);
+        setTimeout(() => {
+          startGroup(currentGroupIndex + 1);
+        }, 1200);
+      } else {
+        // 整课通关：展示大弹窗与4个功能按钮
+        const totalSeconds = Math.max(1, Math.round((Date.now() - lessonStartTime) / 1000));
+        const m = Math.floor(totalSeconds / 60); const s = totalSeconds % 60;
+        const timeFormatted = `${m > 0 ? m + '分' : ''}${s}秒`;
+
+        const overlay = document.getElementById('overlay');
+        document.getElementById('ov-body').textContent = `太棒了！本课全部 ${FULL_LESSON_WORDS.length} 个单词已全部拼图通关！`;
+        const statsEl = document.getElementById('ov-stats');
+        statsEl.hidden = false;
+        statsEl.innerHTML = `
+          <div class="overlay-stats-item">总得分：<b>${lessonScoreTotal} 分</b></div>
+          <div class="overlay-stats-item">总用时：<b>${timeFormatted}</b></div>
+          <div class="overlay-stats-item">总词数：<b>${FULL_LESSON_WORDS.length} 词</b></div>
+          <div class="overlay-stats-item">挑战状态：<b>全完成 ✨</b></div>
+        `;
+
+        const actEl = document.getElementById('ov-actions');
+        actEl.innerHTML = '';
+
+        actEl.appendChild(createBtn('下一课', 'btn-primary', () => {
+          showToast('正在前往下一课...');
+          setTimeout(() => location.href = 'puzzle.html?lesson=unit1_lesson2', 500);
+        }));
+        actEl.appendChild(createBtn('再来1遍', 'btn-secondary', () => {
+          overlay.hidden = true;
+          lessonStartTime = Date.now();
+          lessonScoreTotal = 0;
+          startGroup(0);
+        }));
+        actEl.appendChild(createBtn('📸 分享成绩', 'btn-hot', () => generateShareCard(lessonScoreTotal, timeFormatted, FULL_LESSON_WORDS.length)));
+        actEl.appendChild(createBtn('回到首页', 'btn-secondary', () => location.href = 'index.html'));
+
+        overlay.hidden = false;
+      }
+    }
+
+    function createBtn(text, cls, onClick) {
+      const b = document.createElement('button');
+      b.className = 'action-btn cn-text ' + cls;
+      b.textContent = text;
+      b.onclick = onClick;
+      return b;
+    }
+
+    function generateShareCard(score, timeSpent, totalWords) {
+      showToast('正在生成成绩单图片...');
+      const cvs = document.createElement('canvas');
+      cvs.width = 640; cvs.height = 840;
+      const ctx = cvs.getContext('2d');
+      const bgGrad = ctx.createLinearGradient(0, 0, 640, 840);
+      bgGrad.addColorStop(0, '#f0f7ff'); bgGrad.addColorStop(1, '#bfdbfe');
+      ctx.fillStyle = bgGrad; ctx.fillRect(0, 0, 640, 840);
+
+      ctx.strokeStyle = '#2563eb'; ctx.lineWidth = 10; ctx.strokeRect(20, 20, 600, 800);
+      ctx.fillStyle = '#2563eb'; ctx.font = "900 34px sans-serif"; ctx.textAlign = 'center';
+      ctx.fillText('かなゲーム · 拼图闯关', 320, 90);
+      ctx.font = "72px sans-serif"; ctx.fillText('🏆', 320, 180);
+      ctx.fillStyle = '#0c2340'; ctx.font = "900 32px sans-serif"; ctx.fillText('通 关 荣 誉 证 书', 320, 240);
+
+      const userNick = localStorage.getItem('tangogo_nickname') || '日语学员';
+      ctx.font = "700 22px sans-serif"; ctx.fillStyle = '#1e4d8c'; ctx.fillText(`学员：${userNick}`, 320, 290);
+
+      ctx.fillStyle = '#ffffff'; ctx.fillRect(80, 330, 480, 320);
+      ctx.fillStyle = '#64748b'; ctx.font = "700 18px sans-serif"; ctx.textAlign = 'left';
+      ctx.fillText('⏱ 通关用时', 120, 400);
+      ctx.fillText('📖 掌握词汇', 120, 460);
+      ctx.fillText('🌟 最终得分', 120, 520);
+      ctx.fillText('🎮 挑战模式', 120, 580);
+
+      ctx.textAlign = 'right'; ctx.fillStyle = '#0c2340'; ctx.font = "900 20px sans-serif";
+      ctx.fillText(timeSpent, 520, 400);
+      ctx.fillText(`${totalWords} 词`, 520, 460);
+      ctx.fillStyle = '#ea580c'; ctx.font = "900 26px sans-serif"; ctx.fillText(`${score} 分`, 520, 520);
+      ctx.fillStyle = '#2563eb'; ctx.font = "900 20px sans-serif"; ctx.fillText('拼图模式', 520, 580);
+
+      setTimeout(() => {
+        const a = document.createElement('a');
+        a.href = cvs.toDataURL('image/png');
+        a.download = `拼图闯关成绩单_${Date.now()}.png`;
+        a.click();
+        showToast('🎉 成绩单图片已保存到本地！');
+      }, 350);
+    }
+
     window.addEventListener('DOMContentLoaded', async () => {
       await initAuth();
-      loadQuestion();
+      lessonStartTime = Date.now();
+      startGroup(0);
     });
   </script>
 </body>
