@@ -1,365 +1,468 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TangoGo - 日本語単語ゲーム</title>
+  <title>かなゲーム - 日语单词闯关</title>
   <!-- 引入 Supabase 官方 SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <style>
     :root {
-      --primary: #4f46e5;
-      --primary-hover: #4338ca;
-      --bg: #f8fafc;
-      --surface: #ffffff;
-      --text: #1e293b;
-      --text-muted: #64748b;
-      --danger: #ef4444;
-      --success: #10b981;
-      --border: #e2e8f0;
-      --radius: 12px;
+      --primary: #3b82f6;
+      --primary-hover: #2563eb;
+      --text-main: #1e293b;
+      --text-sub: #64748b;
+      --border-color: #e2e8f0;
+      --card-bg: #ffffff;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f0f7ff;
+      background-image: 
+        radial-gradient(#dbeafe 1.5px, transparent 1.5px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(240, 247, 255, 0.95));
+      background-size: 24px 24px, 100% 100%;
+      color: var(--text-main);
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-height: 100vh;
-      padding: 16px;
     }
+
+    /* 顶部导航栏 */
     header {
       width: 100%;
-      max-width: 680px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-color);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px 0;
-      margin-bottom: 20px;
+      padding: 12px 32px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
     }
-    .brand { font-size: 22px; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 8px; }
-    .user-badge {
+    .logo {
+      font-size: 24px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #2563eb, #f97316);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      cursor: pointer;
+    }
+    .nav-actions {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 16px;
+    }
+    .nav-btn {
       padding: 6px 14px;
-      background: var(--surface);
-      border: 1px solid var(--border);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-sub);
+      background: none;
+      border: none;
       border-radius: 9999px;
       cursor: pointer;
-      font-size: 14px;
-      font-weight: 500;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      transition: all 0.2s;
     }
-    .user-badge:hover { border-color: var(--primary); }
-    .avatar-icon { font-size: 18px; }
-    .card {
-      background: var(--surface);
-      border-radius: var(--radius);
-      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
-      border: 1px solid var(--border);
+    .nav-btn:hover { color: var(--primary); background: #eff6ff; }
+    .nav-btn.active { color: #fff; background: var(--primary); }
+
+    /* 用户登录状态胶囊按钮 */
+    .user-capsule {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 9999px;
+      background: #fff;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      transition: all 0.2s;
+    }
+    .user-capsule:hover { border-color: var(--primary); box-shadow: 0 2px 6px rgba(59, 130, 246, 0.15); }
+    .user-avatar-tag {
+      background: #eff6ff;
+      color: var(--primary);
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+
+    /* 主界面容器 */
+    .container {
       width: 100%;
-      max-width: 680px;
-      padding: 24px;
-      margin-bottom: 16px;
+      max-width: 820px;
+      padding: 32px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    .tabs { display: flex; gap: 8px; margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
-    .tab-btn {
-      padding: 8px 16px;
-      border: none;
-      background: none;
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--text-muted);
-      cursor: pointer;
-      border-radius: 8px;
+
+    /* 标题区域 */
+    .hero-title {
+      text-align: center;
+      margin-bottom: 28px;
     }
-    .tab-btn.active { color: var(--primary); background: #eef2ff; }
-    .btn {
-      background: var(--primary);
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      padding: 10px 18px;
+    .hero-icon { font-size: 32px; margin-bottom: 6px; }
+    .hero-title h1 {
+      font-size: 36px;
+      font-weight: 900;
+      color: #1e3a8a;
+      letter-spacing: -0.5px;
+    }
+    .hero-title p {
       font-size: 14px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s;
+      color: var(--text-sub);
+      margin-top: 6px;
     }
-    .btn:hover { background: var(--primary-hover); }
-    .btn-secondary { background: #f1f5f9; color: var(--text); }
-    .btn-secondary:hover { background: #e2e8f0; }
-    .btn-danger { background: var(--danger); color: #fff; }
-    .btn-danger:hover { background: #dc2626; }
-    .input-group { margin-bottom: 14px; display: flex; flex-direction: column; gap: 6px; }
-    .input-group label { font-size: 13px; font-weight: 600; color: var(--text-muted); }
-    .input-group input {
-      padding: 10px 14px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 14px;
-      outline: none;
+
+    /* 词库选择卡片 */
+    .section-card {
+      background: var(--card-bg);
+      border-radius: 18px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+      padding: 20px 24px;
+      width: 100%;
+      margin-bottom: 24px;
     }
-    .input-group input:focus { border-color: var(--primary); box-shadow: 0 0 0 2px #c7d2fe; }
-    
-    /* 游戏主体展示 */
-    .word-box { text-align: center; margin: 30px 0; }
-    .word-kanji { font-size: 40px; font-weight: 800; margin-bottom: 8px; }
-    .word-meaning { font-size: 16px; color: var(--text-muted); }
-    .options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
-    .option-btn {
-      padding: 14px;
-      font-size: 16px;
-      background: #f8fafc;
-      border: 2px solid var(--border);
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: all 0.15s;
-    }
-    .option-btn:hover { border-color: var(--primary); background: #eef2ff; }
-    .stats-bar { display: flex; justify-content: space-between; font-size: 14px; color: var(--text-muted); margin-bottom: 12px; }
-    
-    /* 错词本 */
-    .mistake-list { display: flex; flex-direction: column; gap: 8px; }
-    .mistake-item {
+    .card-header-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: #fff;
+      margin-bottom: 16px;
     }
-    
-    /* 弹窗 Modal */
+    .card-header-row .title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #334155;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .word-badge {
+      background: #eff6ff;
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 9999px;
+    }
+    .selectors-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .select-item label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-sub);
+      margin-bottom: 4px;
+    }
+    .select-item select {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      background: #f8fafc;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+      outline: none;
+      cursor: pointer;
+    }
+
+    /* 游戏模式卡片网格 */
+    .modes-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      width: 100%;
+    }
+    .mode-card {
+      background: var(--card-bg);
+      border: 2px solid transparent;
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      transition: all 0.2s ease;
+    }
+    .mode-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    }
+    .mode-card.puzzle { border-color: #bbf7d0; }
+    .mode-card.puzzle:hover { background: #f0fdf4; }
+    .mode-card.blocks { border-color: #ddd6fe; }
+    .mode-card.blocks:hover { background: #f5f3ff; }
+    .mode-card.link { border-color: #99f6e4; }
+    .mode-card.link:hover { background: #f0fdfa; }
+    .mode-card.match { border-color: #fed7aa; }
+    .mode-card.match:hover { background: #fff7ed; }
+
+    .mode-icon { font-size: 28px; }
+    .mode-info h3 { font-size: 16px; font-weight: 700; color: #1e293b; margin-bottom: 2px; }
+    .mode-info p { font-size: 12px; color: var(--text-sub); line-height: 1.4; }
+
+    /* 弹窗通用样式 */
     .modal-overlay {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.4);
+      background: rgba(15, 23, 42, 0.5);
+      backdrop-filter: blur(4px);
       display: none;
       align-items: center;
       justify-content: center;
-      z-index: 100;
+      z-index: 1000;
       padding: 16px;
     }
     .modal-overlay.open { display: flex; }
     .modal-content {
       background: #fff;
-      border-radius: var(--radius);
-      padding: 24px;
+      border-radius: 20px;
+      padding: 28px;
       width: 100%;
-      max-width: 400px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      max-width: 420px;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     }
-    .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
-    .modal-title { font-size: 18px; font-weight: 700; }
-    .close-btn { background: none; border: none; font-size: 20px; cursor: pointer; color: var(--text-muted); }
-    .avatar-picker { display: flex; gap: 10px; margin: 12px 0 20px 0; }
-    .avatar-opt {
-      font-size: 24px;
-      padding: 8px;
-      border: 2px solid var(--border);
-      border-radius: 8px;
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .modal-title { font-size: 18px; font-weight: 800; color: #1e293b; }
+    .close-btn { background: none; border: none; font-size: 24px; cursor: pointer; color: #94a3b8; }
+    .input-group { margin-bottom: 16px; display: flex; flex-direction: column; gap: 6px; }
+    .input-group label { font-size: 12px; font-weight: 700; color: #475569; }
+    .input-group input {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      font-size: 14px;
+      outline: none;
+    }
+    .input-group input:focus { border-color: var(--primary); box-shadow: 0 0 0 2px #dbeafe; }
+    .btn {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 11px 18px;
+      font-size: 14px;
+      font-weight: 700;
       cursor: pointer;
+      transition: background 0.2s;
     }
-    .avatar-opt.selected { border-color: var(--primary); background: #eef2ff; }
+    .btn:hover { background: var(--primary-hover); }
+    .btn-secondary { background: #f1f5f9; color: #334155; }
+    .btn-secondary:hover { background: #e2e8f0; }
+    .btn-danger { background: #ef4444; color: #fff; }
+    .avatar-list { display: flex; gap: 12px; margin: 10px 0 16px 0; }
+    .avatar-btn {
+      font-size: 26px;
+      padding: 8px;
+      border: 2px solid var(--border-color);
+      border-radius: 12px;
+      cursor: pointer;
+      background: #fff;
+    }
+    .avatar-btn.active { border-color: var(--primary); background: #eff6ff; }
   </style>
 </head>
 <body>
 
+  <!-- 顶部导航栏 -->
   <header>
-    <div class="brand"><span>🎮</span> TangoGo</div>
-    <div class="user-badge" id="userBadgeBtn" onclick="openProfileModal()">
-      <span class="avatar-icon" id="userAvatar">🌸</span>
-      <span id="userNameDisplay">登录 / 注册</span>
+    <div class="logo" onclick="location.reload()">かなゲーム</div>
+    <div class="nav-actions">
+      <button class="nav-btn active">首页</button>
+      <button class="nav-btn" onclick="alert('词库管理功能持续扩展中！')">词库</button>
+      <button class="nav-btn" onclick="openMistakesModal()">错词本 (<span id="mistakeBadge">0</span>)</button>
+      
+      <!-- 用户状态胶囊按钮 -->
+      <div class="user-capsule" onclick="openUserModal()">
+        <span class="user-avatar-tag" id="userAvatarIcon">游</span>
+        <span id="userDisplayName">游客</span>
+      </div>
     </div>
   </header>
 
-  <main class="card">
-    <div class="tabs">
-      <button class="tab-btn active" id="tabPractice" onclick="switchView('game')">単語練習</button>
-      <button class="tab-btn" id="tabMistakes" onclick="switchView('mistakes')">错词本 (<span id="mistakeCount">0</span>)</button>
+  <!-- 游戏大厅内容区 -->
+  <div class="container">
+    <div class="hero-title">
+      <div class="hero-icon">🌸</div>
+      <h1>日语单词闯关</h1>
+      <p>选择教材与课程，开始挑战 ✨</p>
     </div>
 
-    <!-- 游戏视图 -->
-    <div id="gameView">
-      <div class="stats-bar">
-        <span>当前关卡: 第 <b id="currentLevel">1</b> 关</span>
-        <span>云端状态: <b id="syncStatus" style="color:var(--success)">就绪</b></span>
+    <!-- 词库选择卡片 -->
+    <div class="section-card">
+      <div class="card-header-row">
+        <div class="title">📖 选择词库</div>
+        <div class="word-badge" id="wordTotalBadge">40 词</div>
       </div>
-      <div class="word-box">
-        <div class="word-kanji" id="wordKanji">食べる</div>
-        <div class="word-meaning" id="wordMeaning">吃、用餐</div>
+      <div class="selectors-grid">
+        <div class="select-item">
+          <label>一级：教材系列</label>
+          <select id="selBook"><option>人教版初中日语（新）</option></select>
+        </div>
+        <div class="select-item">
+          <label>二级：年级 / 分册</label>
+          <select id="selGrade"><option>七年级</option></select>
+        </div>
+        <div class="select-item">
+          <label>三级：章节 / 课时</label>
+          <select id="selLesson"><option>入门单元 第1课</option></select>
+        </div>
       </div>
-      <div class="options-grid" id="optionsContainer"></div>
     </div>
 
-    <!-- 错词本视图 -->
-    <div id="mistakesView" style="display:none;">
-      <div class="mistake-list" id="mistakeListContainer">
-        <p style="color:var(--text-muted); text-align:center; padding: 20px;">暂无错题，继续加油！</p>
+    <!-- 游戏玩法模式选择卡片 -->
+    <div class="modes-grid">
+      <div class="mode-card puzzle" onclick="startGame('拼图模式')">
+        <div class="mode-icon">🧩</div>
+        <div class="mode-info">
+          <h3>拼图模式</h3>
+          <p>点击假名按钮<br>依次填入空格拼出单词</p>
+        </div>
+      </div>
+
+      <div class="mode-card blocks" onclick="startGame('方块模式')">
+        <div class="mode-icon">🎮</div>
+        <div class="mode-info">
+          <h3>方块模式</h3>
+          <p>假名从天而降<br>移动到正确位置接住它！</p>
+        </div>
+      </div>
+
+      <div class="mode-card link" onclick="startGame('连连看模式')">
+        <div class="mode-icon">🔗</div>
+        <div class="mode-info">
+          <h3>连连看模式</h3>
+          <p>左右配对连线<br>把单词和释义连起来</p>
+        </div>
+      </div>
+
+      <div class="mode-card match" onclick="startGame('消消乐模式')">
+        <div class="mode-icon">🍬</div>
+        <div class="mode-info">
+          <h3>消消乐模式</h3>
+          <p>12 张卡片两两配对<br>点对了就一起消失</p>
+        </div>
       </div>
     </div>
-  </main>
+  </div>
 
-  <!-- 个人中心 / 登录 Modal -->
-  <div class="modal-overlay" id="authModal">
+  <!-- 登录 / 注册 / 个人中心 弹窗 -->
+  <div class="modal-overlay" id="userModal">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="modal-title" id="authModalTitle">登录 / 注册</div>
-        <button class="close-btn" onclick="closeAuthModal()">&times;</button>
+        <div class="modal-title" id="modalTitle">用户登录 / 注册</div>
+        <button class="close-btn" onclick="closeUserModal()">&times;</button>
       </div>
 
-      <!-- 未登录面板 -->
-      <div id="loginSection">
+      <!-- 未登录表单 -->
+      <div id="unauthPanel">
         <div class="input-group">
           <label>邮箱地址</label>
-          <input type="email" id="authEmail" placeholder="your@email.com">
+          <input type="email" id="inputEmail" placeholder="your@email.com">
         </div>
         <div class="input-group">
           <label>密码</label>
-          <input type="password" id="authPassword" placeholder="至少6位密码">
+          <input type="password" id="inputPwd" placeholder="不少于6位密码">
         </div>
-        <div style="display:flex; gap:8px; margin-top:16px;">
-          <button class="btn" style="flex:1" onclick="handleSignIn()">登录</button>
-          <button class="btn btn-secondary" style="flex:1" onclick="handleSignUp()">注册新账号</button>
+        <div style="display:flex; gap:10px; margin-top:20px;">
+          <button class="btn" style="flex:1;" onclick="doSignIn()">登录</button>
+          <button class="btn btn-secondary" style="flex:1;" onclick="doSignUp()">注册新账号</button>
         </div>
       </div>
 
-      <!-- 已登录个人中心面板 -->
-      <div id="profileSection" style="display:none;">
-        <p style="font-size:14px; color:var(--text-muted); margin-bottom:12px;">已登录账号：<b id="profileEmail"></b></p>
+      <!-- 已登录个人中心 -->
+      <div id="profilePanel" style="display:none;">
+        <p style="font-size:13px; color:var(--text-sub); margin-bottom:12px;">已绑定账号：<b id="profileEmailTxt"></b></p>
         <div class="input-group">
-          <label>选择个性头像</label>
-          <div class="avatar-picker">
-            <span class="avatar-opt" data-avatar="🌸" onclick="selectAvatar('🌸')">🌸</span>
-            <span class="avatar-opt" data-avatar="🗻" onclick="selectAvatar('🗻')">🗻</span>
-            <span class="avatar-opt" data-avatar="🍣" onclick="selectAvatar('🍣')">🍣</span>
-            <span class="avatar-opt" data-avatar="🐱" onclick="selectAvatar('🐱')">🐱</span>
+          <label>挑选个人专属头像</label>
+          <div class="avatar-list">
+            <span class="avatar-btn" data-av="🌸" onclick="chooseAvatar('🌸')">🌸</span>
+            <span class="avatar-btn" data-av="🗻" onclick="chooseAvatar('🗻')">🗻</span>
+            <span class="avatar-btn" data-av="🍣" onclick="chooseAvatar('🍣')">🍣</span>
+            <span class="avatar-btn" data-av="🐱" onclick="chooseAvatar('🐱')">🐱</span>
           </div>
         </div>
         <div class="input-group">
-          <label>用户昵称</label>
-          <input type="text" id="profileNickname" placeholder="自定义昵称">
+          <label>个性昵称</label>
+          <input type="text" id="inputNickname" placeholder="输入昵称">
         </div>
-        <div style="display:flex; flex-direction:column; gap:8px; margin-top:16px;">
-          <button class="btn" onclick="saveProfile()">保存个人资料</button>
-          <button class="btn btn-danger" onclick="handleSignOut()">退出登录</button>
+        <div style="display:flex; flex-direction:column; gap:10px; margin-top:20px;">
+          <button class="btn" onclick="saveUserProfile()">保存修改</button>
+          <button class="btn btn-danger" onclick="doSignOut()">退出登录</button>
         </div>
       </div>
     </div>
   </div>
 
   <script>
-    // 初始化 Supabase 客户端配置
+    // Supabase 连接配置
     const SUPABASE_URL = 'https://zbfjbtzvnhmfzyvooact.supabase.co';
     const SUPABASE_KEY = 'sb_publishable_AP0YnQLgzmB3d63_4zbpjg_vHeTyo8Z';
     const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-    // 题库预设
-    const QUESTION_BANK = [
-      { kanji: '食べる', kana: 'たべる', meaning: '吃、用餐', options: ['たべる', 'のむ', 'いく', 'みる'] },
-      { kanji: '桜', kana: 'さくら', meaning: '樱花', options: ['さくら', 'うめ', 'もも', 'はな'] },
-      { kanji: '友達', kana: 'ともだち', meaning: '朋友', options: ['ともだち', 'かぞく', 'せんせい', 'がくせい'] },
-      { kanji: '本', kana: 'ほん', meaning: '书本', options: ['ほん', 'ぺん', 'つくえ', 'かみ'] },
-      { kanji: '猫', kana: 'ねこ', meaning: '猫咪', options: ['ねこ', 'いぬ', 'とり', 'さかな'] }
-    ];
-
     let currentUser = null;
-    let currentQuestionIdx = 0;
-    let mistakes = JSON.parse(localStorage.getItem('tangogo_mistakes') || '[]');
-    let userAvatarIcon = localStorage.getItem('tangogo_avatar') || '🌸';
-    let currentUnlockedLevel = parseInt(localStorage.getItem('tangogo_level') || '1');
+    let selectedAvatar = localStorage.getItem('tangogo_avatar') || '🌸';
+    let mistakesList = JSON.parse(localStorage.getItem('tangogo_mistakes') || '[]');
 
-    // 页面启动检查用户登录态
-    async function initAuth() {
+    // 初始化检查会话
+    async function initApp() {
+      updateMistakeBadge();
       const { data: { session } } = await supabase.auth.getSession();
       if (session) {
         currentUser = session.user;
-        await syncFromCloud();
+        await syncDataFromCloud();
       }
-      updateUserUI();
-      renderQuestion();
-      renderMistakes();
+      refreshHeaderUI();
     }
 
-    // 切换标签视图
-    function switchView(view) {
-      document.getElementById('gameView').style.display = view === 'game' ? 'block' : 'none';
-      document.getElementById('mistakesView').style.display = view === 'mistakes' ? 'block' : 'none';
-      document.getElementById('tabPractice').classList.toggle('active', view === 'game');
-      document.getElementById('tabMistakes').classList.toggle('active', view === 'mistakes');
-    }
-
-    // 渲染题目
-    function renderQuestion() {
-      const q = QUESTION_BANK[currentQuestionIdx];
-      document.getElementById('wordKanji').innerText = q.kanji;
-      document.getElementById('wordMeaning').innerText = q.meaning;
-      document.getElementById('currentLevel').innerText = currentUnlockedLevel;
-
-      const container = document.getElementById('optionsContainer');
-      container.innerHTML = '';
-      q.options.forEach(opt => {
-        const btn = document.createElement('button');
-        btn.className = 'option-btn';
-        btn.innerText = opt;
-        btn.onclick = () => checkAnswer(opt, q);
-        container.appendChild(btn);
-      });
-    }
-
-    // 作答判定
-    async function checkAnswer(chosen, q) {
-      if (chosen === q.kana) {
-        alert('正解！🎉');
-        currentQuestionIdx = (currentQuestionIdx + 1) % QUESTION_BANK.length;
-        if (currentQuestionIdx === 0) {
-          currentUnlockedLevel += 1;
-          localStorage.setItem('tangogo_level', currentUnlockedLevel);
-          await syncProgressToCloud();
-        }
+    // 弹窗控制
+    function openUserModal() {
+      const modal = document.getElementById('userModal');
+      const unauth = document.getElementById('unauthPanel');
+      const profile = document.getElementById('profilePanel');
+      if (currentUser) {
+        document.getElementById('modalTitle').innerText = '个人中心';
+        unauth.style.display = 'none';
+        profile.style.display = 'block';
+        document.getElementById('profileEmailTxt').innerText = currentUser.email;
+        chooseAvatar(selectedAvatar);
       } else {
-        alert(`残念！正确假名是: ${q.kana}`);
-        addMistake(q);
+        document.getElementById('modalTitle').innerText = '用户登录 / 注册';
+        unauth.style.display = 'block';
+        profile.style.display = 'none';
       }
-      renderQuestion();
+      modal.classList.add('open');
+    }
+    function closeUserModal() {
+      document.getElementById('userModal').classList.remove('open');
     }
 
-    // 错题记录并上报
-    async function addMistake(q) {
-      if (!mistakes.some(m => m.word === q.kanji)) {
-        mistakes.push({ word: q.kanji, kana: q.kana, meaning: q.meaning });
-        localStorage.setItem('tangogo_mistakes', JSON.stringify(mistakes));
-        renderMistakes();
-
-        if (currentUser) {
-          await supabase.from('user_mistakes').upsert({
-            user_id: currentUser.id,
-            word: q.kanji,
-            kana: q.kana,
-            meaning: q.meaning,
-            last_reviewed: new Date().toISOString()
-          }, { onConflict: 'user_id,word' });
-        }
-      }
-    }
-
-    // 渲染错词列表
-    function renderMistakes() {
-      document.getElementById('mistakeCount').innerText = mistakes.length;
-      const listEl = document.getElementById('mistakeListContainer');
-      if (mistakes.length === 0) {
-        listEl.innerHTML = '<p style="color:var(--text-muted); text-align:center; padding:20px;">暂无错题，继续加油！</p>';
-        return;
-      }
-      listEl.innerHTML = mistakes.map(m => `
-        <div class="mistake-item">
-          <div>
-            <b>${m.word}</b> [${m.kana}]
-            <div style="font-size:12px; color:var(--text-muted);">${m.meaning}</div>
-          </div>
-          <button class="btn btn-secondary" onclick="removeMistake('${m.word}')" style="padding:4px 8px; font-size:12px;">
+    // 更新顶部栏头像昵称
+    function refreshHeaderUI() {
+      const iconEl = document.getElementById('userAvatarIcon');
+      const nameEl = document.getElementById('userDisplayName');
+      if (currentUser) {
