@@ -1,227 +1,161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>かなゲーム - 连连看模式</title>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <style>
-    :root {
-      --primary: #3b82f6;
-      --primary-hover: #2563eb;
-      --bg-color: #f0f7ff;
-      --text-main: #1e3a8a;
-      --border-color: #dbeafe;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      background-color: var(--bg-color);
-      background-image: 
-        radial-gradient(#dbeafe 1.5px, transparent 1.5px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(240, 247, 255, 0.95));
-      background-size: 24px 24px, 100% 100%;
-      color: var(--text-main);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>かなゲーム - 连连看模式</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+:root {
+  --bg: #f0f7ff;
+  --bg2: #dbeafe;
+  --bg3: #bfdbfe;
+  --surface: #ffffff;
+  --surface2: #f8faff;
+  --border: #93c5fd;
+  --fg: #0c2340;
+  --fg2: #1e4d8c;
+  --fg3: #2563eb;
+  --accent: #2563eb;
+  --accent-hot: #f97316;
+  --correct: #059669;
+  --correct-bg: #d1fae5;
+  --wrong: #e11d48;
+  --wrong-bg: #ffe4e6;
+  --shadow: rgba(37,99,235,0.18);
+}
 
-    header {
-      width: 100%;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border-color);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 24px;
-      position: sticky;
-      top: 0;
-      z-index: 50;
-    }
-    .logo {
-      font-size: 22px;
-      font-weight: 900;
-      background: linear-gradient(135deg, #2563eb, #f97316);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      cursor: pointer;
-    }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+  color: var(--fg);
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
 
-    .main-container {
-      width: 100%;
-      max-width: 680px;
-      padding: 24px 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-    }
+.top-nav {
+  display: flex; align-items: center; gap: 10px; padding: 12px 24px;
+  background-color: var(--surface);
+  border-bottom: 2px solid var(--border);
+  box-shadow: 0 2px 12px var(--shadow);
+  position: sticky; top: 0; z-index: 50;
+}
+.nav-logo { font-size: 1.6rem; font-weight: 900; color: var(--accent); cursor: pointer; }
+.nav-logo span { color: var(--accent-hot); }
 
-    .top-bar {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-    .capsule-btn {
-      padding: 6px 14px;
-      border-radius: 9999px;
-      border: 1px solid #bfdbfe;
-      background: #ffffff;
-      color: var(--primary);
-      font-size: 13px;
-      font-weight: 700;
-      cursor: pointer;
-      white-space: nowrap;
-    }
-    .capsule-btn:hover { background: #eff6ff; }
-    .progress-bar-bg {
-      flex: 1;
-      height: 10px;
-      background: #e2e8f0;
-      border-radius: 9999px;
-      overflow: hidden;
-    }
-    .progress-bar-fill {
-      width: 0%;
-      height: 100%;
-      background: #93c5fd;
-      border-radius: 9999px;
-      transition: width 0.3s ease;
-    }
-    .counter-txt { font-size: 14px; font-weight: 800; color: #3b82f6; white-space: nowrap; }
-    .score-badge {
-      padding: 6px 14px;
-      border-radius: 9999px;
-      border: 1px solid #fed7aa;
-      background: #ffffff;
-      color: #ea580c;
-      font-size: 13px;
-      font-weight: 800;
-      white-space: nowrap;
-    }
+.match-game {
+  flex: 1; display: flex; flex-direction: column; align-items: center;
+  padding: 22px 16px; gap: 16px; justify-content: center;
+}
+.game-header.match-header { width: 100%; max-width: 1180px; display: flex; align-items: center; gap: 12px; }
+.back-btn {
+  background: var(--surface); border: 2px solid var(--border); border-radius: 24px;
+  padding: 8px 16px; font-size: 0.95rem; font-weight: 700; color: var(--fg2);
+  cursor: pointer; transition: all 0.15s;
+}
+.back-btn:hover { border-color: var(--accent); color: var(--accent); }
+.score-chip {
+  background: var(--bg2); border-radius: 24px; padding: 6px 16px; font-size: 0.95rem;
+  font-weight: 700; color: var(--fg2);
+}
+.score-chip.level-chip { color: var(--accent); background: var(--surface); border: 2px solid var(--border); }
+.score-chip.big {
+  font-size: 1.1rem; color: var(--accent-hot); background: var(--surface);
+  border: 2px solid var(--border); margin-left: auto;
+}
 
-    .timer-bar {
-      width: 100%;
-      background: #ffffff;
-      border: 1px solid #bfdbfe;
-      border-radius: 18px;
-      padding: 8px 16px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 2px 8px rgba(59, 130, 246, 0.05);
-    }
-    .timer-label { font-size: 13px; font-weight: 800; color: #2563eb; }
-    .time-opt {
-      padding: 4px 14px;
-      border-radius: 9999px;
-      border: 1px solid #bfdbfe;
-      background: #ffffff;
-      color: #3b82f6;
-      font-size: 12px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-    .time-opt.active { background: #2563eb; color: #ffffff; border-color: #2563eb; }
-    .time-countdown { margin-left: auto; font-size: 14px; font-weight: 800; color: #ef4444; display: none; }
+.match-tip {
+  width: 100%; max-width: 1180px; text-align: center;
+  font-size: 0.88rem; font-weight: 700; color: var(--fg2);
+}
 
-    /* 连连看核心区域 */
-    .link-board {
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-top: 10px;
-    }
-    .link-column {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .link-card {
-      background: #ffffff;
-      border: 2px solid #bfdbfe;
-      border-radius: 16px;
-      padding: 16px 12px;
-      text-align: center;
-      font-size: 18px;
-      font-weight: 800;
-      color: #1e3a8a;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(59, 130, 246, 0.08);
-      transition: all 0.15s ease;
-      user-select: none;
-      min-height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .link-card:hover { transform: translateY(-2px); border-color: #3b82f6; }
-    .link-card.selected {
-      background: #eff6ff;
-      border-color: #2563eb;
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
-    }
-    .link-card.matched {
-      visibility: hidden;
-      pointer-events: none;
-    }
-    .link-card.wrong {
-      animation: shake 0.4s ease;
-      border-color: #ef4444;
-      background: #fef2f2;
-      color: #ef4444;
-    }
-    @keyframes shake {
-      0%, 100% { transform: translateX(0); }
-      20%, 60% { transform: translateX(-6px); }
-      40%, 80% { transform: translateX(6px); }
-    }
+/* 原版连连看外围大板与 SVG 连线层 */
+.match-board-wrap {
+  position: relative; width: 100%; max-width: 1180px;
+  background: var(--surface); border: 3px solid var(--border); border-radius: 24px;
+  padding: 24px; box-shadow: 0 8px 28px var(--shadow);
+}
+.match-lines {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  pointer-events: none; z-index: 3; overflow: visible;
+}
+.match-line line { stroke-linecap: round; }
+.match-line.ok line { stroke: #ef4444; stroke-width: 3.5; }
+.match-line.ok circle { fill: #ef4444; }
 
-    .feedback-banner {
-      font-size: 15px;
-      font-weight: 800;
-      min-height: 24px;
-      text-align: center;
-    }
-    .feedback-banner.correct { color: #16a34a; }
-    .feedback-banner.wrong { color: #ef4444; }
-  </style>
+/* 左右对称网格，中间留出超宽连线跑道 */
+.match-board {
+  position: relative; width: 100%;
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 14px 190px;
+}
+@media (max-width: 760px) {
+  .match-board { gap: 12px 40px; }
+}
+
+.match-item {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; justify-content: center; gap: 4px;
+  min-height: 58px; min-width: 0;
+  padding: 11px 16px; border-radius: 14px;
+  border: 2.5px solid var(--border); background: var(--surface2);
+  cursor: pointer; user-select: none;
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+}
+.match-item:hover { border-color: var(--accent); box-shadow: 0 6px 18px var(--shadow); }
+.match-item.match-left { align-items: center; text-align: center; }
+.match-item.match-right { align-items: center; text-align: center; }
+
+.match-item .match-word {
+  font-size: 1.32rem; font-weight: 700; color: var(--fg); line-height: 1.25;
+}
+.match-item .m-tags { display: flex; align-items: baseline; gap: 10px; }
+.match-item .m-pos {
+  font-size: 0.82rem; font-weight: 800; color: var(--fg3);
+  background: var(--bg2); border-radius: 8px; padding: 2px 8px;
+}
+.match-item .m-mean { font-size: 1.32rem; font-weight: 700; color: var(--fg); line-height: 1.3; }
+
+.match-item.sel {
+  border-color: var(--accent); background: rgba(37,99,235,0.13);
+  box-shadow: 0 0 0 4px rgba(37,99,235,0.16);
+}
+.match-item.done {
+  border-color: var(--correct); background: var(--correct-bg);
+  cursor: default; opacity: 0.85; box-shadow: none; pointer-events: none;
+}
+.match-item.wrong {
+  border-color: var(--wrong); background: var(--wrong-bg); animation: shakeX 0.32s;
+}
+@keyframes shakeX {
+  0%,100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+</style>
 </head>
 <body>
-  <header>
-    <div class="logo" onclick="location.href='index.html'">かなゲーム</div>
-  </header>
 
-  <div class="main-container">
-    <div class="top-bar">
-      <button class="capsule-btn" onclick="location.href='index.html'">← 返回</button>
-      <div class="capsule-btn" id="roundBadge">连连看第 1 轮</div>
-      <div class="progress-bar-bg">
-        <div class="progress-bar-fill" id="progressFill"></div>
-      </div>
-      <div class="counter-txt" id="progressTxt">0/5</div>
-      <div class="score-badge"><span id="scoreNum">0</span> 分</div>
+  <nav class="top-nav">
+    <div class="nav-logo" onclick="location.href='index.html'">かな<span>ゲーム</span></div>
+  </nav>
+
+  <div class="match-game">
+    <div class="game-header match-header">
+      <button class="back-btn" onclick="location.href='index.html'">← 返回</button>
+      <span class="score-chip level-chip">🔗 连连看闯关</span>
+      <span class="score-chip" id="match-mistakes">失误 0</span>
+      <span class="score-chip big" id="match-score">0分</span>
     </div>
 
-    <div class="timer-bar">
-      <div class="timer-label">⏱ 限时</div>
-      <button class="time-opt active" onclick="setTimer(0, this)">关闭</button>
-      <button class="time-opt" onclick="setTimer(30, this)">30秒</button>
-      <button class="time-opt" onclick="setTimer(60, this)">60秒</button>
-      <div class="time-countdown" id="countdownTxt">倒计时: 00</div>
-    </div>
+    <div class="match-tip">点左边的日语单词和右边对应的释义即可连线，先点哪边都行</div>
 
-    <div class="feedback-banner" id="feedbackBanner">点击左右卡片进行对应配对 ✨</div>
-
-    <div class="link-board" id="linkBoard">
-      <div class="link-column" id="leftCol"></div>
-      <div class="link-column" id="rightCol"></div>
+    <div class="match-board-wrap" id="boardWrap">
+      <svg class="match-lines" id="svgLines"></svg>
+      <div class="match-board" id="matchBoard"></div>
     </div>
   </div>
 
@@ -232,20 +166,17 @@
 
     let currentUser = null;
     let score = 0;
-    let currentRound = 1;
+    let mistakes = 0;
     let matchedCount = 0;
     let selectedLeft = null;
     let selectedRight = null;
-    let timerDuration = 0;
-    let timerInterval = null;
-    let timeLeft = 0;
 
     const roundWords = [
-      { id: 1, kana: 'せんせい', meaning: '老师' },
-      { id: 2, kana: 'がくせい', meaning: '学生' },
-      { id: 3, kana: 'ともだち', meaning: '朋友' },
-      { id: 4, kana: 'テスト', meaning: '测验，测试' },
-      { id: 5, kana: 'あいさつ', meaning: '寒暄，打招呼' }
+      { id: 1, kanji: '先生', kana: 'せんせい', pos: '名', meaning: '老师' },
+      { id: 2, kanji: '学生', kana: 'がくせい', pos: '名', meaning: '学生' },
+      { id: 3, kanji: '友達', kana: 'ともだち', pos: '名', meaning: '朋友' },
+      { id: 4, kanji: 'テスト', kana: 'テスト', pos: '名', meaning: '测验，测试' },
+      { id: 5, kanji: '挨拶', kana: 'あいさつ', pos: '名', meaning: '寒暄，打招呼' }
     ];
 
     async function initAuth() {
@@ -273,79 +204,52 @@
       }
     }
 
-    function setTimer(seconds, el) {
-      timerDuration = seconds;
-      document.querySelectorAll('.time-opt').forEach(btn => btn.classList.remove('active'));
-      el.classList.add('active');
-      startTimer();
-    }
-
-    function startTimer() {
-      clearInterval(timerInterval);
-      const cdTxt = document.getElementById('countdownTxt');
-      if (timerDuration === 0) {
-        cdTxt.style.display = 'none';
-        return;
-      }
-      timeLeft = timerDuration;
-      cdTxt.style.display = 'block';
-      cdTxt.innerText = `倒计时: ${timeLeft}秒`;
-      timerInterval = setInterval(() => {
-        timeLeft--;
-        cdTxt.innerText = `倒计时: ${timeLeft}秒`;
-        if (timeLeft <= 0) {
-          clearInterval(timerInterval);
-          alert('时间到！本轮已结束');
-          location.reload();
-        }
-      }, 1000);
-    }
-
     function initBoard() {
       matchedCount = 0;
       selectedLeft = null;
       selectedRight = null;
-      document.getElementById('progressTxt').innerText = `0/${roundWords.length}`;
-      document.getElementById('progressFill').style.width = '0%';
+      document.getElementById('svgLines').innerHTML = '';
 
       const leftList = [...roundWords].sort(() => Math.random() - 0.5);
       const rightList = [...roundWords].sort(() => Math.random() - 0.5);
 
-      const leftCol = document.getElementById('leftCol');
-      const rightCol = document.getElementById('rightCol');
-      leftCol.innerHTML = '';
-      rightCol.innerHTML = '';
+      const board = document.getElementById('matchBoard');
+      board.innerHTML = '';
 
-      leftList.forEach(item => {
-        const div = document.createElement('div');
-        div.className = 'link-card';
-        div.innerText = item.kana;
-        div.dataset.id = item.id;
-        div.onclick = () => selectCard('left', div, item);
-        leftCol.appendChild(div);
-      });
+      // 按照左右交错排进网格：每个左边元素紧接着右边元素
+      for (let i = 0; i < roundWords.length; i++) {
+        // 左边卡片
+        const l = leftList[i];
+        const leftEl = document.createElement('div');
+        leftEl.className = 'match-item match-left';
+        leftEl.dataset.id = l.id;
+        leftEl.innerHTML = `<div class="match-word">${l.kanji || l.kana}</div>`;
+        leftEl.onclick = () => selectCard('left', leftEl, l);
+        board.appendChild(leftEl);
 
-      rightList.forEach(item => {
-        const div = document.createElement('div');
-        div.className = 'link-card';
-        div.innerText = item.meaning;
-        div.dataset.id = item.id;
-        div.onclick = () => selectCard('right', div, item);
-        rightCol.appendChild(div);
-      });
-
-      startTimer();
+        // 右边卡片
+        const r = rightList[i];
+        const rightEl = document.createElement('div');
+        rightEl.className = 'match-item match-right';
+        rightEl.dataset.id = r.id;
+        rightEl.innerHTML = `
+          <div class="m-tags"><span class="m-pos">${r.pos}</span></div>
+          <div class="m-mean">${r.meaning}</div>
+        `;
+        rightEl.onclick = () => selectCard('right', rightEl, r);
+        board.appendChild(rightEl);
+      }
     }
 
     function selectCard(side, el, item) {
       if (side === 'left') {
-        if (selectedLeft) selectedLeft.el.classList.remove('selected');
+        if (selectedLeft) selectedLeft.el.classList.remove('sel');
         selectedLeft = { el, item };
-        el.classList.add('selected');
+        el.classList.add('sel');
       } else {
-        if (selectedRight) selectedRight.el.classList.remove('selected');
+        if (selectedRight) selectedRight.el.classList.remove('sel');
         selectedRight = { el, item };
-        el.classList.add('selected');
+        el.classList.add('sel');
       }
 
       if (selectedLeft && selectedRight) {
@@ -354,43 +258,82 @@
     }
 
     function checkMatch() {
-      const fb = document.getElementById('feedbackBanner');
       if (selectedLeft.item.id === selectedRight.item.id) {
-        fb.className = 'feedback-banner correct';
-        fb.innerText = `✨ 配对成功！${selectedLeft.item.kana} = ${selectedRight.item.meaning}`;
-        selectedLeft.el.classList.add('matched');
-        selectedRight.el.classList.add('matched');
+        // 配对正确：划红线并连通
+        drawSvgLine(selectedLeft.el, selectedRight.el);
+        selectedLeft.el.classList.remove('sel');
+        selectedRight.el.classList.remove('sel');
+        selectedLeft.el.classList.add('done');
+        selectedRight.el.classList.add('done');
+
         score += 10;
         matchedCount++;
-        document.getElementById('scoreNum').innerText = score;
-        document.getElementById('progressTxt').innerText = `${matchedCount}/${roundWords.length}`;
-        document.getElementById('progressFill').style.width = `${(matchedCount / roundWords.length) * 100}%`;
+        document.getElementById('match-score').innerText = `${score}分`;
 
         selectedLeft = null;
         selectedRight = null;
 
         if (matchedCount === roundWords.length) {
-          clearInterval(timerInterval);
-          fb.innerText = '🎉 全部连线消除完成！太棒了！';
+          setTimeout(() => {
+            alert('🎉 恭喜！全部连线消除成功！');
+            location.reload();
+          }, 400);
         }
       } else {
-        fb.className = 'feedback-banner wrong';
-        fb.innerText = '❌ 对应错误，已记入错词本';
+        // 配对错误
+        mistakes++;
+        document.getElementById('match-mistakes').innerText = `失误 ${mistakes}`;
         recordMistake(selectedLeft.item);
 
-        const leftEl = selectedLeft.el;
-        const rightEl = selectedRight.el;
-        leftEl.classList.add('wrong');
-        rightEl.classList.add('wrong');
+        const lEl = selectedLeft.el;
+        const rEl = selectedRight.el;
+        lEl.classList.add('wrong');
+        rEl.classList.add('wrong');
 
         setTimeout(() => {
-          leftEl.classList.remove('wrong', 'selected');
-          rightEl.classList.remove('wrong', 'selected');
-        }, 500);
-
-        selectedLeft = null;
-        selectedRight = null;
+          lEl.classList.remove('sel', 'wrong');
+          rEl.classList.remove('sel', 'wrong');
+          selectedLeft = null;
+          selectedRight = null;
+        }, 400);
       }
+    }
+
+    // 在卡片右锚点与左锚点之间拉出原版红线
+    function drawSvgLine(el1, el2) {
+      const wrapRect = document.getElementById('boardWrap').getBoundingClientRect();
+      const r1 = el1.getBoundingClientRect();
+      const r2 = el2.getBoundingClientRect();
+
+      const x1 = r1.right - wrapRect.left;
+      const y1 = r1.top + r1.height / 2 - wrapRect.top;
+      const x2 = r2.left - wrapRect.left;
+      const y2 = r2.top + r2.height / 2 - wrapRect.top;
+
+      const svg = document.getElementById('svgLines');
+      const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+      g.setAttribute('class', 'match-line ok');
+
+      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      line.setAttribute('x1', x1);
+      line.setAttribute('y1', y1);
+      line.setAttribute('x2', x2);
+      line.setAttribute('y2', y2);
+
+      const c1 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      c1.setAttribute('cx', x1);
+      c1.setAttribute('cy', y1);
+      c1.setAttribute('r', '5');
+
+      const c2 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      c2.setAttribute('cx', x2);
+      c2.setAttribute('cy', y2);
+      c2.setAttribute('r', '5');
+
+      g.appendChild(line);
+      g.appendChild(c1);
+      g.appendChild(c2);
+      svg.appendChild(g);
     }
 
     window.addEventListener('DOMContentLoaded', async () => {
