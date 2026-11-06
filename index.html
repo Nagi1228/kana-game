@@ -293,6 +293,53 @@
   }
   .btn-danger:hover { background: rgba(239, 68, 68, .06); }
 
+  /* ============ 错词本列表弹窗样式 ============ */
+  .mistakes-dialog {
+    max-width: 580px; width: 100%; max-height: 85vh; display: flex; flex-direction: column;
+  }
+  .mistakes-body {
+    overflow-y: auto; max-height: 52vh; padding-right: 4px; margin-bottom: 16px;
+  }
+  .mistakes-list {
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .mistake-item {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 14px; background: var(--field); border-radius: 12px;
+    border: 1px solid transparent; transition: border-color .15s;
+  }
+  .mistake-item:hover { border-color: var(--line); }
+  .mistake-word-info { display: flex; flex-direction: column; gap: 2px; }
+  .mistake-word-kanji { font-size: 15px; font-weight: 700; color: var(--ink); }
+  .mistake-word-kana { font-size: 12px; color: var(--muted); }
+  .mistake-word-meaning { font-size: 13px; color: var(--ink); opacity: .88; }
+  .mistake-delete-btn {
+    background: none; border: none; padding: 6px 10px; font-size: 12px;
+    color: #EF4444; cursor: pointer; border-radius: 8px; font-weight: 600;
+    transition: background .15s;
+  }
+  .mistake-delete-btn:hover { background: rgba(239, 68, 68, .1); }
+  .mistakes-empty {
+    text-align: center; padding: 36px 0; color: var(--muted); font-size: 14px;
+  }
+  .mistakes-actions {
+    display: flex; gap: 10px; align-items: center; justify-content: flex-end;
+    padding-top: 14px; border-top: 1px solid var(--line); flex-wrap: wrap;
+  }
+  .drill-menu {
+    display: none; position: absolute; bottom: 58px; right: 26px;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+    box-shadow: var(--shadow-hover); padding: 6px; z-index: 10;
+    flex-direction: column; gap: 4px; min-width: 130px;
+  }
+  .drill-menu.show { display: flex; }
+  .drill-option {
+    padding: 8px 12px; border-radius: 8px; font-size: 13px; font-weight: 600;
+    text-align: left; background: none; border: none; cursor: pointer; color: var(--ink);
+    transition: background .15s, color .15s;
+  }
+  .drill-option:hover { background: var(--accent-soft); color: var(--accent); }
+
   /* ============ 浮动 Toast 消息 ============ */
   .toast {
     position: fixed; left: 50%; bottom: 32px; transform: translate(-50%, 16px); opacity: 0; pointer-events: none;
@@ -532,6 +579,42 @@
     <span>我的</span>
   </button>
 </nav>
+
+<!-- 错词本管理弹窗 -->
+<div class="modal-overlay" id="mistakesModal">
+  <div class="modal-dialog mistakes-dialog">
+    <div class="modal-head">
+      <div class="modal-title">错词本 (<span id="mistakeListCount">0</span>)</div>
+      <button class="close-icon-btn" onclick="closeMistakesModal()">
+        <svg viewBox="0 0 24 24" class="icon" style="width:16px; height:16px;"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="mistakes-body">
+      <div id="mistakesEmpty" class="mistakes-empty" style="display:none;">
+        <p>当前没有错词记录，太棒了！👏</p>
+      </div>
+      <div class="mistakes-list" id="mistakesContainer"></div>
+    </div>
+
+    <div class="mistakes-actions" style="position:relative;">
+      <!-- 快捷玩法展开菜单 -->
+      <div class="drill-menu" id="drillMenu">
+        <button class="drill-option" onclick="startMistakeDrill('拼图模式')">🧩 拼图模式</button>
+        <button class="drill-option" onclick="startMistakeDrill('方块模式')">🎮 方块模式</button>
+        <button class="drill-option" onclick="startMistakeDrill('连连看模式')">🔗 连连看模式</button>
+        <button class="drill-option" onclick="startMistakeDrill('消消乐模式')">🍬 消消乐模式</button>
+      </div>
+
+      <button class="btn-secondary" style="height:38px; padding:0 14px; font-size:13px;" onclick="exportMistakesCSV()">
+        📥 导出表格 (.csv)
+      </button>
+      <button class="btn-primary" id="btnStartDrill" style="height:38px; padding:0 16px; font-size:13px;" onclick="toggleDrillMenu()">
+        🎯 错词专练 ▾
+      </button>
+    </div>
+  </div>
+</div>
 
 <!-- 登录 / 注册 / 个人设置 浮层弹窗 -->
 <div class="modal-overlay" id="userModal">
@@ -910,12 +993,118 @@
     showToast('个人设置已保存');
   }
 
+  /* ============ 错词本系统逻辑 ============ */
   function openMistakesModal() {
+    renderMistakesList();
+    document.getElementById('mistakesModal').style.display = 'flex';
+  }
+
+  function closeMistakesModal() {
+    document.getElementById('mistakesModal').style.display = 'none';
+    document.getElementById('drillMenu').classList.remove('show');
+  }
+
+  function renderMistakesList() {
+    const container = document.getElementById('mistakesContainer');
+    const emptyEl = document.getElementById('mistakesEmpty');
+    const countEl = document.getElementById('mistakeListCount');
+    const drillBtn = document.getElementById('btnStartDrill');
+    
+    countEl.innerText = mistakesList.length;
+    container.innerHTML = '';
+
     if (mistakesList.length === 0) {
-      showToast('当前错词本为空，继续保持！');
-    } else {
-      showToast(`当前错词记录共有 ${mistakesList.length} 个单词，即将开启错词训练。`);
+      emptyEl.style.display = 'block';
+      drillBtn.disabled = true;
+      drillBtn.style.opacity = '0.5';
+      drillBtn.style.cursor = 'not-allowed';
+      return;
     }
+
+    emptyEl.style.display = 'none';
+    drillBtn.disabled = false;
+    drillBtn.style.opacity = '1';
+    drillBtn.style.cursor = 'pointer';
+
+    mistakesList.forEach((item, index) => {
+      const row = document.createElement('div');
+      row.className = 'mistake-item';
+      
+      // 容错处理字符串或对象结构的错词数据
+      let wordDisplay = typeof item === 'string' ? item : (item.word || item.kanji || item.kana || '未知单词');
+      let kanaDisplay = item.kana && item.kana !== wordDisplay ? item.kana : '';
+      let meaningDisplay = item.meaning || item.trans || '';
+
+      row.innerHTML = `
+        <div class="mistake-word-info">
+          <div class="mistake-word-kanji">${wordDisplay} ${kanaDisplay ? `<span class="mistake-word-kana">(${kanaDisplay})</span>` : ''}</div>
+          ${meaningDisplay ? `<div class="mistake-word-meaning">${meaningDisplay}</div>` : ''}
+        </div>
+        <button class="mistake-delete-btn" onclick="removeMistakeItem(${index})">删除</button>
+      `;
+      container.appendChild(row);
+    });
+  }
+
+  function removeMistakeItem(index) {
+    mistakesList.splice(index, 1);
+    localStorage.setItem('tangogo_mistakes', JSON.stringify(mistakesList));
+    
+    // 同步页面各处的徽标与计数
+    const len = mistakesList.length;
+    document.getElementById('navMistakeBadge').innerText = len;
+    document.getElementById('tabMistakeBadge').innerText = len;
+    document.getElementById('statWrong').innerText = len;
+    if (len === 0) {
+      document.getElementById('navMistakeBadge').style.display = 'none';
+      document.getElementById('tabMistakeBadge').style.display = 'none';
+    }
+
+    renderMistakesList();
+    showToast('已从错词本移除该词');
+  }
+
+  /* 导出表格 (.csv，UTF-8 BOM 防中文乱码) */
+  function exportMistakesCSV() {
+    if (mistakesList.length === 0) return showToast('错词本暂无内容可导出');
+    
+    let csvContent = '\uFEFF单词,假名/读音,释义\n';
+    mistakesList.forEach(item => {
+      const word = typeof item === 'string' ? item : (item.word || item.kanji || item.kana || '');
+      const kana = item.kana || '';
+      const meaning = (item.meaning || item.trans || '').replace(/"/g, '""');
+      csvContent += `"${word}","${kana}","${meaning}"\n`;
+    });
+
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', `Tangogo_错词本_${new Date().toISOString().slice(0, 10)}.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+    showToast('错词表格导出成功');
+  }
+
+  /* 错词专练触发菜单 */
+  function toggleDrillMenu() {
+    if (mistakesList.length === 0) return showToast('暂无错词可练');
+    document.getElementById('drillMenu').classList.toggle('show');
+  }
+
+  function startMistakeDrill(modeName) {
+    const routes = {
+      '拼图模式': 'puzzle.html',
+      '方块模式': 'blocks.html',
+      '连连看模式': 'link.html',
+      '消消乐模式': 'match.html'
+    };
+    const target = routes[modeName];
+    if (!target) return;
+    // 携带 mode=mistakes 标识进入专门的错词模式
+    window.location.href = `${target}?mode=mistakes`;
   }
 
   /* 页面挂载与事件绑定 */
@@ -949,8 +1138,17 @@
 
     // 模态弹窗点击背景关闭
     window.addEventListener('click', (e) => {
-      const modal = document.getElementById('userModal');
-      if (e.target === modal) closeUserModal();
+      const userModal = document.getElementById('userModal');
+      const mistakesModal = document.getElementById('mistakesModal');
+      const drillMenu = document.getElementById('drillMenu');
+      const drillBtn = document.getElementById('btnStartDrill');
+
+      if (e.target === userModal) closeUserModal();
+      if (e.target === mistakesModal) closeMistakesModal();
+
+      if (drillMenu && drillBtn && !drillMenu.contains(e.target) && e.target !== drillBtn) {
+        drillMenu.classList.remove('show');
+      }
     });
 
     // Supabase 会话持久化初始化
