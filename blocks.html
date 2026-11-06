@@ -86,8 +86,16 @@ html, body {
 .tet-mistake-chip { font-size: 0.8rem; font-weight: 700; color: rgba(255,255,255,0.85); background: rgba(0,0,0,0.2); border-radius: 12px; padding: 3px 10px; }
 .tet-mistake-chip.warn { background: rgba(239,68,68,0.55); color: #fff; }
 .tet-hint-btn {
-  margin-left: auto; border: 2px solid rgba(255,235,120,0.75); background: rgba(255,235,120,0.22);
+  border: 2px solid rgba(255,235,120,0.75); background: rgba(255,235,120,0.22);
   color: #fff; font-size: 0.85rem; font-weight: 700; padding: 5px 14px; border-radius: 18px; cursor: pointer;
+}
+.tet-skip-btn {
+  margin-left: auto; border: 1px solid rgba(255,255,255,0.4); background: rgba(255,255,255,0.18);
+  color: #fff; font-size: 0.82rem; font-weight: 700; padding: 5px 12px; border-radius: 18px; cursor: pointer;
+  transition: all 0.2s ease;
+}
+.tet-skip-btn.off {
+  background: rgba(0,0,0,0.3); border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.6);
 }
 
 .tetris-word-display { padding: 14px 20px; text-align: center; z-index: 10; background: rgba(0,0,0,0.1); }
@@ -194,6 +202,7 @@ html, body {
         <button type="button" class="tet-mode-btn cn-text" data-mode="order" id="mode-btn-order">🔢 顺序</button>
       </div>
       <span class="tet-mistake-chip cn-text" id="tet-mistakes">失误 0/3</span>
+      <button type="button" class="tet-skip-btn cn-text" id="toggle-skip-preview">💡 单词提示：开</button>
       <button type="button" class="tet-hint-btn cn-text" id="tet-hint">💡 提示</button>
     </div>
 
@@ -337,7 +346,6 @@ async function recordMistake(word) {
   }
 }
 
-// 统一参数标准化
 function normalizeParams(rawBook, rawGrade, rawLesson) {
   let b = rawBook || 'pep_jr';
   let g = rawGrade || 'pep_jr_7';
@@ -351,13 +359,15 @@ function normalizeParams(rawBook, rawGrade, rawLesson) {
 }
 
 const urlParams = new URLSearchParams(window.location.search);
+const isMistakeDrill = urlParams.get('mode') === 'mistakes';
 const { b: currentBook, g: currentGrade, l: currentLesson } = normalizeParams(
   urlParams.get('book'),
   urlParams.get('grade'),
   urlParams.get('lesson')
 );
 
-// 完整标准的 10 个兜底生词（彻底更正ともだち）
+let showWordPreview = localStorage.getItem('tangogo_show_blocks_preview') !== 'false';
+
 const DEFAULT_FALLBACK_WORDS = [
   {"kanji":"","kana":"テスト","pos":"名词","meaning":"测验，测试"},
   {"kanji":"本","kana":"ほん","pos":"名词","meaning":"书"},
@@ -378,9 +388,20 @@ let totalGroups = 1;
 let lessonStartTime = Date.now();
 let lessonScoreTotal = 0;
 
-// 从 Supabase 查询当前课时对应的单词
 async function fetchCurrentLessonWords() {
-  if (sbClient) {
+  if (isMistakeDrill) {
+    const mistakes = JSON.parse(localStorage.getItem('tangogo_mistakes') || '[]');
+    if (mistakes.length > 0) {
+      return mistakes.map(m => ({
+        kanji: m.kanji || m.word || '',
+        kana: m.kana || m.word || '',
+        pos: m.pos || '名',
+        meaning: m.meaning || ''
+      }));
+    }
+  }
+
+  if (sbClient && !isMistakeDrill) {
     try {
       const { data, error } = await sbClient
         .from('words')
@@ -392,14 +413,12 @@ async function fetchCurrentLessonWords() {
         .order('created_at', { ascending: true });
 
       if (!error && data && data.length > 0) {
-        showToast(`已成功载入云端题库（共 ${data.length} 词）`);
         return data;
       }
     } catch (e) {
       console.warn('查询云端失败:', e);
     }
   }
-  showToast('使用默认精选词库');
   return DEFAULT_FALLBACK_WORDS;
 }
 
@@ -612,10 +631,12 @@ function handleGroupOrLessonCompletion() {
       <div class="overlay-stats-item">剩余生命：<b>${tetLives} ❤️</b></div>
     `;
 
-    actEl.appendChild(createBtn('下一课', 'btn-primary', () => {
-      showToast('正在前往下一课...');
-      setTimeout(() => location.href = 'blocks.html?lesson=pep_jr_7_intro2', 600);
-    }));
+    if (!isMistakeDrill) {
+      actEl.appendChild(createBtn('下一课', 'btn-primary', () => {
+        showToast('正在前往下一课...');
+        setTimeout(() => location.href = 'blocks.html?lesson=pep_jr_7_intro2', 600);
+      }));
+    }
     actEl.appendChild(createBtn('再来1遍', 'btn-secondary', () => {
       overlay.hidden = true;
       lessonStartTime = Date.now();
@@ -680,6 +701,20 @@ function generateShareCard(score, timeSpent, totalWords) {
 function startWordPreview(word) {
   clearTimeout(tetPreviewTimer);
   cancelAnimationFrame(tetAnimId);
+
+  if (!showWordPreview) {
+    document.getElementById('tetris-preview').hidden = true;
+    tetPreviewing = false;
+    const hintBtn = document.getElementById('tet-hint');
+    if (hintBtn) hintBtn.disabled = false;
+    drawTetris();
+    if (!tetRunning) return;
+    spawnNextBlock();
+    tetLastTime = performance.now();
+    tetAnimId = requestAnimationFrame(tetrisLoop);
+    return;
+  }
+
   tetPreviewing = true;
 
   const wrap = document.getElementById('tetris-preview');
@@ -706,6 +741,26 @@ function startWordPreview(word) {
     tetLastTime = performance.now();
     tetAnimId = requestAnimationFrame(tetrisLoop);
   }, dur);
+}
+
+function updateSkipBtnUI() {
+  const btn = document.getElementById('toggle-skip-preview');
+  if (!btn) return;
+  if (showWordPreview) {
+    btn.classList.remove('off');
+    btn.textContent = '💡 单词提示：开';
+  } else {
+    btn.classList.add('off');
+    btn.textContent = '💡 单词提示：关';
+  }
+}
+
+function toggleWordPreviewSetting() {
+  showWordPreview = !showWordPreview;
+  localStorage.setItem('tangogo_show_blocks_preview', showWordPreview);
+  updateSkipBtnUI();
+  sfxClick();
+  showToast(showWordPreview ? '已开启单词下落前提示' : '已关闭单词提示，开局直接下落');
 }
 
 function setupCanvas() {
@@ -975,6 +1030,7 @@ function togglePause() {
 document.getElementById('mode-btn-random').addEventListener('click', () => setTetrisOrderMode('random'));
 document.getElementById('mode-btn-order').addEventListener('click', () => setTetrisOrderMode('order'));
 document.getElementById('tet-hint').addEventListener('click', useTetrisHint);
+document.getElementById('toggle-skip-preview').addEventListener('click', toggleWordPreviewSetting);
 document.getElementById('tet-left').addEventListener('click', moveLeft);
 document.getElementById('tet-right').addEventListener('click', moveRight);
 document.getElementById('tet-pause').addEventListener('click', togglePause);
@@ -996,8 +1052,8 @@ window.addEventListener('resize', () => {
 window.addEventListener('DOMContentLoaded', async () => {
   await initAuth();
   lessonStartTime = Date.now();
+  updateSkipBtnUI();
   
-  // 异步获取当前课词库
   FULL_LESSON_WORDS = await fetchCurrentLessonWords();
   totalGroups = Math.max(1, Math.ceil(FULL_LESSON_WORDS.length / GROUP_SIZE));
   

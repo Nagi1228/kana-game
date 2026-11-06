@@ -229,6 +229,7 @@
     }
 
     const urlParams = new URLSearchParams(window.location.search);
+    const isMistakeDrill = urlParams.get('mode') === 'mistakes';
     const { b: currentBook, g: currentGrade, l: currentLesson } = normalizeParams(
       urlParams.get('book'),
       urlParams.get('grade'),
@@ -267,7 +268,21 @@
     }
 
     async function fetchCurrentLessonWords() {
-      if (sbClient) {
+      if (isMistakeDrill) {
+        const mistakes = JSON.parse(localStorage.getItem('tangogo_mistakes') || '[]');
+        if (mistakes.length > 0) {
+          document.getElementById('lessonName').innerText = '错词专练';
+          return mistakes.map((m, idx) => ({
+            id: idx + 1,
+            kanji: m.kanji || m.word || '',
+            kana: m.kana || m.word || '',
+            pos: m.pos || '名',
+            meaning: m.meaning || ''
+          }));
+        }
+      }
+
+      if (sbClient && !isMistakeDrill) {
         try {
           const { data, error } = await sbClient
             .from('words')
@@ -279,14 +294,12 @@
             .order('created_at', { ascending: true });
 
           if (!error && data && data.length > 0) {
-            showToast(`已成功载入云端题库（共 ${data.length} 词）`);
             return data;
           }
         } catch (e) {
           console.warn('读取云端失败:', e);
         }
       }
-      showToast('使用默认精选词库');
       return DEFAULT_FALLBACK_WORDS;
     }
 
@@ -327,7 +340,6 @@
         if (c.kind === 'word') {
           el.innerHTML = `<div class="elim-word jp-text">${c.raw.kanji || c.raw.kana}</div>`;
         } else {
-          // 核心优化：如果该词无汉字（或汉字与假名一致），释义卡片不再重复显示假名
           const hasKanji = c.raw.kanji && c.raw.kanji.trim() !== '' && c.raw.kanji.trim() !== c.raw.kana.trim();
           el.innerHTML = `
             <div class="m-tags">
@@ -417,10 +429,12 @@
         const actEl = document.getElementById('ov-actions');
         actEl.innerHTML = '';
 
-        actEl.appendChild(createBtn('下一课', 'btn-primary', () => {
-          showToast('正在前往下一课...');
-          setTimeout(() => location.href = `match.html?book=${encodeURIComponent(currentBook)}&grade=${encodeURIComponent(currentGrade)}&lesson=pep_jr_7_intro2`, 500);
-        }));
+        if (!isMistakeDrill) {
+          actEl.appendChild(createBtn('下一课', 'btn-primary', () => {
+            showToast('正在前往下一课...');
+            setTimeout(() => location.href = `match.html?book=${encodeURIComponent(currentBook)}&grade=${encodeURIComponent(currentGrade)}&lesson=pep_jr_7_intro2`, 500);
+          }));
+        }
         actEl.appendChild(createBtn('再来1遍', 'btn-secondary', () => {
           overlay.hidden = true;
           score = 0; mistakes = 0; startTime = Date.now();

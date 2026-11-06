@@ -213,7 +213,6 @@ body {
       }
     }
 
-    // 参数归一化
     function normalizeParams(rawBook, rawGrade, rawLesson) {
       let b = rawBook || 'pep_jr';
       let g = rawGrade || 'pep_jr_7';
@@ -227,6 +226,7 @@ body {
     }
 
     const urlParams = new URLSearchParams(window.location.search);
+    const isMistakeDrill = urlParams.get('mode') === 'mistakes';
     const { b: currentBook, g: currentGrade, l: currentLesson } = normalizeParams(
       urlParams.get('book'),
       urlParams.get('grade'),
@@ -265,7 +265,20 @@ body {
     }
 
     async function fetchCurrentLessonWords() {
-      if (sbClient) {
+      if (isMistakeDrill) {
+        const mistakes = JSON.parse(localStorage.getItem('tangogo_mistakes') || '[]');
+        if (mistakes.length > 0) {
+          return mistakes.map((m, idx) => ({
+            id: idx + 1,
+            kanji: m.kanji || m.word || '',
+            kana: m.kana || m.word || '',
+            pos: m.pos || '名',
+            meaning: m.meaning || ''
+          }));
+        }
+      }
+
+      if (sbClient && !isMistakeDrill) {
         try {
           const { data, error } = await sbClient
             .from('words')
@@ -277,14 +290,12 @@ body {
             .order('created_at', { ascending: true });
 
           if (!error && data && data.length > 0) {
-            showToast(`已成功载入云端题库（共 ${data.length} 词）`);
             return data;
           }
         } catch (e) {
           console.warn('读取云端失败:', e);
         }
       }
-      showToast('使用默认精选词库');
       return DEFAULT_FALLBACK_WORDS;
     }
 
@@ -433,10 +444,12 @@ body {
         const actEl = document.getElementById('ov-actions');
         actEl.innerHTML = '';
 
-        actEl.appendChild(createBtn('下一课', 'btn-primary', () => {
-          showToast('正在前往下一课...');
-          setTimeout(() => location.href = `link.html?book=${encodeURIComponent(currentBook)}&grade=${encodeURIComponent(currentGrade)}&lesson=pep_jr_7_intro2`, 500);
-        }));
+        if (!isMistakeDrill) {
+          actEl.appendChild(createBtn('下一课', 'btn-primary', () => {
+            showToast('正在前往下一课...');
+            setTimeout(() => location.href = `link.html?book=${encodeURIComponent(currentBook)}&grade=${encodeURIComponent(currentGrade)}&lesson=pep_jr_7_intro2`, 500);
+          }));
+        }
         actEl.appendChild(createBtn('再来1遍', 'btn-secondary', () => {
           overlay.hidden = true;
           score = 0; mistakes = 0; startTime = Date.now();
