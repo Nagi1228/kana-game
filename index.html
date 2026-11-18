@@ -521,3 +521,636 @@
         <div class="mode-foot">
           <span class="tag">动态反应</span>
           <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+      </div>
+
+      <!-- 03 连线模式 -->
+      <div class="mode-card reveal" style="--i:7" onclick="startGame('连线模式')">
+        <div class="mode-top">
+          <div class="mode-icon">
+            <svg class="icon" viewBox="0 0 24 24"><circle cx="5" cy="7" r="2.3"/><circle cx="5" cy="17" r="2.3"/><circle cx="19" cy="7" r="2.3"/><circle cx="19" cy="17" r="2.3"/><path d="M7.3 7h9.4M7.3 17 16.8 7.4"/></svg>
+          </div>
+          <span class="mode-no">03</span>
+        </div>
+        <h3>连线模式</h3>
+        <p>左右连线，把日文假名和中文释义迅速串联</p>
+        <div class="mode-foot">
+          <span class="tag">词义串联</span>
+          <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+      </div>
+
+      <!-- 04 翻牌模式 -->
+      <div class="mode-card reveal" style="--i:8" onclick="startGame('翻牌模式')">
+        <div class="mode-top">
+          <div class="mode-icon">
+            <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2" stroke-dasharray="2 2.2"/><rect x="3" y="13" width="8" height="8" rx="2" stroke-dasharray="2 2.2"/></svg>
+          </div>
+          <span class="mode-no">04</span>
+        </div>
+        <h3>翻牌模式</h3>
+        <p>翻开 12 张卡片找出对应词义，点对了就一起消除</p>
+        <div class="mode-foot">
+          <span class="tag">位置记忆</span>
+          <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">Tangogo · 日语背词</footer>
+  </div>
+</main>
+
+<!-- 移动端底部便携标签栏 -->
+<nav class="tabbar" aria-label="移动端底部导航">
+  <button class="active" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+    <svg class="icon" viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/></svg>
+    <span>首页</span>
+  </button>
+  <a href="vocab.html">
+    <svg class="icon" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H19v3H6.5"/></svg>
+    <span>词库</span>
+  </a>
+  <button onclick="openMistakesModal()">
+    <svg class="icon" viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg>
+    <span>错词本</span>
+    <span class="badge" id="tabMistakeBadge">0</span>
+  </button>
+  <button onclick="openUserModal()">
+    <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></svg>
+    <span>我的</span>
+  </button>
+</nav>
+
+<!-- 错词本管理弹窗 -->
+<div class="modal-overlay" id="mistakesModal">
+  <div class="modal-dialog mistakes-dialog">
+    <div class="modal-head">
+      <div class="modal-title">错词本 (<span id="mistakeListCount">0</span>)</div>
+      <button class="close-icon-btn" onclick="closeMistakesModal()">
+        <svg viewBox="0 0 24 24" class="icon" style="width:16px; height:16px;"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <div class="mistakes-body">
+      <div id="mistakesEmpty" class="mistakes-empty" style="display:none;">
+        <p>当前没有错词记录，太棒了！👏</p>
+      </div>
+      <div class="mistakes-list" id="mistakesContainer"></div>
+    </div>
+
+    <div class="mistakes-actions" style="position:relative;">
+      <!-- 快捷玩法展开菜单 -->
+      <div class="drill-menu" id="drillMenu">
+        <button class="drill-option" onclick="startMistakeDrill('拼词模式')">🧩 拼词模式</button>
+        <button class="drill-option" onclick="startMistakeDrill('落字模式')">🎮 落字模式</button>
+        <button class="drill-option" onclick="startMistakeDrill('连线模式')">🔗 连线模式</button>
+        <button class="drill-option" onclick="startMistakeDrill('翻牌模式')">🃏 翻牌模式</button>
+      </div>
+
+      <button class="btn-secondary" style="height:38px; padding:0 14px; font-size:13px;" onclick="exportMistakesCSV()">
+        📥 导出表格 (.csv)
+      </button>
+      <button class="btn-primary" id="btnStartDrill" style="height:38px; padding:0 16px; font-size:13px;" onclick="toggleDrillMenu()">
+        🎯 错词专练 ▾
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 登录 / 注册 / 个人设置 浮层弹窗 -->
+<div class="modal-overlay" id="userModal">
+  <div class="modal-dialog">
+    <div class="modal-head">
+      <div class="modal-title" id="modalTitle">用户登录 / 注册</div>
+      <button class="close-icon-btn" onclick="closeUserModal()">
+        <svg viewBox="0 0 24 24" class="icon" style="width:16px; height:16px;"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- 未登录状态视图 -->
+    <div id="unauthPanel">
+      <div class="form-group">
+        <label for="inputEmail">邮箱地址</label>
+        <input type="email" id="inputEmail" class="form-input" placeholder="name@example.com">
+      </div>
+      <div class="form-group">
+        <label for="inputPwd">密码</label>
+        <input type="password" id="inputPwd" class="form-input" placeholder="不少于 6 位密码">
+      </div>
+      <div class="action-btn-group">
+        <button class="btn-primary" onclick="doSignIn()">登录</button>
+        <button class="btn-secondary" onclick="doSignUp()">注册新账号</button>
+      </div>
+    </div>
+
+    <!-- 已登录设置视图 -->
+    <div id="profilePanel" style="display:none;">
+      <p style="font-size:12.5px; color:var(--muted); margin-bottom:14px;">
+        当前账号：<b id="profileEmailTxt" style="color:var(--ink);"></b>
+      </p>
+      
+      <div class="form-group">
+        <label>专属徽标（印记）</label>
+        <div class="avatar-row">
+          <button class="avatar-pick-btn" data-av="桜" onclick="chooseAvatar('桜')">桜</button>
+          <button class="avatar-pick-btn" data-av="藤" onclick="chooseAvatar('藤')">藤</button>
+          <button class="avatar-pick-btn" data-av="葵" onclick="chooseAvatar('葵')">葵</button>
+          <button class="avatar-pick-btn" data-av="墨" onclick="chooseAvatar('墨')">墨</button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputNickname">个性昵称</label>
+        <input type="text" id="inputNickname" class="form-input" placeholder="输入自定义称谓">
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:10px; margin-top:20px;">
+        <button class="btn-primary" style="height:42px;" onclick="saveUserProfile()">保存设置</button>
+        <button class="btn-danger" onclick="doSignOut()">退出登录</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 浮动通知消息 -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+  /* ============ Supabase 初始化 ============ */
+  const SUPABASE_URL = 'https://zbfjbtzvnhmfzyvooact.supabase.co';
+  const SUPABASE_KEY = 'sb_publishable_AP0YnQLgzmB3d63_4zbpjg_vHeTyo8Z';
+  const sbClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
+
+  let currentUser = null;
+  let selectedAvatar = localStorage.getItem('tangogo_avatar') || '桜';
+  let currentNickname = localStorage.getItem('tangogo_nickname') || '';
+  let mistakesList = JSON.parse(localStorage.getItem('tangogo_mistakes') || '[]');
+
+  /* 提示框替代原生 alert */
+  let toastTimer = null;
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => { toast.classList.remove('show'); }, 2400);
+  }
+
+  /* 数字渐变缓动动画 */
+  function tweenNumber(el, targetNum) {
+    const from = parseInt(el.textContent, 10) || 0;
+    if (from === targetNum || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      el.textContent = targetNum;
+      return;
+    }
+    const t0 = performance.now();
+    const duration = 400;
+    function frame(t) {
+      const p = Math.min((t - t0) / duration, 1);
+      const ease = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(from + (targetNum - from) * ease);
+      if (p < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  /* ============ 教材数据结构配置 ============ */
+  function makeLessons(prefix, count, startNo = 1) {
+    return Array.from({ length: count }, (_, i) => ({
+      id: `${prefix}_l${i + 1}`,
+      name: `第${startNo + i}课`
+    }));
+  }
+
+  const CURRICULUM = [
+    {
+      id: 'std_beg', name: '新版标准日本语初级',
+      children: [
+        { id: 'std_beg_1', name: '初级上册', lessons: makeLessons('std_beg_1', 24) },
+        { id: 'std_beg_2', name: '初级下册', lessons: makeLessons('std_beg_2', 24, 25) }
+      ]
+    },
+    {
+      id: 'pep_jr', name: '人教版初中日语（新）',
+      children: [
+        {
+          id: 'pep_jr_7', name: '七年级',
+          lessons: [
+            { id: 'pep_jr_7_intro1', name: '入门单元 第1课' },
+            { id: 'pep_jr_7_intro2', name: '入门单元 第2课' },
+            { id: 'pep_jr_7_intro3', name: '入门单元 第3课' },
+            ...makeLessons('pep_jr_7', 12)
+          ]
+        },
+        { id: 'pep_jr_8', name: '八年级', lessons: makeLessons('pep_jr_8', 12) },
+        { id: 'pep_jr_9', name: '九年级', lessons: makeLessons('pep_jr_9', 12) }
+      ]
+    },
+    {
+      id: 'pep_sr', name: '人教版高中日语',
+      children: [
+        { id: 'pep_sr_b1', name: '必修一', lessons: makeLessons('pep_sr_b1', 4) },
+        { id: 'pep_sr_b2', name: '必修二', lessons: makeLessons('pep_sr_b2', 4, 5) },
+        { id: 'pep_sr_b3', name: '必修三', lessons: makeLessons('pep_sr_b3', 4, 9) }
+      ]
+    }
+  ];
+
+  /* 验证管理员写入权限 */
+  async function checkAdminPermission() {
+    if (!currentUser || !sbClient) return false;
+    try {
+      const { data, error } = await sbClient.from('words').insert([{
+        book_id: '_auth_probe_',
+        grade_id: '_auth_probe_',
+        lesson_id: '_auth_probe_',
+        kana: 'probe',
+        meaning: 'probe'
+      }]).select('id');
+
+      if (!error && data && data.length > 0) {
+        await sbClient.from('words').delete().eq('id', data[0].id);
+        return true;
+      }
+      return false;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  /* 初始化教材选择器 */
+  function initCurriculumUI() {
+    const bSel = document.getElementById('bookSelect');
+    bSel.innerHTML = '';
+    CURRICULUM.forEach(b => {
+      bSel.innerHTML += `<option value="${b.id}">${b.name}</option>`;
+    });
+
+    const savedBook = localStorage.getItem('tangogo_pref_book');
+    if (savedBook && CURRICULUM.some(b => b.id === savedBook)) {
+      bSel.value = savedBook;
+    }
+    onBookChange(true);
+  }
+
+  function onBookChange(isInitial = false) {
+    const bId = document.getElementById('bookSelect').value;
+    localStorage.setItem('tangogo_pref_book', bId);
+    const book = CURRICULUM.find(b => b.id === bId);
+    const gSel = document.getElementById('gradeSelect');
+    gSel.innerHTML = '';
+    if (book) {
+      book.children.forEach(g => {
+        gSel.innerHTML += `<option value="${g.id}">${g.name}</option>`;
+      });
+    }
+
+    if (isInitial) {
+      const savedGrade = localStorage.getItem('tangogo_pref_grade');
+      if (savedGrade && book && book.children.some(g => g.id === savedGrade)) {
+        gSel.value = savedGrade;
+      }
+    }
+    onGradeChange(isInitial);
+  }
+
+  async function onGradeChange(isInitial = false) {
+    const bId = document.getElementById('bookSelect').value;
+    const gId = document.getElementById('gradeSelect').value;
+    localStorage.setItem('tangogo_pref_grade', gId);
+
+    const book = CURRICULUM.find(b => b.id === bId);
+    const grade = book ? book.children.find(g => g.id === gId) : null;
+    const lSel = document.getElementById('lessonSelect');
+    lSel.innerHTML = '';
+
+    if (!grade) return;
+
+    let countsMap = {};
+    let totalGradeWords = 0;
+
+    if (sbClient) {
+      try {
+        const { data, error } = await sbClient
+          .from('words')
+          .select('lesson_id')
+          .eq('book_id', bId)
+          .eq('grade_id', gId);
+
+        if (!error && data) {
+          totalGradeWords = data.length;
+          data.forEach(row => {
+            countsMap[row.lesson_id] = (countsMap[row.lesson_id] || 0) + 1;
+          });
+        }
+      } catch (e) {
+        console.warn('统计词数异常:', e);
+      }
+    }
+
+    tweenNumber(document.getElementById('statTotal'), totalGradeWords);
+
+    grade.lessons.forEach(l => {
+      const count = countsMap[l.id] || 0;
+      lSel.innerHTML += `<option value="${l.id}" data-count="${count}">${l.name} (${count}词)</option>`;
+    });
+
+    if (isInitial) {
+      const savedLesson = localStorage.getItem('tangogo_pref_lesson');
+      if (savedLesson && grade.lessons.some(l => l.id === savedLesson)) {
+        lSel.value = savedLesson;
+      }
+    }
+
+    onLessonSelectChange();
+  }
+
+  function onLessonSelectChange() {
+    const lSel = document.getElementById('lessonSelect');
+    const lId = lSel.value;
+    localStorage.setItem('tangogo_pref_lesson', lId);
+
+    const opt = lSel.options[lSel.selectedIndex];
+    const count = opt ? parseInt(opt.getAttribute('data-count') || '0', 10) : 0;
+    tweenNumber(document.getElementById('statLesson'), count);
+  }
+
+  /* 启动具体玩法 */
+  function startGame(modeName) {
+    const routes = {
+      '拼词模式': 'puzzle.html',
+      '落字模式': 'blocks.html',
+      '连线模式': 'link.html',
+      '翻牌模式': 'match.html'
+    };
+
+    const target = routes[modeName];
+    if (!target) return;
+
+    const book = document.getElementById('bookSelect').value;
+    const grade = document.getElementById('gradeSelect').value;
+    const lesson = document.getElementById('lessonSelect').value;
+
+    window.location.href = `${target}?book=${encodeURIComponent(book)}&grade=${encodeURIComponent(grade)}&lesson=${encodeURIComponent(lesson)}`;
+  }
+
+  /* 账号弹窗交互 */
+  function openUserModal() {
+    const modal = document.getElementById('userModal');
+    const unauth = document.getElementById('unauthPanel');
+    const profile = document.getElementById('profilePanel');
+    if (currentUser) {
+      document.getElementById('modalTitle').innerText = '个人设置';
+      unauth.style.display = 'none';
+      profile.style.display = 'block';
+      document.getElementById('profileEmailTxt').innerText = currentUser.email;
+      document.getElementById('inputNickname').value = currentNickname || currentUser.email.split('@')[0];
+      chooseAvatar(selectedAvatar);
+    } else {
+      document.getElementById('modalTitle').innerText = '用户登录 / 注册';
+      unauth.style.display = 'block';
+      profile.style.display = 'none';
+    }
+    modal.style.display = 'flex';
+  }
+
+  function closeUserModal() {
+    document.getElementById('userModal').style.display = 'none';
+  }
+
+  function chooseAvatar(av) {
+    selectedAvatar = av;
+    document.querySelectorAll('.avatar-pick-btn').forEach(btn => {
+      btn.classList.toggle('selected', btn.getAttribute('data-av') === av);
+    });
+  }
+
+  async function refreshHeaderUI() {
+    const avatarEl = document.getElementById('userAvatarGlyph');
+    const nameEl = document.getElementById('userDisplayName');
+    if (currentUser) {
+      avatarEl.innerText = selectedAvatar;
+      nameEl.innerText = currentNickname || currentUser.email.split('@')[0];
+    } else {
+      avatarEl.innerText = '桜';
+      nameEl.innerText = '登录 / 注册';
+    }
+    await checkAdminPermission();
+  }
+
+  async function doSignUp() {
+    const email = document.getElementById('inputEmail').value.trim();
+    const password = document.getElementById('inputPwd').value;
+    if (!email || !password) return showToast('请填写邮箱和密码');
+    if (!sbClient) return showToast('数据库连接中，请稍后再试');
+    const { data, error } = await sbClient.auth.signUp({ email, password });
+    if (error) return showToast('注册失败: ' + error.message);
+    currentUser = data.user;
+    closeUserModal();
+    await refreshHeaderUI();
+    showToast('注册成功！已为您登录');
+  }
+
+  async function doSignIn() {
+    const email = document.getElementById('inputEmail').value.trim();
+    const password = document.getElementById('inputPwd').value;
+    if (!email || !password) return showToast('请填写邮箱和密码');
+    if (!sbClient) return showToast('数据库连接中，请稍后再试');
+    const { data, error } = await sbClient.auth.signInWithPassword({ email, password });
+    if (error) return showToast('登录失败: ' + error.message);
+    currentUser = data.user;
+    closeUserModal();
+    await refreshHeaderUI();
+    showToast('登录成功，欢迎回来！');
+  }
+
+  async function doSignOut() {
+    if (sbClient) await sbClient.auth.signOut();
+    currentUser = null;
+    currentNickname = '';
+    localStorage.removeItem('tangogo_nickname');
+    closeUserModal();
+    await refreshHeaderUI();
+    showToast('已安全退出登录');
+  }
+
+  async function saveUserProfile() {
+    const nicknameInput = document.getElementById('inputNickname').value.trim();
+    currentNickname = nicknameInput || (currentUser ? currentUser.email.split('@')[0] : '');
+    localStorage.setItem('tangogo_avatar', selectedAvatar);
+    localStorage.setItem('tangogo_nickname', currentNickname);
+
+    if (currentUser && sbClient) {
+      await sbClient.from('profiles').upsert({
+        id: currentUser.id,
+        avatar_id: selectedAvatar,
+        username: currentNickname,
+        updated_at: new Date().toISOString()
+      });
+    }
+    await refreshHeaderUI();
+    closeUserModal();
+    showToast('个人设置已保存');
+  }
+
+  /* ============ 错词本系统逻辑 ============ */
+  function openMistakesModal() {
+    renderMistakesList();
+    document.getElementById('mistakesModal').style.display = 'flex';
+  }
+
+  function closeMistakesModal() {
+    document.getElementById('mistakesModal').style.display = 'none';
+    document.getElementById('drillMenu').classList.remove('show');
+  }
+
+  function renderMistakesList() {
+    const container = document.getElementById('mistakesContainer');
+    const emptyEl = document.getElementById('mistakesEmpty');
+    const countEl = document.getElementById('mistakeListCount');
+    const drillBtn = document.getElementById('btnStartDrill');
+    
+    countEl.innerText = mistakesList.length;
+    container.innerHTML = '';
+
+    if (mistakesList.length === 0) {
+      emptyEl.style.display = 'block';
+      drillBtn.disabled = true;
+      drillBtn.style.opacity = '0.5';
+      drillBtn.style.cursor = 'not-allowed';
+      return;
+    }
+
+    emptyEl.style.display = 'none';
+    drillBtn.disabled = false;
+    drillBtn.style.opacity = '1';
+    drillBtn.style.cursor = 'pointer';
+
+    mistakesList.forEach((item, index) => {
+      const row = document.createElement('div');
+      row.className = 'mistake-item';
+      
+      let wordDisplay = typeof item === 'string' ? item : (item.word || item.kanji || item.kana || '未知单词');
+      let kanaDisplay = item.kana && item.kana !== wordDisplay ? item.kana : '';
+      let meaningDisplay = item.meaning || item.trans || '';
+
+      row.innerHTML = `
+        <div class="mistake-word-info">
+          <div class="mistake-word-kanji">${wordDisplay} ${kanaDisplay ? `<span class="mistake-word-kana">(${kanaDisplay})</span>` : ''}</div>
+          ${meaningDisplay ? `<div class="mistake-word-meaning">${meaningDisplay}</div>` : ''}
+        </div>
+        <button class="mistake-delete-btn" onclick="removeMistakeItem(${index})">删除</button>
+      `;
+      container.appendChild(row);
+    });
+  }
+
+  function removeMistakeItem(index) {
+    mistakesList.splice(index, 1);
+    localStorage.setItem('tangogo_mistakes', JSON.stringify(mistakesList));
+    
+    const len = mistakesList.length;
+    document.getElementById('navMistakeBadge').innerText = len;
+    document.getElementById('tabMistakeBadge').innerText = len;
+    document.getElementById('statWrong').innerText = len;
+    if (len === 0) {
+      document.getElementById('navMistakeBadge').style.display = 'none';
+      document.getElementById('tabMistakeBadge').style.display = 'none';
+    }
+
+    renderMistakesList();
+    showToast('已从错词本移除该词');
+  }
+
+  /* 导出表格 (.csv，UTF-8 BOM 防中文乱码) */
+  function exportMistakesCSV() {
+    if (mistakesList.length === 0) return showToast('错词本暂无内容可导出');
+    
+    let csvContent = '\uFEFF单词,假名/读音,释义\n';
+    mistakesList.forEach(item => {
+      const word = typeof item === 'string' ? item : (item.word || item.kanji || item.kana || '');
+      const kana = item.kana || '';
+      const meaning = (item.meaning || item.trans || '').replace(/"/g, '""');
+      csvContent += `"${word}","${kana}","${meaning}"\n`;
+    });
+
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', `Tangogo_错词本_${new Date().toISOString().slice(0, 10)}.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+    showToast('错词表格导出成功');
+  }
+
+  /* 错词专练触发菜单 */
+  function toggleDrillMenu() {
+    if (mistakesList.length === 0) return showToast('暂无错词可练');
+    document.getElementById('drillMenu').classList.toggle('show');
+  }
+
+  function startMistakeDrill(modeName) {
+    const routes = {
+      '拼词模式': 'puzzle.html',
+      '落字模式': 'blocks.html',
+      '连线模式': 'link.html',
+      '翻牌模式': 'match.html'
+    };
+    const target = routes[modeName];
+    if (!target) return;
+    window.location.href = `${target}?mode=mistakes`;
+  }
+
+  /* 页面挂载与事件绑定 */
+  window.addEventListener('DOMContentLoaded', async () => {
+    initCurriculumUI();
+
+    const wrongLen = mistakesList.length;
+    document.getElementById('navMistakeBadge').innerText = wrongLen;
+    document.getElementById('tabMistakeBadge').innerText = wrongLen;
+    document.getElementById('statWrong').innerText = wrongLen;
+    if (wrongLen === 0) {
+      document.getElementById('navMistakeBadge').style.display = 'none';
+      document.getElementById('tabMistakeBadge').style.display = 'none';
+    }
+
+    const themeBtn = document.getElementById('themeBtn');
+    themeBtn.addEventListener('click', () => {
+      const root = document.documentElement;
+      const nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', nextTheme);
+      try { localStorage.setItem('kana-theme', nextTheme); } catch (e) {}
+    });
+
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 4);
+    }, { passive: true });
+
+    window.addEventListener('click', (e) => {
+      const userModal = document.getElementById('userModal');
+      const mistakesModal = document.getElementById('mistakesModal');
+      const drillMenu = document.getElementById('drillMenu');
+      const drillBtn = document.getElementById('btnStartDrill');
+
+      if (e.target === userModal) closeUserModal();
+      if (e.target === mistakesModal) closeMistakesModal();
+
+      if (drillMenu && drillBtn && !drillMenu.contains(e.target) && e.target !== drillBtn) {
+        drillMenu.classList.remove('show');
+      }
+    });
+
+    if (sbClient) {
+      const { data: { session } } = await sbClient.auth.getSession();
+      if (session) currentUser = session.user;
+    }
+    await refreshHeaderUI();
+  });
+</script>
+</body>
+</html>
