@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>かなゲーム - 消消乐模式</title>
+  <title>翻牌模式 · Tangogo</title>
+  <link rel="icon" type="image/png" sizes="512x512" href="./favicon.png?v=3">
+  <link rel="apple-touch-icon" href="./favicon.png?v=3">
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,11 +48,16 @@
 
     header {
       width: 100%; background: var(--surface); border-bottom: 2px solid var(--border);
-      display: flex; justify-content: space-between; align-items: center; padding: 12px 24px;
+      display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 24px;
       box-shadow: 0 2px 12px var(--shadow); position: sticky; top: 0; z-index: 50;
     }
     .logo { font-size: 1.6rem; font-weight: 900; color: var(--accent); cursor: pointer; }
     .logo span { color: var(--accent-hot); }
+    .header-deck-subtitle {
+      font-size: 0.88rem; font-weight: 700; color: var(--fg2);
+      background: var(--bg2); padding: 5px 14px; border-radius: 20px; border: 1.5px solid var(--border);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 60vw;
+    }
 
     .elim-game {
       width: 100%; max-width: 1180px; padding: 24px 16px;
@@ -151,7 +158,8 @@
 <body>
 
   <header>
-    <div class="logo jp-text" onclick="location.href='index.html'">かな<span>ゲーム</span></div>
+    <div class="logo cn-text" onclick="location.href='index.html'">Tango<span>go</span></div>
+    <div class="header-deck-subtitle cn-text" id="deckSubtitle">翻牌模式</div>
   </header>
 
   <div class="elim-game">
@@ -166,7 +174,7 @@
       <div class="score-chip cn-text" id="scoreChip">0分</div>
     </div>
 
-    <div class="elim-tip">每轮 12 张卡片：6 个单词原形 + 6 个对应释义，点中配对的两张就会一起消失</div>
+    <div class="elim-tip">每轮 12 张卡片：6 个单词原形 + 6 个对应释义，选中同一组词义的两张就会一起消除</div>
 
     <div class="elim-board-wrap">
       <div class="elim-board" id="elim-board"></div>
@@ -236,6 +244,38 @@
       urlParams.get('lesson')
     );
 
+    function getDeckInfo(b, g, l) {
+      if (isMistakeDrill) {
+        return { fullLabel: '错词本专练', lessonName: '错词本专练' };
+      }
+      const bookMap = {
+        'std_beg': '新版标准日本语初级',
+        'pep_jr': '人教版初中日语（新）',
+        'pep_sr': '人教版高中日语'
+      };
+      const gradeMap = {
+        'std_beg_1': '初级上册', 'std_beg_2': '初级下册',
+        'pep_jr_7': '七年级', 'pep_jr_8': '八年级', 'pep_jr_9': '九年级',
+        'pep_sr_b1': '必修一', 'pep_sr_b2': '必修二', 'pep_sr_b3': '必修三'
+      };
+      let lessonName = '';
+      if (l && l.includes('_intro')) {
+        const num = l.split('_intro')[1];
+        lessonName = `入门单元 第${num}课`;
+      } else if (l && l.includes('_l')) {
+        const idx = parseInt(l.split('_l')[1], 10);
+        let offset = 0;
+        if (g === 'std_beg_2') offset = 24;
+        else if (g === 'pep_sr_b2') offset = 4;
+        else if (g === 'pep_sr_b3') offset = 8;
+        lessonName = `第${idx + offset}课`;
+      }
+      const fullLabel = [bookMap[b] || b, gradeMap[g] || g, lessonName].filter(Boolean).join(' · ');
+      return { fullLabel, lessonName: lessonName || fullLabel };
+    }
+
+    const deckInfo = getDeckInfo(currentBook, currentGrade, currentLesson);
+
     const DEFAULT_FALLBACK_WORDS = [
       { id: 1, kanji: '池', kana: 'いけ', pos: '名', meaning: '池塘' },
       { id: 2, kanji: '祖国', kana: 'そこく', pos: '名', meaning: '祖国' },
@@ -271,7 +311,6 @@
       if (isMistakeDrill) {
         const mistakes = JSON.parse(localStorage.getItem('tangogo_mistakes') || '[]');
         if (mistakes.length > 0) {
-          document.getElementById('lessonName').innerText = '错词专练';
           return mistakes.map((m, idx) => ({
             id: idx + 1,
             kanji: m.kanji || m.word || '',
@@ -416,7 +455,7 @@
         const timeFormatted = `${m > 0 ? m + '分' : ''}${s}秒`;
 
         const overlay = document.getElementById('overlay');
-        document.getElementById('ov-body').textContent = `恭喜通关！本课全部 ${ALL_WORDS.length} 个单词已全部消除完毕！`;
+        document.getElementById('ov-body').textContent = `恭喜通关！本课全部 ${ALL_WORDS.length} 个单词已全部翻牌消除完毕！`;
         const statsEl = document.getElementById('ov-stats');
         statsEl.hidden = false;
         statsEl.innerHTML = `
@@ -458,44 +497,48 @@
     function generateShareCard(score, timeSpent, totalWords) {
       showToast('正在生成成绩单图片...');
       const cvs = document.createElement('canvas');
-      cvs.width = 640; cvs.height = 840;
+      cvs.width = 640; cvs.height = 880;
       const ctx = cvs.getContext('2d');
-      const bgGrad = ctx.createLinearGradient(0, 0, 640, 840);
+      const bgGrad = ctx.createLinearGradient(0, 0, 640, 880);
       bgGrad.addColorStop(0, '#f0f7ff'); bgGrad.addColorStop(1, '#bfdbfe');
-      ctx.fillStyle = bgGrad; ctx.fillRect(0, 0, 640, 840);
+      ctx.fillStyle = bgGrad; ctx.fillRect(0, 0, 640, 880);
 
-      ctx.strokeStyle = '#2563eb'; ctx.lineWidth = 10; ctx.strokeRect(20, 20, 600, 800);
-      ctx.fillStyle = '#2563eb'; ctx.font = "900 34px sans-serif"; ctx.textAlign = 'center';
-      ctx.fillText('かなゲーム · 消消乐闯关', 320, 90);
+      ctx.strokeStyle = '#2563eb'; ctx.lineWidth = 10; ctx.strokeRect(20, 20, 600, 840);
+      ctx.fillStyle = '#2563eb'; ctx.font = "900 34px 'Noto Sans SC', sans-serif"; ctx.textAlign = 'center';
+      ctx.fillText('Tangogo · 日语背词', 320, 90);
       ctx.font = "72px sans-serif"; ctx.fillText('🏆', 320, 180);
-      ctx.fillStyle = '#0c2340'; ctx.font = "900 32px sans-serif"; ctx.fillText('通 关 荣 誉 证 书', 320, 240);
+      ctx.fillStyle = '#0c2340'; ctx.font = "900 32px 'Noto Sans SC', sans-serif"; ctx.fillText('通 关 荣 誉 证 书', 320, 240);
 
       const userNick = localStorage.getItem('tangogo_nickname') || '日语学习达人';
-      ctx.font = "700 22px sans-serif"; ctx.fillStyle = '#1e4d8c'; ctx.fillText(`学员：${userNick}`, 320, 290);
+      ctx.font = "700 22px 'Noto Sans SC', sans-serif"; ctx.fillStyle = '#1e4d8c'; ctx.fillText(`学员：${userNick}`, 320, 290);
 
-      ctx.fillStyle = '#ffffff'; ctx.fillRect(80, 330, 480, 320);
-      ctx.fillStyle = '#64748b'; ctx.font = "700 18px sans-serif"; ctx.textAlign = 'left';
-      ctx.fillText('⏱ 通关用时', 120, 400);
-      ctx.fillText('📖 掌握词汇', 120, 460);
-      ctx.fillText('🌟 最终得分', 120, 520);
-      ctx.fillText('🎮 挑战模式', 120, 580);
+      ctx.fillStyle = '#ffffff'; ctx.fillRect(80, 340, 480, 360);
+      ctx.fillStyle = '#64748b'; ctx.font = "700 18px 'Noto Sans SC', sans-serif"; ctx.textAlign = 'left';
+      ctx.fillText('📚 学习课程', 120, 400);
+      ctx.fillText('⏱ 通关用时', 120, 460);
+      ctx.fillText('📖 掌握词汇', 120, 520);
+      ctx.fillText('🌟 最终得分', 120, 580);
+      ctx.fillText('🎮 挑战模式', 120, 640);
 
-      ctx.textAlign = 'right'; ctx.fillStyle = '#0c2340'; ctx.font = "900 20px sans-serif";
-      ctx.fillText(timeSpent, 520, 400);
-      ctx.fillText(`${totalWords} 词`, 520, 460);
-      ctx.fillStyle = '#ea580c'; ctx.font = "900 26px sans-serif"; ctx.fillText(`${score} 分`, 520, 520);
-      ctx.fillStyle = '#2563eb'; ctx.font = "900 20px sans-serif"; ctx.fillText('消消乐模式', 520, 580);
+      ctx.textAlign = 'right'; ctx.fillStyle = '#0c2340'; ctx.font = "900 20px 'Noto Sans SC', sans-serif";
+      ctx.fillText(deckInfo.fullLabel, 520, 400);
+      ctx.fillText(timeSpent, 520, 460);
+      ctx.fillText(`${totalWords} 词`, 520, 520);
+      ctx.fillStyle = '#ea580c'; ctx.font = "900 26px 'Noto Sans SC', sans-serif"; ctx.fillText(`${score} 分`, 520, 580);
+      ctx.fillStyle = '#2563eb'; ctx.font = "900 20px 'Noto Sans SC', sans-serif"; ctx.fillText('翻牌模式', 520, 640);
 
       setTimeout(() => {
         const a = document.createElement('a');
         a.href = cvs.toDataURL('image/png');
-        a.download = `消消乐通关成绩单_${Date.now()}.png`;
+        a.download = `Tangogo_翻牌模式成绩单_${Date.now()}.png`;
         a.click();
         showToast('🎉 成绩单图片已保存到本地！');
       }, 350);
     }
 
     window.addEventListener('DOMContentLoaded', async () => {
+      document.getElementById('deckSubtitle').innerText = `翻牌模式 · ${deckInfo.fullLabel}`;
+      document.getElementById('lessonName').innerText = deckInfo.lessonName;
       await initAuth();
       ALL_WORDS = await fetchCurrentLessonWords();
       totalGroups = Math.max(1, Math.ceil(ALL_WORDS.length / GROUP_SIZE));
