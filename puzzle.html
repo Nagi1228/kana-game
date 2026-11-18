@@ -3,7 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>かなゲーム - 拼图模式</title>
+<title>拼词模式 · Tangogo</title>
+<link rel="icon" type="image/png" sizes="512x512" href="./favicon.png?v=3">
+<link rel="apple-touch-icon" href="./favicon.png?v=3">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,12 +43,17 @@ body {
 [hidden] { display: none !important; }
 
 .top-nav {
-  display: flex; align-items: center; gap: 10px; padding: 12px 24px;
+  display: flex; align-items: center; gap: 12px; padding: 12px 24px;
   background-color: var(--surface); border-bottom: 2px solid var(--border);
   box-shadow: 0 2px 12px var(--shadow); position: sticky; top: 0; z-index: 50;
 }
 .nav-logo { font-size: 1.6rem; font-weight: 900; color: var(--accent); cursor: pointer; }
 .nav-logo span { color: var(--accent-hot); }
+.nav-deck-subtitle {
+  margin-left: auto; font-size: 0.88rem; font-weight: 700; color: var(--fg2);
+  background: var(--bg2); padding: 5px 14px; border-radius: 20px; border: 1.5px solid var(--border);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 60vw;
+}
 
 .sort-game {
   flex: 1; display: flex; flex-direction: column; align-items: center;
@@ -176,7 +183,8 @@ body {
 <body>
 
   <nav class="top-nav">
-    <div class="nav-logo jp-text" onclick="location.href='index.html'">かな<span>ゲーム</span></div>
+    <div class="nav-logo cn-text" onclick="location.href='index.html'">Tango<span>go</span></div>
+    <div class="nav-deck-subtitle cn-text" id="deckSubtitle">拼词模式</div>
   </nav>
 
   <div class="sort-game">
@@ -288,6 +296,35 @@ body {
       urlParams.get('grade'),
       urlParams.get('lesson')
     );
+
+    function getDeckLabel(b, g, l) {
+      if (isMistakeDrill) return '错词本专练';
+      const bookMap = {
+        'std_beg': '新版标准日本语初级',
+        'pep_jr': '人教版初中日语（新）',
+        'pep_sr': '人教版高中日语'
+      };
+      const gradeMap = {
+        'std_beg_1': '初级上册', 'std_beg_2': '初级下册',
+        'pep_jr_7': '七年级', 'pep_jr_8': '八年级', 'pep_jr_9': '九年级',
+        'pep_sr_b1': '必修一', 'pep_sr_b2': '必修二', 'pep_sr_b3': '必修三'
+      };
+      let lessonName = '';
+      if (l && l.includes('_intro')) {
+        const num = l.split('_intro')[1];
+        lessonName = `入门单元 第${num}课`;
+      } else if (l && l.includes('_l')) {
+        const idx = parseInt(l.split('_l')[1], 10);
+        let offset = 0;
+        if (g === 'std_beg_2') offset = 24;
+        else if (g === 'pep_sr_b2') offset = 4;
+        else if (g === 'pep_sr_b3') offset = 8;
+        lessonName = `第${idx + offset}课`;
+      }
+      return [bookMap[b] || b, gradeMap[g] || g, lessonName].filter(Boolean).join(' · ');
+    }
+
+    const currentDeckLabel = getDeckLabel(currentBook, currentGrade, currentLesson);
 
     const DEFAULT_FALLBACK_WORDS = [
       { kanji: '本', kana: 'ほん', pitch: '①', pos: '名', meaning: '书' },
@@ -578,7 +615,7 @@ body {
         const timeFormatted = `${m > 0 ? m + '分' : ''}${s}秒`;
 
         const overlay = document.getElementById('overlay');
-        document.getElementById('ov-body').textContent = `太棒了！本课全部 ${FULL_LESSON_WORDS.length} 个单词已全部拼图通关！`;
+        document.getElementById('ov-body').textContent = `太棒了！本课全部 ${FULL_LESSON_WORDS.length} 个单词已全部拼词通关！`;
         const statsEl = document.getElementById('ov-stats');
         statsEl.hidden = false;
         statsEl.innerHTML = `
@@ -632,7 +669,7 @@ body {
       ctx.strokeStyle = '#93c5fd'; ctx.lineWidth = 2; ctx.strokeRect(26, 26, 588, 828);
 
       ctx.fillStyle = '#2563eb'; ctx.font = "900 36px 'Noto Sans SC', sans-serif"; ctx.textAlign = 'center';
-      ctx.fillText('かなゲーム · 日语单词闯关', 320, 92);
+      ctx.fillText('Tangogo · 日语背词', 320, 92);
       ctx.font = "76px sans-serif"; ctx.fillText('🏆', 320, 185);
 
       ctx.fillStyle = '#0c2340'; ctx.font = "900 34px 'Noto Sans SC', sans-serif";
@@ -661,14 +698,14 @@ body {
       ctx.fillText('🎮 挑战模式', 124, 645);
 
       ctx.textAlign = 'right'; ctx.fillStyle = '#0c2340'; ctx.font = "900 20px 'Noto Sans SC', sans-serif";
-      ctx.fillText('人教新版 · 入门第1课', 516, 405);
+      ctx.fillText(currentDeckLabel, 516, 405);
       ctx.fillText(timeSpent, 516, 465);
       ctx.fillText(`${totalWords} 词 (全通过)`, 516, 525);
 
       ctx.fillStyle = '#ea580c'; ctx.font = "900 28px 'Noto Sans SC', sans-serif";
       ctx.fillText(`${score} 分`, 516, 585);
-      ctx.fillStyle = '#2563eb'; ctx.font = "900 20px sans-serif";
-      ctx.fillText('拼图闯关 (Puzzle)', 516, 645);
+      ctx.fillStyle = '#2563eb'; ctx.font = "900 20px 'Noto Sans SC', sans-serif";
+      ctx.fillText('拼词模式', 516, 645);
 
       ctx.textAlign = 'center'; ctx.fillStyle = '#1e4d8c'; ctx.font = "700 18px 'Noto Sans SC', sans-serif";
       ctx.fillText('持之以恒，日语单词轻松过！ ✨', 320, 742);
@@ -681,13 +718,14 @@ body {
       setTimeout(() => {
         const a = document.createElement('a');
         a.href = cvs.toDataURL('image/png');
-        a.download = `日语单词通关成绩单_${Date.now()}.png`;
+        a.download = `Tangogo_拼词模式成绩单_${Date.now()}.png`;
         a.click();
         showToast('🎉 成绩单图片已保存到本地！');
       }, 350);
     }
 
     window.addEventListener('DOMContentLoaded', async () => {
+      document.getElementById('deckSubtitle').innerText = `拼词模式 · ${currentDeckLabel}`;
       await initAuth();
       lessonStartTime = Date.now();
       FULL_LESSON_WORDS = await fetchCurrentLessonWords();
