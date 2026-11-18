@@ -9,6 +9,7 @@
 <meta name="color-scheme" content="light dark">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="./fsrs-engine.js"></script>
+<script src="./pitch-accent.js"></script>
 <script>
   (function () {
     var t = null;
@@ -344,8 +345,8 @@
     <div class="card-back-wrap" id="cardBack" hidden onclick="event.stopPropagation()">
       <div class="back-kana-row">
         <span class="back-kana" id="backKana"></span>
-        <span class="pitch-badge" id="backPitch"></span>
       </div>
+      <div class="back-pitch-diagram" id="backPitchDiagram"></div>
       <div class="back-meaning-row">
         <span class="pos-tag" id="backPos"></span>
         <span class="back-meaning" id="backMeaning"></span>
@@ -663,15 +664,13 @@
     document.getElementById('flipHint').hidden = true;
     document.getElementById('cardBack').hidden = false;
 
-    // 背面字段：假名、声调（先显示数字）、词性、中文含义
+    // 背面字段：假名、声调高低线图、词性、中文含义
     document.getElementById('backKana').textContent = activeCardItem.kana || '';
-    const pitchVal = (activeCardItem.pitch || '').trim();
-    const pitchEl = document.getElementById('backPitch');
-    if (pitchVal) {
-      pitchEl.textContent = `声调 ${pitchVal}`;
-      pitchEl.hidden = false;
+    const pitchDiagramEl = document.getElementById('backPitchDiagram');
+    if (window.TangogoPitchAccent) {
+      TangogoPitchAccent.mountPitchComponent(pitchDiagramEl, activeCardItem.kana || '', activeCardItem.pitch);
     } else {
-      pitchEl.hidden = true;
+      pitchDiagramEl.textContent = activeCardItem.pitch ? `声调 ${activeCardItem.pitch}` : '暂无声调';
     }
 
     const posEl = document.getElementById('backPos');
