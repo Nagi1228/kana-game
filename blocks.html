@@ -472,6 +472,8 @@ let tetSlotFilled = [];
 let tetFallQueue = [];
 let tetCurrentBlock = null;
 let tetSlotW = 68;
+let tetLogicalW = 0;
+let tetLogicalH = 0;
 let tetRunning = false;
 let tetPaused = false;
 let tetHintSlot = -1;
@@ -737,13 +739,25 @@ function generateShareCard(score, timeSpent, totalWords) {
   }, 350);
 }
 
+/* ============ 高清 Retina / HiDPI Canvas 适配，消除高分屏模糊 ============ */
 function setupCanvas() {
   const wrap = document.getElementById('tetris-canvas-wrap');
   const canvas = document.getElementById('tetris-canvas');
-  canvas.width = wrap.clientWidth || window.innerWidth;
-  canvas.height = wrap.clientHeight || 360;
+  const dpr = Math.max(1, window.devicePixelRatio || 1);
+
+  tetLogicalW = wrap.clientWidth || window.innerWidth;
+  tetLogicalH = wrap.clientHeight || 360;
+
+  canvas.width = Math.round(tetLogicalW * dpr);
+  canvas.height = Math.round(tetLogicalH * dpr);
+  canvas.style.width = tetLogicalW + 'px';
+  canvas.style.height = tetLogicalH + 'px';
+
+  const ctx = canvas.getContext('2d');
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
   const n = tetKanaList.length;
-  tetSlotW = Math.max(48, Math.min(82, Math.floor((canvas.width - 32) / n)));
+  tetSlotW = Math.max(48, Math.min(82, Math.floor((tetLogicalW - 32) / n)));
 }
 
 function renderSlots() {
@@ -809,9 +823,8 @@ function spawnNextBlock() {
 }
 
 function getSlotX(colIdx) {
-  const canvas = document.getElementById('tetris-canvas');
   const totalW = tetKanaList.length * tetSlotW;
-  const startX = (canvas.width - totalW) / 2;
+  const startX = (tetLogicalW - totalW) / 2;
   return startX + colIdx * tetSlotW + tetSlotW / 2;
 }
 
@@ -820,13 +833,12 @@ function tetrisLoop(now) {
   const dt = Math.min((now - tetLastTime) / 1000, 0.1);
   tetLastTime = now;
 
-  const canvas = document.getElementById('tetris-canvas');
   const baseSpeed = 58 + (tetLevel - 1) * 14;
   const speed = (tetCurrentBlock && tetCurrentBlock.fast) ? 680 : baseSpeed;
 
   if (tetCurrentBlock) {
     tetCurrentBlock.y += speed * dt;
-    const groundY = canvas.height - tetSlotW / 2 + 4;
+    const groundY = tetLogicalH - tetSlotW / 2 + 4;
     if (tetCurrentBlock.y >= groundY) {
       landBlock();
     }
@@ -905,61 +917,70 @@ function drawTetris() {
   const canvas = document.getElementById('tetris-canvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  const dpr = Math.max(1, window.devicePixelRatio || 1);
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  ctx.clearRect(0, 0, tetLogicalW, tetLogicalH);
 
   const n = tetKanaList.length;
   if (n === 0) return;
   const totalW = n * tetSlotW;
-  const startX = (canvas.width - totalW) / 2;
+  const startX = (tetLogicalW - totalW) / 2;
 
   ctx.strokeStyle = 'rgba(37, 99, 235, 0.16)';
   ctx.lineWidth = 1.5; ctx.setLineDash([5, 7]);
   for (let i = 0; i <= n; i++) {
-    const x = startX + i * tetSlotW;
-    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke();
+    const x = Math.round(startX + i * tetSlotW) + 0.5;
+    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, tetLogicalH); ctx.stroke();
   }
   ctx.setLineDash([]);
 
   if (tetOrderMode === 'order' && tetCurrentBlock) {
     const tx = startX + tetCurrentBlock.targetSlot * tetSlotW;
     ctx.fillStyle = 'rgba(37, 99, 235, 0.08)';
-    ctx.fillRect(tx, 0, tetSlotW, canvas.height);
+    ctx.fillRect(tx, 0, tetSlotW, tetLogicalH);
     const cx = tx + tetSlotW / 2;
     ctx.fillStyle = 'rgba(37, 99, 235, 0.7)';
-    ctx.beginPath(); ctx.moveTo(cx - 8, canvas.height - 10); ctx.lineTo(cx + 8, canvas.height - 10); ctx.lineTo(cx, canvas.height - 2); ctx.closePath(); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(cx - 8, tetLogicalH - 10); ctx.lineTo(cx + 8, tetLogicalH - 10); ctx.lineTo(cx, tetLogicalH - 2); ctx.closePath(); ctx.fill();
   }
 
   if (tetHintSlot >= 0 && tetHintSlot < n) {
     const hx = startX + tetHintSlot * tetSlotW;
     ctx.fillStyle = 'rgba(254, 243, 199, 0.85)';
-    ctx.fillRect(hx, 0, tetSlotW, canvas.height);
+    ctx.fillRect(hx, 0, tetSlotW, tetLogicalH);
   }
 
   if (tetCurrentBlock) {
     const { col, y, kana } = tetCurrentBlock;
-    const x = getSlotX(col);
+    const x = Math.round(getSlotX(col));
+    const drawY = Math.round(y);
     const size = tetSlotW - 8;
-    const bx = x - size / 2; const by = y - size / 2;
+    const bx = Math.round(x - size / 2);
+    const by = Math.round(drawY - size / 2);
 
     ctx.fillStyle = 'rgba(37, 99, 235, 0.09)';
-    ctx.fillRect(startX + col * tetSlotW, 0, tetSlotW, canvas.height);
+    ctx.fillRect(startX + col * tetSlotW, 0, tetSlotW, tetLogicalH);
 
+    /* 与下方格子风格一致的清爽亮白卡片 + 蓝色描边与清晰深色字体 */
     ctx.save();
-    ctx.shadowColor = 'rgba(37, 99, 235, 0.25)'; ctx.shadowBlur = 12;
-    const grad = ctx.createLinearGradient(bx, by, bx + size, by + size);
-    grad.addColorStop(0, '#3b82f6'); grad.addColorStop(1, '#2563eb');
-    ctx.fillStyle = grad;
-    roundRect(ctx, bx, by, size, size, 16); ctx.fill();
-
-    ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 2.5;
-    roundRect(ctx, bx, by, size, size, 16); ctx.stroke();
+    ctx.shadowColor = 'rgba(37, 99, 235, 0.22)';
+    ctx.shadowBlur = 14;
+    ctx.shadowOffsetY = 4;
+    ctx.fillStyle = '#ffffff';
+    roundRect(ctx, bx, by, size, size, 16);
+    ctx.fill();
     ctx.restore();
 
     ctx.save();
-    ctx.fillStyle = '#ffffff';
+    ctx.strokeStyle = '#2563eb';
+    ctx.lineWidth = 2.5;
+    roundRect(ctx, bx, by, size, size, 16);
+    ctx.stroke();
+
+    ctx.fillStyle = '#0c2340';
     ctx.font = `900 ${Math.floor(size * 0.52)}px 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif`;
-    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    ctx.fillText(kana, x, y + 2);
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(kana, x, drawY + 2);
     ctx.restore();
   }
 }
