@@ -645,8 +645,7 @@ select.deck-pick:focus { border-color: var(--accent); }
       const grade = book ? book.children.find(g => g.id === gId) : null;
       const availableLessons = grade ? grade.lessons : [];
 
-      const lines = text.split('
-');
+      const lines = text.split('\n');
       const rowsToInsert = [];
       const lessonWordCounters = {};
       const affectedLessons = new Set();
