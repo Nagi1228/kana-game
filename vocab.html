@@ -151,9 +151,19 @@ select.deck-pick:focus { border-color: var(--accent); }
 .btn-secondary { background: var(--surface); color: var(--fg2); border: 2px solid var(--border); }
 .btn-danger { background: var(--wrong-bg); color: var(--wrong); border: 1.5px solid rgba(225,29,72,0.3); }
 
-.td-btn { padding: 4px 10px; border-radius: 8px; font-size: 0.82rem; font-weight: 800; border: none; cursor: pointer; }
+.td-btn { padding: 5px 11px; border-radius: 8px; font-size: 0.82rem; font-weight: 800; border: none; cursor: pointer; transition: all 0.15s; }
+.td-edit { background: var(--bg2); color: var(--accent); margin-right: 6px; }
+.td-edit:hover { background: var(--accent); color: #fff; }
+.td-save { background: var(--correct-bg); color: var(--correct); margin-right: 6px; }
+.td-save:hover { background: var(--correct); color: #fff; }
+.td-cancel { background: #f1f5f9; color: #475569; }
+.td-cancel:hover { background: #cbd5e1; }
 .td-del { background: var(--wrong-bg); color: var(--wrong); }
 .td-del:hover { background: var(--wrong); color: #fff; }
+.edit-cell-input {
+  width: 100%; min-width: 68px; padding: 6px 8px; border-radius: 8px;
+  border: 2px solid var(--accent); background: #fff; color: var(--fg); font-size: 0.92rem; outline: none;
+}
 
 .toast {
   position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%) translateY(20px);
@@ -279,7 +289,7 @@ select.deck-pick:focus { border-color: var(--accent); }
             <th>声调</th>
             <th>词性</th>
             <th>中文含义</th>
-            <th style="text-align:right; width:80px;">操作</th>
+            <th style="text-align:right; width:136px;">操作</th>
           </tr>
         </thead>
         <tbody id="wordTableBody">
@@ -486,6 +496,12 @@ select.deck-pick:focus { border-color: var(--accent); }
       renderTable();
     }
 
+    let editingWordId = null;
+
+    function escAttr(str) {
+      return String(str || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
     function renderTable() {
       const tbody = document.getElementById('wordTableBody');
       if (currentLessonWords.length === 0) {
@@ -493,21 +509,87 @@ select.deck-pick:focus { border-color: var(--accent); }
         return;
       }
 
-      tbody.innerHTML = currentLessonWords.map((w, idx) => `
-        <tr>
-          <td style="color:#94a3b8; font-weight:700;">${idx + 1}</td>
-          <td class="td-kanji jp-text">${w.kanji || '—'}</td>
-          <td class="td-kana jp-text">${w.kana}</td>
-          <td style="font-weight:700; color:#d97706;">
-            ${window.TangogoPitchAccent ? TangogoPitchAccent.renderPitchHTML(w.kana, w.pitch) : (w.pitch || '')}
-          </td>
-          <td><span class="td-pos">${w.pos || '名'}</span></td>
-          <td style="font-weight:700;">${w.meaning}</td>
-          <td style="text-align:right;">
-            <button class="td-btn td-del" onclick="deleteWord('${w.id}')">删除</button>
-          </td>
-        </tr>
-      `).join('');
+      tbody.innerHTML = currentLessonWords.map((w, idx) => {
+        if (editingWordId === w.id) {
+          return `
+            <tr style="background:#eff6ff;">
+              <td style="color:#94a3b8; font-weight:700;">${idx + 1}</td>
+              <td><input class="edit-cell-input jp-text" id="edit-kanji-${w.id}" value="${escAttr(w.kanji)}" placeholder="汉字"></td>
+              <td><input class="edit-cell-input jp-text" id="edit-kana-${w.id}" value="${escAttr(w.kana)}" placeholder="假名 *"></td>
+              <td><input class="edit-cell-input cn-text" id="edit-pitch-${w.id}" value="${escAttr(w.pitch)}" placeholder="如: ① 或 0" style="width:86px;"></td>
+              <td><input class="edit-cell-input cn-text" id="edit-pos-${w.id}" value="${escAttr(w.pos || '名')}" placeholder="词性" style="width:74px;"></td>
+              <td><input class="edit-cell-input cn-text" id="edit-meaning-${w.id}" value="${escAttr(w.meaning)}" placeholder="中文含义 *"></td>
+              <td style="text-align:right; white-space:nowrap;">
+                <button class="td-btn td-save" onclick="saveEditWord('${w.id}')">保存</button>
+                <button class="td-btn td-cancel" onclick="cancelEditWord()">取消</button>
+              </td>
+            </tr>
+          `;
+        }
+
+        return `
+          <tr>
+            <td style="color:#94a3b8; font-weight:700;">${idx + 1}</td>
+            <td class="td-kanji jp-text">${w.kanji || '—'}</td>
+            <td class="td-kana jp-text">${w.kana}</td>
+            <td style="font-weight:700; color:#d97706;">
+              ${window.TangogoPitchAccent ? TangogoPitchAccent.renderPitchHTML(w.kana, w.pitch) : (w.pitch || '')}
+            </td>
+            <td><span class="td-pos">${w.pos || '名'}</span></td>
+            <td style="font-weight:700;">${w.meaning}</td>
+            <td style="text-align:right; white-space:nowrap;">
+              <button class="td-btn td-edit" onclick="startEditWord('${w.id}')">编辑</button>
+              <button class="td-btn td-del" onclick="deleteWord('${w.id}')">删除</button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function startEditWord(id) {
+      editingWordId = id;
+      renderTable();
+      const inp = document.getElementById('edit-kanji-' + id);
+      if (inp) inp.focus();
+    }
+
+    function cancelEditWord() {
+      editingWordId = null;
+      renderTable();
+    }
+
+    async function saveEditWord(id) {
+      const kanji = document.getElementById('edit-kanji-' + id).value.trim();
+      const kana = document.getElementById('edit-kana-' + id).value.trim();
+      const pitch = document.getElementById('edit-pitch-' + id).value.trim();
+      const pos = document.getElementById('edit-pos-' + id).value.trim() || '名';
+      const meaning = document.getElementById('edit-meaning-' + id).value.trim();
+
+      if (!kana || !meaning) {
+        return alert('假名和中文含义不能为空！');
+      }
+
+      if (pitch && window.TangogoPitchAccent) {
+        const check = TangogoPitchAccent.validateWordPitch(kana, pitch);
+        if (!check.valid) {
+          if (!confirm(`提示：当前声调 "${pitch}" 校验未通过（${check.reason}），仍要保存吗？`)) {
+            return;
+          }
+        }
+      }
+
+      const { error } = await sbClient
+        .from('words')
+        .update({ kanji, kana, pitch, pos, meaning })
+        .eq('id', id);
+
+      if (error) {
+        alert('保存修改失败: ' + error.message);
+      } else {
+        editingWordId = null;
+        showToast('✅ 词条已更新！');
+        await loadWords();
+      }
     }
 
     async function addSingleWord() {
