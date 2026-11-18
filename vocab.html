@@ -3,7 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>かなゲーム - 云端词库管理</title>
+<title>词库管理 · Tangogo</title>
+<link rel="icon" type="image/png" sizes="512x512" href="./favicon.png?v=3">
+<link rel="apple-touch-icon" href="./favicon.png?v=3">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -163,7 +165,7 @@ select.deck-pick:focus { border-color: var(--accent); }
 <body>
 
   <nav class="top-nav">
-    <div class="nav-logo jp-text" onclick="location.href='index.html'">かな<span>ゲーム</span></div>
+    <div class="nav-logo cn-text" onclick="location.href='index.html'">Tango<span>go</span></div>
     <div class="nav-actions">
       <button class="nav-btn cn-text" onclick="location.href='index.html'">首页</button>
       <button class="nav-btn active cn-text" onclick="location.reload()">词库</button>
@@ -613,7 +615,8 @@ select.deck-pick:focus { border-color: var(--accent); }
       const grade = book ? book.children.find(g => g.id === gId) : null;
       const availableLessons = grade ? grade.lessons : [];
 
-      const lines = text.split('\n');
+      const lines = text.split('
+');
       const rowsToInsert = [];
       const lessonWordCounters = {};
       const affectedLessons = new Set();
@@ -704,7 +707,7 @@ select.deck-pick:focus { border-color: var(--accent); }
       const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
       const a = document.createElement('a');
       a.href = URL.createObjectURL(blob);
-      a.download = `kanagame_words_backup_${Date.now()}.json`;
+      a.download = `tangogo_words_backup_${Date.now()}.json`;
       a.click();
       showToast('备份文件已下载！');
     }
