@@ -440,7 +440,7 @@
 
     <nav class="nav" aria-label="主导航">
       <a href="#" class="active">首页</a>
-      <a href="vocab.html" id="vocabNavBtn">词库</a>
+      <a href="vocab.html" id="vocabNavBtn" style="display:none;">词库</a>
       <button class="nav-link" onclick="openFlashcardReview()">闪卡复习</button>
       <button class="nav-link" onclick="openMistakesModal()">
         错词本 <span class="badge" id="navMistakeBadge">0</span>
@@ -829,6 +829,8 @@
   ];
 
   async function checkAdminPermission() {
+    const vocabBtn = document.getElementById('vocabNavBtn');
+    if (vocabBtn) vocabBtn.style.display = 'none';
     if (!currentUser || !sbClient) return false;
     try {
       const { data, error } = await sbClient.from('words').insert([{
@@ -841,6 +843,7 @@
 
       if (!error && data && data.length > 0) {
         await sbClient.from('words').delete().eq('id', data[0].id);
+        if (vocabBtn) vocabBtn.style.display = '';
         return true;
       }
       return false;
@@ -859,6 +862,8 @@
     const savedBook = localStorage.getItem('tangogo_pref_book');
     if (savedBook && CURRICULUM.some(b => b.id === savedBook)) {
       bSel.value = savedBook;
+    } else if (CURRICULUM.some(b => b.id === 'pep_jr')) {
+      bSel.value = 'pep_jr';
     }
     onBookChange(true);
   }
@@ -947,9 +952,9 @@
 
   /* 打开闪卡复习页 */
   function openFlashcardReview() {
-    const book = document.getElementById('bookSelect').value;
-    const grade = document.getElementById('gradeSelect').value;
-    const lesson = document.getElementById('lessonSelect').value;
+    const book = document.getElementById('bookSelect').value || 'pep_jr';
+    const grade = document.getElementById('gradeSelect').value || 'pep_jr_7';
+    const lesson = document.getElementById('lessonSelect').value || 'pep_jr_7_intro1';
     window.location.href = `flashcard.html?book=${encodeURIComponent(book)}&grade=${encodeURIComponent(grade)}&lesson=${encodeURIComponent(lesson)}`;
   }
 
@@ -1190,15 +1195,13 @@
     const list = TangogoFSRS.getMistakeFilterList();
     if (list.length === 0) return showToast('错词本暂无内容可导出');
     
-    let csvContent = '﻿单词,假名/读音,释义,遗忘次数
-';
+    let csvContent = '\uFEFF单词,假名/读音,释义,遗忘次数\n';
     list.forEach(item => {
       const word = item.kanji || item.kana || '';
       const kana = item.kana || '';
       const meaning = (item.meaning || '').replace(/"/g, '""');
       const lapses = Number(item.lapses || 0);
-      csvContent += `"${word}","${kana}","${meaning}",${lapses}
-`;
+      csvContent += `"${word}","${kana}","${meaning}",${lapses}\n`;
     });
 
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });

@@ -162,7 +162,7 @@ select.deck-pick:focus { border-color: var(--accent); }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 </style>
 </head>
-<body>
+<body style="visibility:hidden;">
 
   <nav class="top-nav">
     <div class="nav-logo cn-text" onclick="location.href='index.html'">Tango<span>go</span></div>
@@ -275,7 +275,6 @@ select.deck-pick:focus { border-color: var(--accent); }
       }
       const { data: { session } } = await sbClient.auth.getSession();
       if (!session || !session.user) {
-        alert('⚠️ 权限不足：请先使用管理员账号登录！');
         location.replace('index.html');
         return false;
       }
@@ -291,11 +290,11 @@ select.deck-pick:focus { border-color: var(--accent); }
 
       if (!error && data && data.length > 0) {
         await sbClient.from('words').delete().eq('id', data[0].id);
+        document.body.style.visibility = 'visible';
         document.getElementById('authChecking').style.display = 'none';
         document.getElementById('vocabMainWrap').style.display = 'flex';
         return true;
       } else {
-        alert('⚠️ 拒绝访问：当前账号无词库管理权限！');
         location.replace('index.html');
         return false;
       }
