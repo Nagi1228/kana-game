@@ -3,7 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>かなゲーム - 方块模式</title>
+<title>落字模式 · Tangogo</title>
+<link rel="icon" type="image/png" sizes="512x512" href="./favicon.png?v=3">
+<link rel="apple-touch-icon" href="./favicon.png?v=3">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,11 +39,17 @@ html, body {
   background: var(--surface); border-bottom: 2px solid var(--border);
   box-shadow: 0 2px 12px var(--shadow); z-index: 50; flex-shrink: 0;
 }
-.nav-logo { font-size: 1.6rem; font-weight: 900; color: var(--accent); margin-right: auto; cursor: pointer; }
+.nav-logo { font-size: 1.6rem; font-weight: 900; color: var(--accent); cursor: pointer; }
 .nav-logo span { color: var(--accent-hot); }
+.nav-deck-subtitle {
+  margin-left: auto; font-size: 0.85rem; font-weight: 700; color: var(--fg2);
+  background: var(--bg2); padding: 4px 12px; border-radius: 20px; border: 1.5px solid var(--border);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 48vw;
+}
 .nav-btn {
   background: none; border: 2px solid transparent; cursor: pointer;
-  padding: 8px 18px; border-radius: 24px; font-size: 0.95rem; font-weight: 700; color: var(--fg2);
+  padding: 6px 14px; border-radius: 24px; font-size: 0.9rem; font-weight: 700; color: var(--fg2);
+  white-space: nowrap;
 }
 .nav-btn:hover { background: var(--bg2); border-color: var(--border); }
 
@@ -182,7 +190,8 @@ html, body {
 
 <div id="app">
   <nav class="top-nav">
-    <div class="nav-logo jp-text" onclick="location.href='index.html'">かな<span>ゲーム</span></div>
+    <div class="nav-logo cn-text" onclick="location.href='index.html'">Tango<span>go</span></div>
+    <div class="nav-deck-subtitle cn-text" id="deckSubtitle">落字模式</div>
     <button class="nav-btn cn-text" onclick="location.href='index.html'">首页</button>
     <button class="nav-btn cn-text" onclick="location.href='index.html'">错词本</button>
   </nav>
@@ -365,6 +374,35 @@ const { b: currentBook, g: currentGrade, l: currentLesson } = normalizeParams(
   urlParams.get('grade'),
   urlParams.get('lesson')
 );
+
+function getDeckLabel(b, g, l) {
+  if (isMistakeDrill) return '错词本专练';
+  const bookMap = {
+    'std_beg': '新版标准日本语初级',
+    'pep_jr': '人教版初中日语（新）',
+    'pep_sr': '人教版高中日语'
+  };
+  const gradeMap = {
+    'std_beg_1': '初级上册', 'std_beg_2': '初级下册',
+    'pep_jr_7': '七年级', 'pep_jr_8': '八年级', 'pep_jr_9': '九年级',
+    'pep_sr_b1': '必修一', 'pep_sr_b2': '必修二', 'pep_sr_b3': '必修三'
+  };
+  let lessonName = '';
+  if (l && l.includes('_intro')) {
+    const num = l.split('_intro')[1];
+    lessonName = `入门单元 第${num}课`;
+  } else if (l && l.includes('_l')) {
+    const idx = parseInt(l.split('_l')[1], 10);
+    let offset = 0;
+    if (g === 'std_beg_2') offset = 24;
+    else if (g === 'pep_sr_b2') offset = 4;
+    else if (g === 'pep_sr_b3') offset = 8;
+    lessonName = `第${idx + offset}课`;
+  }
+  return [bookMap[b] || b, gradeMap[g] || g, lessonName].filter(Boolean).join(' · ');
+}
+
+const currentDeckLabel = getDeckLabel(currentBook, currentGrade, currentLesson);
 
 let showWordPreview = localStorage.getItem('tangogo_show_blocks_preview') !== 'false';
 
@@ -667,32 +705,34 @@ function generateShareCard(score, timeSpent, totalWords) {
   ctx.fillStyle = bgGrad; ctx.fillRect(0, 0, 640, 880);
 
   ctx.strokeStyle = '#2563eb'; ctx.lineWidth = 10; ctx.strokeRect(20, 20, 600, 840);
-  ctx.fillStyle = '#2563eb'; ctx.font = "900 34px sans-serif"; ctx.textAlign = 'center';
-  ctx.fillText('かなゲーム · 日语单词闯关', 320, 90);
+  ctx.fillStyle = '#2563eb'; ctx.font = "900 34px 'Noto Sans SC', sans-serif"; ctx.textAlign = 'center';
+  ctx.fillText('Tangogo · 日语背词', 320, 90);
   ctx.font = "72px sans-serif"; ctx.fillText('🏆', 320, 180);
-  ctx.fillStyle = '#0c2340'; ctx.font = "900 32px sans-serif"; ctx.fillText('通 关 荣 誉 证 书', 320, 240);
+  ctx.fillStyle = '#0c2340'; ctx.font = "900 32px 'Noto Sans SC', sans-serif"; ctx.fillText('通 关 荣 誉 证 书', 320, 240);
 
   const userNick = localStorage.getItem('tangogo_nickname') || '日语学习达人';
-  ctx.font = "700 22px sans-serif"; ctx.fillStyle = '#1e4d8c'; ctx.fillText(`学员：${userNick}`, 320, 290);
+  ctx.font = "700 22px 'Noto Sans SC', sans-serif"; ctx.fillStyle = '#1e4d8c'; ctx.fillText(`学员：${userNick}`, 320, 290);
 
   ctx.fillStyle = '#ffffff';
-  ctx.fillRect(80, 340, 480, 340);
-  ctx.fillStyle = '#64748b'; ctx.font = "700 18px sans-serif"; ctx.textAlign = 'left';
-  ctx.fillText('⏱ 通关用时', 120, 410);
-  ctx.fillText('📖 掌握词汇', 120, 470);
-  ctx.fillText('🌟 最终得分', 120, 530);
-  ctx.fillText('🎮 挑战模式', 120, 590);
+  ctx.fillRect(80, 340, 480, 360);
+  ctx.fillStyle = '#64748b'; ctx.font = "700 18px 'Noto Sans SC', sans-serif"; ctx.textAlign = 'left';
+  ctx.fillText('📚 学习课程', 120, 400);
+  ctx.fillText('⏱ 通关用时', 120, 460);
+  ctx.fillText('📖 掌握词汇', 120, 520);
+  ctx.fillText('🌟 最终得分', 120, 580);
+  ctx.fillText('🎮 挑战模式', 120, 640);
 
-  ctx.textAlign = 'right'; ctx.fillStyle = '#0c2340'; ctx.font = "900 20px sans-serif";
-  ctx.fillText(timeSpent, 520, 410);
-  ctx.fillText(`${totalWords} 词`, 520, 470);
-  ctx.fillStyle = '#ea580c'; ctx.font = "900 26px sans-serif"; ctx.fillText(`${score} 分`, 520, 530);
-  ctx.fillStyle = '#2563eb'; ctx.font = "900 20px sans-serif"; ctx.fillText('方块落格', 520, 590);
+  ctx.textAlign = 'right'; ctx.fillStyle = '#0c2340'; ctx.font = "900 20px 'Noto Sans SC', sans-serif";
+  ctx.fillText(currentDeckLabel, 520, 400);
+  ctx.fillText(timeSpent, 520, 460);
+  ctx.fillText(`${totalWords} 词`, 520, 520);
+  ctx.fillStyle = '#ea580c'; ctx.font = "900 26px 'Noto Sans SC', sans-serif"; ctx.fillText(`${score} 分`, 520, 580);
+  ctx.fillStyle = '#2563eb'; ctx.font = "900 20px 'Noto Sans SC', sans-serif"; ctx.fillText('落字模式', 520, 640);
 
   setTimeout(() => {
     const a = document.createElement('a');
     a.href = cvs.toDataURL('image/png');
-    a.download = `方块闯关成绩单_${Date.now()}.png`;
+    a.download = `Tangogo_落字模式成绩单_${Date.now()}.png`;
     a.click();
     showToast('🎉 成绩单图片已保存到本地！');
   }, 350);
@@ -1050,6 +1090,7 @@ window.addEventListener('resize', () => {
 });
 
 window.addEventListener('DOMContentLoaded', async () => {
+  document.getElementById('deckSubtitle').innerText = `落字模式 · ${currentDeckLabel}`;
   await initAuth();
   lessonStartTime = Date.now();
   updateSkipBtnUI();
