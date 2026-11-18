@@ -1,0 +1,956 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>闪卡复习 · Tangogo</title>
+<link rel="icon" type="image/png" sizes="512x512" href="./favicon.png?v=3">
+<link rel="apple-touch-icon" href="./favicon.png?v=3">
+<meta name="color-scheme" content="light dark">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./fsrs-engine.js"></script>
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('kana-theme'); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+<style>
+  :root {
+    --bg: #FAF9F6;
+    --surface: #FFFFFF;
+    --field: #F3F2EE;
+    --ink: #16161A;
+    --muted: #6C6C78;
+    --line: #E8E6E1;
+    --accent: #3B4CCA;
+    --accent-soft: #EEF0FC;
+    --on-accent: #FFFFFF;
+    --glass: rgba(250, 249, 246, .86);
+    --shadow: 0 2px 6px rgba(20, 20, 40, .04), 0 16px 36px -16px rgba(20, 20, 40, .14);
+    --ring: 0 0 0 4px rgba(59, 76, 202, .16);
+    --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB",
+            "Noto Sans SC", "Noto Sans JP", "Yu Gothic UI", system-ui, sans-serif;
+
+    --rate-again: #EF4444;
+    --rate-again-bg: rgba(239, 68, 68, .10);
+    --rate-hard: #F59E0B;
+    --rate-hard-bg: rgba(245, 158, 11, .12);
+    --rate-good: #10B981;
+    --rate-good-bg: rgba(16, 185, 129, .12);
+    --rate-easy: #3B82F6;
+    --rate-easy-bg: rgba(59, 130, 246, .12);
+  }
+  :root[data-theme="dark"] {
+    --bg: #0E0E11;
+    --surface: #17171C;
+    --field: #1F1F26;
+    --ink: #F2F2F4;
+    --muted: #9B9BA8;
+    --line: #272730;
+    --accent: #8E9AFF;
+    --accent-soft: #1E2140;
+    --on-accent: #0E0E11;
+    --glass: rgba(14, 14, 17, .86);
+    --shadow: 0 2px 8px rgba(0, 0, 0, .35), 0 18px 40px -16px rgba(0, 0, 0, .65);
+    --ring: 0 0 0 4px rgba(142, 154, 255, .22);
+
+    --rate-again-bg: rgba(239, 68, 68, .16);
+    --rate-hard-bg: rgba(245, 158, 11, .16);
+    --rate-good-bg: rgba(16, 185, 129, .16);
+    --rate-easy-bg: rgba(59, 130, 246, .16);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    min-height: 100vh;
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+  [hidden] { display: none !important; }
+
+  /* 顶部导航栏 */
+  .header {
+    position: sticky; top: 0; z-index: 40;
+    background: var(--glass);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--line);
+  }
+  .header-inner {
+    max-width: 960px; margin: 0 auto; padding: 0 20px; height: 60px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .header-left { display: flex; align-items: center; gap: 12px; min-width: 0; }
+  .back-btn {
+    height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line);
+    background: var(--surface); font-size: 13.5px; font-weight: 600; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 6px; color: var(--ink);
+    transition: border-color .15s, background .15s; white-space: nowrap;
+  }
+  .back-btn:hover { border-color: var(--muted); background: var(--field); }
+  .deck-pill {
+    font-size: 12.5px; font-weight: 600; color: var(--muted);
+    background: var(--field); padding: 4px 12px; border-radius: 999px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 44vw;
+  }
+
+  /* 今日进度计数器（新卡 / 学习中 / 待复习） */
+  .queue-counts {
+    display: inline-flex; align-items: center; gap: 12px;
+    background: var(--surface); border: 1px solid var(--line);
+    padding: 5px 14px; border-radius: 999px; font-size: 13px; font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+  .q-item { display: inline-flex; align-items: center; gap: 5px; }
+  .q-dot { width: 7px; height: 7px; border-radius: 50%; }
+  .q-new .q-dot { background: #3B82F6; }
+  .q-new { color: #3B82F6; }
+  .q-learn .q-dot { background: #F59E0B; }
+  .q-learn { color: #F59E0B; }
+  .q-due .q-dot { background: #10B981; }
+  .q-due { color: #10B981; }
+
+  .header-right { display: flex; align-items: center; gap: 8px; }
+  .icon-btn {
+    width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line);
+    background: var(--surface); display: grid; place-items: center; cursor: pointer;
+    color: var(--muted); transition: color .15s, border-color .15s;
+  }
+  .icon-btn:hover { color: var(--ink); border-color: var(--muted); }
+  .icon-btn:disabled { opacity: .4; cursor: not-allowed; }
+  .icon { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* 主复习舞台 */
+  .stage {
+    max-width: 680px; margin: 0 auto; padding: 28px 20px 140px;
+    min-height: calc(100vh - 60px);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+  }
+
+  /* 闪卡容器 */
+  .flashcard {
+    width: 100%; min-height: 360px; background: var(--surface);
+    border: 1px solid var(--line); border-radius: 26px; box-shadow: var(--shadow);
+    padding: 36px 28px; display: flex; flex-direction: column; align-items: center;
+    justify-content: center; text-align: center; cursor: pointer; position: relative;
+    transition: transform .18s ease, border-color .2s ease;
+    user-select: none;
+  }
+  .flashcard:hover { border-color: var(--accent); }
+  .flashcard.revealed { cursor: default; justify-content: flex-start; padding-top: 40px; }
+
+  .card-state-tag {
+    position: absolute; top: 18px; left: 22px;
+    font-size: 11.5px; font-weight: 700; padding: 3px 10px; border-radius: 999px;
+    background: var(--field); color: var(--muted);
+  }
+  .card-state-tag.new { background: rgba(59,130,246,.12); color: #3B82F6; }
+  .card-state-tag.learn { background: rgba(245,158,11,.14); color: #D97706; }
+  .card-state-tag.review { background: rgba(16,185,129,.14); color: #059669; }
+
+  .card-front-word {
+    font-size: clamp(38px, 8vw, 64px); font-weight: 800; line-height: 1.2;
+    letter-spacing: -.01em; color: var(--ink); word-break: keep-all;
+  }
+  .flip-hint {
+    margin-top: 24px; font-size: 13px; color: var(--muted); font-weight: 500;
+  }
+  .kbd {
+    display: inline-block; padding: 1px 7px; border-radius: 6px;
+    border: 1px solid var(--line); background: var(--field);
+    font-size: 11.5px; font-weight: 700; color: var(--ink); margin: 0 2px;
+  }
+
+  /* 背面详情区 + 预留扩展容器（音频 / 例句） */
+  .card-back-wrap {
+    width: 100%; margin-top: 24px; padding-top: 24px;
+    border-top: 1px dashed var(--line);
+    display: flex; flex-direction: column; align-items: center; gap: 14px;
+    animation: fadeIn .22s ease;
+  }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+  .back-kana-row {
+    display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;
+  }
+  .back-kana {
+    font-size: clamp(22px, 4.5vw, 30px); font-weight: 700; color: var(--accent);
+  }
+  .pitch-badge {
+    display: inline-flex; align-items: center; padding: 3px 10px; border-radius: 999px;
+    background: var(--accent-soft); color: var(--accent);
+    font-size: 13px; font-weight: 700;
+  }
+  .back-meaning-row {
+    display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap;
+    margin-top: 4px;
+  }
+  .pos-tag {
+    padding: 3px 9px; border-radius: 8px; background: var(--field);
+    color: var(--muted); font-size: 12.5px; font-weight: 700;
+  }
+  .back-meaning {
+    font-size: clamp(20px, 4vw, 26px); font-weight: 700; color: var(--ink);
+  }
+
+  /* 预留扩展槽：后续可直接挂载音频播放按钮与例句列表而不改DOM结构 */
+  .card-back-extensions {
+    width: 100%; margin-top: 8px;
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+  }
+  .card-audio-slot:empty, .card-example-slot:empty { display: none; }
+
+  /* 底部操作与四档评分栏（手机端固定底部，单手可点） */
+  .dock-bar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 45;
+    background: var(--glass);
+    backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid var(--line);
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+  }
+  .dock-inner {
+    max-width: 680px; margin: 0 auto;
+  }
+  .reveal-btn {
+    width: 100%; height: 52px; border-radius: 14px; border: none;
+    background: var(--accent); color: var(--on-accent);
+    font-size: 16px; font-weight: 700; cursor: pointer;
+    transition: opacity .15s, transform .1s;
+  }
+  .reveal-btn:hover { opacity: .92; }
+  .reveal-btn:active { transform: scale(.99); }
+
+  .rating-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+  }
+  .rate-btn {
+    height: 58px; border-radius: 14px; border: 1.5px solid transparent;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+    cursor: pointer; transition: transform .1s, filter .15s; position: relative;
+  }
+  .rate-btn:active { transform: scale(.96); }
+  .rate-btn .r-label { font-size: 14.5px; font-weight: 800; line-height: 1.2; }
+  .rate-btn .r-ivl { font-size: 11.5px; font-weight: 600; opacity: .88; font-variant-numeric: tabular-nums; }
+  .rate-btn .r-key {
+    position: absolute; top: 4px; right: 6px; font-size: 10px; opacity: .55; font-weight: 700;
+  }
+
+  .rate-again { background: var(--rate-again-bg); color: var(--rate-again); border-color: rgba(239,68,68,.28); }
+  .rate-hard  { background: var(--rate-hard-bg);  color: var(--rate-hard);  border-color: rgba(245,158,11,.28); }
+  .rate-good  { background: var(--rate-good-bg);  color: var(--rate-good);  border-color: rgba(16,185,129,.28); }
+  .rate-easy  { background: var(--rate-easy-bg);  color: var(--rate-easy);  border-color: rgba(59,130,246,.28); }
+
+  /* 完成页卡片 */
+  .done-card {
+    width: 100%; background: var(--surface); border: 1px solid var(--line);
+    border-radius: 26px; box-shadow: var(--shadow); padding: 40px 28px;
+    text-align: center; display: flex; flex-direction: column; align-items: center; gap: 14px;
+  }
+  .done-emoji { font-size: 48px; line-height: 1; }
+  .done-title { font-size: 24px; font-weight: 800; }
+  .done-desc { font-size: 14.5px; color: var(--muted); max-width: 420px; }
+  .done-stats {
+    width: 100%; max-width: 420px; margin: 8px 0;
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+  }
+  .d-stat {
+    background: var(--field); border-radius: 16px; padding: 14px;
+  }
+  .d-stat b { display: block; font-size: 24px; font-weight: 800; color: var(--accent); font-variant-numeric: tabular-nums; }
+  .d-stat span { font-size: 12px; color: var(--muted); font-weight: 600; }
+  .done-actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+  .btn-primary, .btn-secondary {
+    height: 44px; padding: 0 22px; border-radius: 12px; font-size: 14px; font-weight: 700; cursor: pointer;
+  }
+  .btn-primary { border: none; background: var(--accent); color: var(--on-accent); }
+  .btn-secondary { border: 1px solid var(--line); background: var(--field); color: var(--ink); }
+
+  /* 设置弹窗 */
+  .modal-overlay {
+    position: fixed; inset: 0; z-index: 100; background: rgba(14, 14, 17, .55);
+    backdrop-filter: blur(8px); display: none; align-items: center; justify-content: center; padding: 20px;
+  }
+  .modal-dialog {
+    width: 100%; max-width: 400px; background: var(--surface);
+    border: 1px solid var(--line); border-radius: 20px; padding: 24px;
+  }
+  .modal-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+  .modal-title { font-size: 17px; font-weight: 800; }
+  .form-group { margin-bottom: 14px; }
+  .form-group label { display: block; font-size: 12.5px; font-weight: 600; color: var(--muted); margin-bottom: 6px; }
+  .form-input {
+    width: 100%; height: 42px; padding: 0 12px; border-radius: 10px;
+    border: 1px solid var(--line); background: var(--field); font-size: 14px; color: var(--ink);
+  }
+  .toast {
+    position: fixed; left: 50%; top: 74px; transform: translate(-50%, -10px); opacity: 0; pointer-events: none;
+    padding: 8px 18px; border-radius: 999px; background: var(--ink); color: var(--bg);
+    font-size: 13px; font-weight: 600; z-index: 200; transition: opacity .2s, transform .2s;
+  }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+  @media (max-width: 600px) {
+    .deck-pill { display: none; }
+    .rate-btn .r-key { display: none; }
+    .rating-grid { gap: 8px; }
+    .rate-btn { height: 60px; }
+    .flashcard { min-height: 310px; padding: 30px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="header-left">
+      <button class="back-btn" onclick="location.href='index.html'">← 返回</button>
+      <span class="deck-pill" id="deckLabel">加载中...</span>
+    </div>
+
+    <div class="queue-counts" aria-label="今日队列统计">
+      <span class="q-item q-new" title="今日新卡"><i class="q-dot"></i>新卡 <b id="cntNew">0</b></span>
+      <span class="q-item q-learn" title="学习中/重学中"><i class="q-dot"></i>学习中 <b id="cntLearn">0</b></span>
+      <span class="q-item q-due" title="待复习到期卡"><i class="q-dot"></i>待复习 <b id="cntDue">0</b></span>
+    </div>
+
+    <div class="header-right">
+      <button class="icon-btn" id="undoBtn" onclick="undoLastRating()" disabled title="撤销上一次评分 (Z)" aria-label="撤销上一次评分">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5v0a5.5 5.5 0 0 1-5.5 5.5H11"/></svg>
+      </button>
+      <button class="icon-btn" onclick="openSettingsModal()" title="FSRS 学习设置" aria-label="学习设置">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="stage">
+  <!-- 加载态 -->
+  <div id="loadingBox" style="color:var(--muted); font-weight:600;">正在加载 FSRS 复习队列...</div>
+
+  <!-- 闪卡主体 -->
+  <div class="flashcard" id="flashcard" hidden onclick="onCardSurfaceClick()">
+    <span class="card-state-tag" id="cardStateTag">新卡</span>
+    <div class="card-front-word" id="frontWord">——</div>
+    <div class="flip-hint" id="flipHint">点击卡片或按 <span class="kbd">Space</span> 查看答案</div>
+
+    <!-- 背面容器（含预留音频/例句扩展槽） -->
+    <div class="card-back-wrap" id="cardBack" hidden onclick="event.stopPropagation()">
+      <div class="back-kana-row">
+        <span class="back-kana" id="backKana"></span>
+        <span class="pitch-badge" id="backPitch"></span>
+      </div>
+      <div class="back-meaning-row">
+        <span class="pos-tag" id="backPos"></span>
+        <span class="back-meaning" id="backMeaning"></span>
+      </div>
+
+      <!-- 预留扩展容器：后续挂载音频播放与例句模块，无需改动现有结构 -->
+      <div class="card-back-extensions" id="cardBackExtensions" data-slot="extensions">
+        <div class="card-audio-slot" id="cardAudioSlot"></div>
+        <div class="card-example-slot" id="cardExampleSlot"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 当天任务完成页 -->
+  <div class="done-card" id="doneCard" hidden>
+    <div class="done-emoji">🎉</div>
+    <div class="done-title">今日闪卡任务已完成！</div>
+    <div class="done-desc" id="doneSummaryText">所有到期卡片与今日新卡均已按 FSRS 记忆曲线完成调度。</div>
+    <div class="done-stats">
+      <div class="d-stat">
+        <b id="statCompletedToday">0</b>
+        <span>今日已学习/复习</span>
+      </div>
+      <div class="d-stat">
+        <b id="statTomorrowDue">0</b>
+        <span>明日预计复习数</span>
+      </div>
+    </div>
+    <div class="done-actions">
+      <button class="btn-primary" onclick="location.href='index.html'">返回首页</button>
+      <button class="btn-secondary" onclick="openSettingsModal()">调整每日上限</button>
+    </div>
+  </div>
+</main>
+
+<!-- 底部固定操作栏 -->
+<div class="dock-bar" id="dockBar" hidden>
+  <div class="dock-inner">
+    <button class="reveal-btn" id="revealBtn" onclick="revealCard()">显示答案（空格）</button>
+
+    <div class="rating-grid" id="ratingGrid" hidden>
+      <button class="rate-btn rate-again" onclick="rateCard(1)">
+        <span class="r-key">1</span>
+        <span class="r-label">重来</span>
+        <span class="r-ivl" id="ivl-1">1分钟</span>
+      </button>
+      <button class="rate-btn rate-hard" onclick="rateCard(2)">
+        <span class="r-key">2</span>
+        <span class="r-label">困难</span>
+        <span class="r-ivl" id="ivl-2">6分钟</span>
+      </button>
+      <button class="rate-btn rate-good" onclick="rateCard(3)">
+        <span class="r-key">3</span>
+        <span class="r-label">良好</span>
+        <span class="r-ivl" id="ivl-3">10分钟</span>
+      </button>
+      <button class="rate-btn rate-easy" onclick="rateCard(4)">
+        <span class="r-key">4</span>
+        <span class="r-label">简单</span>
+        <span class="r-ivl" id="ivl-4">4天</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 学习设置弹窗 -->
+<div class="modal-overlay" id="settingsModal" onclick="if(event.target===this) closeSettingsModal()">
+  <div class="modal-dialog">
+    <div class="modal-head">
+      <div class="modal-title">FSRS 间隔重复设置</div>
+      <button class="icon-btn" onclick="closeSettingsModal()" aria-label="关闭">✕</button>
+    </div>
+    <div class="form-group">
+      <label for="setNewLimit">每日新卡上限（默认 20）</label>
+      <input type="number" id="setNewLimit" class="form-input" min="1" max="500" value="20">
+    </div>
+    <div class="form-group">
+      <label for="setReviewLimit">每日复习上限（默认 200）</label>
+      <input type="number" id="setReviewLimit" class="form-input" min="1" max="2000" value="200">
+    </div>
+    <div class="form-group">
+      <label for="setRetention">目标记忆率 request_retention（默认 0.90）</label>
+      <input type="number" id="setRetention" class="form-input" step="0.01" min="0.70" max="0.99" value="0.90">
+    </div>
+    <div style="display:flex; gap:10px; margin-top:18px;">
+      <button class="btn-secondary" style="flex:1;" onclick="closeSettingsModal()">取消</button>
+      <button class="btn-primary" style="flex:1;" onclick="applySettings()">保存并刷新队列</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const currentBook = urlParams.get('book') || localStorage.getItem('tangogo_pref_book') || 'pep_jr';
+  const currentGrade = urlParams.get('grade') || localStorage.getItem('tangogo_pref_grade') || 'pep_jr_7';
+  const currentLesson = urlParams.get('lesson') || localStorage.getItem('tangogo_pref_lesson') || 'pep_jr_7_intro1';
+
+  const BOOK_NAMES = {
+    'std_beg': '新版标准日本语初级',
+    'pep_jr': '人教版初中日语（新）',
+    'pep_sr': '人教版高中日语'
+  };
+  const GRADE_NAMES = {
+    'std_beg_1': '初级上册', 'std_beg_2': '初级下册',
+    'pep_jr_7': '七年级', 'pep_jr_8': '八年级', 'pep_jr_9': '九年级',
+    'pep_sr_b1': '必修一', 'pep_sr_b2': '必修二', 'pep_sr_b3': '必修三'
+  };
+
+  function getDeckTitle() {
+    let lessonText = '';
+    if (currentLesson.includes('_intro')) {
+      lessonText = `入门单元 第${currentLesson.split('_intro')[1]}课`;
+    } else if (currentLesson.includes('_l')) {
+      const n = parseInt(currentLesson.split('_l')[1], 10);
+      let off = 0;
+      if (currentGrade === 'std_beg_2') off = 24;
+      else if (currentGrade === 'pep_sr_b2') off = 4;
+      else if (currentGrade === 'pep_sr_b3') off = 8;
+      lessonText = `第${n + off}课`;
+    }
+    return [BOOK_NAMES[currentBook] || currentBook, GRADE_NAMES[currentGrade] || currentGrade, lessonText].filter(Boolean).join(' · ');
+  }
+
+  let fsrsLib = null;
+  let sbClient = null;
+  let currentUser = null;
+
+  let reviewQueue = [];
+  let activeCardItem = null;
+  let isRevealed = false;
+  let cardShownAt = Date.now();
+  let undoStack = []; // 支持按 Z 撤销上一次评分
+  let completedThisSession = 0;
+
+  let toastTimer = null;
+  function showToast(msg) {
+    const el = document.getElementById('toast');
+    el.textContent = msg;
+    el.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => el.classList.remove('show'), 2200);
+  }
+
+  /**
+   * 统计当前学习日（凌晨 4:00 分界）已完成的复习/新卡数
+   */
+  function getTodayReviewedStats() {
+    const { start, end } = TangogoFSRS.getStudyDayBounds(new Date());
+    const logs = TangogoFSRS.getLocalLogs();
+    const seenNewIds = new Set();
+    const seenReviewIds = new Set();
+
+    logs.forEach(log => {
+      const t = new Date(log.reviewed_at).getTime();
+      if (t >= start.getTime() && t < end.getTime()) {
+        if (log._was_new) seenNewIds.add(log.word_id);
+        else seenReviewIds.add(log.word_id);
+      }
+    });
+    return {
+      newDoneCount: seenNewIds.size,
+      reviewDoneCount: seenReviewIds.size,
+      totalDoneCount: seenNewIds.size + seenReviewIds.size
+    };
+  }
+
+  /**
+   * 从当前选中的词库拉取候选词，并构建 FSRS 复习队列
+   */
+  async function buildReviewQueue() {
+    const now = new Date();
+    const nowMs = now.getTime();
+    const settings = TangogoFSRS.getSettings();
+    const cardsMap = TangogoFSRS.getLocalCardsMap();
+    const todayStats = getTodayReviewedStats();
+
+    // 1. 到期卡片：due <= 当前时间，按 due 升序排列
+    const allCards = Object.values(cardsMap);
+    const allDueCards = allCards
+      .filter(c => c.due && new Date(c.due).getTime() <= nowMs)
+      .sort((a, b) => new Date(a.due).getTime() - new Date(b.due).getTime());
+
+    // 区分学习中(State 1/3) 与 复习中(State 2 / 0且到期)
+    const remainingReviewQuota = Math.max(0, settings.daily_review_limit - todayStats.reviewDoneCount);
+    const dueQueue = allDueCards.slice(0, remainingReviewQuota).map(c => ({
+      ...c,
+      _queueType: (c.state === 1 || c.state === 3) ? 'learn' : 'due'
+    }));
+
+    // 2. 新卡：从当前选中的词库（教材/册/课）中取尚未有 card_state 的词
+    const remainingNewQuota = Math.max(0, settings.daily_new_limit - todayStats.newDoneCount);
+    let newQueue = [];
+
+    if (remainingNewQuota > 0 && sbClient) {
+      try {
+        const { data: lessonWords, error } = await sbClient
+          .from('words')
+          .select('id, book_id, grade_id, lesson_id, kanji, kana, pitch, pos, meaning')
+          .eq('book_id', currentBook)
+          .eq('grade_id', currentGrade)
+          .eq('lesson_id', currentLesson)
+          .order('sort_order', { ascending: true })
+          .order('created_at', { ascending: true });
+
+        if (!error && lessonWords) {
+          for (const w of lessonWords) {
+            if (newQueue.length >= remainingNewQuota) break;
+            const wid = TangogoFSRS.resolveWordId(w);
+            if (!cardsMap[wid]) {
+              newQueue.push({
+                word_id: wid,
+                due: now.toISOString(),
+                stability: 0,
+                difficulty: 0,
+                elapsed_days: 0,
+                scheduled_days: 0,
+                reps: 0,
+                lapses: 0,
+                state: 0,
+                last_review: null,
+                manual_mistake: false,
+                kanji: w.kanji || '',
+                kana: w.kana || '',
+                pitch: w.pitch || '',
+                pos: w.pos || '',
+                meaning: w.meaning || '',
+                book_id: w.book_id || currentBook,
+                grade_id: w.grade_id || currentGrade,
+                lesson_id: w.lesson_id || currentLesson,
+                _queueType: 'new'
+              });
+            }
+          }
+        }
+      } catch (e) {
+        console.warn('获取当前课新卡失败:', e);
+      }
+    }
+
+    // 合并队列：到期复习卡优先，新卡随后
+    reviewQueue = [...dueQueue, ...newQueue];
+    updateTopCounters();
+    renderCurrentCard();
+  }
+
+  function updateTopCounters() {
+    let nNew = 0, nLearn = 0, nDue = 0;
+    reviewQueue.forEach(item => {
+      if (item._queueType === 'new') nNew++;
+      else if (item._queueType === 'learn') nLearn++;
+      else nDue++;
+    });
+    document.getElementById('cntNew').textContent = nNew;
+    document.getElementById('cntLearn').textContent = nLearn;
+    document.getElementById('cntDue').textContent = nDue;
+    document.getElementById('undoBtn').disabled = undoStack.length === 0;
+  }
+
+  function renderCurrentCard() {
+    document.getElementById('loadingBox').hidden = true;
+
+    if (reviewQueue.length === 0) {
+      showCompletionScreen();
+      return;
+    }
+
+    activeCardItem = reviewQueue[0];
+    isRevealed = false;
+    cardShownAt = Date.now();
+
+    document.getElementById('doneCard').hidden = true;
+    const cardEl = document.getElementById('flashcard');
+    cardEl.hidden = false;
+    cardEl.classList.remove('revealed');
+    document.getElementById('dockBar').hidden = false;
+    document.getElementById('revealBtn').hidden = false;
+    document.getElementById('ratingGrid').hidden = true;
+
+    // 状态标签
+    const tagEl = document.getElementById('cardStateTag');
+    if (activeCardItem._queueType === 'new') {
+      tagEl.textContent = '新卡';
+      tagEl.className = 'card-state-tag new';
+    } else if (activeCardItem._queueType === 'learn') {
+      tagEl.textContent = '学习中';
+      tagEl.className = 'card-state-tag learn';
+    } else {
+      tagEl.textContent = '复习';
+      tagEl.className = 'card-state-tag review';
+    }
+
+    // 正面：有汉字显示汉字，否则显示假名
+    const hasKanji = activeCardItem.kanji && activeCardItem.kanji.trim() !== '';
+    document.getElementById('frontWord').textContent = hasKanji ? activeCardItem.kanji : (activeCardItem.kana || '——');
+
+    // 隐藏背面，重置扩展槽
+    document.getElementById('flipHint').hidden = false;
+    document.getElementById('cardBack').hidden = true;
+    document.getElementById('cardAudioSlot').innerHTML = '';
+    document.getElementById('cardExampleSlot').innerHTML = '';
+  }
+
+  function onCardSurfaceClick() {
+    if (!isRevealed) revealCard();
+  }
+
+  function revealCard() {
+    if (!activeCardItem || isRevealed) return;
+    isRevealed = true;
+
+    const cardEl = document.getElementById('flashcard');
+    cardEl.classList.add('revealed');
+    document.getElementById('flipHint').hidden = true;
+    document.getElementById('cardBack').hidden = false;
+
+    // 背面字段：假名、声调（先显示数字）、词性、中文含义
+    document.getElementById('backKana').textContent = activeCardItem.kana || '';
+    const pitchVal = (activeCardItem.pitch || '').trim();
+    const pitchEl = document.getElementById('backPitch');
+    if (pitchVal) {
+      pitchEl.textContent = `声调 ${pitchVal}`;
+      pitchEl.hidden = false;
+    } else {
+      pitchEl.hidden = true;
+    }
+
+    const posEl = document.getElementById('backPos');
+    if (activeCardItem.pos) {
+      posEl.textContent = activeCardItem.pos;
+      posEl.hidden = false;
+    } else {
+      posEl.hidden = true;
+    }
+    document.getElementById('backMeaning').textContent = activeCardItem.meaning || '（暂无释义）';
+
+    // 计算四档评分预计下次间隔（直接调用 ts-fsrs repeat 调度预览）
+    const now = new Date();
+    const settings = TangogoFSRS.getSettings();
+    const params = fsrsLib.generatorParameters({ request_retention: settings.request_retention });
+    const f = fsrsLib.fsrs(params);
+    const fsrsCard = TangogoFSRS.toFsrsCard(activeCardItem, fsrsLib, now);
+    const scheduling = f.repeat(fsrsCard, now);
+
+    const ratingKeys = [
+      { rating: fsrsLib.Rating.Again, elId: 'ivl-1' },
+      { rating: fsrsLib.Rating.Hard,  elId: 'ivl-2' },
+      { rating: fsrsLib.Rating.Good,  elId: 'ivl-3' },
+      { rating: fsrsLib.Rating.Easy,  elId: 'ivl-4' }
+    ];
+    ratingKeys.forEach(({ rating, elId }) => {
+      const nextDue = scheduling[rating].card.due;
+      document.getElementById(elId).textContent = TangogoFSRS.formatIntervalPreview(nextDue, now);
+    });
+
+    document.getElementById('revealBtn').hidden = true;
+    document.getElementById('ratingGrid').hidden = false;
+  }
+
+  async function rateCard(ratingNum) {
+    if (!activeCardItem || !isRevealed) return;
+
+    const now = new Date();
+    const durationMs = Math.max(0, Math.min(300000, Date.now() - cardShownAt));
+    const settings = TangogoFSRS.getSettings();
+    const params = fsrsLib.generatorParameters({ request_retention: settings.request_retention });
+    const f = fsrsLib.fsrs(params);
+
+    const prevMap = TangogoFSRS.getLocalCardsMap();
+    const prevSnapshot = prevMap[activeCardItem.word_id] ? { ...prevMap[activeCardItem.word_id] } : null;
+
+    const fsrsCard = TangogoFSRS.toFsrsCard(activeCardItem, fsrsLib, now);
+    const scheduling = f.repeat(fsrsCard, now);
+    const chosen = scheduling[ratingNum];
+    const nextCard = chosen.card;
+    const logMeta = chosen.log;
+
+    const wasNew = activeCardItem._queueType === 'new';
+
+    const updatedRecord = {
+      word_id: activeCardItem.word_id,
+      due: nextCard.due.toISOString(),
+      stability: nextCard.stability,
+      difficulty: nextCard.difficulty,
+      elapsed_days: nextCard.elapsed_days,
+      scheduled_days: nextCard.scheduled_days,
+      reps: nextCard.reps,
+      lapses: nextCard.lapses,
+      state: nextCard.state,
+      last_review: now.toISOString(),
+      manual_mistake: Boolean(activeCardItem.manual_mistake),
+      kanji: activeCardItem.kanji || '',
+      kana: activeCardItem.kana || '',
+      pitch: activeCardItem.pitch || '',
+      pos: activeCardItem.pos || '',
+      meaning: activeCardItem.meaning || '',
+      book_id: activeCardItem.book_id || currentBook,
+      grade_id: activeCardItem.grade_id || currentGrade,
+      lesson_id: activeCardItem.lesson_id || currentLesson
+    };
+
+    // 保存到本地 card_states
+    prevMap[updatedRecord.word_id] = updatedRecord;
+    TangogoFSRS.setLocalCardsMap(prevMap);
+
+    // 记录到本地 review_logs（只追加）
+    const logRecord = {
+      word_id: updatedRecord.word_id,
+      rating: ratingNum,
+      state: logMeta.state,
+      due: logMeta.due.toISOString(),
+      stability: logMeta.stability,
+      difficulty: logMeta.difficulty,
+      elapsed_days: logMeta.elapsed_days,
+      scheduled_days: logMeta.scheduled_days,
+      reviewed_at: now.toISOString(),
+      duration_ms: durationMs,
+      _was_new: wasNew,
+      _synced: false
+    };
+    TangogoFSRS.appendLocalLog(logRecord);
+
+    // 推入撤销栈（按 Z 可撤回）
+    undoStack.push({
+      word_id: updatedRecord.word_id,
+      prevRecord: prevSnapshot,
+      queueItem: { ...activeCardItem }
+    });
+
+    // 出队：若下次间隔仍在当前学习日内（例如按了 Again / 1分钟后），放回当前队列末尾继续巩固
+    reviewQueue.shift();
+    const { end: studyDayEnd } = TangogoFSRS.getStudyDayBounds(now);
+    if (nextCard.due.getTime() < studyDayEnd.getTime() && (nextCard.state === fsrsLib.State.Learning || nextCard.state === fsrsLib.State.Relearning)) {
+      reviewQueue.push({
+        ...updatedRecord,
+        _queueType: 'learn'
+      });
+    } else {
+      completedThisSession++;
+    }
+
+    updateTopCounters();
+    renderCurrentCard();
+
+    // 异步持久化到 Supabase（若已登录）
+    if (currentUser && sbClient) {
+      try {
+        await sbClient.from('card_states').upsert(
+          TangogoFSRS.formatRowForCloud(updatedRecord, currentUser.id),
+          { onConflict: 'user_id,word_id' }
+        );
+        const { error: logErr } = await sbClient.from('review_logs').insert([{
+          user_id: currentUser.id,
+          word_id: logRecord.word_id,
+          rating: logRecord.rating,
+          state: logRecord.state,
+          due: logRecord.due,
+          stability: logRecord.stability,
+          difficulty: logRecord.difficulty,
+          elapsed_days: logRecord.elapsed_days,
+          scheduled_days: logRecord.scheduled_days,
+          reviewed_at: logRecord.reviewed_at,
+          duration_ms: logRecord.duration_ms
+        }]);
+        if (!logErr) {
+          const allLogs = TangogoFSRS.getLocalLogs();
+          if (allLogs.length > 0) {
+            allLogs[allLogs.length - 1]._synced = true;
+            localStorage.setItem(TangogoFSRS.STORAGE_KEYS.LOGS, JSON.stringify(allLogs));
+          }
+        }
+      } catch (err) {
+        console.warn('云端写入复习记录失败:', err);
+      }
+    }
+  }
+
+  /**
+   * 快捷键 Z：撤销上一次评分
+   */
+  async function undoLastRating() {
+    if (undoStack.length === 0) return;
+    const last = undoStack.pop();
+    const map = TangogoFSRS.getLocalCardsMap();
+
+    if (last.prevRecord) {
+      map[last.word_id] = last.prevRecord;
+    } else {
+      delete map[last.word_id];
+    }
+    TangogoFSRS.setLocalCardsMap(map);
+
+    // 移除本地最后一条对应日志
+    const logs = TangogoFSRS.getLocalLogs();
+    if (logs.length > 0 && logs[logs.length - 1].word_id === last.word_id) {
+      logs.pop();
+      localStorage.setItem(TangogoFSRS.STORAGE_KEYS.LOGS, JSON.stringify(logs));
+    }
+
+    // 若队列中已有同一张重新入队的学习卡，先移除避免重复
+    reviewQueue = reviewQueue.filter(item => item.word_id !== last.word_id);
+    reviewQueue.unshift(last.queueItem);
+    completedThisSession = Math.max(0, completedThisSession - 1);
+
+    updateTopCounters();
+    renderCurrentCard();
+    showToast('↩ 已撤销上一次评分');
+
+    if (currentUser && sbClient) {
+      try {
+        if (last.prevRecord) {
+          await sbClient.from('card_states').upsert(
+            TangogoFSRS.formatRowForCloud(last.prevRecord, currentUser.id),
+            { onConflict: 'user_id,word_id' }
+          );
+        } else {
+          await sbClient.from('card_states')
+            .delete()
+            .eq('user_id', currentUser.id)
+            .eq('word_id', last.word_id);
+        }
+      } catch (e) {
+        console.warn('云端撤销同步失败:', e);
+      }
+    }
+  }
+
+  function showCompletionScreen() {
+    document.getElementById('flashcard').hidden = true;
+    document.getElementById('dockBar').hidden = true;
+    document.getElementById('doneCard').hidden = false;
+
+    const todayStats = getTodayReviewedStats();
+    document.getElementById('statCompletedToday').textContent = Math.max(completedThisSession, todayStats.totalDoneCount);
+
+    // 计算明日（下一个学习日结束前，即后天凌晨 4:00 前）预计到期卡片数
+    const { end: tomorrowEnd } = TangogoFSRS.getStudyDayBounds(new Date(Date.now() + 24 * 3600 * 1000));
+    const cardsMap = TangogoFSRS.getLocalCardsMap();
+    const tomorrowDueCount = Object.values(cardsMap).filter(c => {
+      return c.due && new Date(c.due).getTime() <= tomorrowEnd.getTime();
+    }).length;
+    document.getElementById('statTomorrowDue').textContent = tomorrowDueCount;
+  }
+
+  /* 设置弹窗 */
+  function openSettingsModal() {
+    const s = TangogoFSRS.getSettings();
+    document.getElementById('setNewLimit').value = s.daily_new_limit;
+    document.getElementById('setReviewLimit').value = s.daily_review_limit;
+    document.getElementById('setRetention').value = s.request_retention;
+    document.getElementById('settingsModal').style.display = 'flex';
+  }
+
+  function closeSettingsModal() {
+    document.getElementById('settingsModal').style.display = 'none';
+  }
+
+  async function applySettings() {
+    const newLimit = document.getElementById('setNewLimit').value;
+    const revLimit = document.getElementById('setReviewLimit').value;
+    const retVal = document.getElementById('setRetention').value;
+    await TangogoFSRS.saveSettings({
+      daily_new_limit: newLimit,
+      daily_review_limit: revLimit,
+      request_retention: retVal
+    }, currentUser);
+    closeSettingsModal();
+    showToast('FSRS 设置已保存');
+    await buildReviewQueue();
+  }
+
+  /* 键盘快捷键：Space 翻面，1-4 评分，Z 撤销 */
+  document.addEventListener('keydown', (e) => {
+    if (document.getElementById('settingsModal').style.display === 'flex') return;
+    if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
+
+    if (e.code === 'Space') {
+      e.preventDefault();
+      if (!isRevealed && activeCardItem) revealCard();
+    } else if (isRevealed && ['1', '2', '3', '4'].includes(e.key)) {
+      e.preventDefault();
+      rateCard(parseInt(e.key, 10));
+    } else if (e.key === 'z' || e.key === 'Z') {
+      e.preventDefault();
+      undoLastRating();
+    }
+  });
+
+  window.addEventListener('DOMContentLoaded', async () => {
+    document.getElementById('deckLabel').textContent = getDeckTitle();
+    sbClient = TangogoFSRS.getSbClient();
+    if (sbClient) {
+      const { data: { session } } = await sbClient.auth.getSession();
+      if (session) currentUser = session.user;
+    }
+
+    try {
+      fsrsLib = await TangogoFSRS.loadTsFsrs();
+      await TangogoFSRS.syncWithCloud(currentUser);
+      await buildReviewQueue();
+    } catch (err) {
+      document.getElementById('loadingBox').textContent = '加载失败：' + err.message;
+    }
+  });
+</script>
+</body>
+</html>

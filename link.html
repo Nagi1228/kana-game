@@ -7,6 +7,7 @@
 <link rel="icon" type="image/png" sizes="512x512" href="./favicon.png?v=3">
 <link rel="apple-touch-icon" href="./favicon.png?v=3">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./fsrs-engine.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" media="print" onload="this.media='all';this.onload=null"
@@ -203,21 +204,12 @@ body {
     }
 
     async function recordMistake(word) {
-      let localMistakes = JSON.parse(localStorage.getItem('tangogo_mistakes') || '[]');
-      if (!localMistakes.some(m => m.word === word.kana)) {
-        localMistakes.push({ word: word.kana, meaning: word.meaning });
-        localStorage.setItem('tangogo_mistakes', JSON.stringify(localMistakes));
-      }
-      if (currentUser && sbClient) {
-        try {
-          await sbClient.from('user_mistakes').upsert({
-            user_id: currentUser.id,
-            word: word.kana,
-            meaning: word.meaning,
-            wrong_count: 1,
-            updated_at: new Date().toISOString()
-          }, { onConflict: 'user_id,word' });
-        } catch (e) { console.error(e); }
+      if (window.TangogoFSRS) {
+        await TangogoFSRS.recordGameMistake(word, {
+          book_id: typeof currentBook !== 'undefined' ? currentBook : '',
+          grade_id: typeof currentGrade !== 'undefined' ? currentGrade : '',
+          lesson_id: typeof currentLesson !== 'undefined' ? currentLesson : ''
+        });
       }
     }
 
@@ -305,13 +297,13 @@ body {
     }
 
     async function fetchCurrentLessonWords() {
-      if (isMistakeDrill) {
-        const mistakes = JSON.parse(localStorage.getItem('tangogo_mistakes') || '[]');
+      if (isMistakeDrill && window.TangogoFSRS) {
+        const mistakes = TangogoFSRS.getMistakeFilterList();
         if (mistakes.length > 0) {
           return mistakes.map((m, idx) => ({
-            id: idx + 1,
-            kanji: m.kanji || m.word || '',
-            kana: m.kana || m.word || '',
+            id: m.word_id || (idx + 1),
+            kanji: m.kanji || '',
+            kana: m.kana || m.word_id || '',
             pos: m.pos || '名',
             meaning: m.meaning || ''
           }));
