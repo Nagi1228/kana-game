@@ -306,7 +306,7 @@ select.deck-pick:focus { border-color: var(--accent); }
     const SUPABASE_KEY = 'sb_publishable_AP0YnQLgzmB3d63_4zbpjg_vHeTyo8Z';
     const sbClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
 
-    // 页面访问硬性守卫：未登录或非管理员直接拦截并跳回首页
+    // 页面访问守卫：调用云端 RPC public.is_admin()，非管理员立即跳转首页（真正的权限由数据库 RLS 强制执行）
     async function verifyAdminGuard() {
       if (!sbClient) {
         location.replace('index.html');
@@ -318,17 +318,8 @@ select.deck-pick:focus { border-color: var(--accent); }
         return false;
       }
 
-      // 实测云端 RLS 写入权限
-      const { data, error } = await sbClient.from('words').insert([{
-        book_id: '_auth_probe_',
-        grade_id: '_auth_probe_',
-        lesson_id: '_auth_probe_',
-        kana: 'probe',
-        meaning: 'probe'
-      }]).select('id');
-
-      if (!error && data && data.length > 0) {
-        await sbClient.from('words').delete().eq('id', data[0].id);
+      const { data: isAdmin, error } = await sbClient.rpc('is_admin');
+      if (!error && isAdmin === true) {
         document.body.style.visibility = 'visible';
         document.getElementById('authChecking').style.display = 'none';
         document.getElementById('vocabMainWrap').style.display = 'flex';
@@ -337,6 +328,15 @@ select.deck-pick:focus { border-color: var(--accent); }
         location.replace('index.html');
         return false;
       }
+    }
+
+    function formatDbWriteError(error, actionName) {
+      if (!error) return `${actionName}未生效：权限被数据库 RLS 拒绝或目标记录不存在`;
+      const msg = error.message || '';
+      if (error.code === '42501' || msg.toLowerCase().includes('row-level security') || msg.toLowerCase().includes('permission denied')) {
+        return `⛔ 权限不足（数据库 RLS 已拒绝${actionName}）：请确认当前账号已加入 public.admins 管理员名单。`;
+      }
+      return `${actionName}失败: ${msg}`;
     }
 
     function makeLessons(prefix, count, startNo = 1) {
@@ -578,13 +578,14 @@ select.deck-pick:focus { border-color: var(--accent); }
         }
       }
 
-      const { error } = await sbClient
+      const { data, error } = await sbClient
         .from('words')
         .update({ kanji, kana, pitch, pos, meaning })
-        .eq('id', id);
+        .eq('id', id)
+        .select('id');
 
-      if (error) {
-        alert('保存修改失败: ' + error.message);
+      if (error || !data || data.length === 0) {
+        alert(formatDbWriteError(error, '修改词条'));
       } else {
         editingWordId = null;
         showToast('✅ 词条已更新！');
@@ -607,16 +608,16 @@ select.deck-pick:focus { border-color: var(--accent); }
       const gId = document.getElementById('selGrade').value;
       const lId = document.getElementById('selLesson').value;
 
-      const { error } = await sbClient.from('words').insert([{
+      const { data, error } = await sbClient.from('words').insert([{
         book_id: bId,
         grade_id: gId,
         lesson_id: lId,
         kanji, kana, pitch, pos, meaning,
         sort_order: currentLessonWords.length + 1
-      }]);
+      }]).select('id');
 
-      if (error) {
-        alert('保存失败: ' + error.message);
+      if (error || !data || data.length === 0) {
+        alert(formatDbWriteError(error, '新增词条'));
       } else {
         showToast('✨ 单词已成功添加！');
         document.getElementById('inpKanji').value = '';
@@ -629,9 +630,9 @@ select.deck-pick:focus { border-color: var(--accent); }
 
     async function deleteWord(id) {
       if (!confirm('确定要删除该单词吗？')) return;
-      const { error } = await sbClient.from('words').delete().eq('id', id);
-      if (error) {
-        alert('删除失败: ' + error.message);
+      const { data, error } = await sbClient.from('words').delete().eq('id', id).select('id');
+      if (error || !data || data.length === 0) {
+        alert(formatDbWriteError(error, '删除词条'));
       } else {
         showToast('已删除');
         await onGradeChange();
@@ -649,9 +650,10 @@ select.deck-pick:focus { border-color: var(--accent); }
         .delete()
         .eq('book_id', bId)
         .eq('grade_id', gId)
-        .eq('lesson_id', lId);
+        .eq('lesson_id', lId)
+        .select('id');
 
-      if (error) alert('清空失败: ' + error.message);
+      if (error) alert(formatDbWriteError(error, '清空本课词汇'));
       else {
         showToast('当前课词汇已清空');
         await onGradeChange();
@@ -667,9 +669,10 @@ select.deck-pick:focus { border-color: var(--accent); }
         .from('words')
         .delete()
         .eq('book_id', bId)
-        .eq('grade_id', gId);
+        .eq('grade_id', gId)
+        .select('id');
 
-      if (error) alert('清空失败: ' + error.message);
+      if (error) alert(formatDbWriteError(error, '清空本年级词库'));
       else {
         showToast('整册词库已清空，可重新上传');
         await onGradeChange();
@@ -782,9 +785,9 @@ select.deck-pick:focus { border-color: var(--accent); }
 
       for (let i = 0; i < rowsToInsert.length; i += batchSize) {
         const batch = rowsToInsert.slice(i, i + batchSize);
-        const { error } = await sbClient.from('words').insert(batch);
-        if (error) {
-          return alert(`导入中断于第 ${i + 1} 条: ` + error.message);
+        const { data, error } = await sbClient.from('words').insert(batch).select('id');
+        if (error || !data || data.length === 0) {
+          return alert(`导入中断于第 ${i + 1} 条：` + formatDbWriteError(error, '批量导入'));
         }
         insertedCount += batch.length;
       }
@@ -906,9 +909,9 @@ select.deck-pick:focus { border-color: var(--accent); }
         return alert('修正值仍不合法：' + check.reason);
       }
 
-      const { error } = await sbClient.from('words').update({ pitch: newPitch }).eq('id', id);
-      if (error) {
-        return alert('更新失败：' + error.message);
+      const { data, error } = await sbClient.from('words').update({ pitch: newPitch }).eq('id', id).select('id');
+      if (error || !data || data.length === 0) {
+        return alert(formatDbWriteError(error, '修正声调'));
       }
       showToast('✅ 声调已修正！');
       const row = document.getElementById('audit-row-' + id);
@@ -920,9 +923,9 @@ select.deck-pick:focus { border-color: var(--accent); }
 
     async function deleteInvalidAuditWord(id) {
       if (!confirm('确定要删除这条异常词条吗？')) return;
-      const { error } = await sbClient.from('words').delete().eq('id', id);
-      if (error) {
-        return alert('删除失败：' + error.message);
+      const { data, error } = await sbClient.from('words').delete().eq('id', id).select('id');
+      if (error || !data || data.length === 0) {
+        return alert(formatDbWriteError(error, '删除异常词条'));
       }
       showToast('已删除异常词条');
       const row = document.getElementById('audit-row-' + id);

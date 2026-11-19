@@ -512,9 +512,8 @@
   <div class="header-inner">
     <div class="logo" onclick="location.reload()">Tango<span>go</span></div>
 
-    <nav class="nav" aria-label="主导航">
+    <nav class="nav" id="mainNavBar" aria-label="主导航">
       <a href="#" class="active">首页</a>
-      <a href="vocab.html" id="vocabNavBtn" style="display:none;">词库</a>
       <button class="nav-link" onclick="openFlashcardReview()">闪卡复习</button>
       <button class="nav-link" onclick="openMistakesModal()">
         错词本 <span class="badge" id="navMistakeBadge">0</span>
@@ -918,21 +917,20 @@
   ];
 
   async function checkAdminPermission() {
-    const vocabBtn = document.getElementById('vocabNavBtn');
-    if (vocabBtn) vocabBtn.style.display = 'none';
+    const existingBtn = document.getElementById('vocabNavBtn');
+    if (existingBtn) existingBtn.remove();
     if (!currentUser || !sbClient) return false;
     try {
-      const { data, error } = await sbClient.from('words').insert([{
-        book_id: '_auth_probe_',
-        grade_id: '_auth_probe_',
-        lesson_id: '_auth_probe_',
-        kana: 'probe',
-        meaning: 'probe'
-      }]).select('id');
-
-      if (!error && data && data.length > 0) {
-        await sbClient.from('words').delete().eq('id', data[0].id);
-        if (vocabBtn) vocabBtn.style.display = '';
+      const { data: isAdmin, error } = await sbClient.rpc('is_admin');
+      if (!error && isAdmin === true) {
+        const navBar = document.getElementById('mainNavBar');
+        if (navBar && !document.getElementById('vocabNavBtn')) {
+          const link = document.createElement('a');
+          link.href = 'vocab.html';
+          link.id = 'vocabNavBtn';
+          link.textContent = '词库';
+          navBar.insertBefore(link, navBar.children[1] || null);
+        }
         return true;
       }
       return false;
