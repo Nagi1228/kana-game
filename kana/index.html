@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f5ef">
+  <meta name="description" content="かなゲーム · Tangogo — 五十音平假名、片假名与罗马音交互练习。">
+  <title>かなゲーム · Tangogo</title>
+  <link rel="icon" type="image/png" sizes="512x512" href="../favicon.png?v=3">
+  <link rel="apple-touch-icon" href="../favicon.png?v=3">
+  <meta name="color-scheme" content="light dark">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('kana-theme'); } catch (e) {}
+      if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="./styles/tokens.css">
+  <link rel="stylesheet" href="./styles/app.css">
+</head>
+<body>
+  <header class="tgo-header">
+    <div class="tgo-header-inner">
+      <div class="tgo-brand-group">
+        <a class="tgo-logo" href="../index.html">Tango<span>go</span></a>
+        <span class="tgo-divider" aria-hidden="true"></span>
+        <span class="tgo-sub-brand" id="brand-home">かなゲーム · 五十音练习</span>
+      </div>
+
+      <div class="tgo-header-actions">
+        <a class="tgo-home-link" href="../index.html" id="back-to-tangogo-link">← 返回 Tangogo 首页</a>
+        <button class="fullscreen-button" id="fullscreen-button" type="button" aria-pressed="false" title="进入全屏"><span aria-hidden="true">⛶</span><b id="fullscreen-label">全屏</b></button>
+        <button class="icon-button" id="theme-toggle-btn" type="button" aria-label="切换深浅主题" title="切换深浅主题">
+          <span class="moon-icon">☾</span>
+          <span class="sun-icon">☀</span>
+        </button>
+        <button class="icon-button" id="header-sound" type="button" aria-label="切换音效" title="切换音效"><span id="header-sound-icon">♫</span></button>
+        <button class="tgo-user-capsule" id="tgo-user-btn" type="button" aria-label="账号状态">
+          <span class="tgo-avatar-glyph" id="tgo-avatar-glyph">桜</span>
+          <span class="tgo-name-label" id="tgo-user-name">登录 / 注册</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <main>
+      <section class="screen home-screen active" id="home-screen" aria-labelledby="home-title">
+        <div class="home-layout">
+          <div class="intro-column">
+            <div class="eyebrow"><span class="eyebrow-line"></span> かなゲーム · 五十音练习</div>
+            <h1 id="home-title">假名，<span>配起来。</span></h1>
+            <p class="intro-copy">认一认，配一配，再把清浊拗音练熟。<br>今天的五十音练习，从一局开始。</p>
+            <div class="hero-doodle" aria-hidden="true">
+              <div class="doodle-card doodle-one"><span>あ</span><small>A</small></div>
+              <div class="doodle-link">↔</div>
+              <div class="doodle-card doodle-two"><span>ア</span><small>A</small></div>
+              <div class="doodle-spark">✳</div>
+              <div class="doodle-caption">同一个声音，不同的样子</div>
+            </div>
+            <div class="intro-foot"><span class="tiny-stamp">01</span> 游客离线即玩 · 登录后自动云端同步统计</div>
+          </div>
+
+          <div class="setup-panel">
+            <div class="panel-heading">
+              <div><span class="step-label">准备开始</span><h2>选一种挑战</h2></div>
+              <span class="mode-count"><b>05</b> MODES</span>
+            </div>
+            <div class="mode-grid" id="mode-grid" role="group" aria-label="选择游戏模式">
+              <button class="mode-card selected" type="button" data-mode="kana-kata" aria-pressed="true">
+                <span class="mode-card-top"><span class="mode-glyph">あ<span>ア</span></span><span class="mode-index">01</span></span>
+                <strong>平假名 × 片假名</strong><small>找到同一个读音</small>
+              </button>
+              <button class="mode-card" type="button" data-mode="romaji" aria-pressed="false">
+                <span class="mode-card-top"><span class="mode-glyph latin">na<span>な</span></span><span class="mode-index">02</span></span>
+                <strong>罗马音 × 假名</strong><small>读音与字形配对</small>
+              </button>
+              <button class="mode-card" type="button" data-mode="triple" aria-pressed="false">
+                <span class="mode-card-top"><span class="mode-glyph triple-glyph">な<span>NA</span><i>ナ</i></span><span class="mode-index">03</span></span>
+                <strong>综合配对</strong><small>三种表示任意消除</small>
+              </button>
+              <button class="mode-card" type="button" data-mode="cascade" aria-pressed="false">
+                <span class="mode-card-top"><span class="mode-glyph cascade-glyph">な<span>＋</span>ナ</span><span class="mode-index">04</span></span>
+                <strong>补位闯关</strong><small>合成后补新假名，20 对升一级</small>
+              </button>
+              <button class="mode-card" type="button" data-mode="mogura" aria-pressed="false">
+                <span class="mode-card-top"><span class="mode-glyph mole-glyph">も<span>!</span></span><span class="mode-index">05</span></span>
+                <strong>假名打地鼠</strong><small>60 秒限时，敲出看到的音</small>
+              </button>
+            </div>
+
+            <div class="setup-divider"></div>
+            <div class="setup-row" id="scope-row">
+              <div class="setup-label"><strong>练习范围</strong><span>选择想挑战的假名</span></div>
+              <div class="chip-row" role="group" aria-label="练习范围">
+                <button class="scope-chip active" type="button" data-scope="seion" aria-pressed="true">清音</button>
+                <button class="scope-chip" type="button" data-scope="dakuon" aria-pressed="false">浊音</button>
+                <button class="scope-chip" type="button" data-scope="handakuon" aria-pressed="false">半浊音</button>
+                <button class="scope-chip" type="button" data-scope="yoon" aria-pressed="false">拗音</button>
+                <button class="scope-chip" type="button" data-scope="special" aria-pressed="false">特殊组合</button>
+                <button class="scope-chip" type="button" data-scope="advanced" aria-pressed="false">进阶</button>
+                <button class="scope-chip" type="button" data-scope="all" aria-pressed="false">全部</button>
+              </div>
+            </div>
+
+            <div class="setup-row hidden" id="romaji-script-row">
+              <div class="setup-label"><strong>假名类型</strong><span>选择配对的假名字符</span></div>
+              <div class="segmented mole-seg" role="group" aria-label="罗马音配对假名类型">
+                <button type="button" class="romaji-script-btn active" data-rscript="hiragana" aria-pressed="true">平假名</button>
+                <button type="button" class="romaji-script-btn" data-rscript="katakana" aria-pressed="false">片假名</button>
+              </div>
+            </div>
+
+            <div class="setup-row mole-setup hidden" id="mole-setup">
+              <div class="setup-label"><strong>打地鼠设置</strong><span>选范围与类型，固定 60 秒</span>
+                <div class="mole-speed-wrap"><b>速度</b>
+                  <div class="segmented mole-seg mole-seg-sm" role="group" aria-label="速度">
+                    <button type="button" class="mole-speed" data-speed="slow" aria-pressed="false">慢</button>
+                    <button type="button" class="mole-speed active" data-speed="mid" aria-pressed="true">中</button>
+                    <button type="button" class="mole-speed" data-speed="fast" aria-pressed="false">快</button>
+                  </div>
+                </div>
+              </div>
+              <div class="mole-options">
+                <div class="mole-opt"><span class="mole-opt-label">范围</span>
+                  <div class="chip-row mole-rows" role="group" aria-label="打地鼠范围">
+                    <button class="scope-chip mole-scope-chip active" type="button" data-mscope="seion" aria-pressed="true">清音按行</button>
+                    <button class="scope-chip mole-scope-chip" type="button" data-mscope="dakuon" aria-pressed="false">浊音</button>
+                    <button class="scope-chip mole-scope-chip" type="button" data-mscope="handakuon" aria-pressed="false">半浊音</button>
+                    <button class="scope-chip mole-scope-chip" type="button" data-mscope="yoon" aria-pressed="false">拗音</button>
+                    <button class="scope-chip mole-scope-chip" type="button" data-mscope="advanced" aria-pressed="false">进阶</button>
+                  </div>
+                </div>
+                <div class="chip-row mole-rows" id="mole-rows-wrap" role="group" aria-label="选择清音假名行">
+                  <button class="scope-chip row-chip active" type="button" data-row="a" aria-pressed="true">あ行</button>
+                  <button class="scope-chip row-chip active" type="button" data-row="ka" aria-pressed="true">か行</button>
+                  <button class="scope-chip row-chip" type="button" data-row="sa" aria-pressed="false">さ行</button>
+                  <button class="scope-chip row-chip" type="button" data-row="ta" aria-pressed="false">た行</button>
+                  <button class="scope-chip row-chip" type="button" data-row="na" aria-pressed="false">な行</button>
+                  <button class="scope-chip row-chip" type="button" data-row="ha" aria-pressed="false">は行</button>
+                  <button class="scope-chip row-chip" type="button" data-row="ma" aria-pressed="false">ま行</button>
+                  <button class="scope-chip row-chip" type="button" data-row="ya" aria-pressed="false">や行</button>
+                  <button class="scope-chip row-chip" type="button" data-row="ra" aria-pressed="false">ら行</button>
+                  <button class="scope-chip row-chip" type="button" data-row="wa" aria-pressed="false">わ行</button>
+                  <button class="scope-chip row-chip" type="button" data-row="all" aria-pressed="false">全部</button>
+                </div>
+                <div class="mole-opt" id="mole-script-opt"><span class="mole-opt-label">类型</span>
+                  <div class="segmented mole-scripts" role="group" aria-label="假名类型">
+                    <button type="button" class="mole-script" data-script="hiragana" aria-pressed="false">平假名</button>
+                    <button type="button" class="mole-script" data-script="katakana" aria-pressed="false">片假名</button>
+                    <button type="button" class="mole-script active" data-script="mixed" aria-pressed="true">混合</button>
+                    <button type="button" class="mole-script" data-script="pair" aria-pressed="false">平片互认</button>
+                  </div>
+                </div>
+                <div class="mole-opt hidden" id="mole-dir-opt"><span class="mole-opt-label">方向</span>
+                  <div class="segmented mole-seg" role="group" aria-label="互认方向">
+                    <button type="button" class="mole-dir" data-dir="h2k" aria-pressed="false">平 → 片</button>
+                    <button type="button" class="mole-dir" data-dir="k2h" aria-pressed="false">片 → 平</button>
+                    <button type="button" class="mole-dir active" data-dir="mixed" aria-pressed="true">混合</button>
+                  </div>
+                </div>
+                <p class="mole-best" id="mole-best">本机最高分 <b>0</b></p>
+              </div>
+            </div>
+
+            <details class="more-settings">
+              <summary><span>更多设置</span><span class="summary-note">计时与音效</span><span class="chevron">⌄</span></summary>
+              <div class="settings-content">
+                <label class="switch-line"><span><b>倒计时</b><small>挑战节奏更快一些</small></span><input id="timer-toggle" type="checkbox"><i class="switch-ui"></i></label>
+                <label class="timer-select hidden" id="timer-select-wrap">每局时长<select id="timer-duration"><option value="60">60s</option><option value="90" selected>90s</option><option value="120">120s</option></select></label>
+                <label class="switch-line"><span><b>音效</b><small>匹配与点击反馈</small></span><input id="sound-toggle" type="checkbox" checked><i class="switch-ui"></i></label>
+              </div>
+            </details>
+            <button class="start-button" id="start-button" type="button"><span>开始游戏</span><b aria-hidden="true">→</b></button>
+            <p class="panel-note"><span>✳</span> 每局随机出题，错误后也可以继续尝试</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="screen game-screen" id="game-screen" aria-labelledby="game-title" hidden>
+        <div class="game-hud">
+          <button class="back-button" id="game-home" type="button"><span>←</span> 退出</button>
+          <div class="game-heading"><span class="live-dot"></span><div><h1 id="game-title">平假名 × 片假名</h1><p id="game-subtitle">清音 · 找到同一个读音</p></div></div>
+          <div class="hud-stats">
+            <div class="stat-item score-stat"><span>得分</span><strong id="score-value">000</strong></div>
+            <div class="stat-item accuracy-stat"><span>首次正确率</span><strong id="accuracy-value">100%</strong><small id="mistake-count">0 次失误</small></div>
+          </div>
+          <div class="toolbar-actions"><button class="small-action" id="restart-button" type="button" title="重新开始">⟲ <span>重开</span></button><button class="small-action" id="pause-button" type="button" title="暂停游戏">Ⅱ <span>暂停</span></button></div>
+        </div>
+        <div class="feedback-line" id="feedback-line" aria-live="polite"><span class="feedback-symbol">✳</span><span id="feedback-text">点选两个相同读音的字符，配对成功即可消除。</span></div>
+        <div class="play-area" id="play-area">
+          <div class="tile-grid" id="tile-grid" aria-label="游戏字符区域"></div>
+          <section class="mole-board hidden" id="mole-board" aria-label="假名打地鼠区域">
+            <div class="mole-status">
+              <div class="mole-target">
+                <span class="mole-target-label" id="mole-target-label">看到的读音</span>
+                <strong id="mole-target-romaji">KA</strong>
+                <small id="mole-target-kana">か / カ</small>
+              </div>
+              <div class="mole-meters">
+                <div class="mole-meter"><span>连击</span><strong id="mole-combo">×1</strong></div>
+                <div class="mole-meter time" id="mole-time-meter"><span>倒计时</span><strong id="mole-time">60</strong></div>
+                <div class="mole-meter"><span>关卡</span><strong id="mole-level">1</strong></div>
+              </div>
+            </div>
+            <div class="mole-grid" id="mole-grid" aria-label="地鼠洞口"></div>
+          </section>
+          <aside class="side-progress" aria-label="本局进度">
+            <span class="side-progress-kicker" id="side-progress-kicker">本局进度</span>
+            <strong class="progress-label" id="progress-label">0 / 8</strong>
+            <span class="side-progress-detail" id="side-progress-detail">完成配对</span>
+            <span class="stage-badge hidden" id="stage-badge">第 1 关</span>
+            <span class="vertical-track"><i id="progress-fill"></i></span>
+            <span id="timer-display" class="timer-display hidden">01:30</span>
+          </aside>
+          <div class="celebration-burst hidden" id="celebration-burst" aria-hidden="true"><span class="celebration-emoji">🎉</span><strong>合成成功！</strong><i>✦</i><b>✧</b></div>
+        </div>
+        <div class="game-bottom">
+          <span><b id="round-note">第 1 局</b> <i>·</i> <a href="../index.html" style="text-decoration:underline; text-underline-offset:3px;">返回 Tangogo 首页</a></span>
+          <button class="text-button" id="game-sound" type="button">♫ <span>音效开启</span></button>
+        </div>
+      </section>
+
+      <section class="screen result-screen" id="result-screen" aria-labelledby="result-title" hidden>
+        <div class="result-wrap">
+          <div class="result-topline">
+            <button class="back-button" id="result-home" type="button"><span>←</span> 返回假名首页</button>
+            <a class="tgo-home-link" href="../index.html">返回 Tangogo 首页</a>
+          </div>
+          <div class="result-hero"><div class="result-confetti" aria-hidden="true"><i>✳</i><b>あ</b><em>!</em></div><p class="eyebrow"><span class="eyebrow-line"></span> 练习完成</p><h1 id="result-title">配得漂亮！</h1><p id="result-description">再来一轮，把刚才的节奏保持住。</p></div>
+          <div class="result-score-card"><div><span>本局得分</span><strong id="final-score">000</strong></div><span class="score-unit">POINTS</span><div class="score-seal">KANA<br>MASTER</div></div>
+          <div class="result-metrics"><div><span id="final-completion-label">完成进度</span><strong id="final-completion">8 / 8</strong></div><div><span id="final-accuracy-label">首次尝试正确率</span><strong id="final-accuracy">100%</strong></div><div><span>用时</span><strong id="final-time">00:00</strong></div></div>
+          <div class="mole-ranking mole-errors" id="mole-errors">
+            <div class="ranking-heading"><div><span class="step-label">MISTAKES</span><h2>错误假名排行</h2></div><span id="mole-errors-note">按错误次数从多到少</span></div>
+            <ol class="error-list" id="mole-error-list"></ol>
+          </div>
+          <div class="mole-ranking hidden" id="mole-ranking">
+            <div class="ranking-heading"><div><span class="step-label">LOCAL RANKING</span><h2>本机排行榜</h2></div><span id="ranking-scope">混合 · 全部 · 60 秒</span></div>
+            <ol class="ranking-list" id="ranking-list"></ol>
+          </div>
+          <div class="review-hint hidden" id="review-hint"><span class="review-icon">↺</span><div><b>有几个字符值得再看一眼</b><small id="review-description">复习一下本局出错的内容。</small></div><button id="review-button" type="button">复习易错 <span>→</span></button></div>
+          <div class="result-actions"><button class="start-button" id="play-again-button" type="button"><span>再玩一次</span><b aria-hidden="true">→</b></button><button class="secondary-button" id="result-home-secondary" type="button">换一种挑战</button></div>
+          <p class="result-footnote">✳ かなゲーム · Tangogo 五十音练习</p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><span>かなゲーム · Tangogo <i>·</i> 五十音交互练习</span><span>练习一下，记得更牢。</span></footer>
+  </div>
+
+  <!-- Pause Modal -->
+  <div class="modal-backdrop hidden" id="pause-modal" role="dialog" aria-modal="true" aria-labelledby="pause-title">
+    <div class="modal-card"><span class="modal-kana">一休み</span><p class="step-label">TAKE A BREATH</p><h2 id="pause-title">暂停一下。</h2><p>游戏已经暂停，准备好后再继续。</p><button class="start-button" id="resume-button" type="button"><span>继续游戏</span><b>→</b></button><button class="modal-link" id="paused-exit-button" type="button">现在退出到假名首页</button></div>
+  </div>
+
+  <!-- In-page Confirm Modal -->
+  <div class="modal-backdrop hidden" id="confirm-modal" role="dialog" aria-modal="true" aria-labelledby="confirm-modal-title">
+    <div class="modal-card">
+      <span class="modal-kana">確認</span>
+      <p class="step-label">CONFIRM ACTION</p>
+      <h2 id="confirm-modal-title">确认操作</h2>
+      <p id="confirm-modal-message">确定继续吗？</p>
+      <div class="confirm-actions">
+        <button class="secondary-button" id="confirm-cancel-button" type="button">取消</button>
+        <button class="start-button" id="confirm-ok-button" type="button"><span id="confirm-ok-label">确定</span><b aria-hidden="true">→</b></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Level Complete Modal -->
+  <div class="modal-backdrop hidden" id="level-modal" role="dialog" aria-modal="true" aria-labelledby="level-modal-title">
+    <div class="modal-card level-card">
+      <span class="level-card-kana" aria-hidden="true">よくできました</span>
+      <span class="level-badge" id="level-modal-badge">第 1 关 · 完成</span>
+      <h2 id="level-modal-title">漂亮通关！</h2>
+      <p class="level-card-message" id="level-modal-message">20 对全部合成，下一关棋盘会增加一对。</p>
+      <div class="level-stats">
+        <div><span>本关得分</span><strong id="level-modal-score">200</strong></div>
+        <div><span>本关用时</span><strong id="level-modal-time">00:45</strong></div>
+        <div><span>本关正确率</span><strong id="level-modal-accuracy">95%</strong></div>
+      </div>
+      <div class="level-actions">
+        <button class="start-button" id="level-next-button" type="button"><span id="level-next-label">进入下一关</span><b aria-hidden="true">→</b></button>
+        <button class="secondary-button" id="level-replay-button" type="button">重玩本模式</button>
+      </div>
+      <button class="modal-link" id="level-exit-button" type="button">返回假名首页</button>
+    </div>
+  </div>
+
+  <!-- Tangogo Account Auth Modal (reuses main site Supabase auth) -->
+  <div class="modal-backdrop hidden" id="tgo-auth-modal" role="dialog" aria-modal="true" aria-labelledby="tgo-auth-title">
+    <div class="modal-card">
+      <span class="modal-kana">会員</span>
+      <p class="step-label">TANGOGO ACCOUNT</p>
+      <h2 id="tgo-auth-title">登录 / 注册</h2>
+      <div id="tgo-unauth-view" class="tgo-auth-form">
+        <p style="margin-bottom:12px;">登录后自动同步五十音练习记录与累计统计至云端。</p>
+        <div class="tgo-form-group">
+          <label for="tgo-email-input">邮箱地址</label>
+          <input type="email" id="tgo-email-input" class="tgo-form-input" placeholder="name@example.com">
+        </div>
+        <div class="tgo-form-group">
+          <label for="tgo-pwd-input">密码</label>
+          <input type="password" id="tgo-pwd-input" class="tgo-form-input" placeholder="不少于 6 位密码">
+        </div>
+        <div class="tgo-auth-btns">
+          <button class="start-button" id="tgo-signin-btn" type="button"><span>登录</span><b>→</b></button>
+          <button class="secondary-button" id="tgo-signup-btn" type="button">注册</button>
+        </div>
+      </div>
+      <div id="tgo-authed-view" class="hidden" style="margin-top:12px;">
+        <p>当前已登录：<b id="tgo-authed-email" style="color:var(--ink);"></b></p>
+        <p style="margin-top:8px;" id="tgo-sync-status-text">云端同步已开启</p>
+        <div class="tgo-auth-btns">
+          <button class="secondary-button" id="tgo-sync-now-btn" type="button">立即同步</button>
+          <button class="secondary-button" id="tgo-signout-btn" type="button" style="color:#ef4444;">退出登录</button>
+        </div>
+      </div>
+      <button class="modal-link" id="tgo-auth-close-btn" type="button">关闭窗口</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="./data/kana.js"></script>
+  <script src="./engine/storage.js"></script>
+  <script src="./engine/recorder.js"></script>
+  <script src="./engine/pair-engine.js"></script>
+  <script src="./engine/cascade-engine.js"></script>
+  <script src="./engine/mole-engine.js"></script>
+  <script src="./ui/app.js"></script>
+</body>
+</html>

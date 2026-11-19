@@ -1,0 +1,84 @@
+:root {
+  /* Colors */
+  --paper: #f6f5ef;
+  --paper-2: #eeede5;
+  --white: #fffefa;
+  --ink: #193b36;
+  --ink-2: #34534d;
+  --muted: #7e8a7f;
+  --muted-2: #8b968c;
+  --line: #dedfd4;
+  --line-soft: rgba(25, 59, 54, 0.12);
+  --tomato: #df684f;
+  --tomato-dark: #bd503c;
+  --tomato-soft: #f8e7df;
+  --yellow: #f2cb62;
+  --mint: #dce9dd;
+  --good: #477b59;
+  --bad: #a83e30;
+
+  /* Shadows & Radii */
+  --shadow: 0 16px 44px rgba(34, 57, 47, 0.09);
+  --shadow-sm: 0 6px 22px rgba(35, 52, 43, 0.05);
+  --radius-sm: 9px;
+  --radius-md: 14px;
+  --radius: 18px;
+  --radius-lg: 22px;
+
+  /* Typography */
+  --font-cn: "Microsoft YaHei", "Microsoft YaHei UI", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Noto Sans CJK SC", "Heiti SC", "SimHei", sans-serif;
+  --font-jp: "Yu Gothic UI", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Meiryo", "Noto Sans JP", "MS PGothic", "MS Gothic", sans-serif;
+  --font-latin: "Segoe UI", "Helvetica Neue", Arial, "Yu Gothic UI", sans-serif;
+  --font: var(--font-cn);
+
+  /* Type Scale */
+  --text-xs: 11px;
+  --text-sm: 12px;
+  --text-base: 13px;
+  --text-md: 14px;
+  --text-lg: 16px;
+  --text-xl: 20px;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+}
+
+/* Tangogo 主站顶栏与深浅主题兼容变量映射 */
+:root {
+  --bg: var(--paper);
+  --surface: var(--white);
+  --field: var(--paper-2);
+  --accent: var(--tomato);
+  --accent-soft: var(--tomato-soft);
+  --on-accent: #ffffff;
+  --glass: rgba(246, 245, 239, 0.86);
+  --ring: 0 0 0 4px rgba(223, 104, 79, 0.16);
+}
+:root[data-theme="dark"] {
+  --paper: #0E0E11;
+  --paper-2: #1F1F26;
+  --white: #17171C;
+  --ink: #F2F2F4;
+  --ink-2: #D4D4DC;
+  --muted: #9B9BA8;
+  --muted-2: #8E8E9B;
+  --line: #272730;
+  --line-soft: rgba(255, 255, 255, 0.10);
+  --tomato: #F07A62;
+  --tomato-dark: #B54935;
+  --tomato-soft: rgba(240, 122, 98, 0.16);
+  --bg: #0E0E11;
+  --surface: #17171C;
+  --field: #1F1F26;
+  --accent: #F07A62;
+  --accent-soft: rgba(240, 122, 98, 0.16);
+  --on-accent: #0E0E11;
+  --glass: rgba(14, 14, 17, 0.86);
+  --shadow: 0 16px 44px rgba(0, 0, 0, 0.45);
+  --shadow-sm: 0 6px 22px rgba(0, 0, 0, 0.35);
+}

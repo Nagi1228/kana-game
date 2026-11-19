@@ -228,6 +228,43 @@
     white-space: nowrap; flex-shrink: 0;
   }
 
+  /* 五十音独立入口卡片（位于词库“选择玩法”区域之外，视觉独立区分，不混入待复习计数） */
+  .kana-lab-banner {
+    margin-top: 28px;
+    padding: 18px 22px;
+    border-radius: 18px;
+    background: var(--field);
+    border: 1px dashed var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    cursor: pointer;
+    transition: transform .2s ease, border-color .2s ease, background .2s ease;
+  }
+  .kana-lab-banner:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    background: var(--surface);
+  }
+  .kana-lab-left { display: flex; align-items: center; gap: 14px; }
+  .kana-lab-badge {
+    width: 44px; height: 44px; border-radius: 12px;
+    background: var(--surface); border: 1px solid var(--line);
+    display: grid; place-items: center;
+    font-size: 19px; font-weight: 800; color: var(--ink);
+    flex-shrink: 0;
+  }
+  .kana-lab-title { font-size: 16px; font-weight: 800; display: flex; align-items: center; gap: 8px; }
+  .kana-lab-sub { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .kana-lab-action {
+    font-size: 13px; font-weight: 700; color: var(--ink);
+    background: var(--surface); border: 1px solid var(--line);
+    padding: 7px 14px; border-radius: 999px;
+    display: inline-flex; align-items: center; gap: 5px;
+    white-space: nowrap; flex-shrink: 0;
+  }
+
   .section-label {
     display: flex; align-items: center; gap: 16px; margin: 44px 0 18px;
     font-size: 13px; letter-spacing: .12em; color: var(--muted); font-weight: 600;
@@ -408,7 +445,44 @@
     .stat-col + .stat-col { padding-left: 14px; }
     .srs-banner { flex-direction: column; align-items: stretch; }
     .srs-cta { justify-content: center; }
-    .section-label { margin-top: 36px; }
+    /* 五十音独立入口卡片（位于词库“选择玩法”区域之外，视觉独立区分，不混入待复习计数） */
+  .kana-lab-banner {
+    margin-top: 28px;
+    padding: 18px 22px;
+    border-radius: 18px;
+    background: var(--field);
+    border: 1px dashed var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    cursor: pointer;
+    transition: transform .2s ease, border-color .2s ease, background .2s ease;
+  }
+  .kana-lab-banner:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    background: var(--surface);
+  }
+  .kana-lab-left { display: flex; align-items: center; gap: 14px; }
+  .kana-lab-badge {
+    width: 44px; height: 44px; border-radius: 12px;
+    background: var(--surface); border: 1px solid var(--line);
+    display: grid; place-items: center;
+    font-size: 19px; font-weight: 800; color: var(--ink);
+    flex-shrink: 0;
+  }
+  .kana-lab-title { font-size: 16px; font-weight: 800; display: flex; align-items: center; gap: 8px; }
+  .kana-lab-sub { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .kana-lab-action {
+    font-size: 13px; font-weight: 700; color: var(--ink);
+    background: var(--surface); border: 1px solid var(--line);
+    padding: 7px 14px; border-radius: 999px;
+    display: inline-flex; align-items: center; gap: 5px;
+    white-space: nowrap; flex-shrink: 0;
+  }
+
+  .section-label { margin-top: 36px; }
     body { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
     .tabbar {
       display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
@@ -603,6 +677,21 @@
         </div>
       </div>
     </section>
+
+    <!-- 独立五十音基础练习入口（与词库及待复习计数完全隔离） -->
+    <a class="kana-lab-banner reveal" style="--i:10" href="./kana/" aria-label="かなゲーム 五十音练习">
+      <div class="kana-lab-left">
+        <div class="kana-lab-badge" aria-hidden="true">あ</div>
+        <div>
+          <div class="kana-lab-title">かなゲーム</div>
+          <div class="kana-lab-sub">五十音练习 · 平假名、片假名与罗马音配对及打地鼠</div>
+        </div>
+      </div>
+      <span class="kana-lab-action">
+        进入练习
+        <svg class="icon" style="width:15px; height:15px;" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </span>
+    </a>
 
     <footer class="footer">Tangogo · 日语背词</footer>
   </div>
