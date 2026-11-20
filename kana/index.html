@@ -305,9 +305,16 @@
           <label for="tgo-pwd-input">密码</label>
           <input type="password" id="tgo-pwd-input" class="tgo-form-input" placeholder="不少于 6 位密码">
         </div>
+        <div style="text-align:right; margin:-4px 0 10px;">
+          <button type="button" id="tgo-forgot-btn" style="background:none; border:none; padding:0; font-size:12px; color:var(--accent); font-weight:700; cursor:pointer;">忘记密码？</button>
+        </div>
         <div class="tgo-auth-btns">
           <button class="start-button" id="tgo-signin-btn" type="button"><span>登录</span><b>→</b></button>
           <button class="secondary-button" id="tgo-signup-btn" type="button">注册</button>
+        </div>
+        <div id="tgo-auth-feedback" class="hidden" style="margin-top:12px; padding:10px 12px; border-radius:10px; font-size:12.5px; line-height:1.5; background:var(--field); border:1px solid var(--line);">
+          <div id="tgo-auth-feedback-text"></div>
+          <button type="button" id="tgo-resend-btn" class="secondary-button hidden" style="margin-top:8px; height:32px; font-size:12px; padding:0 12px;">重新发送验证邮件</button>
         </div>
       </div>
       <div id="tgo-authed-view" class="hidden" style="margin-top:12px;">
