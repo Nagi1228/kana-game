@@ -338,14 +338,16 @@ async function initAuth() {
 }
 
 async function recordMistake(word) {
-      if (window.TangogoFSRS) {
-        await TangogoFSRS.recordGameMistake(word, {
-          book_id: typeof currentBook !== 'undefined' ? currentBook : '',
-          grade_id: typeof currentGrade !== 'undefined' ? currentGrade : '',
-          lesson_id: typeof currentLesson !== 'undefined' ? currentLesson : ''
-        });
-      }
-    } catch (e) { console.error(e); }
+  try {
+    if (window.TangogoFSRS) {
+      await TangogoFSRS.recordGameMistake(word, {
+        book_id: typeof currentBook !== 'undefined' ? currentBook : '',
+        grade_id: typeof currentGrade !== 'undefined' ? currentGrade : '',
+        lesson_id: typeof currentLesson !== 'undefined' ? currentLesson : ''
+      });
+    }
+  } catch (e) {
+    console.error(e);
   }
 }
 
@@ -668,7 +670,7 @@ function handleGroupOrLessonCompletion() {
     if (!isMistakeDrill) {
       actEl.appendChild(createBtn('下一课', 'btn-primary', () => {
         showToast('正在前往下一课...');
-        setTimeout(() => location.href = 'blocks.html?lesson=pep_jr_7_intro2', 600);
+        setTimeout(() => location.href = `blocks.html?book=${encodeURIComponent(currentBook)}&grade=${encodeURIComponent(currentGrade)}&lesson=pep_jr_7_intro2`, 600);
       }));
     }
     actEl.appendChild(createBtn('再来1遍', 'btn-secondary', () => {
