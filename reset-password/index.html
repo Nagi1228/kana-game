@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>重置密码 · Tangogo</title>
+<link rel="icon" type="image/png" sizes="512x512" href="../favicon.png?v=3">
+<link rel="apple-touch-icon" href="../favicon.png?v=3">
+<meta name="color-scheme" content="light dark">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('kana-theme'); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+<style>
+  :root {
+    --bg: #FAF9F6;
+    --surface: #FFFFFF;
+    --field: #F3F2EE;
+    --ink: #16161A;
+    --muted: #6C6C78;
+    --line: #E8E6E1;
+    --accent: #3B4CCA;
+    --accent-soft: #EEF0FC;
+    --on-accent: #FFFFFF;
+    --shadow: 0 1px 2px rgba(20, 20, 40, .04), 0 12px 32px -16px rgba(20, 20, 40, .12);
+    --ring: 0 0 0 4px rgba(59, 76, 202, .16);
+    --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB",
+            "Noto Sans SC", "Noto Sans JP", system-ui, sans-serif;
+  }
+  :root[data-theme="dark"] {
+    --bg: #0E0E11;
+    --surface: #17171C;
+    --field: #1F1F26;
+    --ink: #F2F2F4;
+    --muted: #9B9BA8;
+    --line: #272730;
+    --accent: #8E9AFF;
+    --accent-soft: #1E2140;
+    --on-accent: #0E0E11;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 12px 32px -16px rgba(0, 0, 0, .6);
+    --ring: 0 0 0 4px rgba(142, 154, 255, .22);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .reset-card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+    padding: 32px 28px;
+  }
+  .brand-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+  }
+  .logo {
+    font-size: 21px;
+    font-weight: 850;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .logo span { color: var(--accent); }
+  .back-home {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .back-home:hover { color: var(--accent); }
+  h1 {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  .sub-desc {
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .form-group { margin-bottom: 14px; }
+  .form-group label {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .form-input {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    border-radius: 11px;
+    border: 1px solid var(--line);
+    background: var(--field);
+    color: var(--ink);
+    font-size: 14.5px;
+    outline: none;
+    transition: border-color .15s, box-shadow .15s;
+  }
+  .form-input:focus {
+    border-color: var(--accent);
+    box-shadow: var(--ring);
+    background: var(--surface);
+  }
+  .hint-rule {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 5px;
+  }
+  .btn-primary {
+    width: 100%;
+    height: 44px;
+    margin-top: 8px;
+    border-radius: 11px;
+    border: none;
+    background: var(--accent);
+    color: var(--on-accent);
+    font-size: 14.5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity .15s;
+  }
+  .btn-primary:hover { opacity: 0.92; }
+  .btn-primary:disabled { opacity: 0.55; cursor: not-allowed; }
+  .status-box {
+    margin-top: 16px;
+    padding: 13px 14px;
+    border-radius: 12px;
+    font-size: 13.5px;
+    line-height: 1.55;
+    background: var(--accent-soft);
+    color: var(--ink);
+  }
+  .status-box.error {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.35);
+    color: #dc2626;
+  }
+  :root[data-theme="dark"] .status-box.error { color: #fca5a5; }
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<div class="reset-card">
+  <div class="brand-top">
+    <a class="logo" href="../index.html">Tango<span>go</span></a>
+    <a class="back-home" href="../index.html">← 返回首页</a>
+  </div>
+
+  <!-- 校验中状态 -->
+  <div id="checkingState">
+    <h1>验证重置链接</h1>
+    <p class="sub-desc">正在校验您的密码重置凭证，请稍候...</p>
+  </div>
+
+  <!-- 设置新密码表单 -->
+  <div id="resetFormState" class="hidden">
+    <h1>设置新密码</h1>
+    <p class="sub-desc" id="accountEmailTip">请为您的 Tangogo 账号设置新的登录密码。</p>
+
+    <div class="form-group">
+      <label for="newPassword">新密码</label>
+      <input type="password" id="newPassword" class="form-input" placeholder="请输入新密码" autocomplete="new-password">
+      <div class="hint-rule">最短 6 位字符，建议包含字母与数字</div>
+    </div>
+
+    <div class="form-group">
+      <label for="confirmPassword">确认新密码</label>
+      <input type="password" id="confirmPassword" class="form-input" placeholder="请再次输入新密码" autocomplete="new-password">
+    </div>
+
+    <button type="button" class="btn-primary" id="submitResetBtn" onclick="submitNewPassword()">确认修改密码</button>
+    <div id="formErrorBox" class="status-box error hidden"></div>
+  </div>
+
+  <!-- 链接失效 / 过期状态 -->
+  <div id="invalidLinkState" class="hidden">
+    <h1>重置链接已失效</h1>
+    <p class="sub-desc" id="invalidReasonText">该密码重置链接已过期或已被使用，请在下方输入邮箱重新获取重置邮件。</p>
+    <div class="form-group">
+      <label for="retryEmail">注册邮箱</label>
+      <input type="email" id="retryEmail" class="form-input" placeholder="name@example.com">
+    </div>
+    <button type="button" class="btn-primary" id="resendResetBtn" onclick="resendResetEmail()">重新发送重置密码邮件</button>
+    <div id="retryStatusBox" class="status-box hidden"></div>
+  </div>
+
+  <!-- 重置成功状态 -->
+  <div id="successState" class="hidden">
+    <h1>密码修改成功</h1>
+    <p class="sub-desc">您的新密码已生效，现在可以直接使用新密码登录并继续学习。</p>
+    <button type="button" class="btn-primary" onclick="window.location.replace('../index.html')">返回 Tangogo 首页</button>
+  </div>
+</div>
+
+<script>
+  const SUPABASE_URL = 'https://zbfjbtzvnhmfzyvooact.supabase.co';
+  const SUPABASE_KEY = 'sb_publishable_AP0YnQLgzmB3d63_4zbpjg_vHeTyo8Z';
+  const sbClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
+
+  function showOnlyState(id) {
+    ['checkingState', 'resetFormState', 'invalidLinkState', 'successState'].forEach(key => {
+      document.getElementById(key).classList.toggle('hidden', key !== id);
+    });
+  }
+
+  function cleanUrl() {
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+  }
+
+  async function initResetSession() {
+    if (!sbClient) {
+      document.getElementById('invalidReasonText').textContent = '认证组件加载失败，请刷新页面重试。';
+      showOnlyState('invalidLinkState');
+      return;
+    }
+
+    const searchParams = new URLSearchParams(window.location.search);
+    const hashParams = new URLSearchParams(window.location.hash.replace(/^#/, ''));
+    const errCode = searchParams.get('error_code') || hashParams.get('error_code') || searchParams.get('error') || hashParams.get('error');
+    const authCode = searchParams.get('code');
+
+    if (errCode) {
+      cleanUrl();
+      document.getElementById('invalidReasonText').textContent =
+        errCode === 'otp_expired'
+          ? '密码重置链接已过期（或已被使用），请重新发送重置邮件。'
+          : '密码重置链接无效或已被拒绝，请重新发送重置邮件。';
+      showOnlyState('invalidLinkState');
+      return;
+    }
+
+    if (authCode) {
+      const { data, error } = await sbClient.auth.exchangeCodeForSession(authCode);
+      cleanUrl();
+      if (!error && data && data.session) {
+        if (data.session.user?.email) {
+          document.getElementById('accountEmailTip').textContent = `当前账号：${data.session.user.email}，请设置新密码。`;
+        }
+        showOnlyState('resetFormState');
+        return;
+      }
+      document.getElementById('invalidReasonText').textContent = '密码重置链接已过期或已被使用，请重新发送重置邮件。';
+      showOnlyState('invalidLinkState');
+      return;
+    }
+
+    const { data: { session } } = await sbClient.auth.getSession();
+    cleanUrl();
+    if (session && session.user) {
+      if (session.user.email) {
+        document.getElementById('accountEmailTip').textContent = `当前账号：${session.user.email}，请设置新密码。`;
+      }
+      showOnlyState('resetFormState');
+      return;
+    }
+
+    sbClient.auth.onAuthStateChange((event, newSession) => {
+      if ((event === 'PASSWORD_RECOVERY' || event === 'SIGNED_IN') && newSession) {
+        cleanUrl();
+        if (newSession.user?.email) {
+          document.getElementById('accountEmailTip').textContent = `当前账号：${newSession.user.email}，请设置新密码。`;
+        }
+        showOnlyState('resetFormState');
+      }
+    });
+
+    setTimeout(async () => {
+      const { data: { session: retrySess } } = await sbClient.auth.getSession();
+      if (!retrySess && !document.getElementById('checkingState').classList.contains('hidden')) {
+        showOnlyState('invalidLinkState');
+      }
+    }, 1500);
+  }
+
+  async function submitNewPassword() {
+    const pwd = document.getElementById('newPassword').value;
+    const confirmPwd = document.getElementById('confirmPassword').value;
+    const errBox = document.getElementById('formErrorBox');
+    const btn = document.getElementById('submitResetBtn');
+
+    errBox.classList.add('hidden');
+
+    if (!pwd || pwd.length < 6) {
+      errBox.textContent = '新密码长度不能少于 6 位。';
+      errBox.classList.remove('hidden');
+      return;
+    }
+    if (pwd !== confirmPwd) {
+      errBox.textContent = '两次输入的密码不一致，请重新确认。';
+      errBox.classList.remove('hidden');
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = '正在保存...';
+
+    const { error } = await sbClient.auth.updateUser({ password: pwd });
+    btn.disabled = false;
+    btn.textContent = '确认修改密码';
+
+    if (error) {
+      errBox.textContent = '修改密码失败：' + error.message;
+      errBox.classList.remove('hidden');
+      return;
+    }
+
+    showOnlyState('successState');
+  }
+
+  async function resendResetEmail() {
+    const email = document.getElementById('retryEmail').value.trim();
+    const box = document.getElementById('retryStatusBox');
+    const btn = document.getElementById('resendResetBtn');
+    if (!email) {
+      box.textContent = '请先输入您的注册邮箱。';
+      box.className = 'status-box error';
+      box.classList.remove('hidden');
+      return;
+    }
+
+    btn.disabled = true;
+    const { error } = await sbClient.auth.resetPasswordForEmail(email, {
+      redirectTo: window.location.origin + '/reset-password/'
+    });
+    btn.disabled = false;
+
+    if (error) {
+      box.textContent = '发送失败：' + error.message;
+      box.className = 'status-box error';
+      box.classList.remove('hidden');
+      return;
+    }
+
+    box.textContent = `密码重置邮件已发送到 ${email}，请查收（也请看看垃圾邮件箱）。`;
+    box.className = 'status-box';
+    box.classList.remove('hidden');
+  }
+
+  window.addEventListener('DOMContentLoaded', initResetSession);
+</script>
+</body>
+</html>
