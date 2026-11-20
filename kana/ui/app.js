@@ -1315,13 +1315,49 @@
     $('#tgo-auth-modal').classList.add('hidden');
   });
 
+  let kanaResendTimer = null;
+  function showKanaAuthNotice(msg, { isError = false, showResend = false } = {}) {
+    const box = $('#tgo-auth-feedback');
+    const txt = $('#tgo-auth-feedback-text');
+    const btn = $('#tgo-resend-btn');
+    box.classList.remove('hidden');
+    box.style.borderColor = isError ? 'rgba(239, 68, 68, 0.45)' : 'var(--line)';
+    box.style.color = isError ? '#dc2626' : 'var(--ink)';
+    txt.textContent = msg;
+    btn.classList.toggle('hidden', !showResend);
+  }
+
+  function startKanaResendCooldown(sec = 60) {
+    const btn = $('#tgo-resend-btn');
+    clearInterval(kanaResendTimer);
+    let left = sec;
+    btn.disabled = true;
+    btn.textContent = `重新发送验证邮件 (${left}s)`;
+    kanaResendTimer = setInterval(() => {
+      left -= 1;
+      if (left <= 0) {
+        clearInterval(kanaResendTimer);
+        btn.disabled = false;
+        btn.textContent = '重新发送验证邮件';
+      } else {
+        btn.textContent = `重新发送验证邮件 (${left}s)`;
+      }
+    }, 1000);
+  }
+
   $('#tgo-signin-btn').addEventListener('click', async () => {
     const email = $('#tgo-email-input').value.trim();
     const password = $('#tgo-pwd-input').value;
     if (!email || !password) return toast('请填写邮箱和密码');
     if (!sbClient) return toast('数据库连接未就绪');
     const { data, error } = await sbClient.auth.signInWithPassword({ email, password });
-    if (error) return toast('登录失败: ' + error.message);
+    if (error) {
+      const msg = error.message.includes('Email not confirmed')
+        ? '该邮箱尚未验证，请查收验证邮件或点击下方重新发送。'
+        : '登录失败: ' + error.message;
+      showKanaAuthNotice(msg, { isError: true, showResend: error.message.includes('Email not confirmed') });
+      return toast(msg);
+    }
     currentUser = data.user;
     await KanaRecorder.syncAllLocalRunsOnLogin();
     updateAuthUI();
@@ -1333,14 +1369,59 @@
     const email = $('#tgo-email-input').value.trim();
     const password = $('#tgo-pwd-input').value;
     if (!email || !password) return toast('请填写邮箱和密码');
+    if (password.length < 6) return toast('密码不少于 6 位');
     if (!sbClient) return toast('数据库连接未就绪');
-    const { data, error } = await sbClient.auth.signUp({ email, password });
-    if (error) return toast('注册失败: ' + error.message);
-    currentUser = data.user;
-    await KanaRecorder.syncAllLocalRunsOnLogin();
-    updateAuthUI();
-    $('#tgo-auth-modal').classList.add('hidden');
-    toast('注册成功！');
+    const { data, error } = await sbClient.auth.signUp({
+      email,
+      password,
+      options: { emailRedirectTo: window.location.origin + '/' }
+    });
+    if (error) {
+      showKanaAuthNotice('注册失败: ' + error.message, { isError: true });
+      return toast('注册失败: ' + error.message);
+    }
+    if (data && data.session && data.user) {
+      currentUser = data.user;
+      await KanaRecorder.syncAllLocalRunsOnLogin();
+      updateAuthUI();
+      $('#tgo-auth-modal').classList.add('hidden');
+      toast('注册成功！');
+    } else {
+      showKanaAuthNotice(`验证邮件已发送到 ${email}，请查收（也请看看垃圾邮件箱）。`, { showResend: true });
+      startKanaResendCooldown(60);
+    }
+  });
+
+  $('#tgo-resend-btn').addEventListener('click', async () => {
+    const email = $('#tgo-email-input').value.trim();
+    if (!email) return toast('请先输入注册邮箱');
+    const { error } = await sbClient.auth.resend({
+      type: 'signup',
+      email,
+      options: { emailRedirectTo: window.location.origin + '/' }
+    });
+    if (error) {
+      showKanaAuthNotice('重发失败: ' + error.message, { isError: true, showResend: true });
+      return;
+    }
+    showKanaAuthNotice(`验证邮件已重新发送到 ${email}，请查收（也请看看垃圾邮件箱）。`, { showResend: true });
+    startKanaResendCooldown(60);
+  });
+
+  $('#tgo-forgot-btn').addEventListener('click', async () => {
+    const email = $('#tgo-email-input').value.trim();
+    if (!email) {
+      showKanaAuthNotice('请先在上方输入注册邮箱，再点击“忘记密码”。', { isError: true });
+      return;
+    }
+    const { error } = await sbClient.auth.resetPasswordForEmail(email, {
+      redirectTo: window.location.origin + '/reset-password/'
+    });
+    if (error) {
+      showKanaAuthNotice('发送重置邮件失败: ' + error.message, { isError: true });
+      return;
+    }
+    showKanaAuthNotice(`密码重置邮件已发送到 ${email}，请查收邮件设置新密码。`);
   });
 
   $('#tgo-sync-now-btn').addEventListener('click', async () => {
