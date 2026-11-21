@@ -294,12 +294,14 @@ body {
       const bookMap = {
         'std_beg': '新版标准日本语初级',
         'pep_jr': '人教版初中日语（新）',
-        'pep_sr': '人教版高中日语'
+        'pep_sr': '人教版高中日语',
+        'jlpt': 'JLPT'
       };
       const gradeMap = {
         'std_beg_1': '初级上册', 'std_beg_2': '初级下册',
         'pep_jr_7': '七年级', 'pep_jr_8': '八年级', 'pep_jr_9': '九年级',
-        'pep_sr_b1': '必修一', 'pep_sr_b2': '必修二', 'pep_sr_b3': '必修三'
+        'pep_sr_b1': '必修一', 'pep_sr_b2': '必修二', 'pep_sr_b3': '必修三',
+        'jlpt_n5': 'N5', 'jlpt_n4': 'N4', 'jlpt_n3': 'N3', 'jlpt_n2': 'N2', 'jlpt_n1': 'N1'
       };
       let lessonName = '';
       if (l && l.includes('_intro')) {
@@ -481,7 +483,7 @@ body {
 
       const hasKanji = q.kanji && q.kanji.trim() !== '' && q.kanji.trim() !== q.kana.trim();
       document.getElementById('sort-kanji').innerText = hasKanji ? q.kanji : '——';
-      document.getElementById('sort-pitch').innerText = `声调: ${q.pitch || '⓪'}`;
+      document.getElementById('sort-pitch').innerText = q.pitch ? `声调: ${q.pitch}` : '暂无声调';
       document.getElementById('sort-pos').innerText = `词性: ${q.pos || '名'}`;
       document.getElementById('sort-meaning').innerText = q.meaning;
       document.getElementById('sort-hint').innerText = `共 ${q.kana.length} 个假名`;

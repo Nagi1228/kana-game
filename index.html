@@ -718,7 +718,7 @@
       </span>
     </a>
 
-    <footer class="footer">Tangogo · 日语背词</footer>
+    <footer class="footer">Tangogo · 日语背词 <span style="margin:0 8px; opacity:.4;">|</span> <a href="./about/data/" style="text-decoration:underline; text-underline-offset:3px;">数据来源与致谢</a></footer>
   </div>
 </main>
 
@@ -948,6 +948,16 @@
         { id: 'pep_sr_b2', name: '必修二', lessons: makeLessons('pep_sr_b2', 4, 5) },
         { id: 'pep_sr_b3', name: '必修三', lessons: makeLessons('pep_sr_b3', 4, 9) }
       ]
+    },
+    {
+      id: 'jlpt', name: 'JLPT',
+      children: [
+        { id: 'jlpt_n5', name: 'N5', lessons: makeLessons('jlpt_n5', 25) },
+        { id: 'jlpt_n4', name: 'N4', lessons: makeLessons('jlpt_n4', 25) },
+        { id: 'jlpt_n3', name: 'N3', lessons: makeLessons('jlpt_n3', 60) },
+        { id: 'jlpt_n2', name: 'N2', lessons: makeLessons('jlpt_n2', 65) },
+        { id: 'jlpt_n1', name: 'N1', lessons: makeLessons('jlpt_n1', 120) }
+      ]
     }
   ];
 
@@ -1047,7 +1057,22 @@
 
     tweenNumber(document.getElementById('statTotal'), totalGradeWords);
 
-    grade.lessons.forEach(l => {
+    let effectiveLessons = grade.lessons;
+    if (bId === 'jlpt') {
+      const existingLessonIds = Object.keys(countsMap)
+        .filter(k => k.startsWith(gId + '_l'))
+        .sort((a, b) => parseInt(a.split('_l')[1], 10) - parseInt(b.split('_l')[1], 10));
+      if (existingLessonIds.length > 0) {
+        effectiveLessons = existingLessonIds.map(lid => ({
+          id: lid,
+          name: `第 ${lid.split('_l')[1]} 课`
+        }));
+      } else {
+        effectiveLessons = [{ id: `${gId}_l1`, name: '第 1 课（暂未发布）' }];
+      }
+    }
+
+    effectiveLessons.forEach(l => {
       const count = countsMap[l.id] || 0;
       lSel.innerHTML += `<option value="${l.id}" data-count="${count}">${l.name} (${count}词)</option>`;
     });
