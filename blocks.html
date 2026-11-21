@@ -672,7 +672,21 @@ function handleGroupOrLessonCompletion() {
     if (!isMistakeDrill) {
       actEl.appendChild(createBtn('下一课', 'btn-primary', () => {
         showToast('正在前往下一课...');
-        setTimeout(() => location.href = `blocks.html?book=${encodeURIComponent(currentBook)}&grade=${encodeURIComponent(currentGrade)}&lesson=pep_jr_7_intro2`, 600);
+        
+        // 自动解析并计算下一课 lesson_id
+        let nextLesson = currentLesson;
+        if (currentLesson.includes('_intro')) {
+          const num = parseInt(currentLesson.split('_intro')[1], 10);
+          nextLesson = `${currentLesson.split('_intro')[0]}_intro${num + 1}`;
+        } else if (currentLesson.includes('_l')) {
+          const parts = currentLesson.split('_l');
+          const num = parseInt(parts[1], 10);
+          nextLesson = `${parts[0]}_l${num + 1}`;
+        }
+
+        setTimeout(() => {
+          location.href = `blocks.html?book=${encodeURIComponent(currentBook)}&grade=${encodeURIComponent(currentGrade)}&lesson=${encodeURIComponent(nextLesson)}`;
+        }, 600);
       }));
     }
     actEl.appendChild(createBtn('再来1遍', 'btn-secondary', () => {
