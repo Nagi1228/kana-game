@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="512x512" href="./favicon.png?v=3">
   <link rel="apple-touch-icon" href="./favicon.png?v=3">
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="./fsrs-engine.js"></script>
+  <script src="./fsrs-engine.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" media="print" onload="this.media='all';this.onload=null"
@@ -108,8 +108,6 @@
     .elim-card-desc { background: var(--elim-desc-bg); border-color: var(--elim-desc-bd); }
 
     .elim-card .elim-word { font-size: 1.34rem; font-weight: 700; color: var(--fg); line-height: 1.25; }
-    
-    /* 优化翻牌模式释义卡片：采用垂直上下两行结构，防止左右乱换行 */
     .elim-card .desc-inner { display: flex; flex-direction: column; align-items: center; gap: 3px; width: 100%; }
     .elim-card .m-top-row { display: flex; align-items: center; justify-content: center; gap: 6px; flex-wrap: wrap; }
     .elim-card .m-pos { font-size: 0.76rem; font-weight: 800; color: var(--fg3); background: var(--elim-pos-bg); border-radius: 6px; padding: 1px 6px; }
@@ -198,6 +196,33 @@
   <div class="toast cn-text" id="toast"></div>
 
   <script>
+    // 音效函数
+    let audioCtx = null;
+    function getAudioCtx() {
+      if (!audioCtx) {
+        try { audioCtx = new (window.AudioContext || window.webkitAudioContext)(); } catch(e){}
+      }
+      if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume().catch(() => {});
+      return audioCtx;
+    }
+    ['pointerdown', 'keydown', 'touchstart'].forEach(evt => {
+      window.addEventListener(evt, () => getAudioCtx(), { once: false, passive: true });
+    });
+    function playTone(freq, type, duration, vol, decay) {
+      try {
+        const ctx = getAudioCtx(); if (!ctx) return;
+        const osc = ctx.createOscillator(); const gain = ctx.createGain();
+        osc.connect(gain); gain.connect(ctx.destination);
+        osc.type = type || 'sine'; osc.frequency.setValueAtTime(freq, ctx.currentTime);
+        gain.gain.setValueAtTime(vol || 0.35, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + (decay || duration));
+        osc.start(ctx.currentTime); osc.stop(ctx.currentTime + duration);
+      } catch(e){}
+    }
+    function sfxClick() { playTone(520, 'sine', 0.07, 0.22, 0.06); }
+    function sfxCorrect() { playTone(784, 'triangle', 0.16, 0.34, 0.15); }
+    function sfxWrong() { playTone(220, 'sawtooth', 0.22, 0.32, 0.2); }
+
     const SUPABASE_URL = 'https://zbfjbtzvnhmfzyvooact.supabase.co';
     const SUPABASE_KEY = 'sb_publishable_AP0YnQLgzmB3d63_4zbpjg_vHeTyo8Z';
     const sbClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
@@ -376,7 +401,6 @@
         if (c.kind === 'word') {
           el.innerHTML = `<div class="elim-word jp-text">${c.raw.kanji || c.raw.kana}</div>`;
         } else {
-          // 优化逻辑：如果该词没有独立汉字（或无汉字形态，或汉字与假名完全相同），则中文释义卡片不重复显示假名
           const hasKanji = c.raw.kanji && c.raw.kanji.trim() !== '' && c.raw.kanji.trim() !== c.raw.kana.trim();
           el.innerHTML = `
             <div class="desc-inner">
@@ -397,6 +421,7 @@
     function onCardClick(el, card) {
       if (isProcessing || el.classList.contains('sel') || el.classList.contains('matched')) return;
 
+      sfxClick();
       el.classList.add('sel');
       selectedCards.push({ el, card });
 
@@ -410,6 +435,7 @@
       const [c1, c2] = selectedCards;
 
       if (c1.card.id === c2.card.id && c1.card.kind !== c2.card.kind) {
+        sfxCorrect();
         score += 10;
         matchedPairs++;
         document.getElementById('scoreChip').innerText = `${score}分`;
@@ -428,6 +454,7 @@
           }
         }, 340);
       } else {
+        sfxWrong();
         mistakes++;
         document.getElementById('mistakeChip').innerText = `失误 ${mistakes}`;
         recordMistake(c1.card.raw);
@@ -471,8 +498,6 @@
         if (!isMistakeDrill) {
           actEl.appendChild(createBtn('下一课', 'btn-primary', () => {
             showToast('正在前往下一课...');
-            
-            // 自动动态解析下一课 lesson_id
             let nextLesson = currentLesson;
             if (currentLesson.includes('_intro')) {
               const num = parseInt(currentLesson.split('_intro')[1], 10);
@@ -482,7 +507,6 @@
               const num = parseInt(parts[1], 10);
               nextLesson = `${parts[0]}_l${num + 1}`;
             }
-
             setTimeout(() => {
               location.href = `match.html?book=${encodeURIComponent(currentBook)}&grade=${encodeURIComponent(currentGrade)}&lesson=${encodeURIComponent(nextLesson)}`;
             }, 500);
