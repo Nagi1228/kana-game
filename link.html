@@ -111,8 +111,6 @@ body {
 .match-item.match-right { align-items: center; text-align: center; }
 
 .match-item .match-word { font-size: 1.34rem; font-weight: 700; color: var(--fg); }
-
-/* 连线右侧释义卡片内部排版：上下两行分层，防止长文本挤压变形 */
 .match-item .desc-inner { display: flex; flex-direction: column; align-items: center; gap: 3px; width: 100%; }
 .match-item .m-top-row { display: flex; align-items: center; justify-content: center; gap: 6px; flex-wrap: wrap; }
 .match-item .m-pos { font-size: 0.78rem; font-weight: 800; color: var(--fg3); background: var(--bg2); border-radius: 6px; padding: 1px 6px; }
@@ -195,6 +193,33 @@ body {
   <div class="toast cn-text" id="toast"></div>
 
   <script>
+    // 音效函数
+    let audioCtx = null;
+    function getAudioCtx() {
+      if (!audioCtx) {
+        try { audioCtx = new (window.AudioContext || window.webkitAudioContext)(); } catch(e){}
+      }
+      if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume().catch(() => {});
+      return audioCtx;
+    }
+    ['pointerdown', 'keydown', 'touchstart'].forEach(evt => {
+      window.addEventListener(evt, () => getAudioCtx(), { once: false, passive: true });
+    });
+    function playTone(freq, type, duration, vol, decay) {
+      try {
+        const ctx = getAudioCtx(); if (!ctx) return;
+        const osc = ctx.createOscillator(); const gain = ctx.createGain();
+        osc.connect(gain); gain.connect(ctx.destination);
+        osc.type = type || 'sine'; osc.frequency.setValueAtTime(freq, ctx.currentTime);
+        gain.gain.setValueAtTime(vol || 0.35, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + (decay || duration));
+        osc.start(ctx.currentTime); osc.stop(ctx.currentTime + duration);
+      } catch(e){}
+    }
+    function sfxClick() { playTone(520, 'sine', 0.07, 0.22, 0.06); }
+    function sfxCorrect() { playTone(784, 'triangle', 0.16, 0.34, 0.15); }
+    function sfxWrong() { playTone(220, 'sawtooth', 0.22, 0.32, 0.2); }
+
     const SUPABASE_URL = 'https://zbfjbtzvnhmfzyvooact.supabase.co';
     const SUPABASE_KEY = 'sb_publishable_AP0YnQLgzmB3d63_4zbpjg_vHeTyo8Z';
     const sbClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
@@ -398,7 +423,6 @@ body {
         rightEl.className = 'match-item match-right';
         rightEl.dataset.id = r.id;
 
-        // 优化连线右侧释义卡片：无汉字时隐藏假名，仅保留词性与中文，保持整齐的上下两行结构
         const hasKanji = r.kanji && r.kanji.trim() !== '' && r.kanji.trim() !== r.kana.trim();
         rightEl.innerHTML = `
           <div class="desc-inner">
@@ -415,6 +439,7 @@ body {
     }
 
     function selectCard(side, el, item) {
+      sfxClick();
       if (side === 'left') {
         if (selectedLeft) selectedLeft.el.classList.remove('sel');
         selectedLeft = { el, item };
@@ -429,6 +454,7 @@ body {
 
     function checkMatch() {
       if (selectedLeft.item.id === selectedRight.item.id) {
+        sfxCorrect();
         drawSvgLine(selectedLeft.el, selectedRight.el);
         selectedLeft.el.classList.remove('sel');
         selectedRight.el.classList.remove('sel');
@@ -447,6 +473,7 @@ body {
           handleGroupComplete();
         }
       } else {
+        sfxWrong();
         mistakes++;
         document.getElementById('mistakeChip').innerText = `失误 ${mistakes}`;
         recordMistake(selectedLeft.item);
@@ -489,8 +516,6 @@ body {
         if (!isMistakeDrill) {
           actEl.appendChild(createBtn('下一课', 'btn-primary', () => {
             showToast('正在前往下一课...');
-            
-            // 自动动态解析下一课 lesson_id
             let nextLesson = currentLesson;
             if (currentLesson.includes('_intro')) {
               const num = parseInt(currentLesson.split('_intro')[1], 10);
@@ -500,7 +525,6 @@ body {
               const num = parseInt(parts[1], 10);
               nextLesson = `${parts[0]}_l${num + 1}`;
             }
-
             setTimeout(() => {
               location.href = `link.html?book=${encodeURIComponent(currentBook)}&grade=${encodeURIComponent(currentGrade)}&lesson=${encodeURIComponent(nextLesson)}`;
             }, 500);
@@ -596,7 +620,8 @@ body {
     }
 
     window.addEventListener('DOMContentLoaded', async () => {
-      document.getElementById('deckSubtitle', `连线模式 · ${deckInfo.fullLabel}`);
+      // 修复了连线模式右上角缺失本课提示的问题
+      document.getElementById('deckSubtitle').innerText = `连线模式 · ${deckInfo.fullLabel}`;
       document.getElementById('lessonName').innerText = deckInfo.lessonName;
       await initAuth();
       ALL_WORDS = await fetchCurrentLessonWords();
