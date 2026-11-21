@@ -248,6 +248,34 @@ body {
   <div class="toast cn-text" id="toast"></div>
 
   <script>
+    // ======= 新增音效函数 =======
+    let audioCtx = null;
+    function getAudioCtx() {
+      if (!audioCtx) {
+        try { audioCtx = new (window.AudioContext || window.webkitAudioContext)(); } catch(e){}
+      }
+      if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume().catch(() => {});
+      return audioCtx;
+    }
+    ['pointerdown', 'keydown', 'touchstart'].forEach(evt => {
+      window.addEventListener(evt, () => getAudioCtx(), { once: false, passive: true });
+    });
+    function playTone(freq, type, duration, vol, decay) {
+      try {
+        const ctx = getAudioCtx(); if (!ctx) return;
+        const osc = ctx.createOscillator(); const gain = ctx.createGain();
+        osc.connect(gain); gain.connect(ctx.destination);
+        osc.type = type || 'sine'; osc.frequency.setValueAtTime(freq, ctx.currentTime);
+        gain.gain.setValueAtTime(vol || 0.35, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + (decay || duration));
+        osc.start(ctx.currentTime); osc.stop(ctx.currentTime + duration);
+      } catch(e){}
+    }
+    function sfxClick() { playTone(520, 'sine', 0.07, 0.22, 0.06); }
+    function sfxCorrect() { playTone(784, 'triangle', 0.16, 0.34, 0.15); }
+    function sfxWrong() { playTone(220, 'sawtooth', 0.22, 0.32, 0.2); }
+    // ============================
+
     const SUPABASE_URL = 'https://zbfjbtzvnhmfzyvooact.supabase.co';
     const SUPABASE_KEY = 'sb_publishable_AP0YnQLgzmB3d63_4zbpjg_vHeTyo8Z';
     const sbClient = window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
@@ -454,6 +482,7 @@ body {
     }
 
     function handleTimeout() {
+      sfxWrong(); // 超时触发错误音效
       const q = currentGroupWords[currentIndex];
       const res = document.getElementById('sort-result');
       res.hidden = false;
@@ -515,6 +544,7 @@ body {
     }
 
     function selectLetter(char, btnIdx) {
+      sfxClick(); // 选假名时触发点击音效
       const q = currentGroupWords[currentIndex];
       if (currentInput.length >= q.kana.length) return;
 
@@ -529,6 +559,7 @@ body {
 
     function removeSlotLetter(slotIdx) {
       if (!currentInput[slotIdx]) return;
+      sfxClick();
       const removed = currentInput.splice(slotIdx, 1)[0];
       document.getElementById(`kana-btn-${removed.btnIdx}`).classList.remove('used');
       renderSlots();
@@ -536,12 +567,14 @@ body {
 
     function undoLast() {
       if (currentInput.length === 0) return;
+      sfxClick();
       const removed = currentInput.pop();
       document.getElementById(`kana-btn-${removed.btnIdx}`).classList.remove('used');
       renderSlots();
     }
 
     function resetSlots() {
+      sfxClick();
       currentInput.forEach(item => {
         document.getElementById(`kana-btn-${item.btnIdx}`).classList.remove('used');
       });
@@ -571,6 +604,7 @@ body {
       res.hidden = false;
 
       if (ans === q.kana) {
+        sfxCorrect(); // 拼对触发成功音效
         clearInterval(timerInterval);
         res.className = 'result-message success';
         res.innerText = '✨ 正确！+10分';
@@ -584,6 +618,7 @@ body {
           loadQuestion();
         }, 800);
       } else {
+        sfxWrong(); // 拼错触发错误音效
         clearInterval(timerInterval);
         res.className = 'result-message fail';
         res.innerText = `❌ 拼错啦，正确是: ${q.kana}（已加入错题本）`;
@@ -626,8 +661,6 @@ body {
         if (!isMistakeDrill) {
           actEl.appendChild(createBtn('下一课', 'btn-primary', () => {
             showToast('正在前往下一课...');
-            
-            // 自动解析并计算下一课 lesson_id
             let nextLesson = currentLesson;
             if (currentLesson.includes('_intro')) {
               const num = parseInt(currentLesson.split('_intro')[1], 10);
@@ -637,7 +670,6 @@ body {
               const num = parseInt(parts[1], 10);
               nextLesson = `${parts[0]}_l${num + 1}`;
             }
-
             setTimeout(() => {
               location.href = `puzzle.html?book=${encodeURIComponent(currentBook)}&grade=${encodeURIComponent(currentGrade)}&lesson=${encodeURIComponent(nextLesson)}`;
             }, 500);
