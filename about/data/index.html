@@ -145,6 +145,31 @@
     color: var(--muted);
     font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   }
+  details.license-fold {
+    margin-top: 12px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--field);
+    padding: 10px 14px;
+  }
+  details.license-fold summary {
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    user-select: none;
+  }
+  details.license-fold pre {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--line);
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: var(--muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
 </style>
 </head>
 <body>
@@ -200,18 +225,43 @@
 
   <section class="card">
     <h2>
-      <span>3. jmdict-i18n / Tagaini Jisho（JLPT 等级索引表）</span>
-      <span class="license-pill">GPL-3.0</span>
+      <span>3. JLPT 词条等级索引（jlpt-n1.csv ~ jlpt-n5.csv）</span>
+      <span class="license-pill">MIT License</span>
     </h2>
     <ul class="meta-list">
-      <li><span class="label">数据名称：</span>Tagaini Jisho / jmdict-i18n JLPT Vocabulary Lists (jlpt-n1.csv ~ jlpt-n5.csv)</li>
-      <li><span class="label">版权人：</span>Alexandre Courbot (Gnurou) 及 Tagaini Jisho 贡献者（原始分级整理自 JLPT Study Page、JLPT Resource Page、Thierry Bézecourt 与 Alain Côté）</li>
-      <li><span class="label">许可名称：</span>GNU General Public License v3.0 (GPL-3.0)</li>
-      <li><span class="label">项目与许可链接：</span><a href="https://github.com/Gnurou/tagainijisho" target="_blank" rel="noopener noreferrer">https://github.com/Gnurou/tagainijisho</a> ｜ <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener noreferrer">https://www.gnu.org/licenses/gpl-3.0.html</a></li>
+      <li><span class="label">数据名称：</span>JLPT 词条等级索引（jlpt-n1.csv ~ jlpt-n5.csv）</li>
+      <li><span class="label">获取来源：</span>GitHub 仓库 <a href="https://github.com/aehlke/jlpt-classifier" target="_blank" rel="noopener noreferrer">aehlke/jlpt-classifier</a></li>
+      <li><span class="label">仓库许可：</span>MIT License，Copyright (c) 2018 Alex Ehlke</li>
+      <li><span class="label">上游来源：</span>该仓库的说明文件未写明这些词条 ID 列表的更上游来源，本站正在核实。核实之前，不对该数据的上游许可作其他声明。</li>
+      <li><span class="label">说明：</span>JLPT 没有官方词表，这些等级为民间整理或近似分类，仅供参考。</li>
     </ul>
     <blockquote>
-      JLPT levels may not always be accurate (as there are no official JLPT lists, these are gathered on a voluntary basis). JLPT levels for words come from the now-defunct JLPT Study Page, the JLPT Resource Page, as well as lists provided by Thierry Bézecourt and Alain Côté.
+      JLPT levels may not always be accurate (as there are no official JLPT lists, these are gathered on a voluntary basis).
     </blockquote>
+    <details class="license-fold">
+      <summary>展开查看仓库 MIT License 许可证全文</summary>
+      <pre>MIT License
+
+Copyright (c) 2018 Alex Ehlke
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</pre>
+    </details>
   </section>
 </main>
 
