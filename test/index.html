@@ -81,7 +81,6 @@
     max-width: 720px; margin: 0 auto; padding: 20px 20px 64px;
   }
 
-  /* 顶部显眼内测标识条 */
   .beta-banner {
     display: flex; align-items: center; justify-content: center; gap: 8px;
     padding: 9px 16px; margin-bottom: 16px; border-radius: 12px;
@@ -92,7 +91,6 @@
     width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0;
   }
 
-  /* 顶部栏 */
   .topbar {
     display: flex; align-items: center; justify-content: space-between;
     margin-bottom: 24px; gap: 12px;
@@ -121,7 +119,6 @@
   }
   .icon-btn:hover { color: var(--ink); border-color: var(--accent); }
 
-  /* 卡片通用 */
   .card {
     background: var(--surface);
     border: 1px solid var(--line);
@@ -130,7 +127,6 @@
     box-shadow: var(--shadow);
   }
 
-  /* 欢迎页 */
   .intro-title { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
   .intro-sub { font-size: 15px; color: var(--muted); margin-bottom: 22px; }
   .rule-list {
@@ -151,7 +147,6 @@
   .primary-btn:hover:not(:disabled) { opacity: 0.92; transform: translateY(-1px); }
   .primary-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
-  /* 答题页 */
   .q-meta-bar {
     display: flex; align-items: center; justify-content: space-between;
     margin-bottom: 14px; font-size: 13px; color: var(--muted);
@@ -210,7 +205,6 @@
   }
   .idk-btn:hover:not(:disabled) { border-color: var(--muted); color: var(--ink); }
 
-  /* 结果页 */
   .result-hero {
     text-align: center; padding: 24px 16px;
     border-radius: 18px; background: var(--field); margin-bottom: 22px;
@@ -240,7 +234,10 @@
     background: var(--accent); color: var(--on-accent);
     font-size: 13.5px; font-weight: 700;
   }
-  .fsrs-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+  .fsrs-btn:disabled {
+    background: var(--field); color: var(--muted);
+    border: 1px solid var(--line); cursor: not-allowed;
+  }
   .missed-list { display: grid; gap: 8px; margin-bottom: 24px; }
   .missed-item {
     padding: 12px 16px; border-radius: 12px; background: var(--field);
@@ -249,12 +246,12 @@
   .missed-word { font-size: 17px; font-weight: 700; }
   .missed-kana { font-size: 12.5px; color: var(--muted); margin-left: 6px; font-weight: 400; }
   .missed-meaning { font-size: 14px; color: var(--ink); text-align: right; }
+  .missed-unpub-note { font-size: 12px; color: var(--muted); margin-top: 4px; }
   .missed-tag {
     font-size: 11px; padding: 2px 6px; border-radius: 6px;
     background: var(--err-soft); color: var(--err); margin-left: 8px;
   }
 
-  /* 反馈弹窗 */
   .modal-mask {
     position: fixed; inset: 0; background: rgba(0, 0, 0, 0.55);
     display: none; align-items: center; justify-content: center;
@@ -568,6 +565,7 @@
         display: q.display,
         kana: q.kana,
         meaning: (q.options || [])[q.correct_index] || '',
+        is_published: Boolean(q.is_published),
         reason: isIdk ? '不认识' : '答错'
       });
     }
@@ -647,21 +645,35 @@
     missedEl.innerHTML = '';
 
     const fsrsBtn = document.getElementById('btnAddFsrs');
+    const publishedMissed = state.missedItems.filter(item => item.is_published);
+
     if (state.missedItems.length === 0) {
       fsrsBtn.style.display = 'none';
       missedEl.innerHTML = '<div style="text-align:center; color:var(--muted); padding:16px;">本次测试全部答对！</div>';
     } else {
       fsrsBtn.style.display = 'inline-block';
-      fsrsBtn.disabled = false;
-      fsrsBtn.textContent = '把这些词加入 FSRS 复习';
+      if (publishedMissed.length === 0) {
+        fsrsBtn.disabled = true;
+        fsrsBtn.textContent = '所在词书尚未开放，暂时无法加入复习';
+      } else {
+        fsrsBtn.disabled = false;
+        fsrsBtn.textContent = `把已开放的 ${publishedMissed.length} 个词加入 FSRS 复习`;
+      }
+
       state.missedItems.forEach(item => {
         const row = document.createElement('div');
         row.className = 'missed-item';
+        const unpubHtml = item.is_published
+          ? ''
+          : '<div class="missed-unpub-note">该词所在词书尚未开放，暂时无法加入复习</div>';
         row.innerHTML = `
           <div>
-            <span class="missed-word">${escapeHtml(item.display)}</span>
-            ${item.kana && item.kana !== item.display ? `<span class="missed-kana">${escapeHtml(item.kana)}</span>` : ''}
-            <span class="missed-tag">${item.reason}</span>
+            <div>
+              <span class="missed-word">${escapeHtml(item.display)}</span>
+              ${item.kana && item.kana !== item.display ? `<span class="missed-kana">${escapeHtml(item.kana)}</span>` : ''}
+              <span class="missed-tag">${item.reason}</span>
+            </div>
+            ${unpubHtml}
           </div>
           <div class="missed-meaning">${escapeHtml(item.meaning)}</div>
         `;
@@ -712,37 +724,41 @@
     }
     if (!state || state.missedItems.length === 0) return;
 
+    const publishedItems = state.missedItems.filter(item => item.is_published);
+    if (publishedItems.length === 0) {
+      showToast('该词所在词书尚未开放，暂时无法加入复习');
+      return;
+    }
+
+    if (!window.TangogoFSRS || typeof TangogoFSRS.recordGameMistake !== 'function') {
+      showToast('未找到 TangogoFSRS.recordGameMistake，请确认 fsrs-engine.js 版本');
+      return;
+    }
+
     const btn = document.getElementById('btnAddFsrs');
     btn.disabled = true;
-    btn.textContent = '正在加入 FSRS...';
+    btn.textContent = '正在同步至 card_states...';
 
     try {
-      if (window.TangogoFSRS && typeof TangogoFSRS.addWordsToReview === 'function') {
-        await TangogoFSRS.addWordsToReview(state.missedItems.map(m => m.word_id), currentUser);
-      } else if (window.TangogoFSRS && typeof TangogoFSRS.recordMistake === 'function') {
-        for (const item of state.missedItems) {
-          await TangogoFSRS.recordMistake({
-            id: item.word_id,
-            kanji: item.display,
-            kana: item.kana,
-            meaning: item.meaning
-          }, currentUser);
-        }
-      } else {
-        const rows = state.missedItems.map(item => ({
-          user_id: currentUser.id,
-          word_id: item.word_id,
-          due: new Date().toISOString(),
-          state: 0
-        }));
-        const { error } = await sbClient.from('fsrs_cards').upsert(rows, { onConflict: 'user_id,word_id' });
-        if (error) throw error;
+      // 先拉取云端现有 card_states，避免覆盖已有复习进度
+      if (typeof TangogoFSRS.syncWithCloud === 'function') {
+        await TangogoFSRS.syncWithCloud(currentUser);
       }
-      btn.textContent = `已加入 ${state.missedItems.length} 词至 FSRS 复习 ✓`;
-      showToast(`已成功将 ${state.missedItems.length} 个词加入 FSRS 复习！`);
+
+      for (const item of publishedItems) {
+        await TangogoFSRS.recordGameMistake({
+          id: item.word_id,
+          kanji: item.display !== item.kana ? item.display : '',
+          kana: item.kana || item.display,
+          meaning: item.meaning
+        }, {});
+      }
+
+      btn.textContent = `已加入 ${publishedItems.length} 词至 FSRS 复习 ✓`;
+      showToast(`已将 ${publishedItems.length} 个已开放词书生词写入复习队列！`);
     } catch (e) {
       btn.disabled = false;
-      btn.textContent = '把这些词加入 FSRS 复习';
+      btn.textContent = `把已开放的 ${publishedItems.length} 个词加入 FSRS 复习`;
       showToast('加入失败：' + (e.message || e));
     }
   }
