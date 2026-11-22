@@ -1,0 +1,788 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日语词汇量自适应测试（内测版） · 単語go</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" sizes="512x512" href="../favicon.png?v=3">
+<link rel="apple-touch-icon" href="../favicon.png?v=3">
+<meta name="color-scheme" content="light dark">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../fsrs-engine.js"></script>
+<script>
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('kana-theme'); } catch (e) {}
+    if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+<style>
+  :root {
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    --bg: #F6F7FA;
+    --surface: #FFFFFF;
+    --field: #EFEFF4;
+    --ink: #18181B;
+    --muted: #6E6E77;
+    --line: #E2E2E8;
+    --accent: #5B6BF5;
+    --accent-soft: rgba(91, 107, 245, 0.12);
+    --accent-line: rgba(91, 107, 245, 0.35);
+    --on-accent: #FFFFFF;
+    --ok: #16A34A;
+    --ok-soft: rgba(22, 163, 74, 0.12);
+    --err: #DC2626;
+    --err-soft: rgba(220, 38, 38, 0.12);
+    --glow: rgba(91, 107, 245, 0.08);
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 12px 32px -16px rgba(0, 0, 0, 0.12);
+    --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.06), 0 20px 40px -18px rgba(91, 107, 245, 0.25);
+  }
+  [data-theme="dark"] {
+    --bg: #0E0E11;
+    --surface: #16161B;
+    --field: #1F1F26;
+    --ink: #F2F2F4;
+    --muted: #9B9BA8;
+    --line: #272730;
+    --accent: #8E9AFF;
+    --accent-soft: #1E2140;
+    --accent-line: rgba(142, 154, 255, 0.42);
+    --on-accent: #0E0E11;
+    --ok: #4ADE80;
+    --ok-soft: rgba(74, 222, 128, 0.14);
+    --err: #F87171;
+    --err-soft: rgba(248, 113, 113, 0.14);
+    --glow: rgba(142, 154, 255, 0.12);
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px -16px rgba(0, 0, 0, 0.6);
+    --shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.4), 0 20px 40px -18px rgba(142, 154, 255, 0.3);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    min-height: 100vh;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  body::before {
+    content: ""; position: fixed; inset: 0 0 auto 0; height: 480px; pointer-events: none; z-index: 0;
+    background: radial-gradient(60% 100% at 50% 0%, var(--glow), transparent 70%);
+  }
+  button, select, input, textarea { font: inherit; color: inherit; }
+  button { cursor: pointer; border: none; background: none; }
+
+  .wrap {
+    position: relative; z-index: 1;
+    max-width: 720px; margin: 0 auto; padding: 20px 20px 64px;
+  }
+
+  /* 顶部显眼内测标识条 */
+  .beta-banner {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 9px 16px; margin-bottom: 16px; border-radius: 12px;
+    background: var(--accent-soft); border: 1.5px solid var(--accent-line);
+    color: var(--accent); font-size: 13.5px; font-weight: 800; letter-spacing: 0.02em;
+  }
+  .beta-dot {
+    width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0;
+  }
+
+  /* 顶部栏 */
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 24px; gap: 12px;
+  }
+  .brand-back {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 15px; font-weight: 700; color: var(--ink);
+    padding: 8px 14px; border-radius: 12px;
+    background: var(--surface); border: 1px solid var(--line);
+    text-decoration: none; transition: border-color 0.2s;
+  }
+  .brand-back:hover { border-color: var(--accent); }
+  .beta-badge {
+    font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 999px;
+    background: var(--accent-soft); color: var(--accent);
+  }
+  .topbar-right { display: flex; align-items: center; gap: 10px; }
+  .user-pill {
+    font-size: 13px; color: var(--muted); padding: 6px 12px;
+    border-radius: 999px; background: var(--surface); border: 1px solid var(--line);
+  }
+  .icon-btn {
+    width: 36px; height: 36px; border-radius: 10px;
+    background: var(--surface); border: 1px solid var(--line);
+    display: grid; place-items: center; color: var(--muted);
+  }
+  .icon-btn:hover { color: var(--ink); border-color: var(--accent); }
+
+  /* 卡片通用 */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+  }
+
+  /* 欢迎页 */
+  .intro-title { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+  .intro-sub { font-size: 15px; color: var(--muted); margin-bottom: 22px; }
+  .rule-list {
+    list-style: none; display: grid; gap: 10px;
+    padding: 16px 18px; border-radius: 14px; background: var(--field);
+    font-size: 14px; color: var(--ink); margin-bottom: 24px;
+  }
+  .rule-list li { display: flex; align-items: flex-start; gap: 8px; }
+  .rule-dot { color: var(--accent); font-weight: 800; }
+
+  .primary-btn {
+    width: 100%; height: 48px; border-radius: 14px;
+    background: var(--accent); color: var(--on-accent);
+    font-size: 16px; font-weight: 700;
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    transition: opacity 0.2s, transform 0.15s;
+  }
+  .primary-btn:hover:not(:disabled) { opacity: 0.92; transform: translateY(-1px); }
+  .primary-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+  /* 答题页 */
+  .q-meta-bar {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 14px; font-size: 13px; color: var(--muted);
+  }
+  .progress-track {
+    width: 100%; height: 6px; border-radius: 999px;
+    background: var(--field); overflow: hidden; margin-bottom: 24px;
+  }
+  .progress-fill {
+    height: 100%; background: var(--accent); width: 0%;
+    transition: width 0.25s ease;
+  }
+  .q-header {
+    display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+    margin-bottom: 26px;
+  }
+  .word-box { flex: 1; text-align: center; padding: 12px 0; }
+  .word-kana { font-size: 17px; color: var(--muted); min-height: 26px; margin-bottom: 4px; }
+  .word-display { font-size: 42px; font-weight: 800; letter-spacing: 0.02em; line-height: 1.25; }
+
+  .report-link {
+    font-size: 12.5px; color: var(--muted); padding: 6px 10px;
+    border-radius: 8px; border: 1px solid var(--line); background: var(--field);
+    white-space: nowrap;
+  }
+  .report-link:hover { color: var(--ink); border-color: var(--accent-line); }
+
+  .options-grid { display: grid; gap: 12px; margin-bottom: 16px; }
+  .opt-btn {
+    width: 100%; text-align: left; padding: 16px 18px;
+    border-radius: 14px; background: var(--field);
+    border: 1.5px solid transparent;
+    font-size: 16px; font-weight: 500;
+    display: flex; align-items: center; gap: 12px;
+    transition: border-color 0.15s, background 0.15s, transform 0.1s;
+  }
+  .opt-btn:hover:not(:disabled) { border-color: var(--accent-line); transform: translateY(-1px); }
+  .opt-key {
+    width: 26px; height: 26px; border-radius: 8px;
+    background: var(--surface); border: 1px solid var(--line);
+    font-size: 12.5px; font-weight: 700; color: var(--muted);
+    display: grid; place-items: center; flex-shrink: 0;
+  }
+  .opt-btn.is-correct {
+    background: var(--ok-soft); border-color: var(--ok); color: var(--ok);
+  }
+  .opt-btn.is-wrong {
+    background: var(--err-soft); border-color: var(--err); color: var(--err);
+  }
+
+  .idk-btn {
+    width: 100%; padding: 13px; border-radius: 12px;
+    border: 1px dashed var(--line); color: var(--muted);
+    font-size: 14.5px; font-weight: 600;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .idk-btn:hover:not(:disabled) { border-color: var(--muted); color: var(--ink); }
+
+  /* 结果页 */
+  .result-hero {
+    text-align: center; padding: 24px 16px;
+    border-radius: 18px; background: var(--field); margin-bottom: 22px;
+  }
+  .result-label { font-size: 13.5px; font-weight: 700; color: var(--accent); margin-bottom: 6px; }
+  .result-range { font-size: 36px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 10px; }
+  .result-disclaimer {
+    font-size: 13px; color: var(--muted); max-width: 480px; margin: 0 auto; line-height: 1.6;
+  }
+  .stats-row {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+    margin-bottom: 24px;
+  }
+  .stat-box {
+    padding: 14px; border-radius: 14px; background: var(--field); text-align: center;
+  }
+  .stat-val { font-size: 20px; font-weight: 800; }
+  .stat-lbl { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  .missed-head {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px; margin-bottom: 12px; flex-wrap: wrap;
+  }
+  .missed-title { font-size: 16px; font-weight: 700; }
+  .fsrs-btn {
+    padding: 8px 16px; border-radius: 999px;
+    background: var(--accent); color: var(--on-accent);
+    font-size: 13.5px; font-weight: 700;
+  }
+  .fsrs-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+  .missed-list { display: grid; gap: 8px; margin-bottom: 24px; }
+  .missed-item {
+    padding: 12px 16px; border-radius: 12px; background: var(--field);
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .missed-word { font-size: 17px; font-weight: 700; }
+  .missed-kana { font-size: 12.5px; color: var(--muted); margin-left: 6px; font-weight: 400; }
+  .missed-meaning { font-size: 14px; color: var(--ink); text-align: right; }
+  .missed-tag {
+    font-size: 11px; padding: 2px 6px; border-radius: 6px;
+    background: var(--err-soft); color: var(--err); margin-left: 8px;
+  }
+
+  /* 反馈弹窗 */
+  .modal-mask {
+    position: fixed; inset: 0; background: rgba(0, 0, 0, 0.55);
+    display: none; align-items: center; justify-content: center;
+    padding: 20px; z-index: 50;
+  }
+  .modal-mask.show { display: flex; }
+  .modal-box {
+    width: 100%; max-width: 420px; background: var(--surface);
+    border: 1px solid var(--line); border-radius: 20px; padding: 24px;
+    box-shadow: var(--shadow);
+  }
+  .modal-title { font-size: 17px; font-weight: 800; margin-bottom: 14px; }
+  .fb-reasons { display: grid; gap: 8px; margin-bottom: 14px; }
+  .fb-reason-opt {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 14px; border-radius: 10px; background: var(--field);
+    font-size: 14px; cursor: pointer;
+  }
+  .fb-textarea {
+    width: 100%; min-height: 76px; padding: 10px 12px;
+    border-radius: 10px; background: var(--field); border: 1px solid var(--line);
+    font-size: 13.5px; resize: vertical; margin-bottom: 16px;
+  }
+  .modal-actions { display: flex; justify-content: flex-end; gap: 10px; }
+  .btn-ghost {
+    padding: 8px 16px; border-radius: 10px; background: var(--field);
+    font-size: 14px; font-weight: 600;
+  }
+
+  .toast {
+    position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+    background: var(--ink); color: var(--bg);
+    padding: 10px 18px; border-radius: 999px; font-size: 13.5px; font-weight: 600;
+    opacity: 0; pointer-events: none; transition: opacity 0.2s; z-index: 99;
+  }
+  .toast.show { opacity: 1; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="beta-banner" role="note">
+    <span class="beta-dot"></span>
+    <span>内测版 · 词汇量自适应测试（内部体验中）</span>
+  </div>
+
+  <header class="topbar">
+    <a href="../index.html" class="brand-back">
+      <span>← 返回単語go</span>
+      <span class="beta-badge">内测版</span>
+    </a>
+    <div class="topbar-right">
+      <span class="user-pill" id="authStatusPill">检测登录态...</span>
+      <button class="icon-btn" onclick="toggleTheme()" title="切换浅色/深色主题" aria-label="切换主题">🌓</button>
+    </div>
+  </header>
+
+  <!-- 1. 开始视图 -->
+  <section class="card" id="viewIntro">
+    <h1 class="intro-title">日语词汇量自适应测试</h1>
+    <p class="intro-sub">根据你的作答表现动态调整词频难度，约 2–3 分钟估算当前日语词汇量区间。</p>
+    <ul class="rule-list">
+      <li><span class="rule-dot">•</span><span>每题展示 1 个日语词汇与 4 个中文释义选项，若不确定请直接点击「不认识」，避免猜测干扰估算精度。</span></li>
+      <li><span class="rule-dot">•</span><span>系统依据自适应阶梯规则动态升降难度，最多 40 题或达到 8 次难度反转后自动结束。</span></li>
+      <li><span class="rule-dot">•</span><span>内测期间，登录后的测试结果和每题作答会保存在你的账号下，用于改进题库；你可以随时联系 [我的联系方式] 要求删除。</span></li>
+    </ul>
+    <button class="primary-btn" id="btnStartTest" onclick="startTest()">开始词汇量测试</button>
+  </section>
+
+  <!-- 2. 答题视图 -->
+  <section class="card" id="viewQuiz" style="display:none;">
+    <div class="q-meta-bar">
+      <span id="qCounterText">第 1 题（最多 40 题）</span>
+      <span id="qBandHint">当前难度档位：Band 3</span>
+    </div>
+    <div class="progress-track"><div class="progress-fill" id="qProgressFill"></div></div>
+
+    <div class="q-header">
+      <div class="word-box">
+        <div class="word-kana" id="qKana"></div>
+        <div class="word-display" id="qDisplay">加载中...</div>
+      </div>
+      <button class="report-link" onclick="openFeedbackModal()">这道题有问题</button>
+    </div>
+
+    <div class="options-grid" id="optionsGrid"></div>
+    <button class="idk-btn" id="btnIdk" onclick="submitAnswer(-1)">不认识 / 跳过（按答错处理）</button>
+  </section>
+
+  <!-- 3. 结果视图 -->
+  <section class="card" id="viewResult" style="display:none;">
+    <div class="result-hero">
+      <div class="result-label">估计词汇量区间（估计值）</div>
+      <div class="result-range" id="resRangeText">--</div>
+      <p class="result-disclaimer">
+        注：本结果为基于自适应抽样的简易词汇量估计值，仅供参考，不代表官方 JLPT 考试成绩或通过等级。
+      </p>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="stat-val" id="resTotalQ">0</div>
+        <div class="stat-lbl">作答总题数</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-val" id="resAccuracy">0%</div>
+        <div class="stat-lbl">答对率</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-val" id="resFinalBand">Band 3</div>
+        <div class="stat-lbl">稳定难度档位</div>
+      </div>
+    </div>
+
+    <div id="saveNoticeBox" style="font-size:13px; color:var(--muted); margin-bottom:20px; text-align:center;"></div>
+
+    <div class="missed-head">
+      <div class="missed-title">待掌握词汇（<span id="missedCount">0</span> 词）</div>
+      <button class="fsrs-btn" id="btnAddFsrs" onclick="addMissedToFSRS()">把这些词加入 FSRS 复习</button>
+    </div>
+    <div class="missed-list" id="missedList"></div>
+
+    <button class="primary-btn" onclick="startTest()">再测一次</button>
+  </section>
+</div>
+
+<!-- 题目问题反馈弹窗 -->
+<div class="modal-mask" id="fbModal">
+  <div class="modal-box">
+    <div class="modal-title">反馈题目问题：<span id="fbWordLabel"></span></div>
+    <div class="fb-reasons">
+      <label class="fb-reason-opt"><input type="radio" name="fbReason" value="meaning_inaccurate" checked> 中文释义不准确或不完整</label>
+      <label class="fb-reason-opt"><input type="radio" name="fbReason" value="distractor_ambiguous"> 干扰项与正确释义含义太接近</label>
+      <label class="fb-reason-opt"><input type="radio" name="fbReason" value="form_or_reading_error"> 汉字词形或假名读音有误</label>
+      <label class="fb-reason-opt"><input type="radio" name="fbReason" value="other"> 其他问题</label>
+    </div>
+    <textarea class="fb-textarea" id="fbDetail" maxlength="500" placeholder="补充说明（选填，最多 500 字）"></textarea>
+    <div class="modal-actions">
+      <button class="btn-ghost" onclick="closeFeedbackModal()">取消</button>
+      <button class="primary-btn" style="width:auto; height:38px; padding:0 18px; font-size:14px;" onclick="submitFeedback()">提交反馈</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  const TEST_CONFIG = {
+    REQUIRE_APPROVED: false,
+    START_BAND: 3,
+    MIN_BAND: 1,
+    MAX_BAND: 10,
+    UP_STREAK: 2,
+    DOWN_STREAK: 1,
+    MAX_QUESTIONS: 40,
+    MAX_REVERSALS: 8,
+    RANGE_MARGIN: 0.15,
+    BAND_VOCAB: {
+      1: 400,
+      2: 800,
+      3: 1300,
+      4: 1900,
+      5: 2600,
+      6: 3500,
+      7: 4600,
+      8: 5900,
+      9: 7500,
+      10: 9500
+    }
+  };
+
+  const sbClient = (window.TangogoFSRS && typeof TangogoFSRS.getSbClient === 'function')
+    ? TangogoFSRS.getSbClient()
+    : null;
+
+  let currentUser = null;
+  let state = null;
+  let isTransitioning = false;
+
+  function showToast(msg) {
+    const el = document.getElementById('toast');
+    el.textContent = msg;
+    el.classList.add('show');
+    clearTimeout(el._t);
+    el._t = setTimeout(() => el.classList.remove('show'), 2600);
+  }
+
+  function toggleTheme() {
+    const cur = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', cur);
+    try { localStorage.setItem('kana-theme', cur); } catch (e) {}
+  }
+
+  async function initAuth() {
+    const pill = document.getElementById('authStatusPill');
+    if (!sbClient) {
+      pill.textContent = '本地离线预览模式';
+      return;
+    }
+    try {
+      const { data: { session } } = await sbClient.auth.getSession();
+      currentUser = session ? session.user : null;
+      pill.textContent = currentUser
+        ? `已登录：${currentUser.email.split('@')[0]}`
+        : '游客模式（结果仅存本地）';
+    } catch (e) {
+      pill.textContent = '游客模式';
+    }
+  }
+
+  function switchView(viewId) {
+    ['viewIntro', 'viewQuiz', 'viewResult'].forEach(id => {
+      document.getElementById(id).style.display = (id === viewId) ? 'block' : 'none';
+    });
+  }
+
+  async function startTest() {
+    if (!sbClient) {
+      showToast('未检测到 fsrs-engine.js 中的 Supabase 客户端，请确认同目录资源完整');
+      return;
+    }
+    state = {
+      curBand: TEST_CONFIG.START_BAND,
+      streakCorrect: 0,
+      reversals: 0,
+      lastDir: null,
+      reversalBands: [],
+      seenIds: [],
+      answers: [],
+      missedItems: [],
+      currentQuestion: null
+    };
+    isTransitioning = false;
+    switchView('viewQuiz');
+    await loadNextQuestion();
+  }
+
+  async function loadNextQuestion() {
+    const qNum = state.answers.length + 1;
+    document.getElementById('qCounterText').textContent = `第 ${qNum} 题（最多 ${TEST_CONFIG.MAX_QUESTIONS} 题）`;
+    document.getElementById('qBandHint').textContent = `当前难度档位：Band ${state.curBand}`;
+    document.getElementById('qProgressFill').style.width = `${Math.min(100, ((qNum - 1) / TEST_CONFIG.MAX_QUESTIONS) * 100)}%`;
+
+    document.getElementById('qKana').textContent = '';
+    document.getElementById('qDisplay').textContent = '抽题中...';
+    document.getElementById('optionsGrid').innerHTML = '';
+    document.getElementById('btnIdk').disabled = true;
+
+    const { data, error } = await sbClient.rpc('get_vocab_test_question', {
+      p_band: state.curBand,
+      p_exclude_ids: state.seenIds,
+      p_require_approved: TEST_CONFIG.REQUIRE_APPROVED
+    });
+
+    if (error) {
+      showToast('抽题失败：' + error.message);
+      return;
+    }
+
+    const q = Array.isArray(data) ? data[0] : data;
+    if (!q || !q.word_id) {
+      await finishTest('exhausted_pool');
+      return;
+    }
+
+    state.currentQuestion = q;
+    state.seenIds.push(q.word_id);
+
+    document.getElementById('qKana').textContent = (q.kana && q.kana !== q.display) ? q.kana : '';
+    document.getElementById('qDisplay').textContent = q.display;
+
+    const grid = document.getElementById('optionsGrid');
+    const keys = ['A', 'B', 'C', 'D'];
+    (q.options || []).forEach((optText, idx) => {
+      const btn = document.createElement('button');
+      btn.className = 'opt-btn';
+      btn.innerHTML = `<span class="opt-key">${keys[idx] || idx + 1}</span><span>${escapeHtml(optText)}</span>`;
+      btn.onclick = () => submitAnswer(idx);
+      grid.appendChild(btn);
+    });
+    document.getElementById('btnIdk').disabled = false;
+    isTransitioning = false;
+  }
+
+  async function submitAnswer(chosenIndex) {
+    if (isTransitioning || !state.currentQuestion) return;
+    isTransitioning = true;
+
+    const q = state.currentQuestion;
+    const isCorrect = (chosenIndex === q.correct_index);
+    const isIdk = (chosenIndex === -1);
+
+    const btns = document.querySelectorAll('#optionsGrid .opt-btn');
+    btns.forEach((b, idx) => {
+      b.disabled = true;
+      if (idx === q.correct_index) b.classList.add('is-correct');
+      else if (idx === chosenIndex) b.classList.add('is-wrong');
+    });
+    document.getElementById('btnIdk').disabled = true;
+
+    state.answers.push({
+      word_id: q.word_id,
+      band: q.band,
+      chosen_index: chosenIndex,
+      correct_index: q.correct_index,
+      is_correct: isCorrect
+    });
+
+    if (!isCorrect) {
+      state.missedItems.push({
+        word_id: q.word_id,
+        display: q.display,
+        kana: q.kana,
+        meaning: (q.options || [])[q.correct_index] || '',
+        reason: isIdk ? '不认识' : '答错'
+      });
+    }
+
+    if (isCorrect) {
+      state.streakCorrect += 1;
+      if (state.streakCorrect >= TEST_CONFIG.UP_STREAK) {
+        state.streakCorrect = 0;
+        if (state.lastDir === 'down') {
+          state.reversals += 1;
+          state.reversalBands.push(state.curBand);
+        }
+        state.lastDir = 'up';
+        state.curBand = Math.min(TEST_CONFIG.MAX_BAND, state.curBand + 1);
+      }
+    } else {
+      state.streakCorrect = 0;
+      if (state.lastDir === 'up') {
+        state.reversals += 1;
+        state.reversalBands.push(state.curBand);
+      }
+      state.lastDir = 'down';
+      state.curBand = Math.max(TEST_CONFIG.MIN_BAND, state.curBand - 1);
+    }
+
+    await new Promise(r => setTimeout(r, 420));
+
+    if (state.answers.length >= TEST_CONFIG.MAX_QUESTIONS) {
+      await finishTest('max_questions');
+    } else if (state.reversals >= TEST_CONFIG.MAX_REVERSALS) {
+      await finishTest('max_reversals');
+    } else {
+      await loadNextQuestion();
+    }
+  }
+
+  function computeEstimate() {
+    const finalBand = state.curBand;
+    let thetaOffset = 0;
+    if (state.reversalBands.length > 0) {
+      const recent = state.reversalBands.slice(-4);
+      const revMean = recent.reduce((a, b) => a + b, 0) / recent.length;
+      thetaOffset = Math.max(-0.5, Math.min(0.5, Number((revMean - finalBand).toFixed(2))));
+    }
+
+    const baseV = TEST_CONFIG.BAND_VOCAB[finalBand] || 1300;
+    let estVocab = baseV;
+    if (thetaOffset >= 0 && finalBand < TEST_CONFIG.MAX_BAND) {
+      estVocab = baseV + thetaOffset * (TEST_CONFIG.BAND_VOCAB[finalBand + 1] - baseV);
+    } else if (thetaOffset < 0 && finalBand > TEST_CONFIG.MIN_BAND) {
+      estVocab = baseV + thetaOffset * (baseV - TEST_CONFIG.BAND_VOCAB[finalBand - 1]);
+    }
+    estVocab = Math.round(estVocab);
+
+    const rawLow = estVocab * (1 - TEST_CONFIG.RANGE_MARGIN);
+    const rawHigh = estVocab * (1 + TEST_CONFIG.RANGE_MARGIN);
+    const low = Math.max(100, Math.round(rawLow / 100) * 100);
+    const high = Math.max(low + 100, Math.round(rawHigh / 100) * 100);
+
+    return { finalBand, thetaOffset, estVocab, low, high };
+  }
+
+  async function finishTest(stopReason) {
+    const est = computeEstimate();
+    const totalQ = state.answers.length;
+    const correctCnt = state.answers.filter(a => a.is_correct).length;
+    const acc = totalQ ? Math.round((correctCnt / totalQ) * 100) : 0;
+
+    switchView('viewResult');
+    document.getElementById('resRangeText').textContent = `${est.low.toLocaleString()} – ${est.high.toLocaleString()} 词`;
+    document.getElementById('resTotalQ').textContent = `${totalQ} 题`;
+    document.getElementById('resAccuracy').textContent = `${acc}%`;
+    document.getElementById('resFinalBand').textContent = `Band ${est.finalBand}`;
+
+    const missedEl = document.getElementById('missedList');
+    document.getElementById('missedCount').textContent = state.missedItems.length;
+    missedEl.innerHTML = '';
+
+    const fsrsBtn = document.getElementById('btnAddFsrs');
+    if (state.missedItems.length === 0) {
+      fsrsBtn.style.display = 'none';
+      missedEl.innerHTML = '<div style="text-align:center; color:var(--muted); padding:16px;">本次测试全部答对！</div>';
+    } else {
+      fsrsBtn.style.display = 'inline-block';
+      fsrsBtn.disabled = false;
+      fsrsBtn.textContent = '把这些词加入 FSRS 复习';
+      state.missedItems.forEach(item => {
+        const row = document.createElement('div');
+        row.className = 'missed-item';
+        row.innerHTML = `
+          <div>
+            <span class="missed-word">${escapeHtml(item.display)}</span>
+            ${item.kana && item.kana !== item.display ? `<span class="missed-kana">${escapeHtml(item.kana)}</span>` : ''}
+            <span class="missed-tag">${item.reason}</span>
+          </div>
+          <div class="missed-meaning">${escapeHtml(item.meaning)}</div>
+        `;
+        missedEl.appendChild(row);
+      });
+    }
+
+    const saveNotice = document.getElementById('saveNoticeBox');
+    const localSnapshot = {
+      created_at: new Date().toISOString(),
+      range: [est.low, est.high],
+      final_band: est.finalBand,
+      total_questions: totalQ,
+      correct_count: correctCnt,
+      missed_word_ids: state.missedItems.map(m => m.word_id)
+    };
+    try {
+      const history = JSON.parse(localStorage.getItem('tangogo_vocab_test_local') || '[]');
+      history.unshift(localSnapshot);
+      localStorage.setItem('tangogo_vocab_test_local', JSON.stringify(history.slice(0, 20)));
+    } catch (e) {}
+
+    if (currentUser && sbClient) {
+      const { error } = await sbClient.rpc('record_vocab_test', {
+        p_final_band: est.finalBand,
+        p_theta_offset: est.thetaOffset,
+        p_estimated_vocab: est.estVocab,
+        p_total_questions: totalQ,
+        p_correct_count: correctCnt,
+        p_reversals: state.reversals,
+        p_stop_reason: stopReason,
+        p_missed_word_ids: state.missedItems.map(m => m.word_id),
+        p_answers: state.answers,
+        p_config_snapshot: TEST_CONFIG
+      });
+      saveNotice.textContent = error
+        ? `云端保存失败（已保存在本地）：${error.message}`
+        : '本次测评记录已同步保存至你的账号。';
+    } else {
+      saveNotice.textContent = '当前为未登录状态，测试结果仅保存在本地浏览器，不会上传。';
+    }
+  }
+
+  async function addMissedToFSRS() {
+    if (!currentUser) {
+      showToast('请先在首页登录后，再将生词加入 FSRS 复习队列');
+      return;
+    }
+    if (!state || state.missedItems.length === 0) return;
+
+    const btn = document.getElementById('btnAddFsrs');
+    btn.disabled = true;
+    btn.textContent = '正在加入 FSRS...';
+
+    try {
+      if (window.TangogoFSRS && typeof TangogoFSRS.addWordsToReview === 'function') {
+        await TangogoFSRS.addWordsToReview(state.missedItems.map(m => m.word_id), currentUser);
+      } else if (window.TangogoFSRS && typeof TangogoFSRS.recordMistake === 'function') {
+        for (const item of state.missedItems) {
+          await TangogoFSRS.recordMistake({
+            id: item.word_id,
+            kanji: item.display,
+            kana: item.kana,
+            meaning: item.meaning
+          }, currentUser);
+        }
+      } else {
+        const rows = state.missedItems.map(item => ({
+          user_id: currentUser.id,
+          word_id: item.word_id,
+          due: new Date().toISOString(),
+          state: 0
+        }));
+        const { error } = await sbClient.from('fsrs_cards').upsert(rows, { onConflict: 'user_id,word_id' });
+        if (error) throw error;
+      }
+      btn.textContent = `已加入 ${state.missedItems.length} 词至 FSRS 复习 ✓`;
+      showToast(`已成功将 ${state.missedItems.length} 个词加入 FSRS 复习！`);
+    } catch (e) {
+      btn.disabled = false;
+      btn.textContent = '把这些词加入 FSRS 复习';
+      showToast('加入失败：' + (e.message || e));
+    }
+  }
+
+  function openFeedbackModal() {
+    if (!state || !state.currentQuestion) return;
+    document.getElementById('fbWordLabel').textContent = state.currentQuestion.display;
+    document.getElementById('fbDetail').value = '';
+    document.getElementById('fbModal').classList.add('show');
+  }
+  function closeFeedbackModal() {
+    document.getElementById('fbModal').classList.remove('show');
+  }
+  async function submitFeedback() {
+    if (!sbClient || !state || !state.currentQuestion) return;
+    const reasonEl = document.querySelector('input[name="fbReason"]:checked');
+    const reason = reasonEl ? reasonEl.value : 'other';
+    const detail = document.getElementById('fbDetail').value.trim();
+
+    const { error } = await sbClient.rpc('submit_vocab_test_feedback', {
+      p_item_word_id: state.currentQuestion.word_id,
+      p_reason: reason,
+      p_detail: detail || null
+    });
+
+    if (error) {
+      showToast('反馈提交失败：' + error.message);
+    } else {
+      closeFeedbackModal();
+      showToast('感谢反馈，我们已记录该题问题！');
+    }
+  }
+
+  function escapeHtml(str) {
+    return String(str || '').replace(/[&<>"']/g, s => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[s]));
+  }
+
+  document.addEventListener('DOMContentLoaded', initAuth);
+</script>
+</body>
+</html>
