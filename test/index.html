@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
@@ -8,8 +8,18 @@
 <link rel="icon" type="image/png" sizes="512x512" href="../favicon.png?v=3">
 <link rel="apple-touch-icon" href="../favicon.png?v=3">
 <meta name="color-scheme" content="light dark">
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="../fsrs-engine.js"></script>
+<script>
+  window.__tangogoScriptDiag = {
+    supabaseSdk: { url: 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2', status: 'loading', httpStatus: null, blocked: false },
+    fsrsEngine: { url: new URL('../fsrs-engine.js', window.location.href).href, status: 'loading', httpStatus: null, blocked: false }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+        onload="window.__tangogoScriptDiag.supabaseSdk.status='loaded';"
+        onerror="window.__tangogoScriptDiag.supabaseSdk.status='error';"></script>
+<script src="../fsrs-engine.js"
+        onload="window.__tangogoScriptDiag.fsrsEngine.status='loaded';"
+        onerror="window.__tangogoScriptDiag.fsrsEngine.status='error';"></script>
 <script>
   (function () {
     var t = null;
@@ -35,6 +45,9 @@
     --ok-soft: rgba(22, 163, 74, 0.12);
     --err: #DC2626;
     --err-soft: rgba(220, 38, 38, 0.12);
+    --warn-bg: rgba(245, 158, 11, 0.12);
+    --warn-line: rgba(245, 158, 11, 0.42);
+    --warn-ink: #B45309;
     --glow: rgba(91, 107, 245, 0.08);
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 12px 32px -16px rgba(0, 0, 0, 0.12);
     --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.06), 0 20px 40px -18px rgba(91, 107, 245, 0.25);
@@ -54,6 +67,9 @@
     --ok-soft: rgba(74, 222, 128, 0.14);
     --err: #F87171;
     --err-soft: rgba(248, 113, 113, 0.14);
+    --warn-bg: rgba(251, 191, 36, 0.14);
+    --warn-line: rgba(251, 191, 36, 0.38);
+    --warn-ink: #FCD34D;
     --glow: rgba(142, 154, 255, 0.12);
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px -16px rgba(0, 0, 0, 0.6);
     --shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.4), 0 20px 40px -18px rgba(142, 154, 255, 0.3);
@@ -132,10 +148,55 @@
   .rule-list {
     list-style: none; display: grid; gap: 10px;
     padding: 16px 18px; border-radius: 14px; background: var(--field);
-    font-size: 14px; color: var(--ink); margin-bottom: 24px;
+    font-size: 14px; color: var(--ink); margin-bottom: 20px;
   }
   .rule-list li { display: flex; align-items: flex-start; gap: 8px; }
   .rule-dot { color: var(--accent); font-weight: 800; }
+
+  .guest-notice {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 12px 16px;
+    margin-bottom: 18px;
+    border-radius: 13px;
+    background: var(--warn-bg);
+    border: 1.5px solid var(--warn-line);
+    color: var(--warn-ink);
+    font-size: 13.5px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .guest-notice.show { display: flex; }
+  .guest-login-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--on-accent);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .guest-login-link:hover { opacity: 0.92; }
+
+  .load-error-box {
+    display: none;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    border-radius: 13px;
+    background: var(--err-soft);
+    border: 1.5px solid var(--err);
+    color: var(--err);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+  .load-error-box.show { display: block; }
 
   .primary-btn {
     width: 100%; height: 48px; border-radius: 14px;
@@ -311,12 +372,20 @@
   <!-- 1. 开始视图 -->
   <section class="card" id="viewIntro">
     <h1 class="intro-title">日语词汇量自适应测试</h1>
-    <p class="intro-sub">根据你的作答表现动态调整词频难度，约 2–3 分钟估算当前日语词汇量区间。</p>
+    <p class="intro-sub">根据你的作答表现动态调整词汇难度，约 3–5 分钟估算当前日语词汇量区间。</p>
     <ul class="rule-list">
       <li><span class="rule-dot">•</span><span>每题展示 1 个日语词汇与 4 个中文释义选项，若不确定请直接点击「不认识」，避免猜测干扰估算精度。</span></li>
-      <li><span class="rule-dot">•</span><span>系统依据自适应阶梯规则动态升降难度，最多 40 题或达到 8 次难度反转后自动结束。</span></li>
-      <li><span class="rule-dot">•</span><span>内测期间，登录后的测试结果和每题作答会保存在你的账号下，用于改进题库；你可以随时联系 [我的联系方式] 要求删除。</span></li>
+      <li><span class="rule-dot">•</span><span>系统依据自适应阶梯规则动态升降词汇难度，最多 40 题或达到 8 次难度反转后自动结束。</span></li>
+      <li><span class="rule-dot">•</span><span>内测期间，登录后的测试结果和每题作答会保存在你的账号下，用于改进题库；你可以随时联系【请填写你的联系方式】要求删除。</span></li>
     </ul>
+
+    <div class="guest-notice" id="introGuestNotice" role="alert">
+      <span>你当前未登录，测试结果和作答不会被保存。登录后再测试，数据才会记录。</span>
+      <a href="https://tangogo.online/" class="guest-login-link">去首页登录</a>
+    </div>
+
+    <div class="load-error-box" id="introLoadError" role="alert"></div>
+
     <button class="primary-btn" id="btnStartTest" onclick="startTest()">开始词汇量测试</button>
   </section>
 
@@ -363,6 +432,11 @@
         <div class="stat-val" id="resFinalBand">Band 3</div>
         <div class="stat-lbl">稳定难度档位</div>
       </div>
+    </div>
+
+    <div class="guest-notice" id="resultGuestNotice" role="alert">
+      <span>你当前未登录，测试结果和作答不会被保存。登录后再测试，数据才会记录。</span>
+      <a href="https://tangogo.online/" class="guest-login-link">去首页登录</a>
     </div>
 
     <div id="saveNoticeBox" style="font-size:13px; color:var(--muted); margin-bottom:20px; text-align:center;"></div>
@@ -422,6 +496,9 @@
     }
   };
 
+  const LOAD_ERROR_MSG = '页面资源加载失败，请刷新重试；如仍无法使用，请换一个浏览器，或联系【请填写你的联系方式】。';
+  const isFileProtocol = window.location.protocol === 'file:';
+
   const sbClient = (window.TangogoFSRS && typeof TangogoFSRS.getSbClient === 'function')
     ? TangogoFSRS.getSbClient()
     : null;
@@ -444,20 +521,89 @@
     try { localStorage.setItem('kana-theme', cur); } catch (e) {}
   }
 
+  async function reportScriptLoadDiagnostics() {
+    const diag = window.__tangogoScriptDiag || {};
+    const targets = [
+      { key: 'supabaseSdk', label: 'Supabase JS SDK', loadedGlobal: Boolean(window.supabase) },
+      { key: 'fsrsEngine', label: 'TangogoFSRS', loadedGlobal: Boolean(window.TangogoFSRS) }
+    ];
+
+    for (const item of targets) {
+      const info = diag[item.key] || {};
+      let httpStatus = '未知';
+      let blocked = info.status === 'error' || !item.loadedGlobal;
+      let detailReason = '';
+
+      if (isFileProtocol && item.key === 'fsrsEngine' && blocked) {
+        httpStatus = 'N/A (file:// 协议)';
+        detailReason = '浏览器本地 file:// 协议安全策略或相对路径限制';
+      } else if (info.url) {
+        try {
+          const res = await fetch(info.url, { method: 'GET', cache: 'no-store' });
+          httpStatus = `${res.status} ${res.statusText || ''}`.trim();
+          if (!res.ok) {
+            blocked = true;
+            detailReason = `HTTP 请求返回异常状态码 (${httpStatus})`;
+          } else if (blocked) {
+            detailReason = '脚本响应状态正常但未成功执行或全局对象被拦截/篡改';
+          }
+        } catch (fetchErr) {
+          httpStatus = '请求失败 / 无响应 (0)';
+          blocked = true;
+          detailReason = `可能被浏览器扩展（如广告拦截器）、网络防火墙或 CORS 策略拦截 (${fetchErr.message || fetchErr})`;
+        }
+      }
+
+      console.error(`[単語go 资源加载诊断] ${item.label} 加载失败:`, {
+        脚本地址: info.url || '(未知)',
+        HTTP状态码: httpStatus,
+        是否被拦截或加载失败: blocked,
+        全局对象是否存在: item.loadedGlobal,
+        详细原因: detailReason || '脚本加载或初始化异常'
+      });
+    }
+  }
+
+  function updateGuestNotices(isLoggedIn) {
+    const introNotice = document.getElementById('introGuestNotice');
+    const resultNotice = document.getElementById('resultGuestNotice');
+    if (introNotice) introNotice.classList.toggle('show', !isLoggedIn);
+    if (resultNotice) resultNotice.classList.toggle('show', !isLoggedIn);
+  }
+
   async function initAuth() {
     const pill = document.getElementById('authStatusPill');
+    const errBox = document.getElementById('introLoadError');
+
     if (!sbClient) {
-      pill.textContent = '本地离线预览模式';
+      if (isFileProtocol) {
+        pill.textContent = '本地离线预览模式';
+      } else {
+        pill.textContent = '资源加载失败';
+      }
+      if (errBox) {
+        errBox.textContent = LOAD_ERROR_MSG;
+        errBox.classList.add('show');
+      }
+      updateGuestNotices(false);
+      await reportScriptLoadDiagnostics();
       return;
     }
+
     try {
       const { data: { session } } = await sbClient.auth.getSession();
       currentUser = session ? session.user : null;
-      pill.textContent = currentUser
-        ? `已登录：${currentUser.email.split('@')[0]}`
-        : '游客模式（结果仅存本地）';
+      if (currentUser && currentUser.email) {
+        pill.textContent = `已登录：${currentUser.email}`;
+        updateGuestNotices(true);
+      } else {
+        pill.textContent = '未登录';
+        updateGuestNotices(false);
+      }
     } catch (e) {
-      pill.textContent = '游客模式';
+      currentUser = null;
+      pill.textContent = '未登录';
+      updateGuestNotices(false);
     }
   }
 
@@ -469,7 +615,13 @@
 
   async function startTest() {
     if (!sbClient) {
-      showToast('未检测到 fsrs-engine.js 中的 Supabase 客户端，请确认同目录资源完整');
+      const errBox = document.getElementById('introLoadError');
+      if (errBox) {
+        errBox.textContent = LOAD_ERROR_MSG;
+        errBox.classList.add('show');
+      }
+      showToast(LOAD_ERROR_MSG);
+      await reportScriptLoadDiagnostics();
       return;
     }
     state = {
@@ -682,6 +834,7 @@
     }
 
     const saveNotice = document.getElementById('saveNoticeBox');
+    updateGuestNotices(Boolean(currentUser));
     const localSnapshot = {
       created_at: new Date().toISOString(),
       range: [est.low, est.high],
@@ -713,13 +866,13 @@
         ? `云端保存失败（已保存在本地）：${error.message}`
         : '本次测评记录已同步保存至你的账号。';
     } else {
-      saveNotice.textContent = '当前为未登录状态，测试结果仅保存在本地浏览器，不会上传。';
+      saveNotice.textContent = '';
     }
   }
 
   async function addMissedToFSRS() {
     if (!currentUser) {
-      showToast('请先在首页登录后，再将生词加入 FSRS 复习队列');
+      showToast('请先去首页登录后，再将生词加入 FSRS 复习队列');
       return;
     }
     if (!state || state.missedItems.length === 0) return;
@@ -731,7 +884,7 @@
     }
 
     if (!window.TangogoFSRS || typeof TangogoFSRS.recordGameMistake !== 'function') {
-      showToast('未找到 TangogoFSRS.recordGameMistake，请确认 fsrs-engine.js 版本');
+      showToast(LOAD_ERROR_MSG);
       return;
     }
 
@@ -740,7 +893,6 @@
     btn.textContent = '正在同步至 card_states...';
 
     try {
-      // 先拉取云端现有 card_states，避免覆盖已有复习进度
       if (typeof TangogoFSRS.syncWithCloud === 'function') {
         await TangogoFSRS.syncWithCloud(currentUser);
       }
