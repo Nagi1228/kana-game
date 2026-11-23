@@ -115,11 +115,6 @@
     font-size: 12px;
     font-weight: 700;
   }
-  .mode-badge.is-kana {
-    background: var(--warn-bg);
-    border-color: var(--warn-line);
-    color: var(--warn-ink);
-  }
 
   .topbar {
     display: flex; align-items: center; justify-content: space-between;
@@ -158,7 +153,31 @@
   }
 
   .intro-title { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
-  .intro-sub { font-size: 15px; color: var(--muted); margin-bottom: 22px; }
+  .intro-sub { font-size: 15px; color: var(--muted); margin-bottom: 14px; }
+  .kana-prereq-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 11px 15px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-line);
+    font-size: 13.5px;
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .kana-practice-link {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    white-space: nowrap;
+  }
+  .kana-practice-link:hover { opacity: 0.85; }
   .rule-list {
     list-style: none; display: grid; gap: 10px;
     padding: 16px 18px; border-radius: 14px; background: var(--field);
@@ -367,6 +386,29 @@
     font-size: 14px; font-weight: 600;
   }
 
+  .site-footer {
+    margin-top: 32px;
+    padding: 20px 0 8px;
+    text-align: center;
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+  .site-footer a {
+    color: var(--muted);
+    text-decoration: none;
+    margin: 0 6px;
+  }
+  .site-footer a:hover {
+    color: var(--ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .inline-link {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
   .toast {
     position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
     background: var(--ink); color: var(--bg);
@@ -381,7 +423,7 @@
   <div class="beta-banner" role="note">
     <span class="beta-dot"></span>
     <span>内测版 · 词汇量自适应测试（内部体验中）</span>
-    <span class="mode-badge" id="topModeBadge">模式：默认汉字</span>
+    <span class="mode-badge" id="topModeBadge">模式：仅假名</span>
   </div>
 
   <header class="topbar">
@@ -399,10 +441,15 @@
   <section class="card" id="viewIntro">
     <h1 class="intro-title">日语词汇量自适应测试</h1>
     <p class="intro-sub">根据你的作答表现动态调整词汇难度，约 3–5 分钟估算当前日语词汇量区间。</p>
+    <div class="kana-prereq-bar" id="kanaPrereqBar">
+      <span>本测试只显示读音，不显示汉字，需要能读五十音。</span>
+      <a href="https://tangogo.online/kana/" class="kana-practice-link">不熟悉五十音？先去练习</a>
+    </div>
     <ul class="rule-list">
+      <li><span class="rule-dot">•</span><span id="introModeDesc">题目只显示读音，不显示汉字。</span></li>
       <li><span class="rule-dot">•</span><span>每题展示 1 个日语词汇与 4 个中文释义选项，若不确定请直接点击「不认识」，避免猜测干扰估算精度。</span></li>
       <li><span class="rule-dot">•</span><span>系统依据自适应阶梯规则动态升降词汇难度，最多 40 题或达到 8 次难度反转后自动结束。</span></li>
-      <li><span class="rule-dot">•</span><span>内测期间，登录后的测试结果和每题作答会保存在你的账号下，用于改进题库；你可以随时联系【请填写你的联系方式】要求删除。</span></li>
+      <li><span class="rule-dot">•</span><span>内测期间，登录后的测试结果和每题作答会保存在你的账号下，用于改进题库，详情请参阅<a href="/privacy/" class="inline-link">《隐私政策》</a>；你可以随时联系<a href="mailto:lpq9306@outlook.com" class="inline-link">lpq9306@outlook.com</a>要求删除。</span></li>
     </ul>
 
     <div class="guest-notice" id="introGuestNotice" role="alert">
@@ -440,9 +487,9 @@
     <div class="result-hero">
       <div class="result-label">估计词汇量区间（估计值）</div>
       <div class="result-range" id="resRangeText">--</div>
-      <div class="result-mode-pill" id="resModePill">当前模式：默认汉字模式（default）</div>
+      <div class="result-mode-pill" id="resModePill">当前模式：仅假名模式（kana）</div>
       <p class="result-disclaimer" id="resDisclaimerText">
-        注：本结果为基于自适应抽样的简易词汇量估计值，仅供参考，不代表官方 JLPT 考试成绩或通过等级。本测试尽量避开了能靠汉字直接猜出意思的词，但仍可能因汉字而偏高，仅供参考。
+        注：本结果为基于自适应抽样的简易词汇量估计值，仅供参考，不代表官方 JLPT 考试成绩或通过等级。本模式只显示读音、不显示汉字，以减少靠汉字猜测的影响，仅供参考。
       </p>
     </div>
 
@@ -476,6 +523,10 @@
 
     <button class="primary-btn" onclick="startTest()">再测一次</button>
   </section>
+
+  <footer class="site-footer">
+    Tangogo · 日语背词 · <a href="/privacy/">隐私政策</a> · <a href="/terms/">使用条款</a>
+  </footer>
 </div>
 
 <!-- 题目问题反馈弹窗 -->
@@ -500,8 +551,9 @@
 
 <script>
   const urlParams = new URLSearchParams(window.location.search);
-  const isKanaMode = urlParams.get('mode') === 'kana';
-  const TEST_MODE = isKanaMode ? 'kana' : 'default';
+  const isKanjiMode = urlParams.get('mode') === 'kanji';
+  const isKanaMode = !isKanjiMode;
+  const TEST_MODE = isKanaMode ? 'kana' : 'kanji';
 
   const TEST_CONFIG = {
     REQUIRE_APPROVED: false,
@@ -513,6 +565,8 @@
     MAX_QUESTIONS: 40,
     MAX_REVERSALS: 8,
     CEILING_STREAK: 8,
+    FLOOR_WINDOW: 10,
+    FLOOR_MAX_CORRECT: 4,
     RANGE_MARGIN: 0.15,
     mode: TEST_MODE,
     BAND_VOCAB: {
@@ -606,14 +660,19 @@
 
   async function initAuth() {
     const modeBadge = document.getElementById('topModeBadge');
+    const introModeDesc = document.getElementById('introModeDesc');
+    const kanaPrereqBar = document.getElementById('kanaPrereqBar');
+
     if (modeBadge) {
-      if (isKanaMode) {
-        modeBadge.textContent = '模式：仅假名（kana）';
-        modeBadge.classList.add('is-kana');
-      } else {
-        modeBadge.textContent = '模式：默认汉字';
-        modeBadge.classList.remove('is-kana');
-      }
+      modeBadge.textContent = isKanaMode ? '模式：仅假名（kana）' : '模式：汉字（kanji）';
+    }
+    if (introModeDesc) {
+      introModeDesc.textContent = isKanaMode
+        ? '题目只显示读音，不显示汉字。'
+        : '题目显示汉字，对中文母语者估计可能偏高。';
+    }
+    if (kanaPrereqBar) {
+      kanaPrereqBar.style.display = isKanaMode ? 'flex' : 'none';
     }
 
     const pill = document.getElementById('authStatusPill');
@@ -715,7 +774,6 @@
       return;
     }
 
-    // 以 RPC 实际返回题目所在档位同步当前档位（处理目标档位抽完后回退到相邻档位的情况）
     const actualBand = Number(q.band) || state.curBand;
     state.curBand = actualBand;
     document.getElementById('qBandHint').textContent = `当前难度档位：Band ${actualBand}`;
@@ -723,7 +781,6 @@
     state.currentQuestion = q;
     state.seenIds.push(q.word_id);
 
-    // 仅假名模式下题目只显示读音，不给 display 套注音
     document.getElementById('qKana').textContent = (!isKanaMode && q.kana && q.kana !== q.display) ? q.kana : '';
     document.getElementById('qDisplay').textContent = q.display;
 
@@ -776,7 +833,6 @@
       });
     }
 
-    // 升降档与触顶连对均基于本题实际所在档位 itemBand 计算
     if (isCorrect) {
       if (itemBand === TEST_CONFIG.MAX_BAND) {
         state.band10Streak += 1;
@@ -808,8 +864,19 @@
 
     await new Promise(r => setTimeout(r, 420));
 
+    const band1Answers = state.answers.filter(a => a.band === TEST_CONFIG.MIN_BAND);
+    const recentBand1 = band1Answers.slice(-TEST_CONFIG.FLOOR_WINDOW);
+    const recentBand1Correct = recentBand1.filter(a => a.is_correct).length;
+    const hitFloor = (
+      state.curBand === TEST_CONFIG.MIN_BAND &&
+      recentBand1.length >= TEST_CONFIG.FLOOR_WINDOW &&
+      recentBand1Correct <= TEST_CONFIG.FLOOR_MAX_CORRECT
+    );
+
     if (state.band10Streak >= TEST_CONFIG.CEILING_STREAK) {
       await finishTest('ceiling');
+    } else if (hitFloor) {
+      await finishTest('floor');
     } else if (state.answers.length >= TEST_CONFIG.MAX_QUESTIONS) {
       await finishTest('max_questions');
     } else if (state.reversals >= TEST_CONFIG.MAX_REVERSALS) {
@@ -854,14 +921,16 @@
     switchView('viewResult');
     if (stopReason === 'ceiling') {
       document.getElementById('resRangeText').textContent = '≥ 9,000 词（已达到本测试的最高档，实际词汇量可能更高）';
+    } else if (stopReason === 'floor') {
+      document.getElementById('resRangeText').textContent = '约 800 词以内（已到达本测试的最低档，实际词汇量可能更低）';
     } else {
       document.getElementById('resRangeText').textContent = `${est.low.toLocaleString()} – ${est.high.toLocaleString()} 词`;
     }
     document.getElementById('resModePill').textContent = isKanaMode
       ? '当前模式：仅假名模式（kana）'
-      : '当前模式：默认汉字模式（default）';
+      : '当前模式：汉字模式（kanji）';
     document.getElementById('resDisclaimerText').textContent = isKanaMode
-      ? '注：本结果为基于自适应抽样的简易词汇量估计值，仅供参考，不代表官方 JLPT 考试成绩或通过等级。本模式只显示读音、不显示汉字，以减少靠汉字猜测的影响，仅供参考。'
+      ? '本测试估计的是"看到读音就能想起意思"的词汇量。如果你主要靠汉字认词，这个数字会比你阅读时实际认识的词少。注：本结果为基于自适应抽样的简易词汇量估计值，仅供参考，不代表官方 JLPT 考试成绩或通过等级。本模式只显示读音、不显示汉字，以减少靠汉字猜测的影响，仅供参考。'
       : '注：本结果为基于自适应抽样的简易词汇量估计值，仅供参考，不代表官方 JLPT 考试成绩或通过等级。本测试尽量避开了能靠汉字直接猜出意思的词，但仍可能因汉字而偏高，仅供参考。';
     document.getElementById('resTotalQ').textContent = `${totalQ} 题`;
     document.getElementById('resAccuracy').textContent = `${acc}%`;
