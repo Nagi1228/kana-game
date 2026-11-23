@@ -1,0 +1,15 @@
+# Tangogo publishing repo - never publish scripts, raw data or backups
+*.py
+*.mjs
+scripts/
+backups/
+data/raw/
+*.csv
+.env
+.env.*
+*.bak
+*.log
+node_modules/
+Thumbs.db
+desktop.ini
+.DS_Store
