@@ -98,13 +98,27 @@
   }
 
   .beta-banner {
-    display: flex; align-items: center; justify-content: center; gap: 8px;
+    display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap;
     padding: 9px 16px; margin-bottom: 16px; border-radius: 12px;
     background: var(--accent-soft); border: 1.5px solid var(--accent-line);
     color: var(--accent); font-size: 13.5px; font-weight: 800; letter-spacing: 0.02em;
   }
   .beta-dot {
     width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0;
+  }
+  .mode-badge {
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: var(--surface);
+    border: 1px solid var(--accent-line);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .mode-badge.is-kana {
+    background: var(--warn-bg);
+    border-color: var(--warn-line);
+    color: var(--warn-ink);
   }
 
   .topbar {
@@ -210,7 +224,7 @@
 
   .q-meta-bar {
     display: flex; align-items: center; justify-content: space-between;
-    margin-bottom: 14px; font-size: 13px; color: var(--muted);
+    margin-bottom: 14px; font-size: 13px; color: var(--muted); gap: 8px; flex-wrap: wrap;
   }
   .progress-track {
     width: 100%; height: 6px; border-radius: 999px;
@@ -271,9 +285,20 @@
     border-radius: 18px; background: var(--field); margin-bottom: 22px;
   }
   .result-label { font-size: 13.5px; font-weight: 700; color: var(--accent); margin-bottom: 6px; }
-  .result-range { font-size: 36px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 10px; }
+  .result-range { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 10px; line-height: 1.3; }
+  .result-mode-pill {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
   .result-disclaimer {
-    font-size: 13px; color: var(--muted); max-width: 480px; margin: 0 auto; line-height: 1.6;
+    font-size: 13px; color: var(--muted); max-width: 520px; margin: 0 auto; line-height: 1.65;
   }
   .stats-row {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
@@ -356,6 +381,7 @@
   <div class="beta-banner" role="note">
     <span class="beta-dot"></span>
     <span>内测版 · 词汇量自适应测试（内部体验中）</span>
+    <span class="mode-badge" id="topModeBadge">模式：默认汉字</span>
   </div>
 
   <header class="topbar">
@@ -414,8 +440,9 @@
     <div class="result-hero">
       <div class="result-label">估计词汇量区间（估计值）</div>
       <div class="result-range" id="resRangeText">--</div>
-      <p class="result-disclaimer">
-        注：本结果为基于自适应抽样的简易词汇量估计值，仅供参考，不代表官方 JLPT 考试成绩或通过等级。
+      <div class="result-mode-pill" id="resModePill">当前模式：默认汉字模式（default）</div>
+      <p class="result-disclaimer" id="resDisclaimerText">
+        注：本结果为基于自适应抽样的简易词汇量估计值，仅供参考，不代表官方 JLPT 考试成绩或通过等级。本测试尽量避开了能靠汉字直接猜出意思的词，但仍可能因汉字而偏高，仅供参考。
       </p>
     </div>
 
@@ -472,6 +499,10 @@
 <div class="toast" id="toast"></div>
 
 <script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const isKanaMode = urlParams.get('mode') === 'kana';
+  const TEST_MODE = isKanaMode ? 'kana' : 'default';
+
   const TEST_CONFIG = {
     REQUIRE_APPROVED: false,
     START_BAND: 3,
@@ -481,7 +512,9 @@
     DOWN_STREAK: 1,
     MAX_QUESTIONS: 40,
     MAX_REVERSALS: 8,
+    CEILING_STREAK: 8,
     RANGE_MARGIN: 0.15,
+    mode: TEST_MODE,
     BAND_VOCAB: {
       1: 400,
       2: 800,
@@ -572,6 +605,17 @@
   }
 
   async function initAuth() {
+    const modeBadge = document.getElementById('topModeBadge');
+    if (modeBadge) {
+      if (isKanaMode) {
+        modeBadge.textContent = '模式：仅假名（kana）';
+        modeBadge.classList.add('is-kana');
+      } else {
+        modeBadge.textContent = '模式：默认汉字';
+        modeBadge.classList.remove('is-kana');
+      }
+    }
+
     const pill = document.getElementById('authStatusPill');
     const errBox = document.getElementById('introLoadError');
 
@@ -627,6 +671,7 @@
     state = {
       curBand: TEST_CONFIG.START_BAND,
       streakCorrect: 0,
+      band10Streak: 0,
       reversals: 0,
       lastDir: null,
       reversalBands: [],
@@ -654,7 +699,9 @@
     const { data, error } = await sbClient.rpc('get_vocab_test_question', {
       p_band: state.curBand,
       p_exclude_ids: state.seenIds,
-      p_require_approved: TEST_CONFIG.REQUIRE_APPROVED
+      p_require_approved: TEST_CONFIG.REQUIRE_APPROVED,
+      p_kana_only: isKanaMode,
+      p_exclude_cn_guessable: true
     });
 
     if (error) {
@@ -668,10 +715,16 @@
       return;
     }
 
+    // 以 RPC 实际返回题目所在档位同步当前档位（处理目标档位抽完后回退到相邻档位的情况）
+    const actualBand = Number(q.band) || state.curBand;
+    state.curBand = actualBand;
+    document.getElementById('qBandHint').textContent = `当前难度档位：Band ${actualBand}`;
+
     state.currentQuestion = q;
     state.seenIds.push(q.word_id);
 
-    document.getElementById('qKana').textContent = (q.kana && q.kana !== q.display) ? q.kana : '';
+    // 仅假名模式下题目只显示读音，不给 display 套注音
+    document.getElementById('qKana').textContent = (!isKanaMode && q.kana && q.kana !== q.display) ? q.kana : '';
     document.getElementById('qDisplay').textContent = q.display;
 
     const grid = document.getElementById('optionsGrid');
@@ -692,6 +745,7 @@
     isTransitioning = true;
 
     const q = state.currentQuestion;
+    const itemBand = Number(q.band) || state.curBand;
     const isCorrect = (chosenIndex === q.correct_index);
     const isIdk = (chosenIndex === -1);
 
@@ -705,7 +759,7 @@
 
     state.answers.push({
       word_id: q.word_id,
-      band: q.band,
+      band: itemBand,
       chosen_index: chosenIndex,
       correct_index: q.correct_index,
       is_correct: isCorrect
@@ -722,30 +776,41 @@
       });
     }
 
+    // 升降档与触顶连对均基于本题实际所在档位 itemBand 计算
     if (isCorrect) {
+      if (itemBand === TEST_CONFIG.MAX_BAND) {
+        state.band10Streak += 1;
+      } else {
+        state.band10Streak = 0;
+      }
       state.streakCorrect += 1;
       if (state.streakCorrect >= TEST_CONFIG.UP_STREAK) {
         state.streakCorrect = 0;
         if (state.lastDir === 'down') {
           state.reversals += 1;
-          state.reversalBands.push(state.curBand);
+          state.reversalBands.push(itemBand);
         }
         state.lastDir = 'up';
-        state.curBand = Math.min(TEST_CONFIG.MAX_BAND, state.curBand + 1);
+        state.curBand = Math.min(TEST_CONFIG.MAX_BAND, itemBand + 1);
+      } else {
+        state.curBand = itemBand;
       }
     } else {
       state.streakCorrect = 0;
+      state.band10Streak = 0;
       if (state.lastDir === 'up') {
         state.reversals += 1;
-        state.reversalBands.push(state.curBand);
+        state.reversalBands.push(itemBand);
       }
       state.lastDir = 'down';
-      state.curBand = Math.max(TEST_CONFIG.MIN_BAND, state.curBand - 1);
+      state.curBand = Math.max(TEST_CONFIG.MIN_BAND, itemBand - 1);
     }
 
     await new Promise(r => setTimeout(r, 420));
 
-    if (state.answers.length >= TEST_CONFIG.MAX_QUESTIONS) {
+    if (state.band10Streak >= TEST_CONFIG.CEILING_STREAK) {
+      await finishTest('ceiling');
+    } else if (state.answers.length >= TEST_CONFIG.MAX_QUESTIONS) {
       await finishTest('max_questions');
     } else if (state.reversals >= TEST_CONFIG.MAX_REVERSALS) {
       await finishTest('max_reversals');
@@ -787,7 +852,17 @@
     const acc = totalQ ? Math.round((correctCnt / totalQ) * 100) : 0;
 
     switchView('viewResult');
-    document.getElementById('resRangeText').textContent = `${est.low.toLocaleString()} – ${est.high.toLocaleString()} 词`;
+    if (stopReason === 'ceiling') {
+      document.getElementById('resRangeText').textContent = '≥ 9,000 词（已达到本测试的最高档，实际词汇量可能更高）';
+    } else {
+      document.getElementById('resRangeText').textContent = `${est.low.toLocaleString()} – ${est.high.toLocaleString()} 词`;
+    }
+    document.getElementById('resModePill').textContent = isKanaMode
+      ? '当前模式：仅假名模式（kana）'
+      : '当前模式：默认汉字模式（default）';
+    document.getElementById('resDisclaimerText').textContent = isKanaMode
+      ? '注：本结果为基于自适应抽样的简易词汇量估计值，仅供参考，不代表官方 JLPT 考试成绩或通过等级。本模式只显示读音、不显示汉字，以减少靠汉字猜测的影响，仅供参考。'
+      : '注：本结果为基于自适应抽样的简易词汇量估计值，仅供参考，不代表官方 JLPT 考试成绩或通过等级。本测试尽量避开了能靠汉字直接猜出意思的词，但仍可能因汉字而偏高，仅供参考。';
     document.getElementById('resTotalQ').textContent = `${totalQ} 题`;
     document.getElementById('resAccuracy').textContent = `${acc}%`;
     document.getElementById('resFinalBand').textContent = `Band ${est.finalBand}`;
@@ -822,7 +897,7 @@
           <div>
             <div>
               <span class="missed-word">${escapeHtml(item.display)}</span>
-              ${item.kana && item.kana !== item.display ? `<span class="missed-kana">${escapeHtml(item.kana)}</span>` : ''}
+              ${!isKanaMode && item.kana && item.kana !== item.display ? `<span class="missed-kana">${escapeHtml(item.kana)}</span>` : ''}
               <span class="missed-tag">${item.reason}</span>
             </div>
             ${unpubHtml}
@@ -837,6 +912,8 @@
     updateGuestNotices(Boolean(currentUser));
     const localSnapshot = {
       created_at: new Date().toISOString(),
+      mode: TEST_MODE,
+      stop_reason: stopReason,
       range: [est.low, est.high],
       final_band: est.finalBand,
       total_questions: totalQ,
@@ -860,7 +937,7 @@
         p_stop_reason: stopReason,
         p_missed_word_ids: state.missedItems.map(m => m.word_id),
         p_answers: state.answers,
-        p_config_snapshot: TEST_CONFIG
+        p_config_snapshot: Object.assign({}, TEST_CONFIG, { mode: TEST_MODE })
       });
       saveNotice.textContent = error
         ? `云端保存失败（已保存在本地）：${error.message}`
