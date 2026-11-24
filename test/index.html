@@ -317,7 +317,7 @@
     margin-bottom: 10px;
   }
   .result-disclaimer {
-    font-size: 13px; color: var(--muted); max-width: 520px; margin: 0 auto; line-height: 1.65;
+    font-size: 13px; color: var(--muted); max-width: 520px; margin: 0 auto; line-height: 1.65; text-align: left;
   }
   .stats-row {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
@@ -489,7 +489,7 @@
       <div class="result-range" id="resRangeText">--</div>
       <div class="result-mode-pill" id="resModePill">当前模式：仅假名模式（kana）</div>
       <p class="result-disclaimer" id="resDisclaimerText">
-        注：本结果为基于自适应抽样的简易词汇量估计值，仅供参考，不代表官方 JLPT 考试成绩或通过等级。本模式只显示读音、不显示汉字，以减少靠汉字猜测的影响，仅供参考。
+        本测试估计的是"看到读音就能想起意思"的词汇量。如果你主要靠汉字认词，这个数字会比你阅读时实际认识的词少。本结果为基于自适应抽样的简易词汇量估计值，仅供参考，不代表官方 JLPT 考试成绩或通过等级。
       </p>
     </div>
 
@@ -930,7 +930,7 @@
       ? '当前模式：仅假名模式（kana）'
       : '当前模式：汉字模式（kanji）';
     document.getElementById('resDisclaimerText').textContent = isKanaMode
-      ? '本测试估计的是"看到读音就能想起意思"的词汇量。如果你主要靠汉字认词，这个数字会比你阅读时实际认识的词少。注：本结果为基于自适应抽样的简易词汇量估计值，仅供参考，不代表官方 JLPT 考试成绩或通过等级。本模式只显示读音、不显示汉字，以减少靠汉字猜测的影响，仅供参考。'
+      ? '本测试估计的是"看到读音就能想起意思"的词汇量。如果你主要靠汉字认词，这个数字会比你阅读时实际认识的词少。本结果为基于自适应抽样的简易词汇量估计值，仅供参考，不代表官方 JLPT 考试成绩或通过等级。'
       : '注：本结果为基于自适应抽样的简易词汇量估计值，仅供参考，不代表官方 JLPT 考试成绩或通过等级。本测试尽量避开了能靠汉字直接猜出意思的词，但仍可能因汉字而偏高，仅供参考。';
     document.getElementById('resTotalQ').textContent = `${totalQ} 题`;
     document.getElementById('resAccuracy').textContent = `${acc}%`;
