@@ -487,9 +487,9 @@
     <div class="result-hero">
       <div class="result-label">估计词汇量区间（估计值）</div>
       <div class="result-range" id="resRangeText">--</div>
-      <div class="result-mode-pill" id="resModePill">当前模式：仅假名模式（kana）</div>
+      <div class="result-mode-pill" id="resModePill">当前模式：仅假名</div>
       <p class="result-disclaimer" id="resDisclaimerText">
-        本测试估计的是"看到读音就能想起意思"的词汇量。如果你主要靠汉字认词，这个数字会比你阅读时实际认识的词少。本结果为基于自适应抽样的简易词汇量估计值，仅供参考，不代表官方 JLPT 考试成绩或通过等级。
+        本测试只给出读音、不显示汉字，估计的是你“看到读音就能想起意思”的词汇量。如果你平时主要靠汉字认词，这个数字会明显低于你阅读时实际认识的词数，这是正常的，并不代表你的真实水平不足。本结果为基于自适应抽样的简易词汇量估计值，仅供参考，不代表官方 JLPT 考试成绩或通过等级。
       </p>
     </div>
 
@@ -664,7 +664,7 @@
     const kanaPrereqBar = document.getElementById('kanaPrereqBar');
 
     if (modeBadge) {
-      modeBadge.textContent = isKanaMode ? '模式：仅假名（kana）' : '模式：汉字（kanji）';
+      modeBadge.textContent = isKanaMode ? '模式：仅假名' : '模式：汉字（kanji）';
     }
     if (introModeDesc) {
       introModeDesc.textContent = isKanaMode
@@ -927,10 +927,10 @@
       document.getElementById('resRangeText').textContent = `${est.low.toLocaleString()} – ${est.high.toLocaleString()} 词`;
     }
     document.getElementById('resModePill').textContent = isKanaMode
-      ? '当前模式：仅假名模式（kana）'
+      ? '当前模式：仅假名'
       : '当前模式：汉字模式（kanji）';
     document.getElementById('resDisclaimerText').textContent = isKanaMode
-      ? '本测试估计的是"看到读音就能想起意思"的词汇量。如果你主要靠汉字认词，这个数字会比你阅读时实际认识的词少。本结果为基于自适应抽样的简易词汇量估计值，仅供参考，不代表官方 JLPT 考试成绩或通过等级。'
+      ? '本测试只给出读音、不显示汉字，估计的是你“看到读音就能想起意思”的词汇量。如果你平时主要靠汉字认词，这个数字会明显低于你阅读时实际认识的词数，这是正常的，并不代表你的真实水平不足。本结果为基于自适应抽样的简易词汇量估计值，仅供参考，不代表官方 JLPT 考试成绩或通过等级。'
       : '注：本结果为基于自适应抽样的简易词汇量估计值，仅供参考，不代表官方 JLPT 考试成绩或通过等级。本测试尽量避开了能靠汉字直接猜出意思的词，但仍可能因汉字而偏高，仅供参考。';
     document.getElementById('resTotalQ').textContent = `${totalQ} 题`;
     document.getElementById('resAccuracy').textContent = `${acc}%`;
