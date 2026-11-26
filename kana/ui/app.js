@@ -1349,7 +1349,7 @@
     const email = $('#tgo-email-input').value.trim();
     const password = $('#tgo-pwd-input').value;
     if (!email || !password) return toast('请填写邮箱和密码');
-    if (!sbClient) return toast('数据库连接未就绪');
+    if (!sbClient) return toast('登录组件加载失败，请刷新页面；如仍不行，请换用 Chrome、Edge 或系统自带浏览器，或联系 lpq9306@outlook.com');
     const { data, error } = await sbClient.auth.signInWithPassword({ email, password });
     if (error) {
       const msg = error.message.includes('Email not confirmed')
@@ -1370,7 +1370,7 @@
     const password = $('#tgo-pwd-input').value;
     if (!email || !password) return toast('请填写邮箱和密码');
     if (password.length < 6) return toast('密码不少于 6 位');
-    if (!sbClient) return toast('数据库连接未就绪');
+    if (!sbClient) return toast('登录组件加载失败，请刷新页面；如仍不行，请换用 Chrome、Edge 或系统自带浏览器，或联系 lpq9306@outlook.com');
     const { data, error } = await sbClient.auth.signUp({
       email,
       password,
