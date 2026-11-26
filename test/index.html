@@ -11,7 +11,7 @@
 <script>
   window.__tangogoScriptDiag = {
     supabaseSdk: { url: '/vendor/supabase-js.umd.js?v=2.119.2', status: 'loading', httpStatus: null, blocked: false },
-    fsrsEngine: { url: new URL('../fsrs-engine.js', window.location.href).href, status: 'loading', httpStatus: null, blocked: false }
+    fsrsEngine: { url: new URL('../fsrs-engine.js?v=2', window.location.href).href, status: 'loading', httpStatus: null, blocked: false }
   };
 </script>
 <script src="/vendor/supabase-js.umd.js?v=2.119.2"
@@ -24,7 +24,7 @@
     document.write('<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="window.__tangogoScriptDiag.supabaseSdk.status=\'loaded\';" onerror="window.__tangogoScriptDiag.supabaseSdk.status=\'error\';"><\/script>');
   }
 </script>
-<script src="../fsrs-engine.js"
+<script src="../fsrs-engine.js?v=2"
         onload="window.__tangogoScriptDiag.fsrsEngine.status='loaded';"
         onerror="window.__tangogoScriptDiag.fsrsEngine.status='error';"></script>
 <script>
