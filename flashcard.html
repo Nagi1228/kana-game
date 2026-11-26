@@ -7,8 +7,13 @@
 <link rel="icon" type="image/png" sizes="512x512" href="./favicon.png?v=3">
 <link rel="apple-touch-icon" href="./favicon.png?v=3">
 <meta name="color-scheme" content="light dark">
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="./fsrs-engine.js"></script>
+<script src="/vendor/supabase-js.umd.js?v=2.119.2"></script>
+<script>
+  if (!window.supabase) {
+    document.write('<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"><\/script>');
+  }
+</script>
+<script src="./fsrs-engine.js?v=2"></script>
 <script src="./pitch-accent.js"></script>
 <script>
   (function () {

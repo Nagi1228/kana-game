@@ -6,12 +6,13 @@
   <title>翻牌模式 · Tangogo</title>
   <link rel="icon" type="image/png" sizes="512x512" href="./favicon.png?v=3">
   <link rel="apple-touch-icon" href="./favicon.png?v=3">
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="./fsrs-engine.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" media="print" onload="this.media='all';this.onload=null"
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=M+PLUS+Rounded+1c:wght@400;700;900&family=Noto+Sans+SC:wght@400;700;900&display=swap">
+  <script src="/vendor/supabase-js.umd.js?v=2.119.2"></script>
+  <script>
+    if (!window.supabase) {
+      document.write('<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"><\/script>');
+    }
+  </script>
+  <script src="./fsrs-engine.js?v=2"></script>
   <style>
     :root {
       --bg: #f0f7ff;
@@ -38,13 +39,13 @@
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Noto Sans SC', sans-serif;
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
       background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
       color: var(--fg); min-height: 100vh; display: flex; flex-direction: column; align-items: center;
       overflow-x: hidden; user-select: none;
     }
-    .jp-text { font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif; }
-    .cn-text { font-family: 'Noto Sans SC', sans-serif; }
+    .jp-text { font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', ui-rounded, "Hiragino Sans", "Hiragino Maru Gothic ProN", "Yu Gothic UI", "Yu Gothic", "Meiryo", "Noto Sans CJK JP", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif; }
+    .cn-text { font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif; }
     [hidden] { display: none !important; }
 
     header {
@@ -542,28 +543,28 @@
       ctx.fillStyle = bgGrad; ctx.fillRect(0, 0, 640, 880);
 
       ctx.strokeStyle = '#2563eb'; ctx.lineWidth = 10; ctx.strokeRect(20, 20, 600, 840);
-      ctx.fillStyle = '#2563eb'; ctx.font = "900 34px 'Noto Sans SC', sans-serif"; ctx.textAlign = 'center';
+      ctx.fillStyle = '#2563eb'; ctx.font = "900 34px 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif"; ctx.textAlign = 'center';
       ctx.fillText('Tangogo · 日语背词', 320, 90);
       ctx.font = "72px sans-serif"; ctx.fillText('🏆', 320, 180);
-      ctx.fillStyle = '#0c2340'; ctx.font = "900 32px 'Noto Sans SC', sans-serif"; ctx.fillText('通 关 荣 誉 证 书', 320, 240);
+      ctx.fillStyle = '#0c2340'; ctx.font = "900 32px 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif"; ctx.fillText('通 关 荣 誉 证 书', 320, 240);
 
       const userNick = localStorage.getItem('tangogo_nickname') || '日语学习达人';
-      ctx.font = "700 22px 'Noto Sans SC', sans-serif"; ctx.fillStyle = '#1e4d8c'; ctx.fillText(`学员：${userNick}`, 320, 290);
+      ctx.font = "700 22px 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif"; ctx.fillStyle = '#1e4d8c'; ctx.fillText(`学员：${userNick}`, 320, 290);
 
       ctx.fillStyle = '#ffffff'; ctx.fillRect(80, 340, 480, 360);
-      ctx.fillStyle = '#64748b'; ctx.font = "700 18px 'Noto Sans SC', sans-serif"; ctx.textAlign = 'left';
+      ctx.fillStyle = '#64748b'; ctx.font = "700 18px 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif"; ctx.textAlign = 'left';
       ctx.fillText('📚 学习课程', 120, 400);
       ctx.fillText('⏱ 通关用时', 120, 460);
       ctx.fillText('📖 掌握词汇', 120, 520);
       ctx.fillText('🌟 最终得分', 120, 580);
       ctx.fillText('🎮 挑战模式', 120, 640);
 
-      ctx.textAlign = 'right'; ctx.fillStyle = '#0c2340'; ctx.font = "900 20px 'Noto Sans SC', sans-serif";
+      ctx.textAlign = 'right'; ctx.fillStyle = '#0c2340'; ctx.font = "900 20px 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif";
       ctx.fillText(deckInfo.fullLabel, 520, 400);
       ctx.fillText(timeSpent, 520, 460);
       ctx.fillText(`${totalWords} 词`, 520, 520);
-      ctx.fillStyle = '#ea580c'; ctx.font = "900 26px 'Noto Sans SC', sans-serif"; ctx.fillText(`${score} 分`, 520, 580);
-      ctx.fillStyle = '#2563eb'; ctx.font = "900 20px 'Noto Sans SC', sans-serif"; ctx.fillText('翻牌模式', 520, 640);
+      ctx.fillStyle = '#ea580c'; ctx.font = "900 26px 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif"; ctx.fillText(`${score} 分`, 520, 580);
+      ctx.fillStyle = '#2563eb'; ctx.font = "900 20px 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif"; ctx.fillText('翻牌模式', 520, 640);
 
       setTimeout(() => {
         const a = document.createElement('a');

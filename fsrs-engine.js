@@ -26,6 +26,7 @@
   async function loadTsFsrs() {
     if (tsFsrsModule) return tsFsrsModule;
     const urls = [
+      '/vendor/ts-fsrs-4.5.1.js?v=4.5.1',
       'https://cdn.jsdelivr.net/npm/ts-fsrs@4.5.1/+esm',
       'https://esm.sh/ts-fsrs@4.5.1'
     ];
