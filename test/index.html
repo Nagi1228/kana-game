@@ -10,13 +10,20 @@
 <meta name="color-scheme" content="light dark">
 <script>
   window.__tangogoScriptDiag = {
-    supabaseSdk: { url: 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2', status: 'loading', httpStatus: null, blocked: false },
+    supabaseSdk: { url: '/vendor/supabase-js.umd.js?v=2.119.2', status: 'loading', httpStatus: null, blocked: false },
     fsrsEngine: { url: new URL('../fsrs-engine.js', window.location.href).href, status: 'loading', httpStatus: null, blocked: false }
   };
 </script>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+<script src="/vendor/supabase-js.umd.js?v=2.119.2"
         onload="window.__tangogoScriptDiag.supabaseSdk.status='loaded';"
         onerror="window.__tangogoScriptDiag.supabaseSdk.status='error';"></script>
+<script>
+  if (!window.supabase) {
+    window.__tangogoScriptDiag.supabaseSdk.url = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2';
+    window.__tangogoScriptDiag.supabaseSdk.status = 'loading';
+    document.write('<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="window.__tangogoScriptDiag.supabaseSdk.status=\'loaded\';" onerror="window.__tangogoScriptDiag.supabaseSdk.status=\'error\';"><\/script>');
+  }
+</script>
 <script src="../fsrs-engine.js"
         onload="window.__tangogoScriptDiag.fsrsEngine.status='loaded';"
         onerror="window.__tangogoScriptDiag.fsrsEngine.status='error';"></script>
@@ -583,7 +590,7 @@
     }
   };
 
-  const LOAD_ERROR_MSG = '页面资源加载失败，请刷新重试；如仍无法使用，请换一个浏览器，或联系【请填写你的联系方式】。';
+  const LOAD_ERROR_MSG = '页面资源加载失败，请刷新重试；如仍无法使用，请换一个浏览器，或联系 lpq9306@outlook.com。';
   const isFileProtocol = window.location.protocol === 'file:';
 
   const sbClient = (window.TangogoFSRS && typeof TangogoFSRS.getSbClient === 'function')
