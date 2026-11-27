@@ -496,7 +496,7 @@
       <div class="result-range" id="resRangeText">--</div>
       <div class="result-mode-pill" id="resModePill">当前模式：仅假名</div>
       <p class="result-disclaimer" id="resDisclaimerText">
-        本测试只给出读音、不显示汉字，估计的是你“看到读音就能想起意思”的词汇量。如果你平时主要靠汉字认词，这个数字会明显低于你阅读时实际认识的词数，这是正常的，并不代表你的真实水平不足。本结果为基于自适应抽样的简易词汇量估计值，仅供参考，不代表官方 JLPT 考试成绩或通过等级。
+        这是一份基于自适应抽样的小测，算出的是一个大致的估算区间，好玩参考为主，不代表官方 JLPT 成绩，也不代表你能不能通过某个级别哦。测试里只给读音、不显示汉字，测的是“看到读音就能想起意思”的词汇量——如果你平时更习惯靠汉字认词，结果可能会偏低一些，这完全正常，别放在心上！
       </p>
     </div>
 
@@ -574,7 +574,7 @@
     CEILING_STREAK: 8,
     FLOOR_WINDOW: 10,
     FLOOR_MAX_CORRECT: 4,
-    RANGE_MARGIN: 0.15,
+    RANGE_MARGIN: 0.30,
     mode: TEST_MODE,
     BAND_VOCAB: {
       1: 400,
@@ -937,8 +937,8 @@
       ? '当前模式：仅假名'
       : '当前模式：汉字模式（kanji）';
     document.getElementById('resDisclaimerText').textContent = isKanaMode
-      ? '本测试只给出读音、不显示汉字，估计的是你“看到读音就能想起意思”的词汇量。如果你平时主要靠汉字认词，这个数字会明显低于你阅读时实际认识的词数，这是正常的，并不代表你的真实水平不足。本结果为基于自适应抽样的简易词汇量估计值，仅供参考，不代表官方 JLPT 考试成绩或通过等级。'
-      : '注：本结果为基于自适应抽样的简易词汇量估计值，仅供参考，不代表官方 JLPT 考试成绩或通过等级。本测试尽量避开了能靠汉字直接猜出意思的词，但仍可能因汉字而偏高，仅供参考。';
+      ? '这是一份基于自适应抽样的小测，算出的是一个大致的估算区间，好玩参考为主，不代表官方 JLPT 成绩，也不代表你能不能通过某个级别哦。测试里只给读音、不显示汉字，测的是“看到读音就能想起意思”的词汇量——如果你平时更习惯靠汉字认词，结果可能会偏低一些，这完全正常，别放在心上！'
+      : '这是一份基于自适应抽样的小测，算出的是一个大致的估算区间，好玩参考为主，不代表官方 JLPT 成绩，也不代表你能不能通过某个级别哦。虽然已经尽量避开看汉字就能猜出意思的词，但结果仍可能因为汉字提示而偏高，图一乐参考就好～';
     document.getElementById('resTotalQ').textContent = `${totalQ} 题`;
     document.getElementById('resAccuracy').textContent = `${acc}%`;
     document.getElementById('resFinalBand').textContent = `Band ${est.finalBand}`;
